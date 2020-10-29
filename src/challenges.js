@@ -88,18 +88,33 @@ function highestCount(seq) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+
+  let posicaofalta1 = mouse - cat1
+  let posicaofalta2 = mouse - cat2
+
+  if (posicaofalta1 < posicaofalta2) {
+    return "cat1"
+  }
+  else if (posicaofalta1 > posicaofalta2) {
+    return "cat2"
+  }
+  else {
+    return "os gatos trombam e o rato foge"
+  }
 
 
 
- 
+
 }
+
+console.log(catAndMouse(6, 4, 3))
 
 // Desafio 8
 function fizzBuzz(nmrs) {
 
   let ret = nmrs
-  
+
   for (let i = 0; i < ret.length; i++) {
     if (ret[i] % 3 == 0) {
       console.log("fizz")
@@ -114,10 +129,10 @@ function fizzBuzz(nmrs) {
     else
       console.log("bug")
 
-      
+
   }
 
-  return  " "
+  return " "
 }
 
 
@@ -125,9 +140,35 @@ function fizzBuzz(nmrs) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(palavra) {
+
+  let list = palavra.split("")
+
+  for (let i = 0; i < list.length; i++) {
+    if (list[i] == "a") {
+      list[i] = 1
+    }
+    else if (list[i] == "e") {
+      list[i] = 2
+    }
+    else if (list[i] == "i") {
+      list[i] = 3
+    }
+    else if (list[i] == "o") {
+      list[i] = 4
+    }
+    else if (list[i] == "u") {
+      list[i] = 5
+    }
+  }
+  let zen = list.join("")
+
+  return zen
+
+
 }
+console.log(encode("hi there"))
+
 function decode() {
   // seu código aqui
 }
