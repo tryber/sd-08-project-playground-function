@@ -96,9 +96,35 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(5, 3));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrNum) {
+  if (typeof arrNum === "object") {
+    let inputArrNum = arrNum;
+    let maiorNum = inputArrNum[0];
+    let contador = 0;
+
+    for (let index = 0; index < inputArrNum.length; index += 1) {
+      if (inputArrNum[index] > maiorNum) {
+        maiorNum = inputArrNum[index];
+      }
+    }
+    for (let index = 0; index < inputArrNum.length; index += 1) {
+      if (inputArrNum[index] == maiorNum) {
+        contador += 1;
+      }
+    }
+
+    return contador;
+  }
+  else {
+    return `ERROR > tipo não é objeto Array!`
+  }
+  
 }
+
+// < Para o teste manual >
+// let arrayteste = [9, 1, 2, 3, 9, 5, 7];
+// console.log(highestCount(arrayteste));
+
 
 // Desafio 7
 function catAndMouse() {
