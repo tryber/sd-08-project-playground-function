@@ -19,8 +19,10 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(name) {
-  return ("${name[name.length - 1]},  ${name[0]}");
+  return ("${name[name.length - 1]}, ${name[0]}");
 }
+
+//name[name.length - 1].concat(",  ${name[0]}")
 
 // Desafio 5
 function footballPoints( wins, ties) {
@@ -33,7 +35,7 @@ function highestCount(numbers) {
   for (let j = 0; j < numbers.length; j++) {
     let maxRepeatTest = 0;
     for (let i = 0; i < numbers.length; i++) {
-      if (numbers[j] == numbers[i]) {
+      if (numbers[j] === numbers[i]) {
         maxRepeatTest++;
       }
       if (maxRepeatTest > maxRepeat) {
@@ -45,8 +47,14 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return "cat1";
+  } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
