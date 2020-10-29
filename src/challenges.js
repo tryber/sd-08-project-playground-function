@@ -56,6 +56,9 @@ function highestCount(array) {
   return contador;
 }
 
+//let array = [1,3,7,4,7]; 
+//console.log(highestCount(array));
+
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
