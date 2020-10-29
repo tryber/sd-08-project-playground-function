@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue(param1, param2){
-  param1 && param2 === true
+function compareTrue(){
+  compareTrue = true && true
   return compareTrue
 }
 
