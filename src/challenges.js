@@ -1,7 +1,13 @@
 
 // Desafio 1
 function compareTrue() {
-  // seu código aqui  
+  let nome = "ruben";
+  let sobrenome = "albertassi";  
+  if (nome === "ruben" && sobrenome === "albertassi"){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 // Desafio 2
