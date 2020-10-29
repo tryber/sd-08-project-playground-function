@@ -49,9 +49,9 @@ function catAndMouse(mouse, cat1, cat2) {
   if (mouse - cat1 == mouse - cat2) {
     return "os gatos trombam e o rato foge";
   } else if (mouse - cat1 < mouse - cat2) {
-    return "cat2";
-  } else {
     return "cat1";
+  } else {
+    return "cat2";
   }
 }
 
@@ -74,7 +74,12 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(str) {
-
+  for(let x = 0; x < str.length; x += 1){
+    if(str[x] == 'a'){
+      str
+    }
+  }
+  return num;
 }
 
 console.log(encode("Amazaoaa"));
