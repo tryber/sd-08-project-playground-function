@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(num1, num2) {
-  if (num1 >= 0 && num2 > num1) {
+  if (num1 == true && num2 == true) {
     return true;
   };
   
