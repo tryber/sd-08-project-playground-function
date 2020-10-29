@@ -38,8 +38,10 @@ function splitSentence(palavras) {
 // Desafio 4
 
 function concatName(arrayNomes) {
-  return (arrayNomes[arrayNomes.length - 1] + " " + arrayNomes[0]);
+  return (arrayNomes[arrayNomes.length - 1] + ", " + arrayNomes[0]);
 }
+
+
 
 
 
@@ -52,9 +54,26 @@ function concatName(arrayNomes) {
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontosTotal = 0;
+  let vitoriaPontos = 3;
+  let empatePontos = 1;
+  wins = wins * vitoriaPontos;
+  ties = ties * empatePontos;
+  return pontosTotal + wins + ties;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 6
 function highestCount() {
