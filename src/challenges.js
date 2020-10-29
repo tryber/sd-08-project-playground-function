@@ -35,7 +35,8 @@ function concatName(arrayDeStrings) {
 function footballPoints(wins, ties) {
   let pontosWins = wins * 3;
   let pontosTies = ties;
-  let pontosTotais = kkj;
+  let pontosTotais = pontosTies + pontosWins;
+  return pontosTotais;
 }
 
 // Desafio 6
