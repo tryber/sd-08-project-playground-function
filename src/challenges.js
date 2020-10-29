@@ -49,6 +49,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = mouse - cat1;
   let distanciaCat2 = mouse - cat2; 
   let resultadoDaCaca; 
+  if (distanciaCat1 <0){
+    distanciaCat1 *= -1;
+  }
+  if(distanciaCat2 < 0){
+    distanciaCat2 *= -1;
+  }
   if (distanciaCat1 < distanciaCat2) {
     resultadoDaCaca = "cat1";
   } else if (distanciaCat2 < distanciaCat1) {
@@ -56,6 +62,8 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distanciaCat1 == distanciaCat2) {
     resultadoDaCaca ="os gatos trombam e o rato foge";
 }
+
+
   return resultadoDaCaca;
 }
 
