@@ -29,12 +29,12 @@ function highestCount(a) {
   let maj = -100000;
   let rep = 0;
 
-  for (let num in a) {
+  for (let num = 0; num < a.length; num += 1) {
     if (a[num] > maj) {
       maj = a[num];
     }
   }
-  for (let num in a) {
+  for (let num = 0; num < a.length; num += 1) {
     if (a[num] === maj) {
       rep += 1;
     }
@@ -53,8 +53,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (dist1 === dist2) {
     return 'os gatos trombam e o rato foge';
-  }
-  else if (dist1 > dist2) {
+  } else if (dist1 > dist2) {
     return 'cat2';
   }
 
@@ -72,13 +71,11 @@ function fizzBuzz(a) {
       }
       resp.push('fizz');
       continue;
-    }
-    else if (a[i] % 5 === 0) {
-      resp.push('fizz');
+    } else if (a[i] % 5 === 0) {
+      resp.push('buzz');
       continue;
     }
     resp.push('bug!');
-    continue;
   }
   return resp;
 }
@@ -89,23 +86,25 @@ function encode(a) {
   let resp = [];
 
   for (let i = 0; i < base.length; i += 1) {
-    if (base[i] === 'a') {
-      resp.push('1');
-    }
-    else if (base[i] === 'e') {
-      resp.push('2');
-    }
-    else if (base[i] === 'i') {
-      resp.push('3');
-    }
-    else if (base[i] === 'o') {
-      resp.push('4');
-    }
-    else if (base[i] === 'u') {
-      resp.push('5');
-    }
-    else {
-      resp.push(base[i]);
+    switch (base[i]) {
+      case 'a':
+        resp.push('1');
+        break;
+      case 'e':
+        resp.push('2');
+        break;
+      case 'i':
+        resp.push('3');
+        break;
+      case 'o':
+        resp.push('4');
+        break;
+      case 'u':
+        resp.push('5');
+        break;
+      default:
+        resp.push(base[i]);
+        break;
     }
   }
 
@@ -116,23 +115,25 @@ function decode(a) {
   let resp = [];
 
   for (let i = 0; i < base.length; i += 1) {
-    if (base[i] === '1') {
-      resp.push('a');
-    }
-    else if (base[i] === '2') {
-      resp.push('e');
-    }
-    else if (base[i] === '3') {
-      resp.push('i');
-    }
-    else if (base[i] === '4') {
-      resp.push('o');
-    }
-    else if (base[i] === '5') {
-      resp.push('u');
-    }
-    else {
-      resp.push(base[i]);
+    switch (base[i]) {
+      case '1':
+        resp.push('a');
+        break;
+      case '2':
+        resp.push('e');
+        break;
+      case '3':
+        resp.push('i');
+        break;
+      case '4':
+        resp.push('o');
+        break;
+      case '5':
+        resp.push('u');
+        break;
+      default:
+        resp.push(base[i]);
+        break;
     }
   }
 
@@ -140,8 +141,17 @@ function decode(a) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(a, name) {
+  if (a.length === 0) {
+    return 'Vazio!';
+  }
+  let base = a.sort();
+  let resp = [];
+
+  for (let i = 0; i < base.length; i += 1) {
+    resp.push({tech: base[i], name: name});
+  }
+  return resp;
 }
 
 // Desafio 11
@@ -187,6 +197,7 @@ console.log(highestCount([1, 2, 9, 9, 15, 15, 15]));
 console.log(catAndMouse(0, 2, 3));
 console.log(catAndMouse(0, -4, 3));
 console.log(catAndMouse(0, -3, 3));
-console.log(fizzBuzz([2, 3, 15, 5, 12, 11]));
+console.log(fizzBuzz([9, 25]));
 console.log(encode('Hi, guys, whats up?'));
 console.log(decode(encode('Hi, guys, whats up?')));
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
