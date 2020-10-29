@@ -66,8 +66,8 @@ function highestCount(repetido) {
   }
   return contador;
 }
-let teste = highestCount([9, 2, 4, 3, 1, 16, 9, 9])
-console.log(teste)
+// let teste = highestCount([9, 2, 4, 3, 1, 16, 9, 9])
+// console.log(teste)
 
 // Desafio 7
 function catAndMouse() {
