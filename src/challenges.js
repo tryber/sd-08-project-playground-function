@@ -11,9 +11,15 @@ function compareTrue(comprar, pagar) {
 // console.log (compareTrue(comprar, pagar));
 
 // Desafio 2
-function calcArea() {
+// let base = 2;
+// let height = 10;
+function calcArea(base, height) {
   // seu código aqui
+  calcArea = (base*height)/2;
+  return calcArea;
 }
+
+// console.log(`O valor da área é ${calcArea(base,height)}.`)
 
 // Desafio 3
 function splitSentence() {
