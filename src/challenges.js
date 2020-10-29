@@ -58,14 +58,14 @@ function highestCount(list) {
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
   let dist1,dist2;
-  dist1=cat1 - mouse;
-  dist2=cat2 - mouse;
-  if(dist1>dist2){
-    return "cat2";
-  }else if (dist2>dist1){
+  dist1=Math.abs(mouse-cat1);
+  dist2=Math.abs(mouse-cat2);
+  if (dist2>dist1){
     return "cat1";
+  }else if(dist1>dist2){
+    return "cat2";
   }else{
-    return "os gatos trombam e o gato foge"
+    return "os gatos trombam e o rato foge"
   }
 }
 
@@ -90,7 +90,7 @@ function fizzBuzz(list) {
 function encode(str) {
   for(let index in str){
     if(str[index]=="a"){
-      str[index]="1";
+      str[index]="1"
     }else if(str[index]=="e"){
       str[index]="2";
     }else if(str[index]=="i"){
@@ -116,8 +116,7 @@ function decode(str) {
     }else if (str[index]=="5"){
       str[index]="u";
     }
-  }
-  return str;
+    return str;
 }
 
 // Desafio 10
