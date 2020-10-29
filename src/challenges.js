@@ -15,10 +15,13 @@ function compareTrue(valor1,valor2) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base , area) {
 //   Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área.
 
 // Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2.
+  let resultado =0;
+  resultado =(base * altura)/2;
+  return resultado;
 }
 
 // Desafio 3
@@ -27,6 +30,7 @@ function splitSentence() {
 //   Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
 
 // Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
+
 }
 
 // Desafio 4
