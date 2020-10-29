@@ -49,12 +49,33 @@ function footballPoints(wins,ties) {
   let empates = ties * 1;
   let pontos = vitorias + empates;
   console.log(pontos)  
-} footballPoints(5,2)
+  return pontos
+} 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(input) {
+  let arrayBase = []; 
+   
+  
+  for (let i = 0; i < input.length; i+=1){
+         arrayBase.push(input[i]);
+  }
+  arrayBase.sort(function(a, b){
+      return a-b;
+  });
+  let numberOfRepeats = 1; 
+  for(let i=arrayBase.length-1; i >= 0; i -= 1)
+  if (arrayBase[i] == arrayBase[i-1]){
+  numberOfRepeats += 1
+  } else {
+  break;
+  }
+
+  console.log(numberOfRepeats)
+  return numberOfRepeats
+}highestCount([9,1,2,3,9,5,7]) 
+   
+
 
 // Desafio 7
 function catAndMouse() {
