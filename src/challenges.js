@@ -58,8 +58,8 @@ function highestCount(list) {
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
   let dist1,dist2;
-  dist1=mouse-cat1;
-  dist2=mouse-cat2;
+  dist1=cat1 - mouse;
+  dist2=cat2 - mouse;
   if(dist1>dist2){
     return "cat1";
   }else if (dist2>dist1){
