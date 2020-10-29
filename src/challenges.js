@@ -20,9 +20,14 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName (arrayString) {
+  let primeiraString = arrayString[0];
+  let ultimaString = arrayString[arrayString.length - 1];
+  concatName =  primeiraString + " , " + ultimaString + " ."; 
+
+  return concatName;
 }
+
 
 // Desafio 5
 function footballPoints() {
