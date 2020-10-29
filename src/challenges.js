@@ -27,13 +27,15 @@ function concatName(fullName) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = 0;
+  let pointsFromWins = 0;
+  let pointsFromTies = 0;
   for (let i = 0; i <= wins; i += 1) {
-    points += 3;
+    pointsFromWins += 3;
   }
-   for (let i2 = 0; i2 <= ties; i2 += 1) {
-    points += 1;
+  for (let i2 = 0; i2 <= ties; i2 += 1) {
+    pointsFromTies  += 1;
   }
+  let points = pointsFromWins + pointsFromTies; 
   return points;
 }
 
