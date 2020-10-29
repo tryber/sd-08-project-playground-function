@@ -30,8 +30,10 @@ function concatName(list) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(vit,emp) {
+  let pontosTotal;
+  pontosTotal=vit*3 + emp;
+  return pontosTotal;
 }
 
 // Desafio 6
