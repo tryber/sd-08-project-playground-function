@@ -138,6 +138,7 @@ function decode(string) {
 
 // Desafio 10
 function techList(array,name){
+  array.sort();
   let listWithObjects = [];
   objectInLIst = {};
   if (array.length == 0){
