@@ -72,6 +72,14 @@ function catAndMouse(mouse, cat1, cat2) {
   let distancia1 = mouse - cat1
   let distancia2 = mouse - cat2
 
+  if (cat1 > mouse){
+    distancia1 = cat1 - mouse
+  }
+
+  if (cat2 > mouse){
+    distancia2 = cat2 - mouse
+  }
+
   if (distancia1 < distancia2) {
     return 'cat1'
   } else if (distancia2 < distancia1) {
@@ -81,8 +89,17 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  for (let index in array) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      return 'fizzbuzz'
+    } else if (array[index] % 5 === 0) {
+      return 'buzz'
+    } else if (array[index] % 3 === 0){
+      return 'fizz'
+    }
+    return 'bug!'
+  }
 }
 
 // Desafio 9
