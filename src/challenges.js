@@ -227,16 +227,23 @@ function techList(techArray, namePar) {
 
     let list = [];
 
-    //Running through the techArray
-    for (let tec = 0; tec < techArray.length; tec += 1) {
+    if (techArray.lenghth === 0) {
+        return "Vazio!"
+    } else {
 
-        list.push({
-            tech: sortedArray[tec],
-            name: namePar
-        })
 
+
+        //Running through the techArray
+        for (let tec = 0; tec < techArray.length; tec += 1) {
+
+            list.push({
+                tech: sortedArray[tec],
+                name: namePar
+            })
+
+        }
+        return list;
     }
-    return list;
 }
 
 // Desafio 11
