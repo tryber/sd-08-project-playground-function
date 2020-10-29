@@ -4,7 +4,6 @@ function compareTrue(a, b) {
   if (a == true && b == true) {
     return true
   }
-
   return false
 }
 
@@ -17,8 +16,8 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
     // seu código aqui
-    let array =string.split(" ")
-    return array
+    let newArray =string.split(" ")
+    return newArray
 }
 
 // Desafio 4
@@ -29,8 +28,9 @@ function concatName(arrayNames) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
   // seu código aqui
+  return (wins*3) + (lies*1)
 }
 
 // Desafio 6
