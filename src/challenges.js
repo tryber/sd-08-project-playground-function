@@ -2,7 +2,7 @@
 let value1 = 5;
 let value2 = 10;
 function compareTrue(value1, value2) {
-  if( value1 <= 5 && value2 <= 20) {
+  if( value1 < value2) {
     return true
     
   }else{
@@ -11,7 +11,7 @@ function compareTrue(value1, value2) {
      
   }
 
-compareTrue(value1,value2));
+console.log(compareTrue(value1,value2));
 
 // Desafio 2
 function calcArea() {
