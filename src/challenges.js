@@ -188,10 +188,9 @@ function triangleCheck(lineA,lineB,lineC) {
     let lado = aux.slice(pos,1)[0];
     if(lado >= aux[0] + aux[1] || lado <= Math.abs(aux[0] - aux[1])){
       return false;
-    } else {
-      return true;
     }
   }
+  return true;
 }
 
 
