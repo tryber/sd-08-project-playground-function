@@ -66,21 +66,26 @@ function fizzBuzz(array) {
   let newArray = [];
 
   for (let i in array){
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      newArray.push('fizzBuzz');
-    } else if (array[i] % 3 === 0) {
-      newArray.push('fizz');
-    } else if (array[i] % 5 === 0) {
-      newArray.push('buzz');
-    } else {
-      newArray.push('bug!');
-    }
+    fizzBuzzPusher(array[i], newArray)
   }
   return newArray;
 }
 
+function fizzBuzzPusher(n, array) {
+  if (n % 3 === 0 && n % 5 === 0) {
+    array.push('fizzBuzz');
+  } else if (n % 3 === 0) {
+    array.push('fizz');
+  } else if (n % 5 === 0) {
+    array.push('buzz');
+  } else {
+    array.push('bug!');
+  }
+}
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
-function encode() {
+function encode(str) {
   
 }
 function decode() {
