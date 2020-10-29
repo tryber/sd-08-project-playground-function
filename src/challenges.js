@@ -1,13 +1,19 @@
 // Desafio 1
 function compareTrue(param1, param2) {
- // seu código aqui
+ if (param1 === true && param2 === true) {
+   return true;
+} else {
+  return false;
 }
+}
+compareTrue (false, true)
+
 // Desafio 2
 function calcArea(base, height) {
- let areaTriangulo = ((base * height)/2)
- console.log(areaTriangulo)
+ let areaTriangulo = ((base * height)/2);
+ return areaTriangulo;
 }
-calcArea(5, 20);
+calcArea(50, 10)
 
 // Desafio 3
 function splitSentence() {
