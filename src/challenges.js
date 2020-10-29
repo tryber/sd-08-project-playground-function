@@ -9,6 +9,7 @@ function compareTrue() {
     return false;
     }
 }
+console.log(compareTrue());
 
 // Desafio 2
 function calcArea() {
