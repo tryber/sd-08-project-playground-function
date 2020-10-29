@@ -1,12 +1,11 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (typeof valor1 !== "boolean" || typeof valor2 !== "boolean") {
+  if (typeof valor1 !== 'boolean' || typeof valor2 !== 'boolean') {
     return 'O valor não é um boolean';
   } else if (valor1 === true && valor2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -20,8 +19,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let ultimo = array.length - 1;
+  return `${array[ultimo]}, ${array[0]}`;
 }
 
 // Desafio 5
