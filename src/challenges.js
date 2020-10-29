@@ -34,7 +34,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arr) {
   let numberOfReptitions = 0;
-  let biggestValue = Math.max(arr);
+  let biggestValue = Math.max(...arr);
   for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] === biggestValue) {
       numberOfReptitions += 1;
