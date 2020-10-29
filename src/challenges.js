@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue( bool1, bool2 ) {
-  if ( bool1 == true && bool2 == true ) {
+function compareTrue(bool1, bool2) {
+  if ( bool1 === true && bool2 === true ) {
     return true;
   } else {
     return false;
@@ -9,7 +9,7 @@ function compareTrue( bool1, bool2 ) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -19,17 +19,29 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(name) {
-  return name[name.length - 1].concat(", " + name[0])
+  return ("${name[name.length - 1]},  ${name[0]}");
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints( wins, ties) {
+  return wins * 3 + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let maxRepeat = 0;
+  for (let j = 0; j < numbers.length; j++) {
+    let maxRepeatTest = 0;
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[j] == numbers[i]) {
+        maxRepeatTest++;
+      }
+      if (maxRepeatTest > maxRepeat) {
+        maxRepeat = maxRepeatTest;
+      }
+    }
+  }
+  return maxRepeat;
 }
 
 // Desafio 7
