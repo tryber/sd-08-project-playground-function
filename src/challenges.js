@@ -39,13 +39,14 @@ function concatName(arrayOfNames) {
   let lastName = arrayOfNames[arrayOfNames.length-1];
   return lastName + ", " + firstName;
 }
-names = ["Tandy", "Almeida", "de", "Souza"];
-console.log(concatName(names));
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return (wins * 3) + ties;
 }
+
+console.log(footballPoints(5,2));
 
 // Desafio 6
 function highestCount() {
