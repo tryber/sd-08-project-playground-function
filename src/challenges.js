@@ -19,10 +19,9 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(name) {
-  console.log((`${name[name.length - 1]}, ${name[0]}`));
+  return(`${name[name.length - 1]}, ${name[0]}`);
 }
 
-concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
 //name[name.length - 1].concat(",  ${name[0]}")
 
 // Desafio 5
@@ -76,11 +75,40 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let translate = {
+    a : 1,
+    e : 2,
+    i : 3,
+    o : 4,
+    u : 5,
+  }
+  for (let i = 0; i < phrase.length; i++) {
+    for (let key in translate) {
+    if (phrase[i] == key) {
+    phrase = phrase.replace(phrase[i], translate[key]);
+    }
+    }
+  }
+  return phrase
 }
-function decode() {
-  // seu código aqui
+
+function decode(code) {
+  let translate = {
+    1 : "a",
+    2 : "e",
+    3 : "i",
+    4 : "o",
+    5 : "u",
+  }
+  for (let i = 0; i < code.length; i++) {
+    for (let key in translate) {
+    if (code[i] == key) {
+    code = code.replace(code[i], translate[key]);
+    }
+    }
+  }
+  return code
 }
 
 // Desafio 10
