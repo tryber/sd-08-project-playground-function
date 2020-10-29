@@ -139,12 +139,16 @@ function techList(tech, name) {
   tech.sort();
   if(tech.length > 0){
     for(let key in tech){
-      obj.push({'tech': tech[key], 'name': name[key]})
+      obj.push(
+        {
+          tech: tech[key],
+          name: name,
+        }
+      );
     }
     return obj;
-  }  else{
-    return 'Vazio!'
   }
+  return 'Vazio!'
 }
 
 // Desafio 11
