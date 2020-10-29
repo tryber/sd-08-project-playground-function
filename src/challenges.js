@@ -86,11 +86,11 @@ function fizzBuzz(array) {
   let frase = [];
   for(let index = 0; index < array.length; index +=1){
     if((array[index] % 5 == 0 && array[index] % 3 == 0 )){
-      frase.push('fizz');
+      frase.push('fizzBuzz');
     }else if(array[index]%5 == 0 ){
       frase.push('buzz');
     }else if( array[index]% 3 == 0){
-      frase.push('fizzBuzz');
+      frase.push('fizz');
     }else{
       frase.push('bug');
     }
