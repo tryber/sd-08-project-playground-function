@@ -9,9 +9,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let vetor = frase.split(' ');
+  return vetor;
 }
+console.log(splitSentence("teste retorno array"));
 
 // Desafio 4
 function concatName() {
