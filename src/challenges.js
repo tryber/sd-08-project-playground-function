@@ -28,12 +28,19 @@ function concatName(fullName) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = (wins * 3) + ties;
-  return points; 
+  return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+  let numberOfReptitions = 0;
+  let biggestValue = Math.max(arr);
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i] === biggestValue) {
+      numberOfReptitions += 1;
+    }
+  }
+  return numberOfReptitions;
 }
 
 // Desafio 7
