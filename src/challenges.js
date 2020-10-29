@@ -20,7 +20,7 @@ function concatName(array) {
   let arrayFinal= [];
   arrayFinal.push(array[array.length-1]);
   arrayFinal.push(array[0]);
-  return arrayFinal.join(" ");
+  return arrayFinal.join(", ");
 }
 
 // Desafio 5
