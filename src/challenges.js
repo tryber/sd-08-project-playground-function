@@ -19,8 +19,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(ordenar) {
+  let ordenado = ordenar[ordenar.length-1] + ", " + ordenar[0];
+  return(ordenado);
 }
 
 // Desafio 5
