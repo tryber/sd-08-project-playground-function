@@ -7,22 +7,22 @@ function compareTrue(x, y) {
     result = false;
   }
   return result;
-}
+};
 
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
-}
+};
 
 // Desafio 3
 function splitSentence(frase) {
-  return frase.split(" ");
-}
+  return frase.split(' ');
+};
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(string) {
+  return string[string.length - 1] + ", " + string[0];
+};
 
 // Desafio 5
 function footballPoints() {
