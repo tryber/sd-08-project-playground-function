@@ -133,7 +133,7 @@ function fizzBuzz(nmrs) {
 
 
   }
-
+return
 
 }
 
