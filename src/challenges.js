@@ -160,8 +160,30 @@ function techList(array, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  
+  if(array.length != 11){
+    return("Array com tamanho incorreto.");
+  }
+  for(let key in array){
+    let count =0;
+    for(let index in array){
+      if(array[key] == array[index]){
+        count++;
+      }
+      if(array[key] < 0 || array[key] > 9 || count >=3){
+        return("não é possível gerar um número de telefone com esses valores");
+      }
+    }
+  }
+
+  array.splice(0, 0,"(");
+  array.splice(3, 0,")");
+  array.splice(4, 0," ");
+  array.splice(10, 0,"-");
+  array = array.join("");
+
+  return(array);
 }
 
 // Desafio 12
