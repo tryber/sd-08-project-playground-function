@@ -1,23 +1,21 @@
 // Desafio 1
-function compareTrue() {
-  let valueA = 2;
-  let valueB = 5;
-
-  if (valueA >= 0 && valueB <= 10) {
+function compareTrue(value1, value2) {
+  
+  if (value1 >= 0 && value2 >= 0) {
     return true;
-  } else {
+  }
+  else {
     return false;
   }
 }
 
 
 // Desafio 2
-function calcArea() {
-  let base = 5;
-  let height = 6;
+function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
+
  
 // Desafio 3
 function splitSentence() {
