@@ -227,11 +227,10 @@ function techList(techArray, namePar) {
 
     let list = [];
 
-    if (techArray.lenghth === 0) {
+    if (techArray.length == 0) {
         return "Vazio!"
+
     } else {
-
-
 
         //Running through the techArray
         for (let tec = 0; tec < techArray.length; tec += 1) {
