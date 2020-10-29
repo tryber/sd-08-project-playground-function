@@ -60,8 +60,6 @@ function catAndMouse(mouse, cat1, cat2) {
   else if (Math.abs((mouse - cat2)) === Math.abs((mouse - cat1))) return "os gatos trombam e o rato foge";
 }
 
-console.log(catAndMouse(10, 4, 22));
-
 // Desafio 8
 function fizzBuzz(numbers) {
   let fizzBuzzResult = []
@@ -74,8 +72,6 @@ function fizzBuzz(numbers) {
 
   return fizzBuzzResult;
 }
-
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(phrase) {
@@ -133,8 +129,20 @@ function decode(phrase) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let listOfTech = [];
+  tech.sort();
+
+  for (let key in tech) {
+    let objectTech = {
+      tech: tech[key],
+      name: name
+    }
+
+    listOfTech.push(objectTech);
+  }
+
+  return listOfTech;
 }
 
 // Desafio 11
