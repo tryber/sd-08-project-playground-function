@@ -136,16 +136,19 @@ function decode(string) {
   return listForEncode.join("");  
 }
 
-
 // Desafio 10
 function techList(array,name){
   let listWithObjects = [];
   objectInLIst = {};
-  for(i in array) {
+  if (array.length == 0){
+    return 'Vazio!';
+  } else {
+    for(i in array) {
       listWithObjects.push(objectInLIst = {
           'tech' : array[i],
           'name' : name,
       });
+    }  
   }
   return listWithObjects;
 }
