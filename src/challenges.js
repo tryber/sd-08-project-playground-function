@@ -20,7 +20,7 @@ function concatName(strArr) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
@@ -94,10 +94,10 @@ function decode(encodedStr) {
   let cryptography = ['a', 'e', 'i', 'o', 'u'];
 
   for (let letterIndex in encodedStr) {
-    if (encodedStr[letterIndex] == ' ') {
+    if (encodedStr[letterIndex] === ' ') {
       decoded += ' ';
     } else if (!isNaN(encodedStr[letterIndex])) {
-      decoded += `${cryptography[parseInt(encodedStr[letterIndex]) - 1]}`;
+      decoded += `${cryptography[parseInt(encodedStr[letterIndex], 10) - 1]}`;
     } else {
       decoded += encodedStr[letterIndex];
     }
@@ -116,7 +116,7 @@ function techList(techArr, name) {
 
   let techs = [];
 
-  for (let techIndex in techArr) {
+  for (let techIndex = 0; techIndex < techArr.length; techIndex += 1) {
     let obj = {
       tech: techArr[techIndex],
       name,
@@ -189,7 +189,7 @@ function hydrate(str) {
 
   for (let letterIndex in str) {
     if (/[1-9]/.test(str[letterIndex])) {
-      waterAmount += parseInt(str[letterIndex]);
+      waterAmount += parseInt(str[letterIndex], 10);
     }
   }
 
