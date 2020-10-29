@@ -15,7 +15,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  return `${array[array.length - 1]},  ${array[0]}`;
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
@@ -115,6 +115,7 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   let saida = [];
+  array.sort();
 
   if (array.length === 0) {
     return 'Vazio!';
@@ -134,10 +135,20 @@ function generatePhoneNumber(array) {
   if (array.length != 11) {
     return 'Array com tamanho incorreto.';
   }
+  let repeticoes = {};
 
   let saida = '(';
 
-  for (let i in array) {
+  for (let i = 0; i < array.length; i += 1) {
+    if (repeticoes[array[i]] === undefined) {
+      repeticoes[array[i]] = 1;
+    } else {
+      repeticoes[array[i]] += 1;
+    }
+
+    if (array[i] < 0 || array[i] > 9 || repeticoes[array[i]] >= 3) {
+      return 'Array com tamanho incorreto.';
+    }
     if (i == 2) {
       saida += ') ' ;
     } else if (i == 7) {
@@ -171,7 +182,7 @@ function hydrate(string) {
       saida += Number(dados[i]);
     }
   }
-  return saida;
+  return `${saida} copo de água`;
 }
 
 module.exports = {
