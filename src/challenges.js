@@ -71,37 +71,30 @@ function catAndMouse() {
 
 // Desafio 8
 
-let numbers = [2, 15, 7, 9, 45];
-
 function fizzBuzz(numbers) {
 
-  let arrayNumbers = [];
+  let array = [];
 
-  for (let i = 0; i < numbers.length; i++) {
+  for (let index = 0; index < numbers.length; index++) {
 
-    if (numbers[i] % 3 == 0) {
-       arrayNumbers.push("fizz");
-    
-    } else if (numbers[i] % 5 == 0) {
-       arrayNumbers.push("buzz");
-    
-    
-    } else if (numbers[i] % 3 == 0 && numbers[i] % 5 == 0) {
-       arrayNumbers.push("fizzBuzz");
-       
-    
-    
+    if (numbers[index] % 3 == 0 && numbers[index] % 5 !== 0) {
+      array.push("fizz");
+
+    } else if (numbers[index] % 5 == 0 && numbers[index] % 3 !== 0) {
+      array.push("buzz");
+
+    } else if (numbers[index] % 3 == 0 && numbers[index] % 5 == 0) {
+      array.push("fizzBuzz");
+
     } else {
-       arrayNumbers.push("bug!");
+      array.push("bug!");
+    }
 
-       return arrayNumbers;
-        
-    
-    }
-    
-    }
-  
-  
+  }
+
+  return array;
+
+
 }
 
 // Desafio 9
