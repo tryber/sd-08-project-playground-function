@@ -142,7 +142,7 @@ function decode(string) {
 function techList(array, nome) {
   
   let arrayRetorno = [];
-  if(array == []){
+  if(array.length < 1){
     return("Vazio!");
   }else{
     for(let key in array){
@@ -152,6 +152,7 @@ function techList(array, nome) {
     return(arrayRetorno);
   }
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
