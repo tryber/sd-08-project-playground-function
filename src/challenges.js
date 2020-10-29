@@ -2,10 +2,9 @@
 function compareTrue() {
   if (bool1 === true && bool2 === true) {
     return true;
-  } else {
-    return false;
-  };
-};
+  }
+  return false;
+}
 
 // Desafio 2
 function calcArea() {
