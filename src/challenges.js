@@ -48,13 +48,36 @@ return freq;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  dmouseCat1 = Math.abs(mouse-cat1);
+  dmouseCat2 = Math.abs(mouse-cat2);
+  console.log(dmouseCat1,dmouseCat2);
+  if (dmouseCat2 > dmouseCat1){
+    return 'cat1';
+  } else if (dmouseCat1 > dmouseCat2){
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  } 
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  list = [];
+  for (i in array){
+      if (array[i]%3  == 0 && array[i]%5 == 0){
+          list.push('fizzBuzz');
+      } else if (array[i]%3 ==0 || array[i]%5 == 0) {
+          if (i%3 ==0){
+              list.push('fizz');
+          } else {
+            list.push('buzz');
+          }     
+      } else {
+        list.push('bug!');
+      }     
+  }
+  return list;
 }
 
 // Desafio 9
