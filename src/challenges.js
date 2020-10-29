@@ -29,7 +29,7 @@ function concatName(nome) {
   let cont;
   pNome = nome[0];
   uNome = nome[nome.length - 1];
-  cont = (uNome + ', ' + pNome);
+  cont = `${uNome}, ${pNome}`;
   return cont;
 }
 
