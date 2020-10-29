@@ -55,13 +55,13 @@ function catAndMouse(mouse, cat1, cat2) {
   //} else if (mouse < cat2 && cat2 < cat1 || mouse > cat2 && cat2 > cat1) {
   //  } else if ((cat2 - mouse || mouse - cat2) < (cat1 - mouse || mouse - cat1)) {
   //  return "cat2";
-  } else if ((cat1 - mouse || mouse - cat1) === (cat2 - mouse || mouse - cat2)) {
+  } else if (Math.abs(cat1 - mouse || mouse - cat1) === Math.abs(cat2 - mouse || mouse - cat2)) {
     return "os gatos trombam e o rato foge";
   } else {
     return "cat2";
   }
 }
-// console.log(catAndMouse(8, 2, 7));
+console.log(catAndMouse(8, 4, 12));
 
 
 // Desafio 8
