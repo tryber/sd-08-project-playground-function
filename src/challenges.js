@@ -8,6 +8,7 @@ return (valor1 && valor2);
 
 
 
+
 // Desafio 2
 function calcArea(base, height) {
   return (base * height)/2;
@@ -25,9 +26,16 @@ console.log(splitSentence('Alo alo alo alo alo alo'));
 
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
+  
+  let ultimoArray = array[array.length - 1];
+  let primeiroArray = array[0];
+  return ultimoArray+', '+primeiroArray;
   // seu código aqui
 }
+console.log(concatName(['douglas', 'Ferreira', 'Pinto']))
+
+
 
 // Desafio 5
 function footballPoints() {
