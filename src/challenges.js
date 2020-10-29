@@ -112,7 +112,7 @@ function encode(string) {
 function decode(string) {
   let stringDec = '';
   for(let pos in string){
-    if(Object.values(vogais).includes(string[pos])){
+    if(Object.values(vogais).includes(parseInt(string[pos]))){
       for(let vog in vogais){
         if(vogais[vog] == string[pos]){
           stringDec += vog;
