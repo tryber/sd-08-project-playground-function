@@ -1,20 +1,19 @@
 // Desafio 1
-let oneBoolean = true;
-let anotherBoolean = false;
-
 function compareTrue(boolean1, boolean2) {
 
   let trueOrFalse = (boolean1 && boolean2) ? true : false;
   return trueOrFalse;
 
 }
-
-compareTrue(oneBoolean, anotherBoolean);
-
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+let base = 8;
+let height = 4;
+
+function calcArea(base, height) {
+  return base*height/2;
 }
+
+calcArea(base, height);
 
 // Desafio 3
 function splitSentence() {
