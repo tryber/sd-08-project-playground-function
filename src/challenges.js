@@ -6,8 +6,8 @@ function compareTrue(valor1,valor2) {
   } else {
     return false;
   }  
-
 }
+
 
 // Desafio 2
 function calcArea(base,height) {
@@ -42,9 +42,32 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
+  let distanciaCat1;
+  let distanciaCat2;
+
+  if (cat1 > mouse) {
+    distanciaCat1 = cat1 - mouse;
+  } else {
+    distanciaCat1 = mouse - cat1;
+  }
+
+  if (cat2 > mouse) {
+    distanciaCat2 = cat2 - mouse;
+  } else {
+    distanciaCat2 = mouse - cat2;
+  }
+
+  if (distanciaCat1 > distanciaCat2) {
+    return "cat2";
+  } else if (distanciaCat1 < distanciaCat2) {
+    return "cat1";    
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
+
 
 // Desafio 8
 function fizzBuzz() {
