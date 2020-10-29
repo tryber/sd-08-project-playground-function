@@ -77,13 +77,27 @@ function catAndMouse(mouse, cat1, cat2) {
     return "cat2"
   }
 }
+console.log(catAndMouse(2,5,6))
 
-console.log(catAndMouse(5,5,6))
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
+  let newArray = [];
+  for (let key in numbers) {
+    if (numbers[key] % 3 == 0 && numbers[key] % 5 ==0) {
+      newArray.push('fizzBuzz')
+    }else if (numbers[key] % 5 == 0) {
+      newArray.push("buzz")
+    }else if (numbers[key] % 3 == 0 ) {
+      newArray.push("fizz")
+    }else {
+      newArray.push("bug!")
+    }
+  }
+  return newArray
 }
 
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 9
 function encode() {
   // seu código aqui
