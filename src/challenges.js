@@ -1,26 +1,40 @@
 // Desafio 1
 function compareTrue(a, b) {
   // seu código aqui
-  if (a  && b) {
+  if (a && b) {
       return true;
     }   else {
           return false;
     }
   }
-    compareTrue(true,true);
+
+  compareTrue(true,true);
+
+
+
+
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
   return ((base*height)/2);
 }
 calcArea(2, 3);
+
+
+
+
+
 // Desafio 3
 function splitSentence(str) {
   // seu código aqui
-  return splitSentence.split(" ");
+  let final = [];
+  final = str.split(" ");
+  return final;
 }
-let final = splitSentence("Go Trybe");
-console.log(final);
+splitSentence("Go Trybe");
+
+
+
 
 // Desafio 4
 function concatName(firstName, secondName, lastName) {
@@ -28,21 +42,33 @@ function concatName(firstName, secondName, lastName) {
   return lastName + ' ' + firstName;
 }
 
+console.log(concatName(["lucas", "feraz"]));
+concatName(firstName, secondName, lastName);
+
+
+
+
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
   return (wins * 3) - ties;
 }
 
+
+
 // Desafio 6
 function highestCount() {
   // seu código aqui
 }
 
+
+
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
+
+
 
 // Desafio 8
 function fizzBuzz() {
