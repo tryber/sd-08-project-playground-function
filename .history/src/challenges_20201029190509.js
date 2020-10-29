@@ -29,6 +29,7 @@ function highestCount(arr) {
   const max = arr.reduce(function (a, b) {
     return Math.max(a, b);
   });
+
   return arr.filter((x) => x == max).length;
 }
 
@@ -52,32 +53,9 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode(text = "") {
-  return text
-    .split("a")
-    .join("1")
-    .split("e")
-    .join("2")
-    .split("i")
-    .join("3")
-    .split("o")
-    .join("4")
-    .split("u")
-    .join("5");
-}
-
+function encode(text = "") {}
 function decode(text = "") {
-  return text
-    .split("1")
-    .join("a")
-    .split("2")
-    .join("e")
-    .split("3")
-    .join("i")
-    .split("4")
-    .join("o")
-    .split("5")
-    .join("u");
+  // seu código aqui
 }
 
 // Desafio 10

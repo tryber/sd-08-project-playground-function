@@ -53,11 +53,11 @@ function fizzBuzz(arr) {
 
 // Desafio 9
 function encode(text = "") {
-  return text
+  result = text
     .split("a")
     .join("1")
     .split("e")
-    .join("2")
+    .join("1")
     .split("i")
     .join("3")
     .split("o")
@@ -67,17 +67,7 @@ function encode(text = "") {
 }
 
 function decode(text = "") {
-  return text
-    .split("1")
-    .join("a")
-    .split("2")
-    .join("e")
-    .split("3")
-    .join("i")
-    .split("4")
-    .join("o")
-    .split("5")
-    .join("u");
+  // seu código aqui
 }
 
 // Desafio 10

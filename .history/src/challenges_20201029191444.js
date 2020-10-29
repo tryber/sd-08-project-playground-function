@@ -57,7 +57,7 @@ function encode(text = "") {
     .split("a")
     .join("1")
     .split("e")
-    .join("2")
+    .join("1")
     .split("i")
     .join("3")
     .split("o")
@@ -74,7 +74,7 @@ function decode(text = "") {
     .join("e")
     .split("3")
     .join("i")
-    .split("4")
+    .split("5")
     .join("o")
     .split("5")
     .join("u");

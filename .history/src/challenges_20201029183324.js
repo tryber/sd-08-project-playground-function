@@ -26,58 +26,27 @@ function footballPoints(win = 0, ties = 0) {
 
 // Desafio 6
 function highestCount(arr) {
-  const max = arr.reduce(function (a, b) {
+  maior = arr.reduce(function (a, b) {
     return Math.max(a, b);
   });
-  return arr.filter((x) => x == max).length;
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 == cat2) return "os gatos trombam e o rato foge";
-  if (cat1 < cat2) return "cat1";
-  if (cat2 < cat1) return "cat2";
+function catAndMouse() {
+  // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz(arr) {
-  let result = [];
-  for (let i = 0; i < arr.length; i++) {
-    result[i] = "bug!";
-    if (arr[i] % 3 == 0) result[i] = "fizz";
-    if (arr[i] % 5 == 0) result[i] = "buzz";
-    if (arr[i] % 3 == 0 && arr[i] % 5 == 0) result[i] = "fizzBuzz";
-  }
-  return result;
+function fizzBuzz() {
+  // seu código aqui
 }
 
 // Desafio 9
-function encode(text = "") {
-  return text
-    .split("a")
-    .join("1")
-    .split("e")
-    .join("2")
-    .split("i")
-    .join("3")
-    .split("o")
-    .join("4")
-    .split("u")
-    .join("5");
+function encode() {
+  // seu código aqui
 }
-
-function decode(text = "") {
-  return text
-    .split("1")
-    .join("a")
-    .split("2")
-    .join("e")
-    .split("3")
-    .join("i")
-    .split("4")
-    .join("o")
-    .split("5")
-    .join("u");
+function decode() {
+  // seu código aqui
 }
 
 // Desafio 10
