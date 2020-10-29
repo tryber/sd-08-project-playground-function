@@ -22,7 +22,7 @@ function splitSentence(palavra) {
 function concatName(arrayString) {
   // seu código aqui
   let index = arrayString.length - 1;
-  let stringPalavras = arrayString[index] + ', ' + arrayString[0];  
+  let stringPalavras = arrayString[index] + ', ' + arrayString[0];
 
   return stringPalavras;
 }
@@ -45,21 +45,17 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arrayNumbers) {
   // seu código aqui
-  // Escreva uma função chamada highestCount que, ao receber uma array de números, 
-  // retorne a quantidade de vezes que o maior deles se repete.
-  // Exemplo: caso o parâmetro de highestCount seja uma array com valores [9, 1, 2, 3, 9, 5, 7], 
-  // a função deverá retornar 2, que é a quantidade de vezes que o número 9 (maior número do array) se repete.
   let maior = 0;
   let repete = 0;
 
   for (let x = 0; x < arrayNumbers.length; x += 1) {
-    if (arrayNumbers[x] > maior){
+    if (arrayNumbers[x] > maior) {
       maior = arrayNumbers[x];
     }
   }
 
   for (let x = 0; x < arrayNumbers.length; x += 1) {
-    if (arrayNumbers[x] == maior){
+    if (arrayNumbers[x] == maior) {
       repete += 1;
     }
   }
@@ -67,8 +63,17 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let dist_cat1_mouse = Math.abs(cat1 - mouse);
+  let dist_cat2_mouse = Math.abs(cat2 - mouse);
+  if (dist_cat1_mouse == dist_cat2_mouse) {
+    return 'os gatos trombam e o rato foge';
+  } else if (dist_cat1_mouse < dist_cat2_mouse) {
+    return 'cat1';
+  } else {
+    return 'cat2';
+  }
 }
 
 // Desafio 8
