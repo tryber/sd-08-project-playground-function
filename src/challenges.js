@@ -18,13 +18,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(names) {
-  let namesConcat = '';
-  for (name of names) {
-    if (namesConcat) {
-      namesConcat += ', '
-    }
-    namesConcat += name;
-  }
+  return names[0] + ', ' + names[-1];
   // seu código aqui
 }
 
