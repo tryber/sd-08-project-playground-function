@@ -1,6 +1,11 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(comprar, pagar) {
   // seu código aqui
+  if (comprar == true && pagar == true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
