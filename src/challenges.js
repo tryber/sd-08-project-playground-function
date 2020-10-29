@@ -85,6 +85,15 @@ function ladoMenorQueSubOutros(a, b, c) {
   return true;
 }
 
+function ehNumero(caractere) {
+  for (let index = 1; index <= 9; index += 1) {
+    if (index == caractere) {
+      return index;
+    }
+  }
+  return 0;
+}
+
 // Desafio 1
 function compareTrue(parametro1, parametro2) {
   return parametro1 && parametro2;
@@ -108,7 +117,7 @@ function concatName(vetor) {
 }
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = wins * 3 + ties;
+  let pontos = (wins * 3) + ties;
   return pontos;
 }
 // Desafio 6
@@ -174,7 +183,7 @@ function decode(decodificar) {
 function techList(vetor, name) {
   let arrayRetorno = [];
   let vetorOrdenado = vetor.sort();
-  for (let index = 0; index < vetorOrdenado.length; index++) {
+  for (let index = 0; index < vetorOrdenado.length; index += 1) {
     arrayRetorno.push(objetoComNomeTecnologia(name, vetorOrdenado[index]));
   }
   if (arrayRetorno.length === 0) {
@@ -193,10 +202,17 @@ function triangleCheck(lineA, lineB, lineC) {
   let pode2 = ladoMenorQueSubOutros(lineA, lineB, lineC);
   return pode1 && pode2;
 }
-console.log(triangleCheck(10, 14, 8));
+
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(frase) {
+  coposDeAgua = 0;
+  for (let key in frase) {
+    coposDeAgua += ehNumero(frase[key]);
+  }
+  if (coposDeAgua === 1) {
+    return '1 copo de água';
+  }
+  return `${coposDeAgua} copos de água`;
 }
 
 module.exports = {
