@@ -155,12 +155,13 @@ function techList(tech, name) {
 function generatePhoneNumber(array) {
   // seu código aqui
   let telefone = '';
-  if(array.length > 10 && array.length < 10) {
-
-    for(let key in array){
+  if(array.length > 11 || array.length < 11 ) {
+      return 'Array com tamanho incorreto.';
+  }
+  for(let key in array){
       let sum = 0;
       if(array[key] < 0 || array[key] > 9){
-      return 'não é possível gerar um número de telefone com esses valores';
+          return 'não é possível gerar um número de telefone com esses valores';
       }
       for(i=0;i<array.length;i++){
           if(array[key] == array[i]){
@@ -168,24 +169,22 @@ function generatePhoneNumber(array) {
           }
       }
       if(sum >= 3){
-      return 'não é possível gerar um número de telefone com esses valores';
+          return 'não é possível gerar um número de telefone com esses valores';
       }
       if(key == 0){
-        telefone += '('+array[0]
+          telefone += '('+array[0]
       }
       if(key == 1){
-        telefone += array[1]+')'
+          telefone += array[1]+')'
       }
       if(key == 7){
-        telefone += '-'+array[7];
+          telefone += '-'+array[7];
       }
       if(key == 2 || key == 3  || key == 4  || key == 5 || key == 6 || key == 8 || key == 9  || key == 10){
-        telefone += array[key];
+          telefone += array[key];
       }
-    }
-    return telefone
   }
-  return 'Array com tamanho incorreto.';
+  return telefone
 }
 
 // Desafio 12
