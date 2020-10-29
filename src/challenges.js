@@ -28,19 +28,24 @@ function splitSentence(frase) {
 // console.log(splitSentence(frase));
 
 // Desafio 4
-// let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo', 'Ana', 'Luiz Fernando', 'José']
+let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo', 'Ana', 'Luiz Fernando', 'José']
 function concatName(array) {
   // seu código aqui
   for (let i = 0; i < array.length -1; i += 1) {
-    return array[array.length-1] + ", " + array[0]
+    return (array[array.length-1] + ", " + array[0])
   }
 }
 // console.log(concatName(array));
 
 // Desafio 5
-function footballPoints() {
+// let wins = 0;
+// let ties = 9;
+function footballPoints(wins, ties) {
   // seu código aqui
+  let total = wins * 3 + ties * 1;
+  return total
 }
+// console.log(`O total de pontos conquistados é ${footballPoints(wins,ties)}.`);
 
 // Desafio 6
 function highestCount() {
