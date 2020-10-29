@@ -20,8 +20,17 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  let palavra;
+  let ultimaPosicao = arrayString.length;
+  for (let i = ultimaPosicao - 1; i >= 0; i -= 1){
+    if (i == ultimaPosicao - 1) {
+      palavra = arrayString[i] + ',';
+    } else if (i == 0){
+      palavra += ' ' + arrayString[i]+ '.';
+    }
+  } 
+  return palavra;
 }
 
 // Desafio 5
