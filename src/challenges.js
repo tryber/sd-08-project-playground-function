@@ -115,6 +115,9 @@ function decode(string) {
 
 // Desafio 10
 function techList(tech, name) {
+  if (tech.length === 0) {
+    return "Vazio!"
+  }
   let orderedArr = tech.sort();
   let techLearn = [];
   for (let techName of orderedArr) {
