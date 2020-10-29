@@ -8,18 +8,16 @@
 // Retorne false se um ou ambos os parâmetros forem falsos.
 // Faça a função utilizando o operador &&.
 
-function compareTrue() {
+function compareTrue(bool_1, bool_2) {
   // seu código aqui
-  function compareTrue(bool_1, bool_2) {
-  if (bool_1 && bool_2) {
+  if (bool_1 == true && bool_2 == true) {
     return true;
     }
     else {
     return false;
     }
-  }  
 }
-compareTrue (true, true);
+
 
 // Desafio 2
 // Área do triângulo
@@ -29,14 +27,21 @@ compareTrue (true, true);
 
 function calcArea(base, height) {
   // seu código aqui
-  let area = (base * height) / 2;
+  let area = base * height / 2;
   return area;  
 }
 
-console.log (calcArea [2, 10]);
 // Desafio 3
-function splitSentence() {
+// Dividindo a frase
+// Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
+// 
+// Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
+
+
+function splitSentence(sentence) {
   // seu código aqui
+  let 
+
 }
 
 // Desafio 4
