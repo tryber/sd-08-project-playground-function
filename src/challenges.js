@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue(a,b) {
-  if(a && b){
+function compareTrue(a, b) {
+  if (a && b) {
     return true;
   } else {
     return false;
@@ -13,7 +13,6 @@ function calcArea(base, height) {
   return area;
 }
 
-
 // Desafio 3
 function splitSentence(str) {
   let array = str.split(" ");
@@ -22,20 +21,19 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(array) {
-  let str = array[array.length -1] + ", " + array[0];
+  let str = array[array.length - 1] + ", " + array[0];
   return str;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = (wins * 3) - ties;
+  let points = wins * 3 + ties;
   return points;
 }
 
-
 // Desafio 6
 function highestCount(array) {
-  // seu código aqui
+  
 }
 
 // Desafio 7
@@ -76,7 +74,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -92,4 +89,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
