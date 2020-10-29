@@ -167,15 +167,15 @@ function decode(string) {
 
 // Desafio 10
 // let array = ["React", "Jest", "HTML", "CSS", "JavaScript"]
-// let name = "Lucas"
-function techList(techs, name) {
-  if (techs == []){
+// let name = 'Lucas'
+function techList(tech, name) {
+  let result = []
+  if (tech == ''){
     return 'Vazio!'
   }
-  let result = []
   techs.sort()
-  for (let index in techs) {
-    result.push({tech: techs[index], name: name})
+  for (let index in tech) {
+    result.push({tech: tech[index], name: name})
   }
   return result
 }
