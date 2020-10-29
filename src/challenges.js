@@ -1,22 +1,21 @@
 // Desafio 1
-function compareTrue(a,b) {
+function compareTrue(a, b) {
   return (a && b);
 }
 
 // Desafio 2
-function calcArea(base,height) {
-  return ((base*height)/2);
+function calcArea(base, height) {
+  return ((base * height) / 2);
 }
 
 // Desafio 3
 function splitSentence(a) {
-  return a.split(" ");
+  return a.split(' ');
 }
 
 // Desafio 4
 function concatName(name) {
-  let resp = name[0];
-  resp = resp + ", " + name[name.length-1];
+  let resp = `${name[0]}, ${name[name.length - 1]}`;
   return resp;
 }
 
@@ -86,8 +85,9 @@ module.exports = {
   triangleCheck,
 }
 
-console.log(compareTrue(true,false));
-console.log(compareTrue(false,false));
-console.log(compareTrue(true,true));
-console.log(calcArea(12,4));
-console.log(splitSentence("The Best Game Dev"));
+console.log(compareTrue(true, false));
+console.log(compareTrue(false, false));
+console.log(compareTrue(true, true));
+console.log(calcArea(12, 4));
+console.log(splitSentence('The Best Game Dev'));
+console.log(concatName(['Natanael', 'Enéas', 'da', 'Silva', 'Neto']));
