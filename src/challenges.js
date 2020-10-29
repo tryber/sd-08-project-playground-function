@@ -317,10 +317,31 @@ function triangleCheck(lineA, lineB, lineC)
 console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(texto) 
+{
+  let textoSoNumeros = texto.replace(/\D/g, "");
+  let somaBebidas = 0;
+  let totalCoposDeAgua = 0;
+
+  for(let indice in textoSoNumeros)
+  {
+    somaBebidas += Number(textoSoNumeros[indice]);
+  }
+
+  totalCoposDeAgua = somaBebidas * 1;
+
+  if(totalCoposDeAgua === 1)
+  {
+    return totalCoposDeAgua + " copo de água";
+  }
+  else
+  {
+    return totalCoposDeAgua + " copos de água";
+  }
 }
 
+//console.log(hydrate("1 cerveja"));
+//console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   calcArea,
