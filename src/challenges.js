@@ -159,10 +159,11 @@ function techList(techArray, name) {
       objReturn.push({
          tech: techArray[i],
            name: name
-    })
+      })
   }
   
   return objReturn;
+}
 
 // Desafio 11
 function generatePhoneNumber() {
