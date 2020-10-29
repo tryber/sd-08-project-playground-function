@@ -23,7 +23,7 @@ function splitSentence(sentence) {
 function concatName(array) {
   // seu código aqui
   let arraySize = array.length - 1;
-  let result = `${array[arraySize]} ${array[0]}`;
+  let result = `${array[arraySize]}, ${array[0]}`;
   return result;
 }
 
@@ -48,8 +48,18 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distanceCat1 = cat1 - mouse ;
+  let distanceCat2 = cat2 - mouse;
+  if (distanceCat1 === distanceCat2) {
+    return 'os gatos trombam e o rato foge';
+  }
+  if (distanceCat1 < distanceCat2) {
+    return 'cat1';
+  } else {
+    return 'cat2';
+  }
 }
 
 // Desafio 8
