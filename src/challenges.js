@@ -1,15 +1,15 @@
 // Desafio 1
 function compareTrue(booleanOne, booleanTwo) {
-  if(booleanOne && booleanTwo){
+  if (booleanOne && booleanTwo) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height)/2;
+  let area = (base * height) / 2;
   return area;
 }
 
@@ -21,7 +21,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let concat = array[array.length-1] + ", " + array[0];
+  let concat = array[array.length - 1] + ", " + array[0];
   return concat;
 }
 
@@ -32,8 +32,17 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let sortArray = array.sort(function(a, b){return a-b});
+  let highestNumber = sortArray[sortArray.length - 1];
+  console.log(sortArray);
+  let repeatCount = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] == highestNumber) {
+      repeatCount += 1;
+    }
+  }
+  return repeatCount;
 }
 
 // Desafio 7
