@@ -50,9 +50,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let gato2 = cat2
   let answer = ""
   if (rato - gato1 > rato - gato2){
-    answer = 'cat2'
-  }else if (rato - gato2 > rato - gato1){
     answer = 'cat1'
+  }else if (rato - gato2 > rato - gato1){
+    answer = 'cat2'
   }else {
     answer = '"os gatos trombam e o rato foge"'
   }return answer
