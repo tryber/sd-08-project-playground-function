@@ -25,7 +25,7 @@ function splitSentence(texto) {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1] + ", " + array[0];
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 /* console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])); */
@@ -38,6 +38,16 @@ function footballPoints(wins, ties) {
 /* console.log(footballPoints(10, 3)); */
 
 // Desafio 6
+function maiorNumeroDoVetor(arrayNumeros) {
+  let maiorValor = arrayNumeros[0];
+  for (let pos in arrayNumeros) {
+    if (arrayNumeros[pos] > maiorValor) {
+      maiorValor = arrayNumeros[pos];
+    }
+  }
+  return maiorValor;
+}
+
 function highestCount(arrayNumeros) {
   let cont = 0;
   let maiorValor = maiorNumeroDoVetor(arrayNumeros);
@@ -48,16 +58,6 @@ function highestCount(arrayNumeros) {
     }
   }
   return cont;
-}
-
-function maiorNumeroDoVetor(arrayNumeros) {
-  let maiorValor = arrayNumeros[0];
-  for (let pos in arrayNumeros) {
-    if (arrayNumeros[pos] > maiorValor) {
-      maiorValor = arrayNumeros[pos];
-    }
-  }
-  return maiorValor;
 }
 
 /* console.log(maiorNumeroDoVetor([9, 1, 2, 3, 9, 5, 7]));
@@ -189,6 +189,21 @@ function techList(arrayNomesTecnologia, name) {
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas")); */
 
 // Desafio 11
+function contaNumeros(numero, numeros) {
+  let cont = 0;
+  for (let pos in numeros) {
+    if (numeros[pos] === numero) {
+      cont += 1;
+    }
+  }
+  return cont;
+}
+
+function formataTelefone(numeroTelefone) {
+  let numeroTelefoneFormatado = `(${numeroTelefone.substring(0, 2)}) ${numeroTelefone.substring(2, 7)}-${numeroTelefone.substring(7, 11)}`;
+  return numeroTelefoneFormatado;
+}
+
 function generatePhoneNumber(arrayNumeroTelefone) {
   if (arrayNumeroTelefone.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -210,21 +225,6 @@ function generatePhoneNumber(arrayNumeroTelefone) {
 
   numeroTelefoneFormatado = formataTelefone(numeroTelefone);
 
-  return numeroTelefoneFormatado;
-}
-
-function contaNumeros(numero, numeros) {
-  let cont = 0;
-  for (let pos in numeros) {
-    if (numeros[pos] === numero) {
-      cont += 1;
-    }
-  }
-  return cont;
-}
-
-function formataTelefone(numeroTelefone) {
-  let numeroTelefoneFormatado = '(' + numeroTelefone.substring(0, 2) + ')' + ' ' + numeroTelefone.substring(2, 7) + '-' + numeroTelefone.substring(7, 11);
   return numeroTelefoneFormatado;
 }
 
@@ -259,9 +259,9 @@ function hydrate(texto) {
   totalCoposDeAgua = somaBebidas * 1;
 
   if (totalCoposDeAgua === 1) {
-    return totalCoposDeAgua + ' ' + 'copo de água';
+    return `${totalCoposDeAgua} copo de água`;
   }
-  return totalCoposDeAgua + ' ' + 'copos de água';
+  return `${totalCoposDeAgua} copos de água`;
 }
 
 /* console.log(hydrate("1 cerveja"));
