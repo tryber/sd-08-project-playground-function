@@ -37,7 +37,8 @@ function splitSentence(sentence) {
 // Desafio 4
 //  array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 function concatName(arrayString) {
-  return arrayString[arrayString.length - 1] + ", " + [arrayString[0]]
+  let concated = arrayString[arrayString.length - 1] + ', ' + [arrayString[0]]
+  return concated
 }
 //  console.log(concatName(array))
 
