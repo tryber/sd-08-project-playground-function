@@ -129,7 +129,7 @@ function techList(techArr, name) {
 }
 
 // Desafio 11
-function countNumbers(numArr){
+function countNumbers(numArr) {
   let numCounter = {};
   for (let numI = 0; numI < numArr.length; numI += 1) {
     if (numCounter[numArr[numI]]) {
