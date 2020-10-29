@@ -158,10 +158,39 @@ function catAndMouse(mouse, cat1, cat2) {
 // < Para o teste manual >
 // console.log(catAndMouse(-1, -4, 2));
 
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrNumbers) {
+  if (typeof arrNumbers === "object") {
+    let inputArrNumbers = arrNumbers;
+    let outputArr = [];
+  
+    for (let index = 0; index < inputArrNumbers.length; index += 1) {
+      if (inputArrNumbers[index] % 3 == 0 && inputArrNumbers[index] % 5 != 0) {
+        outputArr.push("fizz");
+      }
+      else if (inputArrNumbers[index] % 3 != 0 && inputArrNumbers[index] % 5 == 0) {
+        outputArr.push("buzz");
+      }
+      else if (inputArrNumbers[index] %3 == 0 && inputArrNumbers[index] % 5 == 0) {
+        outputArr.push("fizzbuzz");
+      } 
+      else {
+        outputArr.push("bug!");
+      }
+    }
+  
+    return outputArr;
+  }
+  else {
+    return `ERROR > tipo não é objeto Array!`
+  }
 }
+
+// < Para o teste manual >
+// let arrayteste2 = [2, 15, 7, 9, 45];
+// console.log(fizzBuzz(arrayteste2));
+
 
 // Desafio 9
 function encode() {
