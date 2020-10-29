@@ -30,13 +30,21 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let result = (wins * 3) + (ties * 1);
+  let result = wins * 3 + ties * 1;
   return result;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  let count = 0;
+  let highest = Math.max.apply(null, array);
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === highest) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
