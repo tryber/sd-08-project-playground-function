@@ -4,7 +4,7 @@ function compareTrue() {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
 }
 
@@ -35,7 +35,9 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  if (n % 15 === 0) {
+    console.log ("FizzBuzz")
+  }
 }
 
 // Desafio 9
