@@ -1,10 +1,11 @@
 // Desafio 1
 function compareTrue(parametro1, parametro2) {
-  return(parametro1 && parametro2);
+  return parametro1 && parametro2;
 }
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let areaTriangulo = (base * height) / 2;
+  return areaTriangulo;
 }
 
 // Desafio 3
@@ -65,7 +66,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -81,4 +81,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
