@@ -24,13 +24,20 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  et points = wins * 3 + ties;
+  return (points);
 }
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  let countlist = {};
+  let n = 0;
+  let freq = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    let num = array[i];
+    countlist[num]= countlist[num]? countlist[num]+1 : 1;
+  }     
 }
 
 // Desafio 7
