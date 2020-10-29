@@ -200,14 +200,13 @@ function triangleCheck(lineA,lineB,lineC) {
 function hydrate(word) {
 
   let numeros = word.replace(/\D+/g, "");
-  console.log(numeros);
   let numCopos = 0;
   for(let i in numeros){
 
          numCopos += Number(numeros[i]);
 
   }
-  if(numCopos == 1){
+  if(numCopos === 1){
     return numCopos+' copo de água'
   }
   return numCopos+' copos de água'
