@@ -17,7 +17,14 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(names) {
+  let namesConcat = '';
+  for (name of names) {
+    if (namesConcat) {
+      namesConcat += ', '
+    }
+    namesConcat += name;
+  }
   // seu código aqui
 }
 
