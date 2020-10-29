@@ -13,18 +13,21 @@ function splitSentence(sentence) {
   let splitedSentence = [''];
   let currentPosition = 0;
   
-  for (let i = 0; i < sentence.length; i++)
-    if (sentence[i] === ' ')
-      splitedSentence[++currentPosition] = '';
-    else
+  for (let i = 0; i < sentence.length; i += 1) {
+    if (sentence[i] === ' ') {
+      currentPosition += 1;
+      splitedSentence[currentPosition] = '';
+    } else {
       splitedSentence[currentPosition] += sentence[i];
+    }
+  }
 
   return splitedSentence;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(name) {
+  return name[name.length - 1] + ', ' + name[0];
 }
 
 // Desafio 5
