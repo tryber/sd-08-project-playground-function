@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(pA, pB) {
   if (pA === true && pB === true) {
-     return true;
-   } else {
-     return false;
-   }
+    return true;
+  }
+  return false;
 }
 
 // Desafio 2
@@ -16,12 +15,14 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   let sentence = string;
-  return sentence.split(" ");
+  return sentence.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(fullName) {
+  let firstName = fullName[0];
+  let lastName = fullName[fullName.length - 1];
+  return lastName, firstName;
 }
 
 // Desafio 5
