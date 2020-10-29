@@ -145,15 +145,25 @@ function generatePhoneNumber(array) {
   }
 
   for(let key in array)  {
-    if(array[key]>9){
+    let counter = 0;
+    if(array[key]>9 || array[key]<0){
       return "não é possível gerar um número de telefone com esses valores";
+    }
+
+    for(let i = 0; i<array.length; i+=1){
+      if(array[key] == array[i]){
+        counter += 1;
+      }
+      if(counter >= 3){
+        return "não é possível gerar um número de telefone com esses valores";
+      }
     }
   }
   let formatNumber = `(${array[0]}${array[1]}) ${array[2]}${array[2]}${array[3]}${array[4]}-${array[5]}${array[6]}${array[7]}${array[8]}`;
   return formatNumber;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
