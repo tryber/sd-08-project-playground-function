@@ -114,13 +114,13 @@ function techList(array, name) {
 
   let sortedArray = array.sort();
   let objectArray = [];
-  
+
   for (let i = 0; i < array.length; i += 1) {
     let objectGenerator = {
       tech: sortedArray[i],
-      name: name,
+      name,
     }
-    
+  
     objectArray.push(objectGenerator)
   }
   return objectArray;
