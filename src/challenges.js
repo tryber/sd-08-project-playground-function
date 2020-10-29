@@ -173,7 +173,7 @@ function techList(tech, name) {
   if (tech == ''){
     return 'Vazio!'
   }
-  techs.sort()
+  tech.sort()
   for (let index in tech) {
     result.push({tech: tech[index], name: name})
   }
