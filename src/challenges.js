@@ -19,11 +19,11 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arrayDeStrings) {
   let size = arrayDeStrings.length - 1;
-  let array = [];
-  array.push(arrayDeStrings[0], arrayDeStrings[size]);
-  return array;
+  let string ='';
+  string = arrayDeStrings[0] + ', ' + arrayDeStrings[size];
+  return string;
 }
-
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 // Desafio 5
 function footballPoints(wins, ties) {
   let winsPoints = wins * 3;
@@ -43,7 +43,7 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  
 }
 
 // Desafio 9
