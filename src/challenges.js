@@ -158,9 +158,19 @@ function decode(stringN) {
   //console.log(decode("h3 th2r2!"))
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
+  let arrayTech = tech.sort()
+  let learn = [];
+  for (let index = 0; index < arrayTech.length; index+=1){
+    let techK = {};
+    techK.tech = tech[index];
+    techK.name = name;
+    learn.push(techK)
+  }
+  return learn;
   // seu código aqui
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Bruno"))
 
 // Desafio 11
 function generatePhoneNumber() {
