@@ -1,3 +1,5 @@
+// Project 02 - João Carlito
+
 // Desafio 1
 function compareTrue() {
   // seu código aqui
