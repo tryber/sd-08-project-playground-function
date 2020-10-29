@@ -138,10 +138,19 @@ function decode(string) {
   return(arrayString);
 }
 
-console.log(decode("h3 th2r2!"))
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, nome) {
+  
+  let arrayRetorno = [];
+  if(array == []){
+    return("Vazio!");
+  }else{
+    for(let key in array){
+
+      arrayRetorno.push({tech: array[key], name: nome})
+    }
+    return(arrayRetorno);
+  }
 }
 
 // Desafio 11
