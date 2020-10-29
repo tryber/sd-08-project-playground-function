@@ -221,8 +221,22 @@ function decode(phrase) {
 }
 
 // Desafio 10
-function techList() {
-    // seu código aqui
+function techList(techArray, namePar) {
+
+    let sortedArray = techArray.sort();
+
+    let list = [];
+
+    //Running through the techArray
+    for (let tec = 0; tec < techArray.length; tec += 1) {
+
+        list.push({
+            tech: sortedArray[tec],
+            name: namePar
+        })
+
+    }
+    return list;
 }
 
 // Desafio 11
