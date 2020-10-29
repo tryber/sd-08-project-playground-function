@@ -102,7 +102,7 @@ function encode(string) {
           }
       }
   }
-  console.log(listForEncode.join(""));  
+  return listForEncode.join("");  
 }
 function decode(string) {
   let alfabeto = {
@@ -125,7 +125,7 @@ function decode(string) {
           }
       }
   }
-  console.log(listForEncode.join(""));  
+  return listForEncode.join("");  
 }
 
 
