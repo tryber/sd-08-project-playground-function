@@ -58,7 +58,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = calculaDistancia(cat1, mouse);
   let distanciaCat2 = calculaDistancia(cat2, mouse);
 
-  if(distanciaCat1 > distanciaCat1) {
+  if(distanciaCat1 > distanciaCat2) {
     return "cat2";
   } else if(distanciaCat2 > distanciaCat1){
     return "cat1";
@@ -66,7 +66,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   }
 }
-
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
