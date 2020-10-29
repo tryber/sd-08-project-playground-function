@@ -1,12 +1,15 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  .
+function compareTrue(primeiroValor,segundoValor) {
+  if (primeiroValor==true && segundoValor==true){
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
+  return ((base*heigth)/2);
 }
 
 // Desafio 3
