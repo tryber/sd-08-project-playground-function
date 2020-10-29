@@ -9,13 +9,13 @@ function calcArea(base, height ) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(word) {
   return word.split(" ");
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(list) {
+  return (list[0] + ", " + list[list.length-1]);
 }
 
 // Desafio 5
