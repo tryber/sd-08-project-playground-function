@@ -144,9 +144,10 @@ function techList(tecnologias, name) {
       tecObject['name'] = name;
       tecList.push(tecObject);
     }
-    return teclist
+    return tecList
   }
 }
+
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
