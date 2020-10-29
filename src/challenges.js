@@ -45,18 +45,18 @@ function highestCount(arrayConta) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let fimDaHistoria = "";
-  if (cat1 - mouse < cat2 -mouse) {
-    fimDaHistoria = "cat1";
-  } else if (cat1 - mouse > cat2 -mouse) {
-    fimDaHistoria = "cat2";
+function catAndMouse(mouse, cat1, cat2) {  
+  let distanciaCat1 = mouse - cat1;
+  let distanciaCat2 = mouse - cat2;
+  if (distanciaCat1 == distanciaCat2) {
+    return "os gatos trombam e o rato foge";
+  }else if (distanciaCat1 < distanciaCat2) {
+    return "cat1";
   } else {
-    returnfimDaHistoria = "os gatos trombam e o rato foge";
+    return "cat2";
   }
-  return fimDaHistoria;
 }
-console.log(catAndMouse(4,3,1))
+
 // Desafio 8
 function fizzBuzz(array) {
   let arrayResultado = [];
