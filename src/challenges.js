@@ -1,10 +1,8 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
-  if (boolean1 == true && boolean2 == true) {
-    return true;
-  } else {
-    return false;
-  }}
+  if (boolean1 === true && boolean2 == true) { return true; } 
+  { return false; }
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -12,30 +10,31 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence (sentence) {
-  return sentence.split(" ");
+function splitSentence(sentence) {
+  return sentence.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1] + ", " + array[0];
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
+
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + (ties);
+  return wins * 3 + ties;
 }
 
 // Desafio 6
 function highestCount(array) {
   let biggest = -Infinity;
   let repeat = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > biggest) {
-      biggest = array[index];
+  for (let index of array) {
+    if (index > biggest) {
+      biggest = index;
     }
   }
-  for (let index = 0; index < array.length; index += 1) {
-    if (biggest == array[index]) {
+  for (let index of array) {
+    if (biggest === index) {
       repeat += 1;
     }
   }
@@ -47,12 +46,14 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCats = Math.abs(cat1 - cat2);
   let distMouseCat1 = Math.abs(mouse - cat1);
   let distMouseCat2 = Math.abs(mouse - cat2);
-  if (distCats == 0) {
-    return 'os gatos trombam e o rato foge';
-  } else if (distMouseCat1 < distMouseCat2) {
-    return 'cat1';
-  } else {
-    return 'cat2'
+  if (distCats === 0) {
+    return "os gatos trombam e o rato foge";
+  }
+  if (distMouseCat1 < distMouseCat2) {
+    return "cat1";
+  }
+  {
+    return "cat2";
   }
 }
 
@@ -60,23 +61,21 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let fizzBuzzArr = [];
   for (let index = 0; index < array.length; index += 1) {
-    if ((array[index] % 3 == 0) && (array[index] % 5 == 0)) {
-      fizzBuzzArr[index] = 'fizzBuzz';
-    } else if (array[index] % 3 == 0) {
-      fizzBuzzArr[index] = 'fizz';
-    } else if (array[index] % 5 == 0) {
-      fizzBuzzArr[index] = 'buzz';
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      fizzBuzzArr[index] = "fizzBuzz";
+    } else if (array[index] % 3 === 0) {
+      fizzBuzzArr[index] = "fizz";
+    } else if (array[index] % 5 === 0) {
+      fizzBuzzArr[index] = "buzz";
     } else {
-      fizzBuzzArr[index] = 'bug!';
+      fizzBuzzArr[index] = "bug!";
     }
   }
   return fizzBuzzArr;
 }
 
 // Desafio 9
-function encode(string) {
-
-}
+function encode(string) {}
 function decode() {
   // seu código aqui
 }
@@ -101,7 +100,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -117,4 +115,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
