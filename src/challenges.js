@@ -24,8 +24,9 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
+function highestCount() {
   // seu código aqui
+}
 
 // Desafio 7
 function catAndMouse() {
