@@ -207,8 +207,26 @@ function triangleCheck(lineA, lineB, lineC)
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(input)
+{
+  let result = input.replace(/\D/g, "");
+  result = result.split("");
+
+  for(let i = 0; i < result.length; i += 1)
+  {
+    result[i] = parseInt(result[i]);
+  }
+
+  let sum = 0;
+  for(let i = 0; i < result.length; i += 1)
+  {
+    sum += result[i];
+  }
+
+  if(sum = 1)
+    return sum + "copo de água";
+  else
+    return sum + "copos de água";
 }
 
 
