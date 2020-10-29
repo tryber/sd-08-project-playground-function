@@ -20,18 +20,13 @@ function calcArea(base, height) {
 }
 console.log(calcArea(20, 4))
 
-// Desafio 3 split separa as palavras a partir do espaco " " ou virgula " ," //retira e divide em arrays
+// Desafio 3 
 function splitSentence(string) {
-  
-  let spliting = string.split(' ') ;
-  
-  
-  
 
+  let spliting = string.split(' ');
 
   return spliting
-  
-  
+
 }
 console.log(splitSentence("oi meu nome e mateus"))
 
@@ -43,26 +38,54 @@ function concatName(array) {
 
 
 
-  
-  return array[0]  + "," + array[array.length -1] 
+
+  return array[0] + "," + array[array.length - 1]
 }
 
- 
 
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo','ZINZINZIN']))
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo', 'ZINZINZIN']))
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
+
+  let vitorias = wins * 3
+  let empates = ties * 1
+
+  return vitorias + empates
 
 
- 
+
 }
+
+console.log(footballPoints(9, 5))
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(seq) {
+
+  let maior;
+
+  for (let index = 0; index < seq.length; index++) {
+    for (let index1 = 0; index1 < seq[index].length; index1++) {
+
+      if (seq[index] > seq[index1]) {
+        maior = seq[index1]
+
+      }
+
+
+      return maior
+
+    }
+
+
+  }
+
 }
+
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse() {
@@ -70,9 +93,33 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(nmrs) {
+
+  let ret = nmrs
+  
+  for (let i = 0; i < ret.length; i++) {
+    if (ret[i] % 3 == 0) {
+      console.log("fizz")
+    }
+    else if (ret[i] % 5 == 0) {
+      console.log("buzz")
+    }
+    else if (ret[i] % 5 == 0 && ret[i] % 3 == 0) {
+      console.log("fizzbuzz")
+
+    }
+    else
+      console.log("bug")
+
+      
+  }
+
+  return  " "
 }
+
+
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode() {
