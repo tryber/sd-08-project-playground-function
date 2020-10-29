@@ -152,6 +152,7 @@ function decode(sentence) {
 function techList(technologies, name) {
   let objectArray = [];
   // seu código aqui
+  technologies.sort();
   if (technologies.length === 0) {
     return 'Vazio!';
   } else {
