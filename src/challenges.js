@@ -51,7 +51,7 @@ function highestCount(numbers) {
   let maior = numbers[0];
   let count = 0;
   for (let key in numbers) {
-    if (numbers[key] >= maior) {
+    if (numbers[key] > maior) {
        maior = numbers[key];
     }
   }
@@ -65,10 +65,20 @@ function highestCount(numbers) {
 console.log(highestCount([9, 1, 1,10, 10, 10, 10, 2, 3, 9, 5, 9, 7]))
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distcat1 = mouse - cat1;
+  let distcat2 = mouse - cat2;
+  if (distcat1 < distcat2) {
+    return "cat1"
+  }else if (distcat1 == distcat2) {
+    return "os gatos trombam e o rato foge"
+  }else {
+    return "cat2"
+  }
 }
 
+console.log(catAndMouse(20,5,6))
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
