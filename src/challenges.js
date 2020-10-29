@@ -190,7 +190,7 @@ function generatePhoneNumber(digits) {
     let ddd = numeroStr.slice(0, 2);
     let partA = numeroStr.slice(2, 7);
     let partB = numeroStr.slice(7, 11);
-    return `(${ddd})${partA}-${partB}`;
+    return `(${ddd}) ${partA}-${partB}`;
   } else {
     return 'não é possível gerar um número de telefone com esses valores';
   }
