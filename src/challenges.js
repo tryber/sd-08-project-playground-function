@@ -40,11 +40,24 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numeros) {
-  for (index = 0; index < numeros.length; index += 1); {
-
+  let maiorNumero = numeros[0];
+  let repetido = 0;
+  for (index = 1; index < numeros.length; index += 1) {
+    if (numeros[index] > maiorNumero) {
+      maiorNumero = numeros[index];
+    }
   }
+  console.log(maiorNumero);
 
+  for (j in numeros) {
+    if (maiorNumero === numeros[j]) {
+      repetido += 1;
+    }
+  }
+  return repetido;
 }
+//let testandoNumeros = [9, 9, 9, 3, 9, 5, 7];
+//console.log(highestCount(testandoNumeros));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -85,11 +98,23 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(phrase) {
+  phrase = phrase.replace(/a/g , "1");
+  phrase = phrase.replace(/e/g , "2");
+  phrase = phrase.replace(/i/g , "3");
+  phrase = phrase.replace(/o/g , "4");
+  phrase = phrase.replace(/u/g , "5");
+  return phrase;
+}
+console.log(encode("hi there!"));
 
+function decode(phrase) {
+  phrase = phrase.replace(/1/g , "a");
+  phrase = phrase.replace(/2/g , "e");
+  phrase = phrase.replace(/3/g , "i");
+  phrase = phrase.replace(/4/g , "o");
+  phrase = phrase.replace(/5/g , "u");
 }
-function decode() {
-  // seu código aqui
-}
+console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
