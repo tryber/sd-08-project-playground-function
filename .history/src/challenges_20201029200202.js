@@ -94,19 +94,19 @@ function techList(techList = [], name = "") {
 }
 
 // Desafio 11
-function generatePhoneNumber(arr = []) {
-  // Default Error Message
+function generatePhoneNumber(arr) {
   const errorMsg =
     "não é possível gerar um número de telefone com esses valores";
-  // Validation
+  let result = "";
+  console.log(arr);
   if (arr.length === 0) return errorMsg;
   if (arr.length > 12) return errorMsg;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] >= 10) return errorMsg;
     if (arr.filter((x) => x == arr[i]).length > 3) return errorMsg;
   }
-  // Format Telefone
-  return `(${arr[0]}${arr[1]}) ${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`;
+  result = `(${arr[0]}${arr[1]}) ${arr[3]}${arr[4]}${arr[5]}${arr[6]} - ${arr[7]}${arr[8]}${arr[9]}${arr[10]}`;
+  return result;
 }
 
 // Desafio 12
