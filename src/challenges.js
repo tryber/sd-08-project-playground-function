@@ -139,7 +139,7 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(arr) {
   // verificacao
-  if (arr.length > 11) {
+  if (arr.length != 11) {
     return "Array com tamanho incorreto."
   }
   let count = 0;
