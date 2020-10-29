@@ -15,9 +15,10 @@ function calcArea(base,heigth) {
 }
 
 // Desafio 3
-function splitSentence(xablau) {
+function splitSentence(string) {
   // seu código aqui
-  return xablau.split(' ');
+  let arrayString = string.split(' ');
+  return arrayString;
 
 }
 
