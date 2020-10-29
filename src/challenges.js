@@ -89,12 +89,40 @@ function fizzBuzz(numeros) {
   return array;
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+let vogais = {
+  a:1,
+  e:2,
+  i:3,
+  o:4,
+  u:5
 }
-function decode() {
-  // seu código aqui
+// Desafio 9
+function encode(string) {
+  let stringEnc = '';
+  for(let pos in string){
+    if(string[pos] in vogais){
+      stringEnc += vogais[string[pos]];
+    } else {
+      stringEnc += string[pos];
+    }
+  }
+  return stringEnc;
+}
+
+function decode(string) {
+  let stringDec = '';
+  for(let pos in string){
+    if(string[pos] in Object.values(vogais)){
+      for(let vog in vogais){
+        if(vogais[vog] == string[pos]){
+          stringDec += vog;
+        }
+      }
+    } else {
+      stringDec += string[pos];
+    }
+  }
+  return stringDec;
 }
 
 // Desafio 10
