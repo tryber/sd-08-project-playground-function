@@ -89,15 +89,15 @@ function fizzBuzz(numeros) {
   return array;
 }
 
-let vogais = {
-  a:1,
-  e:2,
-  i:3,
-  o:4,
-  u:5
-}
 // Desafio 9
 function encode(string) {
+  let vogais = {
+    a:1,
+    e:2,
+    i:3,
+    o:4,
+    u:5
+  }
   let stringEnc = '';
   for(let pos in string){
     if(string[pos] in vogais){
@@ -110,6 +110,13 @@ function encode(string) {
 }
 
 function decode(string) {
+  let vogais = {
+    a:1,
+    e:2,
+    i:3,
+    o:4,
+    u:5
+  }
   let stringDec = '';
   for(let pos in string){
     if(string[pos] in Object.values(vogais)){
