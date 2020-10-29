@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(num1,num2) {
+function compareTrue() {
   
   if (num1 == true && num2 == true){
     return true;  
