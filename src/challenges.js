@@ -86,10 +86,10 @@ function fizzBuzz(array) {
 // Desafio 9 - Fontes de estudo:
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
-// Ideia de refatoramento para usar uma função única aplicável aos dois casos do grande Fernando Soares, instrutor da Trybe.
+// Ajuda com para refatoramento: Fernando Soares.
 function generalEncrypter(str, arrayToBeReplaced, arrayToReplace) {
   let encryptedStr = str;
-  
+
   for (let i = 0; i < arrayToBeReplaced.length; i += 1) {
     encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[i], 'g'), arrayToReplace[i]);
   }
