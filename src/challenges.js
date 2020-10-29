@@ -10,7 +10,6 @@ function compareTrue(valor1, valor2) {
   return compara;
 }
 
-console.log(compareTrue(true, true))
 // Desafio 2
 function calcArea(base, altura) {
   
@@ -20,14 +19,20 @@ function calcArea(base, altura) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(array) {
+  
+  let nome = array.split(" ");
+  return nome;
 }
 
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  
+  let nome = [array[array.length-1], array[0]];
+  return nome;
 }
+
 
 // Desafio 5
 function footballPoints() {
