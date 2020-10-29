@@ -160,9 +160,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-function fizzBuzz(arrNumbers) {
-  if (typeof arrNumbers === "object") {
-    let inputArrNumbers = arrNumbers;
+function fizzBuzz(arrNum) {
+  if (typeof arrNum === "object") {
+    let inputArrNumbers = arrNum;
     let outputArr = [];
   
     for (let index = 0; index < inputArrNumbers.length; index += 1) {
@@ -193,12 +193,87 @@ function fizzBuzz(arrNumbers) {
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// a -> 1 \
+// e -> 2 \
+// i -> 3 \
+// o -> 4 \
+// u -> 5
+
+function encode(str) {
+  if (typeof str === "string") {
+    let inputStr = str;
+    let outputStr = "";
+  
+    for (let index in inputStr) {
+      switch (inputStr[index]) {
+        case 'a':
+          outputStr += '1';
+          break;
+        case 'e':
+          outputStr += '2';
+          break;
+        case 'i':
+          outputStr += '3';
+          break;
+        case 'o':
+          outputStr += '4';
+          break;
+        case 'u':
+          outputStr += '5';
+          break;
+        default :
+          outputStr += inputStr[index];
+          break;
+      }
+    }
+    return outputStr;
+  }
+  else {
+    return `ERROR > tipo não é string!`;
+  }
+  
 }
-function decode() {
-  // seu código aqui
+
+// < Para o teste manual >
+// console.log(encode("oi e bom te ver nu, ta!"));
+
+function decode(str) {
+  if (typeof str === "string") {
+    let inputStr = str;
+    let outputStr = "";
+  
+    for (let index in inputStr) {
+      switch (inputStr[index]) {
+        case '1':
+          outputStr += 'a';
+          break;
+        case '2':
+          outputStr += 'e';
+          break;
+        case '3':
+          outputStr += 'i';
+          break;
+        case '4':
+          outputStr += 'o';
+          break;
+        case '5':
+          outputStr += 'u';
+          break;
+        default :
+          outputStr += inputStr[index];
+          break;
+      }
+    }
+    return outputStr;
+  }
+  else {
+    return `ERROR > tipo não é string!`;
+  }
 }
+
+// < Para o teste manual >
+// console.log(decode("43 2 b4m t2 v2r n5, t1!"));
+
 
 // Desafio 10
 function techList() {
