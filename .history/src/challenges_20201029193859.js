@@ -42,7 +42,7 @@ function catAndMouse(mouse = 0, cat1 = 0, cat2 = 0) {
 }
 
 // Desafio 8
-function fizzBuzz(arr = []) {
+function fizzBuzz(arr) {
   let result = [];
   for (let i = 0; i < arr.length; i++) {
     result[i] = "bug!";

@@ -1,11 +1,11 @@
 // Desafio 1
-function compareTrue(value1 = false, value2 = false) {
+function compareTrue(value1, value2) {
   if (value1 && value2) return true;
   return false;
 }
 
 // Desafio 2
-function calcArea(base = 0, height = 0) {
+function calcArea(base, height) {
   return (base * height) / 2;
 }
 
@@ -27,7 +27,7 @@ function footballPoints(win = 0, ties = 0) {
 }
 
 // Desafio 6
-function highestCount(arr = []) {
+function highestCount(arr) {
   const max = arr.reduce(function (a, b) {
     return Math.max(a, b);
   });
@@ -35,14 +35,14 @@ function highestCount(arr = []) {
 }
 
 // Desafio 7
-function catAndMouse(mouse = 0, cat1 = 0, cat2 = 0) {
+function catAndMouse(mouse, cat1, cat2) {
   if (cat1 == cat2) return "os gatos trombam e o rato foge";
   if (cat1 < cat2) return "cat1";
   if (cat2 < cat1) return "cat2";
 }
 
 // Desafio 8
-function fizzBuzz(arr = []) {
+function fizzBuzz(arr) {
   let result = [];
   for (let i = 0; i < arr.length; i++) {
     result[i] = "bug!";
