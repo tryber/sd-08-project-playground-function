@@ -67,7 +67,14 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
+  let fizzBuzzArray = [];
+  for (number of numbers) {
+    let fizz = (number % 3) == 0;
+    let buzz = (number % 5) == 0;
+    fizzBuzzArray.push(fizz ? buzz ? 'fizzBuzz' : 'fizz' : buzz ? 'buzz' : 'bug!');
+  }
+  return fizzBuzzArray;
   // seu código aqui
 }
 
