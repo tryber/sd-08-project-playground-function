@@ -156,38 +156,42 @@ function generatePhoneNumber(numbers) {
   let segundaParte = [];
   let numMaisRepetido = numbers[0];
   let maiorQtdRepeticoes = 0
-  for(i in numbers) {
-  let qtdRepeticoes = 0;
-    for(j in numbers){
-      if (numbers[i] === numbers[j]){
-        qtdRepeticoes = qtdRepeticoes + 1
-      }
-    }
-    if (qtdRepeticoes >= maiorQtdRepeticoes){
-      maiorQtdRepeticoes = qtdRepeticoes;
-      numMaisRepetido = numbers[i];
-    }
-  }
-  let entre0E9 = true;
-  for(i in numbers){
-    if (numbers[i] < 0 || numbers[i] > 9){
-      entre0E9 = false;
-      break;
-    }
-  }
-  if (entre0E9 === false || maiorQtdRepeticoes >=3) {
-    return ("não é possível gerar um número de telefone com esses valores")
-  }else{
+  if (numbers.length !== 11){
+    return "Array com tamanho incorreto.";
+  }else {
     for(i in numbers) {
-      if (i>=0 && i<=1){
-        ddd.push(numbers[i])
-      }else if (i>=2 && i<=6){
-        primeiraParte.push(numbers[i]);
-      }else {
-        segundaParte.push(numbers[i]);
+    let qtdRepeticoes = 0;
+      for(j in numbers){
+        if (numbers[i] === numbers[j]){
+          qtdRepeticoes = qtdRepeticoes + 1
+        }
+      }
+      if (qtdRepeticoes >= maiorQtdRepeticoes){
+        maiorQtdRepeticoes = qtdRepeticoes;
+        numMaisRepetido = numbers[i];
       }
     }
-    return ("("+ddd.join("")+") "+primeiraParte.join("")+"-"+segundaParte.join(""))
+    let entre0E9 = true;
+    for(i in numbers){
+      if (numbers[i] < 0 || numbers[i] > 9){
+        entre0E9 = false;
+        break;
+      }
+    }
+    if (entre0E9 === false || maiorQtdRepeticoes >=3) {
+      return "não é possível gerar um número de telefone com esses valores"
+    }else{
+      for(i in numbers) {
+        if (i>=0 && i<=1){
+          ddd.push(numbers[i])
+        }else if (i>=2 && i<=6){
+          primeiraParte.push(numbers[i]);
+        }else {
+          segundaParte.push(numbers[i]);
+        }
+      }
+      return ("("+ddd.join("")+") "+primeiraParte.join("")+"-"+segundaParte.join(""))
+    }
   }
 }
 
