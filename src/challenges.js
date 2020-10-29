@@ -32,12 +32,15 @@ function splitSentence(sentence) {
   return splittedSentence;
 }
 
-console.log(splitSentence("a b c d e f g h"));
-
 // Desafio 4
-function concatName() {
+function concatName(arrayOfNames) {
   // seu código aqui
+  let firstName = arrayOfNames[0];
+  let lastName = arrayOfNames[arrayOfNames.length-1];
+  return lastName + ", " + firstName;
 }
+names = ["Tandy", "Almeida", "de", "Souza"];
+console.log(concatName(names));
 
 // Desafio 5
 function footballPoints() {
