@@ -164,9 +164,14 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(text) {
-  return `${text.match(/\d+/g)
-    .map((value) => parseInt(value))
-    .reduce((previousValue, currentValue) => previousValue + currentValue)} copos de água`;
+  let waterAmount = text.match(/\d+/g)
+  .map((value) => parseInt(value))
+  .reduce((previousValue, currentValue) => previousValue + currentValue);
+  if (waterAmount === 1) {
+    return '1 copo de água';
+  } else {
+    return `${waterAmount} copos de água`
+  }
   // seu código aqui
 }
 
