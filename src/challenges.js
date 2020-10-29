@@ -17,9 +17,21 @@ function calcArea(base, height) {
 // console.log(calcArea(2, 6));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let retorno = [];
+  let pegaArray = '';
+
+  for (let indice = 0; indice <= string.length; indice++) {
+    if(string[indice] == ' ' || indice == string.length){
+      retorno.push(pegaArray);
+      pegaArray = '';
+    }else if(string[indice] != ' ') {
+      pegaArray += string[indice];
+    }
+  }
+  return retorno;
 }
+// console.log(splitSentence('wr ra'));
 
 // Desafio 4
 function concatName() {
