@@ -124,7 +124,7 @@ function techList(arrayTech, name) {
   // seu código aqui
   let hardSkills = [];
 
-  if (arrayTech.length == null){ 
+  if (arrayTech.length < 1) {
     return 'vazio';
   }
 
@@ -140,8 +140,47 @@ function techList(arrayTech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(arrayNumbers) {
   // seu código aqui
+  let phoneNumber = "";
+
+  if (arrayNumbers.length != 11) {
+    return "Array com tamanho incorreto.";
+  }
+
+  for (let x = 0; x < arrayNumbers.length; x += 1) {
+    if (arrayNumbers[x] < 0 || arrayNumbers[x] > 9) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
+  for (let x = 0; x < arrayNumbers.length; x += 1) {
+    let contador = 0;
+    for (let y = 1; y < arrayNumbers.length; y += 1) {
+      if (arrayNumbers[x] == arrayNumbers[y] && x != y - 1) {
+        contador += 1;
+      }
+    }
+    if (contador >= 3) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
+  for (let x = 0; x < arrayNumbers.length; x += 1) {
+    if (x == 0) {
+      phoneNumber += '(' + arrayNumbers[x];
+    } else if (x == 1) {
+      phoneNumber += arrayNumbers[x] + ') ';
+    } else if (x > 1 && x <= 6) {
+      phoneNumber += arrayNumbers[x];
+      if (x == 6) {
+        phoneNumber += '-';
+      }
+    } else {
+      phoneNumber += arrayNumbers[x];
+    }
+  }
+  return phoneNumber;
 }
 
 // Desafio 12
