@@ -7,8 +7,8 @@ function compareTrue(boolean1, boolean2) {
         return false;
    }
 };
-
 console.log(compareTrue((5>2),(2<5)));
+
 
 // Desafio 2
 function calcArea(base, heigth) {
@@ -19,9 +19,13 @@ console.log(calcArea(10, 8.66));
 
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(string) {
+    let arrayString = string.split(" ");
+    return arrayString;
+
+};
+console.log(splitSentence("go Trybe"));
+
 
 // Desafio 4
 function concatName() {
