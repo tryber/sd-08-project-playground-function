@@ -23,9 +23,9 @@ function concatName(arrayStrings) {
   array = []
   let ultima = arrayStrings[arrayStrings.length -1]
   let primeira = arrayStrings[0]
-  array.push(`${ultima}, ${primeira}`)
+  array=`${ultima}, ${primeira}`
   return array
-} console.log(concatName(["felipe","gomes","belarmino"]))
+} 
 
 // Desafio 5
 function footballPoints(wins,ties) {
@@ -94,12 +94,10 @@ function generatePhoneNumber(array) {
   let retorno="",verificaRepetir=0;
   if(array.length == 11){
 
-    for(let i=0;i<array.length;i++){
-      for(let j=1;j<array[j].length;j++)
-        if(array[i]==array[j]){
-          verificaRepetir+=1
-        }
+    for(let i=0;i<array.length;i++){ //continuar amanhã esta idéia
+      verificaRepetir=array.indexOf(i);
     }
+
     retorno=`(${array[0]}${array[1]})${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
    
   } else {
