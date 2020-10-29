@@ -124,7 +124,7 @@ function decode(str) {
 function techList(list,name) {
   let resultado=[]
   list.sort();
-  if(list ==[]){
+  if(list.length ==0){
     return "Vazio!";
   }else{
     for (key in list){
