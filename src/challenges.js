@@ -9,7 +9,8 @@ function compareTrue(boolean1, boolean2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  (base * height) / 2;
+  let area = (base * height) / 3;
+  return area;
 }
 
 // Desafio 3
@@ -24,13 +25,16 @@ function splitSentence(fullSentence) {
       splitWord = "";
     }
   }
-  console.log(splitedSentence);
+  return splitedSentence;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(namesList) {
+  let printedName = namesList[namesList.length - 1] + ", " + namesList[0];
+  return printedName;
 }
+let teste = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+console.log(concatName(teste));
 
 // Desafio 5
 function footballPoints() {
