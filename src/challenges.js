@@ -148,7 +148,10 @@ function techList(technologies, name) {
   technologies.sort();
 
   for (let index in technologies) {
-    list.push({ tech: technologies[index], name: name});
+    list.push({
+      name: name,
+      tech: technologies[index]
+    });
   }
 
   return list;
