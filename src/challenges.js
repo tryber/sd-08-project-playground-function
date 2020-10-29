@@ -54,26 +54,23 @@ function highestCount(teste) {
 //   Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a quantidade de vezes que o maior deles se repete.
 
 // Exemplo: caso o parâmetro de highestCount seja uma array com valores [9, 1, 2, 3, 9, 5, 7], a função deverá retornar 2, que é a quantidade de vezes que o número 9 (maior número do array) se repete.
-let posicao = 0;
+let maior = 0;
 let quantidadeRepeticao = 0;
       for(let index=0; index<teste.length; index += 1){
-        let tamanho =0;
-        for(let peca=index; peca<teste.length; peca+=1){
-            if(teste[index]==teste[peca]){
-                tamanho += 1;
+        if(teste[maior]<teste[index]){
+          maior=index;
+        }
+      }
+      for(let peca=0; peca<teste.length; peca+=1){
+          if(teste[maior]==teste[peca]){
+            quantidadeRepeticao+=1;
             }
         }
-        if(tamanho>quantidadeRepeticao){
-            posicao=index;
-            quantidadeRepeticao=tamanho;
-        }
-    }
-      return quantidadeRepeticao;
-
+return quantidadeRepeticao;
 }
 
 // Desafio 7
-function catAndMouse(cat1 , cat2 , mouse) {
+function catAndMouse(mouse , cat1 , cat2 ) {
 //   Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que ambos estão atrás de um rato chamado mouse. Imagine que cada um dos três animais está em uma posição representada por um número.
 
 // Sabendo disso, crie uma função chamada catAndMouse que, ao receber a posição de mouse, cat1 e cat2, nessa ordem, calcule as distâncias entre o rato e os gatos e retorne qual dos felinos irá alcançar o rato primeiro (sendo aquele que estará mais perto).
@@ -110,6 +107,7 @@ for (const key in array){
     resultado[key] = "bug!";
   }
 }
+return resultado;
 }
 
 // Desafio 9
