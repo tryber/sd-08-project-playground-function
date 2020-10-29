@@ -40,7 +40,7 @@ function footballPoints(wins, ties) {
 let pointswins = 3;
 let pointsties = 1;
       score = (wins*pointswins) + (ties*pointsties);
-      return "O time fez " + score + " pontos no campeonato."
+      return score
 };
 console.log(footballPoints(7, 3));
 
