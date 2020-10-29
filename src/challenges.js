@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(valorA, valorB) {
   // seu código aqui
-  if(valorA > 10 && valorB > 10){
-    console.log('Os valore digitados sao maiores do que 10.');
+  if (valorA > 10 && valorB > 10) {
+    console.log("Os valore digitados sao maiores do que 10.");
   } else {
-    console.log('Digite dois valores maiores que 10.');
+    console.log("Digite dois valores maiores que 10.");
   }
 }
 
@@ -71,7 +71,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -87,4 +86,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
