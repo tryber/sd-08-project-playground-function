@@ -87,11 +87,33 @@ function ladoMenorQueSubOutros(a, b, c) {
 
 function ehNumero(caractere) {
   for (let index = 1; index <= 9; index += 1) {
-    if (index == caractere) {
+    if (index.toString() == caractere) {
       return index;
     }
   }
   return 0;
+}
+
+function quantidadeDeRepeticoes(vetor, posicao) {
+  let count = 0;
+  for (let j = posicao; j < vetor.length; j += 1) {
+    if (vetor[j] === vetor[index]) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
+function confereRepeticoes(vetor) {
+  let count = 0;
+  for (let index = 0; index < vetor.length; index += 1) {
+    count = quantidadeDeRepeticoes(vetor, index);
+    if (count > 2) {
+      return false;
+    }
+    count = 0;
+  }
+  return true;
 }
 
 // Desafio 1
@@ -197,22 +219,6 @@ function confereVetor(vetor) {
     if (vetor[index] < 0 || vetor[index] > 9) {
       return false;
     }
-  }
-  return true;
-}
-
-function confereRepeticoes(vetor) {
-  let count = 0;
-  for (let index = 0; index < vetor.length; index += 1) {
-    for (let j = index; j < vetor.length; j += 1) {
-      if (vetor[j] === vetor[index]) {
-        count += 1;
-      }
-    }
-    if (count > 2) {
-      return false;
-    }
-    count = 0;
   }
   return true;
 }
