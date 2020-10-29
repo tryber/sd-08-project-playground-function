@@ -42,7 +42,8 @@ function footballPoints(wins, ties) {
 //console.log(footballPoints(10, 3));
 
 // Desafio 6
-function highestCount(arrayNumeros) {
+function highestCount(arrayNumeros) 
+{
   let cont = 0;
   let maiorValor = maiorNumeroDoVetor(arrayNumeros);
 
@@ -75,9 +76,31 @@ function maiorNumeroDoVetor(arrayNumeros)
 //console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaEntreRatoGato1 = 0;
+  let distanciaEntreRatoGato2 = 0;
+
+  distanciaEntreRatoGato1 = mouse - cat1;
+  distanciaEntreRatoGato2 = mouse - cat2;
+
+  if(distanciaEntreRatoGato1 === distanciaEntreRatoGato2)
+  {
+    return "os gatos trombam e o rato foge";
+  }
+  else if(distanciaEntreRatoGato1 > distanciaEntreRatoGato2)
+  {
+    return "cat2";
+  }
+  else
+  {
+    return "cat1";
+  }
+
 }
+
+// console.log(catAndMouse(8, 5, 6));
+// console.log(catAndMouse(8, 6, 5));
+// console.log(catAndMouse(8, 2, 2));
 
 // Desafio 8
 function fizzBuzz() {
