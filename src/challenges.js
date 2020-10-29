@@ -3,11 +3,8 @@ function compareTrue(boolean1, boolean2) {
   if (boolean1 === true && boolean2 === true) {
     return true;
   }
-  {
-    return false;
-  }
+  return false;
 }
-console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -16,7 +13,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  return sentence.split(" ");
+  return sentence.split(' ');
 }
 
 // Desafio 4
@@ -57,9 +54,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distMouseCat1 < distMouseCat2) {
     return 'cat1';
   }
-  if (distMouseCat1 > distMouseCat2) {
-    return 'cat2';
-  }
+  return 'cat2';
 }
 
 // Desafio 8
@@ -77,11 +72,15 @@ function fizzBuzz(array) {
     }
   }
   return fizzBuzzArr;
-} console.log(fizzBuzz([1,2,3,4,5,6,7,8,9,11,12,13,15]))
+}
 
 // Desafio 9
 function encode() {
   // seu código aqui
+}
+
+function decode() {
+
 }
 
 // Desafio 10
