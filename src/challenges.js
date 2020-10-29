@@ -83,15 +83,16 @@ function decode() {
 }
 
 // Desafio 10
-function techList(array, name) {
+function techList(array, nome) {
   let newArray =[];
   let orgazineTechs = array.sort();
   for (i=0; i<array.length; i++){
-     newArray[i] = {tech: orgazineTechs[i], name};
+     newArray[i] = {tech: orgazineTechs[i], name: nome};
   }
   return newArray;
 }
-
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
+"Lucas"))
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
