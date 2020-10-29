@@ -30,7 +30,7 @@ function splitSentence(string) {
 // de strings separadas por cada espaço na string original.
 // Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
   var array = string.split(" ");
-  return array
+  return array;
 }
 
 // Desafio 4
@@ -44,7 +44,7 @@ function concatName(array) {
 // Isso quer dizer que, caso o parâmetro passado para concatName seja a Array
 // ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá
 // retornar Paolillo, Lucas.
-let resultado = string(array[array.length] +", "+array[0]);
+let resultado.concat(array[array.length],", ", array[0]);
 return resultado;
 }
 
@@ -113,6 +113,7 @@ function fizzBuzz(array) {
 // ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
 let resultado = [];
 for (const key in array){
+  resultado[key] ="";
   if ( array[key]%3 === 0 ){
     resultado[key] += "fizz";
   }
