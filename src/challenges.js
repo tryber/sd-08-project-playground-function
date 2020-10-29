@@ -201,10 +201,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(array) {
+  
+  let count = 0;
+  for(let key in array){
+    count += parseInt(array[key].match(/\d+/)[0]);
+  }
+  if(count == 1){
+    return(`${count} copo de água`);
+  }else{
+    return(`${count} copos de água`);
+  }
 }
-
 
 module.exports = {
   calcArea,
