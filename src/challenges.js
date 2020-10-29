@@ -1,8 +1,14 @@
 // Desafio 1
-function compareTrue() {
-
-  // seu código aqui
+function compareTrue(primeiroBoleano, segundoBolenao) {
+  
+  if(primeiroBoleano == true && segundoBolenao == true) {
+    return true;
+  } else if(primeiroBoleano == false || segundoBolenao == false){
+    return false;
+  }
 }
+// let a = true, b = false;
+// console.log(compareTrue(a, b));
 
 // Desafio 2
 function calcArea() {
