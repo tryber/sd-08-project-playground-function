@@ -36,8 +36,14 @@ function splitSentence(texto) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let nome = ["Nícolas", "Soares", "Tozato"];
+
+function concatName(nome) {
+
+  let concatenacao = nome[nome.length-1] + ", " + nome[0];
+
+  return concatenacao;
+  
 }
 
 // Desafio 5
