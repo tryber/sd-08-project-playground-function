@@ -75,15 +75,15 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
-  for (chave in array) {
-    if(array[chave] % 3 === 0 && array[chave] % 5 === 0) {
+  for (let key in array) {
+    if (array[key] % 3 === 0 && array[key] % 5 === 0) {
       newArray.push('fizzBuzz');
-    } else if (array[chave] % 3 === 0) {
+    } else if (array[key] % 3 === 0) {
       newArray.push('fizz');
-    } else if (array[chave] % 5 === 0) {
+    } else if (array[key] % 5 === 0) {
       newArray.push('buzz');
-    } else if (array[chave] % 3 !== 0 && array[chave] % 5 !== 0) {
-      newArray.push('bug!')
+    } else if (array[key] % 3 !== 0 && array[key] % 5 !== 0) {
+      newArray.push('bug!');
     }
   }
   return newArray;
@@ -97,10 +97,31 @@ function decode() {
   // seu código aqui
 }
 
-// Desafio 10
-function techList() {
-  // seu código aqui
+function createObject(array, name) {
+  let newArray = [];
+  for (let key in array) {
+    newArray.push({ tech: array[key], name: name})
+  }
+  return newArray;
 }
+
+// Desafio 10
+function techList(array, name) {
+  let object = createObject(array, name);
+  if (array === []) {
+    return 'Vazio!'
+  }
+  return object.sort(function (a, b) {
+    if (a.tech > b.tech){
+      return 1;
+    } else if (b.tech > a.tech) {
+     return -1;
+    }
+    return 0;
+  });
+}
+
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
 
 // Desafio 11
 function generatePhoneNumber() {
