@@ -83,7 +83,7 @@ function fizzBuzz(array) {
   return newArray;
 }
 
-// Desafio 9 - Fontes de estudo:
+// Desafio 9 - Fontes de estudo sobre string.Replace e RegExp:
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 // Ajuda com para refatoramento: Fernando Soares.
@@ -106,11 +106,26 @@ function decode(str) {
   return generalEncrypter(str, numerals, vogals);
 }
 
-console.log(decode(encode('hello, my name is silvio')));
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+
+  let sortedArray = array.sort();
+  let objectArray = [];
+  
+  for (let i = 0; i < array.length; i += 1) {
+    let objectGenerator = {
+      tech: sortedArray[i],
+      name: name,
+    }
+    
+    objectArray.push(objectGenerator)
+  }
+  return objectArray;
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
