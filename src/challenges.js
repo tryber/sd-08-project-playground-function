@@ -146,9 +146,10 @@ function generatePhoneNumber(array) {
       repeticoes[array[i]] += 1;
     }
 
-    if (array[i] < 0 || array[i] > 9 || repeticoes[array[i]] >= 3) {
-      return 'Array com tamanho incorreto.';
+    if (repeticoes[array[i]] >= 3 || array[i] < 0 || array[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
+
     if (i == 2) {
       saida += ') ' ;
     } else if (i == 7) {
@@ -182,7 +183,10 @@ function hydrate(string) {
       saida += Number(dados[i]);
     }
   }
-  return `${saida} copo de água`;
+  if (saida == 1) {
+    return `${saida} copo de água`;
+  }
+  return `${saida} copos de água`;
 }
 
 module.exports = {
