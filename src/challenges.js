@@ -12,8 +12,21 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(word) {
+  let arr = [],
+    newWord = ''
+  for (let i = 0; i < word.length; i += 1) {
+    if (word[i] != ' ') {
+      newWord += word[i]
+    } else {
+      arr.push(newWord)
+      newWord = ''
+    }
+    if (i === (word.length - 1)) {
+      arr.push(newWord)
+    }
+  }
+  return arr;
 }
 
 // Desafio 4
@@ -62,17 +75,17 @@ function fizzBuzz(arr) {
 
 // Desafio 9
 function encode(word) {
-  let newWord = ""
+  let newWord = ''
   for (let i = 0; i < word.length; i += 1) {
-    if (word[i] === "a") {
+    if (word[i] === 'a') {
       newWord += '1';
-    } else if (word[i] === "e") {
+    } else if (word[i] === 'e') {
       newWord += '2';
-    } else if (word[i] === "i") {
+    } else if (word[i] === 'i') {
       newWord += '3';
-    } else if (word[i] === "o") {
+    } else if (word[i] === 'o') {
       newWord += '4';
-    } else if (word[i] === "u") {
+    } else if (word[i] === 'u') {
       newWord += '5';
     } else {
       newWord += word[i];
@@ -81,17 +94,17 @@ function encode(word) {
   return newWord;
 }
 function decode(word) {
-  let newWord = ""
+  let newWord = ''
   for (let i = 0; i < word.length; i += 1) {
-    if (word[i] === "1") {
+    if (word[i] === '1') {
       newWord += 'a';
-    } else if (word[i] === "2") {
+    } else if (word[i] === '2') {
       newWord += 'e';
-    } else if (word[i] === "3") {
+    } else if (word[i] === '3') {
       newWord += 'i';
-    } else if (word[i] === "4") {
+    } else if (word[i] === '4') {
       newWord += 'o';
-    } else if (word[i] === "5") {
+    } else if (word[i] === '5') {
       newWord += 'u';
     } else {
       newWord += word[i];
