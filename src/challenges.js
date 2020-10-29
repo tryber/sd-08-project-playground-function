@@ -68,8 +68,15 @@ numeros = [9, 1, 2, 3, 9, 5, 7];
 console.log(highestCount(numeros));
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  if(cat1 < cat2){
+    return cat1;
+  }else if(cat2 < cat1){
+    return cat2;
+  } else{
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
