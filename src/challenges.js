@@ -6,6 +6,7 @@ function compareTrue(status1, status2) {
   }
 //console.log(compareTrue('true', 'true'));
 
+
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height)/2;
@@ -13,12 +14,14 @@ function calcArea(base, height) {
 }
 //console.log(calcArea(20, 50));
 
+
 // Desafio 3
 function splitSentence(string) {
   let array = string.split(' ');
   return array; 
 }
-//console.log(splitSentence('Feliz aniversário Lucas Cassiano Ferraz Paolillo'));
+//console.log(splitSentence('go Trybe'));
+
 
 // Desafio 4
 function concatName(arrayStrig) {
@@ -26,22 +29,51 @@ function concatName(arrayStrig) {
 }
 //console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
+
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = (3 * wins) + (1 * ties);
   return pontos;
 }
-console.log(footballPoints(5, 2));
+//console.log(footballPoints(5, 2));
+
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let max = 0;
+
+  for(let fixed = 0; fixed < array.length; fixed += 1) {
+    for(let find = fixed + 1; find < array.length; find += 1) {
+      if(array[fixed] < array[find]) {
+        max = array[find];
+        fixed = find-1;
+        find = array.length;
+      } 
+      else if (find == array.length-1) {
+        max = array[fixed];
+        fixed = array.length;
+      }
+    }
+  }
+
+  let pos = array.indexOf(max);
+  let count = 1;
+
+  for(let index = pos; index < array.length; index += 1) {
+    if(max == array[index]) {
+      count += 1;
+    }
+  }
+  return count;
 }
+//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+
 
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
+
 
 // Desafio 8
 function fizzBuzz() {
