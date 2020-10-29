@@ -94,9 +94,8 @@ Considerando isso, crie uma função chamada `compareTrue` que, ao receber dois 
 
 Faça a função utilizando o operador `&&`.
 
-**2 - Área do triângulo** 
--
-Escreva uma função com o nome `calcArea` que receba um valor de base (chamado `base`) e outro de altura (chamado `height`) de um triângulo e retorne o cálculo da sua área.
+**2 - Área do triângulo**
+- Escreva uma função com o nome `calcArea` que receba um valor de base (chamado `base`) e outro de altura (chamado `height`) de um triângulo e retorne o cálculo da sua área.
 
 Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2.
 
