@@ -155,7 +155,7 @@ function techList(tech, name) {
 function generatePhoneNumber(array) {
   // seu código aqui
   let telefone = '';
-  if(array.length > 10) {
+  if(array.length != 10) {
 
     for(let key in array){
       let sum = 0;
