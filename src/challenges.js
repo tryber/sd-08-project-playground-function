@@ -33,9 +33,7 @@ console.log(concatName(['João', 'Carlito', 'Marques', 'do', 'Nascimento', 'Neto
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let victoriesTeam = wins *= 3
-  let tiesTeam = ties *= 1
-  let pointsTeam = victoriesTeam + tiesTeam
+  let pointsTeam = (wins *= 3) + (ties *= 1)
   return pointsTeam
 }
 console.log(footballPoints(10, 12))
