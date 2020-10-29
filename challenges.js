@@ -8,3 +8,5 @@ function compareTrue (valor1, valor2){
     }
 }
 
+//console.log(compareTrue(1, 1));
+
