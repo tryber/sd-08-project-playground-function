@@ -65,10 +65,16 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arrStr) {
-  let inputArrStr = arrStr;
-  let outputStr = '';
-  outputStr = arrStr[inputArrStr.length - 1] + ', ' + arrStr[0];
-  return outputStr;
+  if (typeof arrStr === "object") {
+    let inputArrStr = arrStr;
+    let outputStr = '';
+    outputStr = arrStr[inputArrStr.length - 1] + ', ' + arrStr[0];
+    return outputStr;
+  }
+  else {
+    return `ERROR > tipo não é objeto Array!`
+  }
+  
 }
 
 // < Para o teste manual >
@@ -77,9 +83,17 @@ function concatName(arrStr) {
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  if (typeof wins === "number" && typeof ties === "number") {
+    return ((3 * wins) + ties);
+  }
+  else {
+    return `ERROR > tipos não são números!`
+  }
 }
+
+// < Para o teste manual >
+// console.log(footballPoints(5, 3));
 
 // Desafio 6
 function highestCount() {
