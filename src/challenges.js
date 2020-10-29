@@ -31,9 +31,12 @@ console.log(splitSentence("Ola mundo"))
 //---------------------------------//
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  value = names.length -1
+
+  return (`${names[value]}, ${names[0]}`)
 }
+console.log(concatName(['matheus', 'gabriel']))
 
 //---------------------------------//
 
