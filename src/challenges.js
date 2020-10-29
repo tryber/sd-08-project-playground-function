@@ -117,7 +117,7 @@ function concatName(vetor) {
 }
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = (wins * 3) + ties;
+  let pontos = wins * 3 + ties;
   return pontos;
 }
 // Desafio 6
@@ -205,9 +205,9 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(frase) {
-  coposDeAgua = 0;
-  for (let key in frase) {
-    coposDeAgua += ehNumero(frase[key]);
+  let coposDeAgua = 0;
+  for (let index = 0; index < frase.length; index++) {
+    coposDeAgua += ehNumero(frase[index]);
   }
   if (coposDeAgua === 1) {
     return '1 copo de água';
