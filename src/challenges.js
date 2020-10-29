@@ -210,24 +210,28 @@ function triangleCheck(lineA, lineB, lineC)
 function hydrate(input)
 {
   let result = input.replace(/\D/g, "");
+  result = result.replace(" ", "");
   result = result.split("");
-
-  for(let i = 0; i < result.length; i += 1)
-  {
-    result[i] = parseInt(result[i]);
-  }
-
   let sum = 0;
+
+  let arr = [];
   for(let i = 0; i < result.length; i += 1)
   {
-    sum += result[i];
+    arr[i] = parseInt(result[i]);
   }
 
-  if(sum = 1)
-    return sum + "copo de água";
+  for(let i = 0; i < result.length; i += 1)
+  {
+    sum += arr[i];
+  }
+
+  if(sum == 1)
+    return sum + " copo de água";
   else
-    return sum + "copos de água";
+    return sum + " copos de água";
+
 }
+
 
 
 module.exports = {
