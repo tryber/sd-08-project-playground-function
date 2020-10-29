@@ -29,40 +29,58 @@ function highestCount(a) {
   let maj = -100000;
   let rep = 0;
 
-  for (num in a){
-    if (a[num] > maj)
+  for (let num in a) {
+    if (a[num] > maj) {
       maj = a[num];
+    }
   }
-  for (num in a){
-    if (a[num] == maj)
-      rep++;
+  for (let num in a) {
+    if (a[num] === maj) {
+      rep += 1;
+    }
   }
 
   return rep;
 }
 
+function calcDist(a, b) {
+  return Math.abs(b - a);
+}
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = calcDist(mouse, cat1);
   let dist2 = calcDist(mouse, cat2);
 
-  if(dist1 == dist2) {
+  if (dist1 === dist2) {
     return 'os gatos trombam e o rato foge';
   }
-  else if(dist1 > dist2) {
+  else if (dist1 > dist2) {
     return 'cat2';
   }
 
   return 'cat1';
 }
 
-function calcDist(a, b) {
-  return Math.abs(b - a);
-}
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(a) {
+  let resp = [];
+  for (let i = 0; i < a.length; i += 1) {
+    if (a[i] % 3 === 0) {
+      if (a[i] % 5 === 0) {
+        resp.push('fizzBuzz');
+        continue;
+      }
+      resp.push('fizz');
+      continue;
+    }
+    else if (a[i] % 5 === 0) {
+      resp.push('fizz');
+      continue;
+    }
+    resp.push('bug!');
+    continue;
+  }
+  return resp;
 }
 
 // Desafio 9
@@ -121,3 +139,4 @@ console.log(highestCount([1, 2, 9, 9, 15, 15, 15]));
 console.log(catAndMouse(0, 2, 3));
 console.log(catAndMouse(0, -4, 3));
 console.log(catAndMouse(0, -3, 3));
+console.log(fizzBuzz([2, 3, 15, 5, 12, 11]));
