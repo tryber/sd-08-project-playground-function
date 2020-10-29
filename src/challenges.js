@@ -8,10 +8,10 @@ function compareTrue(bool1, bool2) {
   }
 }
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
+  area = (base * heigth) / 2;
+  return area;
 }
-
 // Desafio 3
 function splitSentence() {
   // seu código aqui
