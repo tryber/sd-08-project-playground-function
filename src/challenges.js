@@ -213,7 +213,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(beverages) {
   let arr = beverages.match(/\d+/g);
   let numeroDeCopos = arr.map(Number).reduce((acc, cur) => acc + cur);
-  return `${numeroDeCopos} copos de água`;
+  return `${numeroDeCopos} copo${numeroDeCopos > 1 ? 's': ''} de água`;
 }
 
 module.exports = {
