@@ -9,13 +9,16 @@ function compareTrue(firstValue, secondValue) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  return sentence.split(" ")
+
+// Usei o método split que aprendi em https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string.
 }
+
 
 // Desafio 4
 function concatName() {
