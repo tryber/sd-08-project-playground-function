@@ -170,6 +170,7 @@ function generatePhoneNumber(array) {
       }
       if(sum >= 3){
           return 'não é possível gerar um número de telefone com esses valores';
+          console.log(sum);
       }
       if(key == 0){
           telefone += '('+array[0]
@@ -184,6 +185,7 @@ function generatePhoneNumber(array) {
           telefone += array[key];
       }
   }
+
   return telefone
 }
 
