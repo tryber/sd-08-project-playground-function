@@ -15,9 +15,24 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(sentence) {
   // seu código aqui
+  let splittedSentence = [];
+  let index = 0;
+  let arrayIndex = 0;
+  for(let pos = 0; pos < sentence.length; pos += 1){
+    if(sentence.slice(pos, (pos + 1)) == " "){
+      splittedSentence[arrayIndex] = sentence.slice(index, pos);
+      index = pos + 1;
+      arrayIndex += 1;
+    } else if(pos == (sentence.length - 1)){
+      splittedSentence[arrayIndex] = sentence.slice(index, (pos + 1));
+    }
+  }
+  return splittedSentence;
 }
+
+console.log(splitSentence("a b c d e f g h"));
 
 // Desafio 4
 function concatName() {
