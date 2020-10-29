@@ -149,8 +149,20 @@ function decode(sentence) {
 }
 
 // Desafio 10
-function techList() {
+function techList(technologies, name) {
+  let objectArray = [];
   // seu código aqui
+  if (technologies.length === 0) {
+    return 'Vazio!';
+  } else {
+    for (let i = 0; i < technologies.length; i += 1) {
+      let objectAux = new Object();
+      objectAux.tech = technologies[i];
+      objectAux.name = name;
+      objectArray.push(objectAux);
+    }
+    return objectArray;
+  }
 }
 
 // Desafio 11
