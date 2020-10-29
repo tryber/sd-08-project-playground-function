@@ -167,9 +167,32 @@ console.log(techList(["React"], "Lucas"))
 
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayNumber) {
+  let repeatNumber = arrayNumber[0];
+  let count = 0;
+  let phoneNumber;
+  if (arrayNumber.length != 11) {
+    return ("Array com tamanho incorreto.")
+  } else {
+    for (let index = 0; index < arrayNumber.length; index +=1) {
+      count = 0;     
+      for (let j = 0; j < arrayNumber.length; j +=1) {
+        if (arrayNumber[index] == arrayNumber[j]) {            
+          count += 1;          
+        }
+        if (count >= 3) {
+          return ("não é possivel gerar um número de telefone com esses valores")//
+        }            
+        }
+      if ((arrayNumber[index] < 0) || (arrayNumber[index] > 9)) {
+        return ("não é possivel gerar um número de telefone com esses valores")
+      }       
+    phoneNumber = "("+arrayNumber[0]+arrayNumber[1]+") "+arrayNumber[2]+arrayNumber[3]+arrayNumber[4]+arrayNumber[5]+arrayNumber[6]+"-"+arrayNumber[7]+arrayNumber[8]+arrayNumber[9]+arrayNumber[10] ;
+    }
+  return (phoneNumber)
+  }
 }
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 10])) //
 
 // Desafio 12
 function triangleCheck() {
