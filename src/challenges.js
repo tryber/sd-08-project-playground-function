@@ -207,6 +207,9 @@ function hydrate(word) {
          numCopos += Number(numeros[i]);
 
   }
+  if(numCopos == 1){
+    return numCopos+' copo de água'
+  }
   return numCopos+' copos de água'
 }
 
