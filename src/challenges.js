@@ -1,12 +1,12 @@
-//Project Playground Functions
-//Gabriel Lennox
+// Project Playground Functions
+// Gabriel Lennox
 // Desafio 1
 function compareTrue(bool1, bool2) {
   if (bool1 && bool2 === true) {
     return true;
-  } else {
-    return false;
   }
+
+  return false;
 }
 
 // Desafio 2
@@ -16,12 +16,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(" ");
+  return string.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return (concatName[concatName.length - 1] + ', ' + concatName[0]);
 }
 
 // Desafio 5
