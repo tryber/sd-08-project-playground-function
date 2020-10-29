@@ -1,10 +1,11 @@
 // Desafio 1
+
 function compareTrue(valorA, valorB) {
   // seu código aqui
-  if (valorA > 10 && valorB > 10) {
-    console.log('Os valore digitados sao maiores do que 10.');
+  if (valorA == true && valorB == true) {
+    return true;
   } else {
-    console.log('Digite dois valores maiores que 10.');
+    return false;
   }
 }
 
