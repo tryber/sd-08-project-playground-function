@@ -6,13 +6,17 @@ function compareTrue(boolean1, boolean2) {
     return false;
   }
 }
-boolean1 = true
-boolean2 = true
+let boolean1 = true;
+let boolean2 = true;
 console.log(compareTrue(boolean1, boolean2))
+
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  area = (base * height) / 2;
+  return area
 }
+console.log(calcArea(10, 10))
 
 // Desafio 3
 function splitSentence() {
