@@ -128,12 +128,12 @@ function decode(codigoSecreto) {
 function techList(array, name) {
 let techsOrdenadas = array.sort();
 let novaListaDeTechs =[];
-for (let i = 0; i < techsOrdenadas.length; i++) {
-  novaListaDeTechs.push({tech: techsOrdenadas[i], name: name})
+for (let techs = 0; techs < techsOrdenadas.length; techs++) {
+  novaListaDeTechs[techs] = {tech: techsOrdenadas[techs], name: name};
 }
 return novaListaDeTechs;
 }
-
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
