@@ -137,31 +137,15 @@ function encode(string) {
 // console.log(encode(string))
 // let string = '1 h2ll4 w4rld'
 function decode(string) {
-  let result = ''
   for (let index = 0; index < string.length; index += 1) {
-    switch (string[index]) {
-      case '1':
-        result += 'a'
-        break;
-      case '2':
-        result += 'e'
-        break;
-      case '3':
-        result += 'i'
-        break;
-      case '4':
-        result += 'o'
-        break;
-      case '5':
-        result += 'u'
-        break;
-      default:
-        result += string[index]
+      string.replace('a', '1')
+      string.replace('e', '2')
+      string.replace('i', '3')
+      string.replace('o', '4')
+      string.replace('u', '5')
     }
+    return string
   }
-  return result
-}
-
 // console.log(decode(string))
 
 // Desafio 10
