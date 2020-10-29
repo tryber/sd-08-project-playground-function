@@ -77,10 +77,10 @@ function fizzBuzz(arrayNum) {
 }
 
 // Desafio 9
-function encode() {
-
+function encode(string) {
+  // seu código aqui
 }
-console.log(encode([2, 15, 7, 9, 45]));
+
 function decode() {
   // seu código aqui
 }
