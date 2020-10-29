@@ -19,7 +19,7 @@ function splitSentence() {
   // seu código aqui
   let separate = [];
   separate = string.split(' ');
-  console.log(separate);
+  return separate;
 }
 
 // Desafio 4
