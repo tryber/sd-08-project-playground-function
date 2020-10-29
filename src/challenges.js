@@ -68,49 +68,49 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(word) {
-  wordString = word.split("");
+  wordString = word.split('');
   for(let i = 0; i < wordString.length; i++){
     switch (wordString[i]) {
-      case "a":
-      wordString[i] = "1";
+      case 'a':
+      wordString[i] = '1';
       break;
-      case "e":
-      wordString[i] = "2";
+      case 'e':
+      wordString[i] = '2';
       break;
-      case "i":
-      wordString[i] = "3";
+      case 'i':
+      wordString[i] = '3';
       break;
-      case "o":
-      wordString[i] = "4";
+      case 'o':
+      wordString[i] = '4';
       break;
-      case "u":
-      wordString[i] = "5";
+      case 'u':
+      wordString[i] = '5';
       break;
     }
   }
 }
 function decode(word) {
-  wordString = word.split("");
+  wordString = word.split('');
   for(let i = 0; i < wordString.length; i++){
     switch (wordString[i]) {
-      case "1":
-      wordString[i] = "a";
+      case '1':
+      wordString[i] = 'a';
       break;
-      case "2":
-      wordString[i] = "e";
+      case '2':
+      wordString[i] = 'e';
       break;
-      case "3":
-      wordString[i] = "i";
+      case '3':
+      wordString[i] = 'i';
       break;
-      case "4":
-      wordString[i] = "o";
+      case '4':
+      wordString[i] = 'o';
       break;
-      case "5":
-      wordString[i] = "u";
+      case '5':
+      wordString[i] = 'u';
       break;
     }
   }
-  let newWord = wordString.join("");
+  let newWord = wordString.join('');
   return newWord;
 }
 
