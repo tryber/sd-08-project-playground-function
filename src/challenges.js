@@ -132,7 +132,7 @@ function decode(phrase) {
 function techList(tech, name) {
   let listOfTech = [];
 
-  if (tech === null || tech === []) { return "Vazio!"; }
+  if (tech === null || tech.length === 0) { return "Vazio!"; }
   else {
     tech.sort();
 
