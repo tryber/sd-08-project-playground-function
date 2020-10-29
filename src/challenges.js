@@ -6,13 +6,12 @@ function compareTrue(valor_1, valor_2) {
 // Desafio 2
 function calcArea(height,base) {
   let area = (base*altura)/2;
-  console.log(area);
 }
 
 // Desafio 3
 function splitSentence(string) {
   let list = string.split(" ");
-  console.log(list);
+  return list;
 }
 
 // Desafio 4
@@ -20,13 +19,13 @@ function concatName(array) {
   let arrayFinal= [];
   arrayFinal.push(array[array.length-1]);
   arrayFinal.push(array[0]);
-  console.log(arrayFinal.join(" "));
+  return arrayFinal.join(" ");
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = wins*3 + ties;
-  console.log(points);
+  return (points);
 }
 
 // Desafio 6
@@ -44,7 +43,7 @@ function highestCount(array) {
           freq=countlist[j];   
       }
   }
-  console.log(freq);
+  return freq;
 }
 
 // Desafio 7
@@ -53,13 +52,13 @@ function catAndMouse(mouse, cat1, cat2) {
   dmouseCat2 = Math.abs(mouse-cat2);
   console.log(dmouseCat1,dmouseCat2)
   if (dmouseCat2 > dmouseCat1){
-    console.log('cat1');
+    return 'cat1';
   }
   else if (dmouseCat1 > dmouseCat2){
-    console.log('cat2');
+    return 'cat2';
   }
   else 
-    console.log('os gatos trombam e o rato foge');
+    return 'os gatos trombam e o rato foge';
 
 // Desafio 8
 function fizzBuzz(array) {
