@@ -1,5 +1,6 @@
 // Desafio 1
-function compareTrue(valorLogicoA, valorLogicoB) {
+function compareTrue(valorLogicoA, valorLogicoB) 
+{
   if(valorLogicoA === true && valorLogicoB === true)
   {
     return true;
@@ -14,28 +15,32 @@ function compareTrue(valorLogicoA, valorLogicoB) {
 // console.log(compareTrue(false, true));
 
 // Desafio 2
-function calcArea(base, height) {
+function calcArea(base, height) 
+{
   return (base * height) / 2;
 }
 
 //console.log(calcArea(10, 4));
 
 // Desafio 3
-function splitSentence(texto) {
+function splitSentence(texto) 
+{
   return texto.split(" ");
 }
 
 //console.log(splitSentence("go Trybe"));
 
 // Desafio 4
-function concatName(array) {
+function concatName(array) 
+{
   return array[array.length - 1] + ', ' + array[0];
 }
 
 //console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints(wins, ties) {
+function footballPoints(wins, ties) 
+{
   return wins * 3 + ties;
 }
 
@@ -76,12 +81,13 @@ function maiorNumeroDoVetor(arrayNumeros)
 //console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+function catAndMouse(mouse, cat1, cat2) 
+{
   let distanciaEntreRatoGato1 = 0;
   let distanciaEntreRatoGato2 = 0;
 
-  distanciaEntreRatoGato1 = mouse - cat1;
-  distanciaEntreRatoGato2 = mouse - cat2;
+  distanciaEntreRatoGato1 = Math.abs(mouse - cat1);
+  distanciaEntreRatoGato2 = Math.abs(mouse - cat2);
 
   if(distanciaEntreRatoGato1 === distanciaEntreRatoGato2)
   {
@@ -98,14 +104,42 @@ function catAndMouse(mouse, cat1, cat2) {
 
 }
 
-// console.log(catAndMouse(8, 5, 6));
-// console.log(catAndMouse(8, 6, 5));
-// console.log(catAndMouse(8, 2, 2));
+// console.log(catAndMouse(0, 3, 2));
+// console.log(catAndMouse(10, 4, 22));
+// console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumeros) 
+{
+  let arrayFizzBuzz = [];
+  let numero;
+
+  for(let indice = 0; indice < arrayNumeros.length; indice++)
+  {
+    numero = arrayNumeros[indice];
+
+    if(numero % 3 == 0 && numero % 5 == 0)
+    {
+      arrayFizzBuzz.push("FizzBuzz");
+    }
+    else if(numero % 3 != 0 && numero % 5 != 0)
+    {
+      arrayFizzBuzz.push("bug!");
+    }
+    else if(numero % 5 == 0)
+    {
+      arrayFizzBuzz.push("Buzz");
+    }
+    else if(numero % 3 == 0)
+    {
+      arrayFizzBuzz.push("Fizz");
+    }
+  }
+
+  return arrayFizzBuzz;
 }
+
+//console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
