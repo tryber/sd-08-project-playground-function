@@ -1,4 +1,4 @@
-//Desafio 1
+// Desafio 1
 function compareTrue(valorLogicoA, valorLogicoB) {
   if (valorLogicoA === true && valorLogicoB === true) {
     return true;
@@ -7,36 +7,36 @@ function compareTrue(valorLogicoA, valorLogicoB) {
   return false;  
 }
 
-//console.log(compareTrue(true, true));
-//console.log(compareTrue(false, true));
+/* console.log(compareTrue(true, true));
+console.log(compareTrue(false, true)); */
 
 //Desafio 2
 function calcArea (base, height) {
   return (base * height) / 2;
 }
 
-//console.log(calcArea(10, 4));
+/* console.log(calcArea(10, 4)); */
 
 //Desafio 3
 function splitSentence (texto) {
   return texto.split(' ');
 }
 
-//console.log(splitSentence("go Trybe"));
+/* console.log(splitSentence("go Trybe")); */
 
 //Desafio 4
 function concatName (array) {
   return array[array.length - 1] + ', ' + array[0];
 }
 
-//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+/* console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])); */
 
 //Desafio 5
 function footballPoints (wins, ties) {
   return ((wins * 3) + ties);
 }
 
-//console.log(footballPoints(10, 3));
+/* console.log(footballPoints(10, 3)); */
 
 //Desafio 6
 function highestCount (arrayNumeros) {
@@ -61,8 +61,8 @@ function maiorNumeroDoVetor (arrayNumeros) {
   return maiorValor;
 }
 
-//console.log(maiorNumeroDoVetor([9, 1, 2, 3, 9, 5, 7]));
-//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+/* console.log(maiorNumeroDoVetor([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7])); */
 
 //Desafio 7
 function catAndMouse (mouse, cat1, cat2) {
@@ -81,9 +81,9 @@ function catAndMouse (mouse, cat1, cat2) {
   }
 }
 
-//console.log(catAndMouse(0, 3, 2));
-//console.log(catAndMouse(10, 4, 22));
-//console.log(catAndMouse(1, 0, 2));
+/* console.log(catAndMouse(0, 3, 2));
+console.log(catAndMouse(10, 4, 22));
+console.log(catAndMouse(1, 0, 2)); */
 
 //Desafio 8
 function fizzBuzz (arrayNumeros) {
@@ -106,7 +106,7 @@ function fizzBuzz (arrayNumeros) {
   return arrayFizzBuzz;
 }
 
-//console.log(fizzBuzz([2, 15, 7, 9, 45]));
+/* console.log(fizzBuzz([2, 15, 7, 9, 45])); */
 
 //Desafio 9
 function encode (texto) {
@@ -167,8 +167,8 @@ function decode (texto) {
   return novoTexto;
 }
 
-//console.log(encode("hi there!"));
-//console.log(decode("h3 th2r2!"));
+/* console.log(encode("hi there!"));
+console.log(decode("h3 th2r2!")); */
 
 //Desafio 10
 function techList (arrayNomesTecnologia, name) {
@@ -193,8 +193,8 @@ function techList (arrayNomesTecnologia, name) {
   return novoArrayNomesTecnologia;
 }
 
-//console.log(techList([], "Lucas"));
-//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+/* onsole.log(techList([], "Lucas"));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas")); */
 
 //Desafio 11
 function generatePhoneNumber (arrayNumeroTelefone) {
@@ -237,7 +237,7 @@ function formataTelefone (numeroTelefone) {
   return numeroTelefoneFormatado;
 }
 
-//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); */
 
 //Desafio 12
 function triangleCheck (lineA, lineB, lineC) {
@@ -253,7 +253,7 @@ function triangleCheck (lineA, lineB, lineC) {
   }
 }
 
-//console.log(triangleCheck(10, 14, 8));
+/* console.log(triangleCheck(10, 14, 8)); */
 
 //Desafio 13
 function hydrate (texto) {
@@ -273,8 +273,8 @@ function hydrate (texto) {
   }
 }
 
-//console.log(hydrate("1 cerveja"));
-//console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+/* console.log(hydrate("1 cerveja"));
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho")); */
 
 module.exports = {
   calcArea,
