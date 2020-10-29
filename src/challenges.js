@@ -78,14 +78,29 @@ function highestCount(maior) {
 
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+
   // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numeros) {
+  let string = []
+  for(index in numeros){
+    if((numeros[index] % 3 == 0) && (numeros[index] % 5 != 0)){
+      string.push("fizz");
+    } else if ((numeros[index] % 3 != 0) && (numeros[index] % 5 == 0)){
+      string.push("buzz");
+    } else if ((numeros[index] % 3 == 0) && (numeros[index] % 5 == 0)){
+      string.push("fizzbuzz");
+    } else {
+      string.push("bug!");
+    } 
+  }
+  return string;
   // seu código aqui
 }
+//console.log (fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
