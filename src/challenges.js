@@ -14,9 +14,11 @@ function calcArea(base, height) {
 //console.log(calcArea(20, 50));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = string.split(' ');
+  return array; 
 }
+//console.log(splitSentence('Feliz aniversário Lucas Cassiano Ferraz Paolillo'));
 
 // Desafio 4
 function concatName() {
