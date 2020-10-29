@@ -75,12 +75,30 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codigo) {
+  if (typeof(codigo) == "string") {
+    let codigoNovo = ""
+    codigoNovo = codigo.replace(/a/g, "1");
+    codigoNovo = codigoNovo.replace(/e/g, "2");
+    codigoNovo = codigoNovo.replace(/i/g, "3");
+    codigoNovo = codigoNovo.replace(/o/g, "4");
+    codigoNovo = codigoNovo.replace(/u/g, "5");
+    return(codigoNovo);
+  }
 }
-function decode() {
-  // seu código aqui
+
+function decode(codigo) {
+  if (typeof(codigo) == "string") {
+    let codigoNovo = ""
+    codigoNovo = codigo.replace(/1/g, "a");
+    codigoNovo = codigoNovo.replace(/2/g, "e");
+    codigoNovo = codigoNovo.replace(/3/g, "i");
+    codigoNovo = codigoNovo.replace(/4/g, "o");
+    codigoNovo = codigoNovo.replace(/5/g, "u");
+    return(codigoNovo);
+  }
 }
+
 
 // Desafio 10
 function techList() {
