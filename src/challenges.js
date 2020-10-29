@@ -102,15 +102,45 @@ function fizzBuzz(arrayNum) {
   return arrayNum;
 }
 
-let array = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(array));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let palavra = "";
+  for (let i = 0; i < string.length; i += + 1){
+    if (string[i] == 'a'){
+      palavra += "1";
+    } else if (string[i] == 'e'){
+      palavra += "2";
+    } else if (string[i] == 'i'){
+      palavra += "3";
+    } else if (string[i] == 'o'){
+      palavra += "4";
+    } else if (string[i] == 'u'){
+      palavra += "5";
+    } else {
+      palavra += string[i];
+    }
+  }
+  return palavra;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let palavra = "";
+  for (let i = 0; i < string.length; i += + 1){
+    if (string[i] == '1'){
+      palavra += "a";
+    } else if (string[i] == '2'){
+      palavra += "e";
+    } else if (string[i] == '3'){
+      palavra += "i";
+    } else if (string[i] == '4'){
+      palavra += "o";
+    } else if (string[i] == '5'){
+      palavra += "u";
+    } else {
+      palavra += string[i];
+    }
+  }
+  return palavra;
 }
 
 // Desafio 10
