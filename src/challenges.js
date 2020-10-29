@@ -79,20 +79,25 @@ function highestCount(maior) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  posMouse = 0;
+  posCat1 = 0;
+  posCat2 = 0;
+  if (posCat1 - posMouse < posCat2){
 
+  }
   // seu código aqui
 }
 
 // Desafio 8
 function fizzBuzz(numeros) {
-  let string = []
+  let string = [];
   for(index in numeros){
-    if((numeros[index] % 3 == 0) && (numeros[index] % 5 != 0)){
+    if((numeros[index] % 3 === 0) && (numeros[index] % 5 !== 0)){
       string.push("fizz");
-    } else if ((numeros[index] % 3 != 0) && (numeros[index] % 5 == 0)){
+    } else if ((numeros[index] % 3 !== 0) && (numeros[index] % 5 === 0)){
       string.push("buzz");
-    } else if ((numeros[index] % 3 == 0) && (numeros[index] % 5 == 0)){
-      string.push("fizzbuzz");
+    } else if ((numeros[index] % 3 === 0) && (numeros[index] % 5 === 0)){
+      string.push("fizzBuzz");
     } else {
       string.push("bug!");
     } 
