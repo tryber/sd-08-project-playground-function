@@ -20,17 +20,15 @@ function splitSentence(string, array) {
   array =[]
   
 }
-let nomes = ["João","paulo", "Pedro", "josé"]
 // Desafio 4
 function concatName(lista) {
   let ordemInversa = []
-  for (var index = lista.length -1;index<=0;index--){
-    ordemInversa.push+= lista[index];
-    return ordemInversa;
-  }
-    
-}
-
+  for (var index = lista.length -1;index>=0;index-=1){
+    ordemInversa.push (lista[index]);
+    }
+      return ordemInversa;
+ }
+ 
 // Desafio 5
 function footballPoints(wins,ties) {
     let finalScore = wins*3 + ties;
@@ -48,9 +46,29 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let resposta = []
+  for (let index = 0; index<array.length;index+=1){
+    if (array[index]%3 == 0 && array[index]%5==0) {
+      resposta.push ("fizzBuzz");
+      
+    }
+    else if (array[index]%3 == 0 && array[index]%5 != 0) {
+      resposta.push("fizz");
+      
+    }
+    else if (array[index]%3 != 0 && array[index]%5 == 0) {
+      resposta.push("buzz");
+    
+  }
+    else if (array [index]%3 != 0 && array[index]%5 != 0) {
+      resposta.push ("bug!");
+    }
+    
 }
+    return resposta
+}
+
 
 // Desafio 9
 function encode() {
