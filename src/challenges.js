@@ -30,9 +30,9 @@ function footballPoints(wins, ties) {
   let points = 0;
   for (let i = 0; i <= wins; i += 1) {
     points += 3;
+  }
    for (let i2 = 0; i2 <= ties; i2 += 1) {
     points += 1;
-    }
   }
   return points;
 }
