@@ -115,8 +115,16 @@ function decode(word) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnologias, name) {
+  let tecList = [];
+  let tecnologiasEmOrdem = tecnologias.sort();
+  for (i in tecnologiasEmOrdem){
+    let tecObject={};
+    tecObject['tech'] = tecnologiasEmOrdem[i];
+    tecObject['name'] = name;
+    tecList.push(tecObject);
+  }
+  return teclist
 }
 
 // Desafio 11
