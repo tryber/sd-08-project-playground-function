@@ -196,11 +196,17 @@ function generatePhoneNumber(digits) {
   }
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let lines = [lineA, lineB, lineC];
+  for (let i = 0; i < lines.length; i++) {
+    let sum = 0;
+    for (let j = 0; j < lines.length; j++) {
+      if (j != i) sum += lines[j];
+    }
+    if (lines[i] >= sum) return false;
+  }
+  return true;
 }
 
 // Desafio 13
