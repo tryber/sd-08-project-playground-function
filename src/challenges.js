@@ -37,8 +37,22 @@ function footballPoints(vit,emp) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(list) {
+  let maior =0;
+  let contador=0;
+  for (let index in list){
+    if (maior>=list[index]){
+      maior=maior;
+    }else{
+      maior=list[index];
+    }
+  }
+  for (let key in list){
+    if(maior == list[key]){
+      contador++;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
