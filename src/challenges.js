@@ -1,7 +1,12 @@
 // Desafio 1
 function compareTrue(bollean,bollean2) {
   // seu código aqui
-   return bollean && bollean2;
+   if(bollean === true && bollean2 === true){
+      return true;
+   }
+   else {
+     return false;
+   }
 }
 
 // Desafio 2
