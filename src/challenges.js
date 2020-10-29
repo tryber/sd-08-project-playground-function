@@ -14,8 +14,10 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(fullNameArray) {
+  const lastPosition = fullNameArray.length - 1;
+
+  return `${fullNameArray[lastPosition]}, ${fullNameArray[0]}` 
 }
 
 // Desafio 5
