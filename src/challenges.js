@@ -66,7 +66,7 @@ function fizzBuzz(numeros) {
       result.push('fizzBuzz');
     } else if (numeros[i] % 3 === 0) {
       result.push('fizz');
-    } else if (numeros[i] % 5 === 5) {
+    } else if (numeros[i] % 5 === 0) {
       result.push('buzz');
     } else {
       result.push('bug!');
@@ -74,7 +74,7 @@ function fizzBuzz(numeros) {
   }
   return result;
 }
-
+console.log(numeros())
 // Desafio 9
 function encode() {
   
