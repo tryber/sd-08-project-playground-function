@@ -133,8 +133,13 @@ function decode(word2) {
 }
 
 // Desafio 10
-function techList() {
+function techList(array, name) {
   // seu código aqui
+  let obj = [];
+  for(let key in array){
+    obj.push({'tech': array[key], 'name': name[key]})
+  }
+  return obj;
 }
 
 // Desafio 11
