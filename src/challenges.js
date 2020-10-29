@@ -40,8 +40,18 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+  function compararNumeros(a, b) {
+    return a - b;
+  }
+  arr.sort(compararNumeros)
+  /** Source: link https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort */
+  function isBigEnough(value) {
+    return value >= arr[arr.length - 1];
+  }
+  let newArr = arr.filter(isBigEnough);
+  /** Source: link https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filtro */
+  return newArr.length;
 }
 
 // Desafio 7
