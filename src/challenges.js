@@ -76,17 +76,40 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let fraseMinuscula = frase.toLowerCase();
+  fraseMinuscula = fraseMinuscula.replace (/a/g,"1");
+  fraseMinuscula = fraseMinuscula.replace (/e/g,"2");
+  fraseMinuscula = fraseMinuscula.replace (/i/g,"3");
+  fraseMinuscula = fraseMinuscula.replace (/o/g,"4");
+  fraseMinuscula = fraseMinuscula.replace (/u/g,"5");
+  return fraseMinuscula;
 }
-function decode() {
-  // seu código aqui
+
+function decode(frase) {
+  let fraseMinuscula = frase.toLowerCase();
+  fraseMinuscula = fraseMinuscula.replace (/1/g,"a");
+  fraseMinuscula = fraseMinuscula.replace (/2/g,"e");
+  fraseMinuscula = fraseMinuscula.replace (/3/g,"i");
+  fraseMinuscula = fraseMinuscula.replace (/4/g,"o");
+  fraseMinuscula = fraseMinuscula.replace (/5/g,"u");
+  return fraseMinuscula;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech,name) {
+  tech = tech.sort();
+  let lista = [];
+  for (let key in tech){
+    let objeto = {
+      tech: tech[key],
+      name: name
+    }
+    lista.push (objeto);
+  }
+  return lista;
 }
+console.log(techList(["React","CSS", "Jest", "HTML", "JavaScript"],"Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
