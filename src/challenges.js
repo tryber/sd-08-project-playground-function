@@ -27,7 +27,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(palavras) {
   
-  for (let index=0;)
+
 
 
 }
