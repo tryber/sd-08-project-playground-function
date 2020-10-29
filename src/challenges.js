@@ -67,9 +67,23 @@ function highestCount(numeros) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  
+  
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return "cat1";
+  } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
+//console.log(catAndMouse(2, 6, 9));
+//console.log(catAndMouse(2, 9, 6));
+//console.log(catAndMouse(2, 2, 2));
+//console.log(catAndMouse(12, 6, 9));
+//console.log(catAndMouse(12, 9, 6));
+//console.log(catAndMouse(0, 1, 2));
 
 // Desafio 8
 function fizzBuzz() {
