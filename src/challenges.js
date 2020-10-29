@@ -181,11 +181,11 @@ function generatePhoneNumber(arrayNumber) {
           count += 1;          
         }
         if (count >= 3) {
-          return ("não é possivel gerar um número de telefone com esses valores")//
+          return ("não é possível gerar um número de telefone com esses valores")//
         }            
         }
       if ((arrayNumber[index] < 0) || (arrayNumber[index] > 9)) {
-        return ("não é possivel gerar um número de telefone com esses valores")
+        return ("não é possível gerar um número de telefone com esses valores")
       }       
     phoneNumber = "("+arrayNumber[0]+arrayNumber[1]+") "+arrayNumber[2]+arrayNumber[3]+arrayNumber[4]+arrayNumber[5]+arrayNumber[6]+"-"+arrayNumber[7]+arrayNumber[8]+arrayNumber[9]+arrayNumber[10] ;
     }
