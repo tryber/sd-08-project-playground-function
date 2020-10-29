@@ -76,8 +76,8 @@ function footballPoints(wins, ties) {
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumeros) {
+ 
 }
 
 
@@ -110,14 +110,14 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
   for (let numeros=0; numeros<arrayNumeros.length; numeros++){
-    if (arrayNumeros[numeros] % 3){
-      return ("fizz");
-    }else if (arrayNumeros[numeros] % 5){
-      return ("buzz");
-    }else if (arrayNumeros[numeros] % 3 && arrayNumeros[numeros] % 5){
-      return ("fizzBuzz");
+    if (arrayNumeros[numeros] % 3 == 0 && arrayNumeros[numeros] % 5 == 0){    
+      return "fizzBuzz";
+    }else if (arrayNumeros[numeros] % 5 == 0){
+      return "buzz";
+    }else if (arrayNumeros[numeros] % 3 == 0){
+      return "fizz";
     }else {
-      return ("bug!");
+      return "bug!";
     }  
   }  
 }
@@ -130,17 +130,61 @@ function fizzBuzz(arrayNumeros) {
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(palavra) {
+  let resultado = "";
+  for (let vogais=0; vogais<palavra.length; vogais++){
+    if (palavra[vogais] == "a"){
+      resultado += 1;
+    }else if (palavra[vogais] == "e"){
+      resultado += 2;
+    } else if (palavra[vogais] == "i"){
+      resultado += 3;
+    } else if (palavra[vogais] == "o"){
+      resultado += 4;
+    } else if (palavra[vogais] == "u"){
+      resultado += 5;
+    }else {
+      resultado += palavra[vogais];
+    }
+  }
+  return resultado;
 }
+console.log(encode("hi there!"));
+
+
+
 function decode() {
   // seu código aqui
 }
 
+
+
+
+
+
+
+
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(nomeTech, name) {  
+  
+  for (let key in nomeTech){
+    let nomes = [];
+        nomes = {
+        tech: nomeTech[key],
+        name: name   
+    }
+    return nomes; 
+  }
 }
+
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "ruben"));
+
+
+
+
+
+
+
 
 // Desafio 11
 function generatePhoneNumber() {
