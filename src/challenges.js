@@ -26,17 +26,27 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let victory = wins, pointVictorias = 0;
-  let draw = ties, pointDraw = 0;
-  pointVictorias = victory * 3;
-  pointDraw = draw * 1;
+  let pointVictorias = 0;
+  let pointDraw = 0;
+  pointVictorias = wins * 3;
+  pointDraw = ties * 1;
   return pointVictorias + pointDraw;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNum) {
+  let maxNum = 0;
+  let countRepet = 0;
+  for (let i = 0; i < arrayNum.length; i += 1) {
+    if (maxNum < arrayNum[i]) maxNum = arrayNum[i];
+  }
+  for (let x = 0; x < arrayNum.length; x += 1) {
+    if (maxNum === arrayNum[x]) countRepet += 1;
+  }
+  return countRepet;
 }
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
