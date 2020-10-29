@@ -1,11 +1,14 @@
 // Desafio 1
-function compareTrue(numberX, numberY) {
+function compareTrue(valueA, valueB) {
     //[true]&&[true]  = [true]
     //[true]&&[false] = [false]
     //[false]&&[true] = [false]
     //[false]&&[false]= [false]
 
-    if (numberX == true && numberY == true) {
+    let valueA;
+    let valueB;
+
+    if (valueA == true && valueB == true) {
         return true
     } else {
         return false
