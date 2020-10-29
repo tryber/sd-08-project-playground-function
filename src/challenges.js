@@ -113,14 +113,17 @@ function decode(code) {
 function techList(array, name) {
   array.sort();
   let list = [];
-
   for (let i = 0; i < array.length; i++) {
     let temp = {};
     temp.tech = array[i];
     temp.name = name;
     list.push(temp);
   }
+  if (array == []) {
+    return "Vazio!"
+  } else {
   return list;
+  }
 }
 
 // Desafio 11
