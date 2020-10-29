@@ -105,7 +105,7 @@ function techList(technologies, name) {
     list.push({
       tech: techsSorted[index],
       name
-    })
+    });
   }
 
   if (list.length === 0) return "Vazio!";
@@ -114,8 +114,28 @@ function techList(technologies, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbersArray) {
+  if (numbersArray.length !== 11) return "Array com tamanho incorreto.";
+  
+  for (let index in numbersArray) {
+    if (numbersArray[index] > 9 || numbersArray[index] < 0) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
+  for (let numberCheck = 0; numberCheck < 10; numberCheck += 1) {
+    let filteredNumbers = numbersArray.filter(number => number === numberCheck)
+    if (filteredNumbers.length >= 3) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
+  let ddd = numbersArray.slice(0, 2);
+  let firstHalf = numbersArray.slice(2, 7);
+  let secondHalf = numbersArray.slice(7);
+  let fullNumber = `(${ddd})${firstHalf}-${secondHalf}`.replace(/,/g, "");
+
+  return fullNumber;
 }
 
 // Desafio 12
