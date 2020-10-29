@@ -75,8 +75,6 @@ function highestCount(numbersArray) {
 
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-
 function highest(array) {
 
     //Storing the current highest number 
