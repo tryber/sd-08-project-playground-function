@@ -54,24 +54,22 @@ function catAndMouse(mouse, cat1, cat2) {
     return "cat1";
   } else if (distCat2 < distCat1) {
     return "cat2";
-  }else{
+  } else {
     return "os gatos trombam e o rato foge";
   }
 }
 
-console.log(catAndMouse(5,2,6));
-
 // Desafio 8
 function fizzBuzz(array) {
   let novaArray = [];
-  for(let i = 0; i<array.length; i+=1){
-    if(array[i] % 3 == 0 && array[i] % 5 == 0){
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
       novaArray.push("fizzBuzz")
-    }else if(array[i] % 3 == 0){
+    } else if (array[i] % 3 == 0) {
       novaArray.push("fizz");
-    }else if(array[i] % 5 == 0){
+    } else if (array[i] % 5 == 0) {
       novaArray.push("buzz");
-    }else{
+    } else {
       novaArray.push("bug!");
     }
   }
@@ -86,10 +84,10 @@ function encode(string) {
   //Passa a string para um array
   let encodedString = string.split("");
 
-  for(let i=0; i<encodedString.length; i+=1){
+  for (let i = 0; i < encodedString.length; i += 1) {
     //Compara se a letra atual é igual a ela mesma mas em caixa baixa porque queremos substituir apenas as lowe case
     //&&  Procura essa letra minuscula no encodeLetters, se devolver -1 é porque a letra não está la
-    if(encodedString[i] == encodedString[i].toLowerCase() && encodeLetters.indexOf(encodedString[i]) != -1 ){
+    if (encodedString[i] == encodedString[i].toLowerCase() && encodeLetters.indexOf(encodedString[i]) != -1) {
       //Substitui a letra atual de encodedString pelo número equivalente no encodedValues
       encodedString[i] = encodedValues[encodeLetters.indexOf(encodedString[i])];
     }
@@ -108,9 +106,9 @@ function decode(string) {
   //Passa a string para um array
   let encodedString = string.split("");
 
-  for(let i=0; i<encodedString.length; i+=1){
+  for (let i = 0; i < encodedString.length; i += 1) {
     //Verificar se a posição atual da encodedString é igual a alguma das posições de encodedValues
-    if(encodedValues.indexOf(encodedString[i]) != -1 ){
+    if (encodedValues.indexOf(encodedString[i]) != -1) {
       //Substitui o número pela letra equivalente
       encodedString[i] = encodeLetters[encodedValues.indexOf(encodedString[i])];
     }
@@ -121,9 +119,22 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let sortArray = array.sort();
+  let newArray = [];
+  for (let key in array) {
+    let insert = [array[key], name]
+    newArray.push(insert)
+  }
+
+  if (array.length == 0) {
+    return "Vazio!";
+  } else {
+    return newArray;
+  }
 }
+
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
