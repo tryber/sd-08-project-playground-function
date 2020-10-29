@@ -82,7 +82,7 @@ function encode(string) {
     e: 2,
     i: 3,
     o: 4,
-    u: 5
+    u: 5,
   }
   for (let letter of string) {
     if (vogals[letter] === undefined) {
@@ -94,8 +94,23 @@ function encode(string) {
   return phrase
 }
 
-function decode() {
-
+function decode(string) {
+  let phrase = '';
+  let numbers = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  }
+  for (let character of string) {
+    if (numbers[character] === undefined) {
+      phrase += character;
+    } else {
+      phrase += numbers[character];
+    }
+  }
+  return phrase
 }
 
 // Desafio 10
