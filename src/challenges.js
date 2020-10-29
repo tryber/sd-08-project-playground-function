@@ -85,18 +85,50 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringSemCriptografia) {
+  let arraySemCripto =stringSemCriptografia.split("");
+  for (let caracter = 0; caracter < arraySemCripto.length; caracter++){
+    if(arraySemCripto[caracter] == "a"){
+      arraySemCripto[caracter] = "1";
+      } else if(arraySemCripto[caracter] == "e"){
+        arraySemCripto[caracter] = "2";
+      } else if(arraySemCripto[caracter] == "i"){
+        arraySemCripto[caracter] = "3";
+      } else if(arraySemCripto[caracter] == "o"){
+        arraySemCripto[caracter] = "4";
+      } else if(arraySemCripto[caracter] == "u"){
+        arraySemCripto[caracter] = "5";
+      } else {continue}
+  }
+  let stringCriptografada = arraySemCripto.join("");
+  return stringCriptografada;
 }
-function decode() {
-  // seu código aqui
+
+
+function decode(codigoSecreto) {
+  let arraySecreto = codigoSecreto.split("");
+  for (let caracter = 0; caracter < arraySecreto.length; caracter++){
+    if(arraySecreto[caracter] == "1"){
+      arraySecreto[caracter] = "a";
+      } else if(arraySecreto[caracter] == "2"){
+        arraySecreto[caracter] = "e";
+      } else if(arraySecreto[caracter] == "3"){
+        arraySecreto[caracter] = "i";
+      } else if(arraySecreto[caracter] == "4"){
+        arraySecreto[caracter] = "o";
+      } else if(arraySecreto[caracter] == "5"){
+        arraySecreto[caracter] = "u";
+      } else {continue}
+  }
+  let codigoRevelado = arraySecreto.join("");
+  return codigoRevelado;
 }
 
 // Desafio 10
 function techList(array, name) {
   let newArray =[];
   let orgazineTechs = array.sort();
-  for (i=0; i<array.length; i++){
+  for (i=0; i < orgazineTechs.length; i++){
      newArray[i] = {tech: orgazineTechs[i], name: name};
   }
   return newArray;
