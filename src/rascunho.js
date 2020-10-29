@@ -1,5 +1,4 @@
-function splitSentence(string) {
-    return string.split(" ");
-  }
-  let oi = "oi eu sou o goku"
-  console.log(splitSentence("oi eu sou o goku"))
+function concatName(array) {
+   return array[array.length -1] + ", " + array[0]
+}
+console.log(concatName([ 'oi', 'eu', 'sou', 'o', 'goku' ]))
