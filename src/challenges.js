@@ -109,9 +109,9 @@ function fizzBuzz(array) {
 // Desafio 9
 // let string = 'a hello world'
 function encode(string) {
-  let result = ""
+  let result = ''
   for (let index = 0; index < string.length; index += 1) {
-    switch(string[index]) {
+    switch (string[index]) {
       case 'a':
         result += '1'
         break;
@@ -136,10 +136,10 @@ function encode(string) {
 
 // console.log(encode(string))
 // let string = '1 h2ll4 w4rld'
-function decode() {
-  let result = ""
+function decode(string) {
+  let result = ''
   for (let index = 0; index < string.length; index += 1) {
-    switch(string[index]) {
+    switch (string[index]) {
       case '1':
         result += 'a'
         break;
@@ -162,7 +162,7 @@ function decode() {
   return result
 }
 
-console.log(decode(string))
+// console.log(decode(string))
 
 // Desafio 10
 function techList() {
