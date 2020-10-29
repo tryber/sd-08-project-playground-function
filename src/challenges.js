@@ -24,8 +24,8 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(nome) {
-  let pNome; 
-  let uNome; 
+  let pNome;
+  let uNome;
   let cont;
   pNome = nome[0];
   uNome = nome[nome.length - 1];
@@ -35,19 +35,19 @@ function concatName(nome) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points;
-  if(wins>0){
-    points = wins + 3;
+  let points = 0;
+  if (wins > 0) {
+    points += wins + 3;
   }
-  if (ties>0){
-    points = ties + 1;
+  if (ties > 0) {
+    points += ties + 1;
   }
   return points;
 }
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+
 }
 
 // Desafio 7
