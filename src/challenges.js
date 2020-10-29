@@ -10,8 +10,13 @@ function compareTrue(num1, num2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(num1, num2) {
+  let base = num1;
+  let altura = num2;
+
+  let areaTriangulo = (base * altura)/2
+  console.log(areaTriangulo)
+  return areaTriangulo 
 }
 
 // Desafio 3
