@@ -94,15 +94,48 @@ function fizzBuzz(array) {
       resultado.push(bug)
     }
   }return resultado
-}console.log(fizzBuzz(arrayFizz))
+}//console.log(fizzBuzz(arrayFizz))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+let str = "Hello Modafoca"
+function encode(string) {
+  let mainVar = string
+  let mainArr = mainVar.split('')
+  
+  for(i in mainArr){
+    if(mainArr[i] === 'a'){
+      mainArr[i] = '1'
+    }else if(mainArr[i] === 'e'){
+      mainArr[i] = '2'
+    }else if(mainArr[i] === 'i'){
+      mainArr[i] = '3'
+    }else if(mainArr[i] === 'o'){
+      mainArr[i] = '4'
+    }else if(mainArr[i] === 'u'){
+      mainArr[i] = '5'
+    }
+  }let encodeStr = mainArr.join('')
+  return encodeStr
+}//console.log(encode(str))
+let str2 = "h3 th2r2!"
+function decode(string) {
+  let mainVar = string
+  let mainArr = mainVar.split('')
+    for(i in mainArr){
+    if(mainArr[i] === '1'){
+      mainArr[i] = 'a'
+    }else if(mainArr[i] === '2'){
+      mainArr[i] = 'e'
+    }else if(mainArr[i] === '3'){
+      mainArr[i] = 'i'
+    }else if(mainArr[i] === '4'){
+      mainArr[i] = 'o'
+    }else if(mainArr[i] === '5'){
+      mainArr[i] = 'u'
+    }
+  }let decodeStr = mainArr.join('')
+  return decodeStr
+}console.log(decode(str2))
 
 // Desafio 10
 function techList() {
