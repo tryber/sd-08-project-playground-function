@@ -9,9 +9,14 @@ function calcArea(base,height) {
 
 // Desafio 3
 function splitSentence() {
-  
+  let stringWord = "go Trybe";
+  resultado = resultado.split("");
+  for (key in resultado){
+    stringWord.push(resultado[key])
+  }
+  return stringWord;
 }
-
+console.log (resultado);
 // Desafio 4
 function concatName() {
   // seu código aqui
