@@ -49,8 +49,8 @@ function highestCount(numeros) {
   }
   //console.log(maiorNumero);
 
-  for (j in numeros) {
-    if (maiorNumero === numeros[j]) {
+  for (cont = 0; cont < numeros.length; cont += 1) {
+    if (maiorNumero === numeros[cont]) {
       repetido += 1;
     }
   }
