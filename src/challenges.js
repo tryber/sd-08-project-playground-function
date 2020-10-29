@@ -109,16 +109,48 @@ function fizzBuzz(listaDeNumeros) {
   }
   return retorna;
 }
-let listaDeNumeros = [14, 15, 27, 33, 45, 90]
-console.log(fizzBuzz(listaDeNumeros));
+// let listaDeNumeros = [14, 15, 27, 33, 45, 90]
+// console.log(fizzBuzz(listaDeNumeros));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(letras) {
+  let letraNumero = letras.split('');
+  for (let i = 0; i < letraNumero.length; i += 1) {
+    if (letraNumero[i] === 'a') {
+      letraNumero[i] = 1;
+    } else if (letraNumero[i] === 'e') {
+      letraNumero[i] = 2;
+    } else if (letraNumero[i] === 'i') {
+      letraNumero[i] = 3;
+    } else if (letraNumero[i] === 'o') {
+      letraNumero[i] = 4;
+    } else if (letraNumero[i] === 'u') {
+      letraNumero[i] = 5;
+    }
+  }
+  return letraNumero.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(numeros) {
+  let numeroLetra = numeros.split('');
+  for (let i = 0; i < numeroLetra.length; i += 1) {
+    if (numeroLetra[i] == 1) {
+      numeroLetra[i] = 'a';
+    } else if (numeroLetra[i] == 2) {
+      numeroLetra[i] = 'e';
+    } else if (numeroLetra[i] == 3) {
+      numeroLetra[i] = 'i';
+    } else if (numeroLetra[i] == 4) {
+      numeroLetra[i] = 'o';
+    } else if (numeroLetra[i] == 5) {
+      numeroLetra[i] = 'u';
+    }
+  }
+  return numeroLetra.join('');
 }
+let letras = 'hi there!';
+console.log(encode(letras));
+let numeros = 'h3 th2r2!';
+console.log(decode(numeros))
 
 // Desafio 10
 function techList() {
