@@ -24,9 +24,11 @@ function splitSentence(string) {
 console.log(splitSentence('Project 02 Trybe'))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings) {
+  let name = arrayStrings.split(' ')
+  return (`${name[name.length - 1]}, ${name[0]}`)
 }
+console.log(concatName('João Carlito Marques do Nascimento Neto'))
 
 // Desafio 5
 function footballPoints() {
