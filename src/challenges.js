@@ -62,13 +62,27 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (dist1 < dist2) {
     prey = 'cat1';
   }
-  
+
   return prey;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(fizzBuzzArray) {
+  let index;
+
+  for (index; index < fizzBuzzArray.length; index++) {
+    if (fizzBuzzArray[index] % 3 === 0 && fizzBuzzArray[index] % 5 === 0) {
+      fizzBuzzArray[index] = 'fizzBuzz';
+    } else if (fizzBuzzArray[index] % 3 === 0 && fizzBuzzArray[index] % 5 !== 0) {
+      fizzBuzzArray[index] = 'fizz';
+    } else if (fizzBuzzArray[index] % 3 !== 0 && fizzBuzzArray[index] % 5 === 0) {
+      fizzBuzzArray[index] = 'buzz';
+    } else if (fizzBuzzArray[index] % 3 !== 0 && fizzBuzzArray[index] % 5 !== 0) {
+      fizzBuzzArray[index] = 'bug!';
+    }
+  }
+
+  return fizzBuzzArray;
 }
 
 // Desafio 9
