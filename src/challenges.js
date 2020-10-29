@@ -80,15 +80,15 @@ function fizzBuzz(numbers) {
   return result;
 }
 
+// Desafio 9
 const vowels = {
-  a: 1,
-  e: 2,
-  i: 3,
-  o: 4,
-  u: 5,
+  a: '1',
+  e: '2',
+  i: '3',
+  o: '4',
+  u: '5',
 };
 
-// Desafio 9
 function encode(str) {
   let result = '';
   for (let i = 0, len = str.length; i < len; i += 1) {
@@ -104,21 +104,15 @@ function encode(str) {
 }
 
 function decode(str) {
-  let result = '';
-  for (let i = 0, len = str.length; i < len; i += 1) {
-    let code = str[i];
-    let letter = null;
+  let result = ''; // string em branco
+  for (let i = 0; i < str.length; i += 1) {
+    let letter = str[i]; // letra atual
     for (let cur in vowels) {
-      if (vowels[cur] === code) {
+      if (letter === vowels[cur]) {
         letter = cur;
-        break;
       }
     }
-    if (letter) {
-      result += letter;
-    } else {
-      result += code;
-    }
+    result += letter;
   }
   return result;
 }
@@ -155,14 +149,14 @@ function validNumber(digits) {
     return false;
   }
 
-  for (let i = 0; i < digits.length; i++) {
+  for (let i = 0; i < digits.length; i += 2) {
     let count = 1;
-    for (let j = 0; j < digits.length; j++) {
+    for (let j = 0; j < digits.length; j += 2) {
       if (i !== j && digits[i] === digits[j]) {
         count += 1;
       }
     }
-    if (count >=3) return false;
+    if (count >= 3) return false;
   }
 
   return true;
@@ -172,7 +166,7 @@ function generatePhoneNumber(digits) {
   if (digits.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  
+
   if (!validNumber(digits)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
