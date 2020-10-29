@@ -11,8 +11,9 @@ function compareTrue(comp01, comp02) {
 console.log(compareTrue(true, true))
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let resultado = (base * altura) / 2;
+  return resultado;
 }
 
 // Desafio 3
