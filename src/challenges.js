@@ -22,9 +22,12 @@ console.log(splitSentence("Oi Tryber"))
 
 // Desafio 4
 function concatName(arrayDeNomes) {
-  
-
+  for (let index = 0; index < arrayDeNomes.length - 1; index ++){
+      return arrayDeNomes[arrayDeNomes.length - 1] + " " + arrayDeNomes[index];
+  }
 }
+  console.log(concatName(["Bruce", "nascimento", "Dias"]));
+
 
 // Desafio 5
 function footballPoints() {
