@@ -31,14 +31,19 @@ console.log(splitSentence("go Trybe"));
 function concatName(arrayString) {
     arrayString = arrayString[arrayString.length -1]  + ', ' + arrayString[0];
     return arrayString;
-}
+};
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {
+let pointswins = 3;
+let pointsties = 1;
+      score = (wins*pointswins) + (ties*pointsties);
+      return "O time fez " + score + " pontos no campeonato."
+};
+console.log(footballPoints(7, 3));
+
 
 // Desafio 6
 function highestCount() {
