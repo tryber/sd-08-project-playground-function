@@ -21,10 +21,14 @@ function splitSentence(string) {
   let words = string.split(' ');
   return words;
   }
-  
+
 // Desafio 4
-function concatName() {
+function concatName(arrayStrings) {
   // seu código aqui
+  let retorno = [];
+  retorno.push(arrayStrings[arrayStrings.length - 1]);
+  retorno.push(arrayStrings[0]);
+  return retorno;
 }
 
 // Desafio 5
