@@ -121,10 +121,9 @@ function decode(input)
   result = result.replace(/4/g, "o");
   result = result.replace(/5/g, "u");
 
- console.log(result);
-
+  return result;
 }
-decode("h3 th2r2!");
+
 
 
 
