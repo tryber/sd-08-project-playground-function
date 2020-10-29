@@ -6,8 +6,8 @@ function compareTrue(numero1, numero2) {
 
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+ 
 }
 
 // Desafio 3
