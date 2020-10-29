@@ -37,7 +37,7 @@ function concatName(nome) {
 function footballPoints(wins, ties) {
   let points = 0;
   if (wins > 0) {
-    points += wins + 3;
+    points += wins * 3;
   }
   if (ties > 0) {
     points += ties + 1;
