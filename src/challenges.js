@@ -9,7 +9,6 @@ function compareTrue(valorX, valorY) {
   console.log(result);
 }
 
-compareTrue(true, true)
 // Desafio 2
 function calcArea() {
   // seu código aqui
