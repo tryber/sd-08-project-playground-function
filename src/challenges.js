@@ -1,8 +1,10 @@
 // Desafio 1
 function compareTrue(numero1, numero2) {
-     return Boolean(numero1 > numero2);
+  if (numero1 && numero2 === true){
+     return true}
+     else {return false};
 }
-console.log(compareTrue(25, 12));
+console.log(compareTrue(false, false));
 
 
 // Desafio 2
@@ -19,8 +21,9 @@ function splitSentence(string) {
 console.log(splitSentence("Oi Tryber"))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayDeNomes) {
+  
+
 }
 
 // Desafio 5
