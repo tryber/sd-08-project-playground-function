@@ -51,9 +51,9 @@ function highestCount(array) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
-  case1 = Math.abs(cat1 - mouse);
-  case2 = Math.abs(cat2 - mouse);
+function catAndMouse(mouse, cat1, cat2) {
+  let case1 = Math.abs(cat1 - mouse);
+  let case2 = Math.abs(cat2 - mouse);
   if (case1 < case2) {
     return 'cat1';
   } else if (case2 < case1) {
