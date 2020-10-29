@@ -142,28 +142,28 @@ function decode(stringDecode) {
 // Desafio 10
 function techList(arrayTec, name) {    
   let info2 = {};
+  let arrayVazio = [];
   let arrayinfo2 = []; 
   let info = {
     tech: arrayTec,
     nome: name
   }
-  for (let index = 0; index < arrayTec.length; index +=1) {
-    if (arrayTec[index] == "") {
-      arrayTec[index] = "Vazio!"
-    } 
-  }
-  arrayTec = arrayTec.sort();
-  for (key in arrayTec) {
-    info2[key] = {
-      tech: arrayTec[key],
-      name: name
-    }    
-    arrayinfo2[key] = info2[key]    
-  }
+  if (arrayTec.length == 0) {
+    return ("Vazio!")
+  } else {
+    arrayTec = arrayTec.sort();
+    for (key in arrayTec) {
+      info2[key] = {
+        tech: arrayTec[key],
+        name: name
+      }    
+      arrayinfo2[key] = info2[key]    
+    }
+    }     
   return (arrayinfo2)    
 }
 
-console.log(techList([" ", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
+console.log(techList(["React"], "Lucas"))
 
 
 // Desafio 11
