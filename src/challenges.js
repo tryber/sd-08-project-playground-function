@@ -173,8 +173,10 @@ function techList(tech, name) {
     return 'Vazio!'
   }
   tech.sort()
-  for (let index in tech) {
-    result.push({ tech: tech[index], name: name })
+  
+  for (let index = 0; index < tech.length; inder += 1) {
+    let ling = tech[index]
+    result.push({ tech: ling, name: name })
   }
   return result
 }
