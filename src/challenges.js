@@ -39,7 +39,7 @@ function concatName(array) {
 
 
 
-  return array[array.length - 1] + "," + array[0]
+  return array[array.length - 1] + "," + " " + array[0]
 }
 
 
@@ -127,17 +127,17 @@ function fizzBuzz(nmrs) {
 
     }
     else
-      console.log("bug")
+      console.log("bug!")
 
 
   }
 
-  return " "
+  
 }
 
 
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+fizzBuzz([2, 15, 7, 9, 45])
 
 // Desafio 9
 function encode(palavra) {
