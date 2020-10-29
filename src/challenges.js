@@ -2,14 +2,9 @@
 
 // Desafio 1
 function compareTrue(status1, status2) {
-  if(status1 === status2) {
-    return 'true';
+  return status1 && status2;
   }
-  else {
-    return 'false';
-  }
-}
-//console.log(compareTrue('false', 'false'))
+//console.log(compareTrue('true', 'true'));
 
 // Desafio 2
 function calcArea() {
