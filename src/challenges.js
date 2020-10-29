@@ -181,8 +181,19 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
-  // seu código aqui
+  let array = [lineA,lineB,lineC];
+  
+  for(let pos in array){
+    let aux = array;
+    let lado = aux.slice(pos,1)[0];
+    if(lado >= aux[0] + aux[1] || lado <= Math.abs(aux[0] - aux[1])){
+      return false;
+    } else {
+      return true;
+    }
+  }
 }
+
 
 // Desafio 13
 function hydrate() {
