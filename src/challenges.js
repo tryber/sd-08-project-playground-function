@@ -21,16 +21,25 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  // seu código aqui
   let pointsWins = wins * 3;
   let pointsTies = ties * 1;
-
   return pointsWins + pointsTies;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arraydeNumero) {
+  let maiorNumero = 0;
+  let contador = 0;
+  for (let index = 0; index < arraydeNumero.length; index += 1) {
+    if(arraydeNumero[index] > maiorNumero){
+      maiorNumero = arraydeNumero[index];
+      contador = 0;
+    }
+    if(arraydeNumero[index] == maiorNumero) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
