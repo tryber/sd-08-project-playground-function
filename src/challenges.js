@@ -36,22 +36,46 @@ function concatName(namesList) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = (wins * 3) + (ties);
+  let points = wins * 3 + ties;
   return points;
 }
-let teste = 4;
-let teste2 = 5;
-console.log(footballPoints(teste, teste2));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbersList) {
+  let highestNumber = 0;
+  let highestNumberCounter = 0;
+  for (index = 0; index < numbersList.length; index += 1) {
+    for (index2 = 0; index2 < numbersList.length; index2 += 1) {
+      if (index != index2) {
+        if (numbersList[index] > highestNumber) {
+          highestNumber = numbersList[index];
+        }
+      }
+    }
+  }
+  for (index = 0; index < numbersList.length; index += 1) {
+    if (highestNumber == numbersList[index]) {
+      highestNumberCounter += 1;
+    }
+  }
+  return highestNumberCounter;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 - mouse > cat2 - mouse) {
+    return "cat1";
+  } else if (cat1 - mouse < cat2 - mouse){
+    return "cat2";
+  } else if (cat1 == cat2) {
+    return "os gatos trombam e o rato foge";
+  }
 }
+
+let gato1 = 6;
+let gato2 = 6;
+let rato = 2;
+console.log(catAndMouse(rato, gato1, gato2));
 
 // Desafio 8
 function fizzBuzz() {
