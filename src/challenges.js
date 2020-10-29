@@ -107,50 +107,62 @@ function fizzBuzz(array) {
 // console.log(fizzBuzz(array))
 
 // Desafio 9
+// let string = 'a hello world'
 function encode(string) {
-  for (let index in string){
-    switch(string[index]){
+  let result = ""
+  for (let index = 0; index < string.length; index += 1) {
+    switch(string[index]) {
       case 'a':
-        string[index] = '1'
+        result += '1'
         break;
       case 'e':
-        string[index] = '2'
+        result += '2'
         break;
       case 'i':
-        string[index] = '3'
+        result += '3'
         break;
       case 'o':
-        string[index] = '4'
+        result += '4'
         break;
       case 'u':
-        string[index] = '5'
+        result += '5'
         break;
+      default:
+        result += string[index]
     }
   }
-  return string
+  return result
 }
+
+// console.log(encode(string))
+let string = '1 h2ll4 w4rld'
 function decode() {
-  for (let index in string){
-    switch(string[index]){
+  let result = ""
+  for (let index = 0; index < string.length; index += 1) {
+    switch(string[index]) {
       case '1':
-        string[index] = 'a'
+        result += 'a'
         break;
       case '2':
-        string[index] = 'b'
+        result += 'e'
         break;
       case '3':
-        string[index] = 'c'
+        result += 'i'
         break;
       case '4':
-        string[index] = 'd'
+        result += 'o'
         break;
       case '5':
-        string[index] = 'e'
+        result += 'u'
         break;
+      default:
+        result += string[index]
     }
   }
-  return string
+  return result
 }
+
+console.log(decode(string))
 
 // Desafio 10
 function techList() {
