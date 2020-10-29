@@ -15,7 +15,7 @@ let string = 'go Trybe';
 
 function splitSentence(string) {
 
-  let splitted = string.split(/\s+/); //expressão regular que verifica espaços
+  let splitted = string.split(/\s+/); //expressão regular que verifica espaços https://pt.stackoverflow.com/questions/47861/como-dividir-uma-string-em-array-no-javascript
   return splitted;
 }
 
