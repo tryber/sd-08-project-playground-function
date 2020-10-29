@@ -94,9 +94,19 @@ function catAndMouse(cat1,cat2,mouse) {
 } catAndMouse(10,15,5)
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(input) {
+  for (let i = 0; i < input.length; i+=1){  
+    if (input[i] % 3 == 0 && input[i] % 5 == 0){
+      console.log("fizzBuzz")
+    } else if (input[i] % 3 == 0) {
+      console.log("fizz")
+    } else if (input[i] % 5 == 0) {
+      console.log("buzz")
+    } else {
+      console.log("bug!")
+    }   
+  }
+} fizzBuzz([2, 15, 7, 9, 45])
 
 // Desafio 9
 function encode() {
