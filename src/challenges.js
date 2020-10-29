@@ -18,7 +18,7 @@ function concatName(arrNames) {
   let lastPosition = arrNames.length -1;
 
   let firstName = arrNames[0];
-  let lastName = arrnames[lastPosition];
+  let lastName = arrNames[lastPosition];
   return lastName + ", " + firstName;
   
 }
