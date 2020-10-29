@@ -16,8 +16,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+// Precisei pesquisar na internet, fonte: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array.
+function splitSentence(entrada) {
+ let retorno = entrada.split(" ");
+ return retorno;
 }
 
 // Desafio 4
