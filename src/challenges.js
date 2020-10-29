@@ -71,7 +71,7 @@ function fizzBuzz(numbersArray) {
   let index;
   let fizzBuzzArray = [];
 
-  for (index; index < numbersArray.length; index++) {
+  for (index = 0; index < numbersArray.length; index++) {
     if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 === 0) {
       fizzBuzzArray.push('fizzBuzz');
     } else if (numbersArray[index] % 3 === 0) {
