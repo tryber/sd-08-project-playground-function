@@ -77,13 +77,25 @@ function fizzBuzzPusher(n, array) {
 function fizzBuzz(array) {
   let newArray = [];
 
-  for (let i = 0; i < array.length; i ++) {
+  for (let i = 0; i < array.length; i += 1) {
     fizzBuzzPusher(array[i], newArray)
   }
   return newArray;
 }
 
-// Desafio 9
+// Desafio 9 - Fontes de estudo:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+// Ideia de refatoramento para usar uma função única aplicável aos dois casos do grande Fernando Soares, instrutor da Trybe.
+function generalEncrypter(str, arrayToBeReplaced, arrayToReplace) {
+  let encryptedStr = str.replace(new RegExp(arrayToBeReplaced[0], 'g'), arrayToReplace[0]);
+  encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[1], 'g'), arrayToReplace[1]);
+  encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[2], 'g'), arrayToReplace[2]);
+  encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[3], 'g'), arrayToReplace[3]);
+  encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[4], 'g'), arrayToReplace[4]);
+  return encryptedStr;
+}
+
 let vogals = ['a', 'e', 'i', 'o', 'u'];
 let numerals = ['1', '2', '3', '4', '5'];
 
@@ -92,14 +104,6 @@ function encode(str) {
 }
 function decode(str) {
   return generalEncrypter(str, numerals, vogals);
-}
-function generalEncrypter(str, arrayToBeReplaced, arrayToReplace) {
-  let encryptedStr = str.replace(new RegExp(arrayToBeReplaced[0], 'g'), arrayToReplace[0]);
-  encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[1], 'g'), arrayToReplace[1]);
-  encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[2], 'g'), arrayToReplace[2]);
-  encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[3], 'g'), arrayToReplace[3]);
-  encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[4], 'g'), arrayToReplace[4]);
-  return encryptedStr;
 }
 
 console.log(encode('hello, my name is silvio'));
