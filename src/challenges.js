@@ -150,16 +150,16 @@ function decode(str) {
 }
 
 // Desafio 10
-function techList(techArray, name) {
-  techArray.sort();
+function techList(tech, name) {
+  tech.sort();
   
   let objReturn = [];
   
-  for(i = 0; i < techArray.length; i++){
+  for(i = 0; i < tech.length; i++){
       objReturn.push({
-         tech: techArray[i],
+         tech: tech[i],
            name: name
-      })
+    })
   }
   
   return objReturn;
