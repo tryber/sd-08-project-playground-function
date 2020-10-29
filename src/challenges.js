@@ -17,24 +17,46 @@ function calcArea(base, height) {
   let calculo = (base * height) / 2
 
   return calculo
-
-
 }
 console.log(calcArea(20, 4))
 
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+// Desafio 3 split separa as palavras a partir do espaco " " ou virgula " ," //retira e divide em arrays
+function splitSentence(string) {
+  
+  let spliting = string.split(' ') ;
+  
+  
+  
+
+
+  return spliting
+  
+  
+}
+console.log(splitSentence("oi meu nome e mateus"))
+
+
+
+// Desafio 4  s
+function concatName(array) {
+
+
+
+
+  
+  return array[0]  + "," + array[array.length -1] 
 }
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
-}
+ 
+
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo','ZINZINZIN']))
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+
+
+ 
 }
 
 // Desafio 6
