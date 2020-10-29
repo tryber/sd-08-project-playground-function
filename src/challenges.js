@@ -118,13 +118,14 @@ function decode(word) {
 
 // Desafio 10
 function techList(techs, name) {
+  techs.sort();
   if (techs) {
     let listOfTechs = [];
     for (tech of techs) {
       listOfTechs.push({
         tech,
         name
-      })
+      });
     }
     return listOfTechs;
   } else {
