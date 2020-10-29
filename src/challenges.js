@@ -1,10 +1,7 @@
 // Desafio 1
 function compareTrue(a, b)
 {
-  if(a === true && b === true)
-    return true;
-  else
-    return false;
+  return num1 && num2;
 }
 
 
@@ -129,14 +126,58 @@ function decode(input)
 
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs, name)
+{
+  if(techs.length == 0)
+    return "Vazio!";
+
+  let array = [];
+  techs.sort();
+  for(let i = 0; i < techs.length; i +=1)
+  {
+    let tech = techs[i];
+    array[i] = {tech, name};
+  }
+  console.log(array);
 }
 
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
+
+
+
+
+
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arr)
+{
+  if(arr.length != 11)
+    return "Array com tamanho incorreto.";
+
+  let count = 1;
+
+  for(let i = 0; i < arr.length; i += 1)
+  {
+    if(arr[i] < 0 || arr[i] > 9)
+      return "não é possível gerar um número de telefone com esses valores";
+
+      for(let j = i + 1; j < arr.length; j += 1)
+      {
+        if(arr[i] == arr[j])
+          count += 1;
+      }
+    if(count >= 3)
+      return "não é possível gerar um número de telefone com esses valores";
+    else
+      count = 1;;
+  }
+
+  let phoneNumber = "(" + arr[0] + arr[1] + ") " + arr[2] + arr[3] + arr[4] + arr[5] + arr[6] + "-" + arr[7] + arr[8] + arr[9] + arr[10];
+
+
+  return phoneNumber;
 }
+
+
 
 // Desafio 12
 function triangleCheck() {
