@@ -1,15 +1,11 @@
 // Guilherme Ribeiro
 // Desafio 1
-function compareTrue() {
+function compareTrue(a,b) {
   // seu código aqui
-  let a = true;
-  let b = true;
-
-  if(a && b){
-    console.log('true');
-  }else{
-    console.log('false');
+  if (a && b == true) {
+    return true;
   }
+  return false;
 }
 
 // Desafio 2
