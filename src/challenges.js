@@ -29,20 +29,36 @@ function splitSentence(array) {
 // Desafio 4
 function concatName(array) {
   
-  let nome = [array[array.length-1], array[0]];
+  let nome = array[array.length-1] + ", " + array[0];
   return nome;
 }
-
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  
+  let points = (wins * 3) + ties;
+  return points;
 }
 
+
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let count =0;
+
+  let maior = null;
+  for(let i in array){
+    if( array[i] > maior){
+      maior = array[i];
+      count++;
+    }else if(array[i] == maior){
+      count++;
+    }
+  }
+
+  return count;
 }
+
 
 // Desafio 7
 function catAndMouse() {
