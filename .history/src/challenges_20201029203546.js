@@ -17,7 +17,8 @@ function splitSentence(text = "") {
 // Desafio 4
 function concatName(arr = []) {
   let result = arr.toString();
-  result = result.split(",").join(", ").trim();
+  result = result.split(",").join(", ");
+
   return result;
 }
 
@@ -36,13 +37,9 @@ function highestCount(arr = []) {
 
 // Desafio 7
 function catAndMouse(mouse = 0, cat1 = 0, cat2 = 0) {
-  let distRelative = {
-    cat1: Math.abs(cat1 - mouse),
-    cat2: Math.abs(cat2 - mouse),
-  };
-  if (distRelative.cat1 < distRelative.cat2) return "cat1";
-  if (distRelative.cat2 < distRelative.cat1) return "cat2";
-  return "os gatos trombam e o rato foge";
+  if (cat1 == cat2) return "os gatos trombam e o rato foge";
+  if (cat1 < cat2) return "cat1";
+  if (cat2 < cat1) return "cat2";
 }
 
 // Desafio 8
@@ -90,7 +87,7 @@ function decode(text = "") {
 function techList(techList = [], name = "") {
   if (techList.length === 0) return "Vazio!";
   let result = [];
-  techList.sort().forEach((tech) => {
+  techList.forEach((tech) => {
     result.push({ tech: tech, name: name });
   });
   return result;
@@ -109,7 +106,7 @@ function generatePhoneNumber(arr = []) {
     if (arr.filter((x) => x == arr[i]).length > 3) return errorMsg;
   }
   // Format Telefone
-  return `(${arr[0]}${arr[1]}) ${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`;
+  return `(${arr[0]}${arr[1]}) ${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`;
 }
 
 // Desafio 12

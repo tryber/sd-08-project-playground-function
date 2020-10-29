@@ -36,13 +36,22 @@ function highestCount(arr = []) {
 
 // Desafio 7
 function catAndMouse(mouse = 0, cat1 = 0, cat2 = 0) {
-  let distRelative = {
+  let aux = {
+    mouse: mouse,
+    cat1: cat1,
+    cat2: cat2,
+  };
+  let dist = {
+    mouse: 0,
     cat1: Math.abs(cat1 - mouse),
     cat2: Math.abs(cat2 - mouse),
   };
-  if (distRelative.cat1 < distRelative.cat2) return "cat1";
-  if (distRelative.cat2 < distRelative.cat1) return "cat2";
-  return "os gatos trombam e o rato foge";
+
+  console.log(aux);
+  console.log(dist);
+  // if (cat1 == cat2) return "os gatos trombam e o rato foge";
+  // if (cat1 < cat2) return "cat1";
+  // if (cat2 < cat1) return "cat2";
 }
 
 // Desafio 8
