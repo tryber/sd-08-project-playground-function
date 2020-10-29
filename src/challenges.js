@@ -66,15 +66,15 @@ function fizzBuzz(array) {
   list = [];
   for (i in array){
       if (array[i]%3  == 0 && array[i]%5 == 0){
-          list.push('fizzBuzz');
+          list.push("fizzBuzz");
       } else if (array[i]%3 ==0 || array[i]%5 == 0) {
           if (i%3 ==0){
-              list.push('fizz');
+              list.push("fizz");
           } else {
-            list.push('buzz');
+            list.push("buzz");
           }     
       } else {
-        list.push('bug!');
+        list.push("bug!");
       }     
   }
   return list;
