@@ -29,7 +29,7 @@ function highestCount(array) {
   array.sort(function(a, b) {return a-b})
   let cont = 0;
 
-  for (let i = array.length - 1; i > 0; i -= 1) {
+  for (let i = array.length - 1; i >= 0; i -= 1) {
     if (i == array.length - 1) {
       cont += 1;
     } else if (array[i] == array[i+1]) {
@@ -42,21 +42,78 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let d1 = Math.abs(mouse - cat1);
+  let d2 = Math.abs(mouse - cat2);
+
+  if (d1 == d2) {
+    return "os gatos trombam e o rato foge";
+  } else {
+    return d1 > d2 ? "cat2" : "cat1";
+  };
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let saida = [];
+
+  for (let i in array) {
+    let x = array[i]
+    if (x % 3 == 0 && x % 5 == 0) {
+      saida.push("fizzBuzz");
+    } else if (x % 3 == 0) {
+      saida.push("fizz");
+    } else if (x % 5 == 0) {
+      saida.push("buzz");
+    } else {
+      saida.push("bug!");
+    };
+  };
+  return saida;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let dicionario = {
+    "a": 1,
+    "e": 2,
+    "i": 3,
+    "o": 4,
+    "u": 5
+  };
+
+  let saida = "";
+
+  for (let i in string) {
+    if (dicionario[string[i]] == undefined) {
+      saida += string[i];
+    } else {
+      saida += dicionario[string[i]];
+    };
+  };
+  return saida;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let dicionario = {
+    "1": "a",
+    "2": "e",
+    "3": "i",
+    "4": "o",
+    "5": "u"
+  };
+
+  let saida = "";
+
+  for (let i in string) {
+    let x = string[i];
+    if (dicionario[x] == undefined) {
+      saida += x;
+    } else {
+      saida += dicionario[x];
+    };
+  ;}
+  return saida;
 }
 
 // Desafio 10
