@@ -83,3 +83,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+.
