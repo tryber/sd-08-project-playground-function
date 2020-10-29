@@ -1,5 +1,4 @@
 //1 - Usando o operador &&
-
 function compareTrue(bool1,bool2){
     let resultado;
     if(bool1 === true && bool2 === true){
@@ -7,17 +6,26 @@ function compareTrue(bool1,bool2){
     }else{
         resultado = false;
     }
-    console.log resultado;
+    return resultado;
 }
-compareTrue(true, true)
+console.log(compareTrue(true, true))
 
 
 
 //2 - Área do triângulo
+function calcArea(base, height){
+    return (base * height) / 2;
+}
+ console.log(calcArea(2,3))
 
-function calcArea(base, height)
+
+//3 3 - Dividindo a frase
+function splitSentence(string){
+    for()
+    
 
 
+}
 
 
 

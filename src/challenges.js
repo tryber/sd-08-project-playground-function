@@ -1,17 +1,29 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(bool1,bool2) {
+  let resultado;
+  if(bool1 === true && bool2 === true){
+    resultado = true; 
+  }else{
+    resultado = false;
+  }
+  return resultado;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+//Bibliografia: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array. 
+https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array. 
+
+function splitSentence(string) {
+  let dividido=[];
+  dividido = string.split(" ");
+  return dividido
 }
+console.log(splitSentence("ola povo"))
 
 // Desafio 4
 function concatName() {
