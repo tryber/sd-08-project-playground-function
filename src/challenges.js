@@ -113,14 +113,35 @@ function encode(string) {
     } else {
       novaString += string[index];
     }
-    
   }
   return novaString;
 }
 console.log(encode("Mario"));
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let novaString = "";
+  for (index in string){
+    if (string[index] === '1'){
+      novaString += 'a';
+    }
+    else if (string[index] === '2'){
+      novaString += 'e';
+    }
+    else if (string[index] === '3'){
+      novaString += 'i';
+    }
+    else if (string[index] === '4'){
+      novaString += 'o';
+    }
+    else if (string[index] === '5'){
+      novaString += 'u';
+    } else {
+      novaString += string[index];
+    }
+  }
+  return novaString;
 }
+console.log(decode('M1r34'))
+
 
 // Desafio 10
 function techList() {
