@@ -87,11 +87,11 @@ let vogaisEncode = {
 };
 
 let vogaisDecode = {
-  '1': a,
-  '2': e,
-  '3': i,
-  '4': o,
-  '5': u
+  '1': 'a',
+  '2': 'e',
+  '3': 'i',
+  '4': 'o',
+  '5': 'u'
 };
 
 function generalEncode(word, dictionary) {
