@@ -138,10 +138,10 @@ function techList(techs, name)
     let tech = techs[i];
     array[i] = {tech, name};
   }
-  console.log(array);
+  return array;
 }
 
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
+
 
 
 
