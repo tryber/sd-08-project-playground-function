@@ -1,6 +1,5 @@
-function calcArea(base,height) {
- return base*height/2;
-}
-console.log(calcArea(2,3));
-console.log(calcArea(5,4));
-console.log(calcArea(6,3));
+function splitSentence(string) {
+    return string.split(" ");
+  }
+  let oi = "oi eu sou o goku"
+  console.log(splitSentence("oi eu sou o goku"))
