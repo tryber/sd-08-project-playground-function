@@ -15,10 +15,10 @@ function calcArea(base, heigth) {
 function splitSentence(sentence) {
   let arrayString = [];
   let string = '';
-  for (index in sentence){
+  for (let index in sentence){
     if (sentence[index] !== ' '){
       string += sentence[index];
-    }else {
+    } else {
       arrayString.push(string);
       string = '';
     }
@@ -26,6 +26,7 @@ function splitSentence(sentence) {
   arrayString.push(string)
   return arrayString
 }
+console.log(splitSentence('Go Trybe'))
 
 // Desafio 4
 function concatName(arrayName) {
@@ -40,8 +41,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maior = array[0];
+  let count = 0;
+  for (let index in array){
+    if (array[index] > maior){
+      maior = array[index];
+    }
+  }
+  for (let indice in array){
+    if (array[indice] === maior){
+      count++
+    }
+  }
+  return count;
 }
 
 // Desafio 7
