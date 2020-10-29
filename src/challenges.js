@@ -6,6 +6,7 @@ function compareTrue(valor1,valor2) {
   } else {
     return false;
   }  
+
 }
 
 // Desafio 2
@@ -23,14 +24,16 @@ function splitSentence() {
 function concatName(array) {
   // seu código aqui
   let primeiroNome = array[0];
-  let ultimoNome = array[-1];
+  let ultimoNome = array.length -1;
   return ultimoNome + ", " + primeiroNome; 
 }
+
 
 // Desafio 5
 function footballPoints(wins,ties) {
   // seu código aqui
-  result (wins*3)+ties;
+  let resultado = (wins*3)+ties;
+  return resultado
 }
 
 // Desafio 6
