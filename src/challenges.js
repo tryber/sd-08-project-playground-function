@@ -95,11 +95,46 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let enCode = string
+  for(let i in enCode){
+      if(string[i] == "a"){
+          enCode = enCode.replace("a","1")
+      }
+      else if(string[i] == "e"){
+          enCode = enCode.replace("e","2")
+      }
+      else if(string[i] == "i"){
+          enCode = enCode.replace("i","3")
+      }
+      else if(string[i] == "o"){
+          enCode = enCode.replace("o","4")
+      }
+      else if(string[i] == "u"){
+          enCode = enCode.replace("u","5")
+      }
+  } return enCode;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let enCode = string
+  for(let i in enCode){
+      if(string[i] == "1"){
+          enCode = enCode.replace("1","a")
+      }
+      else if(string[i] == "2"){
+          enCode = enCode.replace("2","e")
+      }
+      else if(string[i] == "3"){
+          enCode = enCode.replace("3","i")
+      }
+      else if(string[i] == "4"){
+          enCode = enCode.replace("4","o")
+      }
+      else if(string[i] == "5"){
+          enCode = enCode.replace("5","u")
+      }
+  } return enCode;
 }
 
 // Desafio 10
