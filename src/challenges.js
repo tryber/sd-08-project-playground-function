@@ -201,19 +201,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate(array) {
+function hydrate(string) {
   
-  let count = 0;
+  let count =0;
+  let array = (string.match(/\d+/g).map(Number));
   for(let key in array){
-    count += parseInt(array[key].match(/\d+/)[0]);
+    count += parseInt(array[key]);
   }
+
   if(count == 1){
     return(`${count} copo de água`);
   }else{
     return(`${count} copos de água`);
   }
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
