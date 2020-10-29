@@ -40,6 +40,7 @@ function footballPoints(wins,ties) {
 function highestCount(array) {
   // seu código aqui
   let numero = 0;
+  let resultado = 0;
   for (let index = 0; index < array.length; index++) {
     if (numero < array[index]) {
       numero = array[index];
