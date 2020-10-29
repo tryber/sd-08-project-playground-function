@@ -88,6 +88,8 @@ function encode(word) {
       break;
     }
   }
+  let newWord = wordString.join('');
+  return newWord;
 }
 function decode(word) {
   wordString = word.split('');
@@ -117,7 +119,7 @@ function decode(word) {
 // Desafio 10
 function techList(tecnologias, name) {
   if (tecnologias !== []){
-    return "Vazio!"
+    return 'Vazio!'
   } else {
     let tecList = [];
     let tecnologiasEmOrdem = tecnologias.sort();
