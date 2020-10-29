@@ -10,12 +10,12 @@ function calcArea(base, height ) {
 
 // Desafio 3
 function splitSentence(word) {
-  return word.split(" ");
+  return word.split(' ');
 }
 
 // Desafio 4
 function concatName(list) {
-  return (list[0] + ", " + list[list.length-1]);
+  return (list[0] + ', ' + list[list.length-1]);
 }
 
 // Desafio 5
@@ -45,33 +45,73 @@ function catAndMouse(mouse, cat1, cat2) {
       return cat2
     }
   } else {
-    return "os gatos trombam e o rato foge"
+    return 'os gatos trombam e o rato foge'
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   let fizzBuzzList = [];
   for(i in numbers){
     if (numbers[i] %3 === 0 && numbers[i] % 5 !== 0){
-      fizzBuzzList.push("fizz");
+      fizzBuzzList.push('fizz');
     }else if (numbers[i] %3 !== 0 && numbers[i] % 5 === 0){
-      fizzBuzzList.push("buzz");
+      fizzBuzzList.push('buzz');
     }else if (numbers[i] %3 === 0 && numbers[i] % 5 === 0){
-      fizzBuzzList.push("fizzBuzz");
+      fizzBuzzList.push('fizzBuzz');
     } else {
-      fizzBuzzList.push("bug!")
+      fizzBuzzList.push('bug!')
     }
   }
   return fizzBuzzList
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word) {
+  wordString = word.split("");
+  for(let i = 0; i < wordString.length; i++){
+    switch (wordString[i]) {
+      case "a":
+      wordString[i] = "1";
+      break;
+      case "e":
+      wordString[i] = "2";
+      break;
+      case "i":
+      wordString[i] = "3";
+      break;
+      case "o":
+      wordString[i] = "4";
+      break;
+      case "u":
+      wordString[i] = "5";
+      break;
+    }
+  }
 }
-function decode() {
-  // seu código aqui
+function decode(word) {
+  wordString = word.split("");
+  for(let i = 0; i < wordString.length; i++){
+    switch (wordString[i]) {
+      case "1":
+      wordString[i] = "a";
+      break;
+      case "2":
+      wordString[i] = "e";
+      break;
+      case "3":
+      wordString[i] = "i";
+      break;
+      case "4":
+      wordString[i] = "o";
+      break;
+      case "5":
+      wordString[i] = "u";
+      break;
+    }
+  }
+  let newWord = wordString.join("");
+  return newWord;
 }
 
 // Desafio 10
