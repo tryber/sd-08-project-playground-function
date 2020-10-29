@@ -25,10 +25,15 @@ function splitSentence(string ) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(string) {
+  let primeiroB = string[0]; 
+  let ultimoA  =  (string.reverse());
+  let ultimoB = ultimoA[0];
+
+  return ultimoB + "," + " " + primeiroB
 }
 
+console.log(concatName( ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], ))
 // Desafio 5
 function footballPoints() {
   // seu código aqui
