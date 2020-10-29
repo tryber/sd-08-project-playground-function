@@ -22,6 +22,9 @@ function splitSentence(frase) {
   resultado = frase.split(" "); 
   return resultado;
 }
+//let teste = "go trybe";
+//console.log(splitSentence(teste));
+
 
 // Desafio 4
 function concatName() {
