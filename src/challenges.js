@@ -67,10 +67,31 @@ function catAndMouse() {
   // seu código aqui
 }
 
+
+
+
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumeros) {
+  for (let numeros=0; numeros<arrayNumeros.length; numeros++){
+    if (arrayNumeros[numeros] % 3){
+      return ("fizz");
+    }else if (arrayNumeros[numeros] % 5){
+      return ("buzz");
+    }else if (arrayNumeros[numeros] % 3 && arrayNumeros[numeros] % 5){
+      return ("fizzBuzz");
+    }else {
+      return ("bug!");
+    }  
+  }  
 }
+
+fizzBuzz([2,15,7,9,45]);
+
+
+
+
+
 
 // Desafio 9
 function encode() {
