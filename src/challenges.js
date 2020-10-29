@@ -38,9 +38,12 @@ console.log(concatName(['douglas', 'Ferreira', 'Pinto']))
 
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
+  return pontos = (wins * 3) + (ties *1)
   // seu código aqui
+
 }
+console.log(footballPoints(5,2))
 
 // Desafio 6
 function highestCount() {
