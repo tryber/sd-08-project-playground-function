@@ -153,40 +153,42 @@ function techList(tech, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  // seu código aqui
   let telefone = '';
-  if(array.length > 11 || array.length < 11 ) {
-      return 'Array com tamanho incorreto.';
-  }
-  for(let key in array){
-      let sum = 0;
-      if(array[key] < 0 || array[key] > 9){
-          return 'não é possível gerar um número de telefone com esses valores';
-      }
-      for(i=0;i<array.length;i++){
-          if(array[key] == array[i]){
+  if (array.length === 11) {
+
+      for (let i = 0; i < array.length; i += 1) {
+          let sum = 0;
+          if (array[i] < 0 || array[i] > 9) {
+            return 'não é possível gerar um número de telefone com esses valores';
+          }
+          for (let j = 0; j < array.length; j += 1) {
+            if (array[i] === array[j]){
               sum += 1;
+              if (sum >= 3){
+                return 'não é possível gerar um número de telefone com esses valores';
+              }
+            }
           }
       }
-      if(sum >= 3){
-          return 'não é possível gerar um número de telefone com esses valores';
-          console.log(sum);
-      }
-      if(key == 0){
-          telefone += '('+array[0]
-      }
-      if(key == 1){
-          telefone += array[1]+')'
-      }
-      if(key == 7){
-          telefone += '-'+array[7];
-      }
-      if(key == 2 || key == 3  || key == 4  || key == 5 || key == 6 || key == 8 || key == 9  || key == 10){
-          telefone += array[key];
-      }
-  }
 
-  return telefone
+      for(let i in array){
+          if(i == 0){
+              telefone += '('+array[0]
+          }
+          if(i == 1){
+              telefone += array[1]+')'
+          }
+          if(i == 7){
+              telefone += '-'+array[7];
+          }
+          if(i == 2 || i == 3  || i == 4  || i == 5 || i == 6 || i == 8 || i == 9  || i == 10){
+              telefone += array[i];
+          }
+      }
+
+      return telefone;
+  }
+  return 'Array com tamanho incorreto.';
 }
 
 // Desafio 12
