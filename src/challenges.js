@@ -10,19 +10,27 @@ else { compareTrue=false
 }
 
 // Desafio 2
-function calcArea(base, altura) {
-  let areaTriangulo = (base*altura)/2
+function calcArea(base, height) {
+    let areaTriangulo = (base*height)/2
+    return areaTriangulo
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string, array) {
+  array =[]
+  
 }
-
+let nomes = ["João","paulo", "Pedro", "josé"]
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(lista) {
+  let ordemInversa = []
+  for (var index = lista.length -1;index<=0;index--){
+    ordemInversa.push+= lista[index];
+    return ordemInversa;
+  }
+    
 }
+console.log(concatName(nomes));
 
 // Desafio 5
 function footballPoints() {
