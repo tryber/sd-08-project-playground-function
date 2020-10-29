@@ -16,16 +16,16 @@ function calcArea(base, heigth) {
 function splitSentence(frase) {
   return frase.split (" ");
 }
-console.log (splitSentence("go Trybe vqv"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(listaNomes) {
+  let tamanho = listaNomes.length;
+  return listaNomes[tamanho-1] + ", " + listaNomes[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return ((wins*3)+(ties*1));
 }
 
 // Desafio 6
