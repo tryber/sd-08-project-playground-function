@@ -17,13 +17,16 @@ calcArea(50, 10)
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+    
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(nomes) {
+ let lastName = nomes[nomes.length - 1];
+ let resultado = lastName + ',' + ' ' + nomes[0];
+  return resultado;
+ }
+concatName(['Yago', 'Rocha']);
 
 // Desafio 5
 function footballPoints() {
