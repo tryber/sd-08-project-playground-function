@@ -123,7 +123,10 @@ function techList(array, name) {
   let sortArray = array.sort();
   let newArray = [];
   for (let key in array) {
-    let insert = [array[key], name]
+    let insert = {
+      tech: array[key], 
+      name: name
+    }
     newArray.push(insert)
   }
 
