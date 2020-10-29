@@ -18,18 +18,18 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  return phrase.split(" ");
+  return phrase.split(' ');
 }
-// console.log(splitSentence("Rodrigo de Castro"))
+// console.log(splitSentence('Rodrigo de Castro'))
 
 // Desafio 4
 function concatName(arrayStr) {
   let first = arrayStr[0];
   let last = arrayStr[arrayStr.length - 1];
-  let name = last + ", " + first;
+  let name = last + ', ' + first;
   return name;
 }
-// console.log(concatName(["Rodrigo", "de Castro", "Bandeira", "Costa"]));
+// console.log(concatName(['Rodrigo', 'de Castro', 'Bandeira', 'Costa']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -41,7 +41,7 @@ function footballPoints(wins, ties) {
 function highestCount(arrayNum) {
   let maxNum = Math.max(...arrayNum);
   let key;
-  let count =0;
+  let count = 0;
   for (key in arrayNum) {
     if (maxNum === arrayNum[key]) {
       count += 1;
@@ -57,11 +57,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist2 = mouse - cat2;
   let result;
   if ((Math.abs(dist1)) < (Math.abs(dist2))) {
-    result = "cat1";
+    result = 'cat1';
   } else if ((Math.abs(dist1)) > (Math.abs(dist2))) {
-    result = "cat2";
+    result = 'cat2';
   } else {
-    result = "os gatos trombam e o rato foge";
+    result = 'os gatos trombam e o rato foge';
   }
   return result;
 }
@@ -69,28 +69,27 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizz(Num) {
-    if ((Num % 3) === 0) {
-      return true;
-    }
+  if ((Num % 3) === 0) {
+    return true;
+  }
 }
 function buzz(Num) {
   if ((Num % 5) === 0) {
     return true;
   }
 }
-
 function fizzBuzz(arrayNum) {
   let result = [];
   let key;
-  for (key in arrayNum) {
+  for (key = 0; key < arrayNum.length; key += 1) {
     if (fizz(arrayNum[key]) && buzz(arrayNum[key])) {
-      result.push("fizzBuzz");
+      result.push('fizzBuzz');
     } else if (fizz(arrayNum[key]) && !buzz(arrayNum[key])) {
-      result.push("fizz");
+      result.push('fizz');
     } else if (!fizz(arrayNum[key]) && buzz(arrayNum[key])) {
-      result.push("buzz");
+      result.push('buzz');
     } else {
-      result.push("bug!");
+      result.push('bug!');
     }
   }
   return result;
