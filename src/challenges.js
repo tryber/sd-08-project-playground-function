@@ -117,25 +117,68 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let saida = [];
+
+  if (array.length == 0) {
+    return "Vazio!"
+  }
+
+  for (let i in array) {
+    let obj = {};
+    obj.tech = array[i];
+    obj.name = name;
+    saida.push(obj);
+  };
+
+  return saida;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  if (array.length != 11) {
+    return "Array com tamanho incorreto.";
+  }
+
+  let saida = "(";
+
+  for (let i in array) {
+    if (i == 2) {
+      saida += ") ";
+    } else if (i == 7) {
+      saida += "-";
+    }
+    saida += array[i];
+  };
+  return saida;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > lineB + lineC || lineA < Math.abs(lineB - lineC)) {
+    return false;
+  } else if (lineB > lineA + lineC || lineB < Math.abs(lineA - lineC)) {
+    return false;
+  } else if (lineC > lineA + lineB || lineC < Math.abs(lineA - lineB)) {
+    return false;
+  } else {
+    return true;
+  };
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(string) {
+  let dados = string.split(" ").sort();
+  let saida = 0;
 
+  for (let i in dados) {
+    if (!isNaN(Number(dados[i]))) {
+      saida += Number(dados[i])
+    }
+  };
+
+  return saida;
+}
 
 module.exports = {
   calcArea,
