@@ -102,11 +102,12 @@ const vowels = {
 function encode(str) {
   let result = '';
   for (let i = 0, len = str.length; i < len; i++) {
-    const letter = str[i].toLowerCase();
-    if (!vowels[letter]) {
+    const letter = str[i];
+    const index = letter.toLowerCase();
+    if (!vowels[index]) {
       result += letter;
     } else {
-      result += vowels[letter];
+      result += vowels[index];
     }
   }
   return result;
@@ -118,7 +119,7 @@ function decode(str) {
     let code = str[i];
     let letter = null;
     for (let cur in vowels) {
-      if (vowels[cur.toLowerCase()] == code) {
+      if (vowels[cur] == code) {
         letter = cur;
         break;
       }
