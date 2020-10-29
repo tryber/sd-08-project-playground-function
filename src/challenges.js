@@ -23,7 +23,7 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(string) {
   // seu código aqui
   let first = string[0];
   let last = string[string.length - 1];
