@@ -1,13 +1,19 @@
 /*Project Playground Functions 
-Gabriel Lennox */
+Gabriel Lennox*/
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(bool1, bool2) {
+  let comparative
+  if (bool1 && bool2 === true) {
+    comparative = true; 
+  } else {
+    comparative = false;
+  }
+  return comparative;
 }
 
 // Desafio 2
 function calcArea() {
-  // seu código aqui
+  
 }
 
 // Desafio 3
