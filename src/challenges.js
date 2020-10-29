@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(var1, var2) {
-  if(var1 == true && var2 == true){
+  if (var1 === true && var2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -18,13 +17,13 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arr) {
+  return arr[arr.length -1] + ", " + arr[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
