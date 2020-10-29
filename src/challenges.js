@@ -29,7 +29,7 @@ function splitSentence(input) {
   }
   let novoArray = frase.split(" ")        
   console.log(novoArray)
-  return novoArray      
+  return novoArray     
       }   
 splitSentence("go Trybe")
 
