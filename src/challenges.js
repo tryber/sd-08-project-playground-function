@@ -84,11 +84,59 @@ function fizzBuzz(a) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(a) {
+  let base = a.split('');
+  let resp = [];
+
+  for (let i = 0; i < base.length; i += 1) {
+    if (base[i] === 'a') {
+      resp.push('1');
+    }
+    else if (base[i] === 'e') {
+      resp.push('2');
+    }
+    else if (base[i] === 'i') {
+      resp.push('3');
+    }
+    else if (base[i] === 'o') {
+      resp.push('4');
+    }
+    else if (base[i] === 'u') {
+      resp.push('5');
+    }
+    else {
+      resp.push(base[i]);
+    }
+  }
+
+  return resp.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(a) {
+  let base = a.split('');
+  let resp = [];
+
+  for (let i = 0; i < base.length; i += 1) {
+    if (base[i] === '1') {
+      resp.push('a');
+    }
+    else if (base[i] === '2') {
+      resp.push('e');
+    }
+    else if (base[i] === '3') {
+      resp.push('i');
+    }
+    else if (base[i] === '4') {
+      resp.push('o');
+    }
+    else if (base[i] === '5') {
+      resp.push('u');
+    }
+    else {
+      resp.push(base[i]);
+    }
+  }
+
+  return resp.join('');
 }
 
 // Desafio 10
@@ -140,3 +188,5 @@ console.log(catAndMouse(0, 2, 3));
 console.log(catAndMouse(0, -4, 3));
 console.log(catAndMouse(0, -3, 3));
 console.log(fizzBuzz([2, 3, 15, 5, 12, 11]));
+console.log(encode('Hi, guys, whats up?'));
+console.log(decode(encode('Hi, guys, whats up?')));
