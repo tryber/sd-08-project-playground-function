@@ -185,7 +185,7 @@ function triangleCheck(lineA,lineB,lineC) {
   
   for(let pos in array){
     let aux = array;
-    let lado = aux.slice(pos,1)[0];
+    let lado = aux.splice(pos,1)[0];
     if(lado >= aux[0] + aux[1] || lado <= Math.abs(aux[0] - aux[1])){
       return false;
     }
