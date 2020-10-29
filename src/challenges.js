@@ -15,7 +15,7 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arrNames) {
-  let lastPosition = arrNames.length() -1;
+  let lastPosition = arrNames.length -1;
 
   let firstName = arrNames[0];
   let lastName = arrnames[lastPosition];
