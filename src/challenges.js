@@ -1,27 +1,61 @@
 // Desafio 1
 function compareTrue(bol1, bol2) {
-  let output = false;
-  if (bol1 == true && bol2 == true) {
-    output = true;
+  if (typeof bol1 === "boolean" && typeof bol2 === "boolean") {
+    let output = false;
+    if (bol1 == true && bol2 == true) {
+      output = true;
+    }
+    return output;
   }
-  return output;
+  else {
+    return `ERROR > tipos não booleanos!`;
+  }
 }
-/*
-  <Para o teste manual >
-  let a = true;
-  let b = true;
-  console.log(compareTrue(a, b));
-*/
+
+// < Para o teste manual >
+/*  let a = true;
+    let b = true;
+    console.log(compareTrue(a, b)); */
+
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  if (base > 0 && height > 0) {
+    return (base * height) / 2;
+  }
+  else {
+    return `ERROR > ${base} e ${height} não são numeros positivos!`;
+  }
 }
 
+// < Para o teste manual >
+// console.log(calcArea(10, 10));
+
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  let tamanhoStr = "" + str;
+  let arrayStr = [];
+  let auxiliar = '';
+
+  for (let index = 0; index < tamanhoStr.length; index += 1) {
+    
+    if (tamanhoStr[index] != " ") {
+      auxiliar += tamanhoStr[index];
+    }
+    else {
+      arrayStr.push(auxiliar);
+      auxiliar = '';
+    }
+  }
+  arrayStr.push(auxiliar);
+
+  return arrayStr;
 }
+
+// < Para o teste manual >
+// console.log(splitSentence("go Trybe"));
+
 
 // Desafio 4
 function concatName() {
