@@ -81,7 +81,7 @@ function fizzBuzz(arrayNumbers) {
     } else if(arrayNumbers[indice] % 5 === 0){
       arrayName.push("buzz");
     } else {
-      arrayName.push("bug");
+      arrayName.push("bug!");
     }
   }
   
