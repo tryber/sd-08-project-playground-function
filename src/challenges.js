@@ -17,17 +17,19 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence() {
   // seu código aqui
-  
+
 }
 
 // Desafio 4
-function concatName() {
+function concatName(firstName, secondName, lastName) {
   // seu código aqui
+  return lastName + ' ' + firstName;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return (wins * 3) - ties;
 }
 
 // Desafio 6
