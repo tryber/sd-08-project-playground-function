@@ -37,14 +37,7 @@ function highestCount(numbers) {
     }
   }
 
-  let highest = -Infinity;
-
-  for (let i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] > highest) {
-      highest = numbers[i];
-    }
-  }
-
+  let highest = Math.max(numbers);
   return counter[highest];
 }
 
@@ -149,8 +142,8 @@ function techList(tecnologias, name) {
   lista = lista.sort((a, b) => {
     if (a.tech < b.tech) {
       return -1;
-    } 
-    
+    }
+
     if (a.tech > b.tech) {
       return 1;
     }
