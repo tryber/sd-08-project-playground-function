@@ -43,11 +43,14 @@ function footballPoints(wins, ties) {
 function highestCount(arraynum) {
     let maior = 0;
     let ocorrencias = 0;
+
+    // achar o maior no array
     for (let i = 0; i < arraynum.length; i += 1) {
         if (arraynum[i] > maior) {
             maior = arraynum[i];
         }
     }
+    // nº de ocorrencias
     for (let j = 0; j < arraynum.length; j += 1) {
         if (arraynum[j] === maior) {
             ocorrencias += 1;
@@ -58,13 +61,24 @@ function highestCount(arraynum) {
 
 
 // Desafio 7
-function catAndMouse() {
-    // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+    cat1 = Math.abs(cat1 - mouse);
+    cat2 = Math.abs(cat2 - mouse);
+
+    if (cat2 === cat1) {
+        return 'os gatos trombam e o rato foge';
+    } else if (cat2 < cat1) {
+        return 'cat1';
+    } else
+        return 'cat2';
+
+
 }
+
 
 // Desafio 8
 function fizzBuzz() {
-    // seu código aqui
+
 }
 
 // Desafio 9
