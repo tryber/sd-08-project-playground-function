@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
   if (bool1 === true && bool2 === true) {
-    return true;
+  return true;
   }
   return false;
 }
@@ -14,12 +14,13 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(stringToSplit) {
   let spliWord = stringToSplit;
-    return spliWord.split(" ")
+  return spliWord.split(' ')
 }
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  let invertedString = stringArray[stringArray.length - 1] + ', ' + stringArray[0];
+  return invertedString
 }
 
 // Desafio 5
