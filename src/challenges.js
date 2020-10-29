@@ -36,8 +36,9 @@ function concatName(vetorString) {
 //console.log(concatName(teste));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let resultado = (wins * 3) + (ties * 1);
+  return resultado;
 }
 
 // Desafio 6
