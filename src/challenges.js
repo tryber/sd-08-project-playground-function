@@ -50,8 +50,23 @@ function highestCount(parametro) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  let gameOver = "os gatos trombam e o rato foge",
+      catUmWiner = (cat1 + mouse) < (cat2 + mouse),
+      catDoisWiner = (cat2 + mouse) < (cat1 + mouse),
+      resultado = ''
+      
+      switch(true){
+        case catUmWiner:
+          resultado = 'cat1'
+        break;
+        case catDoisWiner:
+          resultado = 'cat2'
+        break;
+        default:
+          resultado = gameOver
+      }
+      return resultado
 }
 
 // Desafio 8
