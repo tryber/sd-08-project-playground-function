@@ -1,11 +1,17 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(num1,num2) {
+  if (num1=true && num2==true) {
+    compareTrue=true
+  }
+
+else { compareTrue=false
+  
+}
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, altura) {
+  let areaTriangulo = (base*altura)/2
 }
 
 // Desafio 3
