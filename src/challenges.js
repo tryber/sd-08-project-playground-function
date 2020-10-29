@@ -196,23 +196,26 @@ function generatePhoneNumber(arrayNumber) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let difAC = Math.abs(lineA - lineC);
+  let difAC = Math.abs(lineA - lineC);  
   let difBC = Math.abs(lineB - lineC);
   let difAB = Math.abs(lineA - lineB);
-  if ((lineB < (lineA+lineB)) && (lineB > difAC)) {
+  let sumAC = lineA + lineC;
+  let sumBC = lineB + lineC;
+  let sumAB = lineA + lineB;  
+  if ((lineB < sumAC) && (lineB > difAC)) {
     return true;
-  } else if ((lineA < (lineB+lineC)) && (lineA > difBC)) {
+  } else if ((lineA <  sumBC) && (lineA > difBC)) {
     return true;
-  } else if ((lineC < (lineB+lineA)) && (lineC > difAB)) {
+  } else if ((lineC < sumAB) && (lineC > difAB)) {
     return true;
   } else {
     return false;  
 }
 }
- // console.log(triangleCheck(10, 14, 8)) //
+ console.log(triangleCheck(10, 13, 2))
 
 // Desafio 13
-function hydrate(lineA, lineB, lineC) {
+function hydrate() {
   
 }
 
