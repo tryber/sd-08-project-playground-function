@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(numero1, numero2) {
-    if (numero1%2 === 0 && numero2%2 !== 0){ return "true"}
-      else {return "false"}
+    if (numero1%2 === 0 && numero2%2 !== 0){ return }
 }
-console.log(compareTrue(5, 11));
+console.log(compareTrue(10, 12));
+
 
 // Desafio 2
 function calcArea(base, height) {return (base * height)/2;
