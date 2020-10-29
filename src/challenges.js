@@ -185,7 +185,6 @@ function hydrate(bebidas) {
     return quantidade + " copos de água";
   }
 }
-console.log(hydrate("1 cerveja"));
 
 
 
