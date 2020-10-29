@@ -27,7 +27,7 @@ function concatName(string) {
   // seu código aqui
   let first = string[0];
   let last = string[string.length - 1];
-  let reverse = last + ' ' + first;
+  let reverse = last + ', ' + first;
   return reverse;
 }
 
