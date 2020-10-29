@@ -51,11 +51,11 @@ function fizzBuzz(vetorNum) {
   let resultado = [];
   for (let count in vetorNum) {
    if (vetorNum[count] % 3 == 0 && vetorNum[count] % 5 == 0) {
-         resultado.push("FizzBuzz");
+         resultado.push("fizzBuzz");
      } else if (vetorNum[count] % 3 == 0) {
-         resultado.push("Fizz");
+         resultado.push("fizz");
      } else if (vetorNum[count] % 5 == 0) {
-         resultado.push("Buzz");
+         resultado.push("buzz");
      } else {
          resultado.push("bug!");
      }
