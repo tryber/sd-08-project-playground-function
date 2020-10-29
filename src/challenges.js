@@ -7,9 +7,11 @@ function compareTrue(status1, status2) {
 //console.log(compareTrue('true', 'true'));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height)/2;
+  return area;
 }
+//console.log(calcArea(20, 50));
 
 // Desafio 3
 function splitSentence() {
