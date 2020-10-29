@@ -56,13 +56,26 @@ function highestCount(array) {
   return contador;
 }
 
-//let array = [1,3,7,4,7]; 
+//let array = [1,3,7,4,7,7]; 
 //console.log(highestCount(array));
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let animal ={
+    alvo : mouse,
+    distancia1 : cat1 - mouse,
+    distancia2 : cat2 - mouse
+  };
+  let distanciaMenor;
+  if (animal.distancia1 < animal.distancia2) {
+    distanciaMenor = cat1
+  } else {
+    distanciaMenor = cat2
+  }
+  return distanciaMenor;
 }
+//console.log(catAndMouse(1,2,3));
 
 // Desafio 8
 function fizzBuzz() {
