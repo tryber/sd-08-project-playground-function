@@ -116,15 +116,15 @@ function decode(input)
 {
   let result = input;
   result = result.replace(/1/g, "a");
-  result = result.replace(/2/g, "b");
-  result = result.replace(/3/g, "c");
-  result = result.replace(/4/g, "d");
-  result = result.replace(/5/g, "e");
+  result = result.replace(/2/g, "e");
+  result = result.replace(/3/g, "i");
+  result = result.replace(/4/g, "o");
+  result = result.replace(/5/g, "u");
 
- return result;
+ console.log(result);
 
 }
-
+decode("h3 th2r2!");
 
 
 
