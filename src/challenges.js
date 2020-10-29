@@ -13,11 +13,15 @@ function calcArea(base, height) {
   let triangulo = (base*height)/2;
   return triangulo;
 }
-console.log(calcArea(10, 5));
+// console.log(calcArea(10, 5));
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(param) {
+  sentence = [];
+  sentence.push(param.split(' '));
+  return sentence;
 }
+// console.log(splitSentence("go Trybe"));
 
 // Desafio 4
 function concatName() {
