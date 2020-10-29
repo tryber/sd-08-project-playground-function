@@ -148,9 +148,9 @@ function techList(array,name){
           'tech' : array[i],
           'name' : name,
       });
-    }  
+    }
+    return listWithObjects;  
   }
-  return listWithObjects;
 }
 
 // Desafio 11
