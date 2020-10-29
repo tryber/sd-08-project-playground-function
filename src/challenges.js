@@ -39,17 +39,15 @@ function highestCount(array) {
   let repete = 0;
   let num = 0;
   for(let i in array){
-      if(array[i] > num){
-          num = array[i];
-      }
+    if(array[i] > num){
+      num = array[i];
+    }
   }
   for(let x in array){
-      if(num == array[x]){
-          repete += 1;
-      }
+    if(num == array[x]){
+      repete += 1;
+    }
   }
-
-
   return repete;
 }
 
@@ -60,9 +58,9 @@ function catAndMouse(cat1, cat2, mouse) {
   let case2 = mouse - cat2;
   if(case1 > case2){
     return "cat1";
-  }elseif(case1 < case2) {
+  } else if(case1 < case2) {
     return "cat2";
-  }else{
+  } else {
     return "os gatos trombam e o rato foge";
   }
 }
