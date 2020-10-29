@@ -136,7 +136,7 @@ function techList(techName, name) {
   let techDetails = {};
   let techList = [];
   for (index = 0; index < techName.length; index += 1) {
-    techList.push(techDetails.tech = techName[index], techDetails.name = name)
+    techList.push(techDetails.tech = "tech:", techName[index], techDetails.name = "name", name)
   }
   return techList;
 }
