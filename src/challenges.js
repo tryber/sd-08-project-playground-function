@@ -40,7 +40,7 @@ function highestCount(numbers) {
   let highest = numbers[0];
   let counter = 0;
 
-  for (index in numbers) {
+  for (let index in numbers) {
     if (highest < numbers[index]) {
       highest = numbers[index];
       counter = 1;
@@ -143,8 +143,15 @@ function decode(text) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(technologies, name) {
+  let list = [];
+  technologies.sort();
+
+  for (let index in technologies) {
+    list.push({ tech: technologies[index], name: name});
+  }
+
+  return list;
 }
 
 // Desafio 11
