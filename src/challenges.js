@@ -4,7 +4,7 @@ function compareTrue(valor1, valor2) {
   if (valor1 && valor2 === true) {
     return true;
   }
-    return false;
+  return false;
 }
 // console.log(compareTrue(true, true));
 
@@ -23,12 +23,11 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(parametroArray) {
-  let frase;
-  for (index = 0; index < parametroArray.length; index++); {
-    frase = parametroArray[parametroArray.length -1] + ', ' + parametroArray[0];
-  }
+  let frase = parametroArray[parametroArray.length -1] + ', ' + parametroArray[0];
   return frase
 }
+let meuNome = ['Liisa', 'Caroline', 'Coutinho', 'Ambrosen'];
+console.log(concatName(meuNome));
 
 
 // Desafio 5
