@@ -1,15 +1,15 @@
 // Desafio 1
 function compareTrue(a, b) {
-  let valor = a;
-  let valor2 = b;
-  if(a == valor2 && b == valor){
+  let compare = 10;
+  
+  if(a < compare && b > compare){
     return true;
   } else{
     return false;
   }
   // seu código aqui
 }
-console.log(compareTrue(20, 20));
+console.log(compareTrue(2, 10));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -27,6 +27,7 @@ function splitSentence() {
 
 // Desafio 4
 function concatName() {
+
   // seu código aqui
 }
 
