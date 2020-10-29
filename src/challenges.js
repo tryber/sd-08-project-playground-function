@@ -147,11 +147,28 @@ function generatePhoneNumber(listaNumeros) {
   return number;
   }
 }
-console.log (generatePhoneNumber([1,2,3,4,5,6,7,8,8,0,8]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA,lineB,lineC) {
+  let flagA = 0, flagB = 0, flagC = 0;
+  //Para A
+  if (lineA < lineB+lineC && lineA > Math.abs(lineB-lineC)){
+    flagA = 1;
+  }
+  //Para B
+  if (lineB < lineA+lineC && lineB > Math.abs(lineA-lineC)){
+    flagB = 1; 
+  }
+  //Para C
+  if (lineC < lineA+lineB && lineC > Math.abs(lineA-lineB)){
+    flagC = 1;
+  }
+  //Checando existência
+  if (flagA===1 && flagB===1 && flagC===1){
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
