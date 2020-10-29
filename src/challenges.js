@@ -8,7 +8,6 @@ function compareTrue(valor1, valor2){
   }
 return compareTrue;  
 
-// seu código aqui
 }
 
 
@@ -20,6 +19,8 @@ function calcArea(base, height) {
   
   // seu código aqui
 }
+return(5,10);
+
 
 
 // Desafio 3
