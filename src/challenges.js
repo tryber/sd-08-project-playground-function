@@ -50,7 +50,7 @@ function highestCount(array) {
     }
   }
   for (let indice in array) {
-    if (array[indice] === maior){
+    if (array[indice] === maior) {
       count += 1;
     }
   }
@@ -96,19 +96,19 @@ function fizzBuzz(array) {
 function encode(string) {
   let novaString = "";
   for (index in string){
-    if (string[index] === 'a'){
+    if (string[index] === 'a') {
       novaString += '1';
     }
-    else if (string[index] === 'e'){
+    else if (string[index] === 'e') {
       novaString += '2';
     }
-    else if (string[index] === 'i'){
+    else if (string[index] === 'i') {
       novaString += '3';
     }
-    else if (string[index] === 'o'){
+    else if (string[index] === 'o') {
       novaString += '4';
     }
-    else if (string[index] === 'u'){
+    else if (string[index] === 'u') {
       novaString += '5';
     } else {
       novaString += string[index];
@@ -120,19 +120,19 @@ console.log(encode("Mario"));
 function decode(string) {
   let novaString = "";
   for (index in string){
-    if (string[index] === '1'){
+    if (string[index] === '1') {
       novaString += 'a';
     }
-    else if (string[index] === '2'){
+    else if (string[index] === '2') {
       novaString += 'e';
     }
-    else if (string[index] === '3'){
+    else if (string[index] === '3') {
       novaString += 'i';
     }
-    else if (string[index] === '4'){
+    else if (string[index] === '4') {
       novaString += 'o';
     }
-    else if (string[index] === '5'){
+    else if (string[index] === '5') {
       novaString += 'u';
     } else {
       novaString += string[index];
@@ -144,10 +144,19 @@ console.log(decode('M1r34'))
 
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(arrayTech, nome) {
+  let arrayObjetos = [];
+  for (let index = 0; index < arrayTech.length; index += 1) {
+    arrayObjetos.push({
 
+      tech: arrayTech[index],
+      name: nome
+
+    }) 
+  }
+ return arrayObjetos;
+}
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Mario'))
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
