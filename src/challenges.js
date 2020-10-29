@@ -150,9 +150,19 @@ function decode(str) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(techArray, name) {
+  techArray.sort();
+  
+  let objReturn = [];
+  
+  for(i = 0; i < techArray.length; i++){
+      objReturn.push({
+         tech: techArray[i],
+           name: name
+    })
+  }
+  
+  return objReturn;
 
 // Desafio 11
 function generatePhoneNumber() {
