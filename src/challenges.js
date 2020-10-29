@@ -68,8 +68,8 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  
-  
+
+
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     return "cat1";
   } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
@@ -86,9 +86,22 @@ function catAndMouse(mouse, cat1, cat2) {
 //console.log(catAndMouse(0, 1, 2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let newFizzBuzz = [];
+  for (i = 0; i < array.length; i++) {
+    if (array[i] % 5 == 0 && array[i] % 3 == 0) {
+      newFizzBuzz.push("fizzBuzz");
+    } else if (array[i] % 3 == 0) {
+      newFizzBuzz.push("fizz");
+    } else if (array[i] % 5 == 0) {
+      newFizzBuzz.push("buzz");
+    } else {
+      newFizzBuzz.push("bug!");
+    }
+  }
+  return newFizzBuzz;
 }
+//console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
