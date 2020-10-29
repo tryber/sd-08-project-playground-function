@@ -88,7 +88,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge'
 }
 
-// Desafio 8 
+// Desafio 8
 function fizzBuzz(array) {
   for (let index in array) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
@@ -187,8 +187,8 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  
+function triangleCheck() {
+
 }
 
 // Desafio 13
