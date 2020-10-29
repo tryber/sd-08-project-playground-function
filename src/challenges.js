@@ -24,12 +24,13 @@ function concatName(array) {
   // seu código aqui
   let primeiroNome = array[0];
   let ultimoNome = array[-1];
-  return ultimoNome + ', ' + primeiroNome; 
+  return ultimoNome + ", " + primeiroNome; 
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
   // seu código aqui
+  result (wins*3)+ties;
 }
 
 // Desafio 6
