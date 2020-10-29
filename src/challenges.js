@@ -78,9 +78,24 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encodeLetters = ["a", "e", "i", "o", "u"]
+  let encodedValues = [1, 2, 3, 4, 5]
+
+  //Passa a string para um array
+  let encodedString = string.split("");
+
+  for(let i=0; i<encodedString.length; i+=1){
+    //Compara se a letra atual é igual a ela mesma mas em caixa baixa porque queremos substituir apenas as lowe case
+    //&&  Procura essa letra minuscula no encodeLetters, se devolver -1 é porque a letra não está la
+    if(encodedString[i] == encodedString[i].toLowerCase() && encodeLetters.indexOf(encodedString[i]) != -1 ){
+      //Substitui a letra atual de encodedString pelo número equivalente no encodedValues
+      encodedString[i] = encodedValues[encodeLetters.indexOf(encodedString[i])];
+    }
+  }
+  return encodedString.join("");
 }
+
 function decode() {
   // seu código aqui
 }
