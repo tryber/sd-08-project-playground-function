@@ -1,12 +1,9 @@
 // Desafio 1
-function compareTrue(valorLogicoA, valorLogicoB) 
-{
-  if(valorLogicoA === true && valorLogicoB === true)
-  {
+function compareTrue(valorLogicoA, valorLogicoB){
+  if(valorLogicoA === true && valorLogicoB === true){
     return true;
   }
-  else
-  {
+  else{
     return false;
   }
 }
@@ -314,7 +311,7 @@ function triangleCheck(lineA, lineB, lineC)
 
 }
 
-console.log(triangleCheck(10, 14, 8));
+//console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate(texto) 
