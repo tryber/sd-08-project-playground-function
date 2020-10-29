@@ -21,7 +21,6 @@ function calcArea(base, height) {
 function splitSentence(word) {
   resultado = word.split(" ");
   return resultado;
-  }
   
 }
 
