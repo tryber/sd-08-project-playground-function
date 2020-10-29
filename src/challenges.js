@@ -148,7 +148,7 @@ function techList(arrayTec, name) {
     nome: name
   }
   for (let index = 0; index < arrayTec.length; index +=1) {
-    if (arrayTec[index] == " ") {
+    if (arrayTec[index] == "") {
       arrayTec[index] = "Vazio!"
     } 
   }
