@@ -38,10 +38,22 @@ function footballPoints(wins, ties) {
 }//console.log(footballPoints(9, 10))
 
 // Desafio 6
-//let arrayGG = [9, 1, 2, 3, 9, 5, 7]
+let arrayGG = [9, 1, 2, 3, 9, 5, 7]
 function highestCount(array) {
-  
-}
+  let numbers = array
+  let maiorNum = numbers[0]
+  let contador = 0
+  for (i in numbers){
+    if (numbers[i] > maiorNum){
+      maiorNum = numbers[i]
+    }
+  }for (k in numbers){
+    if (numbers[k] === 9){
+      contador += 1
+    }
+  }
+  return contador
+}//console.log(highestCount(arrayGG))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -60,7 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }else {
     answer = "os gatos trombam e o rato foge"
   }return answer
-}console.log(catAndMouse(3, 2 ,2))
+}//console.log(catAndMouse(3, 2 ,2))
 
 // Desafio 8
 function fizzBuzz() {
