@@ -1,7 +1,7 @@
 // Desafio 1
-function compareTrue(valor1){
-  valor1 = 5
-  return valor1
+function compareTrue(param1, param2){
+  param1 && param2 === true
+  return compareTrue
 }
 
 // Desafio 2
