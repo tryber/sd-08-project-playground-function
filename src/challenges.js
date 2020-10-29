@@ -97,7 +97,7 @@ function encode(stringEncode) {
   let newStringEncode = stringEncode.split();
   let stringFinalEncode = "";     
   for (let index = 0; index < stringEncode.length; index +=1) {
-    if ((stringEncode[index] == "a") || (sringEncode[index] == "A")) {
+    if ((stringEncode[index] == "a") || (stringEncode[index] == "A")) {
       newStringEncode[index] = "1";      
     } else if ((stringEncode[index] == "e") || (stringEncode[index] == "E")) {
       newStringEncode[index] = "2";     
@@ -114,7 +114,7 @@ function encode(stringEncode) {
   }  
   return (stringFinalEncode)
 }
-console.log(encode("hi there!")) 
+// console.log(encode("hi there!")) //
 
 function decode(stringDecode) {  
   let newStringDecode = stringDecode.split();
@@ -137,7 +137,7 @@ function decode(stringDecode) {
   }  
   return (stringFinalDecode)  
 }
-console.log(decode("h3 th2r2!"))
+// console.log(decode("h3 th2r2!")) //
 
 // Desafio 10
 function techList() {
