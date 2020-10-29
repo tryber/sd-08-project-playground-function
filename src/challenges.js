@@ -85,7 +85,7 @@ function encode(string) {
   let alfabeto = {
       vogais: ['blankspace','a','e','i','o','u'],
       vogaisCapital: ['blankspace','A','E','I','O','U'],
-      consoantes: [' ','!',,'?',':',',','b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','y','x','z','B','C','D','F','G','H','J','K','M','N','P','Q','R','S','T','V','X','W','Y','Z'],
+      consoantes: [' ','!',,'?',':',',',,'.','b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','y','x','z','B','C','D','F','G','H','J','K','M','N','P','Q','R','S','T','V','X','W','Y','Z'],
   }
   let list = string.split("");
   let listForEncode = [];
@@ -115,7 +115,7 @@ function encode(string) {
 function decode(string) {
   let alfabeto = {
       vogais: ['blankspace','a','e','i','o','u'],
-      consoantes: [' ','!',,'?',':',',','b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','y','x','z','B','C','D','F','G','H','J','K','M','N','P','Q','R','S','T','V','X','W','Y'],
+      consoantes: [' ','!',,'?',':',',','.','b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','y','x','z','B','C','D','F','G','H','J','K','M','N','P','Q','R','S','T','V','X','W','Y'],
   }
   let list = string.split("");
   let listForEncode = [];
