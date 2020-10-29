@@ -49,6 +49,7 @@ function highestCount(array) {
   for(let i in array){
     if( array[i] > maior){
       maior = array[i];
+      count = 0;
       count++;
     }else if(array[i] == maior){
       count++;
@@ -57,7 +58,6 @@ function highestCount(array) {
 
   return count;
 }
-
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse){
