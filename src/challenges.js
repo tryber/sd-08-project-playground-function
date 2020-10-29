@@ -18,7 +18,7 @@ let pos = 0
 function splitSentence(sentence) {
   let array = []
   for (pos = 0; pos < sentence.length; pos += 1) {
-    if (sentence[pos] !== ' ') {      
+    if (sentence[pos] !== ' ') {
       palavra += sentence[pos]
     } else {
       array.push(palavra)
