@@ -77,23 +77,23 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(frase) {
-  let fraseMinuscula = frase.toLowerCase();
-  fraseMinuscula = fraseMinuscula.replace (/a/g,"1");
-  fraseMinuscula = fraseMinuscula.replace (/e/g,"2");
-  fraseMinuscula = fraseMinuscula.replace (/i/g,"3");
-  fraseMinuscula = fraseMinuscula.replace (/o/g,"4");
-  fraseMinuscula = fraseMinuscula.replace (/u/g,"5");
-  return fraseMinuscula;
+  let auxiliar = frase;
+  auxiliar = auxiliar.replace (/a/g,"1");
+  auxiliar = auxiliar.replace (/e/g,"2");
+  auxiliar = auxiliar.replace (/i/g,"3");
+  auxiliar = auxiliar.replace (/o/g,"4");
+  auxiliar = auxiliar.replace (/u/g,"5");
+  return auxiliar;
 }
 
 function decode(frase) {
-  let fraseMinuscula = frase.toLowerCase();
-  fraseMinuscula = fraseMinuscula.replace (/1/g,"a");
-  fraseMinuscula = fraseMinuscula.replace (/2/g,"e");
-  fraseMinuscula = fraseMinuscula.replace (/3/g,"i");
-  fraseMinuscula = fraseMinuscula.replace (/4/g,"o");
-  fraseMinuscula = fraseMinuscula.replace (/5/g,"u");
-  return fraseMinuscula;
+  let auxiliar = frase;
+  auxiliar = auxiliar.replace (/1/g,"a");
+  auxiliar = auxiliar.replace (/2/g,"e");
+  auxiliar = auxiliar.replace (/3/g,"i");
+  auxiliar = auxiliar.replace (/4/g,"o");
+  auxiliar = auxiliar.replace (/5/g,"u");
+  return auxiliar;
 }
 
 // Desafio 10
