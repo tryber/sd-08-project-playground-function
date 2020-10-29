@@ -9,16 +9,11 @@ function calcArea(base,height) {
 
 // Desafio 3
 function splitSentence(resultado) {
-  let stringWord = [];
-  resultado = resultado.split("");
-  for (key in resultado){
-    stringWord.push(resultado[key])
-  }
-  return stringWord;
+  return resultado.split("");
 }
 
 // Desafio 4
-function concatName() {
+function concatName(param1) {
   return param1[param1.length -1]+ ','+ param1[0];
 }
 
