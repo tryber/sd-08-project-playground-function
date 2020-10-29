@@ -22,8 +22,6 @@ function concatName(name) {
   return(`${name[name.length - 1]}, ${name[0]}`);
 }
 
-//name[name.length - 1].concat(",  ${name[0]}")
-
 // Desafio 5
 function footballPoints( wins, ties) {
   return wins * 3 + ties;
@@ -32,16 +30,16 @@ function footballPoints( wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   let maxRepeat = 0;
+  let maxNumber = 0;
   for (let j = 0; j < numbers.length; j++) {
-    let maxRepeatTest = 0;
-    for (let i = 0; i < numbers.length; i++) {
-      if (numbers[j] === numbers[i]) {
-        maxRepeatTest++;
-      }
-      if (maxRepeatTest > maxRepeat) {
-        maxRepeat = maxRepeatTest;
-      }
+    if (numbers[j] > maxNumber) {
+      maxNumber = numbers[j];
     }
+  }
+  for (let i = 0; i < numbers.length; i++) {
+    if (maxNumber === numbers[i]) {
+        maxRepeat++;
+      }
   }
   return maxRepeat;
 }
@@ -112,8 +110,17 @@ function decode(code) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  array.sort();
+  let list = [];
+
+  for (let i = 0; i < array.length; i++) {
+    let temp = {};
+    temp.tech = array[i];
+    temp.name = name;
+    list.push(temp);
+  }
+  return list;
 }
 
 // Desafio 11
