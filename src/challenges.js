@@ -140,9 +140,31 @@ function decode(stringDecode) {
 // console.log(decode("h3 th2r2!")) //
 
 // Desafio 10
-function techList() {
-  
+function techList(arrayTec, name) {    
+  let info2 = {};
+  let arrayinfo2 = []; 
+  let info = {
+    tech: arrayTec,
+    nome: name
+  }
+  for (let index = 0; index < arrayTec.length; index +=1) {
+    if (arrayTec[index] == " ") {
+      arrayTec[index] = "Vazio!"
+    } 
+  }
+  arrayTec = arrayTec.sort();
+  for (key in arrayTec) {
+    info2[key] = {
+      tech: arrayTec[key],
+      name: name
+    }    
+    arrayinfo2[key] = info2[key]    
+  }
+  return (arrayinfo2)    
 }
+
+console.log(techList([" ", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
+
 
 // Desafio 11
 function generatePhoneNumber() {
