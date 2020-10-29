@@ -3,7 +3,7 @@ function compareTrue(valor1, valor2) {
   // seu código aqui
   if (valor1 === true && valor2 === true) {
     return true;
-  } 
+  }
   return false;
 }
 
@@ -34,22 +34,24 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let result = ties + (wins * 3);
+  let result = ties + wins * 3;
   return result;
 }
 
 // Desafio 6
 function highestCount(array) {
   // seu código aqui
-  let comparaNumero = 0, numeroMaior = 0, contador = 0;
+  let comparaNumero = 0;
+  let numeroMaior = 0;
+  let contador = 0;
 
-  for (let index = 0; index < array.length; index += 1){
-    if (array[index] > comparaNumero){
-      numeroMaior =  array[index];
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > comparaNumero) {
+      numeroMaior = array[index];
     }
   }
   for (let key in array) {
-    if (numeroMaior === array[key]){
+    if (numeroMaior === array[key]) {
       contador += 1;
     }
   }
