@@ -7,4 +7,12 @@ function compareTrue(boolean1, boolean2) {
   }
 }
 
-console.log(compareTrue(false,false))
+console.log(compareTrue(false, false));
+
+//Requisito 2 - Área do triângulo
+function calcArea(base, height) {
+  return (base * height) / 2;
+}
+
+console.log(calcArea(7, 15))
+
