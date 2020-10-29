@@ -11,9 +11,11 @@ function compareTrue(value1, value2) {
 console.log(compareTrue("", ""))
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let triangleArea = (base * height) / 2
+  return "A área do triângulo é de: " + triangleArea
 }
+console.log(calcArea(5, 10))
 
 // Desafio 3
 function splitSentence() {
