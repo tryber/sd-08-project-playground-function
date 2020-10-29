@@ -19,7 +19,7 @@ function calcArea(base, height) {
   
   // seu código aqui
 }
-console.log(calcArea(5,10));
+calcArea(5,10);
 
 
 
@@ -48,10 +48,10 @@ function footballPoints(wins, ties) {
   let pontos = 0;
   pontos = (wins * 3) + (ties * 1);
   return pontos
-  return footballPoints
+  
   // seu código aqui
 }
-
+return footballPoints
 
 // Desafio 6
 function highestCount(array) {
