@@ -108,7 +108,7 @@ function encode(string) {
       arrayString[key] = "2";
     }else if(arrayString[key] === "i"){
       arrayString[key] = "3";
-    }else if(arrayString[key] === "0"){
+    }else if(arrayString[key] === "o"){
       arrayString[key] = "4";
     }else if(arrayString[key] === "u"){
       arrayString[key] = "5";
@@ -118,14 +118,27 @@ function encode(string) {
   return(arrayString);
 }
 
+function decode(string) {
 
-console.log(encode("hi there!"))
-
-
-function decode() {
-  // seu código aqui
+  let arrayString = string.split("");
+  for(let key in arrayString){
+    if(arrayString[key] === "1"){
+      arrayString[key] = "a";
+    }else if(arrayString[key] === "2"){
+      arrayString[key] = "e";
+    }else if(arrayString[key] === "3"){
+      arrayString[key] = "i";
+    }else if(arrayString[key] === "4"){
+      arrayString[key] = "o";
+    }else if(arrayString[key] === "5"){
+      arrayString[key] = "u";
+    }
+  }
+  arrayString = arrayString.join("");
+  return(arrayString);
 }
 
+console.log(decode("h3 th2r2!"))
 // Desafio 10
 function techList() {
   // seu código aqui
