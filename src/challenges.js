@@ -14,14 +14,14 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  return sentence.split(" ")
+  return sentence.split(' ');
 
 // Usei o método split que relembrei em https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string.
 }
 
 // Desafio 4
 function concatName(name) {
-  return name[name.length-1] + ", " + name[0];
+  return `${name[name.length - 1]}, ${name[0]}`;
 }
 
 // Desafio 5
@@ -30,13 +30,23 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  
+   
 }
 
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let win;
+  if (cat1 - mouse == cat2 - mouse) {
+    win = "os gatos trombam e o rato foge";
+  } else if (cat1 - mouse < cat2 - mouse){
+    win = "cat1";
+  } else if (cat1 - mouse > cat2 - mouse) {
+    win = "cat2";
+  }
+  return win;
 }
 
 // Desafio 8
