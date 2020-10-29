@@ -116,15 +116,19 @@ function decode(word) {
 
 // Desafio 10
 function techList(tecnologias, name) {
-  let tecList = [];
-  let tecnologiasEmOrdem = tecnologias.sort();
-  for (i in tecnologiasEmOrdem){
-    let tecObject={};
-    tecObject['tech'] = tecnologiasEmOrdem[i];
-    tecObject['name'] = name;
-    tecList.push(tecObject);
+  if (tecnologias !== []){
+    return "Vazio!"
+  } else {
+    let tecList = [];
+    let tecnologiasEmOrdem = tecnologias.sort();
+    for (i in tecnologiasEmOrdem){
+      let tecObject={};
+      tecObject['tech'] = tecnologiasEmOrdem[i];
+      tecObject['name'] = name;
+      tecList.push(tecObject);
+    }
+    return teclist
   }
-  return teclist
 }
 
 // Desafio 11
