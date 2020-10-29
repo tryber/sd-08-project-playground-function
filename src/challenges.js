@@ -13,11 +13,11 @@ function calcArea(base, height) {
 
 // Desafio 3
 //  let frase = "go Trybe aleluia Irmao"
-let array = []
 let palavra = ''
 let pos
 let indice = 0
 function splitSentence(sentence) {
+  let array = []
   for (pos = 0; pos < sentence.length; pos += 1) {
     if (sentence[pos] === ' ') {
       for (indice; indice < pos; indice += 1) {
