@@ -223,8 +223,8 @@ function generatePhoneNumber(vetor) {
     return 'Array com tamanho incorreto.';
   } else if (confereVetor(vetor) && confereRepeticoes(vetor)) {
     let numero = `(${vetor.slice(0, 2).join('')}) ${vetor
-      .slice(2, 6)
-      .join('')}-${vetor.slice(6, 11).join('')}`;
+      .slice(2, 7)
+      .join('')}-${vetor.slice(7, 11).join('')}`;
     return numero;
   }
   return 'não é possível gerar um número de telefone com esses valores';
