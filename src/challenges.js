@@ -1,21 +1,23 @@
 // Desafio 1
 function compareTrue(p1, p2) {
   if(p1 === 'true' && p2 === 'true'){
-    resultado = 'true'
+    return 'true'
   } else {
-    resultado = 'false'
+    return 'false'
   }
-  return resultado
 }
-// console.log(compareTrue('true','true'));
+console.log(compareTrue('true','true'));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base*height)/2
 }
+console.log(calcArea(3,20));
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
+  let array = [];
+
   // seu código aqui
 }
 
