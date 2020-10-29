@@ -110,7 +110,7 @@ function decode(str) {
     }else if(str[index]=="2"){
       str=str.replace(/2/g,"e");
     }else if(str[index]=="3"){
-      str=str.replace(/e/g,"i");
+      str=str.replace(/3/g,"i");
     }else if(str[index]=="4"){
       str=str.replace(/4/g,"o");
     }else if (str[index]=="5"){
