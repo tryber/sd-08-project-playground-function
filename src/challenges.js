@@ -17,8 +17,8 @@ function calcArea(base, height) {
 // console.log(calcArea (10, 20));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+
 }
 
 // Desafio 4
@@ -40,14 +40,25 @@ function footballPoints(wins, ties) {
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  for (index = 0; index < numeros.length; index += 1); {
+
+  }
+
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 - mouse < cat2 - mouse) {
+    return "cat1";
+  } else if (cat1 - mouse > cat2 - mouse) {
+    return "cat2";
+  } else {
+    return "Os gatos se trombam e o rato foge";
+  }
 }
+// console.log(catAndMouse(1, 3, 5));
+
 
 // Desafio 8
 function fizzBuzz() {
