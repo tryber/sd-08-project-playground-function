@@ -32,7 +32,6 @@ function concatName(array) {
   let nome = array[array.length-1] + ", " + array[0];
   return nome;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -77,8 +76,6 @@ function catAndMouse(cat1, cat2, mouse){
   }
 }
 
-  
-
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -100,12 +97,31 @@ function fizzBuzz(array) {
   return(arrayRetorno);
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  
+  let arrayString = string.split("");
+  for(let key in arrayString){
+    if(arrayString[key] === "a"){
+      arrayString[key] = "1";
+    }else if(arrayString[key] === "e"){
+      arrayString[key] = "2";
+    }else if(arrayString[key] === "i"){
+      arrayString[key] = "3";
+    }else if(arrayString[key] === "0"){
+      arrayString[key] = "4";
+    }else if(arrayString[key] === "u"){
+      arrayString[key] = "5";
+    }
+  }
+  arrayString = arrayString.join("");
+  return(arrayString);
 }
+
+
+console.log(encode("hi there!"))
+
+
 function decode() {
   // seu código aqui
 }
