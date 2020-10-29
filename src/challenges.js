@@ -32,7 +32,7 @@ console.log(splitSentence("Ola mundo"))
 
 // Desafio 4
 function concatName(names) {
-  value = names.length -1
+  value = names.length - 1
 
   return (`${names[value]}, ${names[0]}`)
 }
@@ -41,9 +41,13 @@ console.log(concatName(['matheus', 'gabriel']))
 //---------------------------------//
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+
+  return ((wins * 3) + (ties * 1))
+
 }
+
+console.log(footballPoints(2, 2))
 
 //---------------------------------//
 
