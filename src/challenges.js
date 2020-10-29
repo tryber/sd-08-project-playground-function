@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue(numero1, numero2) {
-    if (numero1%2 === 0 && numero2%2 !== 0){ return }
+     return Boolean(numero1 > numero2);
 }
-console.log(compareTrue(10, 12));
+console.log(compareTrue(25, 12));
 
 
 // Desafio 2
@@ -12,9 +12,11 @@ function calcArea(base, height) {return (base * height)/2;
 console.log(calcArea(10, 4));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) { 
+  return string.split(" ");
+ 
 }
+console.log(splitSentence("Oi Tryber"))
 
 // Desafio 4
 function concatName() {
