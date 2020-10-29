@@ -26,18 +26,29 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(string) {
+function concatName([string]) {
   let ultimoNome = string[string.length -1];
   let primeiroNome = string[0];
-  return [ultimoNome, primeiroNome];
+  let nome = [];
+  nome.push(ultimoNome + primeiroNome);
   // seu código aqui
+  return nome
+  return concatName
 }
+
+console.log(concatName(['Douglas', 'Ferreira', 'Pinto']));
 
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
+  
+  let pontos = 0;
+  pontos = (wins * 3) + (ties * 1);
+  return pontos
+  return footballPoints
   // seu código aqui
 }
+
 
 // Desafio 6
 function highestCount() {
