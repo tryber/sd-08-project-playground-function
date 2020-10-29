@@ -151,10 +151,6 @@ function techList(tecnologias, name) {
 
 // Desafio 11
 function validNumber(digits) {
-  if (digits.length !== 11) {
-    return false;
-  }
-
   if (digits.find(cur => cur < 0 || cur > 9)) {
     return false;
   }
@@ -166,6 +162,10 @@ function validNumber(digits) {
 }
 
 function generatePhoneNumber(digits) {
+  if (digits.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  
   if (!validNumber(digits)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
