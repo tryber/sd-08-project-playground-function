@@ -42,8 +42,22 @@ function highestCount(a) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let dist1 = calcDist(mouse, cat1);
+  let dist2 = calcDist(mouse, cat2);
+
+  if(dist1 == dist2) {
+    return 'os gatos trombam e o rato foge';
+  }
+  else if(dist1 > dist2) {
+    return 'cat2';
+  }
+
+  return 'cat1';
+}
+
+function calcDist(a, b) {
+  return Math.abs(b - a);
 }
 
 // Desafio 8
@@ -104,3 +118,6 @@ console.log(splitSentence('The Best Game Dev'));
 console.log(concatName(['Natanael', 'Enéas', 'da', 'Silva', 'Neto']));
 console.log(footballPoints(3, 2));
 console.log(highestCount([1, 2, 9, 9, 15, 15, 15]));
+console.log(catAndMouse(0, 2, 3));
+console.log(catAndMouse(0, -4, 3));
+console.log(catAndMouse(0, -3, 3));
