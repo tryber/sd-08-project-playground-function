@@ -117,7 +117,7 @@ for (const key in array){
   if ( array[key]%3 === 0 ){
     resultado[key] += "fizz";
   }
-  else if ( array[key]%5 === 0 ){
+  if ( array[key]%5 === 0 ){
     resultado[key] += "Buzz";
   }
   else{
