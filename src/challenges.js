@@ -3,9 +3,7 @@ function compareTrue(bool1, bool2) {
   // seu código aqui
   if (bool1 === true && bool2 === true) {
     return true;
-  } 
-    return false;
-  
+  } return false;
 }
 
 // Desafio 2
@@ -19,6 +17,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence() {
   // seu código aqui
+  
 
 }
 
