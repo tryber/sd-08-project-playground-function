@@ -37,17 +37,15 @@ function highestCount(numbers) {
     }
   }
 
-  let highest = -1;
-  let highestIndex = -1;
+  let highest = -Infinity;
 
-  for (let cur in counter) {
-    if (counter[cur] > highest) {
-      highest = counter[cur];
-      highestIndex = cur;
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > highest) {
+      highest = numbers[i];
     }
   }
-
-  return counter[highestIndex];
+ 
+  return counter[highest];
 }
 
 // Desafio 7
