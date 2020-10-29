@@ -1,12 +1,14 @@
 // Desafio 1
+// let comprar = true;
+// let pagar = true;
+
 function compareTrue(comprar, pagar) {
   // seu código aqui
-  if (comprar == true && pagar == true) {
+  if (comprar === true && pagar === true) {
     return true;
-  } else {
-    return false;
-  }
+  } return false;
 }
+// console.log (compareTrue(comprar, pagar));
 
 // Desafio 2
 function calcArea() {
