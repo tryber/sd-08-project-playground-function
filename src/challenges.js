@@ -21,10 +21,6 @@ function splitSentence(palavra) {
 // Desafio 4
 function concatName(arrayString) {
   // seu código aqui
-  // Escreva uma função com o nome concatName que, ao receber uma array de strings, 
-  // retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
-  // Isso quer dizer que, caso o parâmetro passado para concatName seja a 
-  // Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
   let index = arrayString.length - 1;
   let stringPalavras = arrayString[index] + ', ' + arrayString[0];  
 
@@ -32,8 +28,21 @@ function concatName(arrayString) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  // Escreva uma função com o nome footballPoints que receba o número de vitórias 
+  // (esse parâmetro deverá se chamar wins) e o número de empates (esse parâmetro deverá se chamar ties) 
+  // e retorne a quantidade de pontos que o time marcou em um campeonato.
+  // Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
+  let points = 0;
+  if (wins >= 1) {
+    points = wins * 3;
+  }
+  if (ties >= 1) {
+    points += ties;
+  }
+
+  return points;
 }
 
 // Desafio 6
