@@ -15,7 +15,7 @@ let string = 'go Trybe';
 
 function splitSentence(string) {
 
-  let splitted = string.split(/\s+/);
+  let splitted = string.split(/\s+/); //expressão regular que verifica espaços
   return splitted;
 }
 
@@ -57,8 +57,18 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+
+  if(Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
+    return 'cat2';
+
+  } else if(Math.abs(cat2 - mouse) > Math.abs(cat1 - mouse)){
+    return 'cat1';
+  } else if(Math.abs(cat2 - mouse) == Math.abs(cat1 - mouse)){
+    return 'os gatos trombam e o rato foge';
+  }
+
+
 }
 
 // Desafio 8
