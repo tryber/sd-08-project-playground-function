@@ -38,18 +38,18 @@ function highestCount() {
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  // Math.abs(mouse,cat1)
-  // Math.abs(mouse,cat2)
-  if(
-    (cat1-mouse)<(cat2-mouse)
-  ){
+  let gato1 = mouse-cat1
+  let gato2 = mouse-cat2
+  if(gato1<gato2){
     return "cat1"
-  } else if ((cat2-mouse)<(cat1-mouse)){
+  } else if (gato2<gato1){
     return "cat2"
   } else {
     return "os gatos trombam e o rato foge"
   }
-}
+} 
+
+
 
 // Desafio 8
 function fizzBuzz(arrayFizz) {
