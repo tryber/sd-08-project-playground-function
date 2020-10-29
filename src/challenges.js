@@ -61,25 +61,20 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   let result = [];
   for (let i = 0; i < numbers.length; i += 1) {
-    let cur = numbers[i];
     let str = '';
-
+    let cur = numbers[i];
     if (cur % 3 === 0) {
       str += 'fizz';
     }
-
     if (cur % 5 === 0) {
-      str += 'buzz'
+      str += 'buzz';
     }
-
     if (str === 'fizzbuzz') {
       str = 'fizzBuzz';
     }
-
     if (str === '') {
       str = 'bug!';
     }
-
     result.push(str);
   }
   return result;
@@ -136,7 +131,7 @@ function techList(tecnologias, name) {
     lista.push({
       tech: tecnologia,
       name,
-    })
+    });
   }
 
   lista = lista.sort((a, b) => {
@@ -218,4 +213,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
