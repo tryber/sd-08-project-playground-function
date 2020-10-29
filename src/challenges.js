@@ -91,7 +91,7 @@ function encode(frase) {
     } else if (frase[i] === 'u') {
       result += 5;
     } else {
-    result += frase[i];
+      result += frase[i];
     }
   }
   return result
@@ -112,16 +112,32 @@ function decode(frase) {
     } else if (frase[i] === '5') {
       result += 'u';
     } else {
-    result += frase[i];
+      result += frase[i];
     }
   }
   return result
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(techs, name) {
+  if (techs.length < 1){
+    return 'Vazio!';
+  }
+  let array = [];
+  for (let i in techs) {
+    let tech = techs[i];
+    rv = {tech, name};
+    array.push(rv);
+  }
+  return array.sort(function (a, b) {
+    if (a.tech > b.tech) {
+      return 1;
+    }
+    if (a.tech < b.tech) {
+      return -1;
+    }
+  })
+} 
 
 // Desafio 11
 function generatePhoneNumber() {
