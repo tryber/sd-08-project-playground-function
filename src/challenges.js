@@ -55,7 +55,7 @@ for (counter = 0; counter < array.length; counter += 1){
   if ( array[counter] == elementoTemporario ) {
     counterTemporario +=     
   
-  (counterTemporario > count)
+     (counterTemporario > count)
           elemento = elementoTemporario;
           count = counterTemporario
       }
