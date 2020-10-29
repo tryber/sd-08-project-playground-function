@@ -1,12 +1,18 @@
 // Desafio 1
-function compareTrue() {
-
+function compareTrue(valor1, valor2) {
+  if (valor1 && valor2) {
+    return true;
+  } 
+    return false;
 }
+console.log(compareTrue(true, true));
+
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height)/ 2;
 }
+console.log(calcArea(8,5));
 
 // Desafio 3
 function splitSentence() {
@@ -15,13 +21,17 @@ function splitSentence() {
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  var resultado = name[]
+  for (var name )
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  var wins = 3;
+  var ties = 1;
+  return wins + ties;
 }
+console.log(footballPoints(10, 7))
 
 // Desafio 6
 function highestCount() {
@@ -35,7 +45,14 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  var resultado = [];
+  if (resultado / 3){
+    return "frizz"
+  }
+  if else (resultado / 5){
+    return "buzz"
+  }
+  if else (resultado /  )
 }
 
 // Desafio 9
