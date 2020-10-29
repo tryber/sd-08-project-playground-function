@@ -135,10 +135,9 @@ function encode(texto) {
   return novoTexto;
 }
 function decode(texto) {
-  let novoTexto = "", palavra;
+  let novoTexto = '';
 
   for (let pos in texto) {
-
     switch (texto[pos]) {
       case '1':
         novoTexto += 'a';
@@ -177,7 +176,7 @@ function techList(arrayNomesTecnologia, name) {
   for (let indice = 0; indice < novoArrayNomesTecnologiaOrdenado.length; indice += 1) {
     let tech = {
       tech: null,
-      name: null
+      name: null,
     };
 
     tech.tech = novoArrayNomesTecnologiaOrdenado[indice];
@@ -193,7 +192,7 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas")); 
 
 // Desafio 11
 function generatePhoneNumber(arrayNumeroTelefone) {
-  if (arrayNumeroTelefone.length != 11) {
+  if (arrayNumeroTelefone.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
@@ -204,30 +203,30 @@ function generatePhoneNumber(arrayNumeroTelefone) {
   for (let indice = 0; indice < arrayNumeroTelefone.length; indice += 1) {
     numero = arrayNumeroTelefone[indice];
 
-    if (numero < 0 || numero > 9 || contaNumeros (numero, arrayNumeroTelefone) >= 3) {
+    if (numero < 0 || numero > 9 || contaNumeros(numero, arrayNumeroTelefone) >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
 
-    numeroTelefone = numeroTelefone + numero;
+    numeroTelefone += numero;
   }
 
-  numeroTelefoneFormatado = formataTelefone (numeroTelefone);
+  numeroTelefoneFormatado = formataTelefone(numeroTelefone);
 
   return numeroTelefoneFormatado;
 }
 
 function contaNumeros(numero, numeros) {
-    cont = 0;
-    for (let pos in numeros) {
-      if (numeros[pos] === numero) {
-        cont += 1;
-      }
+  let cont = 0;
+  for (let pos in numeros) {
+    if (numeros[pos] === numero) {
+      cont += 1;
     }
-    return cont;
+  }
+  return cont;
 }
 
 function formataTelefone(numeroTelefone) {
-  let numeroTelefoneFormatado = '(' + numeroTelefone.substring(0, 2) + ') ' + numeroTelefone.substring(2, 7) + '-' + numeroTelefone.substring(7, 11);
+  let numeroTelefoneFormatado = '(' + numeroTelefone.substring(0, 2) + ')' + ' ' + numeroTelefone.substring(2, 7) + '-' + numeroTelefone.substring(7, 11);
   return numeroTelefoneFormatado;
 }
 
@@ -235,7 +234,8 @@ function formataTelefone(numeroTelefone) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let soma1, somaAbsoluta;
+  let soma1;
+  let somaAbsoluta;
 
   soma1 = lineA + lineB;
   somaAbsoluta = Math.abs(lineA - lineB)
@@ -252,7 +252,8 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(texto) {
   let textoSoNumeros = texto.replace(/\D/g, '');
-  let somaBebidas = 0, totalCoposDeAgua = 0;
+  let somaBebidas = 0;
+  let totalCoposDeAgua = 0;
 
   for (let indice in textoSoNumeros) {
     somaBebidas += Number(textoSoNumeros[indice]);
@@ -261,9 +262,9 @@ function hydrate(texto) {
   totalCoposDeAgua = somaBebidas * 1;
 
   if (totalCoposDeAgua === 1) {
-    return totalCoposDeAgua + ' copo de água';
+    return totalCoposDeAgua + ' ' + 'copo de água';
   }
-  return totalCoposDeAgua + ' copos de água';  
+  return totalCoposDeAgua + ' ' + 'copos de água';  
 }
 
 /* console.log(hydrate("1 cerveja"));
