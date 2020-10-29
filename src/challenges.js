@@ -20,7 +20,7 @@ function splitSentence(string) {
   splitArray = string.split(" ");
   return splitArray;
 }
-console.log(splitSentence("go Trybe"));
+splitSentence("go Trybe");
 
 // Desafio 4
 function concatName(array) {
