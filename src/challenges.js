@@ -21,6 +21,42 @@ function encontraQuantidadeMaior(vetor, maior) {
 function calculaDistancia(pos1, pos2){
   return Math.abs(pos1 - pos2)
 }
+
+function dividePor3(num) {
+  if(num % 3 === 0) {
+    return 1;
+  }else {
+    return 0;
+  }
+}
+
+function dividePor5(num) {
+  if(num % 5 === 0) {
+    return 3;
+  }else {
+    return 0;
+  }
+}
+
+function refatoraVetor(vetor) {
+  for (let index = 0; index < vetor.length; index++) {
+    switch (vetor[index]) {
+      case 1:
+        vetor[index] = "fizz";
+        break;
+      case 3:
+        vetor[index] = "buzz";
+        break;
+      case 4:
+        vetor[index] = "fizzBuzz";
+        break;
+      default:
+        vetor[index] = "bug!";
+        break;
+    }
+  }
+  return vetor;
+}
 // Desafio 1
 function compareTrue(parametro1, parametro2) {
   return parametro1 && parametro2;
@@ -67,10 +103,17 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(vetor) {
+  let divide = 0;
+  for (let index = 0; index < vetor.length; index++) {
+    divide += dividePor3(vetor[index]);
+    divide += dividePor5(vetor[index]);
+    vetor[index] = divide;
+    divide = 0;
+  }
+  let vetorRefatorado = refatoraVetor(vetor);
+  return vetorRefatorado;
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
