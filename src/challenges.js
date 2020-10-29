@@ -10,16 +10,15 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(frase) {
-  let vetor = frase.split(' ');
+  let vetor = frase.split(" ");
   return vetor;
 }
-console.log(splitSentence("teste retorno array"));
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(vetor) {
+  let primeiraPalavra = vetor[0];
+  let ultimaPalavra = vetor[vetor.length - 1];
+  return ultimaPalavra + ", " + primeiraPalavra;
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
