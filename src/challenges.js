@@ -84,15 +84,25 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+let vogals = ['a', 'e', 'i', 'o', 'u'];
+let numerals = ['1', '2', '3', '4', '5'];
+
 function encode(str) {
-  let encodedStr = str.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
-  return encodedStr;
+  return generalEncrypter(str, vogals, numerals);
 }
 function decode(str) {
-  let decodedStr = str.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
-  return decodedStr;
+  return generalEncrypter(str, numerals, vogals);
+}
+function generalEncrypter(str, arrayToBeReplaced, arrayToReplace) {
+  let encryptedStr = str.replace(new RegExp(arrayToBeReplaced[0], 'g'), arrayToReplace[0]);
+  encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[1], 'g'), arrayToReplace[1]);
+  encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[2], 'g'), arrayToReplace[2]);
+  encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[3], 'g'), arrayToReplace[3]);
+  encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[4], 'g'), arrayToReplace[4]);
+  return encryptedStr;
 }
 
+console.log(encode('hello, my name is silvio'));
 // Desafio 10
 function techList() {
   // seu código aqui
