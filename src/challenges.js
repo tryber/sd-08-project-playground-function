@@ -1,9 +1,6 @@
 // Desafio 1
 function compareTrue(num1, num2) {
-  if (num1 == true && num2 == true) {
-    return true;
-  };
-  
+  return num1 && num2;
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -13,7 +10,8 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  
+  let array = string.split(" ");
+  return array;
 }
 
 // Desafio 4
@@ -23,7 +21,7 @@ function concatName(arrayDeStrings) {
   string = arrayDeStrings[size] + ', ' + arrayDeStrings[0];
   return string;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+
 // Desafio 5
 function footballPoints(wins, ties) {
   let winsPoints = wins * 3;
@@ -42,8 +40,8 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  
+function fizzBuzz(array) {
+  let arrayFizzBuzz = [];
 }
 
 // Desafio 9
