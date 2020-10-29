@@ -30,10 +30,7 @@ function concatName(arrayString) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  // Escreva uma função com o nome footballPoints que receba o número de vitórias 
-  // (esse parâmetro deverá se chamar wins) e o número de empates (esse parâmetro deverá se chamar ties) 
-  // e retorne a quantidade de pontos que o time marcou em um campeonato.
-  // Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
+
   let points = 0;
   if (wins >= 1) {
     points = wins * 3;
@@ -46,8 +43,27 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumbers) {
   // seu código aqui
+  // Escreva uma função chamada highestCount que, ao receber uma array de números, 
+  // retorne a quantidade de vezes que o maior deles se repete.
+  // Exemplo: caso o parâmetro de highestCount seja uma array com valores [9, 1, 2, 3, 9, 5, 7], 
+  // a função deverá retornar 2, que é a quantidade de vezes que o número 9 (maior número do array) se repete.
+  let maior = 0;
+  let repete = 0;
+
+  for (let x = 0; x < arrayNumbers.length; x += 1) {
+    if (arrayNumbers[x] > maior){
+      maior = arrayNumbers[x];
+    }
+  }
+
+  for (let x = 0; x < arrayNumbers.length; x += 1) {
+    if (arrayNumbers[x] == maior){
+      repete += 1;
+    }
+  }
+  return repete;
 }
 
 // Desafio 7
