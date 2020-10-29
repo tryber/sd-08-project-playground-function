@@ -24,17 +24,25 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(nome) {
-  let pNome, uNome, cont;
+  let pNome; 
+  let uNome; 
+  let cont;
   pNome = nome[0];
   uNome = nome[nome.length - 1];
   cont = uNome + ', ' + pNome;
   return cont;
 }
 
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points;
+  if(wins>0){
+    points = wins + 3;
+  }
+  if (ties>0){
+    points = ties + 1;
+  }
+  return points;
 }
 
 // Desafio 6
