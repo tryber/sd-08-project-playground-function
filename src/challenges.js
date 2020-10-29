@@ -112,10 +112,19 @@ function encode(input)
 }
 
 
-function decode()
+function decode(input)
 {
+  let result = input;
+  result = result.replace(/1/g, "a");
+  result = result.replace(/2/g, "b");
+  result = result.replace(/3/g, "c");
+  result = result.replace(/4/g, "d");
+  result = result.replace(/5/g, "e");
+
+ return result;
 
 }
+
 
 
 
