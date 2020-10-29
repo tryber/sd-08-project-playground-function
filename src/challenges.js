@@ -30,12 +30,18 @@ function splitSentence(param) {
 // Desafio 4
 function concatName() {
   // seu código aqui
+   
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let vitoria = 3 * wins;
+   let empate = 1 * ties;
+   let res = vitoria + empate
+  return res;
 }
+//console.log(footballPoints(2,2));
 
 // Desafio 6
 function highestCount() {
