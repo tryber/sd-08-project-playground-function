@@ -84,8 +84,28 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word) {
+  let novoWord = '';
+  for(let i in word){
+    if(word[i] === 'a'){
+      novoWord += '1';
+    }
+    if(word[i] === 'e'){
+      novoWord += '2';
+    }
+    if(word[i] === 'i'){
+      novoWord += '3';
+    }
+    if(word[i] === 'o'){
+      novoWord += '4';
+    }
+    if(word[i] === 'u'){
+      novoWord += '5';
+    } else if( word[i] !== 'a' && word[i] !== 'e' && word[i] !== 'i' && word[i] !== 'o' && word[i] !== 'u'){
+      novoWord += word[i]
+    }
+  }
+  return novoWord
 }
 function decode() {
   // seu código aqui
