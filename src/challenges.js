@@ -102,7 +102,7 @@ else if(Math.abs(cat1-mouse)<Math.abs(cat2-mouse)){
 return "cat2"
 }
 // Desafio 8
-function fizzBuzz(Array) {
+function fizzBuzz(array) {
 //   Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
 
 // Para cada número da Array que seja divisível apenas por 3, apresente uma string "fizz";
