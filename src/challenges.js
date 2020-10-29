@@ -15,19 +15,25 @@ function calcArea(base, height) {
 // Ok!
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  return str.split(' ')
 }
+// Ok! (?)
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let concat1 = [array.pop(), array[0]]; 
+  return concat1.join(', ')
 }
+// Ok!
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(win, ties) {
+  let wins = win*3;
+
+  return (wins + ties)
 }
+// Ok!
 
 // Desafio 6
 function highestCount() {
@@ -41,9 +47,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz() {
-  if (n % 15 === 0) {
-    console.log ("FizzBuzz")
-  }
+
 }
 
 // Desafio 9
