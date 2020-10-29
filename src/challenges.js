@@ -130,7 +130,7 @@ function techList(techArr, name) {
 
 // Desafio 11
 function countNumbers(numArr){
-  let numCounter = {}
+  let numCounter = {};
   for (let numI = 0; numI < numArr.length; numI += 1) {
     if (numCounter[numArr[numI]]) {
       numCounter[numArr[numI]] += 1;
@@ -141,6 +141,7 @@ function countNumbers(numArr){
 
   return numCounter;
 }
+
 function generatePhoneNumber(numArr) {
   if (numArr.length !== 11) {
     return 'Array com tamanho incorreto.';
