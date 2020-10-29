@@ -25,7 +25,8 @@ function splitSentence(str) {
 function concatName(list) {
   let fraseFinal;
   let index = list.length;
-  fraseFinal=list[index-1] + list[0];
+  fraseFinal=list[index-1] + ", " + list[0];
+  return fraseFinal;
 }
 
 // Desafio 5
