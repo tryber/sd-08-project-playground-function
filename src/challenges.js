@@ -24,10 +24,12 @@ return splitSentence
 function concatName (arrayString) {
   let primeiraString = arrayString[0];
   let ultimaString = arrayString[arrayString.length - 1];
-  concatName =  primeiraString + " , " + ultimaString + " ."; 
+  let primeiraUltima = primeiraString + " , "+ ultimaString + " . ";
 
-  return concatName;
+  return primeiraUltima;
 }
+
+
 
 
 // Desafio 5
