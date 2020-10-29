@@ -145,7 +145,7 @@ function generatePhoneNumber(numberArray) {
       }
     }
     for (let testNumber = 0; testNumber < 10; testNumber += 1) {
-      if (countElement(testNumber, numberArray) >= 3) {
+      if (countElement(numberArray, testNumber) >= 3) {
         return "não é possível gerar um número de telefone com esses valores";
       }
     }
