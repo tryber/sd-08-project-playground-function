@@ -1,41 +1,84 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(valor_1, valor_2) {
+  (valor_1 && valor_2)? console.log(true): console.log(false);
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(height,base) {
+  let area = (base*altura)/2;
+  console.log(area);
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let list = string.split(" ");
+  console.log(list);
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let arrayFinal= [];
+  arrayFinal.push(array[array.length-1]);
+  arrayFinal.push(array[0]);
+  console.log(arrayFinal.join(" "));
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = wins*3 + ties;
+  console.log(points);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let countlist = {};
+  let n = 0;
+  let freq = 0;
+  for (let i = 0; i < array.length; i += 1) {
+      let num = array[i];
+      countlist[num]= countlist[num]? countlist[num]+1 : 1;
+  } 
+  for(j in countlist){
+      if (j >= n) {
+          n = j;
+          freq=countlist[j];   
+      }
+  }
+  console.log(freq);
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+  dmouseCat1 = Math.abs(mouse-cat1);
+  dmouseCat2 = Math.abs(mouse-cat2);
+  console.log(dmouseCat1,dmouseCat2)
+  if (dmouseCat2 > dmouseCat1){
+    console.log('cat1');
+  }
+  else if (dmouseCat1 > dmouseCat2){
+    console.log('cat2');
+  }
+  else 
+    console.log('os gatos trombam e o rato foge');
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  list = [];
+  for (i in array){
+      if (array[i]%3  == 0 && array[i]%5 == 0){
+          list.push('fizzBuzz');
+      } 
+      else if (array[i]%3 ==0 || array[i]%5 == 0) {
+          if (i%3 ==0){
+              list.push('fizz');
+          }
+          else
+              list.push('buzz');
+      }
+      else 
+          list.push('bug!');
+  }
+  console.log(list);
 }
 
 // Desafio 9
