@@ -2,44 +2,43 @@
 function compareTrue(valorLogicoA, valorLogicoB) {
   if (valorLogicoA === true && valorLogicoB === true) {
     return true;
-  } 
-  
-  return false;  
+  }
+  return false;
 }
 
 /* console.log(compareTrue(true, true));
 console.log(compareTrue(false, true)); */
 
-//Desafio 2
-function calcArea (base, height) {
+// Desafio 2
+function calcArea(base, height) {
   return (base * height) / 2;
 }
 
 /* console.log(calcArea(10, 4)); */
 
-//Desafio 3
-function splitSentence (texto) {
+// Desafio 3
+function splitSentence(texto) {
   return texto.split(' ');
 }
 
 /* console.log(splitSentence("go Trybe")); */
 
-//Desafio 4
-function concatName (array) {
+// Desafio 4
+function concatName(array) {
   return array[array.length - 1] + ', ' + array[0];
 }
 
 /* console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])); */
 
-//Desafio 5
-function footballPoints (wins, ties) {
+// Desafio 5
+function footballPoints(wins, ties) {
   return ((wins * 3) + ties);
 }
 
 /* console.log(footballPoints(10, 3)); */
 
-//Desafio 6
-function highestCount (arrayNumeros) {
+// Desafio 6
+function highestCount(arrayNumeros) {
   let cont = 0;
   let maiorValor = maiorNumeroDoVetor (arrayNumeros);
 
@@ -51,7 +50,7 @@ function highestCount (arrayNumeros) {
   return cont;
 }
 
-function maiorNumeroDoVetor (arrayNumeros) {
+function maiorNumeroDoVetor(arrayNumeros) {
   let maiorValor = arrayNumeros[0];
   for (let pos in arrayNumeros) {
     if (arrayNumeros[pos] > maiorValor) {
@@ -64,8 +63,8 @@ function maiorNumeroDoVetor (arrayNumeros) {
 /* console.log(maiorNumeroDoVetor([9, 1, 2, 3, 9, 5, 7]));
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7])); */
 
-//Desafio 7
-function catAndMouse (mouse, cat1, cat2) {
+// Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
   let distanciaEntreRatoGato1 = 0;
   let distanciaEntreRatoGato2 = 0;
 
@@ -85,8 +84,8 @@ function catAndMouse (mouse, cat1, cat2) {
 console.log(catAndMouse(10, 4, 22));
 console.log(catAndMouse(1, 0, 2)); */
 
-//Desafio 8
-function fizzBuzz (arrayNumeros) {
+// Desafio 8
+function fizzBuzz(arrayNumeros) {
   let arrayFizzBuzz = [];
   let numero;
 
@@ -108,8 +107,8 @@ function fizzBuzz (arrayNumeros) {
 
 /* console.log(fizzBuzz([2, 15, 7, 9, 45])); */
 
-//Desafio 9
-function encode (texto) {
+// Desafio 9
+function encode(texto) {
   let novoTexto = "";
   let palavra;
 
@@ -138,7 +137,7 @@ function encode (texto) {
   }
   return novoTexto;
 }
-function decode (texto) {
+function decode(texto) {
   let novoTexto = "", palavra;
 
   for (let pos in texto) {
@@ -170,8 +169,8 @@ function decode (texto) {
 /* console.log(encode("hi there!"));
 console.log(decode("h3 th2r2!")); */
 
-//Desafio 10
-function techList (arrayNomesTecnologia, name) {
+// Desafio 10
+function techList(arrayNomesTecnologia, name) {
   if (arrayNomesTecnologia.length === 0) {
     return "Vazio!";
   }
@@ -196,8 +195,8 @@ function techList (arrayNomesTecnologia, name) {
 /* onsole.log(techList([], "Lucas"));
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas")); */
 
-//Desafio 11
-function generatePhoneNumber (arrayNumeroTelefone) {
+// Desafio 11
+function generatePhoneNumber(arrayNumeroTelefone) {
   if (arrayNumeroTelefone.length != 11) {
     return "Array com tamanho incorreto.";
   }
@@ -221,7 +220,7 @@ function generatePhoneNumber (arrayNumeroTelefone) {
   return numeroTelefoneFormatado;
 }
 
-function contaNumeros (numero, numeros) {
+function contaNumeros(numero, numeros) {
     cont = 0;
     for (let pos in numeros) {
       if (numeros[pos] === numero) {
@@ -231,16 +230,15 @@ function contaNumeros (numero, numeros) {
     return cont;
 }
 
-function formataTelefone (numeroTelefone) {
+function formataTelefone(numeroTelefone) {
   let numeroTelefoneFormatado = "(" + numeroTelefone.substring(0, 2) + ") " + numeroTelefone.substring(2, 7) + "-" + numeroTelefone.substring(7, 11);
-
   return numeroTelefoneFormatado;
 }
 
 /* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); */
 
-//Desafio 12
-function triangleCheck (lineA, lineB, lineC) {
+// Desafio 12
+function triangleCheck(lineA, lineB, lineC) {
   let soma1, somaAbsoluta;
 
   soma1 = lineA + lineB;
@@ -255,8 +253,8 @@ function triangleCheck (lineA, lineB, lineC) {
 
 /* console.log(triangleCheck(10, 14, 8)); */
 
-//Desafio 13
-function hydrate (texto) {
+// Desafio 13
+function hydrate(texto) {
   let textoSoNumeros = texto.replace(/\D/g, "");
   let somaBebidas = 0, totalCoposDeAgua = 0;
 
