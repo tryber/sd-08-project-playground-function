@@ -7,10 +7,6 @@ function compareTrue(a, b) {
   }
 }
 
-
-
-
-
 // Desafio 2
 function calcArea(base, height) {
   return (base * height / 2);
@@ -26,10 +22,14 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(palavras) {
-  
-
-
+  let arrayString = [];
+  for (let index=0; index<palavras.length; index++){
+    arrayString = palavras.split(" ");
+  }
+  return arrayString;
 }
+
+
 
 
 
