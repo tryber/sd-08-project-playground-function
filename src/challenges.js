@@ -65,15 +65,18 @@ function catAndMouse(mouse, cat1, cat2) {
     distancia1 : cat1 - mouse,
     distancia2 : cat2 - mouse
   };
-  let distanciaMenor;
+  
   if (animal.distancia1 < animal.distancia2) {
-    distanciaMenor = cat1
+    distanciaMenor = "cat1";
+  } else if (animal.distancia2 < animal.distancia1) {
+    distanciaMenor = "cat2";
   } else {
-    distanciaMenor = cat2
+    distanciaMenor = "os gatos trombam e o rato foge"
   }
+
   return distanciaMenor;
 }
-//console.log(catAndMouse(1,2,3));
+console.log(catAndMouse(1,2,3));
 
 // Desafio 8
 function fizzBuzz() {
