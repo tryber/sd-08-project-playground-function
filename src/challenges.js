@@ -6,13 +6,14 @@ function compareTrue(param1, param2) {
    return false;
  }
 }
-console.log(compareTrue(false, true));
+// console.log(compareTrue(false, true));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let triangulo = (base*height)/2;
+  return triangulo;
 }
-
+console.log(calcArea(10, 5));
 // Desafio 3
 function splitSentence() {
   // seu código aqui
