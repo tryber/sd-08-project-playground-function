@@ -34,9 +34,10 @@ function splitSentence(string) {
 // console.log(splitSentence('wr ra'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(theArray) {
+  return theArray[theArray.length-1] + ', ' + theArray[0] + ' .';
 }
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints() {
