@@ -5,11 +5,10 @@ function compareTrue(bool1, bool2) {
   return bool1 && bool2
 }
 
-console.log(compareTrue(true, true))
-
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
+  let area = (base * heigth) / 2;
+  return area;
 }
 
 // Desafio 3
