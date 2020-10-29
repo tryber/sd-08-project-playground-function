@@ -1,3 +1,5 @@
+/*Project Playground Functions 
+Gabriel Lennox */
 // Desafio 1
 function compareTrue() {
   // seu código aqui
