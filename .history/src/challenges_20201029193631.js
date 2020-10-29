@@ -18,7 +18,7 @@ function splitSentence(text) {
 function concatName(arr) {
   let result = arr.toString();
   result = result.split(",").join(", ");
-  return result;
+  return arr.toString();
 }
 
 // Desafio 5
