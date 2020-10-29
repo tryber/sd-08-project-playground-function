@@ -17,13 +17,13 @@ function splitSentence(frase) {
 function concatName(vetor) {
   let primeiraPalavra = vetor[0];
   let ultimaPalavra = vetor[vetor.length - 1];
-  return ultimaPalavra + ", " + primeiraPalavra;
+  return `${ultimaPalavra} + ', ' + ${primeiraPalavra}`;
 }
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = wins * 3 + ties;
+  return pontos;
 }
-
 // Desafio 6
 function highestCount() {
   // seu código aqui
