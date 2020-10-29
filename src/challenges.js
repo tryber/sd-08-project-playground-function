@@ -55,7 +55,7 @@ function highestCount(repetido) {
   let maiorNumero = 0;
   let contador = 0;
   for (let i in repetido) {
-    if (repetido[key] > maiorNumero) {
+    if (repetido[i] > maiorNumero) {
       maiorNumero = repetido[i];
     }
   }
