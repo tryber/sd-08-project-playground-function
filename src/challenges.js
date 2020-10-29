@@ -28,8 +28,29 @@ function footballPoints(wins, ties) {
   // seu código aqui
 }
 
+let biggestNumber = (numbers) => {
+  let biggest = numbers[0];
+  for (number of numbers) {
+    if (number > biggest) {
+      biggest = number;
+    }
+  }
+  return biggest;
+}
+
+let countElement = (container, element) => {
+  let count = 0;
+  for (let index = 0; index < container.length; index += 1) {
+    if (container[index] == element) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
+  return countElement(numbers, biggestNumber(numbers));
   // seu código aqui
 }
 
