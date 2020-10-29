@@ -1,19 +1,17 @@
-/*Project Playground Functions 
-Gabriel Lennox*/
+//Project Playground Functions
+//Gabriel Lennox
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  let comparative
   if (bool1 && bool2 === true) {
-    comparative = true; 
+    return true;
   } else {
-    comparative = false;
+    return false;
   }
-  return comparative;
 }
 
 // Desafio 2
-function calcArea() {
-  
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
