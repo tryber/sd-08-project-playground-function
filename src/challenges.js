@@ -17,7 +17,7 @@ function splitSentence(frase) {
   // seu código aqui
   let array = [];
   let palavra = '';
-  for(char in frase){
+  for(let char in frase){
     if(frase[char] !== ' '){
       palavra += frase[char];
     } else {
