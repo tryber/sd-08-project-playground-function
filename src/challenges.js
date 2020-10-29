@@ -126,12 +126,12 @@ function decode(codigoSecreto) {
 
 // Desafio 10
 function techList(array, name) {
-  let newArray =[];
-  let orgazineTechs = array.sort();
-  for (i=0; i < orgazineTechs.length; i++){
-     newArray[i] = {tech: orgazineTechs[i], name: name};
-  }
-  return newArray;
+let techsOrdenadas = array.sort();
+let novaListaDeTechs =[];
+for (let i = 0; i < techsOrdenadas.length; i++) {
+  novaListaDeTechs.push({tech: techsOrdenadas[i], name: name})
+}
+return novaListaDeTechs;
 }
 
 // Desafio 11
