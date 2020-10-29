@@ -192,13 +192,22 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA,lineB,lineC) {
+
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(word) {
+
+  let numeros = word.replace(/\D+/g, "");
+  console.log(numeros);
+  let numCopos = 0;
+  for(let i in numeros){
+
+         numCopos += Number(numeros[i]);
+
+  }
+  return numCopos+' copos de água'
 }
 
 
