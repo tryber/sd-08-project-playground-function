@@ -38,10 +38,16 @@ function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 
-console.log(footballPoints(15, 6));
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+// Desafio 6 - Método de sort retirado de https://stackoverflow.com/a/1063027/14424360
+function highestCount(array) {
+  let sortedArray = array.sort((a, b) => b - a);
+  let numCount = 0;
+  for (let i in sortedArray) {
+    if (sortedArray[i] === sortedArray[0]) {
+      numCount += 1;
+    }
+  }
+  return numCount;
 }
 
 // Desafio 7
