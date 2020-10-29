@@ -10,13 +10,15 @@ function compareTrue(valorLogicoA, valorLogicoB) {
   }
 }
 
-console.log(compareTrue(true, true));
-console.log(compareTrue(false, true));
+// console.log(compareTrue(true, true));
+// console.log(compareTrue(false, true));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
+
+//console.log(calcArea(10, 4));
 
 // Desafio 3
 function splitSentence() {
