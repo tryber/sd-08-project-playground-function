@@ -14,73 +14,84 @@ function calcArea(num1, num2) {
   let base = num1;
   let altura = num2;
 
-  let areaTriangulo = (base * altura)/2
-  console.log(areaTriangulo)
-  return areaTriangulo 
+  let areaTriangulo = (base * altura) / 2;
+  console.log(areaTriangulo);
+  return areaTriangulo;
 }
 
 // Desafio 3
 function splitSentence(input) {
+  let frase = [];
 
-  let frase = [];                
-  
-  for (let i = 0; i < input.length; i += 1) {       
-    frase += input[i]
+  for (let i = 0; i < input.length; i += 1) {
+    frase += input[i];
   }
-  let novoArray = frase.split(" ")        
-  console.log(novoArray)
-  return novoArray     
-      }   
-splitSentence("go Trybe")
+  let novoArray = frase.split(" ");
+  console.log(novoArray);
+  return novoArray;
+}
+splitSentence("go Trybe");
 
 // Desafio 4
 function concatName(input) {
   let entrada = input;
-  let retorno = entrada[entrada.length -1] + ", " + entrada[0]
-  console.log(retorno)
-  return retorno
-  }  
-  
-concatName(["Lucas", "Cassiano", "Ferraz", "Paollilo"])
+  let retorno = entrada[entrada.length - 1] + ", " + entrada[0];
+  console.log(retorno);
+  return retorno;
+}
+
+concatName(["Lucas", "Cassiano", "Ferraz", "Paollilo"]);
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   let vitorias = wins * 3;
   let empates = ties * 1;
   let pontos = vitorias + empates;
-  console.log(pontos)  
-  return pontos
-} footballPoints(10,5)
+  console.log(pontos);
+  return pontos;
+}
+footballPoints(10, 5);
 
 // Desafio 6
 function highestCount(input) {
-  let arrayBase = []; 
-   
-  
-  for (let i = 0; i < input.length; i+=1){
-         arrayBase.push(input[i]);
+  let arrayBase = [];
+
+  for (let i = 0; i < input.length; i += 1) {
+    arrayBase.push(input[i]);
   }
-  arrayBase.sort(function(a, b){
-      return a-b;
+  arrayBase.sort(function (a, b) {
+    return a - b;
   });
-  let numberOfRepeats = 1; 
-  for(let i=arrayBase.length-1; i >= 0; i -= 1)
-  if (arrayBase[i] == arrayBase[i-1]){
-  numberOfRepeats += 1
-  } else {
-  break;
-  }
+  let numberOfOccurrences = 1;
+  for (let i = arrayBase.length - 1; i >= 0; i -= 1)
+    if (arrayBase[i] == arrayBase[i - 1]) {
+      numberOfOccurrences += 1;
+    } else {
+      break;
+    }
 
-  console.log(numberOfRepeats)
-  return numberOfRepeats
-}highestCount([9,1,2,3,9,5,7]) 
-   
-
+  console.log(numberOfOccurrences);
+  return numberOfOccurrences;
+}
+highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(cat1,cat2,mouse) {
+  let gato1 = cat1;
+  let gato2 = cat2;
+  let rato = mouse;
+
+  if (cat1 - mouse < cat2 - mouse) {
+    console.log("cat1");
+    return "cat1"
+  } else if (cat1 - mouse > cat2 - mouse) {
+    console.log("cat2");
+    return "cat2"
+  } else {
+    console.log("os gatos trombam e o rato foge");
+    return "os gatos trombam e o rato foge"
+  }
+} catAndMouse(10,15,5)
 
 // Desafio 8
 function fizzBuzz() {
@@ -130,5 +141,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
-
+};
