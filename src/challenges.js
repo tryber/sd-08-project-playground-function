@@ -100,29 +100,19 @@ function decode() {
 function createObject(array, name) {
   let newArray = [];
   for (let index = 0; index < array.length; index += 1) {
-    newArray.push({tech: array[index], name: name})
+    newArray.push({ tech: array[index], name })
   }
   return newArray;
 }
 
 // Desafio 10
 function techList(tech, name) {
-  let object = createObject(tech, name);
   if (tech.length === 0) {
-    return 'Vazio!'
+    return 'Vazio!';
   }
-
-  return object.sort(function (a, b) {
-    if (a.tech > b.tech) {
-      return 1;
-    } else if (b.tech > a.tech) {
-      return -1;
-    }
-    return 0;
-  });
+  tech.sort();
+  return createObject(tech, name);
 }
-
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],'Lucas'))
 
 // Desafio 11
 function generatePhoneNumber() {
