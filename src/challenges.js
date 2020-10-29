@@ -3,6 +3,8 @@ function compareTrue(valor1, valor2) {
   // seu código aqui
   if (valor1 === true && valor2 === true) {
     return true;
+  } else {
+    return false;
   }
 }
 
@@ -19,14 +21,14 @@ function calcArea(base, height) {
 // referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 function splitSentence(string) {
   // seu código aqui
-  let stringArray = string.split(' ');
+  let stringArray = string.split(" ");
   return stringArray;
 }
 
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  let string = array[0] + ", " + array[array.length-1];
+  let string = array[array.length - 1] + ", " + array[0];
   return string;
 }
 
