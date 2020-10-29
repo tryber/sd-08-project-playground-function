@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a == true && b ==true) {
+  if (a === true && b === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -13,9 +12,23 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  let newStrStorage = [];
+  let newStr = "";
+
+  for (let i in str) {
+    if (str[i] != " ") {
+      newStr += str[i];
+    } else {
+      newStrStorage.push(newStr);
+      newStr = "";
+    }
+  }
+  newStrStorage.push(newStr);
+  return newStrStorage;
 }
+
+console.log(splitSentence("My name is Silvio"));
 
 // Desafio 4
 function concatName() {
