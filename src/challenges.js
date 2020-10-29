@@ -14,8 +14,14 @@ function compareTrue(passei, trybe) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+let base = 40;
+let height = 20;
+
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+
+  return area;
+  
 }
 
 // Desafio 3
