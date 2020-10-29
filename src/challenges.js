@@ -1,11 +1,11 @@
-function compareTrue(valor1, valor2) {
-  if (valor1 && valor2) {
+function compareTrue(nome, sobrenome) {
+  if (nome === "andre", sobrenome === "santana") {
     return true;
   } else {
     return false;
   }
 }
-compareTrue(false, true)
+compareTrue("andre", "santana");
 
 // Desafio 2
 function calcArea() {
