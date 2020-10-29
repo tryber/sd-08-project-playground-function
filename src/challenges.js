@@ -50,7 +50,7 @@ function footballPoints(wins,ties) {
   let pontos = vitorias + empates;
   console.log(pontos)  
   return pontos
-} 
+} footballPoints(10,5)
 
 // Desafio 6
 function highestCount(input) {
