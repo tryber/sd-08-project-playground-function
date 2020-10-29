@@ -46,7 +46,7 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   let result;
   if (Math.abs(cat1 - mouse) < (Math.abs(cat2 - mouse))) {
     result = 'cat1'
@@ -59,8 +59,20 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let result = [];
+  for (let i in numeros) {
+    if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (numeros[i] % 3 === 0) {
+      result.push('fizz');
+    } else if (numeros[i] % 5 === 5) {
+      result.push('buzz');
+    } else {
+      result.push('bug!');
+    }
+  }
+  return result;
 }
 
 // Desafio 9
