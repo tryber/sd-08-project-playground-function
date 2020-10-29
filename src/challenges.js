@@ -82,11 +82,70 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
+function encode(sentence) {
   // seu código aqui
+  let sentenceEncoded = '';
+  for (let i = 0; i < sentence.length; i += 1) {
+    switch (sentence[i].toLowerCase()) {
+      case 'a': {
+        sentenceEncoded += 1;
+        break;
+      }
+      case 'e': {
+        sentenceEncoded += 2;
+        break;
+      }
+      case 'i': {
+        sentenceEncoded += 3;
+        break;
+      }
+      case 'o': {
+        sentenceEncoded += 4;
+        break;
+      }
+      case 'u': {
+        sentenceEncoded += 5;
+        break;
+      }
+      default: {
+        sentenceEncoded += sentence[i];
+      }
+    }
+  }
+  return sentenceEncoded;
 }
-function decode() {
+
+function decode(sentence) {
   // seu código aqui
+  let sentenceDecoded = '';
+  for (let i = 0; i < sentence.length; i += 1) {
+    switch (sentence[i]) {
+      case '1': {
+        sentenceDecoded += 'a';
+        break;
+      }
+      case '2': {
+        sentenceDecoded += 'e';
+        break;
+      }
+      case '3': {
+        sentenceDecoded += 'i';
+        break;
+      }
+      case '4': {
+        sentenceDecoded += 'o';
+        break;
+      }
+      case '5': {
+        sentenceDecoded += 'u';
+        break;
+      }
+      default: {
+        sentenceDecoded += sentence[i];
+      }
+    }
+  }
+  return sentenceDecoded;
 }
 
 // Desafio 10
