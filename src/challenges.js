@@ -1,4 +1,5 @@
-// Desafio 1
+//Que Deus me ajude!
+// Desafio 1 
 function compareTrue() {
   // seu código aqui
 }
