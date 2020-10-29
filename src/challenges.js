@@ -18,12 +18,16 @@ function splitSentence(string) {
   let frase = string
   let array = frase.split(' ')
   return array
-}console.log(splitSentence('Ai que vida maravilhosa'))
+}//console.log(splitSentence('Ai que vida maravilhosa'))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+let arrayGordim = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+function concatName(array) {
+  let palavras = array
+  let lastWord = palavras[palavras.length - 1]
+  let firstWord = palavras[0]
+  return lastWord + ", " + firstWord
+}console.log(concatName(arrayGordim))
 
 // Desafio 5
 function footballPoints() {
