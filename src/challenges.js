@@ -45,7 +45,7 @@ function concatName(array) {
 // ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá
 // retornar Paolillo, Lucas.
 let resultado = string(array[array.length] +", "+array[0]);
-
+return resultado;
 }
 
 // Desafio 5
