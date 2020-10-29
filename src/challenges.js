@@ -120,7 +120,7 @@ function fizzBuzz(arrayNumeros)
 
     if(numero % 3 == 0 && numero % 5 == 0)
     {
-      arrayFizzBuzz.push("FizzBuzz");
+      arrayFizzBuzz.push("fizzBuzz");
     }
     else if(numero % 3 != 0 && numero % 5 != 0)
     {
@@ -128,11 +128,11 @@ function fizzBuzz(arrayNumeros)
     }
     else if(numero % 5 == 0)
     {
-      arrayFizzBuzz.push("Buzz");
+      arrayFizzBuzz.push("buzz");
     }
     else if(numero % 3 == 0)
     {
-      arrayFizzBuzz.push("Fizz");
+      arrayFizzBuzz.push("fizz");
     }
   }
 
@@ -142,12 +142,75 @@ function fizzBuzz(arrayNumeros)
 //console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(texto) 
+{
+  let novoTexto = "";
+  let palavra;
+
+  for (let pos in texto)
+  {
+    palavra = texto[pos];
+
+    switch (palavra) 
+    {
+      case 'a':
+        novoTexto = novoTexto + "1";
+        break;
+      case 'e':
+        novoTexto = novoTexto + "2";
+        break;
+      case 'i':
+        novoTexto = novoTexto + "3";
+        break;
+      case 'o':
+        novoTexto = novoTexto + "4";
+        break;
+      case 'u':
+        novoTexto = novoTexto + "5";
+        break;
+      default:
+        novoTexto = novoTexto + palavra;
+    }
+  }
+
+  return novoTexto;
 }
-function decode() {
-  // seu código aqui
+function decode(texto) 
+{
+  let novoTexto = "";
+  let palavra;
+
+  for (let pos in texto)
+  {
+    palavra = texto[pos];
+
+    switch (palavra) 
+    {
+      case '1':
+        novoTexto = novoTexto + "a";
+        break;
+      case '2':
+        novoTexto = novoTexto + "e";
+        break;
+      case '3':
+        novoTexto = novoTexto + "i";
+        break;
+      case '4':
+        novoTexto = novoTexto + "o";
+        break;
+      case '5':
+        novoTexto = novoTexto + "u";
+        break;
+      default:
+        novoTexto = novoTexto + palavra;
+    }
+  }
+
+  return novoTexto;
 }
+
+// console.log(encode("hi there!"));
+// console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
