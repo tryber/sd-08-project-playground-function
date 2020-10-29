@@ -33,8 +33,20 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+function highestCount(parametro) {
+  let valorDoParametro = parametro,
+      numerosEmOrdemCrescente = valorDoParametro.sort(),
+      maiorNumero = numerosEmOrdemCrescente[numerosEmOrdemCrescente.length -1],
+      numeroDeRepeticoes = 0
+      
+        for(let verificadorDeNumero in valorDoParametro){
+          if(maiorNumero == valorDoParametro[verificadorDeNumero]){
+            numeroDeRepeticoes += 1
+          }
+        }
+      
+      return numeroDeRepeticoes
 }
 
 // Desafio 7
