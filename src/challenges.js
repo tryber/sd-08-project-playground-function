@@ -48,7 +48,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distMouseCat1 = Math.abs(mouse - cat1);
   let distMouseCat2 = Math.abs(mouse - cat2);
   if (distCats == 0) {
-    return 'os gatos trombaram e o rato foge';
+    return 'os gatos trombam e o rato foge';
   } else if (distMouseCat1 < distMouseCat2) {
     return 'cat1';
   } else {
@@ -74,8 +74,8 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+
 }
 function decode() {
   // seu código aqui
