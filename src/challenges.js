@@ -9,7 +9,7 @@ function compareTrue(a, b) {
   }
   // seu código aqui
 }
-console.log(compareTrue(5, 10));
+//console.log(compareTrue(5, 10));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -25,14 +25,25 @@ function splitSentence(string) {
     let split = string.split(" ");
     return split;
   }
-  console.log(splitSentence("Go Trybe!"));
+  //console.log(splitSentence("Go Trybe!"));
   // seu código aqui
 
 // Desafio 4
-function concatName() {
-
-  // seu código aqui
-}
+function concatName(nomes) {
+  let PRIMEIROITEM;
+  let ULTIMOITEM;
+  let name = "";
+    for (index = 0; nomes.length > index; index += 1){
+      PRIMEIROITEM = nomes[0];
+      if (index = nomes.length - 1){
+        ULTIMOITEM = nomes[index];
+      }
+      name = ULTIMOITEM +", "+ PRIMEIROITEM;
+    }
+    return name;
+  }
+// seu código aqui
+//console.log(concatName(["Lucas", "Cassiano", "Ferraz", "Paolillo"]))
 
 // Desafio 5
 function footballPoints() {
