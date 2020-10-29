@@ -90,12 +90,46 @@ function fizzBuzz(numbers) {
   return result;
 }
 
+const vowels = {
+  'a': 1,
+  'e': 2,
+  'i': 3,
+  'o': 4,
+  'u': 5
+};
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let result = '';
+  for (let i = 0, len = str.length; i < len; i++) {
+    const letter = str[i].toLowerCase();
+    if (!vowels[letter]) {
+      result += letter;
+    } else {
+      result += vowels[letter];
+    }
+  }
+  return result;
 }
-function decode() {
-  // seu código aqui
+
+function decode(str) {
+  let result = '';
+  for (let i = 0, len = str.length; i < len; i++) {
+    let code = str[i];
+    let letter = null;
+    for (let cur in vowels) {
+      if (vowels[cur.toLowerCase()] == code) {
+        letter = cur;
+        break;
+      }
+    }
+    if (letter) {
+      result += letter;
+    } else {
+      result += code;
+    }
+  }
+  return result;
 }
 
 // Desafio 10
