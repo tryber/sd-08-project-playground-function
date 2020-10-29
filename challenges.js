@@ -1,8 +1,8 @@
 function compareTrue(firstBoolean, secondBoolean) {
-  if (firstBoolean == true && secondBoolean == true) {
+  if (firstBoolean && secondBoolean) {
     return true;
   }
   return false;
 }
 
-compareTrue(false, true);
+compareTrue(true, true);
