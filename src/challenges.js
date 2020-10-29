@@ -1,9 +1,8 @@
 // Desafio 1
 function compareTrue(valorX, valorY) {
-  let result;
-  if(valorX === true && valorY === true){
+  if (valorX === true && valorY === true) {
     result = true;
-  }else{
+  } else {
     result = false;
   }
   console.log(result);
@@ -13,17 +12,17 @@ function compareTrue(valorX, valorY) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let result;
-  result = (base*height)/2
-  console.log(result);
+  let area;
+  area = (base * height) /2;
+  console.log(area);
 }
 
-/*calcArea(8,10)*/
+/*calcArea(8, 10)*/
 
-// Desafio 3 - as informações referentes ao split() foram retiradas do dev media:https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array. 
+// Desafio 3 - as informações referentes ao split() foram retiradas do dev media:https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array.
 function splitSentence(word) {
-    let array = []
-    array = word.split(" ")
+    let array = [];
+    array = word.split(" ");
     console.log(array);
 }
 
