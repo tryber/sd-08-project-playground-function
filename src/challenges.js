@@ -72,11 +72,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distancia1 = mouse - cat1
   let distancia2 = mouse - cat2
 
-  if (cat1 > mouse){
+  if (cat1 > mouse) {
     distancia1 = cat1 - mouse
   }
 
-  if (cat2 > mouse){
+  if (cat2 > mouse) {
     distancia2 = cat2 - mouse
   }
 
@@ -92,14 +92,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   for (let index in array) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      return 'fizzbuzz'
+      array[index] = 'fizzbuzz'
     } else if (array[index] % 5 === 0) {
-      return 'buzz'
-    } else if (array[index] % 3 === 0){
-      return 'fizz'
+      array[index] = 'buzz'
+    } else if (array[index] % 3 === 0) {
+      array[index] = 'fizz'
     }
-    return 'bug!'
   }
+  return array
 }
 
 // Desafio 9
