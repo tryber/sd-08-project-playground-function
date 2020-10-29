@@ -21,18 +21,23 @@ function calcArea(base, height) {
 
 
 // Desafio 3
-function splitSentence(teste) {
-  return teste.split(' ');
+function splitSentence(string) {
+  return string.split(' ');
 }
-
-let teste = splitSentence("go trybe");
-console.log(teste)
+// let string = splitSentence("go trybe");
+// console.log(string)
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(itens) {
+  let priItem = itens[0];
+  let ultItem = itens[itens.length -1];
+
+  return `${ultItem}, ${priItem}`;
 }
+
+let itens = concatName('1','2','3','4','5','6');
+console.log(itens);
 
 // Desafio 5
 function footballPoints() {
