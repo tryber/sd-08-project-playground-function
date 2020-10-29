@@ -18,9 +18,11 @@ function calcArea(base, height) {
 calcArea();
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(separate) {
   // seu código aqui
+  return separate.split(' ');
 }
+console.log(splitSentence("Go trybe"));
 
 // Desafio 4
 function concatName() {
