@@ -78,15 +78,17 @@ function highestCount(maior) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  posMouse = mouse;
-  posCat1 = cat1;
-  posCat2 = cat2;
-  if (Math.abs(posCat1 - posMouse) < Math.abs(posCat2 - posMouse)){
-    return "cat2";
-  } else if (Math.abs(posCat2 - posMouse) < Math.abs(posCat1 - posMouse)){
+  let distMC1 = Math.abs(cat1 - mouse);
+  let distMC2 = Math.abs(cat2 - mouse);
+  let distCats = Math.abs(cat1 - mouse) - Math.abs(cat2 - mouse);
+  
+  if (distCats === 0){
+    return "os gatos trombam e o rato foge";
+  }
+  if (distMC1 < distMC2){
     return "cat1";
-  } else if (Math.abs(posCat1 - posMouse) == Math.abs(posCat2 - posMouse)){
-    return "Os gatos trombam e o rato foge";
+  } else {
+    return "cat2";
   }
   // seu código aqui
 }
@@ -158,18 +160,17 @@ console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
 function hydrate(string) {
-  let stringValue = string;
-  let result = stringValue.match(/\d+/g);
-  for (key in string){
-    if(stringValue.match(/\d+/g) > 1){
-      return stringValue.match(/\d+/g) +" copos de água"
-    }else{
-        return stringValue.match(/\d+/g) +" copo de água";
-  }
-   // seu código aqui
-  }
+  // let stringValue = string;
+  // let result = stringValue.match(/\d+/g);
+  // for (key in string){
+  //   if(stringValue.match(/\d+/g) > 1){
+  //     return stringValue.match(/\d+/g) +" copos de água"
+  //   }else{
+  //       return stringValue.match(/\d+/g) +" copo de água";
+  // }
+  //  // seu código aqui
+  // }
 }
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   calcArea,
