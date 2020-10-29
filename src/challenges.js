@@ -100,16 +100,19 @@ function decode(frase) {
 function techList(tech,name) {
   tech = tech.sort();
   let lista = [];
-  for (let key in tech){
-    let objeto = {
-      tech: tech[key],
-      name: name
-    }
-    lista.push (objeto);
+  if (tech.length===0){
+    return "Vazio!";
+  } else {
+      for (let key in tech){
+        let objeto = {
+          tech: tech[key],
+          name: name
+        }
+      lista.push (objeto);
+      }
+      return lista;
   }
-  return lista;
 }
-console.log(techList(["React","CSS", "Jest", "HTML", "JavaScript"],"Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
