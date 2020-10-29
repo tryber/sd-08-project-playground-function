@@ -6,10 +6,8 @@ function compareTrue(val1, val2) {
     return false;
   }
 }
-
-let res = compareTrue(true, true);
-console.log(res)
-
+// let res = compareTrue(true, true);
+// console.log(res)
 
 
 // Desafio 2
