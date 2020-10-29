@@ -144,9 +144,31 @@ function techList(array, name) {
   }
 }
 
+function checaRepeticoes(array,n){
+  let count = 0;
+  for(let pos in array){
+    if(array[pos] == n){
+      count += 1;
+    }
+  }
+  return count;
+}
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let tel = '';
+  if(array.length != 11){
+    return('Array com tamanho incorreto.');
+  } else {
+    for(let pos in array){
+      if(array[pos] > 9 || array[pos] < 0 || checaRepeticoes(array, array[pos]) >= 3){
+        return('não é possível gerar um número de telefone com esses valores');
+      } else {
+        tel += array[pos].toString();
+      }
+    }
+  }
+  let telFormated = `(${tel.slice(0,2)}) ${tel.slice(2,7)}-${tel.slice(-4)}`;
+  return telFormated;
 }
 
 // Desafio 12
