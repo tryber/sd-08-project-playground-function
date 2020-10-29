@@ -57,7 +57,7 @@ function highestCount(array) {
     if (array[index] > maiorValor) {
       maiorValor = array[index]
       repeticoes = 1
-    } else if (array[index] === maiorValor){
+    } else if (array[index] === maiorValor) {
       repeticoes += 1
     }
   }
