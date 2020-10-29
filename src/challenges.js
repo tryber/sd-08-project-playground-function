@@ -83,11 +83,11 @@ function fizzBuzz(arrayNumbers) {
   let newArray = [];
 
   for (let x = 0; x < arrayNumbers.length; x += 1) {
-    if (arrayNumbers[x] % 3 == 0 && arrayNumbers[x] % 5 == 0){
-        newArray.push("fizzBuzz");
-    } else if (arrayNumbers[x] % 3 == 0){
+    if (arrayNumbers[x] % 3 == 0 && arrayNumbers[x] % 5 == 0) {
+      newArray.push("fizzBuzz");
+    } else if (arrayNumbers[x] % 3 == 0) {
       newArray.push("fizz");
-    } else if (arrayNumbers[x] % 5 == 0){
+    } else if (arrayNumbers[x] % 5 == 0) {
       newArray.push("buzz");
     } else {
       newArray.push("bug!")
@@ -97,14 +97,26 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
+function encode(palavra) {
   // seu código aqui
+  let nova_palavra = palavra.replace(/a/g, '1');
+  nova_palavra = nova_palavra.replace(/e/g, '2');
+  nova_palavra = nova_palavra.replace(/i/g, '3');
+  nova_palavra = nova_palavra.replace(/o/g, '4');
+  nova_palavra = nova_palavra.replace(/u/g, '5');
 
-
-
+  return nova_palavra;
 }
+
 function decode() {
   // seu código aqui
+  let nova_palavra = palavra.replace(/1/g, 'a');
+  nova_palavra = nova_palavra.replace(/2/g, 'e');
+  nova_palavra = nova_palavra.replace(/3/g, 'i');
+  nova_palavra = nova_palavra.replace(/4/g, 'o');
+  nova_palavra = nova_palavra.replace(/5/g, 'u');
+
+  return nova_palavra;
 }
 
 // Desafio 10
