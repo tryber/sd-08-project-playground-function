@@ -302,9 +302,76 @@ function techList(arrStr, name) {
 
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrNum) {
+  if (typeof arrNum === "object") {
+    let aux = arrNum;
+    let outputStr = '';
+    let verificaArray = true;
+    let verificaRepetido = true;
+  
+    //Verifica condições do array
+  
+    for (let index = 0; index < aux.length; index += 1) {
+      let contador = 0;
+  
+      if (aux[index] < 0 || aux[index] > 9) {
+        verificaArray = false;
+        break;
+      }
+      
+      for (let j = 0 ; j < aux.length; j += 1) {
+       
+        if (aux[index] == aux[j]) {
+          contador += 1;
+        }
+  
+        if (contador >= 3) {
+          verificaRepetido = false;
+          break;
+        }
+      }
+    }
+  
+    //Organiza a string de output
+  
+    if (aux.length == 11) {
+      for (let index in aux) {
+        if (index == 0) {
+          outputStr = '(' + aux[index];
+        }
+        else if (index == 1) {
+          outputStr += aux[index] + ') ';
+        }
+        else if (index >= 2 && index <= 5) {
+          outputStr += aux[index];
+        }
+        else if (index == 6) {
+          outputStr += aux[index] + "-";
+        }
+        else {
+          outputStr += aux[index];
+        }
+      }
+    }
+    else if (verificaRepetido == false || verificaArray == false) {
+      outputStr = "não é possível gerar um número de telefone com esses valores";
+    }
+    else {
+      outputStr = "Array com tamanho incorreto.";
+    }
+  
+    return outputStr;
+  }
+  else {
+    return `ERROR > tipo não é objeto de Array`;
+  }
+ 
 }
+
+// < Para o teste manual >
+// let arrayteste4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+// console.log(generatePhoneNumber(arrayteste4));
+
 
 // Desafio 12
 function triangleCheck() {
