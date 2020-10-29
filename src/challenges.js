@@ -137,7 +137,7 @@ function encode(string) {
 // console.log(encode(string))
 // let string = '1 h2ll4 w4rld'
 function decode(string) {
-  for (let index in string) {
+  for (let index = 0; index < string.length; index += 1) {
     string.replace('a', '1')
     string.replace('e', '2')
     string.replace('i', '3')
@@ -155,7 +155,7 @@ function techList(tech, name) {
   let result = []
   let object = {
     tech: null,
-    name: null
+    name: null,
   }
   if (tech.length === 0) {
     return 'Vazio!'
