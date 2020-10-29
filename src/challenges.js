@@ -61,14 +61,46 @@ function highestCount(array) {
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1, cat2, mouse){
+
+  let distanciaCat1 = mouse - cat1;
+  let distanciaCat2 = mouse - cat2;
+
+  if(distanciaCat1 < distanciaCat2){
+
+    return("cat1");
+  }else if(distanciaCat2 < distanciaCat1){
+
+    return("cat2");
+  }else{
+    return("os gatos trombam e o rato foge");
+  }
 }
 
+  
+
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  
+  let arrayRetorno = [];
+  for(let key in array){
+
+    if(array[key] % 3 == 0 &&  array[key] % 5 == 0){
+      arrayRetorno.push("fizzBuzz");
+    }else if(array[key] % 3 == 0){
+      arrayRetorno.push("fizz");
+    }else if(array[key] % 5 == 0){
+      arrayRetorno.push("buzz");
+    }else{
+      arrayRetorno.push("bug!");
+    }
+  }
+
+  return(arrayRetorno);
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode() {
