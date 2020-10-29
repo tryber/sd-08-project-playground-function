@@ -1,11 +1,20 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(bollean,bollean2) {
   // seu código aqui
+    if (bollean == true && bollean2 == true){
+      return true;
+  }
+  else{
+      return false;
+  }
 }
 
+
+
 // Desafio 2
-function calcArea() {
+function calcArea(base,heigth) {
   // seu código aqui
+  return (base * heigth)/2
 }
 
 // Desafio 3
