@@ -8,14 +8,14 @@ function compareTrue(bol1, bol2) {
     return output;
   }
   else {
-    return `ERROR > tipos não booleanos!`;
+    return `ERROR > tipos não é booleanos!`;
   }
 }
 
 // < Para o teste manual >
-/*  let a = true;
-    let b = true;
-    console.log(compareTrue(a, b)); */
+// let a = true;
+// let b = true;
+// console.log(compareTrue(a, b));
 
 
 // Desafio 2
@@ -34,23 +34,29 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(str) {
-  let tamanhoStr = "" + str;
-  let arrayStr = [];
-  let auxiliar = '';
+  if (typeof str === "string") {
+    let inputStr = "" + str;
+    let arrayDeStr = [];
+    let auxiliar = '';
 
-  for (let index = 0; index < tamanhoStr.length; index += 1) {
+    for (let index = 0; index < inputStr.length; index += 1) {
     
-    if (tamanhoStr[index] != " ") {
-      auxiliar += tamanhoStr[index];
+      if (inputStr[index] != " ") {
+        auxiliar += inputStr[index];
+      }
+      else {
+        arrayDeStr.push(auxiliar);
+        auxiliar = '';
+      }
     }
-    else {
-      arrayStr.push(auxiliar);
-      auxiliar = '';
-    }
-  }
-  arrayStr.push(auxiliar);
+    arrayDeStr.push(auxiliar);
 
-  return arrayStr;
+    return arrayDeStr;
+  }
+  else {
+    return `ERROR > tipo não é string!`;
+  }
+  
 }
 
 // < Para o teste manual >
@@ -58,9 +64,17 @@ function splitSentence(str) {
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrStr) {
+  let inputArrStr = arrStr;
+  let outputStr = '';
+  outputStr = arrStr[inputArrStr.length - 1] + ', ' + arrStr[0];
+  return outputStr;
 }
+
+// < Para o teste manual >
+// let testeArray = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+// console.log(concatName(testeArray));
+
 
 // Desafio 5
 function footballPoints() {
