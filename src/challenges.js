@@ -149,9 +149,9 @@ function validNumber(digits) {
     return false;
   }
 
-  for (let i = 0; i < digits.length; i += 2) {
+  for (let i = 0; i < digits.length; i += 1) {
     let count = 1;
-    for (let j = 0; j < digits.length; j += 2) {
+    for (let j = 0; j < digits.length; j += 1) {
       if (i !== j && digits[i] === digits[j]) {
         count += 1;
       }
@@ -178,6 +178,8 @@ function generatePhoneNumber(digits) {
 
   return `(${ddd}) ${partA}-${partB}`;
 }
+
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
