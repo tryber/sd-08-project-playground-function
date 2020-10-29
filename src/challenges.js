@@ -87,7 +87,7 @@ function ladoMenorQueSubOutros(a, b, c) {
 
 function ehNumero(caractere) {
   for (let index = 1; index <= 9; index += 1) {
-    if (index.toString() == caractere) {
+    if (index.toString() === caractere) {
       return index;
     }
   }
@@ -97,7 +97,7 @@ function ehNumero(caractere) {
 function quantidadeDeRepeticoes(vetor, posicao) {
   let count = 0;
   for (let j = posicao; j < vetor.length; j += 1) {
-    if (vetor[j] === vetor[index]) {
+    if (vetor[j] === vetor[posicao]) {
       count += 1;
     }
   }
