@@ -21,9 +21,10 @@ function splitSentence(string) {
 //console.log(splitSentence('Feliz aniversário Lucas Cassiano Ferraz Paolillo'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrig) {
+  return `${arrayStrig[arrayStrig.length-1]}, ${arrayStrig[0]}`
 }
+//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
