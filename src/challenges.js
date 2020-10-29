@@ -99,11 +99,24 @@ function decode(codigo) {
   }
 }
 
-
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  if (tech.length != 0){
+    let objetos = [];
+    tech.sort();
+    for (index = 0; index < tech.length; index += 1){
+      objetos.push(new Object({
+      Tecnologia: tech[index],
+      Nome: name}));
+      return(objetos);
+    }
+  } else {
+    console.log("Vazio!");
+    return("");
+  }
 }
+
+console.log((techList([], "Victor")))
 
 // Desafio 11
 function generatePhoneNumber() {
