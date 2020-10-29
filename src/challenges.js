@@ -176,7 +176,7 @@ function generatePhoneNumber(array) {
               telefone += '('+array[0]
           }
           if(i == 1){
-              telefone += array[1]+')'
+              telefone += array[1]+') '
           }
           if(i == 7){
               telefone += '-'+array[7];
