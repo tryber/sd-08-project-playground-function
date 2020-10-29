@@ -119,8 +119,19 @@ function decode(phrase) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs, name) {
+  let sortedTechs = techs.sort();
+  for (let key in sortedTechs){
+    sortedTechs[key] = {
+      tech: sortedTechs[key],
+      name: name
+    }
+  }
+  // result = sortedTechs;
+  if (techs.length == 0){
+    return 'Vazio!';
+  }
+  return sortedTechs;
 }
 
 // Desafio 11
