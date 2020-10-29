@@ -28,7 +28,7 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(arrayOfStrings) {
-  let result = arrayOfStrings[0] + ", " + arrayOfStrings[arrayOfStrings.length-1];
+  let result = arrayOfStrings[arrayOfStrings.length-1] + ", " + arrayOfStrings[0];
   return result;
 }
 
