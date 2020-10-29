@@ -1,14 +1,15 @@
 // Desafio 1
 function compareTrue(numero1, numero2) {
-    if (numero1 >= numero2){ return "true"}
+    if (numero1%2 === 0 && numero2%2 !== 0){ return "true"}
       else {return "false"}
 }
-
+console.log(compareTrue(5, 11));
 
 // Desafio 2
-function calcArea(base, height) {
+function calcArea(base, height) {return (base * height)/2;
  
 }
+console.log(calcArea(10, 4));
 
 // Desafio 3
 function splitSentence() {
