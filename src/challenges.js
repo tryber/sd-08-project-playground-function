@@ -53,16 +53,16 @@ function fizzBuzz(numeros) {
   let valores = [];
   for (let index = 0; index < numeros.length; index += 1) {
     if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
-      valores.push("fizzBuzz");
+      valores.push('fizzBuzz');
     }
     else if (numeros[index] % 3 === 0) {
-      valores.push("fiz");
+      valores.push('fiz');
     }
     else if (numeros[index] % 5 === 0) {
-      valores.push("buzz");
+      valores.push('buzz');
     }
     else {
-    valores.push("bug");
+    valores.push('bug');
     }
   }
   return valores;
