@@ -126,13 +126,19 @@ function decode(codigoSecreto) {
 
 // Desafio 10
 function techList(array, name) {
-let techsOrdenadas = array.sort();
-let novaListaDeTechs =[];
-for (let techs = 0; techs < techsOrdenadas.length; techs++) {
-  novaListaDeTechs[techs] = {tech: techsOrdenadas[techs], name: name};
+  if (array == ""){
+    return "Vazio!";
+  }
+  let techsOrdenadas = array.sort();
+  let novaListaDeTechs =[];
+  for (let techs = 0; techs < techsOrdenadas.length; techs++) {
+    novaListaDeTechs[techs] = {tech: techsOrdenadas[techs], name: name};
+  }    
+    return novaListaDeTechs;
+ 
 }
-return novaListaDeTechs;
-}
+
+//console.log(techList([], "Lucas"))
 //console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 // Desafio 11
 function generatePhoneNumber() {
