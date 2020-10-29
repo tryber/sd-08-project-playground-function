@@ -1,15 +1,14 @@
 // Desafio 1
 function compareTrue(a, b) {
-  let compare = 10;
   
-  if(a < compare && b > compare){
+  if(a === true && b === true){
     return true;
-  } else{
+  } else {
     return false;
   }
   // seu código aqui
 }
-//console.log(compareTrue(5, 10));
+//console.log(compareTrue(false, true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -113,9 +112,25 @@ function fizzBuzz(numeros) {
 //console.log (fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
+function encode(string) {
+  // let vogais = [];
+  // palavra = "";
+  // for(index in string){
+  //   for(index2 in vogais){
+  //     if(string[index] = vogais[index2])
+  //       string.replace(1, "a");
+  //       string.replace(2, "e");
+  //       string.replace(3, "i");
+  //       string.replace(4, "o");
+  //       string.replace(5, "u");
+  //   }
+    
+  // }
+  // return palavra;
   // seu código aqui
 }
+console.log(string("hi there!"))
+
 function decode() {
   // seu código aqui
 }
@@ -142,10 +157,19 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let stringValue = string;
+  let result = stringValue.match(/\d+/g);
+  for (key in string){
+    if(stringValue.match(/\d+/g) > 1){
+      return stringValue.match(/\d+/g) +" copos de água"
+    }else{
+        return stringValue.match(/\d+/g) +" copo de água";
+  }
+   // seu código aqui
+  }
 }
-
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   calcArea,
