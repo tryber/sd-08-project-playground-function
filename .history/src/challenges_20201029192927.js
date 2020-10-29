@@ -81,13 +81,10 @@ function decode(text = "") {
 }
 
 // Desafio 10
-function techList(techList = [], name = "") {
+function techList(techList, name) {
   if (techList.length === 0) return "Vazio!";
   let result = [];
-  techList.forEach((tech) => {
-    result.push({ tech: tech, name: name });
-  });
-  return result;
+  tech.forEach((element) => {});
 }
 
 // Desafio 11

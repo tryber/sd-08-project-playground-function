@@ -87,7 +87,6 @@ function techList(techList = [], name = "") {
   techList.forEach((tech) => {
     result.push({ tech: tech, name: name });
   });
-  return result;
 }
 
 // Desafio 11
