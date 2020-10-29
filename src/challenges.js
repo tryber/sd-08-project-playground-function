@@ -12,12 +12,14 @@ function compareTrue(boolean1, boolean2) {
 function calcArea(base, height) {
   return ((base * height)/2);
 }
-console.log (calcArea(5,5))
+// console.log (calcArea(5,5)) //
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = string.split(" ");
+  return array;    
 }
+// console.log(splitSentence("go Trybe")) //
 
 // Desafio 4
 function concatName() {
