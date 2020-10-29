@@ -1,7 +1,18 @@
-function footballPoints(wins, ties) {
- return (wins*3) + ties
-}
+function highestCount(numeros) {
+    let biggerNumber = 0
+    let repeat = 0
+    for(let index in numeros){
+        if(numeros[index] > biggerNumber){
+            biggerNumber = numeros[index]
+        }
+        else{}
+    }
+    for(let i in numeros){
+        if(numeros[i] === biggerNumber){
+            repeat += 1
+        }
+    }
+    return repeat
+  }
 
-console.log(footballPoints(3,1))
-console.log(footballPoints(10,10))
-console.log(footballPoints(5,1))
+  console.log(highestCount([9, 9, 2, 3, 9, 5, 7]))
