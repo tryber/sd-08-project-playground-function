@@ -5,13 +5,15 @@ function compareTrue(valor1, valor2) {
       return true;
   }else {
     return false;
-  }
-  
+  } 
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  let areaTriangulo = 0;
+  areaTriangulo = (base * height) / 2;
+  return areaTriangulo;
 }
 
 // Desafio 3
