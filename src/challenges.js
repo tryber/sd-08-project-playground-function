@@ -19,9 +19,7 @@ function splitSentence() {
 
 // Desafio 4
 function concatName([nomes]) {
- // let ultimoNome = nomes.length[-1];
- // let primeiroNome = nomes.length[0];
- // return ultimoNome, primeiroNome;
+
 }
 
 // Desafio 5
@@ -43,8 +41,23 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let valores = [];
+  for (let index = 0; index < numeros.length; index += 1) {
+    if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
+      valores.push("fizzBuzz");
+    }
+    else if (numeros[index] % 3 === 0) {
+      valores.push("fiz");
+    }
+    else if (numeros[index] % 5 === 0) {
+      valores.push("buzz");
+    }
+    else {
+    valores.push("bug");
+    }
+  }
+  return valores;
 }
 
 // Desafio 9
