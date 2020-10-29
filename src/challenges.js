@@ -16,14 +16,18 @@ function calcArea(base, height) {
 
   return area
 }
- let area = calcArea(40, 10)
- console.log(area)
+//  let area = calcArea(40, 10)
+//  console.log(area)
 
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(teste) {
+  return teste.split(' ');
 }
+
+let teste = splitSentence("go trybe");
+console.log(teste)
+
 
 // Desafio 4
 function concatName() {
