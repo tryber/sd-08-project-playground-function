@@ -19,7 +19,7 @@ function calcArea(base, height) {
   
   // seu código aqui
 }
-return(5,10);
+console.log(calcArea(5,10));
 
 
 
