@@ -163,8 +163,14 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let count = 0
+  for(let i in string){
+      if(string[i] > 0){
+          count += parseInt(string[i])
+      }
+  }
+  return `${count} copos de àgua`
 }
 
 

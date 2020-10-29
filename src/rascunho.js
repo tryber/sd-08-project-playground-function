@@ -1,15 +1,11 @@
-function triangleCheck(lineA, lineB, lineC) {
-    let a = Math.abs(lineA);
-    let b = Math.abs(lineB);
-    let c = Math.abs(lineC);
-  
-    if (a < b + c && b < a + c && c < a + b) {
-      if(a > Math.abs(b - c) && b > Math.abs(a - c) && c > Math.abs(a - b)){
-          return true;
-      }
-    } else {
-      return false;
+function hydrate(string) {
+    let count = 0
+    for(let i in string){
+        if(string[i] > 0){
+            count += parseInt(string[i])
+        }
     }
+    return `${count} copos de àgua`
   }
 
-  console.log(triangleCheck(20,4,3))
+  console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
