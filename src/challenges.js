@@ -94,9 +94,23 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(posicoes.posicaoDoRato, posicoes.primeiroGato, posicoes.segundoGato));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(listaDeNumeros) {
+  let retorna = [];
+  for (i in listaDeNumeros) {
+    if (listaDeNumeros[i] % 5 == 0 && listaDeNumeros[i] % 3 == 0) {
+      retorna.push('fizzBuzz');
+    } else if (listaDeNumeros[i] % 5 == 0) {
+      retorna.push('buzz');
+    } else if (listaDeNumeros[i] % 3 == 0) {
+      retorna.push('fizz');
+    } else {
+      retorna.push('bug!');
+    }
+  }
+  return retorna;
 }
+let listaDeNumeros = [14, 15, 27, 33, 45, 90]
+console.log(fizzBuzz(listaDeNumeros));
 
 // Desafio 9
 function encode() {
