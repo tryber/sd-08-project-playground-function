@@ -120,7 +120,7 @@ function techList(array, name) {
       tech: sortedArray[i],
       name,
     }
-  
+
     objectArray.push(objectGenerator)
   }
   return objectArray;
@@ -128,10 +128,34 @@ function techList(array, name) {
 
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  if (array.length != 11) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  if (numValidator(array) === false) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  
+  return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
 }
 
+function numValidator(array) {
+  for (let outer in array) {
+    let count = 0;
+    for (let inner in array) {
+      if (array[outer] === array[inner]) {
+        count += 1;
+      }
+      if (count === 3 || array[inner] > 9 || array[inner] < 0) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+console.log(generatePhoneNumber([9, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
