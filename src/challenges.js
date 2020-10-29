@@ -42,10 +42,29 @@ return numerodePontos
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(array) {
+let elemento = 0;
+let count = 0; 
+let elementoTemporario;
+let counterTemporario;
 
+for ( index =0; index < array.length; index += 1) {
+ elementoTemporario = array[index];
+ counterTemporario = 0; 
+for (counter = 0; counter < array.length; counter += 1){
+  if ( array[counter] == elementoTemporario ) {
+    counterTemporario +=     
+  
+  (counterTemporario > count)
+          elemento = elementoTemporario;
+          count = counterTemporario
+      }
+  }
+
+  return elemento;
+}
+}
+console.log( highestCount())
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
