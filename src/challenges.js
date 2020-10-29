@@ -68,7 +68,7 @@ function fizzBuzz(array) {
       if (array[i]%3  == 0 && array[i]%5 == 0){
           list.push('fizzBuzz');
       } else if (array[i]%3 ==0 || array[i]%5 == 0) {
-          if (i%3 ==0){
+          if (array[i]%3 ==0){
               list.push('fizz');
           } else {
             list.push('buzz');
