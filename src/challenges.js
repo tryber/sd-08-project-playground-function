@@ -67,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return "cat1";
   } else if (cat1 - mouse > cat2 - mouse){
     return "cat2";
-  } else if (cat1 == cat2) {
+  } else if (cat1 == mouse && cat2 == mouse) {
     return "os gatos trombam e o rato foge";
   }
 }
@@ -90,19 +90,53 @@ function fizzBuzz(numbersArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(encodeWord) {
+  let encodedString = "";
+  for (index = 0; index < encodeWord.length; index += 1) {
+    if (encodeWord[index] == "a") {
+      encodedString += "1";
+    } else if (encodeWord[index] == "e") {
+      encodedString += "2";
+    } else if (encodeWord[index] == "i") {
+      encodedString += "3";
+    } else if (encodeWord[index] == "o") {
+      encodedString += "4";
+    } else if (encodeWord[index] == "u") {
+      encodedString += "5";
+    } else {
+      encodedString += encodeWord[index];
+    }
+  }
+  return encodedString;
 }
-let teste =  [2, 5, 15, 7, 9, 45];
-console.log(fizzBuzz(teste));
-function decode() {
-  // seu código aqui
+
+function decode(decodeWord) {
+  let decodedString = "";
+  for (index = 0; index < decodeWord.length; index += 1) {
+    if (decodeWord[index] == "1") {
+      decodedString += "a";
+    } else if (decodeWord[index] == "2") {
+      decodedString += "e";
+    } else if (decodeWord[index] == "3") {
+      decodedString += "i";
+    } else if (decodeWord[index] == "4") {
+      decodedString += "o";
+    } else if (decodeWord[index] == "5") {
+      decodedString += "u";
+    } else {
+      decodedString += decodeWord[index];
+    }
+  }
+  return decodedString;
 }
 
 // Desafio 10
 function techList() {
   // seu código aqui
 }
+let teste = "h3 th2r2!"
+console.log(decode(teste));
+
 
 // Desafio 11
 function generatePhoneNumber() {
