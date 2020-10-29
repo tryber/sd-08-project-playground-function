@@ -9,7 +9,7 @@ function compareTrue(boolean1, boolean2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height) / 3;
+  let area = (base * height) / 2;
   return area;
 }
 
@@ -33,13 +33,15 @@ function concatName(namesList) {
   let printedName = namesList[namesList.length - 1] + ", " + namesList[0];
   return printedName;
 }
-let teste = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(concatName(teste));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = (wins * 3) + (ties);
+  return points;
 }
+let teste = 4;
+let teste2 = 5;
+console.log(footballPoints(teste, teste2));
 
 // Desafio 6
 function highestCount() {
