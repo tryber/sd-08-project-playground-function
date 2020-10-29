@@ -195,13 +195,25 @@ function generatePhoneNumber(arrayNumber) {
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 10])) //
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let difAC = Math.abs(lineA - lineC);
+  let difBC = Math.abs(lineB - lineC);
+  let difAB = Math.abs(lineA - lineB);
+  if ((lineB < (lineA+lineB)) && (lineB > difAC)) {
+    return true;
+  } else if ((lineA < (lineB+lineC)) && (lineA > difBC)) {
+    return true;
+  } else if ((lineC < (lineB+lineA)) && (lineC > difAB)) {
+    return true;
+  } else {
+    return false;  
 }
+}
+ // console.log(triangleCheck(10, 14, 8)) //
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(lineA, lineB, lineC) {
+  
 }
 
 
