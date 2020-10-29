@@ -105,8 +105,23 @@ function highest(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-    // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+
+    //Storing the distance between each cat and the mouse
+    let distCat1 = cat1 - mouse;
+    let distCat2 = cat2 - mouse;
+    let result = "";
+
+    if (distCat1 < distCat2) {
+        result = "cat1";
+
+    } else if (distCat2 < distCat1) {
+        result = "cat2;"
+
+    } else {
+        result = "os gatos trombam e o rato foge";
+    }
+    return result;
 }
 
 // Desafio 8
