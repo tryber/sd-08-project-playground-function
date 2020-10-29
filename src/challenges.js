@@ -1,6 +1,16 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqu
+let passei = true;
+let trybe = true;
+
+
+function compareTrue(passei, trybe) {
+  
+  if (passei === true && trybe === true) {
+    return true;
+  } else {
+    return false;
+  }
+  
 }
 
 // Desafio 2
