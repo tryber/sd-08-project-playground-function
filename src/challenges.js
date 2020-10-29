@@ -108,7 +108,7 @@ function encode(palavra) {
   return nova_palavra;
 }
 
-function decode() {
+function decode(palavra) {
   // seu código aqui
   let nova_palavra = palavra.replace(/1/g, 'a');
   nova_palavra = nova_palavra.replace(/2/g, 'e');
