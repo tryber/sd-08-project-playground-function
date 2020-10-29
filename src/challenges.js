@@ -124,13 +124,16 @@ function decode(str) {
 function techList(list,name) {
   let resultado=[]
   list.sort();
-  for (key in list){
-    resultado[key]={
-      tech:list[key],
-      name:name
-    }
+  if(list ==[]){
+    return "Vazio!";
+  }else{
+    for (key in list){
+      resultado[key]={
+        tech:list[key],
+        name:name
+      }
+    }return resultado;
   }
-  return resultado;
 }
 
 // Desafio 11
