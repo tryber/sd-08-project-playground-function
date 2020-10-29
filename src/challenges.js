@@ -1,6 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(valor1, valor2) {
+  if (typeof valor1 != "boolean" || typeof valor2 != "boolean") {
+    return "O valor não é um boolean";
+  } else if (valor1 == true && valor2 == true) {
+    return true;
+  } else return false;
 }
 
 // Desafio 2
