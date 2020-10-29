@@ -25,13 +25,24 @@ function concatName(string) {
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let contRepeticao = 0;
+  let maiorNumero = numeros[0];
+  for (let i in numeros){
+    if (maiorNumero < numeros[i]){
+      maiorNumero = numeros[i];
+      contRepeticao = 0;
+    }
+    if (maiorNumero === numeros[i]){
+      contRepeticao += 1
+    }
+  }
+  return contRepeticao;
 }
 
 // Desafio 7
