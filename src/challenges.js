@@ -144,7 +144,9 @@ function decode(string) {
 }
 
 // Desafio 10
-  // seu código aqui
+function techList() {
+// seu código aqui
+}
 
 // Desafio 11
 function generatePhoneNumber() {
