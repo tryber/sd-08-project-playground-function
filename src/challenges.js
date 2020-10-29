@@ -136,9 +136,11 @@ function techList(techName, name) {
   let techDetails = {};
   let techList = [];
   for (index = 0; index < techName.length; index += 1) {
-    techList.push(techDetails.tech = "tech:", techName[index], techDetails.name = "name", name)
+    techDetails.tech = techName[index]; 
+    techDetails.name = name;
+    techList.push(techDetails);
   }
-  return techList;
+  return techList 
 }
 let teste = ["React", "Jest", "HTML", "CSS", "JavaScript"]
 let nome = "Jeferson";
