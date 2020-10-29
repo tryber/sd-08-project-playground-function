@@ -1,16 +1,21 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(valor1, valor2) {
   // seu código aqui
+  return valor1 == true && valor2 == true ? true : false;
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return (base * altura) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(palavra) {
   // seu código aqui
+  let arrayString = [];
+  arrayString = palavra.split(" ");
+  return arrayString;
 }
 
 // Desafio 4
