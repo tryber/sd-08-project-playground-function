@@ -93,33 +93,53 @@ function fizzBuzz(array) {
 // console.log(fizzBuzz([2, 15, 7, 9, 45])) //
 
 // Desafio 9
-function encode(string) {
-  string = string.toLowerCase();
-  let newString = string.split();
-  let newString2 = "";     
-  for (let index = 0; index < string.length; index +=1) {
-    if (string[index] == "a") {
+function encode(stringEncode) {
+  stringEncode = stringEncode.toLowerCase();
+  let newString = stringEncode.split();
+  let stringFinalEncode = "";     
+  for (let index = 0; index < stringEncode.length; index +=1) {
+    if (stringEncode[index] == "a") {
       newString[index] = "1";      
-    } else if (string[index] == "e") {
+    } else if (stringEncode[index] == "e") {
       newString[index] = "2";     
-    } else if (string[index] == "i") {
+    } else if (stringEncode[index] == "i") {
       newString[index] = "3";
-    } else if (string[index] == "o") {
+    } else if (stringEncode[index] == "o") {
       newString[index] = "4";
-    } else if (string[index] == "u") {
+    } else if (stringEncode[index] == "u") {
       newString[index] = "5";
     } else {
-      newString[index] = string[index];     
+      newString[index] = stringEncode[index];     
     }
-    newString2 += newString[index];
+    stringFinalEncode += newString[index];
   }  
-  return (newString2)
+  return (stringFinalEncode)
 }
-console.log(encode("hi there!"))
+console.log(encode("hi there!")) 
 
-function decode() {
-  // seu código aqui
+function decode(stringDecode) {
+  stringDecode = stringDecode.toLowerCase();
+  let newString = stringDecode.split();
+  let stringFinalDecode = "";     
+  for (let index = 0; index < stringDecode.length; index +=1) {
+    if (stringDecode[index] == "1") {
+      newString[index] = "a";      
+    } else if (stringDecode[index] == "2") {
+      newString[index] = "e";     
+    } else if (stringDecode[index] == "3") {
+      newString[index] = "i";
+    } else if (stringDecode[index] == "4") {
+      newString[index] = "o";
+    } else if (stringDecode[index] == "5") {
+      newString[index] = "u";
+    } else {
+      newString[index] = stringDecode[index];     
+    }
+    stringFinalDecode += newString[index];
+  }  
+  return (stringFinalDecode)  
 }
+console.log(decode("h3 th2r2!"))
 
 // Desafio 10
 function techList() {
