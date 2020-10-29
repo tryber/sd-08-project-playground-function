@@ -52,7 +52,21 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {}
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceMouseCat1 = mouse - cat1;
+  let distanceMouseCat2 = mouse - cat2;
+
+  distanceMouseCat1 < 0 ? distanceMouseCat1 *= -1 : distanceMouseCat1;
+  distanceMouseCat2 < 0 ? distanceMouseCat2 *= -1 : distanceMouseCat2;
+
+  if (distanceMouseCat1 > distanceMouseCat2) {
+    return 'cat2';
+  } else if (distanceMouseCat2 > distanceMouseCat1) {
+    return 'cat 1';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
+}
 
 // Desafio 8
 function fizzBuzz() {}
