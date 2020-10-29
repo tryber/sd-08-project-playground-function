@@ -97,6 +97,8 @@ function fizzBuzz(array) {
       array[index] = 'buzz'
     } else if (array[index] % 3 === 0) {
       array[index] = 'fizz'
+    } else {
+      array[index] = 'bug!'
     }
   }
   return array
