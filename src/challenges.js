@@ -153,12 +153,17 @@ function decode(string) {
 // let name = 'Lucas'
 function techList(tech, name) {
   let result = []
+  let object = {
+    tech: null,
+    name: null
+  }
   if (tech.length === 0) {
     return 'Vazio!'
   }
   tech.sort()
   for (let index = 0; index < tech.length; index += 1) {
-    let object = ({ tech: tech[index], name: name })
+    object.tech = tech[index]
+    object.name = name
     result.push(object)
   }
   return result
