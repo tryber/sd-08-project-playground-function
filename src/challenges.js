@@ -155,42 +155,32 @@ function techList(tecnologias, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(digits) {
+function validNumber(digits) {
   if (digits.length !== 11) {
-    return 'Array com tamanho incorreto.';
+    return false;
   }
 
-  let counter = {};
-  let numeroValido = true;
-
-  for (let i = 0; i < digits.length; i += 1) {
-    let cur = digits[i];
-    if (cur < 0 || cur > 9) {
-      numeroValido = false;
-      break;
-    }
-    if (!counter[cur]) {
-      counter[cur] = 1;
-    } else {
-      counter[cur] += 1;
-    }
+  if (digits.find(cur => cur < 0 || cur > 9)) {
+    return false;
   }
 
-  for (let cur in counter) {
-    if (counter[cur] >= 3) {
-      numeroValido = false;
-    }
+  let number = digits.join('');
+  if (/(\d)\1{2,}/.test(number)) return false;
+
+  return true;
+}
+
+function generatePhoneNumber(digits) {
+  if (!validNumber(digits)) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
 
-  if (numeroValido) {
-    let numeroStr = digits.join('');
-    let ddd = numeroStr.slice(0, 2);
-    let partA = numeroStr.slice(2, 7);
-    let partB = numeroStr.slice(7, 11);
-    return `(${ddd}) ${partA}-${partB}`;
-  }
+  let numeroStr = digits.join('');
+  let ddd = numeroStr.slice(0, 2);
+  let partA = numeroStr.slice(2, 7);
+  let partB = numeroStr.slice(7, 11);
 
-  return 'não é possível gerar um número de telefone com esses valores';
+  return `(${ddd}) ${partA}-${partB}`;
 }
 
 // Desafio 12
