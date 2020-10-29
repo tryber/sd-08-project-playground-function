@@ -37,7 +37,7 @@ function dividePor5(num) {
 }
 
 function refatoraVetor(vetor) {
-  for (let index = 0; index < vetor.length; index++) {
+  for (let index = 0; index < vetor.length; index += 1) {
     switch (vetor[index]) {
       case 1:
         vetor[index] = 'fizz';
@@ -96,14 +96,13 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else if (distanciaCat2 > distanciaCat1) {
     return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 // Desafio 8
 function fizzBuzz(vetor) {
   let divide = 0;
-  for (let index = 0; index < vetor.length; index++) {
+  for (let index = 0; index < vetor.length; index += 1) {
     divide += dividePor3(vetor[index]);
     divide += dividePor5(vetor[index]);
     vetor[index] = divide;
@@ -114,22 +113,33 @@ function fizzBuzz(vetor) {
 }
 // Desafio 9
 function encode(codificar) {
-  let codificado = codificar.split('a').join('1');
-  codificado = codificado.split('e').join('2');
-  codificado = codificado.split('i').join('3');
-  codificado = codificado.split('o').join('4');
-  codificado = codificado.split('u').join('5');
+  let codificado = codificar
+    .split('a')
+    .join('1')
+    .split('e')
+    .join('2')
+    .split('i')
+    .join('3')
+    .split('o')
+    .join('4')
+    .split('u')
+    .join('5');
   return codificado;
 }
 function decode(decodificar) {
-  let decodificado = decodificar.split('a').join('1');
-  decodificado = decodificado.split('e').join('2');
-  decodificado = decodificado.split('i').join('3');
-  decodificado = decodificado.split('o').join('4');
-  decodificado = decodificado.split('u').join('5');
+  let decodificado = decodificar
+    .split('1')
+    .join('a')
+    .split('2')
+    .join('e')
+    .split('3')
+    .join('i')
+    .split('4')
+    .join('o')
+    .split('5')
+    .join('u');
   return decodificado;
 }
-
 // Desafio 10
 function techList() {
   // seu código aqui
