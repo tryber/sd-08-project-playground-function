@@ -44,7 +44,7 @@ function concatName(array) {
 // Isso quer dizer que, caso o parâmetro passado para concatName seja a Array
 // ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá
 // retornar Paolillo, Lucas.
-let resultado = string(array[array.length] +", "+array[0]);
+let resultado = arr
 
 }
 

@@ -7,7 +7,7 @@ function compareTrue(valor1, valor2) {
   // Retorne true se ambos os valores são verdadeiros;
   // Retorne false se um ou ambos os parâmetros forem falsos.
   // Faça a função utilizando o operador &&.
-  if (valor1 === true && valor2 === true){
+  if ( valor1 === true && valor2 === true){
     return true;
   }
   return false;
@@ -20,21 +20,22 @@ function calcArea(base, height) {
 // Lembre-se que a área de um triângulo é calculada através da seguinte fórmula:
 // (base * altura) / 2.
   let resultado = 0;
-  resultado = (base * height)/2;
+  resultado = (base*height)/2;
   return resultado;
 }
 
 // Desafio 3
-function splitSentence(string) {
-//  Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array
+function splitSentence() {
+  // seu código aqui
+//   Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array
 // de strings separadas por cada espaço na string original.
+
 // Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
-  var array = string.split(" ");
-  return array
+
 }
 
 // Desafio 4
-function concatName(array) {
+function concatName() {
   // seu código aqui
 //   Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne
 // uma string
@@ -44,7 +45,7 @@ function concatName(array) {
 // Isso quer dizer que, caso o parâmetro passado para concatName seja a Array
 // ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá
 // retornar Paolillo, Lucas.
-let resultado = string(array[array.length] +", "+array[0]);
+
 
 }
 
@@ -55,7 +56,7 @@ function footballPoints(wins, ties) {
   // deverá se chamar ties) e retorne a quantidade de pontos que o time marcou em um campeonato.
 
   // Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
-  let resultado = ((wins * 3) + ties)
+  let resultado = (  ( wins * 3 ) + ties )
   return resultado;
 }
 
@@ -74,22 +75,22 @@ let quantidadeRepeticao = 0;
         }
       }
   for(let peca = 0; peca < teste.length; peca += 1){
-    if ( teste[maior] === teste[peca] ){
+    if(teste[maior]==teste[peca]){
         quantidadeRepeticao+=1;
-    }
+      }
   }
 return quantidadeRepeticao;
 }
 
 // Desafio 7
-function catAndMouse( mouse, cat1, cat2 ) {
-//  Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que ambos estão atrás
+function catAndMouse(mouse , cat1 , cat2 ) {
+//   Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que ambos estão atrás
 // de um rato chamado mouse.
 // Imagine que cada um dos três animais está em uma posição representada por um número.
 // Sabendo disso, crie uma função chamada catAndMouse que, ao receber a posição de mouse, cat1 e cat2,
 // nessa ordem,
 // calcule as distâncias entre o rato e os gatos e retorne qual dos felinos irá alcançar o rato primeiro
-// (sendo aquele que estará mais perto).
+//(sendo aquele que estará mais perto).
 // Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades, sua
 // função deverá retornar "cat2".
 // Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam
@@ -114,9 +115,9 @@ function fizzBuzz(array) {
 let resultado = [];
 for (const key in array){
   if ( array[key]%3 === 0 ){
-    resultado[key] += "fizz";
+    resultado[key]+="fizz";
   }
-  else if ( array[key]%5 === 0 ){
+  else if ( array[key]%5===0 ){
     resultado[key] += "Buzz";
   }
   else{
@@ -161,7 +162,7 @@ function decode() {
 // Desafio 10
 function techList() {
 //   Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses,
-// traços e espaços.
+//traços e espaços.
 
 // Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], generatePhoneNumber deverá retornar (12) 34567-8901.
 
@@ -173,12 +174,12 @@ function techList() {
 // Desafio 11
 function generatePhoneNumber() {
 //   Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como
-// parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
+//parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
 
 // Para tanto, tenha em mente algumas considerações:
 
 // Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e
-// maior que o valor absoluto da diferença entre essas medidas.
+//maior que o valor absoluto da diferença entre essas medidas.
 
 // Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
 
@@ -189,8 +190,8 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
-// Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e
-// retornar se é possível formar um triângulo com os valores apresentados de cada linha
+//   Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e
+//retornar se é possível formar um triângulo com os valores apresentados de cada linha
 
 // Para tanto, tenha em mente algumas considerações:
 
@@ -228,7 +229,7 @@ function hydrate() {
   // Notas
 
   // Para simplificar, consideraremos que qualquer coisa com um número à frente é uma bebida e que a sua string sempre virá com o formato
-  // quantidade (em número) + tipo da bebida.
+  //quantidade (em número) + tipo da bebida.
 
   // O número na frente de cada bebida está no intervalo entre 1 e 9.
 

@@ -7,7 +7,7 @@ function compareTrue(valor1, valor2) {
   // Retorne true se ambos os valores são verdadeiros;
   // Retorne false se um ou ambos os parâmetros forem falsos.
   // Faça a função utilizando o operador &&.
-  if (valor1 === true && valor2 === true){
+  if ( valor1 === true && valor2 === true){
     return true;
   }
   return false;
@@ -20,21 +20,22 @@ function calcArea(base, height) {
 // Lembre-se que a área de um triângulo é calculada através da seguinte fórmula:
 // (base * altura) / 2.
   let resultado = 0;
-  resultado = (base * height)/2;
+  resultado = (base*height)/2;
   return resultado;
 }
 
 // Desafio 3
-function splitSentence(string) {
-//  Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array
+function splitSentence() {
+  // seu código aqui
+//   Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array
 // de strings separadas por cada espaço na string original.
+
 // Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
-  var array = string.split(" ");
-  return array
+
 }
 
 // Desafio 4
-function concatName(array) {
+function concatName() {
   // seu código aqui
 //   Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne
 // uma string
@@ -44,7 +45,7 @@ function concatName(array) {
 // Isso quer dizer que, caso o parâmetro passado para concatName seja a Array
 // ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá
 // retornar Paolillo, Lucas.
-let resultado = string(array[array.length] +", "+array[0]);
+
 
 }
 
@@ -55,7 +56,7 @@ function footballPoints(wins, ties) {
   // deverá se chamar ties) e retorne a quantidade de pontos que o time marcou em um campeonato.
 
   // Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
-  let resultado = ((wins * 3) + ties)
+  let resultado = (  ( wins * 3 ) + ties )
   return resultado;
 }
 
@@ -189,7 +190,7 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
-// Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e
+//   Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e
 // retornar se é possível formar um triângulo com os valores apresentados de cada linha
 
 // Para tanto, tenha em mente algumas considerações:
@@ -228,7 +229,7 @@ function hydrate() {
   // Notas
 
   // Para simplificar, consideraremos que qualquer coisa com um número à frente é uma bebida e que a sua string sempre virá com o formato
-  // quantidade (em número) + tipo da bebida.
+  //quantidade (em número) + tipo da bebida.
 
   // O número na frente de cada bebida está no intervalo entre 1 e 9.
 

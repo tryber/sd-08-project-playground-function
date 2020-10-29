@@ -34,7 +34,7 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(array) {
+function concatName(arr) {
   // seu código aqui
 //   Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne
 // uma string
@@ -44,7 +44,7 @@ function concatName(array) {
 // Isso quer dizer que, caso o parâmetro passado para concatName seja a Array
 // ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá
 // retornar Paolillo, Lucas.
-let resultado = string(array[array.length] +", "+array[0]);
+
 
 }
 
