@@ -8,21 +8,32 @@
 // Retorne false se um ou ambos os parâmetros forem falsos.
 // Faça a função utilizando o operador &&.
 
-function compareTrue(bool_1, bool_2) {
+function compareTrue() {
   // seu código aqui
-  if (bool_1 == true && bool_2 == true) {
+  function compareTrue(bool_1, bool_2) {
+  if (bool_1 && bool_2) {
     return true;
     }
     else {
     return false;
     }
+  }  
 }
+compareTrue (true, true);
 
 // Desafio 2
-function calcArea() {
+// Área do triângulo
+// // Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área.
+// 
+// Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2.
+
+function calcArea(base, height) {
   // seu código aqui
+  let area = (base * height) / 2;
+  return area;  
 }
 
+console.log (calcArea [2, 10]);
 // Desafio 3
 function splitSentence() {
   // seu código aqui
