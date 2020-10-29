@@ -41,12 +41,11 @@ function highestCount(array) {
       highest.push(array[key]);
     }
   }
-
-  return highest.length;
+  return highest.length - 1;
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 
