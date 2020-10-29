@@ -2,9 +2,9 @@
 function compareTrue(a, b) {
   // seu código aqui
   if (a  && b) {
-      return 'true';
+      return true;
     }   else {
-          return 'false';
+          return false;
     }
   }
     console.log(compareTrue(true,true));
