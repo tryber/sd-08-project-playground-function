@@ -46,13 +46,16 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 - mouse == cat2 - mouse) {
-    return "os gatos trombam e o rato foge";
-  } else if (mouse - cat1 < mouse - cat2) {
-    return "cat1";
+  let prox = '';
+  if(Math.abs(cat1 - mouse ) < Math.abs(cat2 - mouse)){
+    prox = 'cat1';
+  } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)){
+    prox = 'cat2';
   } else {
-    return "cat2";
+    prox = 'os gatos trombam e o rato foge';
   }
+  
+  return prox;
 }
 
 // Desafio 8
@@ -74,15 +77,9 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(str) {
-  for(let x = 0; x < str.length; x += 1){
-    if(str[x] == 'a'){
-      str
-    }
-  }
-  return num;
+  
 }
 
-console.log(encode("Amazaoaa"));
 
 function decode() {
   // seu código aqui
