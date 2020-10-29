@@ -20,9 +20,17 @@ function calcArea(num1, num2) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(input) {
+
+  let frase = [];                
+  
+  for (let i = 0; i < input.length; i += 1) {       
+    frase += input[i]
+  }
+  let novoArray = frase.split(" ")        
+  console.log(novoArray)      
+      }   
+splitSentence("go Trybe")
 
 // Desafio 4
 function concatName() {
@@ -93,3 +101,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
