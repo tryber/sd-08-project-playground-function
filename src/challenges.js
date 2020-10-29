@@ -4,13 +4,22 @@ function compareTrue(proposition1, proposition2) {
 }
 
 // Desafio 2
-function calcArea(base, heigth) {
-  return (base * heigth) / 2;
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  let splitedSentence = [''];
+  let currentPosition = 0;
+  
+  for (let i = 0; i < sentence.length; i++)
+    if (sentence[i] === ' ')
+      splitedSentence[++currentPosition] = '';
+    else
+      splitedSentence[currentPosition] += sentence[i];
+
+  return splitedSentence;
 }
 
 // Desafio 4
