@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(a, b) {
   // seu código aqui
-  if (a == true && b == true) {
+  if (a && b) {
     return true
   }
   return false
@@ -34,27 +34,25 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(highestCount) {
+function highestCount(arrayHighestCount) {
   // seu código aqui
-  let topNumber = highestCount[0]
+  let topNumber = arrayHighestCount[0]
   let cont = 0
 
-  for (i in highestCount) {
-    if (highestCount[0] < highestCount[i]) {
-      topNumber = highestCount[i]
-      highestCount[0] = highestCount[i]
+  for (i in arrayHighestCount) {
+    if (arrayHighestCount[0] < arrayHighestCount[i]) {
+      topNumber = arrayHighestCount[i]
     }
   }
   console.log(topNumber)
 
-  for (let j = 0; j < highestCount.length - 1; j++) {
-    if (topNumber === highestCount[j]) {
+  for (j in arrayHighestCount) {
+    if (topNumber === arrayHighestCount[j]) {
       cont++
     }
   }
   return cont
 }
-
 
 // Desafio 7
 function catAndMouse() {
