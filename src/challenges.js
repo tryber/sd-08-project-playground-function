@@ -17,7 +17,6 @@ function compareTrue(bool_1, bool_2) {
     return false;
     }
 }
-compareTrue (true, true);
 
 
 // Desafio 2
@@ -31,7 +30,7 @@ function calcArea(base, height) {
   let area = base * height / 2;
   return area;  
 }
-calcArea (10, 10);
+
 
 // Desafio 3
 // Dividindo a frase
@@ -46,7 +45,7 @@ function splitSentence(sentence) {
   splited = sentence.split(` `); 
   return splited;
 }
-splitSentence (`go Trybe`);
+
 
 // Desafio 4
 // Concatenação de strings
@@ -56,8 +55,8 @@ splitSentence (`go Trybe`);
 
 function concatName(list) {
   // seu código aqui
-  let invertList = [` `];
-  invertList = [list[list.length -1] + `, ` + list[0]];
+  let invertList = ``;
+  invertList = list[list.length - 1] + `, ` + list[0];
   return invertList;
 }
 
