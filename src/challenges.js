@@ -29,7 +29,6 @@ function splitSentence(palavras) {
   
 
 
-
 }
 
 
@@ -42,7 +41,7 @@ function concatName(arrayNomes) {
   return (arrayNomes[arrayNomes.length - 1] + " " + arrayNomes[0]);
 }
 
-concatName(["ruben", "gustavo", "leonardo", "luiz"]);
+
 
 
 
@@ -86,7 +85,7 @@ function fizzBuzz(arrayNumeros) {
   }  
 }
 
-fizzBuzz([2,15,7,9,45]);
+
 
 
 
