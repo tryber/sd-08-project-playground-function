@@ -1,8 +1,11 @@
 // Desafio 1
-function compareTrue() {
-  ..// seu código aqui
+function compareTrue(num1, num2) {
+  if (num1 >= 0 && num2 > num1) {
+    return true;
+  } else {
+    return false;
+  }
 }
-
 // Desafio 2
 function calcArea() {
   // seu código aqui
