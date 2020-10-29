@@ -1,11 +1,7 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if(valor1 === 5 && valor2 === 10){
-    console.log(true);
-  }else{
-    console.log(false)
-  }
-return compareTrue;  
+  
+return (valor1 && valor2);  
 
 // seu código aqui
 }
