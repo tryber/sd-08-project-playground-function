@@ -54,15 +54,16 @@ function catAndMouse(mouse, cat1, cat2) {
   let catProximity1 = cat1 - mouse;
   let catProximity2 = cat2 - mouse;
 
-  if (catProximity1 == catProximity2){
+  if (Math.abs(catProximity1) == Math.abs(catProximity2)){
     return "os gatos trombam e o rato foge"
-  } else if ( catProximity1 < catProximity2) {
+  } else if ( Math.abs(catProximity1) <  Math.abs(catProximity2)) {
     return "cat1"
   } else {
     return "cat2"
   }
 }
 
+console.log(catAndMouse(1, 0, 2))
 
 // Desafio 8
 function fizzBuzz() {
