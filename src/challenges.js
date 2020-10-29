@@ -1,71 +1,42 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-}
+function compareTrue() {}
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
-}
+function calcArea() {}
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence() {}
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName() {}
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints() {}
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount() {}
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse() {}
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz() {}
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+function encode() {}
+function decode() {}
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList() {}
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+function generatePhoneNumber() {}
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+function triangleCheck() {}
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
-
+function hydrate() {}
 
 module.exports = {
   calcArea,
@@ -82,4 +53,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
