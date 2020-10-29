@@ -19,7 +19,7 @@ function splitSentence(string) {
   return splitted;
 }
 
-splitSentence(string);
+
 
 // Desafio 4
 let arrayOfStrings = ['Gabriel', 'Max', 'Gomes', 'de', 'Bessa'];
@@ -39,10 +39,17 @@ function concatName(arrayOfStrings) {
 
 concatName(arrayOfStrings);
 
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
+// Desafio 5     DA PRA MELHORAR
+
+function footballPoints(wins, ties) {
+
+  let winCont = wins * 3, tieCont = ties * 1;
+
+  console.log(total = winCont + tieCont);
+
 }
+
+
 
 // Desafio 6
 function highestCount() {
