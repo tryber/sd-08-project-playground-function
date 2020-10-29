@@ -1,54 +1,152 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(first, second) {
+  if (first === true && second === true) { return true; }
+  else { return false; }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  let wordArray = [];
+  let word = "";
+
+  for (let index = 0; index <= phrase.length; index++) {
+    if (phrase.charAt(index) == " " || index === phrase.length) {
+      wordArray.push(word);
+      word = "";
+    } else {
+      word = word + phrase.charAt(index);
+    }
+  }
+
+  return wordArray;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayOfStrings) {
+  let result = arrayOfStrings[arrayOfStrings.length - 1] + ", " + arrayOfStrings[0];
+  return result;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let highestNumber = null;
+  let count = 0;
+
+  for (let key in numbers) {
+    if (numbers[key] > highestNumber || highestNumber == null) { highestNumber = numbers[key]; }
+  }
+
+  for (let key in numbers) {
+    if (numbers[key] === highestNumber) { count++ }
+  }
+
+  return count;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs((mouse - cat1)) < Math.abs((mouse - cat2))) return "cat1";
+  else if (Math.abs((mouse - cat2)) < Math.abs((mouse - cat1))) return "cat2";
+  else if (Math.abs((mouse - cat2)) === Math.abs((mouse - cat1))) return "os gatos trombam e o rato foge";
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let fizzBuzzResult = []
+  for (let key in numbers) {
+    if (numbers[key] % 3 === 0 && numbers[key] % 5 === 0) { fizzBuzzResult.push("fizzBuzz"); }
+    else if (numbers[key] % 3 === 0) { fizzBuzzResult.push("fizz"); }
+    else if (numbers[key] % 5 === 0) { fizzBuzzResult.push("buzz"); }
+    else { fizzBuzzResult.push("bug!"); }
+  }
+
+  return fizzBuzzResult;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let encodedPhrase = "";
+  for (let index = 0; index < phrase.length; index++) {
+    switch (phrase.charAt(index)) {
+      case "a":
+        encodedPhrase = encodedPhrase + "1";
+        break;
+      case "e":
+        encodedPhrase += "2";
+        break;
+      case "i":
+        encodedPhrase += "3";
+        break;
+      case "o":
+        encodedPhrase += "4";
+        break;
+      case "u":
+        encodedPhrase += "5";
+        break;
+      default:
+        encodedPhrase += phrase.charAt(index);
+    }
+  }
+
+  return encodedPhrase;
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase) {
+  let decodedPhrase = "";
+  for (let index = 0; index < phrase.length; index++) {
+    switch (phrase.charAt(index)) {
+      case "1":
+        decodedPhrase = decodedPhrase + "a";
+        break;
+      case "2":
+        decodedPhrase += "e";
+        break;
+      case "3":
+        decodedPhrase += "i";
+        break;
+      case "4":
+        decodedPhrase += "o";
+        break;
+      case "5":
+        decodedPhrase += "u";
+        break;
+      default:
+        decodedPhrase += phrase.charAt(index);
+    }
+  }
+
+  return decodedPhrase;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let listOfTech = [];
+
+  if (tech === null || tech.length === 0) { return "Vazio!"; }
+  else {
+    tech.sort();
+
+    for (let key in tech) {
+      let objectTech = {
+        tech: tech[key],
+        name: name
+      }
+
+      listOfTech.push(objectTech);
+    }
+
+    return listOfTech;
+  }
 }
 
 // Desafio 11
