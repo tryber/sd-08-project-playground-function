@@ -133,15 +133,16 @@ function decode(decodeWord) {
 // Desafio 10
 function techList(techName, name) {
   techName.sort();
-  let techDetails = {};
   let techList = [];
   for (index = 0; index < techName.length; index += 1) {
+    let techDetails = {};
     techDetails.tech = techName[index]; 
     techDetails.name = name;
     techList.push(techDetails);
   }
   return techList 
 }
+
 let teste = ["React", "Jest", "HTML", "CSS", "JavaScript"]
 let nome = "Jeferson";
 console.log(techList(teste, nome));
