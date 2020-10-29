@@ -27,13 +27,15 @@ function concatName(arrayDeStrings) {
   let primeiraString = arrayDeStrings[0];
   let ultimaPosicao = arrayDeStrings.length - 1;
   let ultimaString = arrayDeStrings[ultimaPosicao];
-  let retorno = ultimaString + " " + primeiraString;
+  let retorno = ultimaString + ", " + primeiraString;
   return retorno;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontosWins = wins * 3;
+  let pontosTies = ties;
+  let pontosTotais = kkj;
 }
 
 // Desafio 6
