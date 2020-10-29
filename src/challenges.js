@@ -1,6 +1,6 @@
 function encontraMaior(vetor) {
   let maior = vetor[0];
-  for (let index = 0; index < vetor.length; index+=1) {
+  for (let index = 0; index < vetor.length; index += 1) {
     if (vetor[index] > maior) {
       maior = vetor[index];
     }
@@ -10,7 +10,7 @@ function encontraMaior(vetor) {
 
 function encontraQuantidadeMaior(vetor, maior) {
   let count = 0;
-  for (let index = 0; index < vetor.length; index+=1) {
+  for (let index = 0; index < vetor.length; index += 1) {
     if (vetor[index] === maior) {
       count += 1;
     }
@@ -18,6 +18,9 @@ function encontraQuantidadeMaior(vetor, maior) {
   return count;
 }
 
+function calculaDistancia(pos1, pos2){
+  return Math.abs(pos1 - pos2)
+}
 // Desafio 1
 function compareTrue(parametro1, parametro2) {
   return parametro1 && parametro2;
@@ -51,8 +54,17 @@ function highestCount(vetor) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = calculaDistancia(cat1, mouse);
+  let distanciaCat2 = calculaDistancia(cat2, mouse);
+
+  if(distanciaCat1 > distanciaCat1) {
+    return "cat2";
+  } else if(distanciaCat2 > distanciaCat1){
+    return "cat1";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
