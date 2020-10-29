@@ -48,7 +48,7 @@ function catAndMouse(mouse, cat1, cat2) {
   
   if (gato1 < gato2) return 'Cat1';
   if (gato2 < gato1) return 'Cat2';
-  return 'Os gatos trombaram em si, e o rato fugiu';
+  return "os gatos trombam e o rato foge";
     
 }
 
