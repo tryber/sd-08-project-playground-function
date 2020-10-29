@@ -33,10 +33,24 @@ function splitSentence() {
 }
 
 
+
+
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+
+function concatName(arrayNomes) {
+  return (arrayNomes[arrayNomes.length - 1] + " " + arrayNomes[0]);
 }
+
+concatName(["ruben", "gustavo", "leonardo", "luiz"]);
+
+
+
+
+
+
+
+
 
 // Desafio 5
 function footballPoints() {
