@@ -1,25 +1,22 @@
 // Desafio 1
-function compareTrue(nome, sobrenome) {  
-  if (nome === "ruben" && sobrenome === "albertassi"){
+function compareTrue(a, b) {  
+  if (a && b){
     return true;
   }else{
     return false;
   }
 }
 
-compareTrue("ruben", "albertassi");
-
+compareTrue(true, false);
 
 
 
 // Desafio 2
-function calcArea() {
-  
-
-
+function calcArea(base, height) {
+  return (base * height / 2);
 }
 
-
+calcArea(10, 10);
 
 
 
@@ -28,8 +25,11 @@ function calcArea() {
 
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(palavras) {
+  
+  for (let index=0;)
+
+
 }
 
 
