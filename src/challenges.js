@@ -5,11 +5,12 @@ function compareTrue(a,b) {
     return "true";
   } else {return "false";
   };
-
   };
+  console.log (compareTrue(true,true));
+  
   // seu código aqui
 
-}
+
 
 // Desafio 2
 function calcArea() {
