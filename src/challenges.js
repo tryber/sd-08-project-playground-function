@@ -93,10 +93,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let posicaofalta1 = mouse - cat1
   let posicaofalta2 = mouse - cat2
 
-  if (posicaofalta1 < posicaofalta2) {
+  if (posicaofalta1 > posicaofalta2) {
     return "cat1"
   }
-  else if (posicaofalta1 > posicaofalta2) {
+  else if (posicaofalta1 < posicaofalta2) {
     return "cat2"
   }
   else {
@@ -122,17 +122,18 @@ function fizzBuzz(nmrs) {
     else if (ret[i] % 5 == 0) {
       console.log("buzz")
     }
-    else if (ret[i] % 5 == 0 && ret[i] % 3 == 0) {
+    else if (ret[i] % 3 == 0 && ret[i] % 5 == 0) {
+     
       console.log("fizzBuzz")
 
     }
-    else
+    else if(ret[i] % 3 != 0 && ret[i] % 5 != 0) 
       console.log("bug!")
 
 
   }
 
-  
+
 }
 
 
