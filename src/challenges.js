@@ -25,11 +25,9 @@ function concatName(arrayString) {
   // retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
   // Isso quer dizer que, caso o parâmetro passado para concatName seja a 
   // Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
-  let stringPalavras = arrayString[0] + ', ';
-  for (let x = 1; x < arrayString.length; x += 1) {
-    stringPalavras += arrayString[x];
-    stringPalavras += x <= arrayString.length - 2 ? ', ' : "";
-  }
+  let index = arrayString.length - 1;
+  let stringPalavras = arrayString[index] + ', ' + arrayString[0];  
+
   return stringPalavras;
 }
 
