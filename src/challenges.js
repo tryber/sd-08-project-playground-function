@@ -28,7 +28,6 @@ function splitSentence(string) {
 function concatName(nomes) {
   return nomes[nomes.length -1] + ", " + nomes[0];
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -51,7 +50,7 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(numeros) {
   let valores = [];
-  for (let index = 0; index < numeros.length; index += 1) {
+  for (let index in numeros) {
     if (numeros[index] % 3 == 0 && numeros[index] % 5 == 0) {
       valores.push('fizzBuzz');
     }
@@ -67,6 +66,7 @@ function fizzBuzz(numeros) {
   }
   return valores;
 }
+
 
 // Desafio 9
 function encode() {
