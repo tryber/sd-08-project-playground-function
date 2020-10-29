@@ -3,20 +3,22 @@ let value1 = 5;
 let value2 = 10;
 function compareTrue(value1, value2) {
   if( value1 < value2) {
-    return true
-    
+    return true;
   }else{
-    return false
-  }
-     
+    return false;
+  }   
   }
 
 console.log(compareTrue(value1,value2));
 
 // Desafio 2
-function calcArea() {
-    // seu código aqui
+
+
+function calcArea(base,height) {
+    return (base * height)/2;
   }
+   
+console.log(calcArea(10,5));
   
   // Desafio 3
   function splitSentence() {
