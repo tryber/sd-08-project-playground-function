@@ -45,13 +45,13 @@ function footballPoints(wins, ties) {
 
   let winCont = wins * 3, tieCont = ties * 1;
 
-  console.log(total = winCont + tieCont);
-
+  let total = winCont + tieCont;
+  return total;
 }
 
 
 
-// Desafio 6
+// Desafio 6                     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function highestCount() {
   // seu código aqui
 }
@@ -62,8 +62,24 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+
+  let returningArray = [];
+
+  for(index in array) {
+    if((array[index] % 3 == 0) && (array[index] % 5 == 0)){
+      returningArray[index] = 'fizzBuzz';
+    } else if(array[index] % 3 == 0){
+      returningArray[index] = 'fizz';
+    } else if(array[index] % 5 == 0){
+      returningArray[index] = 'buzz';
+    } else {
+      returningArray[index] = 'bug!';
+    }
+  }
+
+  return returningArray;
+
 }
 
 // Desafio 9
