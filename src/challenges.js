@@ -137,7 +137,7 @@ function encode(string) {
 // console.log(encode(string))
 // let string = '1 h2ll4 w4rld'
 function decode(string) {
-  for (let index = 0; index < string.length; index += 1) {
+  for (let index in string) {
     string.replace('a', '1')
     string.replace('e', '2')
     string.replace('i', '3')
@@ -158,7 +158,8 @@ function techList(tech, name) {
   }
   tech.sort()
   for (let index = 0; index < tech.length; index += 1) {
-    result.push({ tech: tech[index], name: name })
+    let object = ({ tech: tech[index], name: name })
+    result.push(object)
   }
   return result
 }
