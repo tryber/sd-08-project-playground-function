@@ -4,16 +4,15 @@
 function compareTrue(value1, value2) {
   if (value1 && value2) {
     return true
-  } else {
-    return false
   }
+  return false
 }
-console.log(compareTrue("", ""))
+console.log(compareTrue(2, 'João'))
 
 // Desafio 2
 function calcArea(base, height) {
   let triangleArea = (base * height) / 2
-  return "A área do triângulo é de: " + triangleArea
+  return triangleArea
 }
 console.log(calcArea(5, 10))
 
