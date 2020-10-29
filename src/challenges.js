@@ -49,16 +49,14 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist1 = Math.abs(distCat1);
   let distCat2 = cat2 - mouse;
   let dist2 = Math.abs(distCat2);
-  
-  let distancias = [dist1, dist2];
 
-  if (dist1 == dist2) {
+  if (dist1 === dist2) {
     return 'os gatos trombam e o rato foge'
   }
   if (dist1 < dist2) {
     return 'cat1'
   }
-return 'cat2'
+  return 'cat2'
 }
 
 // Desafio 8
