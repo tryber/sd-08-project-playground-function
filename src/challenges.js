@@ -1,16 +1,30 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(a,b) {
   // seu código aqui
+  return(a && b);
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base,height) {
   // seu código aqui
+  return(base*height)/2;
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(word) {
   // seu código aqui
+  let lettras = "";
+  let palavras = [];
+  for(let key in word){
+    if(word[key] == " "){
+      palavras.push(lettras)
+      lettras = "";
+    }else{
+      lettras += word[key];
+    }
+  }
+  return palavras;
+
 }
 
 // Desafio 4
