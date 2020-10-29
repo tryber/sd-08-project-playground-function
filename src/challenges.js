@@ -9,11 +9,13 @@ if (valor1  &&  valor2 ) {
   return false 
 }
 }
-console.log( compareTrue (true, true ))
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+
+  let calculo = (base * height /2)
+
+  return calculo
 }
 
 // Desafio 3
