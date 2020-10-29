@@ -150,10 +150,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(order) {
+  let waterCounter = 0;
 
+  for (let number = 1; number < 10; number += 1) {
+    let counterNumberAppearance = order.split(`${number}`).length-1;
+
+    waterCounter += (counterNumberAppearance * number);
+  }
+
+  return `${waterCounter} copos de água`
+}
 
 module.exports = {
   calcArea,
