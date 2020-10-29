@@ -1,18 +1,16 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 && valor2) {
+  if (valor1 === true && valor2 === true) {
     return true;
   } 
     return false;
 }
-console.log(compareTrue(true, true));
-
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/ 2;
+  var area = (base * height)/ 2;
+  return area;
 }
-console.log(calcArea(8,5));
 
 // Desafio 3
 function splitSentence() {
@@ -27,11 +25,7 @@ function concatName() {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  var wins = 3;
-  var ties = 1;
-  return wins + ties;
-}
-console.log(footballPoints(10, 7))
+
 
 // Desafio 6
 function highestCount() {
