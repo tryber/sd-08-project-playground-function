@@ -2,7 +2,7 @@
 
 function compareTrue(valorA, valorB) {
   // seu código aqui
-  if (valorA == true && valorB == true) {
+  if (valorA === true && valorB === true) {
     return true;
   } else {
     return false;
@@ -21,13 +21,14 @@ function calcArea(base, height) {
 function splitSentence(mySentence) {
   // seu código aqui
   let resultado = mySentence.split(' ');
-  
   return resultado;
 }
 
 // Desafio 4
 function concatName() {
   // seu código aqui
+
+
 }
 
 // Desafio 5
