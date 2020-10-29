@@ -5,14 +5,14 @@ function compareTrue(firstBoolean, secondBoolean) {
   }
   return false;
 }
-compareTrue();
+compareTrue(true, true);
 
 // Desafio 2
 function calcArea(base, height) {
   let result = (base * height) / 2;
   return result;
 }
-calcArea();
+calcArea(5, 5);
 
 // Desafio 3
 function splitSentence(string) {
@@ -28,7 +28,7 @@ function concatName(array) {
   result = array[array.length - 1] + ", " + array[0];
   return result;
 }
-concatName();
+concatName(["Joao", "Pedro", "Maria", "Paulo"]);
 
 // Desafio 5
 function footballPoints() {
