@@ -142,10 +142,9 @@ function techList(techName, name) {
   }
   return techList 
 }
-
-let teste = ["React", "Jest", "HTML", "CSS", "JavaScript"]
-let nome = "Jeferson";
-console.log(techList(teste, nome));
+// let teste = ["React", "Jest", "HTML", "CSS", "JavaScript"]
+// let nome = "Jeferson";
+// console.log(techList(teste, nome));
 
 
 // Desafio 11
