@@ -7,7 +7,7 @@ function compareTrue(valor1, valor2) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  return (base * altura) / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -19,8 +19,18 @@ function splitSentence(palavra) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arrayString) {
   // seu código aqui
+  // Escreva uma função com o nome concatName que, ao receber uma array de strings, 
+  // retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
+  // Isso quer dizer que, caso o parâmetro passado para concatName seja a 
+  // Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
+  let stringPalavras = arrayString[0] + ', ';
+  for (let x = 1; x < arrayString.length; x += 1) {
+    stringPalavras += arrayString[x];
+    stringPalavras += x <= arrayString.length - 2 ? ', ' : "";
+  }
+  return stringPalavras;
 }
 
 // Desafio 5
