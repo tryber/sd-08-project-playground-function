@@ -133,13 +133,18 @@ function decode(word2) {
 }
 
 // Desafio 10
-function techList(array, name) {
+function techList(tech, name) {
   // seu código aqui
   let obj = [];
-  for(let key in array){
-    obj.push({'tech': array[key], 'name': name[key]})
+  tech.sort();
+  if(tech.length > 0){
+    for(let key in tech){
+      obj.push({'tech': tech[key], 'name': name[key]})
+    }
+    return obj;
+  }  else{
+    return 'Vazio!'
   }
-  return obj;
 }
 
 // Desafio 11
