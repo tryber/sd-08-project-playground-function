@@ -63,11 +63,11 @@ function highestCount(numbersList) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 - mouse < cat2 - mouse) {
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return "cat1";
-  } else if (cat1 - mouse > cat2 - mouse){
+  } else if (Math.abs(cat1 - mouse) > (cat2 - mouse)){
     return "cat2";
-  } else if (cat1 == mouse && cat2 == mouse) {
+  } else if (Math.abs(cat1 - mouse) == (cat2 - mouse)) {
     return "os gatos trombam e o rato foge";
   }
 }
@@ -131,11 +131,18 @@ function decode(decodeWord) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techName, name) {
+  techName.sort();
+  let techDetails = {};
+  let techList = [];
+  for (index = 0; index < techName.length; index += 1) {
+    techList.push(techDetails.tech = techName[index], techDetails.name = name)
+  }
+  return techList;
 }
-let teste = "h3 th2r2!"
-console.log(decode(teste));
+let teste = ["React", "Jest", "HTML", "CSS", "JavaScript"]
+let nome = "Jeferson";
+console.log(techList(teste, nome));
 
 
 // Desafio 11
