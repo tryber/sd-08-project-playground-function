@@ -24,14 +24,15 @@ function calcArea(base, height) {
 function splitSentence(string) {
   return string.split(' ', string.length);
 }
-console.log(splitSentence('Alo alo alo alo alo alo'));
-  // seu código aqui
-
 
 // Desafio 4
-function concatName() {
+function concatName(string) {
+  let ultimoNome = string[string.length -1];
+  let primeiroNome = string[0];
+  return [ultimoNome, primeiroNome];
   // seu código aqui
 }
+
 
 // Desafio 5
 function footballPoints() {
