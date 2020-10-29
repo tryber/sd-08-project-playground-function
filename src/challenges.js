@@ -47,7 +47,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (d1 === d2) {
     return 'os gatos trombam e o rato foge';
-  } 
+  }
   return d1 > d2 ? 'cat2' : 'cat1';
 }
 
@@ -75,7 +75,7 @@ function encode(string) {
     e: 2,
     i: 3,
     o: 4,
-    u: 5
+    u: 5;
   };
 
   let saida = '';
@@ -96,7 +96,7 @@ function decode(string) {
     2: 'e',
     3: 'i',
     4: 'o',
-    5: 'u'
+    5: 'u';
   };
 
   let saida = '';
@@ -132,7 +132,7 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  if (array.length != 11) {
+  if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   let repeticoes = {};
@@ -150,9 +150,9 @@ function generatePhoneNumber(array) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
 
-    if (i == 2) {
-      saida += ') ' ;
-    } else if (i == 7) {
+    if (i === 2) {
+      saida += ') ';
+    } else if (i === 7) {
       saida += '-';
     }
     saida += array[i];
@@ -168,9 +168,8 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   } else if (lineC > lineA + lineB || lineC < Math.abs(lineA - lineB)) {
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
 
 // Desafio 13
@@ -183,7 +182,7 @@ function hydrate(string) {
       saida += Number(dados[i]);
     }
   }
-  if (saida == 1) {
+  if (saida === 1) {
     return `${saida} copo de água`;
   }
   return `${saida} copos de água`;
