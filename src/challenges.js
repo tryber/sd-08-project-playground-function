@@ -19,10 +19,9 @@ function splitSentence(sentence) {
 // Usei o método split que aprendi em https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string.
 }
 
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(name) {
+  return name[name.length-1] + ", " + name[0];
 }
 
 // Desafio 5
