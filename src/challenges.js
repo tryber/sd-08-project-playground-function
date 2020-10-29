@@ -37,7 +37,7 @@ function splitSentence(sentence) {
 // Desafio 4
 //  array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 function concatName(arrayString) {
-  let concated = arrayString[arrayString.length - 1] + ', ' + arrayString[0]
+  let concated = `${arrayString[arrayString.length - 1]}, ${arrayString[0]}`
   return concated
 }
 //  console.log(concatName(array))
@@ -49,9 +49,24 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+// let array = [9, 1, 2, 3, 9, 5, 7, 10]
+let maiorValor = 0
+let repeticoes = 0
+function highestCount(array) {
+  for (let index in array){
+    if (array[index] > maiorValor){
+      maiorValor = array[index]
+    }
+  }
+  for (let index in array){
+    if (array[index] === maiorValor){
+      repeticoes += 1
+    }
+  }
+  return repeticoes
 }
+
+// console.log(highestCount(array))
 
 // Desafio 7
 function catAndMouse() {
