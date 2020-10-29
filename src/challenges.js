@@ -44,7 +44,7 @@ function highestCount(array) {
   let count = 0;
   for (i = 1; i < array.length; i++) {
     if (array[i] > highest) {
-      highest = (array[i]);
+      highest = array[i];
     }
   }
   for (j = 0; j < array.length; j++) {
@@ -57,9 +57,18 @@ function highestCount(array) {
 highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let closestCat = "";
+  if (cat1 - mouse < cat2 - mouse) {
+    closestCat = "cat1";
+  } else if (cat2 - mouse  < cat1 - mouse) {
+    closestCat = "cat2";
+  } else {
+    console.log("os gatos trombam e o rato foge");
+  }
+  return closestCat;
 }
+catAndMouse(4, 1, 5);
 
 // Desafio 8
 function fizzBuzz() {
