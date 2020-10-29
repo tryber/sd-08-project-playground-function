@@ -14,12 +14,12 @@ function splitSentence(resultado) {
 
 // Desafio 4
 function concatName(param1) {
-  return param1[param1.length -1]+ ','+ param1[0];
+  return param1[param1.length -1]+ ', '+ param1[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins * 3 + ties;
 }
 
 // Desafio 6
