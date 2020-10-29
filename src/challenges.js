@@ -126,6 +126,7 @@ function techList(techs, name) {
         name
       })
     }
+    return listOfTechs;
   } else {
     return 'Vazio!';
   }
