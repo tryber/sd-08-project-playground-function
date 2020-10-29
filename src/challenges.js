@@ -1,70 +1,239 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(boolean1, boolean2) {
+  if (boolean1 == true && boolean2 == true) {
+    return true;
+  } else {
+    return false;
+  }
 }
+// console.log(compareTrue(true,true)); //
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return ((base * height)/2);
 }
+// console.log (calcArea(5,5)) //
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = string.split(" ");
+  return array;    
 }
+// console.log(splitSentence("go Trybe")) //
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayName) {
+  let nameOut = arrayName[arrayName.length - 1] + ", " + arrayName[0];
+  return nameOut;
 }
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])); / /
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winsPoints = wins * 3;
+  let tiesPoints = ties * 1;
+  let sumPoints = winsPoints + tiesPoints;
+  return sumPoints;
 }
+// console.log(footballPoints(10, 5)) //
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumbers) {
+  let biggerValue = arrayNumbers[0];
+  let count = 0;
+  for (let index = 0; index < arrayNumbers.length; index +=1) {
+    if (arrayNumbers[index] > biggerValue) {
+      biggerValue = arrayNumbers[index];
+    } 
+  }
+  for (index = 0; index < arrayNumbers.length; index +=1) {
+    if (arrayNumbers[index] == biggerValue) {
+      count += 1;      
+    }
+  }
+  return count;
 }
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7])) //
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distance1 = cat1 - mouse;
+  let distance2 = cat2 - mouse;
+  distance1 = Math.abs(distance1);
+  distance2 = Math.abs(distance2);
+  if (distance1 > distance2) {
+    return ("cat2");
+  } else if (distance1 < distance2) {
+    return ("cat1");
+  } else {
+    return ("os gatos trombam e o rato foge")
+  }  
 }
+// console.log(catAndMouse(20, 5, 35)) //
+
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let arrayOut = [];
+  for (let index = 0; index < array.length; index +=1) {
+    let restValue3 = array[index] % 3;
+    let restValue5 = array[index] % 5;
+    if ((restValue3 == 0) && (restValue5 != 0)) {
+      arrayOut[index] = "fizz"; 
+    } else if ((restValue3 != 0) && (restValue5 == 0)) {
+      arrayOut[index] = "buzz";
+    } else if ((restValue3 == 0) && (restValue5 == 0)) {
+      arrayOut[index] = "fizzBuzz";
+    } else {
+      arrayOut[index] = "bug!"
+    }
+  }
+  return arrayOut;
 }
+// console.log(fizzBuzz([2, 15, 7, 9, 45])) //
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringEncode) {  
+  let newStringEncode = stringEncode.split();
+  let stringFinalEncode = "";     
+  for (let index = 0; index < stringEncode.length; index +=1) {
+    if ((stringEncode[index] == "a") || (stringEncode[index] == "A")) {
+      newStringEncode[index] = "1";      
+    } else if ((stringEncode[index] == "e") || (stringEncode[index] == "E")) {
+      newStringEncode[index] = "2";     
+    } else if ((stringEncode[index] == "i") || (stringEncode[index] == "I")) {
+      newStringEncode[index] = "3";
+    } else if ((stringEncode[index] == "o") || (stringEncode[index] == "O")) {
+      newStringEncode[index] = "4";
+    } else if ((stringEncode[index] == "u") || (stringEncode[index] == "U")) {
+      newStringEncode[index] = "5";
+    } else {
+      newStringEncode[index] = stringEncode[index];     
+    }
+    stringFinalEncode += newStringEncode[index];
+  }  
+  return (stringFinalEncode)
 }
-function decode() {
-  // seu código aqui
+// console.log(encode("hi there!")) //
+
+function decode(stringDecode) {  
+  let newStringDecode = stringDecode.split();
+  let stringFinalDecode = "";     
+  for (let index = 0; index < stringDecode.length; index +=1) {
+    if (stringDecode[index] == "1") {
+      newStringDecode[index] = "a";      
+    } else if (stringDecode[index] == "2") {
+      newStringDecode[index] = "e";     
+    } else if (stringDecode[index] == "3") {
+      newStringDecode[index] = "i";
+    } else if (stringDecode[index] == "4") {
+      newStringDecode[index] = "o";
+    } else if (stringDecode[index] == "5") {
+      newStringDecode[index] = "u";
+    } else {
+      newStringDecode[index] = stringDecode[index];     
+    }
+    stringFinalDecode += newStringDecode[index];
+  }  
+  return (stringFinalDecode)  
 }
+// console.log(decode("h3 th2r2!")) //
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayTec, name) {    
+  let info2 = {};
+  let arrayVazio = [];
+  let arrayinfo2 = []; 
+  let info = {
+    tech: arrayTec,
+    nome: name
+  }
+  if (arrayTec.length == 0) {
+    return ("Vazio!")
+  } else {
+    arrayTec = arrayTec.sort();
+    for (key in arrayTec) {
+      info2[key] = {
+        tech: arrayTec[key],
+        name: name
+      }    
+      arrayinfo2[key] = info2[key]    
+    }
+    }     
+  return (arrayinfo2)    
 }
+
+// console.log(techList(["React"], "Lucas")) //
+
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayNumber) {
+  let repeatNumber = arrayNumber[0];
+  let count = 0;
+  let phoneNumber;
+  if (arrayNumber.length != 11) {
+    return ("Array com tamanho incorreto.")
+  } else {
+    for (let index = 0; index < arrayNumber.length; index +=1) {
+      count = 0;     
+      for (let j = 0; j < arrayNumber.length; j +=1) {
+        if (arrayNumber[index] == arrayNumber[j]) {            
+          count += 1;          
+        }
+        if (count >= 3) {
+          return ("não é possível gerar um número de telefone com esses valores")//
+        }            
+        }
+      if ((arrayNumber[index] < 0) || (arrayNumber[index] > 9)) {
+        return ("não é possível gerar um número de telefone com esses valores")
+      }       
+    phoneNumber = "("+arrayNumber[0]+arrayNumber[1]+") "+arrayNumber[2]+arrayNumber[3]+arrayNumber[4]+arrayNumber[5]+arrayNumber[6]+"-"+arrayNumber[7]+arrayNumber[8]+arrayNumber[9]+arrayNumber[10] ;
+    }
+  return (phoneNumber)
+  }
 }
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 10])) //
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let difAC = Math.abs(lineA - lineC);  
+  let difBC = Math.abs(lineB - lineC);
+  let difAB = Math.abs(lineA - lineB);
+  let sumAC = lineA + lineC;
+  let sumBC = lineB + lineC;
+  let sumAB = lineA + lineB;  
+  if ((lineB < sumAC) && (lineB > difAC)) {
+    return true;
+  } else if ((lineA <  sumBC) && (lineA > difBC)) {
+    return true;
+  } else if ((lineC < sumAB) && (lineC > difAB)) {
+    return true;
+  } else {
+    return false;  
 }
+}
+ // console.log(triangleCheck(10, 13, 2)) //
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(phrase) {
+  let reg = /\d+/g; //COMANDO RETIRADO DO https://www.youtube.com/watch?v=pfkkdzeyx6U //
+  let result = phrase.match(reg);
+  let sum = 0;
+  let num = [];
+  let feedback;
+  for (let index = 0; index < result.length; index +=1) {
+    num[index] = parseInt(result[index])
+    sum = sum + num[index];
+  }
+  if (sum == 1) {
+    feedback = sum+ " copo de água"
+  } else {
+    feedback = sum+ " copos de água"
+  }
+  
+  return (feedback)    
 }
+console.log((hydrate("1 cachaça"))) 
 
 
 module.exports = {
