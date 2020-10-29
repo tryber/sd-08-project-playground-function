@@ -64,15 +64,16 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let location1 = 0;
   let location2 = 0;
-  location1 = cat1 - mouse;
-  location2 = cat2 - mouse;
+  location1 = mouse - cat1;
+  location2 = mouse - cat2;
   if (cat1 == cat2) {
-    return "os gatos trombam e o rato foge"
+    return 'os gatos trombam e o rato foge'
   } else if (location1 < location2) {
-    return "cat1"
+    return 'cat1';
   } else {
-    return "cat2"
+    return 'cat2';
   }
+
 }
 
 // Desafio 8
