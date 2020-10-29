@@ -12,29 +12,32 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
+//let frase = "go Trybe aleluia Irmao "
 function splitSentence(sentence) {
   let array = []
-  let indice = 0
-  let palavra = ""
+  let palavra = ''
   let pos
-  for (pos = 0; pos < sentence.length; pos += 1){
-    if (sentence[pos] === " "){
-      for (indice; indice < pos; indice += 1){
+  let indice = 0
+  for (pos = 0; pos < sentence.length; pos += 1) {
+    if (sentence[pos] === ' ') {
+      for (indice; indice < pos; indice += 1) {
         palavra = palavra + sentence[indice]
       }
       array.push(palavra)
-      palavra = ""
+      palavra = ''
       indice = pos + 1
     }
   }
-  if (pos === sentence.length){
-    for (indice; indice < pos; indice += 1){
-      palavra = palavra + sentence[indice]
+  if (pos === sentence.length && sentence[pos-1] !== ' ') {
+    for (indice; indice < pos; indice += 1) {
+      palavra += sentence[indice]
     }
     array.push(palavra)
   }
   console.log(array)
 }
+
+//splitSentence(frase)
 
 // Desafio 4
 function concatName() {
