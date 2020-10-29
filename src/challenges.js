@@ -91,12 +91,33 @@ function fizzBuzz(arrayNumbers) {
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let codigos ={
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5'
+  }
+  let phraseCodif = '';
+  
+  for( let key in codigos){
+    phraseCodif = phrase.replace(codigos);
+
+  }
+ 
+  // phraseCodif = phrase.replace(/u/g, "5");
+
+  return phraseCodif;
+
 }
 function decode() {
   // seu código aqui
 }
+console.log(encode("hi there!"));
+
+
+
 
 // Desafio 10
 function techList() {
