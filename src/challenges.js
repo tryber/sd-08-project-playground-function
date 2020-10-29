@@ -133,8 +133,27 @@ function decode(str) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnologias, name) {
+  let lista = [];
+
+  for (let tecnologia of tecnologias) {
+    lista.push({
+      tech: tecnologia,
+      name
+    })
+  }
+
+  lista = lista.sort((a, b) => {
+    if (a.tech < b.tech) {
+      return -1;
+    } else if (a.tech > b.tech) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+
+  return lista.length > 0 ? lista : 'Vazio!';
 }
 
 // Desafio 11
