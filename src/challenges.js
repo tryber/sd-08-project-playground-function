@@ -30,27 +30,27 @@ function concatName(param1) {
 // Desafio 5
 function footballPoints(wins,ties) {
   // seu código aqui
-  return wins*3 + ties;
+  return (wins*3) + ties;
 }
 
 // Desafio 6
 function highestCount(array) {
   // seu código aqui
-  let countNum = 0;
-  let num;
-  for(i=0;i<array.length;i++){
-    soma = 0;
-    for(j=0;j<array.length;j++){
-      if(array[i] == array[j]){
-        soma += 1;
+  let repete = 0;
+  let num = 0;
+  for(let i in array){
+      if(array[i] > num){
+          num = array[i];
       }
-      if(soma > countNum){
-        num = array[i];
-        countNum = soma;
-      }
-    }
   }
-  return countNum;
+  for(let x in array){
+      if(num == array[x]){
+          repete += 1;
+      }
+  }
+
+
+  return repete;
 }
 
 // Desafio 7
