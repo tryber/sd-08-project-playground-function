@@ -114,8 +114,15 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let techLearn = [];
+  for (let techName of tech) {
+    techLearn.push({
+      tech: techName,
+      name: name,
+    });
+  }
+  return techLearn;
 }
 
 // Desafio 11
