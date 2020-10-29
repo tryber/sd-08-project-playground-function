@@ -10,7 +10,7 @@ function compareTrue (valor1, valor2){
 
 //console.log(compareTrue(1, 1));
 
-// - Área do triângulo
+// 2 - Área do triângulo
 
 function calcArea(base, height){
     let area = base * height / 2;
@@ -19,3 +19,11 @@ function calcArea(base, height){
 
 //console.log(calcArea(50, 80));
 
+// 3 - Dividindo a base
+
+function splitSentence(literal){
+    let split = literal.split(" ");
+    return split;
+}
+
+//console.log(splitSentence("go Trybe"));
