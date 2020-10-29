@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   // seu código aqui
-  if(valor1 === true && valor2 === true ) {
-      return true;
-  }else {
+  if (valor1 === true && valor2 === true) {
+    return true;
+  } else {
     return false;
-  } 
+  }
 }
 
 // Desafio 2
@@ -21,7 +21,7 @@ function calcArea(base, height) {
 // referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 function splitSentence(string) {
   // seu código aqui
-  let stringArray = string.split(" ");
+  let stringArray = string.split(' ');
   return stringArray;
 }
 
@@ -78,7 +78,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -94,4 +93,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
