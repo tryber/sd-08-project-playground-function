@@ -1,3 +1,4 @@
+//Desafio 1
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2) {
     return true;
@@ -8,9 +9,14 @@ function compareTrue(valor1, valor2) {
 compareTrue(valor1, valor2);
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let areaTriangulo = base * height / 2;
+  return areaTriangulo;
 }
+calcArea(2, 10);
+
+
+
 
 // Desafio 3
 function splitSentence() {
