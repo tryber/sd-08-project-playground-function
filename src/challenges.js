@@ -8,7 +8,7 @@ function compareTrue(firstBoolean, secondBoolean) {
 compareTrue();
 
 // Desafio 2
-function calcArea(base, height) {  
+function calcArea(base, height) {
   let result = (base * height) / 2;
   return result;
 }
@@ -23,8 +23,8 @@ function splitSentence(string) {
 splitSentence();
 
 // Desafio 4
-function concatName() {
-  let result = [];
+function concatName(array) {
+  let result = "";
   result = array[array.length - 1] + ", " + array[0];
   return result;
 }
@@ -78,7 +78,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -94,4 +93,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
