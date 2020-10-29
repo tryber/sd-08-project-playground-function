@@ -168,12 +168,56 @@ function fizzBuzz(arrayOfNum) {
 }
 
 // Desafio 9
-function encode() {
-    // seu código aqui
+function encode(phrase) {
+
+    //Declaring arrays for conversion
+    let vowels = ["a", "e", "i", "o", "u"];
+    let numbers = ["1", "2", "3", "4", "5"];
+    let encoded = "";
+
+    //Running across the whole phrase, character by character
+    for (let char = 0; char < phrase.length; char += 1) {
+
+        //If current character is found in vowels array
+        if (vowels.indexOf(phrase[char]) >= 0) {
+
+            //The corresponding number is concatenated to the encoded String
+            encoded += numbers[vowels.indexOf(phrase[char])];
+
+        } else {
+            encoded += phrase[char];
+        }
+
+    }
+
+    //Returning the encoded phrase
+    return encoded
 }
 
-function decode() {
-    // seu código aqui
+function decode(phrase) {
+
+    //Declaring arrays for conversion
+    let vowels = ["a", "e", "i", "o", "u"];
+    let numbers = ["1", "2", "3", "4", "5"];
+    let decoded = "";
+
+    //Running across the whole phrase, character by character
+    for (let char = 0; char < phrase.length; char += 1) {
+
+        //If current character is found in numbers array
+        if (numbers.indexOf(phrase[char]) >= 0) {
+
+            //The corresponding number is concatenated to the decoded String
+            decoded += vowels[numbers.indexOf(phrase[char])];
+
+        } else {
+            decoded += phrase[char];
+        }
+
+    }
+
+    //Returning the decoded phrase
+    return decoded
 }
 
 // Desafio 10
