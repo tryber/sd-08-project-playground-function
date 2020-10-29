@@ -1,6 +1,6 @@
-// Desafio 1 
+// Desafio 1
 function compareTrue(boolOne, boolTwo) {
-  if(boolOne && boolTwo){
+  if(boolOne && boolTwo) {
     return true;
   } else {
     return false;
@@ -20,8 +20,9 @@ function splitSentence(stringToSplit) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let stringConcatenada = array[array.length -1] + ", " + array[0];
+  return stringConcatenada;
 }
 
 // Desafio 5
