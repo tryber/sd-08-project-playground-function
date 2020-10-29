@@ -7,13 +7,10 @@ function compareTrue(x,y) {
   }
 }
 
-
 // Desafio 2
 function calcArea(base,height) {
   return (base*height)/2
 }
-
-
 
 // Desafio 3
 function splitSentence(string) {
@@ -22,9 +19,13 @@ function splitSentence(string) {
 } console.log(splitSentence("vamo que vamo"))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(arrayStrings) {
+  array = []
+  let ultima = arrayStrings[arrayStrings.length -1]
+  let primeira = arrayStrings[0]
+  array.push(primeira,ultima)
+  return array
+} console.log(concatName(["felipe","gomes","belarmino"]))
 
 // Desafio 5
 function footballPoints(wins,ties) {
