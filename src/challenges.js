@@ -210,10 +210,11 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(beverages) {
+  let arr = beverages.match(/\d+/g);
+  let numeroDeCopos = arr.map(Number).reduce((acc, cur) => acc + cur);
+  return `${numeroDeCopos} copos de água`;
 }
-
 
 module.exports = {
   calcArea,
