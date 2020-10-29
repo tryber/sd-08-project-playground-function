@@ -61,9 +61,9 @@ function catAndMouse(mouse,cat1,cat2) {
   dist1=cat1 - mouse;
   dist2=cat2 - mouse;
   if(dist1>dist2){
-    return "cat1";
-  }else if (dist2>dist1){
     return "cat2";
+  }else if (dist2>dist1){
+    return "cat1";
   }else{
     return "os gatos trombam e o gato foge"
   }
