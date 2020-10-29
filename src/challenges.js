@@ -170,7 +170,7 @@ function hydrate(string) {
           count += parseInt(string[i])
       }
   }
-  return `${count} copos de àgua`
+  return `${count} copos de água`
 }
 
 

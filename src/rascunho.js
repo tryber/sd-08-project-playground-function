@@ -5,7 +5,9 @@ function hydrate(string) {
             count += parseInt(string[i])
         }
     }
-    return `${count} copos de àgua`
+    return `${count} copos de água`
   }
 
+  console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+  console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
   console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
