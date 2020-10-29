@@ -12,7 +12,7 @@ function calcArea(base, height) {
 function splitSentence(sentence) {
   let splitedSentence = [''];
   let currentPosition = 0;
-  
+
   for (let i = 0; i < sentence.length; i += 1) {
     if (sentence[i] === ' ') {
       currentPosition += 1;
@@ -27,12 +27,12 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(name) {
-  return name[name.length - 1] + ', ' + name[0];
+  return `${name[name.length - 1]}, ${name[0]}`;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return 3 * wins + ties;
 }
 
 // Desafio 6
