@@ -2,26 +2,26 @@
 function compareTrue(num1, num2) {
   if (num1 >= 0 && num2 > num1) {
     return true;
-  } else {
-    return false;
-  }
+  };
+  
 }
 // Desafio 2
 function calcArea(base, height) {
-  let areaTriangulo = base*height/2
+  let areaTriangulo = base * height / 2
   return areaTriangulo;
 }
 
-console.log(calcArea(5, 10));
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayDeStrings) {
+  let size = arrayDeStrings.length - 1;
+  let array = [];
+  array.push(arrayDeStrings[0], arrayDeStrings[size]);
+  return array;
 }
 
 // Desafio 5
