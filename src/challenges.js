@@ -116,7 +116,8 @@ function decode(str) {
     }else if (str[index]=="5"){
       str[index]="u";
     }
-    return str;
+  }
+  return str;
 }
 
 // Desafio 10
