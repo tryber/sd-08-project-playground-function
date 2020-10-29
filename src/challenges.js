@@ -47,7 +47,7 @@ function highestCount(numeros) {
       maiorNumero = numeros[index];
     }
   }
-  console.log(maiorNumero);
+  //console.log(maiorNumero);
 
   for (j in numeros) {
     if (maiorNumero === numeros[j]) {
