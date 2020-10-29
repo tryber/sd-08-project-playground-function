@@ -1,14 +1,13 @@
 // Desafio 1
 function compareTrue(num1, num2) {
-  
-  if (num1 == true && num2 == true){
+  if (num1 == true && num2 == true) {
     console.log(true);
-    return true;  
-  } else {   
+    return true;
+  } else {
     console.log(false);
     return false;
-  }    
-} 
+  }
+} compareTrue(true, true);
 
 // // Desafio 2
 // function calcArea() {
@@ -72,7 +71,6 @@ function compareTrue(num1, num2) {
 // function hydrate() {
 //   // seu código aqui
 // }
-
 
 // module.exports = {
 //   calcArea,
