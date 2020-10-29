@@ -23,7 +23,7 @@ function concatName(arrayStrings) {
   array = []
   let ultima = arrayStrings[arrayStrings.length -1]
   let primeira = arrayStrings[0]
-  array.push(primeira,ultima)
+  array.push(`${ultima}, ${primeira}`)
   return array
 } console.log(concatName(["felipe","gomes","belarmino"]))
 
