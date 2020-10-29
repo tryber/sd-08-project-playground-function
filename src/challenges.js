@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(){
-  compareTrue = true && true
+  compareTrue = false && true
   return compareTrue
 }
 
