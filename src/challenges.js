@@ -6,13 +6,13 @@ function compareTrue(p1, p2) {
     return 'false'
   }
 }
-console.log(compareTrue('true','true'));
+// console.log(compareTrue('true','true'));
 
 // Desafio 2
 function calcArea(base, height) {
   return (base*height)/2
 }
-console.log(calcArea(3,20));
+// console.log(calcArea(3,20));
 
 // Desafio 3
 function splitSentence(string) {
