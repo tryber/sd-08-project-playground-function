@@ -1,7 +1,10 @@
 // Desafio 1
 function compareTrue(a, b)
 {
-  return num1 && num2;
+  if(a === true && b === true)
+    return true;
+  else
+    return false;
 }
 
 
@@ -17,15 +20,25 @@ function splitSentence(word)
   return word.split(" ");
 }
 
+
+
+
+
 // Desafio 4
 function concatName(phrase)
 {
   let input = phrase;
   let result = [input[input.length - 1], input[0]];
-  console.log(input[input.length - 1] + " " + input[0]);
+  console.log(input[input.length - 1] + ", " + input[0]);
   return result;
 }
 concatName(["Lucas", "Cassiano", "Ferraz", "Paollilo"])
+
+
+
+
+
+
 
 // Desafio 5
 function footballPoints(wins, ties)
@@ -180,8 +193,12 @@ function generatePhoneNumber(arr)
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC)
+{
+
+
+
+
 }
 
 // Desafio 13
