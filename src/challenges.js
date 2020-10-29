@@ -18,10 +18,13 @@ function calcArea(base, height) {
 }
 calcArea(8,10)
 
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+// Desafio 3 - as informações referentes ao split() foram retiradas do dev media:https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array. 
+function splitSentence(word) {
+    let array = []
+    array = word.split(" ")
+    console.log(array);
 }
+splitSentence('bruno candido morais');
 
 // Desafio 4
 function concatName() {
