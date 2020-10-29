@@ -28,11 +28,10 @@ function splitSentence(word)
 function concatName(phrase)
 {
   let input = phrase;
-  let result = [input[input.length - 1], input[0]];
-  console.log(input[input.length - 1] + ", " + input[0]);
+  let result = [input[input.length - 1], ", "  + input[0]];
   return result;
 }
-concatName(["Lucas", "Cassiano", "Ferraz", "Paollilo"])
+
 
 
 
