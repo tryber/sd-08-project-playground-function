@@ -21,18 +21,21 @@ function splitSentence(string) {
 }//console.log(splitSentence('Ai que vida maravilhosa'))
 
 // Desafio 4
-let arrayGordim = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+//let arrayGordim = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 function concatName(array) {
   let palavras = array
   let lastWord = palavras[palavras.length - 1]
   let firstWord = palavras[0]
   return lastWord + ", " + firstWord
-}console.log(concatName(arrayGordim))
+}//console.log(concatName(arrayGordim))
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {
+  let qtdVitorias = wins
+  let qtdEmpates = ties
+  let pontos = (qtdVitorias * 3) + qtdEmpates
+  return pontos
+}console.log(footballPoints(9, 10))
 
 // Desafio 6
 function highestCount() {
