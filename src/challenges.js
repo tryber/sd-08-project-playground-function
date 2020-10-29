@@ -138,14 +138,14 @@ function encode(string) {
 // let string = '1 h2ll4 w4rld'
 function decode(string) {
   for (let index = 0; index < string.length; index += 1) {
-      string.replace('a', '1')
-      string.replace('e', '2')
-      string.replace('i', '3')
-      string.replace('o', '4')
-      string.replace('u', '5')
-    }
-    return string
+    string.replace('a', '1')
+    string.replace('e', '2')
+    string.replace('i', '3')
+    string.replace('o', '4')
+    string.replace('u', '5')
   }
+  return string
+}
 // console.log(decode(string))
 
 // Desafio 10
