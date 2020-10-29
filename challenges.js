@@ -8,4 +8,4 @@ function compareTrue(firstBoolean, secondBoolean) {
   return true;
 }
 
-console.log(compareTrue(false, false));
+compareTrue(false, false);
