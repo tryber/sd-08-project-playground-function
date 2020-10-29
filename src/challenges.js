@@ -1,6 +1,5 @@
 // Desafio 1
 
-
 function compareTrue(a, b) {
     if (a == true && b == true) {
         return true;
@@ -23,13 +22,20 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-    // seu código aqui
+
+function concatName(array) {
+
+    let string = "";
+    string = array[array.length - 1] + ", " + array[0];
+    return string;
 }
 
+
+
 // Desafio 5
-function footballPoints() {
-    // seu código aqui
+function footballPoints(wins, ties) {
+    let qtdpontos = (wins * 3) + ties;
+    return qtdpontos;
 }
 
 // Desafio 6
