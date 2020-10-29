@@ -93,13 +93,49 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(string) {
+
+  let array0fString = string.split('');
+
+  for(let index = 0; index < array0fString.length; index+=1){
+    if(array0fString[index] == 'a'){
+      array0fString[index] = 1;
+    } else if(array0fString[index] == 'e'){
+      array0fString[index] = 2;
+    } else if(array0fString[index] == 'i'){
+      array0fString[index] = 3;
+    } else if(array0fString[index] == 'o'){
+      array0fString[index] = 4;
+    } else if(array0fString[index] == 'u'){
+      array0fString[index] = 5;
+    }
+  }
+
+  return array0fString.join('');
+
 }
 
+function decode(string) {
+
+  let array0fString = string.split('');
+
+  for(let index = 0; index < array0fString.length; index+=1){
+    if(array0fString[index] == 1){
+      array0fString[index] = 'a';
+    } else if(array0fString[index] == 2){
+      array0fString[index] = 'e';
+    } else if(array0fString[index] == 3){
+      array0fString[index] = 'i';
+    } else if(array0fString[index] == 4){
+      array0fString[index] = 'o';
+    } else if(array0fString[index] == 5){
+      array0fString[index] = 'u';
+    }
+  }
+
+  return array0fString.join('');
+
+}
 // Desafio 10
 function techList() {
   // seu código aqui
