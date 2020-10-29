@@ -15,12 +15,11 @@ function calcArea(base,heigth) {
 }
 
 // Desafio 3
-function splitSentence(array) {
-  // seu código aqui
-  let trocaString = (array[array.length - 1] + ', ' + array[0])
-  return trocaString
-
+function splitSentence(string) {
+  let array = string.split(' ');
+  return array;
 }
+ //console.log (splitSentence('go trybe'));
 
 // Desafio 4
 function concatName(xablau) {
