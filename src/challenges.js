@@ -1,15 +1,17 @@
 // Desafio 1
-function compareTrue(v1,v2) {
-  if (v1 == true && v2 == true){
+function compareTrue(v1, v2) {
+  if (v1 === true && v2 === true) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let result = 0;
+  result = (base * altura) / 2;
+  return result;
 }
 
 // Desafio 3
