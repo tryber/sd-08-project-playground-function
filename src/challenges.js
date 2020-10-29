@@ -101,6 +101,7 @@ function fizzBuzz(array) {
     } else {
       array[index] = 'bug!'
     }
+    // console.log(array)
   }
   return array
 }
@@ -165,8 +166,16 @@ function decode(string) {
 // console.log(decode(string))
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs, names) {
+  if (techs == []){
+    return 'Vazio!'
+  }
+  let result = []
+  tech.sort()
+  for (let index in tech) {
+    result.push({tech: techs[index], name: names})
+  }
+  return result
 }
 
 // Desafio 11
