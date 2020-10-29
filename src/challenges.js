@@ -67,8 +67,8 @@ console.log(highestCount([9, 1, 1,10, 10, 10, 10, 2, 3, 9, 5, 9, 7]))
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let distcat1 = mouse - cat1;
-  let distcat2 = mouse - cat2;
+  let distcat1 = cat1 - mouse;
+  let distcat2 = cat2 - mouse;
   if (distcat1 < distcat2) {
     return "cat1"
   }else if (distcat1 == distcat2) {
@@ -78,7 +78,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse(20,5,6))
+console.log(catAndMouse(5,5,6))
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
