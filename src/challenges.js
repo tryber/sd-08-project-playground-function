@@ -35,17 +35,28 @@ function footballPoints(wins, ties) {
   let qtdEmpates = ties
   let pontos = (qtdVitorias * 3) + qtdEmpates
   return pontos
-}console.log(footballPoints(9, 10))
+}//console.log(footballPoints(9, 10))
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+//let arrayGG = [9, 1, 2, 3, 9, 5, 7]
+function highestCount(array) {
+  
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+  let rato = mouse
+  let gato1 = cat1
+  let gato2 = cat2
+  let answer = ""
+  if (rato - gato1 > rato - gato2){
+    answer = 'cat2'
+  }else if (rato - gato2 > rato - gato1){
+    answer = 'cat1'
+  }else {
+    answer = '"os gatos trombam e o rato foge"'
+  }return answer
+}console.log(catAndMouse(5, 3 ,2))
 
 // Desafio 8
 function fizzBuzz() {
