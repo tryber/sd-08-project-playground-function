@@ -120,8 +120,18 @@ function decode(palavra) {
 }
 
 // Desafio 10
-function techList() {
+function techList(arrayTech, name) {
   // seu código aqui
+  let hardSkills = [];
+  arrayTech.sort();
+  for (let x = 0; x < arrayTech.length; x += 1) {
+    let objNovo = new Object;
+    objNovo.tech = arrayTech[x];
+    objNovo.name = name;
+
+    hardSkills.push(objNovo);
+  }
+  return hardSkills;
 }
 
 // Desafio 11
