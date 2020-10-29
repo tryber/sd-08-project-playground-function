@@ -62,8 +62,8 @@ function fizzBuzz(vetorNum) {
   }
   return resultado;
 }
-let vetorTeste = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(vetorTeste));
+//let vetorTeste = [2, 15, 7, 9, 45];
+//console.log(fizzBuzz(vetorTeste));
 
 // Desafio 9
 function encode() {
