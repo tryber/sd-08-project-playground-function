@@ -18,7 +18,7 @@ function splitSentence(stringToSplit) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(stringArray) {
   let invertedString = stringArray[stringArray.length - 1] + ', ' + stringArray[0];
   return invertedString
 }
