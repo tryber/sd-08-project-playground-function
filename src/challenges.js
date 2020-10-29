@@ -42,9 +42,37 @@ function footballPoints(wins, ties) {
 //console.log(footballPoints(10, 3));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumeros) {
+  let cont = 0;
+  let maiorValor = maiorNumeroDoVetor(arrayNumeros);
+
+  for (let pos in arrayNumeros) 
+  {
+      if (arrayNumeros[pos] === maiorValor) 
+      { 
+          cont += 1;
+      }        
+  }    
+
+  return cont;
 }
+
+function maiorNumeroDoVetor(arrayNumeros)
+{
+  let maiorValor = arrayNumeros[0];
+  for (let pos in arrayNumeros) 
+  {
+      if (arrayNumeros[pos] > maiorValor) 
+      { 
+          maiorValor = arrayNumeros[pos];
+      }        
+  }    
+
+  return maiorValor;
+}
+
+//console.log(maiorNumeroDoVetor([9, 1, 2, 3, 9, 5, 7]));
+//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
