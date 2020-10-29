@@ -93,33 +93,28 @@ function catAndMouse(mouse, cat1, cat2) {
     return "cat1";
   }else if (cat2 > mouse && cat2 < cat1){
     return "cat2";
-  }else if (cat1 == cat2 & cat1 == mouse && cat2 == mouse){
+  }else if (cat1 == cat2 && cat1 == mouse && cat2 == mouse){
     return "os gatos trombam e o rato foge";
   }
 }
 
 
 
-
-
-
-
-
-
-
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
+  let arrayResultado = [];
   for (let numeros=0; numeros<arrayNumeros.length; numeros++){
     if (arrayNumeros[numeros] % 3 == 0 && arrayNumeros[numeros] % 5 == 0){    
-      return "fizzBuzz";
+      arrayResultado.push("fizzBuzz");      
     }else if (arrayNumeros[numeros] % 5 == 0){
-      return "buzz";
+      arrayResultado.push("buzz");      
     }else if (arrayNumeros[numeros] % 3 == 0){
-      return "fizz";
+      arrayResultado.push("fizz");      
     }else {
-      return "bug!";
+      arrayResultado.push("bug!");      
     }  
-  }  
+  } 
+  return arrayResultado; 
 }
 
 
