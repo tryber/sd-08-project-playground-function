@@ -78,8 +78,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-//console.log(catAndMouse(5, 2, 3)); 
-
 // Desafio 8
 function fizzBuzz(array) {
   let a = [];
@@ -100,15 +98,53 @@ function fizzBuzz(array) {
   return a;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(literal) {
+  let troca = literal.toLowerCase();
+  for (i in troca){
+    if(troca[i] == "a"){
+      troca = troca.replace(troca[i], "1");
+    }
+    if(troca[i] == "e"){
+      troca = troca.replace(troca[i], "2");
+    }
+    if(troca[i] == "i"){
+      troca = troca.replace(troca[i], "3");
+    }
+    if(troca[i] == "o"){
+      troca = troca.replace(troca[i], "4");
+    }
+    if(troca[i] == "u"){
+      troca = troca.replace(troca[i], "5");
+    }
+  }
+  return troca;
 }
-function decode() {
-  // seu código aqui
+
+function decode(literal) {
+  let troca = literal.toLowerCase();
+
+  for (i in troca){
+    if(troca[i] == "1"){
+      troca = troca.replace(troca[i], "a");
+    }
+    if(troca[i] == "2"){
+      troca = troca.replace(troca[i], "e");
+    }
+    if(troca[i] == "3"){
+      troca = troca.replace(troca[i], "i");
+    }
+    if(troca[i] == "4"){
+      troca = troca.replace(troca[i], "o");
+    }
+    if(troca[i] == "5"){
+      troca = troca.replace(troca[i], "u");
+    }
+  }
+  return troca;
 }
+
+console.log(decode("t3xt2 m4lh1d5"))
 
 // Desafio 10
 function techList() {
