@@ -165,11 +165,12 @@ function decode(string) {
 // console.log(decode(string))
 
 // Desafio 10
-// let array = ["React", "Jest", "HTML", "CSS", "JavaScript"]
+// let array = []
 // let name = 'Lucas'
 function techList(tech, name) {
   let result = []
-  if (tech === []) {
+  if (tech == "") {
+    // console.log("vazio")
     return 'Vazio!'
   }
   tech.sort()
