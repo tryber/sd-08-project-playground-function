@@ -11,9 +11,10 @@ function compareTrue(primeiroBoleano, segundoBolenao) {
 // console.log(compareTrue(a, b));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
+// console.log(calcArea(2, 6));
 
 // Desafio 3
 function splitSentence() {
