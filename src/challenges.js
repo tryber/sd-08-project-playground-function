@@ -12,19 +12,12 @@ function calcArea(base,height) {
 
 // Desafio 3
 function splitSentence(word) {
-  // seu código aqui
-  let lettras = "";
-  let palavras = [];
-  for(let key in word){
-    if(word[key] == " "){
-      palavras.push(lettras)
-      lettras = "";
-    }else{
-      lettras += word[key];
-    }
+  let sentenceArray = [];
+  word = word.split(' ');
+  for (let i in word) {
+    sentenceArray.push(word[i]);
   }
-  return palavras;
-
+  return sentenceArray;
 }
 
 // Desafio 4
