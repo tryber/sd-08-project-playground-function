@@ -44,16 +44,35 @@ function highestCount(numbers) {
   }
   return count;
 }
-console.log (highestCount([9,1,2,3,9,9,9]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  let distanciaCat1 = Math.abs (mouse-cat1);
+  let distanciaCat2 = Math.abs (mouse-cat2);
+  if (distanciaCat1 < distanciaCat2){
+    return "cat1";
+  } else if (distanciaCat2 < distanciaCat1){
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let lista = [];
+  for (let i in numbers){
+    if (numbers[i]%3===0 && numbers[i]%5===0){
+      lista.push("fizzBuzz");
+    } else if (numbers[i]%3!==0 && numbers[i]%5!==0){
+      lista.push("bug!")
+    } else if (numbers[i]%3===0) {
+      lista.push("fizz");
+    } else if (numbers[i]%5===0) {
+      lista.push("buzz");
+    }
+  }
+  return lista;  
 }
 
 // Desafio 9
