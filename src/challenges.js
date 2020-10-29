@@ -93,20 +93,19 @@ function fizzBuzz(array) {
 // console.log(fizzBuzz([2, 15, 7, 9, 45])) //
 
 // Desafio 9
-function encode(stringEncode) {
-  stringEncode = stringEncode.toLowerCase();
+function encode(stringEncode) {  
   let newStringEncode = stringEncode.split();
   let stringFinalEncode = "";     
   for (let index = 0; index < stringEncode.length; index +=1) {
-    if (stringEncode[index] == "a") {
+    if ((stringEncode[index] == "a") || (sringEncode[index] == "A")) {
       newStringEncode[index] = "1";      
-    } else if (stringEncode[index] == "e") {
+    } else if ((stringEncode[index] == "e") || (stringEncode[index] == "E")) {
       newStringEncode[index] = "2";     
-    } else if (stringEncode[index] == "i") {
+    } else if ((stringEncode[index] == "i") || (stringEncode[index] == "I")) {
       newStringEncode[index] = "3";
-    } else if (stringEncode[index] == "o") {
+    } else if ((stringEncode[index] == "o") || (stringEncode[index] == "O")) {
       newStringEncode[index] = "4";
-    } else if (stringEncode[index] == "u") {
+    } else if ((stringEncode[index] == "u") || (stringEncode[index] == "U")) {
       newStringEncode[index] = "5";
     } else {
       newStringEncode[index] = stringEncode[index];     
@@ -117,8 +116,7 @@ function encode(stringEncode) {
 }
 console.log(encode("hi there!")) 
 
-function decode(stringDecode) {
-  stringDecode = stringDecode.toLowerCase();
+function decode(stringDecode) {  
   let newStringDecode = stringDecode.split();
   let stringFinalDecode = "";     
   for (let index = 0; index < stringDecode.length; index +=1) {
