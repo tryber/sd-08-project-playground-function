@@ -55,6 +55,15 @@ function refatoraVetor(vetor) {
   }
   return vetor;
 }
+
+function objetoComNomeTecnologia(nome, tecnologia) {
+  let obj = {
+    tech: tecnologia,
+    name: nome,
+  };
+  return obj;
+}
+
 // Desafio 1
 function compareTrue(parametro1, parametro2) {
   return parametro1 && parametro2;
@@ -141,9 +150,15 @@ function decode(decodificar) {
   return decodificado;
 }
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(vetor, name) {
+  let arrayRetorno = [];
+  let vetorOrdenado = vetor.sort();
+  for (let index = 0; index < vetorOrdenado.length; index++) {
+    arrayRetorno.push(objetoComNomeTecnologia(name, vetorOrdenado[index]));
+  }
+  return arrayRetorno;
 }
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber() {
