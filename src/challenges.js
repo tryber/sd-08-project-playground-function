@@ -74,9 +74,30 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(arrayNumeros) {
+    let newArray = [];
+    for(let index in arrayNumeros) {
+    if ((arrayNumeros[index] % 3 == 0) && (arrayNumeros[index] % 5 !== 0)) {
+        result = "fizz";  
+        newArray.push(result)
+    }
+    else if ((arrayNumeros[index] % 5 == 0) && (arrayNumeros[index] % 3 !== 0)) {
+      result = "buzz"  
+      newArray.push(result)
+    }
+    else if ((arrayNumeros[index] % 3 == 0) && (arrayNumeros[index] % 5 == 0)) {
+      result = "fizzBuzz"  
+      newArray.push(result)
+    }
+    else {
+        result = "bug!"
+        newArray.push(result)
+    }
+    }
+    return newArray;
+};
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 
 // Desafio 9
 function encode() {
@@ -85,6 +106,8 @@ function encode() {
 function decode() {
   // seu código aqui
 }
+
+
 
 // Desafio 10
 function techList() {
