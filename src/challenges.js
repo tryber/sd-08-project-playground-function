@@ -191,11 +191,45 @@ function techList(vetor, name) {
   }
   return arrayRetorno;
 }
-// Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+
+function confereVetor(vetor) {
+  for (let index = 0; index < vetor.length; index += 1) {
+    if (vetor[index] < 0 || vetor[index] > 9) {
+      return false;
+    }
+  }
+  return true;
 }
 
+function confereRepeticoes(vetor) {
+  let count = 0;
+  for (let index = 0; index < vetor.length; index++) {
+    for (let j = index; j < vetor.length; j++) {
+      if (vetor[j] === vetor[index]) {
+        count += 1;
+      }
+    }
+    if (count > 2) {
+      return false;
+    }
+    count = 0;
+  }
+  return true;
+}
+
+// Desafio 11
+function generatePhoneNumber(vetor) {
+  if (vetor.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  } else if (confereVetor(vetor) && confereRepeticoes(vetor)) {
+    let numero = `(${vetor.slice(0, 2).join('')}) ${vetor
+      .slice(2, 6)
+      .join('')}-${vetor.slice(6, 11).join('')}`;
+    return numero;
+  }
+  return 'não é possível gerar um número de telefone com esses valores';
+}
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let pode1 = ladoMaiorQueSomaOutros(lineA, lineB, lineC);
