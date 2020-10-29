@@ -10,14 +10,14 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(frase) {
-  let vetor = frase.split(" ");
+  let vetor = frase.split(' ');
   return vetor;
 }
 // Desafio 4
 function concatName(vetor) {
   let primeiraPalavra = vetor[0];
   let ultimaPalavra = vetor[vetor.length - 1];
-  return `${ultimaPalavra} + ', ' + ${primeiraPalavra}`;
+  return `${ultimaPalavra}, ${primeiraPalavra}`;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -25,8 +25,9 @@ function footballPoints(wins, ties) {
   return pontos;
 }
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(vetor) {
+  let maior = encontraMaior(vetor);
+  return encontraQuantidadeMaior(vetor, maior);
 }
 
 // Desafio 7
@@ -67,6 +68,25 @@ function hydrate() {
   // seu código aqui
 }
 
+function encontraMaior(vetor) {
+  let maior = vetor[0];
+  for (let index = 0; index < vetor.length; index++) {
+    if (vetor[index] > maior) {
+      mairo = vetor[index];
+    }
+  }
+  return maior;
+}
+
+function encontraQuantidadeMaior(vetor, maior) {
+  let count = 0;
+  for (let index = 0; index < vetor.length; index++) {
+    if (vetor[index] === maior) {
+      count += 1;
+    }
+  }
+  return count;
+}
 module.exports = {
   calcArea,
   catAndMouse,
