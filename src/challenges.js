@@ -27,9 +27,12 @@ function splitSentence(string) {
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(vetorString) {
+  let resultado = "";
+  resultado = vetorString[0] + " " + vetorString[vetorString.length -1];
 }
+//let teste = ["wagner", "Berna", "Medeiros", "Azevedo"];
+//console.log(concatName(teste));
 
 // Desafio 5
 function footballPoints() {
