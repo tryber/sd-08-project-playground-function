@@ -117,7 +117,18 @@ function decode(word) {
 }
 
 // Desafio 10
-function techList() {
+function techList(techs, name) {
+  if (techs) {
+    let listOfTechs = [];
+    for (tech of techs) {
+      listOfTechs.push({
+        tech,
+        name
+      })
+    }
+  } else {
+    return 'Vazio!';
+  }
   // seu código aqui
 }
 
