@@ -9,12 +9,14 @@ function compareTrue(boolOne, boolTwo) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2;
+  let areaDoTriangulo = (base * height) / 2;
+  return areaDoTriangulo;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(stringToSplit) {
+  let dividida = stringToSplit.split(" ");
+  return dividida;
 }
 
 // Desafio 4
