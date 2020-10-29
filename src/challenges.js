@@ -25,19 +25,15 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let maxcount = 0;
+  let maior = 0;
+  let count = 0;
   for (let i = 0; i < array.length; i++) {
-    let count = 0;
-    for (let j = 0; j < array.length; j++) {
-      if (array[j] === array[i]) {
-        count++;
-      }
-    }
-    if (count > maxcount) {
-      maxcount = count;
+    if (array[i] >= maior) {
+      maior = array[i];
+      count++;
     }
   }
-  return maxcount;
+  return count;
 }
 
 // Desafio 7
@@ -84,6 +80,7 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
+  if (array.length === 0) return "Vazio!";
   array.sort();
   return array.map((e) => {
     return (temp = {
@@ -96,7 +93,7 @@ function techList(array, name) {
 // Desafio 11 //(12) 34567-8901
 function generatePhoneNumber(a) {
   if (a.length != 11) return "Array com tamanho incorreto.";
-  if (highestCount(a) >= 3)
+  if (highestCount1(a) >= 3)
     return "não é possível gerar um número de telefone com esses valores";
   for (let i in a) {
     if (a[i] < 0 || a[i] > 9)
@@ -126,6 +123,22 @@ function generatePhoneNumber(a) {
     "" +
     a[10]
   );
+}
+
+function highestCount1(array) {
+  let maxcount = 0;
+  for (let i = 0; i < array.length; i++) {
+    let count = 0;
+    for (let j = 0; j < array.length; j++) {
+      if (array[j] === array[i]) {
+        count++;
+      }
+    }
+    if (count > maxcount) {
+      maxcount = count;
+    }
+  }
+  return maxcount;
 }
 
 // Desafio 12
