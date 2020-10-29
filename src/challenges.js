@@ -2,9 +2,9 @@
 function compareTrue(valorA, valorB) {
   // seu código aqui
   if (valorA > 10 && valorB > 10) {
-    console.log("Os valore digitados sao maiores do que 10.");
+    console.log('Os valore digitados sao maiores do que 10.');
   } else {
-    console.log("Digite dois valores maiores que 10.");
+    console.log('Digite dois valores maiores que 10.');
   }
 }
 
