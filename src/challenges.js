@@ -40,7 +40,7 @@ function concatName(arrayString) {
   let concated = `${arrayString[arrayString.length - 1]}, ${arrayString[0]}`
   return concated
 }
-//  console.log(concatName(array))
+// console.log(concatName(array))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -135,7 +135,7 @@ function encode(string) {
 }
 
 // console.log(encode(string))
-let string = '1 h2ll4 w4rld'
+// let string = '1 h2ll4 w4rld'
 function decode() {
   let result = ""
   for (let index = 0; index < string.length; index += 1) {
