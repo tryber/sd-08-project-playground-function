@@ -1,14 +1,16 @@
 // Desafio 1
-function compareTrue(valor1, valor2) {
-  if(valor1 === 5 && valor2 === 10){
-    console.log(true);
+function compareTrue(valor1, valor2){
+  if(valor1 === true && valor2 === true){
+    return true;
+    
   }else{
-    console.log(false)
+    return false;
   }
 return compareTrue;  
 
 // seu código aqui
 }
+console.log(compareTrue(true, true));
 
 
 
@@ -51,9 +53,15 @@ function footballPoints(wins, ties) {
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maior = Math.max([array]);
+
+
+return highestCount(maior);
 }
+console.log(highestCount([2,4,8,9,9,9]));
+
+
 
 // Desafio 7
 function catAndMouse() {
