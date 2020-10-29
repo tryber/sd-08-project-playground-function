@@ -81,12 +81,53 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let alfabeto = {
+      vogais: ['blankspace','a','e','i','o','u'],
+      consoantes: [' ','!','b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','y','x','z'],
+  }
+  let list = string.split("");
+  let listForEncode = [];
+  for (i in list){
+      for(vogal in alfabeto.vogais) {
+          if (list[i] == alfabeto.vogais[vogal]) {
+          listForEncode.push(vogal);
+          break
+          }
+      }
+      for(consoante in alfabeto.consoantes){
+          if (list[i] == alfabeto.consoantes[consoante]) {
+              listForEncode.push(alfabeto.consoantes[consoante]);
+              break
+          }
+      }
+  }
+  console.log(listForEncode.join(""));  
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let alfabeto = {
+      vogais: ['blankspace','a','e','i','o','u'],
+      consoantes: [' ','!','b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','y','x','z'],
+  }
+  let list = string.split("");
+  let listForEncode = [];
+  for (i in list){
+      for(vogal in alfabeto.vogais) {
+          if (list[i] == vogal) {
+          listForEncode.push(alfabeto.vogais[vogal]);
+          break
+          }
+      }
+      for(consoante in alfabeto.consoantes){
+          if (list[i] == alfabeto.consoantes[consoante]) {
+              listForEncode.push(alfabeto.consoantes[consoante]);
+              break
+          }
+      }
+  }
+  console.log(listForEncode.join(""));  
 }
+
 
 // Desafio 10
 function techList() {
