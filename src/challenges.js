@@ -97,7 +97,7 @@ const vowels = {
   e: 2,
   i: 3,
   o: 4,
-  u: 5
+  u: 5,
 };
 
 // Desafio 9
@@ -121,7 +121,7 @@ function decode(str) {
     let code = str[i];
     let letter = null;
     for (let cur in vowels) {
-      if (vowels[cur] == code) {
+      if (vowels[cur] === code) {
         letter = cur;
         break;
       }
@@ -142,18 +142,20 @@ function techList(tecnologias, name) {
   for (let tecnologia of tecnologias) {
     lista.push({
       tech: tecnologia,
-      name: name
+      name,
     })
   }
 
   lista = lista.sort((a, b) => {
     if (a.tech < b.tech) {
       return -1;
-    } else if (a.tech > b.tech) {
+    } 
+    
+    if (a.tech > b.tech) {
       return 1;
-    } else {
-      return 0;
     }
+
+    return 0;
   });
 
   return lista.length > 0 ? lista : 'Vazio!';
@@ -161,7 +163,7 @@ function techList(tecnologias, name) {
 
 // Desafio 11
 function generatePhoneNumber(digits) {
-  if (digits.length != 11) {
+  if (digits.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
@@ -193,9 +195,9 @@ function generatePhoneNumber(digits) {
     let partA = numeroStr.slice(2, 7);
     let partB = numeroStr.slice(7, 11);
     return `(${ddd}) ${partA}-${partB}`;
-  } else {
-    return 'não é possível gerar um número de telefone com esses valores';
   }
+
+  return 'não é possível gerar um número de telefone com esses valores';
 }
 
 // Desafio 12
@@ -204,7 +206,7 @@ function triangleCheck(lineA, lineB, lineC) {
   for (let i = 0; i < lines.length; i += 1) {
     let sum = 0;
     for (let j = 0; j < lines.length; j += 1) {
-      if (j != i) sum += lines[j];
+      if (j !== i) sum += lines[j];
     }
     if (lines[i] >= sum) return false;
   }
@@ -215,7 +217,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(beverages) {
   let arr = beverages.match(/\d+/g);
   let numeroDeCopos = arr.map(Number).reduce((acc, cur) => acc + cur);
-  return `${numeroDeCopos} copo${numeroDeCopos > 1 ? 's': ''} de água`;
+  return `${numeroDeCopos} copo${numeroDeCopos > 1 ? 's' : ''} de água`;
 }
 
 module.exports = {
