@@ -1,9 +1,8 @@
 // Desafio 1
-function compareTrue(){
-  compareTrue = false && true
+function compareTrue(param1,param2){
+  compareTrue = true && false
   return compareTrue
 }
-
 // Desafio 2
 function calcArea() {
   // seu código aqui
