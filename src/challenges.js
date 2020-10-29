@@ -15,13 +15,13 @@ function splitSentence(a) {
 
 // Desafio 4
 function concatName(name) {
-  let resp = `${name[0]}, ${name[name.length - 1]}`;
+  let resp = `${name[name.length - 1]}, ${name[0]}`;
   return resp;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return ((3 * wins) + ties);
 }
 
 // Desafio 6
@@ -86,8 +86,8 @@ module.exports = {
 }
 
 console.log(compareTrue(true, false));
-console.log(compareTrue(false, false));
 console.log(compareTrue(true, true));
 console.log(calcArea(12, 4));
 console.log(splitSentence('The Best Game Dev'));
 console.log(concatName(['Natanael', 'Enéas', 'da', 'Silva', 'Neto']));
+console.log(footballPoints(3, 2));
