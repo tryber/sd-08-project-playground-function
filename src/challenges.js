@@ -93,9 +93,30 @@ function fizzBuzz(array) {
 // console.log(fizzBuzz([2, 15, 7, 9, 45])) //
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  string = string.toLowerCase();
+  let newString = string.split();
+  let newString2 = "";     
+  for (let index = 0; index < string.length; index +=1) {
+    if (string[index] == "a") {
+      newString[index] = "1";      
+    } else if (string[index] == "e") {
+      newString[index] = "2";     
+    } else if (string[index] == "i") {
+      newString[index] = "3";
+    } else if (string[index] == "o") {
+      newString[index] = "4";
+    } else if (string[index] == "u") {
+      newString[index] = "5";
+    } else {
+      newString[index] = string[index];     
+    }
+    newString2 += newString[index];
+  }  
+  return (newString2)
 }
+console.log(encode("hi there!"))
+
 function decode() {
   // seu código aqui
 }
