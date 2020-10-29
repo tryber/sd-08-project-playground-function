@@ -82,16 +82,16 @@ function catAndMouse(mouse, cat1, cat2) {
   posMouse = mouse;
   posCat1 = cat1;
   posCat2 = cat2;
-  if ((posCat1 - posMouse) < (posCat2 - posMouse)){
+  if (Math.abs(posCat1 - posMouse) < Math.abs(posCat2 - posMouse)){
     return "cat2";
-  } else if ((posCat2 - posMouse) < (posCat1 - posMouse)){
+  } else if (Math.abs(posCat2 - posMouse) < Math.abs(posCat1 - posMouse)){
     return "cat1";
-  } else if ((posCat1 - posMouse) == (posCat2 - posMouse)){
+  } else if (Math.abs(posCat1 - posMouse) == Math.abs(posCat2 - posMouse)){
     return "Os gatos trombam e o rato foge";
   }
   // seu código aqui
 }
-//console.log (catAndMouse(7, 5, 8))
+console.log (catAndMouse(7, 5, 8))
 
 // Desafio 8
 function fizzBuzz(numeros) {
@@ -131,7 +131,8 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
+  
   // seu código aqui
 }
 
