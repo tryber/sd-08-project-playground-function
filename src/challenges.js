@@ -139,14 +139,13 @@ function generatePhoneNumber(numArr) {
   for (let numI in numArr) {
     if (numCounter[numArr[numI]]) {
       numCounter[numArr[numI]] += 1;
-
-      if (numCounter[numArr[numI]] >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
     } else if (numArr[numI] < 0 || numArr[numI] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     } else {
       numCounter[numArr[numI]] = 1;
+    }
+    if (numCounter[numArr[numI]] >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 
