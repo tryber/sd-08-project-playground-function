@@ -94,6 +94,9 @@ function fizzBuzz(arrayOfNumbers) {
   return fizbuz;
 }
 
+x = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(x));
+
 // Desafio 9
 function encode(sentence) {
   // seu código aqui
@@ -131,16 +134,16 @@ function decode(sentence) {
         newSentence += "a";
         break;
       case "2":
-        newSentence += "b";
+        newSentence += "e";
         break;
       case "3":
-        newSentence += "c";
+        newSentence += "i";
         break;
       case "4":
-        newSentence += "d";
+        newSentence += "o";
         break;
       case "5":
-        newSentence += "e";
+        newSentence += "u";
         break;
       default:
         newSentence += sentence.slice(pos, pos+1);
