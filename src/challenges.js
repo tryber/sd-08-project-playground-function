@@ -131,18 +131,22 @@ function decode(phrase) {
 // Desafio 10
 function techList(tech, name) {
   let listOfTech = [];
-  tech.sort();
 
-  for (let key in tech) {
-    let objectTech = {
-      tech: tech[key],
-      name: name
+  if (tech === null || tech === []) { return "Vazio!"; }
+  else {
+    tech.sort();
+
+    for (let key in tech) {
+      let objectTech = {
+        tech: tech[key],
+        name: name
+      }
+
+      listOfTech.push(objectTech);
     }
 
-    listOfTech.push(objectTech);
+    return listOfTech;
   }
-
-  return listOfTech;
 }
 
 // Desafio 11
