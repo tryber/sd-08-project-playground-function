@@ -136,7 +136,7 @@ function decode(string) {
   return array0fString.join('');
 
 }
-// Desafio 10
+// Desafio 10                            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function techList(array, name) {
 
 
