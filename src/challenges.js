@@ -1,20 +1,12 @@
 // Desafio 1
-function compareTrue(num1,num2,num3) {
+function compareTrue(num1,num2) {
   
-  let a = num1;
-  let b = num2;
-  let c = num3;
-
-  if (a<b == true && a<c == true){
-  console.log(num1)
-  } else if (b<a == true && b<c == true){
-    console.log(num2)
-  } else if (c<a == true && c<b == true){
-    console.log(num3)
+  if (num1 == true && num2 == true){
+    return true;
   } else {
-    console.log("Há números iguais")
+    return false;
   }    
-} compareTrue(19,20,7)
+} compareTrue(7>5,5>3)
 
 // // Desafio 2
 // function calcArea() {
