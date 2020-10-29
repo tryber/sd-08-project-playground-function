@@ -128,31 +128,28 @@ function highestCount(arrNum) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (typeof mouse === "number" && typeof cat1 === "number" && typeof cat2 === "number") {
-    let unidDist1 = cat1 - mouse;
-    let unidDist2 = cat2 - mouse;
+  let unidDist1 = cat1 - mouse;
+  let unidDist2 = cat2 - mouse;
 
-    if (unidDist1 < 0) {
-      unidDist1 *= -1;
-    }
-    if (unidDist2 < 0) {
-      unidDist2 *= -1;
-    }
+// Torna as distancias positivas
 
-    if (unidDist1 < unidDist2) {
-      return `"cat1"`;
-    }
-    else if (unidDist1 > unidDist2) {
-      return `"cat2"`;
-    }
-    else {
-      return `"os gatos trombam e o rato foge"`;
-    }
+  if (unidDist1 < 0) {
+    unidDist1 *= -1;
+  }
+  if (unidDist2 < 0) {
+    unidDist2 *= -1;
+  }
+
+
+  if (unidDist1 < unidDist2) {
+    return `"cat1"`;
+  }
+  else if (unidDist1 > unidDist2) {
+    return `"cat2"`;
   }
   else {
-    return `ERROR > tipos não são números!`
+    return `"os gatos trombam e o rato foge"`;
   }
-  
 }
 
 // < Para o teste manual >
@@ -161,30 +158,24 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrNum) {
-  if (typeof arrNum === "object") {
-    let inputArrNumbers = arrNum;
-    let outputArr = [];
-  
-    for (let index = 0; index < inputArrNumbers.length; index += 1) {
-      if (inputArrNumbers[index] % 3 == 0 && inputArrNumbers[index] % 5 != 0) {
-        outputArr.push("fizz");
-      }
-      else if (inputArrNumbers[index] % 3 != 0 && inputArrNumbers[index] % 5 == 0) {
-        outputArr.push("buzz");
-      }
-      else if (inputArrNumbers[index] %3 == 0 && inputArrNumbers[index] % 5 == 0) {
-        outputArr.push("fizzbuzz");
-      } 
-      else {
-        outputArr.push("bug!");
-      }
+  let inputArrNumbers = arrNum;
+  let outputArr = [];
+
+  for (let index = 0; index < inputArrNumbers.length; index += 1) {
+    if (inputArrNumbers[index] % 3 == 0 && inputArrNumbers[index] % 5 != 0) {
+      outputArr.push("fizz");
     }
-  
-    return outputArr;
+    else if (inputArrNumbers[index] % 3 != 0 && inputArrNumbers[index] % 5 == 0) {
+      outputArr.push("buzz");
+    }
+    else if (inputArrNumbers[index] %3 == 0 && inputArrNumbers[index] % 5 == 0) {
+      outputArr.push("fizzbuzz");
+    } 
+    else {
+      outputArr.push("bug!");
+    }
   }
-  else {
-    return `ERROR > tipo não é objeto Array!`
-  }
+  return outputArr;
 }
 
 // < Para o teste manual >
@@ -277,23 +268,17 @@ function decode(str) {
 
 // Desafio 10
 function techList(arrStr, name) {
-  if (typeof arrStr === "object" && typeof name === "string") {
-    let techName = arrStr;
-    techName.sort();
-    let outputObj = [];
-  
-    for (let index = 0; index < techName.length; index += 1) {
-      let aux = {};
-      aux.tech = techName[index];
-      aux.name = name;
-      outputObj.push(aux);
-    }
-  
-    return outputObj;
+  let techName = arrStr;
+  techName.sort();
+  let outputObj = [];
+
+  for (let index = 0; index < techName.length; index += 1) {
+    let aux = {};
+    aux.tech = techName[index];
+    aux.name = name;
+    outputObj.push(aux);
   }
-  else {
-    return `ERROR > tipo não é objeto Array e nem string!`
-  }
+  return outputObj;
 }
 
 // < Para o teste manual >
@@ -303,69 +288,62 @@ function techList(arrStr, name) {
 
 // Desafio 11
 function generatePhoneNumber(arrNum) {
-  if (typeof arrNum === "object") {
-    let aux = arrNum;
-    let outputStr = '';
-    let verificaArray = true;
-    let verificaRepetido = true;
-  
-    //Verifica condições do array
-  
-    for (let index = 0; index < aux.length; index += 1) {
-      let contador = 0;
-  
-      if (aux[index] < 0 || aux[index] > 9) {
-        verificaArray = false;
+  let aux = arrNum;
+  let outputStr = '';
+  let verificaArray = true;
+  let verificaRepetido = true;
+
+  //Verifica condições do array
+
+  for (let index = 0; index < aux.length; index += 1) {
+    let contador = 0;
+
+    if (aux[index] < 0 || aux[index] > 9) {
+      verificaArray = false;
+      break;
+    }
+    
+    for (let j = 0 ; j < aux.length; j += 1) {
+      
+      if (aux[index] == aux[j]) {
+        contador += 1;
+      }
+
+      if (contador >= 3) {
+        verificaRepetido = false;
         break;
       }
-      
-      for (let j = 0 ; j < aux.length; j += 1) {
-       
-        if (aux[index] == aux[j]) {
-          contador += 1;
-        }
-  
-        if (contador >= 3) {
-          verificaRepetido = false;
-          break;
-        }
+    }
+  }
+
+  //Organiza a string de output
+
+  if (aux.length == 11) {
+    for (let index in aux) {
+      if (index == 0) {
+        outputStr = '(' + aux[index];
+      }
+      else if (index == 1) {
+        outputStr += aux[index] + ') ';
+      }
+      else if (index >= 2 && index <= 5) {
+        outputStr += aux[index];
+      }
+      else if (index == 6) {
+        outputStr += aux[index] + "-";
+      }
+      else {
+        outputStr += aux[index];
       }
     }
-  
-    //Organiza a string de output
-  
-    if (aux.length == 11) {
-      for (let index in aux) {
-        if (index == 0) {
-          outputStr = '(' + aux[index];
-        }
-        else if (index == 1) {
-          outputStr += aux[index] + ') ';
-        }
-        else if (index >= 2 && index <= 5) {
-          outputStr += aux[index];
-        }
-        else if (index == 6) {
-          outputStr += aux[index] + "-";
-        }
-        else {
-          outputStr += aux[index];
-        }
-      }
-    }
-    else if (verificaRepetido == false || verificaArray == false) {
-      outputStr = "não é possível gerar um número de telefone com esses valores";
-    }
-    else {
-      outputStr = "Array com tamanho incorreto.";
-    }
-  
-    return outputStr;
+  }
+  else if (verificaRepetido == false || verificaArray == false) {
+    outputStr = "não é possível gerar um número de telefone com esses valores";
   }
   else {
-    return `ERROR > tipo não é objeto de Array`;
+    outputStr = "Array com tamanho incorreto.";
   }
- 
+  return outputStr;
 }
 
 // < Para o teste manual >
