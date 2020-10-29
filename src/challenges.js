@@ -36,23 +36,6 @@ splitSentence("Go Trybe");
 
 
 
-// Desafio 4
-function concatName(firstName, secondName, lastName) {
-  // seu código aqui
-  return lastName + ' ' + firstName;
-}
-
-console.log(concatName(["lucas", "feraz"]));
-concatName(firstName, secondName, lastName);
-
-
-
-
-// Desafio 5
-function footballPoints(wins, ties) {
-  // seu código aqui
-  return (wins * 3) - ties;
-}
 
 
 
