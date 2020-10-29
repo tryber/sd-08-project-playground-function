@@ -5,11 +5,11 @@ function compareTrue(param1,param2) {
   }
       return false;
 }
-console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
