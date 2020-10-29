@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   //   1 - Usando o operador &&
-  // JavaScript possui um operador lógico &&, o qual recebe dois valores e retorna true se ambos os valores são verdadeiros, e retorna false se
-  //algum dos valores não o for.
+  // JavaScript possui um operador lógico &&, o qual recebe dois valores e retorna true se ambos os
+  //valores são verdadeiros, e retorna false se algum dos valores não o for.
   // Considerando isso, crie uma função chamada compareTrue que, ao receber dois booleanos:
   // Retorne true se ambos os valores são verdadeiros;
   // Retorne false se um ou ambos os parâmetros forem falsos.
@@ -15,9 +15,8 @@ function compareTrue(valor1, valor2) {
 
 // Desafio 2
 function calcArea(base, height) {
-//   Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de altura (chamado height)
-//de um triângulo e retorne o cálculo da sua área.
-
+//   Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de
+//altura (chamado height) de um triângulo e retorne o cálculo da sua área.
 // Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2.
   let resultado= 0;
   resultado=(base*height)/2;
@@ -27,8 +26,8 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence() {
   // seu código aqui
-//   Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas
-//por cada espaço na string original.
+//   Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array
+// de strings separadas por cada espaço na string original.
 
 // Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
 
@@ -37,10 +36,12 @@ function splitSentence() {
 // Desafio 4
 function concatName() {
   // seu código aqui
-//   Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM',
+//   Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string
+//com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM',
 //independente do tamanho da array.
 
-// Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá
+// Isso quer dizer que, caso o parâmetro passado para concatName seja a Array
+//['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá
 //retornar Paolillo, Lucas.
 
 
@@ -48,8 +49,9 @@ function concatName() {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  // Escreva uma função com o nome footballPoints que receba o número de vitórias (esse parâmetro deverá se chamar wins) e o número de empates
-  // (esse parâmetro deverá se chamar ties) e retorne a quantidade de pontos que o time marcou em um campeonato.
+  // Escreva uma função com o nome footballPoints que receba o número de vitórias
+  //(esse parâmetro deverá se chamar wins) e o número de empates (esse parâmetro
+  //deverá se chamar ties) e retorne a quantidade de pontos que o time marcou em um campeonato.
 
   // Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
   let resultado=((wins*3)+ties)
@@ -58,8 +60,10 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(teste) {
-//   Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a quantidade de vezes que o maior deles se repete.
-// Exemplo: caso o parâmetro de highestCount seja uma array com valores [9, 1, 2, 3, 9, 5, 7], a função deverá retornar 2, que é a quantidade de
+//   Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a
+//quantidade de vezes que o maior deles se repete.
+// Exemplo: caso o parâmetro de highestCount seja uma array com valores [9, 1, 2, 3, 9, 5, 7],
+// a função deverá retornar 2, que é a quantidade de
 //vezes que o número 9 (maior número do array) se repete.
 let maior=0;
 let quantidadeRepeticao=0;
@@ -78,12 +82,17 @@ return quantidadeRepeticao;
 
 // Desafio 7
 function catAndMouse(mouse , cat1 , cat2 ) {
-//   Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que ambos estão atrás de um rato chamado mouse.
+//   Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que ambos estão atrás
+// de um rato chamado mouse.
 //Imagine que cada um dos três animais está em uma posição representada por um número.
-// Sabendo disso, crie uma função chamada catAndMouse que, ao receber a posição de mouse, cat1 e cat2, nessa ordem,
-//calcule as distâncias entre o rato e os gatos e retorne qual dos felinos irá alcançar o rato primeiro (sendo aquele que estará mais perto).
-// Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades, sua função deverá retornar "cat2".
-// Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam e o rato foge".
+// Sabendo disso, crie uma função chamada catAndMouse que, ao receber a posição de mouse, cat1 e cat2,
+//nessa ordem,
+//calcule as distâncias entre o rato e os gatos e retorne qual dos felinos irá alcançar o rato primeiro
+//(sendo aquele que estará mais perto).
+// Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades, sua
+//função deverá retornar "cat2".
+// Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam
+//e o rato foge".
 if (cat1==cat2){
   return "os gatos trombam e o rato foge"
 }
@@ -100,7 +109,8 @@ function fizzBuzz(Array) {
 // Para cada número da Array que seja divisível apenas por 5, apresente uma string "buzz";
 // Caso o número seja divisível por 3 e 5, retorne a string "fizzBuzz";
 // Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
-// Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
+// Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar
+// ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
 let resultado = [];
 for (const key in array){
   if(array[key]%3===0){
