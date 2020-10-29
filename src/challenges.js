@@ -135,7 +135,6 @@ function generatePhoneNumber(numArr) {
   }
 
   let numCounter = {};
-  let phone = '';
 
   for (let numI in numArr) {
     if (numCounter[numArr[numI]]) {
@@ -149,28 +148,16 @@ function generatePhoneNumber(numArr) {
     } else {
       numCounter[numArr[numI]] = 1;
     }
-
-    switch (numI) {
-      case '0':
-        phone += `(${numArr[numI]}`;
-        break;
-
-      case '1':
-        phone += `${numArr[numI]}) `;
-        break;
-
-      case '6':
-        phone += `${numArr[numI]}-`;
-        break;
-
-      default:
-        phone += `${numArr[numI]}`;
-        break;
-    }
   }
 
-  return phone;
+  numArr.splice(0, 0, '(');
+  numArr.splice(3, 0, ') ');
+  numArr.splice(9, 0, '-');
+
+  return numArr.join('');
 }
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(a, b, c) {
