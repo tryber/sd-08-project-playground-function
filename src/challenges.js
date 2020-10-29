@@ -59,7 +59,6 @@ function highestCount(array) {
   return count;
 }
 
-console.log(highestCount([0, 0, 0]))
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2){
 
@@ -147,6 +146,7 @@ function decode(string) {
 // Desafio 10
 function techList(array, nome) {
   
+  array.sort();
   let arrayRetorno = [];
   if(array.length < 1){
     return("Vazio!");
@@ -158,7 +158,6 @@ function techList(array, nome) {
     return(arrayRetorno);
   }
 }
-
 
 // Desafio 11
 function generatePhoneNumber() {
