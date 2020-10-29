@@ -1,4 +1,4 @@
-// Desafio 1
+// Desafio 1 CONCLUIDO
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
@@ -6,7 +6,7 @@ function compareTrue(value1, value2) {
   return false;
 }
 
-// Desafio 2
+// Desafio 2 CONCLUIDO
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
@@ -22,14 +22,13 @@ function splitSentence(string) {
   }
   return dividido;
 }
-// console.log(splitSentence("go Trybe"))
 
-// Desafio 4
+// Desafio 4 CONCLUIDO
 function concatName(nomes) {
   return nomes[nomes.length -1] + ", " + nomes[0];
 }
 
-// Desafio 5
+// Desafio 5 CONCLUIDO
 function footballPoints(wins, ties) {
   wins *= 3;
   ties *= 1;
@@ -37,7 +36,7 @@ function footballPoints(wins, ties) {
   return pontos;
 }
 
-// Desafio 6
+// Desafio 6 CONCLUIDO
 function highestCount(numeros) {
   let repete = 0;
   let maiorNumero = 0;
@@ -53,14 +52,13 @@ function highestCount(numeros) {
   }
   return repete;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7,]))
 
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
 
-// Desafio 8
+// Desafio 8 CONCUIDO
 function fizzBuzz(numeros) {
   let valores = [];
   for(let index in numeros){
@@ -78,11 +76,56 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(palavra) {
+  let palavraCodificada = '';
+  for (index in palavra) {
+    if (palavra[index] === 'a') {
+      palavraCodificada += '1';
+    }
+    else if (palavra[index] === 'e') {
+      palavraCodificada += '2';
+    }
+    else if (palavra[index] === 'i') {
+      palavraCodificada += '3';
+    }
+    else if (palavra[index] === 'o') {
+      palavraCodificada += '4';
+    }
+    else if (palavra[index] === 'u') {
+      palavraCodificada += '5';
+    } 
+    else {
+      palavraCodificada += palavra[index];
+    }
+    
+  }
+  return palavraCodificada;
 }
-function decode() {
-  // seu código aqui
+
+function decode(palavra) {
+  let palavraDecodificada = '';
+  for (index in palavra) {
+    if (palavra[index] === '1') {
+      palavraDecodificada += 'a';
+    }
+    else if (palavra[index] === '2') {
+      palavraDecodificada += 'e';
+    }
+    else if (palavra[index] === '3') {
+      palavraDecodificada += 'i';
+    }
+    else if (palavra[index] === '4') {
+      palavraDecodificada += 'o';
+    }
+    else if (palavra[index] === '5') {
+      palavraDecodificada += 'u';
+    } 
+    else {
+      palavraDecodificada += palavra[index];
+    }
+    
+  }
+  return palavraDecodificada;
 }
 
 // Desafio 10
