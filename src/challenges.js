@@ -25,7 +25,7 @@ function splitSentence(texto) {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1] + ', ' + array[0];
+  return array[array.length - 1] + ", " + array[0];
 }
 
 /* console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])); */
@@ -108,36 +108,34 @@ function fizzBuzz(arrayNumeros) {
 
 // Desafio 9
 function encode(texto) {
-  let novoTexto = '';
+  let novoTextoEncode = '';
 
-  for (let pos in texto) {
-
-    switch (texto[pos]) {
+  for (let indice = 0; indice < texto.length; indice += 1) {
+    switch (texto[indice]) {
       case 'a':
-        novoTexto += '1';
+        novoTextoEncode += '1';
         break;
       case 'e':
-        novoTexto += '2';
+        novoTextoEncode += '2';
         break;
       case 'i':
-        novoTexto += '3';
+        novoTextoEncode += '3';
         break;
       case 'o':
-        novoTexto += '4';
+        novoTextoEncode += '4';
         break;
       case 'u':
-        novoTexto += '5';
+        novoTextoEncode += '5';
         break;
       default:
-        novoTexto += texto[pos];
+        novoTextoEncode += texto[indice];
     }
   }
-  return novoTexto;
+  return novoTextoEncode;
 }
 function decode(texto) {
   let novoTexto = '';
-
-  for (let pos in texto) {
+  for (let pos = 0; pos < texto.length; pos += 1) {
     switch (texto[pos]) {
       case '1':
         novoTexto += 'a';
@@ -242,9 +240,8 @@ function triangleCheck(lineA, lineB, lineC) {
 
   if (lineC < soma1 && lineC > somaAbsoluta) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 /* console.log(triangleCheck(10, 14, 8)); */
@@ -255,7 +252,7 @@ function hydrate(texto) {
   let somaBebidas = 0;
   let totalCoposDeAgua = 0;
 
-  for (let indice in textoSoNumeros) {
+  for (let indice = 0; indice < textoSoNumeros.length; indice += 1) {
     somaBebidas += Number(textoSoNumeros[indice]);
   }
 
@@ -264,7 +261,7 @@ function hydrate(texto) {
   if (totalCoposDeAgua === 1) {
     return totalCoposDeAgua + ' ' + 'copo de água';
   }
-  return totalCoposDeAgua + ' ' + 'copos de água';  
+  return totalCoposDeAgua + ' ' + 'copos de água';
 }
 
 /* console.log(hydrate("1 cerveja"));
