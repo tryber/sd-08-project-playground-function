@@ -23,8 +23,11 @@ function splitSentence(word)
 // Desafio 4
 function concatName(phrase)
 {
-  return phrase[phrase.length - 1] + " " + phrase[0];
+  let input = phrase;
+  let result = input[input.length - 1] + " " + input[0];
+  return result;
 }
+
 
 // Desafio 5
 function footballPoints() {
