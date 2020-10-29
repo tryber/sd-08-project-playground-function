@@ -64,7 +64,7 @@ for (counter = 0; counter < array.length; counter += 1){
   return elemento;
 }
 }
-console.log( highestCount())
+
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
