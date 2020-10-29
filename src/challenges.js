@@ -10,11 +10,16 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return (string = string.split(" "));
+  return (string = string.split(' '));
 }
 
 // Desafio 4
-function concatName() {}
+function concatName(array) {
+  let firstString = array[0];
+  let lastString = array[array.length - 1];
+
+  return `${lastString}, ${firstString}`;
+}
 
 // Desafio 5
 function footballPoints() {}
