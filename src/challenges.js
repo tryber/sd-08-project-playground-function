@@ -27,7 +27,7 @@ function concatName(arrayString) {
     if (i == ultimaPosicao - 1) {
       palavra = arrayString[i] + ',';
     } else if (i == 0){
-      palavra += ' ' + arrayString[i]+ '.';
+      palavra += ' ' + arrayString[i];
     }
   } 
   return palavra;
