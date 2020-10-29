@@ -125,8 +125,46 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-    // seu código aqui
+function fizzBuzz(arrayOfNum) {
+
+    let fizzBuzzArray = [];
+
+    //Running across the array of numbers given as a parameter
+    for (let val = 0; val < arrayOfNum.length; val += 1) {
+
+
+        if (
+            //If current number is divisible by 3 and 5
+            arrayOfNum[val] % 3 === 0 &&
+            arrayOfNum[val] % 5 === 0
+        ) {
+
+            fizzBuzzArray.push("fizzBuzz");
+
+        } else if (
+            //If current number is divisible by 3
+            arrayOfNum[val] % 3 === 0
+        ) {
+
+            fizzBuzzArray.push("fizz");
+
+        } else if (
+            //If current number is divisible by 5
+            arrayOfNum[val] % 5 === 0
+        ) {
+
+            fizzBuzzArray.push("buzz");
+
+        } else {
+            //Else
+            fizzBuzzArray.push("bug!");
+        }
+
+    }
+
+    //Returning generated array
+    return fizzBuzzArray;
+
 }
 
 // Desafio 9
