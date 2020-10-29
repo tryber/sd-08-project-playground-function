@@ -8,9 +8,11 @@ function compareTrue(firstBoolean, secondBoolean) {
 compareTrue();
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {  
+  let result = (base * height) / 2;
+  return result;
 }
+calcArea();
 
 // Desafio 3
 function splitSentence() {
