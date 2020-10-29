@@ -157,7 +157,8 @@ function generatePhoneNumber(numberArray) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
+  return ((lineA + lineB > lineC) && (lineA + lineC > lineB) && (lineB + lineC > lineA));
   // seu código aqui
 }
 
