@@ -3,13 +3,14 @@ function compareTrue() {
   let valueA = true;
   let valueB = true;
 
-    if(valueA && valueB === true) {
+  if (valueA === true && valueB === true) {
     return true;
-    } else {
+  } else {
     return false;
-    }
+  }
 }
-console.log(compareTrue());
+
+
 
 // Desafio 2
 function calcArea() {
