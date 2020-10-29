@@ -94,9 +94,9 @@ function fizzBuzz(arr)
     else
       result[i] = "bug!";
   }
-  console.log(result);
+  return result;
 }
-fizzBuzz([2, 15, 7, 9, 45]);
+
 
 // Desafio 9
 function encode() {
