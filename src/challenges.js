@@ -1,24 +1,25 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
-
   let trueOrFalse = (boolean1 && boolean2) ? true : false;
   return trueOrFalse;
-
 }
+
 // Desafio 2
-let base = 8;
-let height = 4;
 
 function calcArea(base, height) {
   return base*height/2;
 }
 
-calcArea(base, height);
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+let string = 'go Trybe';
+
+function splitSentence(string) {
+
+  let splitted = string.split(/\s+/);
+  return splitted;
 }
+
+splitSentence(string);
 
 // Desafio 4
 function concatName() {
