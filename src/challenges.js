@@ -29,7 +29,7 @@ function concatName(nome) {
   let cont;
   pNome = nome[0];
   uNome = nome[nome.length - 1];
-  cont = uNome + ', ' + pNome;
+  cont = uNome + ", " + pNome;
   return cont;
 }
 
@@ -40,7 +40,7 @@ function footballPoints(wins, ties) {
     points += wins * 3;
   }
   if (ties > 0) {
-    points += ties + 1;
+    points += ties * 1;
   }
   return points;
 }
