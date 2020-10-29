@@ -97,8 +97,20 @@ function decode(sentence) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(technologies, name) {
+  let list = [];
+  let techsSorted = technologies.sort();
+
+  for (let index in techsSorted) {
+    list.push({
+      tech: techsSorted[index],
+      name
+    })
+  }
+
+  if (list.length === 0) return "Vazio!";
+
+  return list;
 }
 
 // Desafio 11
