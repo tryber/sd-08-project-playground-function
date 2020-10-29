@@ -23,12 +23,8 @@ function splitSentence(word)
 // Desafio 4
 function concatName(phrase)
 {
-  return phrase[phrase.length - 1] + " " + phrase[0];
+  console.log(phrase[phrase.length - 1] + " " + phrase[0]);
 }
-
-
-concatName(["Lucas", "Cassiano", "Ferraz", "Paolillo"]);
-
 
 // Desafio 5
 function footballPoints() {
