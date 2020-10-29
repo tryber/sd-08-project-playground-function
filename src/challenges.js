@@ -7,7 +7,7 @@ function compareTrue(a, b) {
   }
 }
 
-compareTrue(true, false);
+compareTrue(true, true);
 
 
 
