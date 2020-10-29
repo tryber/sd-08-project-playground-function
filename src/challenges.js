@@ -93,15 +93,60 @@ function fizzBuzz(arrayOfNumbers) {
   }
   return fizbuz;
 }
-arrayq = [2, 8, 15, 33, 90, 155];
-console.log(fizzBuzz(arrayq));
 
 // Desafio 9
-function encode() {
+function encode(sentence) {
   // seu código aqui
+  let newSentence = "";
+  for(let pos = 0; pos < sentence.length; pos += 1){
+    switch(sentence.slice(pos, pos+1)){
+      case "a":
+        newSentence += "1";
+        break;
+      case "e":
+        newSentence += "2";
+        break;
+      case "i":
+        newSentence += "3";
+        break;
+      case "o":
+        newSentence += "4";
+        break;
+      case "u":
+        newSentence += "5";
+        break;
+      default:
+        newSentence += sentence.slice(pos, pos+1);
+    }    
+  }
+  return newSentence;
 }
-function decode() {
+
+function decode(sentence) {
   // seu código aqui
+  let newSentence = "";
+  for(let pos = 0; pos < sentence.length; pos += 1){
+    switch(sentence.slice(pos, pos+1)){
+      case "1":
+        newSentence += "a";
+        break;
+      case "2":
+        newSentence += "b";
+        break;
+      case "3":
+        newSentence += "c";
+        break;
+      case "4":
+        newSentence += "d";
+        break;
+      case "5":
+        newSentence += "e";
+        break;
+      default:
+        newSentence += sentence.slice(pos, pos+1);
+    }    
+  }
+  return newSentence;
 }
 
 // Desafio 10
