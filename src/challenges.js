@@ -18,40 +18,38 @@ function encontraQuantidadeMaior(vetor, maior) {
   return count;
 }
 
-function calculaDistancia(pos1, pos2){
-  return Math.abs(pos1 - pos2)
+function calculaDistancia(pos1, pos2) {
+  return Math.abs(pos1 - pos2);
 }
 
 function dividePor3(num) {
-  if(num % 3 === 0) {
+  if (num % 3 === 0) {
     return 1;
-  }else {
-    return 0;
   }
+  return 0;
 }
 
 function dividePor5(num) {
-  if(num % 5 === 0) {
+  if (num % 5 === 0) {
     return 3;
-  }else {
-    return 0;
   }
+  return 0;
 }
 
 function refatoraVetor(vetor) {
   for (let index = 0; index < vetor.length; index++) {
     switch (vetor[index]) {
       case 1:
-        vetor[index] = "fizz";
+        vetor[index] = 'fizz';
         break;
       case 3:
-        vetor[index] = "buzz";
+        vetor[index] = 'buzz';
         break;
       case 4:
-        vetor[index] = "fizzBuzz";
+        vetor[index] = 'fizzBuzz';
         break;
       default:
-        vetor[index] = "bug!";
+        vetor[index] = 'bug!';
         break;
     }
   }
@@ -80,7 +78,7 @@ function concatName(vetor) {
 }
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = (wins * 3) + ties;
+  let pontos = wins * 3 + ties;
   return pontos;
 }
 // Desafio 6
@@ -94,12 +92,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = calculaDistancia(cat1, mouse);
   let distanciaCat2 = calculaDistancia(cat2, mouse);
 
-  if(distanciaCat1 > distanciaCat2) {
-    return "cat2";
-  } else if(distanciaCat2 > distanciaCat1){
-    return "cat1";
+  if (distanciaCat1 > distanciaCat2) {
+    return 'cat2';
+  } else if (distanciaCat2 > distanciaCat1) {
+    return 'cat1';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 // Desafio 8
@@ -115,11 +113,21 @@ function fizzBuzz(vetor) {
   return vetorRefatorado;
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codificar) {
+  let codificado = codificar.split('a').join('1');
+  codificado = codificado.split('e').join('2');
+  codificado = codificado.split('i').join('3');
+  codificado = codificado.split('o').join('4');
+  codificado = codificado.split('u').join('5');
+  return codificado;
 }
-function decode() {
-  // seu código aqui
+function decode(decodificar) {
+  let decodificado = decodificar.split('a').join('1');
+  decodificado = decodificado.split('e').join('2');
+  decodificado = decodificado.split('i').join('3');
+  decodificado = decodificado.split('o').join('4');
+  decodificado = decodificado.split('u').join('5');
+  return decodificado;
 }
 
 // Desafio 10
