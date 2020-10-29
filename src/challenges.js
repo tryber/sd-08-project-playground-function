@@ -123,6 +123,11 @@ function decode(palavra) {
 function techList(arrayTech, name) {
   // seu código aqui
   let hardSkills = [];
+
+  if (arrayTech.length == null){ 
+    return 'vazio';
+  }
+
   arrayTech.sort();
   for (let x = 0; x < arrayTech.length; x += 1) {
     let objNovo = new Object;
