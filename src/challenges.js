@@ -10,8 +10,10 @@ function compareTrue(boolean1, boolean2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  // seu código aqui
+  let area = ((base * height)/2)
+  return area 
 }
+// Ok!
 
 // Desafio 3
 function splitSentence() {
