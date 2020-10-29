@@ -60,8 +60,17 @@ function highestCount(numbers) {
 
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let location1 = 0;
+  let location2 = 0;
+  location1 = mouse - cat1;
+  location2 = mouse - cat2;
+  if (location1 < location2) {
+    return "cat2"
+  } else {
+    return "cat1"
+  }
 }
 
 // Desafio 8
