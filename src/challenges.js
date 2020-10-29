@@ -36,8 +36,7 @@ function concatName(itens) {
   return `${ultItem}, ${priItem}`;
 }
 
-// let nome = concatName('marcos','paulo');
-// console.log(nome);
+// console.log(concatName([9, 1, 6, 8, 3, 9, 7]));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -66,13 +65,33 @@ function highestCount(repetido) {
   }
   return contador;
 }
-// let teste = highestCount([9, 2, 4, 3, 1, 16, 9, 9])
-// console.log(teste)
+// console.log(highestCount([9, 1, 6, 8, 3, 9, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (mouse > cat1){
+    cat1 = mouse - cat1;
+  } else {
+    cat1 -= mouse;
+  }
+
+  if (mouse > cat2){
+    cat2 = mouse - cat2;
+  } else {
+    cat2 -= mouse;
+  }
+
+  if (cat1 == cat2) {
+    return "os gatos trombam e o rato foge";
+  } else if (cat1 < cat2) {
+    return "cat1";
+  } else {
+    return "cat2";
+  }
 }
+// let posicoes = {
+//   posicaoDoRato: -800, primeiroGato: -930, segundoGato: -930, }
+// console.log(catAndMouse(posicoes.posicaoDoRato, posicoes.primeiroGato, posicoes.segundoGato));
 
 // Desafio 8
 function fizzBuzz() {
