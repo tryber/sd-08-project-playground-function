@@ -85,3 +85,9 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
+console.log(compareTrue(true,false));
+console.log(compareTrue(false,false));
+console.log(compareTrue(true,true));
+console.log(calcArea(12,4));
+console.log(splitSentence("The Best Game Dev"));
