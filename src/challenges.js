@@ -25,19 +25,37 @@ function concatName(phrase)
 {
   let input = phrase;
   let result = input[input.length - 1] + " " + input[0];
+  console.log(input[input.length - 1] + " " + input[0]);
   return result;
 }
-
+concatName(["Lucas", "Cassiano", "Ferraz", "Paollilo"])
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties)
+{
+  return wins * 3 + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers)
+{
+  let higher = 0;
+  let count = 0;
+
+  for(let i = 0; i < numbers.length; i += 1)
+  {
+    if(numbers[i] > higher)
+    {
+      higher = numbers[i];
+      count = 1;
+    }
+    else if(numbers[i] == higher)
+      count += 1;
+  }
+
+  return count;
 }
+highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse() {
