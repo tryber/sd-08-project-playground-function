@@ -16,7 +16,7 @@ function splitSentence(sentence) {
   let arrayString = [];
   let string = '';
   for (let index in sentence){
-    if (sentence[index] !== ' '){
+    if (sentence[index] !== ' ') {
       string += sentence[index];
     } else {
       arrayString.push(string);
@@ -42,24 +42,24 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let maior = array[0];
-  let count = 0;
+  let maior = array[0], count = 0;
   for (let index in array){
-    if (array[index] > maior){
+    if (array[index] > maior) {
       maior = array[index];
     }
   }
-  for (let indice in array){
+  for (let indice in array) {
     if (array[indice] === maior){
-      count++
+      count += 1;
     }
   }
   return count;
 }
 
+
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  
 }
 
 // Desafio 8
