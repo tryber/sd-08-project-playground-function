@@ -94,19 +94,6 @@ function fizzBuzz(arrayOfNumbers) {
   return fizbuz;
 }
 
-x = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(x));
-
-
-
-
-
-
-
-
-
-
-
 // Desafio 9
 function encode(sentence) {
   // seu código aqui
@@ -166,11 +153,11 @@ function decode(sentence) {
 function techList(array, name) {
   // seu código aqui
   let sortedArray = array.sort();
-  let skills = {};
   let listSkills = [];
 
   if(sortedArray.length != 0){
     for(let pos = 0; pos < sortedArray.length; pos += 1){
+      let skills = {};
       skills.tech = sortedArray[pos];
       skills.name = name;
       listSkills[pos] = skills;
@@ -180,9 +167,6 @@ function techList(array, name) {
     return "Vazio!";
   }
 }
-x = [];
-y = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-console.log(techList(y, "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
