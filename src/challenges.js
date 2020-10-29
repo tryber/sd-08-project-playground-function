@@ -1,4 +1,4 @@
-// Desafio 1 VAMBORA
+// Desafio 1 VAMBORA!!!
 function compareTrue(bool1, bool2) {
   let isTrue = false; 
   if (bool1 && bool2) {
