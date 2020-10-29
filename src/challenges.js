@@ -1,8 +1,5 @@
-
 // Desafio 1
-function compareTrue() {
-  let nome = "ruben";
-  let sobrenome = "albertassi";  
+function compareTrue(nome, sobrenome) {  
   if (nome === "ruben" && sobrenome === "albertassi"){
     return true;
   }else{
@@ -10,10 +7,25 @@ function compareTrue() {
   }
 }
 
+compareTrue("ruben", "albertassi");
+
+
+
+
 // Desafio 2
 function calcArea() {
-  // seu código aqui
+  
+
+
 }
+
+
+
+
+
+
+
+
 
 // Desafio 3
 function splitSentence() {
