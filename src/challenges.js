@@ -25,12 +25,15 @@ function splitSentence(string) {
   stringSplit = string.split(/[ ]/);
   return stringSplit;
 }
-//console.log(splitSentence("go Trybe"));
+console.log(splitSentence("go Trybe"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomes) {
+  let nameConcat = [];
+  nameConcat = nomes[nomes.length - 1] + ", " + nomes[0];
+  return nameConcat;
 }
+//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
