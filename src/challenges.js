@@ -34,7 +34,7 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let result = ties + wins * 3;
+  let result = ties + (wins * 3;
   return result;
 }
 
@@ -43,15 +43,13 @@ function highestCount(array) {
   // seu código aqui
   let comparaNumero = 0;
   let numeroMaior = 0;
-  let contador = 0;
+  let contador = 1;
 
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] > comparaNumero) {
       numeroMaior = array[index];
-    }
-  }
-  for (let key in array) {
-    if (numeroMaior === array[key]) {
+      comparaNumero = numeroMaior;
+    } else if (array[index] === numeroMaior) {
       contador += 1;
     }
   }
