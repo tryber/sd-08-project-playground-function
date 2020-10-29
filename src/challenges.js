@@ -7,26 +7,26 @@ function compareTrue(x, y) {
     result = false;
   }
   return result;
-};
+}
 
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
-};
+}
 
 // Desafio 3
 function splitSentence(frase) {
   return frase.split(' ');
-};
+}
 
 // Desafio 4
 function concatName(string) {
-  return string[string.length - 1] + ", " + string[0];
-};
+  return string[string.length - 1] + ', ' + string[0];
+}
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
