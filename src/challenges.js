@@ -49,17 +49,15 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-// let array = [9, 1, 2, 3, 9, 5, 7, 10]
+// let array = [9, 1, 2, 3, 9, 5, 7]
 let maiorValor = 0
-let repeticoes = 0
+let repeticoes = 1
 function highestCount(array) {
-  for (let index in array){
-    if (array[index] > maiorValor){
+  for (let index in array) {
+    if (array[index] > maiorValor) {
       maiorValor = array[index]
-    }
-  }
-  for (let index in array){
-    if (array[index] === maiorValor){
+      repeticoes = 1
+    } else if (array[index] === maiorValor){
       repeticoes += 1
     }
   }
