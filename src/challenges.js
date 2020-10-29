@@ -93,11 +93,30 @@ function encode(string) {
       encodedString[i] = encodedValues[encodeLetters.indexOf(encodedString[i])];
     }
   }
+
+  //Une todos os elementos do array
   return encodedString.join("");
 }
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let encodeLetters = ["a", "e", "i", "o", "u"];
+
+  //Precisei colocar os números como string porque o indexOf estava retornando -1
+  let encodedValues = ["1", "2", "3", "4", "5"];
+
+  //Passa a string para um array
+  let encodedString = string.split("");
+
+  for(let i=0; i<encodedString.length; i+=1){
+    //Verificar se a posição atual da encodedString é igual a alguma das posições de encodedValues
+    if(encodedValues.indexOf(encodedString[i]) != -1 ){
+      //Substitui o número pela letra equivalente
+      encodedString[i] = encodeLetters[encodedValues.indexOf(encodedString[i])];
+    }
+  }
+
+  //Une todos os elementos do array
+  return encodedString.join("");
 }
 
 // Desafio 10
