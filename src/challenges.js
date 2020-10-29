@@ -90,15 +90,15 @@ function fizzBuzz(list) {
 function encode(str) {
   for(let index in str){
     if(str[index]=="a"){
-      str[index]="1"
+      str=str.replace(/a/g,"1");
     }else if(str[index]=="e"){
-      str[index]="2";
+      str=str.replace(/e/g,"2");
     }else if(str[index]=="i"){
-      str[index]="3";
+      str=str.replace(/i/g,"3");
     }else if(str[index]=="o"){
-      str[index]="4";
+      str=str.replace(/o/g,"4");
     }else if (str[index]=="u"){
-      str[index]="5";
+      str=str.replace(/u/g,"5");
     }
   }
   return str;
@@ -106,15 +106,15 @@ function encode(str) {
 function decode(str) {
   for(let index in str){
     if(str[index]=="1"){
-      str[index]="a";
+      str=str.replace(/1/g,"a");
     }else if(str[index]=="2"){
-      str[index]="e";
+      str=str.replace(/2/g,"e");
     }else if(str[index]=="3"){
-      str[index]="i";
+      str=str.replace(/e/g,"i");
     }else if(str[index]=="4"){
-      str[index]="o";
+      str=str.replace(/4/g,"o");
     }else if (str[index]=="5"){
-      str[index]="u";
+      str=str.replace(/5/g,"u");
     }
   }
   return str;
