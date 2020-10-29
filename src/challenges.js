@@ -48,12 +48,12 @@ function highestCount(array) {
       maiorNum = numbers[i]
     }
   }for (k in numbers){
-    if (numbers[k] === 9){
+    if (numbers[k] === maiorNum){
       contador += 1
     }
   }
   return contador
-}//console.log(highestCount(arrayGG))
+}console.log(highestCount(arrayGG))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
