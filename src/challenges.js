@@ -1,3 +1,23 @@
+function encontraMaior(vetor) {
+  let maior = vetor[0];
+  for (let index = 0; index < vetor.length; index+=1) {
+    if (vetor[index] > maior) {
+      maior = vetor[index];
+    }
+  }
+  return maior;
+}
+
+function encontraQuantidadeMaior(vetor, maior) {
+  let count = 0;
+  for (let index = 0; index < vetor.length; index+=1) {
+    if (vetor[index] === maior) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
 // Desafio 1
 function compareTrue(parametro1, parametro2) {
   return parametro1 && parametro2;
@@ -21,7 +41,7 @@ function concatName(vetor) {
 }
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = wins * 3 + ties;
+  let pontos = (wins * 3) + ties;
   return pontos;
 }
 // Desafio 6
@@ -32,7 +52,7 @@ function highestCount(vetor) {
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  
 }
 
 // Desafio 8
@@ -68,25 +88,6 @@ function hydrate() {
   // seu código aqui
 }
 
-function encontraMaior(vetor) {
-  let maior = vetor[0];
-  for (let index = 0; index < vetor.length; index++) {
-    if (vetor[index] > maior) {
-      mairo = vetor[index];
-    }
-  }
-  return maior;
-}
-
-function encontraQuantidadeMaior(vetor, maior) {
-  let count = 0;
-  for (let index = 0; index < vetor.length; index++) {
-    if (vetor[index] === maior) {
-      count += 1;
-    }
-  }
-  return count;
-}
 module.exports = {
   calcArea,
   catAndMouse,
