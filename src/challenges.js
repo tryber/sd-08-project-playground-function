@@ -84,7 +84,8 @@ function fizzBuzz(array) {
 function encode(string) {
   let alfabeto = {
       vogais: ['blankspace','a','e','i','o','u'],
-      consoantes: [' ','!','b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','y','x','z'],
+      vogaisCapital: ['blankspace','A','E','I','O','U'],
+      consoantes: [' ','!',,'?',':',',','b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','y','x','z','B','C','D','F','G','H','J','K','M','N','P','Q','R','S','T','V','X','W','Y','Z'],
   }
   let list = string.split("");
   let listForEncode = [];
@@ -95,6 +96,12 @@ function encode(string) {
           break
           }
       }
+      for(vogal in alfabeto.vogaisCapital) {
+          if (list[i] == alfabeto.vogaisCapital[vogal]) {
+          listForEncode.push(vogal);
+          break
+        }
+      }
       for(consoante in alfabeto.consoantes){
           if (list[i] == alfabeto.consoantes[consoante]) {
               listForEncode.push(alfabeto.consoantes[consoante]);
@@ -102,12 +109,13 @@ function encode(string) {
           }
       }
   }
-  return listForEncode.join("");  
-}
+  return listForEncode.join(""); 
+} 
+
 function decode(string) {
   let alfabeto = {
       vogais: ['blankspace','a','e','i','o','u'],
-      consoantes: [' ','!','b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','y','x','z'],
+      consoantes: [' ','!',,'?',':',',','b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','y','x','z','B','C','D','F','G','H','J','K','M','N','P','Q','R','S','T','V','X','W','Y'],
   }
   let list = string.split("");
   let listForEncode = [];
@@ -117,7 +125,7 @@ function decode(string) {
           listForEncode.push(alfabeto.vogais[vogal]);
           break
           }
-      }
+      }    
       for(consoante in alfabeto.consoantes){
           if (list[i] == alfabeto.consoantes[consoante]) {
               listForEncode.push(alfabeto.consoantes[consoante]);
