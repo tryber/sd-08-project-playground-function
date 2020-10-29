@@ -46,8 +46,6 @@ function concatName(name) {
   return string;
 }
 
-console.log(concatName(['Guilherme','da','Silva','Ribeiro']));
-
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
