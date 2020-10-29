@@ -19,8 +19,11 @@ function splitSentence(string) {
   return arrayFrase
 }
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  let ultimoItem = arrayString[arrayString.length -1],
+      primeitoItem = arrayString[0],
+      resultado = `${ultimoItem}, ${primeitoItem}`
+      return resultado
 }
 
 // Desafio 5
