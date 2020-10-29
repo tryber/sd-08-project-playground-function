@@ -18,7 +18,7 @@ function splitSentence() {
 
 // Desafio 4
 function concatName(arr) {
-  return arr[arr.length -1] + ", " + arr[0];
+  return `${arr[arr.length -1]}, ${arr[0]}`;
 }
 
 // Desafio 5
@@ -32,13 +32,32 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distancia1 = Math.abs(mouse - cat1),
+  distancia2 = Math.abs(mouse - cat2);
+  if (distancia1 === distancia2) {
+    return 'os gatos trombam e o rato foge'
+  } else if (distancia1 > distancia2) {
+    return "cat1"
+  }
+  return "cat2"
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+  let arrResposta = []
+  for (i = 0; i < arr.length; i += 1) {
+    if (arr[i] % 3 === 0 && arr[i] % 5 === 0) {
+      arrResposta.push("fizzBuzz")
+    } else if (arr[i] % 3 === 0) {
+      arrResposta.push("fizz")
+    } else if (arr[i] % 5 === 0) {
+      arrResposta.push("buzz")
+    } else {
+      arrResposta.push("bug!")
+    }
+  }
+  return arrResposta;
 }
 
 // Desafio 9
