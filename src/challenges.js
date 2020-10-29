@@ -40,77 +40,77 @@ console.log(footballPoints(10, 12))
 
 // Desafio 6
 function highestCount(array) {
-  let number = 0
-  let repeatNumber = 0
-  let sortedArray = array.sort()
+  // let number = 0
+  // let repeatNumber = 0
+  // let sortedArray = array.sort()
 
-  for (let property in sortedArray) {
-    if (sortedArray[property] > number) {
-      number = sortedArray[property]
-    }
-  }
+  // for (let property in sortedArray) {
+  //   if (sortedArray[property] > number) {
+  //     number = sortedArray[property]
+  //   }
+  // }
 
-  for (let property2 in sortedArray) {
-    if (number === sortedArray[property2]) {
-      repeatNumber += 1
-    }
-  }
-  return repeatNumber
+  // for (let property2 in sortedArray) {
+  //   if (number === sortedArray[property2]) {
+  //     repeatNumber += 1
+  //   }
+  // }
+  // return repeatNumber
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
-// // Desafio 7
-// function catAndMouse() {
-//   // seu código aqui
-// }
+// Desafio 7
+function catAndMouse() {
+  // seu código aqui
+}
 
-// // Desafio 8
-// function fizzBuzz() {
-//   // seu código aqui
-// }
+// Desafio 8
+function fizzBuzz() {
+  // seu código aqui
+}
 
-// // Desafio 9
-// function encode() {
-//   // seu código aqui
-// }
-// function decode() {
-//   // seu código aqui
-// }
+// Desafio 9
+function encode() {
+  // seu código aqui
+}
+function decode() {
+  // seu código aqui
+}
 
-// // Desafio 10
-// function techList() {
-//   // seu código aqui
-// }
+// Desafio 10
+function techList() {
+  // seu código aqui
+}
 
-// // Desafio 11
-// function generatePhoneNumber() {
-//   // seu código aqui
-// }
+// Desafio 11
+function generatePhoneNumber() {
+  // seu código aqui
+}
 
-// // Desafio 12
-// function triangleCheck() {
-//   // seu código aqui
-// }
+// Desafio 12
+function triangleCheck() {
+  // seu código aqui
+}
 
-// // Desafio 13
-// function hydrate() {
-//   // seu código aqui
-// }
+// Desafio 13
+function hydrate() {
+  // seu código aqui
+}
 
 
-// module.exports = {
-//   calcArea,
-//   catAndMouse,
-//   compareTrue,
-//   concatName,
-//   decode,
-//   encode,
-//   fizzBuzz,
-//   footballPoints,
-//   generatePhoneNumber,
-//   techList,
-//   highestCount,
-//   hydrate,
-//   splitSentence,
-//   triangleCheck,
-// }
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  generatePhoneNumber,
+  techList,
+  highestCount,
+  hydrate,
+  splitSentence,
+  triangleCheck,
+}
