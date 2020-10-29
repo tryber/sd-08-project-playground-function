@@ -33,10 +33,12 @@ function concatName(string) {
   return ultimoB + "," + " " + primeiroB
 }
 
-console.log(concatName( ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], ))
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+ let vitoria = 3
+  let impate = 1
+let numerodePontos = (wins*vitoria+ties*impate)
+return numerodePontos
 }
 
 // Desafio 6
