@@ -48,11 +48,12 @@ function highestCount(arrayNumeros) {
       maior = arrayNumeros[key];
     }
   }
-  for (let key in arrayNumeros) {
-    if (arrayNumeros[key] = maior) {
+  for (let chave in arrayNumeros) {
+    if (arrayNumeros[chave] === maior) {
       repeticao += 1;
     }
   }
+  console.log(maior);
   return repeticao;
 }
 
