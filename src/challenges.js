@@ -64,7 +64,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (Math.abs(cat2 - mouse)  < Math.abs(cat1 - mouse)) {
     closestCat = "cat2";
   } else {
-    console.log("os gatos trombam e o rato foge");
+    closestCat = "os gatos trombam e o rato foge";
   }
   return closestCat;
 }
