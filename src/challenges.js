@@ -215,6 +215,11 @@ function decode(texto)
 // Desafio 10
 function techList(arrayNomesTecnologia, name) 
 {  
+  if(arrayNomesTecnologia.length === 0)
+  {
+    return "Vazio!";
+  }
+
   let novoArrayNomesTecnologiaOrdenado = arrayNomesTecnologia.sort();
   let novoArrayNomesTecnologia = [];
 
@@ -235,7 +240,8 @@ function techList(arrayNomesTecnologia, name)
   return novoArrayNomesTecnologia;
 }
 
-//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+// console.log(techList([], "Lucas"));
+// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
