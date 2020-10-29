@@ -78,11 +78,41 @@ function fizzBuzz(numbers) {
   // seu código aqui
 }
 
+let vogaisEncode = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5
+};
+
+let vogaisDecode = {
+  '1': a,
+  '2': e,
+  '3': i,
+  '4': o,
+  '5': u
+};
+
+function generalEncode(word, dictionary) {
+  let coded = '';
+  for (letter of word) {
+    if (dictionary.hasOwnProperty(letter)) {
+      coded += dictionary[letter];
+    } else {
+      coded += letter;
+    }
+  }
+  return coded;
+}
+
 // Desafio 9
-function encode() {
+function encode(word) {
+  return generalEncode(word, vogaisEncode);
   // seu código aqui
 }
-function decode() {
+function decode(word) {
+  return generalEncode(word, vogaisDecode);
   // seu código aqui
 }
 
