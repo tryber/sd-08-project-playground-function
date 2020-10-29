@@ -24,8 +24,10 @@ function concatName(strings) {
   return strfinal;
 }
 // Desafio 5
-function footballPoints(wins, ties) {}
-
+function footballPoints(wins, ties) {
+  let points = 3 * wins + ties;
+  return points;
+}
 // Desafio 6
 function highestCount() {
   // seu código aqui
