@@ -31,7 +31,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(itens) {
   let priItem = itens[0];
-  let ultItem = itens[itens.length -1];
+  let ultItem = itens[itens.length - 1];
 
   return `${ultItem}, ${priItem}`;
 }
@@ -47,14 +47,27 @@ function footballPoints(wins, ties) {
 
   return resultadoFinal;
 }
-
- let reultado = footballPoints(3,1)
-  console.log(reultado)
+//  let reultado = footballPoints(3,1)
+//   console.log(reultado)
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(repetido) {
+  let maiorNumero = 0;
+  let contador = 0;
+  for (let i in repetido) {
+    if (repetido[key] > maiorNumero) {
+      maiorNumero = repetido[i];
+    }
+  }
+  for (let i in repetido) {
+    if (repetido[i] == maiorNumero) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
+let teste = highestCount([9, 2, 4, 3, 1, 16, 9, 9])
+console.log(teste)
 
 // Desafio 7
 function catAndMouse() {
