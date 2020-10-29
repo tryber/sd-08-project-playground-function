@@ -1,11 +1,11 @@
 // Desafio 1
-
 function compareTrue(x,y) {
   if (x && y ){
     return true;
+  } else {
+    return false;
   }
 }
-console.log(compareTrue(true,false));
 
 
 // Desafio 2
