@@ -87,9 +87,23 @@ let distanciaMouse1, distanciaMouse2;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNum) {
+  for (let i = 0; i < arrayNum.length; i += 1){
+    if (arrayNum[i] % 3 == 0 && arrayNum[i] % 5 == 0){
+      arrayNum[i] = "fizzBuzz";
+    } else if (arrayNum[i] % 5 == 0){
+      arrayNum[i] = "buzz";
+    } else if (arrayNum[i] % 3 == 0){
+      arrayNum[i] = "fizz";
+    } else {
+      arrayNum[i] = "bug!"
+    }
+  }
+  return arrayNum;
 }
+
+let array = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(array));
 
 // Desafio 9
 function encode() {
