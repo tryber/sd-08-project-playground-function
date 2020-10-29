@@ -19,7 +19,7 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(name) {
-  name[name.length - 1].concat(name[0]);
+  return name[name.length - 1].concat(", " + name[0])
 }
 
 // Desafio 5
