@@ -9,8 +9,31 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-    // seu código aqui
+function splitSentence(string) {
+
+    string = string.trim(); // Removing whitespaces from both ends of the string
+
+    let stringsArray = [];
+    stringsArray[0] = "";
+    let index = 0;
+
+    //Runnig across the string
+    for (let char = 0; char < string.length; char += 1) {
+
+        //If current character is not a space
+        if (string[char] !== " ") {
+
+            //Current character is concatenated to the current array position
+            stringsArray[index] += string[char];
+
+        } else {
+            //If its a space, creates a new position in the array and initializes it as an empty String
+            index += 1;
+            stringsArray[index] = "";
+        }
+
+    }
+    return stringsArray;
 }
 
 // Desafio 4
