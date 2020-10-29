@@ -2,18 +2,22 @@
 function compareTrue(valor1, valor2) {
   // seu código aqui
 
-  if(valor1 === "true" && valor2 === "true"){
-    return ("true");
+  if (valor1 === 'true' && valor2 === 'true') {
+    return 'true';
   } else {
-    return ("false");
+     return 'false';
   }
 }
-//console.log(compareTrue("true", "true"))
+//console.log(compareTrue("true", "false"))
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  let res = 0;
+  res = base * height / 2
+  return res;
 }
+//console.log(calcArea())
 
 // Desafio 3
 function splitSentence() {
