@@ -5,7 +5,7 @@ let anotherBoolean = false;
 function compareTrue(boolean1, boolean2) {
 
   let trueOrFalse = (boolean1 && boolean2) ? true : false;
-  console.log(trueOrFalse);
+  return trueOrFalse;
 
 }
 
