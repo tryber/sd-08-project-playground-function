@@ -36,7 +36,7 @@ function concatName(arrayString) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let resultado = 0;
-  for (let i = 0; i < wins; j += 1){
+  for (let i = 0; i < wins; i += 1){
     resultado += + 3;
   }
   for (let j = 0; j < ties; j += 1){
