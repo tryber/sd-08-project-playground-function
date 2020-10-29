@@ -10,7 +10,7 @@ return compareTrue;
 
 // seu código aqui
 }
-console.log(compareTrue(true, true));
+
 
 
 
