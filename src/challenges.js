@@ -25,8 +25,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(a) {
+  let maj = -100000;
+  let rep = 0;
+
+  for (num in a){
+    if (a[num] > maj)
+      maj = a[num];
+  }
+  for (num in a){
+    if (a[num] == maj)
+      rep++;
+  }
+
+  return rep;
 }
 
 // Desafio 7
@@ -91,3 +103,4 @@ console.log(calcArea(12, 4));
 console.log(splitSentence('The Best Game Dev'));
 console.log(concatName(['Natanael', 'Enéas', 'da', 'Silva', 'Neto']));
 console.log(footballPoints(3, 2));
+console.log(highestCount([1, 2, 9, 9, 15, 15, 15]));
