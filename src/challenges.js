@@ -15,7 +15,8 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(names) {
-  return names.join(' ');
+  const last = names.length - 1;
+  return `${names[last]}, ${names[0]}`;
 }
 
 // Desafio 5
