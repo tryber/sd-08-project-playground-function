@@ -91,13 +91,13 @@ function fizzBuzz(arrayNumeros) {
   for (let indice = 0; indice < arrayNumeros.length; indice += 1) {
     numero = arrayNumeros[indice];
 
-    if (numero % 3 === 0 && numero % 5 === 0) {
+    if (numero % 15 === 0) {
       arrayFizzBuzz.push('fizzBuzz');
     } else if (numero % 3 !== 0 && numero % 5 !== 0) {
       arrayFizzBuzz.push('bug!');
     } else if (numero % 5 === 0) {
       arrayFizzBuzz.push('buzz');
-    } else if (numero % 3 === 0) {
+    } else {
       arrayFizzBuzz.push('fizz');
     }
   }
@@ -108,35 +108,36 @@ function fizzBuzz(arrayNumeros) {
 
 // Desafio 9
 function encode(texto) {
-  let novoTextoEncode = '';
+  let novoTexto = '';
 
   for (let indice = 0; indice < texto.length; indice += 1) {
     switch (texto[indice]) {
       case 'a':
-        novoTextoEncode += '1';
+        novoTexto += '1';
         break;
       case 'e':
-        novoTextoEncode += '2';
+        novoTexto += '2';
         break;
       case 'i':
-        novoTextoEncode += '3';
+        novoTexto += '3';
         break;
       case 'o':
-        novoTextoEncode += '4';
+        novoTexto += '4';
         break;
       case 'u':
-        novoTextoEncode += '5';
+        novoTexto += '5';
         break;
       default:
-        novoTextoEncode += texto[indice];
+        novoTexto += texto[indice];
     }
   }
-  return novoTextoEncode;
+  return novoTexto;
 }
 function decode(texto) {
   let novoTexto = '';
-  for (let pos = 0; pos < texto.length; pos += 1) {
-    switch (texto[pos]) {
+
+  for (let indice = 0; indice < texto.length; indice += 1) {
+    switch (texto[indice]) {
       case '1':
         novoTexto += 'a';
         break;
@@ -153,7 +154,7 @@ function decode(texto) {
         novoTexto += 'u';
         break;
       default:
-        novoTexto += texto[pos];
+        novoTexto += texto[indice];
     }
   }
   return novoTexto;
