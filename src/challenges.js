@@ -1,14 +1,13 @@
 // Desafio 1
 function compareTrue(bollean,bollean2) {
   // seu código aqui
-   if(bollean === true && bollean2 === true){
+   if(bollean && bollean2 === true){
       return true;
    }
    else {
      return false;
    }
 }
-
 // Desafio 2
 function calcArea(base,heigth) {
   // seu código aqui
@@ -16,19 +15,27 @@ function calcArea(base,heigth) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(xablau) {
   // seu código aqui
+  return xablau.split(' ');
+
 }
 
 // Desafio 4
-function concatName() {
+function concatName(xablau) {
   // seu código aqui
+  let juntaNome = `${xablau[xablau.length -1]},${xablau[0]}`;
+  return juntaNome;
 }
+//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
   // seu código aqui
+  let totalPontos = wins *3 + ties;
+  return totalPontos
 }
+//console.log(footballPoints(3,1))
 
 // Desafio 6
 function highestCount() {
