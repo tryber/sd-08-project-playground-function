@@ -108,8 +108,8 @@ function highest(array) {
 function catAndMouse(mouse, cat1, cat2) {
 
     //Storing the distance between each cat and the mouse
-    let distCat1 = cat1 - mouse;
-    let distCat2 = cat2 - mouse;
+    let distCat1 = Math.abs(cat1 - mouse);
+    let distCat2 = Math.abs(cat2 - mouse);
     let result = "";
 
     if (distCat1 < distCat2) {
