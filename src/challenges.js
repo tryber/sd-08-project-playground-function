@@ -15,7 +15,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1] + array[0];
+  return array[array.length - 1] + ', ' + array[0];
 }
 
 // Desafio 5
@@ -25,20 +25,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let maior = array[0];
-  let counter = 0;
-  for (let pos = 0; pos < array.length; pos += 1) {
-    if (array[pos] > maior) {
-      maior = array[pos];
-    }
-  for (let pos = 0; pos < array.length; pos += 1) {
-    if (maior === array[pos]) {
-      counter += 1;
-  }    
-    }
-  }
-  return counter;
-}
+  // seu código aqui
 
 // Desafio 7
 function catAndMouse() {
