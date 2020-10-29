@@ -27,13 +27,13 @@ function splitSentence(mySentence) {
 // Desafio 4
 function concatName() {
   // seu código aqui
-
-
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let totalPoints = (wins * 3) + (ties * 1)
+  return totalPoints;
 }
 
 // Desafio 6
