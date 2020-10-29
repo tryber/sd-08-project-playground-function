@@ -19,15 +19,15 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let name =  array[array.length -1];
+  let name = array[array.length - 1];
   name += ", "
   name += array[0];
   return name
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
