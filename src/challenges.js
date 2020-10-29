@@ -1,4 +1,4 @@
-// Desafio 1
+// Desafio 1 VAMBORA
 function compareTrue() {
   // seu código aqui
 }
