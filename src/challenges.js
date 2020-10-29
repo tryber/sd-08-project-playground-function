@@ -1,6 +1,12 @@
 // Desafio 1 VAMBORA
-function compareTrue() {
-  // seu código aqui
+function compareTrue(bool1, bool2) {
+  let isTrue = false; 
+  if (bool1 && bool2) {
+    isTrue = true;
+  } else {
+    isTrue = false;
+  }
+  return isTrue;
 }
 
 // Desafio 2
