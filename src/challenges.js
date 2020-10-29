@@ -32,6 +32,7 @@ function concatName(array) {
 
 
 
+
 // Desafio 5
 function footballPoints(wins, ties) {
     let qtdpontos = (wins * 3) + ties;
@@ -39,9 +40,22 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-    // seu código aqui
+function highestCount(arraynum) {
+    let maior = 0;
+    let ocorrencias = 0;
+    for (let i = 0; i < arraynum.length; i += 1) {
+        if (arraynum[i] > maior) {
+            maior = arraynum[i];
+        }
+    }
+    for (let j = 0; j < arraynum.length; j += 1) {
+        if (arraynum[j] === maior) {
+            ocorrencias += 1;
+        }
+    }
+    return ocorrencias;
 }
+
 
 // Desafio 7
 function catAndMouse() {
