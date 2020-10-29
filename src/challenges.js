@@ -147,18 +147,24 @@ function generatePhoneNumber(numbers) {
     }
   }
 
-  if (numbers.length > 11) {
+  if (numbers.length != 11) {
     return "Array com tamanho incorreto."
   } else if (maxRepeat >= 3) {
-    return "não é possível gerar um número de telefone com esses valores."
+    return "não é possível gerar um número de telefone com esses valores"
   } else {
   return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`
   }
 }
 
+
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let allLine = [lineA, lineB, lineC]
+  if ( lineA < lineB + lineC && lineB < lineC + lineA && lineC < lineA + lineB && math.min(allLine) > math.max(all) - math.min(allLine)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
