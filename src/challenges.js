@@ -1,6 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(n1 , n2) {
+  if(n1 % 2 == 1 && n2 % 2 == 1){
+    return true;
+  }else{
+    return false
+  }
 }
 
 // Desafio 2
