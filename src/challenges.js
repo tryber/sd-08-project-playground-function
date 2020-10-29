@@ -22,9 +22,22 @@ function splitSentence(string) {
 splitSentence(string);
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let arrayOfStrings = ['Gabriel', 'Max', 'Gomes', 'de', 'Bessa'];
+
+function concatName(arrayOfStrings) {
+  let aux1 = '', aux2 = '', lastName = arrayOfStrings.length -1;
+  aux1 = arrayOfStrings[0];
+  aux2 = arrayOfStrings[lastName];
+
+  let newString = `${aux2}, ${aux1}`;
+
+  console.log(newString);
+
+  return newString;
+
 }
+
+concatName(arrayOfStrings);
 
 // Desafio 5
 function footballPoints() {
