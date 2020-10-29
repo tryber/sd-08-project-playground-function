@@ -1,11 +1,8 @@
 function compareTrue(firstBoolean, secondBoolean) {
-  if (
-    (firstBoolean == false && secondBoolean == false) ||
-    firstBoolean != secondBoolean
-  ) {
-    return false;
+  if (firstBoolean == true && secondBoolean == true) {
+    return true;
   }
-  return true;
+  return false;
 }
 
-compareTrue(false, false);
+console.log(compareTrue(false, true));
