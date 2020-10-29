@@ -23,7 +23,7 @@ function splitSentence(word)
 // Desafio 4
 function concatName(phrase)
 {
-  console.log(phrase[phrase.length - 1] + " " + phrase[0]);
+  return phrase[phrase.length - 1] + " " + phrase[0];
 }
 
 // Desafio 5
