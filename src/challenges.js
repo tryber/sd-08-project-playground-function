@@ -169,7 +169,7 @@ function decode(string) {
 // let name = 'Lucas'
 function techList(tech, name) {
   let result = []
-  if (tech === '') {
+  if (tech === undefined) {
     return 'Vazio!'
   }
   tech.sort()
