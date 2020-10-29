@@ -5,8 +5,7 @@ function compareTrue(valor1,valor2) {
     return true;
   } else {
     return false;
-  }
-  
+  }  
 }
 
 // Desafio 2
@@ -21,8 +20,11 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let primeiroNome = array[0];
+  let ultimoNome = array[-1];
+  return ultimoNome + ', ' + primeiroNome; 
 }
 
 // Desafio 5
