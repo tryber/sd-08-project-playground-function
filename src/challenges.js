@@ -215,9 +215,20 @@ function triangleCheck(lineA, lineB, lineC) {
  console.log(triangleCheck(10, 13, 2))
 
 // Desafio 13
-function hydrate() {
-  
+function hydrate(phrase) {
+  let reg = /\d+/g;
+  let result = phrase.match(reg);
+  let sum = 0;
+  let num = [];
+  let feedback;
+  for (let index = 0; index < result.length; index +=1) {
+    num[index] = parseInt(result[index])
+    sum = sum + num[index];
+  }
+  feedback = sum+ " copos de água"
+  return (feedback)    
 }
+// console.log((hydrate("1 cachaça, 5 cervejas"))) //
 
 
 module.exports = {
