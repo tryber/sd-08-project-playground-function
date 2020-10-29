@@ -19,13 +19,24 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints(wins, ties){
+function footballPoints(wins, ties) {
   return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maior = array[0];
+  let counter = 0;
+
+  for (let pos = 0; pos < array.length; pos += 1) {
+    if (array[pos] > maior) {
+      maior = array[pos];
+    }
+    if (maior === array[pos]) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
@@ -40,7 +51,7 @@ function fizzBuzz() {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  // seu código aqui FUNÇÃO REPLACE
 }
 function decode() {
   // seu código aqui
