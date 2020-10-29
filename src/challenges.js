@@ -20,15 +20,15 @@ function splitSentence(string) {
   splitArray = string.split(" ");
   return splitArray;
 }
-splitSentence("be Trybe");
+console.log(splitSentence("go Trybe"));
 
 // Desafio 4
-/* function concatName(array) {
+function concatName(array) {
   let result = "";
   result = array[array.length - 1] + ", " + array[0];
   return result;
 }
-concatName(); */
+concatName();
 
 // Desafio 5
 function footballPoints() {
