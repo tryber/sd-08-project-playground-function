@@ -196,29 +196,23 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  let a = 4;
-  let b = 3;
-  let c = 6;
-  console.log(Math.abs(b-c))
-  console.log(Math.abs(a-c))
-  console.log(Math.abs(b-a))
-
+function triangleCheck(lineA, lineB, lineC) {
+  
   let confMenorQueSoma = false;
   let confmaiorQDif = false;
 
-  if(a<(b+c) && b<(a+c) && c<(b+a)) {
+  if(lineA<(lineB+lineC) && lineB<(lineA+lineC) && lineC<(lineB+lineA)) {
     confMenorQueSoma = true
   }
 
-  if (a>Math.abs(b-c) && b>Math.abs(a-c) && c>Math.abs(b-a)) {
+  if (lineA>Math.abs(lineB-lineC) && lineB>Math.abs(lineA-lineC) && lineC>Math.abs(lineB-lineA)) {
     confmaiorQDif = true;
   }
 
   if(confMenorQueSoma && confmaiorQDif === true){
-    console.log(true)
+    return (true)
   }else {
-    console.log(false)
+    return (false)
   }
 }
 
