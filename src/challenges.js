@@ -78,28 +78,28 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz() {
-  let ret = nmrs;
+  // let ret = nmrs;
 
-  for (let i = 0; i < ret.length; i += 1) {
-    if (ret[i] % 3 == 0) {
-      console.log("fizz")
-    } else if (ret[i] % 5 == 0) {
-      console.log("buzz")
-    } else{
-      fizbuz.pu
-    }
+  // for (let i = 0; i < ret.length; i += 1) {
+  //   if (ret[i] % 3 == 0) {
+  //     console.log("fizz")
+  //   } else if (ret[i] % 5 == 0) {
+  //     console.log("buzz")
+  //   } else{
+  //     fizbuz.pu
+  //   }
 
 
-  }
+  // }
 }
 
 // Desafio 9
 function encode(palavra) {
-  let list = palavra.split("");
+  // let list = palavra.split("");
 
-  for (let i = 0; i < list.length; i += 1) {
-    if (list)
-  }
+  // for (let i = 0; i < list.length; i += 1) {
+  //   if (list)
+  // }
 }
 function decode() {
   // seu código aqui
