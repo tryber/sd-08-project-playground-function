@@ -37,17 +37,21 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(name) {
   // seu código aqui
-  let array = [];
+  let string = '';
   
-  array.push(name[name.length-1]);
-  array.push(name[0]);
+  string = string + name[name.length-1] + ', ' + name[0];
+  //array.push(name[name.length-1]);
+  //array.push(name[0]);
 
-  return array;
+  return string;
 }
 
+console.log(concatName(['Guilherme','da','Silva','Ribeiro']));
+
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return (wins*3+ties);
 }
 
 // Desafio 6
