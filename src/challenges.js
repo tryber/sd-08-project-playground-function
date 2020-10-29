@@ -1,9 +1,15 @@
-/* alteração para primeiro commit */
-
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+let oneBoolean = true;
+let anotherBoolean = false;
+
+function compareTrue(boolean1, boolean2) {
+
+  let trueOrFalse = (boolean1 && boolean2) ? true : false;
+  console.log(trueOrFalse);
+
 }
+
+compareTrue(oneBoolean, anotherBoolean);
 
 // Desafio 2
 function calcArea() {
