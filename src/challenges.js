@@ -30,6 +30,7 @@ let texto = "aqui tem uma string";
 function splitSentence(texto) {
   
   let array = texto.split(" ");
+  //código pesquisado no stackoverflow.com
 
   return array;
   
@@ -69,8 +70,38 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+let numbers = [2, 15, 7, 9, 45];
+
+function fizzBuzz(numbers) {
+
+  let arrayNumbers = [];
+
+  for (let i = 0; i < numbers.length; i++) {
+
+    if (numbers[i] % 3 == 0) {
+       arrayNumbers.push("fizz");
+    
+    } else if (numbers[i] % 5 == 0) {
+       arrayNumbers.push("buzz");
+    
+    
+    } else if (numbers[i] % 3 == 0 && numbers[i] % 5 == 0) {
+       arrayNumbers.push("fizzBuzz");
+       
+    
+    
+    } else {
+       arrayNumbers.push("bug!");
+
+       return arrayNumbers;
+        
+    
+    }
+    
+    }
+  
+  
 }
 
 // Desafio 9
