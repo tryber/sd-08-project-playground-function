@@ -40,7 +40,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arrayNumeros) {
   let cont = 0;
-  let maiorValor = maiorNumeroDoVetor (arrayNumeros);
+  let maiorValor = maiorNumeroDoVetor(arrayNumeros);
 
   for (let pos in arrayNumeros) {
     if (arrayNumeros[pos] === maiorValor) {
@@ -72,12 +72,11 @@ function catAndMouse(mouse, cat1, cat2) {
   distanciaEntreRatoGato2 = Math.abs(mouse - cat2);
 
   if (distanciaEntreRatoGato1 === distanciaEntreRatoGato2) {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   } else if (distanciaEntreRatoGato1 > distanciaEntreRatoGato2) {
-    return "cat2";
-  } else {
-    return "cat1";
+    return 'cat2';
   }
+  return 'cat1';
 }
 
 /* console.log(catAndMouse(0, 3, 2));
@@ -89,17 +88,17 @@ function fizzBuzz(arrayNumeros) {
   let arrayFizzBuzz = [];
   let numero;
 
-  for (let indice = 0; indice < arrayNumeros.length; indice++) {
+  for (let indice = 0; indice < arrayNumeros.length; indice += 1) {
     numero = arrayNumeros[indice];
 
-    if (numero % 3 == 0 && numero % 5 == 0) {
-      arrayFizzBuzz.push("fizzBuzz");
-    } else if (numero % 3 != 0 && numero % 5 != 0) {
-      arrayFizzBuzz.push("bug!");
-    } else if (numero % 5 == 0) {
-      arrayFizzBuzz.push("buzz");
-    } else if (numero % 3 == 0) {
-      arrayFizzBuzz.push("fizz");
+    if (numero % 3 === 0 && numero % 5 === 0) {
+      arrayFizzBuzz.push('fizzBuzz');
+    } else if (numero % 3 !== 0 && numero % 5 !== 0) {
+      arrayFizzBuzz.push('bug!');
+    } else if (numero % 5 === 0) {
+      arrayFizzBuzz.push('buzz');
+    } else if (numero % 3 === 0) {
+      arrayFizzBuzz.push('fizz');
     }
   }
   return arrayFizzBuzz;
@@ -109,30 +108,28 @@ function fizzBuzz(arrayNumeros) {
 
 // Desafio 9
 function encode(texto) {
-  let novoTexto = "";
-  let palavra;
+  let novoTexto = '';
 
   for (let pos in texto) {
-    palavra = texto[pos];
 
-    switch (palavra) {
+    switch (texto[pos]) {
       case 'a':
-        novoTexto = novoTexto + "1";
+        novoTexto += '1';
         break;
       case 'e':
-        novoTexto = novoTexto + "2";
+        novoTexto += '2';
         break;
       case 'i':
-        novoTexto = novoTexto + "3";
+        novoTexto += '3';
         break;
       case 'o':
-        novoTexto = novoTexto + "4";
+        novoTexto += '4';
         break;
       case 'u':
-        novoTexto = novoTexto + "5";
+        novoTexto += '5';
         break;
       default:
-        novoTexto = novoTexto + palavra;
+        novoTexto += texto[pos];
     }
   }
   return novoTexto;
@@ -141,26 +138,25 @@ function decode(texto) {
   let novoTexto = "", palavra;
 
   for (let pos in texto) {
-    palavra = texto[pos];
 
-    switch (palavra) {
+    switch (texto[pos]) {
       case '1':
-        novoTexto = novoTexto + "a";
+        novoTexto += 'a';
         break;
       case '2':
-        novoTexto = novoTexto + "e";
+        novoTexto += 'e';
         break;
       case '3':
-        novoTexto = novoTexto + "i";
+        novoTexto += 'i';
         break;
       case '4':
-        novoTexto = novoTexto + "o";
+        novoTexto += 'o';
         break;
       case '5':
-        novoTexto = novoTexto + "u";
+        novoTexto += 'u';
         break;
       default:
-        novoTexto = novoTexto + palavra;
+        novoTexto += texto[pos];
     }
   }
   return novoTexto;
@@ -172,13 +168,13 @@ console.log(decode("h3 th2r2!")); */
 // Desafio 10
 function techList(arrayNomesTecnologia, name) {
   if (arrayNomesTecnologia.length === 0) {
-    return "Vazio!";
+    return 'Vazio!';
   }
 
   let novoArrayNomesTecnologiaOrdenado = arrayNomesTecnologia.sort();
   let novoArrayNomesTecnologia = [];
 
-  for (let indice = 0; indice < novoArrayNomesTecnologiaOrdenado.length; indice++) {
+  for (let indice = 0; indice < novoArrayNomesTecnologiaOrdenado.length; indice += 1) {
     let tech = {
       tech: null,
       name: null
@@ -198,18 +194,18 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas")); 
 // Desafio 11
 function generatePhoneNumber(arrayNumeroTelefone) {
   if (arrayNumeroTelefone.length != 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   }
 
   let numero;
-  let numeroTelefone = "";
-  let numeroTelefoneFormatado = "";
+  let numeroTelefone = '';
+  let numeroTelefoneFormatado = '';
 
-  for (let indice = 0; indice < arrayNumeroTelefone.length; indice++) {
+  for (let indice = 0; indice < arrayNumeroTelefone.length; indice += 1) {
     numero = arrayNumeroTelefone[indice];
 
     if (numero < 0 || numero > 9 || contaNumeros (numero, arrayNumeroTelefone) >= 3) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
 
     numeroTelefone = numeroTelefone + numero;
@@ -231,7 +227,7 @@ function contaNumeros(numero, numeros) {
 }
 
 function formataTelefone(numeroTelefone) {
-  let numeroTelefoneFormatado = "(" + numeroTelefone.substring(0, 2) + ") " + numeroTelefone.substring(2, 7) + "-" + numeroTelefone.substring(7, 11);
+  let numeroTelefoneFormatado = '(' + numeroTelefone.substring(0, 2) + ') ' + numeroTelefone.substring(2, 7) + '-' + numeroTelefone.substring(7, 11);
   return numeroTelefoneFormatado;
 }
 
@@ -255,7 +251,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(texto) {
-  let textoSoNumeros = texto.replace(/\D/g, "");
+  let textoSoNumeros = texto.replace(/\D/g, '');
   let somaBebidas = 0, totalCoposDeAgua = 0;
 
   for (let indice in textoSoNumeros) {
@@ -265,10 +261,9 @@ function hydrate(texto) {
   totalCoposDeAgua = somaBebidas * 1;
 
   if (totalCoposDeAgua === 1) {
-    return totalCoposDeAgua + " copo de água";
-  } else {
-    return totalCoposDeAgua + " copos de água";
+    return totalCoposDeAgua + ' copo de água';
   }
+  return totalCoposDeAgua + ' copos de água';  
 }
 
 /* console.log(hydrate("1 cerveja"));
