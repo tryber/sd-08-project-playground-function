@@ -22,12 +22,11 @@ function splitSentence(string) {
  //console.log (splitSentence('go trybe'));
 
 // Desafio 4
-function concatName(xablau) {
-  // seu código aqui
-  let juntaNome = `${xablau[xablau.length -1]},${xablau[0]}`;
-  return juntaNome;
+function concatName(string) {
+  let primeiroUltimo = `${string[string.length - 1]}, ${string[0]}`;
+  return primeiroUltimo;
 }
-//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+ //console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins,ties) {
