@@ -133,8 +133,8 @@ function decode(word) {
 
 // Desafio 10
 function techList(tecnologias, name) {
-  if (tecnologias === []){
-    return 'Vazio!'
+  if (tecnologias.length == 0){
+    return ('Vazio!')
   } else {
     let tecList = [];
     let tecnologiasEmOrdem = tecnologias.sort();
@@ -197,7 +197,29 @@ function generatePhoneNumber(numbers) {
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  let a = 4;
+  let b = 3;
+  let c = 6;
+  console.log(Math.abs(b-c))
+  console.log(Math.abs(a-c))
+  console.log(Math.abs(b-a))
+
+  let confMenorQueSoma = false;
+  let confmaiorQDif = false;
+
+  if(a<(b+c) && b<(a+c) && c<(b+a)) {
+    confMenorQueSoma = true
+  }
+
+  if (a>Math.abs(b-c) && b>Math.abs(a-c) && c>Math.abs(b-a)) {
+    confmaiorQDif = true;
+  }
+
+  if(confMenorQueSoma && confmaiorQDif === true){
+    console.log(true)
+  }else {
+    console.log(false)
+  }
 }
 
 // Desafio 13
