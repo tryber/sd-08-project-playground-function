@@ -164,8 +164,15 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) {
+  let test1 = a + b > c;
+  let test2 = b + c > a;
+  let test3 = a + c > b;
+  if(test1 && test2 && test3){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 // Desafio 13
