@@ -118,7 +118,7 @@ function decode(word) {
 
 // Desafio 10
 function techList(tecnologias, name) {
-  if (tecnologias !== []){
+  if (tecnologias === []){
     return 'Vazio!'
   } else {
     let tecList = [];
