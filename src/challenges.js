@@ -172,9 +172,21 @@ function triangleCheck(lineA,lineB,lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebidas) {
+  let quantidade = 0;
+  for (let i in bebidas){
+    if (isNaN(bebidas[i])==false && bebidas[i]!=" "){
+      quantidade = quantidade + parseInt(bebidas[i]);
+    }
+  }
+  if (quantidade===1){
+    return quantidade + " copo de água";
+  } else {
+    return quantidade + " copos de água";
+  }
 }
+console.log(hydrate("1 cerveja"));
+
 
 
 module.exports = {
