@@ -20,7 +20,7 @@ function splitSentence(string) {
 function concatName(arrayDeStrings) {
   let size = arrayDeStrings.length - 1;
   let string ='';
-  string = arrayDeStrings[0] + ', ' + arrayDeStrings[size];
+  string = arrayDeStrings[size] + ', ' + arrayDeStrings[0];
   return string;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
