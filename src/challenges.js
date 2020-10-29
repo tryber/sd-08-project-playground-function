@@ -88,11 +88,11 @@ function fizzBuzz(array) {
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 // Ideia de refatoramento para usar uma função única aplicável aos dois casos do grande Fernando Soares, instrutor da Trybe.
 function generalEncrypter(str, arrayToBeReplaced, arrayToReplace) {
-  let encryptedStr = str.replace(new RegExp(arrayToBeReplaced[0], 'g'), arrayToReplace[0]);
-  encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[1], 'g'), arrayToReplace[1]);
-  encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[2], 'g'), arrayToReplace[2]);
-  encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[3], 'g'), arrayToReplace[3]);
-  encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[4], 'g'), arrayToReplace[4]);
+  let encryptedStr = str;
+  
+  for (let i = 0; i < arrayToBeReplaced.length; i += 1) {
+    encryptedStr = encryptedStr.replace(new RegExp(arrayToBeReplaced[i], 'g'), arrayToReplace[i]);
+  }
   return encryptedStr;
 }
 
@@ -106,7 +106,7 @@ function decode(str) {
   return generalEncrypter(str, numerals, vogals);
 }
 
-console.log(encode('hello, my name is silvio'));
+console.log(decode(encode('hello, my name is silvio')));
 // Desafio 10
 function techList() {
   // seu código aqui
