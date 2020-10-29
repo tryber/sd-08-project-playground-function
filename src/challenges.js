@@ -212,11 +212,11 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;  
 }
 }
- console.log(triangleCheck(10, 13, 2))
+ // console.log(triangleCheck(10, 13, 2)) //
 
 // Desafio 13
 function hydrate(phrase) {
-  let reg = /\d+/g;
+  let reg = /\d+/g; //COMANDO RETIRADO DO https://www.youtube.com/watch?v=pfkkdzeyx6U //
   let result = phrase.match(reg);
   let sum = 0;
   let num = [];
@@ -225,10 +225,15 @@ function hydrate(phrase) {
     num[index] = parseInt(result[index])
     sum = sum + num[index];
   }
-  feedback = sum+ " copos de água"
+  if (sum == 1) {
+    feedback = sum+ " copo de água"
+  } else {
+    feedback = sum+ " copos de água"
+  }
+  
   return (feedback)    
 }
-// console.log((hydrate("1 cachaça, 5 cervejas"))) //
+console.log((hydrate("1 cachaça"))) 
 
 
 module.exports = {
