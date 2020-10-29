@@ -14,25 +14,23 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(str) {
   let newStrStorage = [];
-  let newStr = "";
+  let newStr = '';
 
   for (let i in str) {
-    if (str[i] != " ") {
+    if (str[i] !== ' ') {
       newStr += str[i];
     } else {
       newStrStorage.push(newStr);
-      newStr = "";
+      newStr = '';
     }
   }
   newStrStorage.push(newStr);
   return newStrStorage;
 }
 
-console.log(splitSentence("My name is Silvio"));
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return array[array.length - 1] + ', ' + array[0];
 }
 
 // Desafio 5
