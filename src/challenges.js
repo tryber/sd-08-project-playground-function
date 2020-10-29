@@ -23,8 +23,12 @@ function splitSentence(entrada) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayDeStrings) {
+  let primeiraString = arrayDeStrings[0];
+  let ultimaPosicao = arrayDeStrings.length - 1;
+  let ultimaString = arrayDeStrings[ultimaPosicao];
+  let retorno = [ultimaString, primeiraString];
+  return retorno;
 }
 
 // Desafio 5
