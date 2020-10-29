@@ -7,13 +7,13 @@ function compareTrue(a, b) {
           return false;
     }
   }
-    console.log(compareTrue(true,true));
+    compareTrue(true,true);
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
   return ((base*height)/2);
 }
-
+calcArea(2, 3);
 // Desafio 3
 function splitSentence(str) {
   // seu código aqui
