@@ -115,23 +115,9 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode(string) {
-  // let vogais = [];
-  // palavra = "";
-  // for(index in string){
-  //   for(index2 in vogais){
-  //     if(string[index] = vogais[index2])
-  //       string.replace(1, "a");
-  //       string.replace(2, "e");
-  //       string.replace(3, "i");
-  //       string.replace(4, "o");
-  //       string.replace(5, "u");
-  //   }
-    
-  // }
-  // return palavra;
+
   // seu código aqui
 }
-console.log(string("hi there!"))
 
 function decode() {
   // seu código aqui
@@ -156,7 +142,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   // seu código aqui
 }
-console.log(triangleCheck(10, 14, 8))
+// console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
 function hydrate(string) {
