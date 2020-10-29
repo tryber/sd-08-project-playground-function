@@ -49,16 +49,20 @@ console.log(footballPoints(3, 2))
 function highestCount(numbers) {
   // seu código aqui
   let maior = numbers[0];
-  var count = 0;
+  let count = 0;
   for (let key in numbers) {
     if (numbers[key] >= maior) {
-      let maior = numbers[key];
-      var count = count + 1;
+       maior = numbers[key];
+    }
+  }
+  for (let key in numbers) {
+    if (numbers[key] == maior) {
+      count++
     }
   }
   return count
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 9, 7]))
+console.log(highestCount([9, 1, 1,10, 10, 10, 10, 2, 3, 9, 5, 9, 7]))
 
 // Desafio 7
 function catAndMouse() {
