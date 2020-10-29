@@ -24,7 +24,7 @@ function calcArea(base, height) {
     return (base * height) / 2;
   }
   else {
-    return `ERROR > ${base} e ${height} não são numeros positivos!`;
+    return `ERROR > ${base} e ${height} não são números positivos!`;
   }
 }
 
@@ -127,9 +127,36 @@ function highestCount(arrNum) {
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (typeof mouse === "number" && typeof cat1 === "number" && typeof cat2 === "number") {
+    let unidDist1 = cat1 - mouse;
+    let unidDist2 = cat2 - mouse;
+
+    if (unidDist1 < 0) {
+      unidDist1 *= -1;
+    }
+    if (unidDist2 < 0) {
+      unidDist2 *= -1;
+    }
+
+    if (unidDist1 < unidDist2) {
+      return `"cat1"`;
+    }
+    else if (unidDist1 > unidDist2) {
+      return `"cat2"`;
+    }
+    else {
+      return `"os gatos trombam e o rato foge"`;
+    }
+  }
+  else {
+    return `ERROR > tipos não são números!`
+  }
+  
 }
+
+// < Para o teste manual >
+// console.log(catAndMouse(-1, -4, 2));
 
 // Desafio 8
 function fizzBuzz() {
