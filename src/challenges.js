@@ -1,7 +1,7 @@
 // Project Playground Function
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  if (bool1 === true && bool2 === true) {
+  if (bool1 && bool2) {
     return true;
   } else {
     return false;
@@ -24,9 +24,7 @@ function concatName(strings) {
   return strfinal;
 }
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {}
 
 // Desafio 6
 function highestCount() {
