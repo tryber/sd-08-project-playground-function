@@ -22,7 +22,14 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {}
+function footballPoints(wins, ties) {
+  wins *= 3;
+  ties *= 1;
+
+  let points = wins + ties;
+
+  return points;
+}
 
 // Desafio 6
 function highestCount() {}
