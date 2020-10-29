@@ -136,8 +136,12 @@ function generatePhoneNumber(array) {
   if (numValidator(array) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  
-  return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
+
+  let ddd = `(${array[0]}${array[1]})`
+  let parteUm = `${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}`
+  let parteDois = `${array[7]}${array[8]}${array[9]}${array[10]}`
+
+  return `${ddd} ${parteUm}-${parteDois}`
 }
 
 function numValidator(array) {
