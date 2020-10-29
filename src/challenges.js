@@ -1,16 +1,17 @@
 // Desafio 1
 function compareTrue(boo, lean) {
-  if(boo === true && lean === true){
+  if (boo === true && lean === true) {
     return true
-  }else{
+  } else {
     return false
   }
-}console.log(compareTrue(true, false))
+}//console.log(compareTrue(true, false))
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
-}
+function calcArea(base, height) {
+  let areaTriangulo = (base * height) / 2;
+  return areaTriangulo
+}console.log(calcArea(7,5))
 
 // Desafio 3
 function splitSentence() {
