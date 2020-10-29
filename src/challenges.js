@@ -149,25 +149,20 @@ function decode(string) {
 // console.log(decode(string))
 
 // Desafio 10
-// let array = []
-// let name = 'Lucas'
+ let array = ['React', 'Js', 'Zarabatana']
+ let name = 'Lucas'
 function techList(tech, name) {
   let result = []
-  let object = {
-    tech: null,
-    name: null,
-  }
   if (tech.length === 0) {
     return 'Vazio!'
   }
   tech.sort()
   for (let index = 0; index < tech.length; index += 1) {
-    object.tech = tech[index]
-    object.name = name
-    result.push(object)
+    result.push({tech: tech[index], name: name})
   }
   return result
 }
+console.log(techList(array, name))
 
 // Desafio 11
 function generatePhoneNumber() {
