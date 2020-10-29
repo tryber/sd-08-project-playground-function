@@ -21,19 +21,19 @@ function splitSentence(string) {
 console.log(splitSentence("Oi Tryber"))
 
 // Desafio 4
-function concatName(arrayDeNomes) {
-  for (let index = 0; index < arrayDeNomes.length - 1; index ++){
-      return arrayDeNomes[arrayDeNomes.length - 1] + " " + arrayDeNomes[index];
+function concatName(nome) {
+  for (let index = 0; index < nome.length; index ++){
+      return nome[nome.length - 1] + " " + nome[index];
   }
 }
-  console.log(concatName(["Bruce", "nascimento", "Dias"]));
+  console.log(concatName(["Bruce", "nascimento", "Pereira", "Zelia", "Dias"]));
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins*3 + ties;
 }
-
+console.log(footballPoints(4, 2))
 // Desafio 6
 function highestCount() {
   // seu código aqui
