@@ -104,7 +104,7 @@ function fizzBuzz(array) {
   }
   return array
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+// console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 // let string = 'a hello world'
@@ -169,12 +169,12 @@ function decode(string) {
 // let name = 'Lucas'
 function techList(tech, name) {
   let result = []
-  if (tech == ''){
+  if (tech === '') {
     return 'Vazio!'
   }
   tech.sort()
   for (let index in tech) {
-    result.push({tech: tech[index], name: name})
+    result.push({ tech: tech[index], name: name })
   }
   return result
 }
