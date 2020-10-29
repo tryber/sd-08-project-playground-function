@@ -9,7 +9,7 @@ function compareTrue(a, b) {
   }
     console.log(compareTrue(true,true))
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
 }
 
