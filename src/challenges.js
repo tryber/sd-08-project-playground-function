@@ -91,12 +91,33 @@ function fizzBuzz(array) {
   }
   return arrayFizzBuzz;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let novaString = "";
+  for (index in string){
+    if (string[index] === 'a'){
+      novaString += '1';
+    }
+    else if (string[index] === 'e'){
+      novaString += '2';
+    }
+    else if (string[index] === 'i'){
+      novaString += '3';
+    }
+    else if (string[index] === 'o'){
+      novaString += '4';
+    }
+    else if (string[index] === 'u'){
+      novaString += '5';
+    } else {
+      novaString += string[index];
+    }
+    
+  }
+  return novaString;
 }
+console.log(encode("Mario"));
 function decode() {
   // seu código aqui
 }
