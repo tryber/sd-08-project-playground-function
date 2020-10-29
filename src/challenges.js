@@ -66,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let location2 = 0;
   location1 = cat1 - mouse;
   location2 = cat2 - mouse;
-  if (cat1 == cat2) {
+  if (cat1 == cat2 || location1 < 0 || location2 < 0) {
     return 'os gatos trombam e o rato foge'
   } else if (location1 < location2) {
     return 'cat1';
