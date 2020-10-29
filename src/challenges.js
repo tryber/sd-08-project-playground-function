@@ -24,7 +24,7 @@ function splitSentence(word)
 function concatName(phrase)
 {
   let input = phrase;
-  let result = input[input.length - 1] + " " + input[0];
+  let result = [input[input.length - 1], input[0]];
   console.log(input[input.length - 1] + " " + input[0]);
   return result;
 }
@@ -58,8 +58,25 @@ function highestCount(numbers)
 highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2)
+{
+  if(cat1 > mouse)
+    cat1dist = cat1 - mouse;
+  else if(cat1 < mouse)
+    cat1dist = mouse - cat1;
+
+  if(cat2 > mouse)
+    cat2dist = cat2 - mouse;
+  else if(cat2 < mouse)
+    cat2dist = mouse - cat2;
+
+  if(cat1dist < cat2dist)
+    return "cat1";
+  else if(cat1dist > cat2dist)
+    return "cat2"
+  else
+    return "os gatos trombam e o rato foge";
+
 }
 
 // Desafio 8
