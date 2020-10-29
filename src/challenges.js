@@ -169,15 +169,13 @@ function decode(string) {
 // let name = 'Lucas'
 function techList(tech, name) {
   let result = []
-  if (tech === "") {
+  if (tech === []) {
     return 'Vazio!'
   }
   tech.sort()
 
   for (let index = 0; index < tech.length; index += 1) {
-    let ling = tech[index]
-    result.push({ tech: ling })
-    result.push({ name: name })
+    result.push({ tech: tech[index], name: name })    
   }
   return result
 }
