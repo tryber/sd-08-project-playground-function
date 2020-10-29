@@ -25,10 +25,11 @@ console.log(splitSentence('Project 02 Trybe'))
 
 // Desafio 4
 function concatName(arrayStrings) {
-  let name = arrayStrings.split(' ')
-  return (`${name[name.length - 1]}, ${name[0]}`)
+  let firstName = arrayStrings[0]
+  let lastName = arrayStrings[arrayStrings.length - 1]
+  return (`${lastName}, ${firstName}`)
 }
-console.log(concatName('João Carlito Marques do Nascimento Neto'))
+console.log(concatName(['João', 'Carlito', 'Marques', 'do', 'Nascimento', 'Neto']))
 
 // Desafio 5
 function footballPoints() {
