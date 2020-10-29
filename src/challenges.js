@@ -107,8 +107,29 @@ function encode(word) {
   }
   return novoWord
 }
-function decode() {
+function decode(word2) {
   // seu código aqui
+  let novoWord2 = '';
+  for(let i in word2){
+    if(word2[i] === '1'){
+      novoWord2 += 'a';
+    }
+    if(word2[i] === '2'){
+      novoWord2 += 'e';
+    }
+    if(word2[i] === '3'){
+      novoWord2 += 'i';
+    }
+    if(word2[i] === '4'){
+      novoWord2 += 'o';
+    }
+    if(word2[i] === '5'){
+      novoWord2 += 'u';
+    } else if( word2[i] !== '1' && word2[i] !== '2' && word2[i] !== '3' && word2[i] !== '4' && word2[i] !== '5'){
+      novoWord2 += word2[i]
+    }
+  }
+  return novoWord2
 }
 
 // Desafio 10
