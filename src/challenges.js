@@ -115,13 +115,47 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode(string) {
-
+  let word = "";
+  let vowels = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  }
+  for(let index of string){
+    if(vowels[index] === undefined){
+      word += index;
+    } else {
+      word += vowels[index];
+    }
+  }
+  return word;
   // seu código aqui
 }
+//console.log(encode("hi there!"));
 
-function decode() {
+function decode(stringN) { 
+    // /a/g, "1"
+    let word2 = "";
+    let number = {
+      1: "a",
+      2: "e",
+      3: "i",
+      4: "o",
+      5: "u",
+    }
+    for(let index2 of stringN){
+      if(number[index2] === undefined){
+        word2 += index2;
+      } else {
+        word2 += number[index2];
+      }
+    }
+    return word2;
   // seu código aqui
 }
+  //console.log(decode("h3 th2r2!"))
 
 // Desafio 10
 function techList() {
