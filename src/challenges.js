@@ -98,13 +98,27 @@ function fizzBuzz(arr)
 }
 
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+
+function encode(input)
+{
+  let result = input;
+  result = result.replace(/a/g, "1");
+  result = result.replace(/e/g, "2");
+  result = result.replace(/i/g, "3");
+  result = result.replace(/o/g, "4");
+  result = result.replace(/u/g, "5");
+
+ return result;
 }
-function decode() {
-  // seu código aqui
+
+
+function decode()
+{
+
 }
+
+
+
 
 // Desafio 10
 function techList() {
