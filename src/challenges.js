@@ -22,18 +22,13 @@ return splitSentence
 
 // Desafio 4
 function concatName (arrayString) {
-  let primeiraString = arrayString[0];
-  let ultimaString = arrayString[arrayString.length - 1];
-  let primeiraUltima = primeiraString + " , "+ ultimaString + " . ";
-
+  let primeiraUltima = arrayString[0] + " , "+ arrayString[arrayString.length - 1]+ " . ";
   return primeiraUltima;
 }
 
 
-
-
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
 }
 
