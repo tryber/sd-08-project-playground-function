@@ -276,9 +276,30 @@ function decode(str) {
 
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrStr, name) {
+  if (typeof arrStr === "object" && typeof name === "string") {
+    let techName = arrStr;
+    techName.sort();
+    let outputObj = [];
+  
+    for (let index = 0; index < techName.length; index += 1) {
+      let aux = {};
+      aux.tech = techName[index];
+      aux.name = name;
+      outputObj.push(aux);
+    }
+  
+    return outputObj;
+  }
+  else {
+    return `ERROR > tipo não é objeto Array e nem string!`
+  }
 }
+
+// < Para o teste manual >
+// let arrayteste3 = ["React", "Jest", "HTML", "CSS", "JavaScript", "Phython", "C++"];
+// console.log(techList(arrayteste3, "Lucas"));
+
 
 // Desafio 11
 function generatePhoneNumber() {
