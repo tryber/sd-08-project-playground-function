@@ -25,18 +25,13 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let maior = 0;
-  let count = 0;
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === maior) {
-      count++;
-    }
-    if (array[i] > maior) {
-      maior = array[i];
-      count = 1;
-    }
-  }
-  return count;
+  return array.filter(
+    (e) =>
+      e ===
+      array.sort((a, b) => {
+        return a - b;
+      })[array.length - 1]
+  ).length;
 }
 
 // Desafio 7
@@ -102,30 +97,11 @@ function generatePhoneNumber(a) {
     if (a[i] < 0 || a[i] > 9)
       return "não é possível gerar um número de telefone com esses valores";
   }
-  return (
-    "(" +
-    a[0] +
-    "" +
-    a[1] +
-    ") " +
-    a[2] +
-    "" +
-    a[3] +
-    "" +
-    a[4] +
-    "" +
-    a[5] +
-    "" +
-    a[6] +
-    "-" +
-    a[7] +
-    "" +
-    a[8] +
-    "" +
-    a[9] +
-    "" +
-    a[10]
-  );
+
+  a.splice(0, 0, "(");
+  a.splice(3, 0, ") ");
+  a.splice(9, 0, "-");
+  return a.join("");
 }
 
 function highestCount1(array) {
@@ -183,3 +159,13 @@ module.exports = {
   splitSentence,
   triangleCheck,
 };
+
+function highestCount3(array) {
+  return array.filter(
+    (e) =>
+      e ===
+      array.sort((a, b) => {
+        return a - b;
+      })[array.length - 1]
+  ).length;
+}
