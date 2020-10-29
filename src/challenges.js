@@ -11,9 +11,12 @@ function compareTrue(boolean1, boolean2) {
 console.log(compareTrue((5>2),(2<5)));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
-}
+function calcArea(base, heigth) {
+  let triangle = ((base * heigth) / 2);
+  return triangle;
+};
+console.log(calcArea(10, 8.66));
+
 
 // Desafio 3
 function splitSentence() {
