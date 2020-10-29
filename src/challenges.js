@@ -22,7 +22,7 @@ function splitSentence(string) {
 function concatName(fullName) {
   let firstName = fullName[0];
   let lastName = fullName[fullName.length - 1];
-  return lastName, firstName;
+  return (lastName, firstName);
 }
 
 // Desafio 5
