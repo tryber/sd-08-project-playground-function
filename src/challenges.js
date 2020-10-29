@@ -156,10 +156,12 @@ function techList(vetor, name) {
   for (let index = 0; index < vetorOrdenado.length; index++) {
     arrayRetorno.push(objetoComNomeTecnologia(name, vetorOrdenado[index]));
   }
+  if(arrayRetorno.length === 0){
+    return 'Vazio!';
+  }
   return arrayRetorno;
 }
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
-
+console.log(techList([]));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
