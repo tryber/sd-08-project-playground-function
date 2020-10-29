@@ -41,7 +41,7 @@ function highestCount(array) {
 
     for (let j = 0; j < array.length; j += 1) {
       if (array[i] === array[j]) {
-        repetitions++;
+        repetitions += 1;
       }
     }
 
