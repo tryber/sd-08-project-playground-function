@@ -20,10 +20,10 @@ function splitSentence(string) {
   splitArray = string.split(" ");
   return splitArray;
 }
-splitSentence("go Trybe");
+splitSentence();
 
 // Desafio 4
-function concatName(array) {
+function concatName() {
   let result = [];
   result = array[array.length - 1] + ", " + array[0];
   return result;
