@@ -16,7 +16,7 @@ function calcArea(base, height) {
 function splitSentence(sentence) {
   return sentence.split(" ")
 
-// Usei o método split que aprendi em https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string.
+// Usei o método split que relembrei em https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string.
 }
 
 // Desafio 4
@@ -25,8 +25,8 @@ function concatName(name) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
