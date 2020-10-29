@@ -30,9 +30,10 @@ function splitSentence(string) {
 function concatName(vetorString) {
   let resultado = "";
   resultado = vetorString[vetorString.length -1] + "," + " " + vetorString[0];
+  return resultado;
 }
-let teste = ["wagner", "Berna", "Medeiros", "Azevedo"];
-console.log(concatName(teste));
+//let teste = ["Wagner", "Berna", "Medeiros", "Azevedo"];
+//console.log(concatName(teste));
 
 // Desafio 5
 function footballPoints() {
