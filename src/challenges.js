@@ -28,7 +28,7 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let counter = {};
 
-  for (let i = 0; i < numbers.length; i++) {
+  for (let i = 0; i < numbers.length; i += 1) {
     let cur = numbers[i];
     if (!counter[cur]) {
       counter[cur] = 1;
@@ -39,12 +39,12 @@ function highestCount(numbers) {
 
   let highest = -Infinity;
 
-  for (let i = 0; i < numbers.length; i++) {
+  for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] > highest) {
       highest = numbers[i];
     }
   }
- 
+
   return counter[highest];
 }
 
@@ -54,28 +54,30 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat2 = Math.abs(cat2 - mouse);
 
   if (distCat1 < distCat2) {
-    return "cat1";
-  } else if (distCat2 < distCat1 ) {
-    return "cat2";
-  } else {
-    return "os gatos trombam e o rato foge";
+    return 'cat1';
   }
+
+  if (distCat2 < distCat1) {
+    return 'cat2';
+  }
+
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let result = [];
-  for (let i = 0; i < numbers.length; i++) {
+  for (let i = 0; i < numbers.length; i += 1) {
     let cur = numbers[i];
     let str = '';
 
-    if (cur % 3 == 0) {
+    if (cur % 3 === 0) {
       str += 'fizz';
     }
 
-    if (cur % 5 == 0) {
+    if (cur % 5 === 0) {
       str += 'buzz'
-    };
+    }
 
     if (str === 'fizzbuzz') {
       str = 'fizzBuzz';
@@ -91,17 +93,17 @@ function fizzBuzz(numbers) {
 }
 
 const vowels = {
-  'a': 1,
-  'e': 2,
-  'i': 3,
-  'o': 4,
-  'u': 5
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5
 };
 
 // Desafio 9
 function encode(str) {
   let result = '';
-  for (let i = 0, len = str.length; i < len; i++) {
+  for (let i = 0, len = str.length; i < len; i += 1) {
     const letter = str[i];
     const index = letter.toLowerCase();
     if (!vowels[index]) {
@@ -115,7 +117,7 @@ function encode(str) {
 
 function decode(str) {
   let result = '';
-  for (let i = 0, len = str.length; i < len; i++) {
+  for (let i = 0, len = str.length; i < len; i += 1) {
     let code = str[i];
     let letter = null;
     for (let cur in vowels) {
@@ -140,7 +142,7 @@ function techList(tecnologias, name) {
   for (let tecnologia of tecnologias) {
     lista.push({
       tech: tecnologia,
-      name
+      name: name
     })
   }
 
@@ -166,7 +168,7 @@ function generatePhoneNumber(digits) {
   let counter = {};
   let numeroValido = true;
 
-  for (let i = 0; i < digits.length; i++) {
+  for (let i = 0; i < digits.length; i += 1) {
     let cur = digits[i];
     if (cur < 0 || cur > 9) {
       numeroValido = false;
@@ -199,9 +201,9 @@ function generatePhoneNumber(digits) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let lines = [lineA, lineB, lineC];
-  for (let i = 0; i < lines.length; i++) {
+  for (let i = 0; i < lines.length; i += 1) {
     let sum = 0;
-    for (let j = 0; j < lines.length; j++) {
+    for (let j = 0; j < lines.length; j += 1) {
       if (j != i) sum += lines[j];
     }
     if (lines[i] >= sum) return false;
