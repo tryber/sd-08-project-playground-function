@@ -28,11 +28,11 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let biggest = -Infinity;
+  let biggest = array[0];
   let repeat = 0;
-  for (let index of array) {
-    if (index > biggest) {
-      biggest = index;
+  for (let number of array) {
+    if (number > biggest) {
+      biggest = number;
     }
   }
   for (let index of array) {
@@ -61,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let fizzBuzzArr = [];
   for (let index in array) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+    if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
       fizzBuzzArr[index] = 'fizzBuzz';
     } else if (array[index] % 3 === 0) {
       fizzBuzzArr[index] = 'fizz';
@@ -75,8 +75,23 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let phrase = '';
+  let vogals = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  }
+  for (let letter of string) {
+    if (vogals[letter] === undefined) {
+      phrase += letter;
+    } else {
+      phrase += vogals[letter];
+    }
+  }
+  return phrase
 }
 
 function decode() {
