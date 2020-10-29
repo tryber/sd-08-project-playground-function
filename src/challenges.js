@@ -16,16 +16,16 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(fullSentence) {
   let splitWord = "";
-  let splitedSentence = [];
+  let splittedSentence = [];
   for (index = 0; index <= fullSentence.length; index += 1) {
     if (fullSentence[index] != " " && index != fullSentence.length) {
       splitWord += fullSentence[index];
     } else {
-      splitedSentence.push(splitWord);
+      splittedSentence.push(splitWord);
       splitWord = "";
     }
   }
-  return splitedSentence;
+  return splittedSentence;
 }
 
 // Desafio 4
@@ -65,9 +65,9 @@ function highestCount(numbersList) {
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return "cat1";
-  } else if (Math.abs(cat1 - mouse) > cat2 - mouse) {
+  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     return "cat2";
-  } else if (Math.abs(cat1 - mouse) == cat2 - mouse) {
+  } else if (Math.abs(cat1 - mouse) == Math.abs(cat2 - mouse)) {
     return "os gatos trombam e o rato foge";
   }
 }
@@ -147,14 +147,14 @@ function techList(techName, name) {
   }
 }
 
-// let teste = [];
-// let nome = "Jeferson";
-// console.log(techList(teste, nome));
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
 }
+
+// let teste = [];
+// let nome = "Jeferson";
+// console.log(techList(teste, nome));
 
 // Desafio 12
 function triangleCheck() {
