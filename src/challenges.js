@@ -2,16 +2,15 @@
 function compareTrue(boolean1, boolean2) {
   if (boolean1 && boolean2 === true) {
     return true
-  } else {
+  }
     return false
   }
-}
 // Ok!
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = ((base * height)/2)
-  return area 
+  let area = ((base * height) / 2)
+  return area
 }
 // Ok!
 
@@ -36,7 +35,7 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 
