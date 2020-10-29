@@ -11,12 +11,14 @@ function compareTrue(boo, lean) {
 function calcArea(base, height) {
   let areaTriangulo = (base * height) / 2;
   return areaTriangulo
-}console.log(calcArea(7,5))
+}//console.log(calcArea(7,5))
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(string) {
+  let frase = string
+  let array = frase.split(' ')
+  return array
+}console.log(splitSentence('Ai que vida maravilhosa'))
 
 // Desafio 4
 function concatName() {
