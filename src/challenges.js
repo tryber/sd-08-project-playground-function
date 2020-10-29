@@ -217,9 +217,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(stringBebidas) {
+let bebidasList = stringBebidas.match(/\d+/g).map(Number);
+somaBebidas = 0;
+for (i in bebidasList){
+  somaBebidas = somaBebidas + bebidasList[i];
 }
+  if (somaBebidas === 1){
+    return (somaBebidas + " copo de água")
+  } else {
+    return (somaBebidas + " copos de água")
+  }
+}
+
 
 
 module.exports = {
