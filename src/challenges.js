@@ -31,9 +31,12 @@ function concatName(array) {
 concatName(["Joao", "Pedro", "Maria", "Paulo"]);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let result = 0;
+  result = wins * 3 + ties;
+  return result;
 }
+footballPoints(5, 5);
 
 // Desafio 6
 function highestCount() {
