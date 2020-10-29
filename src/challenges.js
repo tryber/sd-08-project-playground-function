@@ -16,7 +16,7 @@ function splitSentence(resultado) {
   }
   return stringWord;
 }
-console.log (resultado);
+
 // Desafio 4
 function concatName() {
   // seu código aqui
