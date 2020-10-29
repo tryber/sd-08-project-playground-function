@@ -5,4 +5,4 @@ function compareTrue(firstBoolean, secondBoolean) {
   return false;
 }
 
-console.log(compareTrue(false, true));
+compareTrue(false, true);
