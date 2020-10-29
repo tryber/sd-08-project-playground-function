@@ -6,8 +6,8 @@ function compareTrue(val1, val2) {
     return false;
   }
 }
-// let res = compareTrue(true, true);
-// console.log(res)
+// let resultado = compareTrue(true, true);
+// console.log(resultado)
 
 
 // Desafio 2
@@ -36,13 +36,20 @@ function concatName(itens) {
   return `${ultItem}, ${priItem}`;
 }
 
-let itens = concatName('1','2','3','4','5','6');
-console.log(itens);
+// let nome = concatName('marcos','paulo');
+// console.log(nome);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let vitorias = wins * 3;
+  let empates = ties * 1;
+  let resultadoFinal = vitorias + empates;
+
+  return resultadoFinal;
 }
+
+ let reultado = footballPoints(3,1)
+  console.log(reultado)
 
 // Desafio 6
 function highestCount() {
