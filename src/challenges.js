@@ -15,22 +15,27 @@ function compareTrue(comprar, pagar) {
 // let height = 10;
 function calcArea(base, height) {
   // seu código aqui
-  return (base * height)/ 2;
+  return (base * height) / 2;
 }
 // console.log(calcArea(base, height));
 
 // Desafio 3
-let string = "go Trybe"
-function splitSentence(string) {
+// let frase = 'go Trybe'
+function splitSentence(frase) {
   // seu código aqui
-  return string.split(" ")
+  return frase.split(' ')
 }
-console.log(splitSentence(string));
+// console.log(splitSentence(frase));
 
 // Desafio 4
-function concatName() {
+// let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo', 'Ana', 'Luiz Fernando', 'José']
+function concatName(array) {
   // seu código aqui
+  for (let i = 0; i < array.length -1; i += 1) {
+    return array[array.length-1] + ", " + array[0]
+  }
 }
+// console.log(concatName(array));
 
 // Desafio 5
 function footballPoints() {
