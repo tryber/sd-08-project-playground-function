@@ -1,22 +1,22 @@
 // Desafio 1
-function compareTrue(x,y) {
+function compareTrue(x, y) {
   let result;
-  if (x == true && y == true) {
+  if (x === true && y === true) {
     result = true;
-  }else {
-    result = false
+  } else {
+    result = false;
   }
-  return result
+  return result;
 }
 
 // Desafio 2
-function calcArea(base,height) {
-  return (base*height)/2
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  return frase.split(" ");
 }
 
 // Desafio 4
