@@ -1,8 +1,13 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
-  if (boolean1 === true && boolean2 == true) { return true; } 
-  { return false; }
+  if (boolean1 === true && boolean2 === true) {
+    return true;
+  }
+  {
+    return false;
+  }
 }
+console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -11,7 +16,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  return sentence.split(' ');
+  return sentence.split(" ");
 }
 
 // Desafio 4
@@ -21,7 +26,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
@@ -43,40 +48,39 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distCats = Math.abs(cat1 - cat2);
+  let distCats = Math.abs(cat1 - mouse) - Math.abs(cat2 - mouse);
   let distMouseCat1 = Math.abs(mouse - cat1);
   let distMouseCat2 = Math.abs(mouse - cat2);
   if (distCats === 0) {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
   if (distMouseCat1 < distMouseCat2) {
-    return "cat1";
+    return 'cat1';
   }
-  {
-    return "cat2";
+  if (distMouseCat1 > distMouseCat2) {
+    return 'cat2';
   }
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   let fizzBuzzArr = [];
-  for (let index = 0; index < array.length; index += 1) {
+  for (let index in array) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      fizzBuzzArr[index] = "fizzBuzz";
+      fizzBuzzArr[index] = 'fizzBuzz';
     } else if (array[index] % 3 === 0) {
-      fizzBuzzArr[index] = "fizz";
+      fizzBuzzArr[index] = 'fizz';
     } else if (array[index] % 5 === 0) {
-      fizzBuzzArr[index] = "buzz";
+      fizzBuzzArr[index] = 'buzz';
     } else {
-      fizzBuzzArr[index] = "bug!";
+      fizzBuzzArr[index] = 'bug!';
     }
   }
   return fizzBuzzArr;
-}
+} console.log(fizzBuzz([1,2,3,4,5,6,7,8,9,11,12,13,15]))
 
 // Desafio 9
-function encode(string) {}
-function decode() {
+function encode() {
   // seu código aqui
 }
 
