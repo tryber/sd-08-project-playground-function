@@ -34,9 +34,14 @@ function splitSentence(input) {
 splitSentence("go Trybe")
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(input) {
+  let entrada = input;
+  let retorno = entrada[entrada.length -1] + ", " + entrada[0]
+  console.log(retorno)
+  return retorno
+  }  
+  
+concatName(["Lucas", "Cassiano", "Ferraz", "Paollilo"])
 
 // Desafio 5
 function footballPoints() {
