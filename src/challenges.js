@@ -60,7 +60,7 @@ function fizzBuzz(array) {
   let newArray = [];
   for(let key in array){
     if(array[key] % 3 === 0 && array[key] % 5 === 0){
-      newArray.push("fizzbuzz");
+      newArray.push("fizzBuzz");
     } else if(array[key] % 3 === 0) {
       newArray.push("fizz");
     } else if (array[key] % 5 === 0){
@@ -71,6 +71,8 @@ function fizzBuzz(array) {
   }
   return newArray;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 
 
