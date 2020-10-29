@@ -53,7 +53,7 @@ function highestCount(array) {
     }
   }
   return contador
-}console.log(highestCount(arrayGG))
+}//console.log(highestCount(arrayGG))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -75,9 +75,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }//console.log(catAndMouse(3, 2 ,2))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+let arrayFizz = [2, 15, 7, 9, 45]
+function fizzBuzz(array) {
+  let varMain = array
+  let resultado = []
+  let fizz = "fizz"
+  let buzz = "buzz"
+  let bug = "bug!"
+  let fb = "fizzBuzz"
+  for(i in varMain){
+    if(varMain[i] % 3 === 0 && varMain[i] % 5 === 0){
+      resultado.push(fb)
+    }else if (varMain[i] % 5 === 0){
+      resultado.push(buzz)
+    }else if (varMain[i] % 3 === 0){
+      resultado.push(fizz)
+    }else{
+      resultado.push(bug)
+    }
+  }return resultado
+}console.log(fizzBuzz(arrayFizz))
 
 // Desafio 9
 function encode() {
