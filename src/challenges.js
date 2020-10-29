@@ -33,6 +33,8 @@ function concatName(phrase)
 }
 
 
+
+
 // Desafio 5
 function footballPoints(wins, ties)
 {
@@ -189,10 +191,20 @@ function generatePhoneNumber(arr)
 function triangleCheck(lineA, lineB, lineC)
 {
 
-
-
-
+  if(lineA < lineB + lineC && lineA > Math.abs(lineB - lineC))
+  {
+    if(lineB < lineB + lineA && lineB > Math.abs(lineA - lineC))
+    {
+      if(lineC < lineB + lineA && lineC > Math.abs(lineA - lineB))
+        return true;
+    }
+  }
+  else
+    return false;
 }
+
+
+
 
 // Desafio 13
 function hydrate() {
