@@ -8,7 +8,7 @@ function compareTrue(comp01, comp02) {
   }
   return resultado;
 }
-console.log(compareTrue(true, true))
+//console.log(compareTrue(true, true))
 
 // Desafio 2
 function calcArea(base, height) {
@@ -47,9 +47,23 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(vetorNum) {
+  let resultado = [];
+  for (let count in vetorNum) {
+   if (vetorNum[count] % 3 == 0 && vetorNum[count] % 5 == 0) {
+         resultado.push("FizzBuzz");
+     } else if (vetorNum[count] % 3 == 0) {
+         resultado.push("Fizz");
+     } else if (vetorNum[count] % 5 == 0) {
+         resultado.push("Buzz");
+     } else {
+         resultado.push("bug!");
+     }
+  }
+  return resultado;
 }
+let vetorTeste = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(vetorTeste));
 
 // Desafio 9
 function encode() {
