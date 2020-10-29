@@ -46,15 +46,17 @@ function highestCount(arrayConta) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let fimDaHistoria = "";
   if (cat1 - mouse < cat2 -mouse) {
-    return "cat1"
+    fimDaHistoria = "cat1";
   } else if (cat1 - mouse > cat2 -mouse) {
-    return "cat2"
+    fimDaHistoria = "cat2";
   } else {
-    return "os gatos trombam e o rato foge"
+    returnfimDaHistoria = "os gatos trombam e o rato foge";
   }
+  return fimDaHistoria;
 }
-
+console.log(catAndMouse(4,3,1))
 // Desafio 8
 function fizzBuzz(array) {
   let arrayResultado = [];
@@ -81,10 +83,15 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let newArray =[];
+  let orgazineTechs = array.sort();
+  for (i=0; i<array.length; i++){
+     newArray[i] = {tech: orgazineTechs[i], name};
+  }
+  return newArray;
 }
-
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
