@@ -213,9 +213,29 @@ function decode(texto)
 // console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayNomesTecnologia, name) 
+{  
+  let novoArrayNomesTecnologiaOrdenado = arrayNomesTecnologia.sort();
+  let novoArrayNomesTecnologia = [];
+
+  for(let indice = 0; indice < novoArrayNomesTecnologiaOrdenado.length; indice++)
+  {
+    let tech = 
+    {
+      tech: null,
+      name: null
+    };
+
+    tech.tech = novoArrayNomesTecnologiaOrdenado[indice];
+    tech.name = name;
+
+    novoArrayNomesTecnologia.push(tech);
+  }
+
+  return novoArrayNomesTecnologia;
 }
+
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
