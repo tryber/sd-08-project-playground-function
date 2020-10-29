@@ -64,6 +64,27 @@ function objetoComNomeTecnologia(nome, tecnologia) {
   return obj;
 }
 
+function ladoMaiorQueSomaOutros(a, b, c) {
+  let cond1 = a / (b + c);
+  let cond2 = b / (a + c);
+  let cond3 = c / (a + b);
+  if (cond1 > 1 || cond2 > 1 || cond3 > 1) {
+    return false;
+  }
+  return true;
+}
+
+function ladoMenorQueSubOutros(a, b, c) {
+  let cond1 = a - Math.abs(b - c);
+  let cond2 = b - Math.abs(a - c);
+  let cond3 = c - Math.abs(a - b);
+  let resultado = cond1 * cond2 * cond3;
+  if (resultado < 0) {
+    return false;
+  }
+  return true;
+}
+
 // Desafio 1
 function compareTrue(parametro1, parametro2) {
   return parametro1 && parametro2;
@@ -156,22 +177,23 @@ function techList(vetor, name) {
   for (let index = 0; index < vetorOrdenado.length; index++) {
     arrayRetorno.push(objetoComNomeTecnologia(name, vetorOrdenado[index]));
   }
-  if(arrayRetorno.length === 0){
+  if (arrayRetorno.length === 0) {
     return 'Vazio!';
   }
   return arrayRetorno;
 }
-console.log(techList([]));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let pode1 = ladoMaiorQueSomaOutros(lineA, lineB, lineC);
+  let pode2 = ladoMenorQueSubOutros(lineA, lineB, lineC);
+  return pode1 && pode2;
 }
-
+console.log(triangleCheck(10, 14, 8));
 // Desafio 13
 function hydrate() {
   // seu código aqui
