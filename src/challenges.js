@@ -1,7 +1,11 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  // first commit
+function compareTrue(a, b) {
+
+  if (a == true && b == true) {
+    return true
+  }
+
+  return false
 
 }
 
@@ -44,6 +48,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
