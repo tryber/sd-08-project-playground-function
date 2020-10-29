@@ -1,8 +1,10 @@
 // Desafio 1
-function compareTrue() {}
+function compareTrue(firstBoolean, secondBoolean) {
+  firstBoolean && secondBoolean === true ? true : false;
+}
 
 // Desafio 2
-function calcArea() {}
+function calcArea(base, height) {}
 
 // Desafio 3
 function splitSentence() {}
