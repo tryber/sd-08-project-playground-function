@@ -23,7 +23,7 @@ console.log(splitSentence("Oi Tryber"))
 // Desafio 4
 function concatName(nome) {
   for (let index = 0; index < nome.length; index ++){
-      return nome[nome.length - 1] + " " + nome[index];
+      return nome[nome.length - 1] + "," + " " + nome[index];
   }
 }
   console.log(concatName(["Bruce", "nascimento", "Pereira", "Zelia", "Dias"]));
@@ -34,10 +34,20 @@ function footballPoints(wins, ties) {
   return wins*3 + ties;
 }
 console.log(footballPoints(4, 2))
+
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let Maior = Math.max.apply(null, numbers)
+  Conta = 0;
+  
+  for (let i = 0; i < numbers.length; i++){
+  if(Maior == numbers[i]){
+    Conta = Conta + 1;
+    }
+  }
+    return Conta;
 }
+
 
 // Desafio 7
 function catAndMouse() {
