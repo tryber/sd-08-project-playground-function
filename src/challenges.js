@@ -67,8 +67,8 @@ highestCount(testeHighest);
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let resultado;
-  let distanciaCat1 = mouse - cat1;
-  let distanciaCat2 = mouse - cat2;
+  let distanciaCat1 = cat1 - mouse;
+  let distanciaCat2 = cat2 - mouse;
   if (distanciaCat1 < distanciaCat2) {
     resultado = "cat1";
   } else if (distanciaCat2 < distanciaCat1) {
@@ -78,7 +78,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 return resultado;
 }
-catAndMouse(10, 5, 3);
+catAndMouse(2, 5, 3);
 //console.log(catAndMouse(10,5,3));
 
 // Desafio 8
