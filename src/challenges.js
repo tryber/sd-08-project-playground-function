@@ -104,9 +104,36 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  replace = [];
+  result = "";
+
+  for (index in string) {
+    switch (string[index]) {
+      case "a":
+        replace.push("1");
+        break;
+      case "e":
+        replace.push("2");
+        break;
+      case "i":
+        replace.push("3");
+        break;
+      case "o":
+        replace.push("4");
+        break;
+      case "u":
+        replace.push("5");
+        break;
+      default:
+        replace.push(string[index])
+    }
+    result += replace[index];
+  }     
+  return result;
 }
+
 function decode() {
   // seu código aqui
 }
