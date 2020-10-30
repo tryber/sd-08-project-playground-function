@@ -99,6 +99,7 @@ function encode(string) {
 }
 encode("Tiago");
 
+// Solução encontrada no Stackoverflow utilizando String.prototype.replace()
 function decode(string) {
   let stringSwap = { "1": "a", "2": "e", "3": "i", "4": "o", "5": "u" }
   let encondeResult = "";
@@ -109,9 +110,21 @@ function decode(string) {
 decode("h3 th2r2!");
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let resultArray = [];
+  let orderedTechList = tech.sort();
+  if (tech === 0) {
+    console.log("Vazio!");
+  }
+  for (let i in orderedTechList) {
+    resultArray.push({
+      tech: orderedTechList[i],
+      name: name
+    });
+  }
+  return resultArray;
 }
+techList(["Javascript", "CSS", "HTML"], "Tiago");
 
 // Desafio 11
 function generatePhoneNumber() {
