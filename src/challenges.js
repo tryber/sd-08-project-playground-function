@@ -217,13 +217,24 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
-//console.log(triangleCheck(10, 14, 8))
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(literal) {
+  let agua = 0;
+
+  for (i in literal){
+    let a = literal[i];
+    if(a * a){
+      agua += parseInt(a); 
+    }
+  }
+  if(agua > 1){
+    return agua + " copos de água";
+  } else {
+    return agua + " copo de água";
+  }
 }
 
+//console.log(hydrate("1 cerveja"))
 
 module.exports = {
   calcArea,
