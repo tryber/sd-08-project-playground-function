@@ -169,8 +169,68 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {
   // seu código aqui
+  let phoneNumber = "";
+  // Cria um objeto contendo o primeiro número do array passado e o número de repetições desse número que inicialmente é zero.
+  let objArray = {};
+  // Inicializa um novo array com o objeto criado acima.
+  let newArray = [];
+  // Verifica se o array é maior ou menor que 11, caso for, encerra a função retornando o valor abaixo.
+  if(array.length != 11){
+    return "Array com tamanho incorreto.";
+  } else{
+    // 'For' para verificar cada posição do array de 11 elementos.
+    for(let pos = 0; pos < array.length; pos += 1){
+      let isReapeted = false;
+      // Condição para verificar se algum dos elementos é menor que zero ou maior que nove, caso seja, retorna valor abaixo encerrando a função.
+      if(array[pos] < 0 || array[pos] > 9){
+        return "não é possível gerar um número de telefone com esses valores";
+        break;
+      } else{
+        // 'For' para verificar cada posição do newArray criado no início da função.
+        for(let key = 0; key < newArray.length; key += 1){
+          // Se alguma das posições de newArray for igual ao array na pos atual do loop, o valor da propriedade repeat do objeto dentro do newArray na posição key será incrementado e o valor de isRepeated é alterado para true para futura comparação.
+          if(newArray[key].numero == array[pos]){
+            newArray[key].repeat += 1;
+            isReapeted = true;
+          }
+        }
+        // Se o valor de isRepeated não foi alterado para true, ou seja, não houve repetição do número do array na posição pos, o número em questão é adicionado em um novo objeto e esse objeto é adicionado no objArray. O valor de isReapeted retorna a false no início do primeiro 'for'.
+        if(!isReapeted){
+          let objArray = {};
+          objArray.numero = array[pos];
+          objArray.repeat = 1;
+          newArray.push(objArray);
+        }
+      }
+    }
+    // Verificar se há algum número com mais de 3 repeats.
+    for(let chave in newArray){
+      if(newArray[chave].repeat >= 3){
+        return "não é possível gerar um número de telefone com esses valores";
+        break;
+      } else if(chave == (newArray.length -1)){
+        // Constrói o phoneNumber no formato solicitado.
+        for(let posPhone = 0; posPhone < array.length; posPhone += 1){
+          switch(posPhone){
+            case 0:
+              phoneNumber += "(" + array[posPhone];
+              break;
+            case 2:
+              phoneNumber += ")" + array[posPhone];
+              break;
+            case 7:
+              phoneNumber += "-" + array[posPhone];
+              break;
+            default:
+              phoneNumber += array[posPhone];
+          }
+        }
+        return phoneNumber;
+      }
+    }
+  }
 }
 
 // Desafio 12
