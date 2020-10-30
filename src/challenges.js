@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  if ( bool1 === true && bool2 === true ) {
+  if (bool1 === true && bool2 === true) {
     return true;
   } else {
     return false;
@@ -23,8 +23,8 @@ function concatName(name) {
 }
 
 // Desafio 5
-function footballPoints( wins, ties) {
-  return wins * 3 + ties;
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
@@ -47,17 +47,17 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    return "cat1";
+    return 'cat1';
   } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
-    return "cat2";
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
 function fizzBuzz(array) {
-  result = [];
+  let result = [];
   for (var i = 0; i < array.length; i++) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       result.push("fizzBuzz")
@@ -83,7 +83,7 @@ function encode(phrase) {
   }
   for (let i = 0; i < phrase.length; i++) {
     for (let key in translate) {
-    if (phrase[i] == key) {
+    if (phrase[i] === key) {
     phrase = phrase.replace(phrase[i], translate[key]);
     }
     }
@@ -101,7 +101,7 @@ function decode(code) {
   }
   for (let i = 0; i < code.length; i++) {
     for (let key in translate) {
-    if (code[i] == key) {
+    if (code[i] === key) {
     code = code.replace(code[i], translate[key]);
     }
     }
@@ -119,7 +119,7 @@ function techList(array, name) {
     temp.name = name;
     list.push(temp);
   }
-  if (array == []) {
+  if (list == []) {
     return "Vazio!"
   } else {
   return list;
@@ -132,7 +132,7 @@ function generatePhoneNumber(numbers) {
   for (let j = 0; j < numbers.length; j++) {
     let maxRepeatTest = 0;
     for (let i = 0; i < numbers.length; i++) {
-      if (numbers[j] == numbers[i]) {
+      if (numbers[j] === numbers[i]) {
         maxRepeatTest++;
       }
       if (maxRepeatTest > maxRepeat) {
@@ -147,7 +147,7 @@ function generatePhoneNumber(numbers) {
     }
   }
 
-  if (numbers.length != 11) {
+  if (numbers.length !== 11) {
     return "Array com tamanho incorreto."
   } else if (maxRepeat >= 3) {
     return "não é possível gerar um número de telefone com esses valores"
@@ -160,7 +160,7 @@ function generatePhoneNumber(numbers) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let allLine = [lineA, lineB, lineC]
-  if ( lineA < lineB + lineC && lineB < lineC + lineA && lineC < lineA + lineB && math.min(allLine) > math.max(all) - math.min(allLine)) {
+  if ( lineA < lineB + lineC && lineB < lineC + lineA && lineC < lineA + lineB && Math.min(allLine) > Math.max(all) - Math.min(allLine)) {
     return true;
   } else {
     return false;
@@ -168,8 +168,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drink) {
+  let water = drink.replace(/\D/g, "");
+  let total = 0;
+  for (let i = 0; i < water.length; i++) {
+    let convert = water[i];
+    total += parseInt(convert);
+  }
+  if (total === 1) {
+    return `${total} copo de água`
+  } else {
+    return `${total} copos de água`
+  }
 }
 
 
