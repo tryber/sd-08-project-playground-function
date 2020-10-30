@@ -169,9 +169,34 @@ function encode(palavra) {
 }
 console.log(encode("hi there"))
 
-function decode() {
-  // seu código aqui
+function decode(palavra1) {
+  
+  let list1= palavra1.split("")
+
+  for (let i = 0; i < list1.length; i++) {
+    if (list1[i] == 1) {
+      list1[i] = "a"
+    }
+    else if (list1[i] == 2) {
+      list1[i] = "e"
+    }
+    else if (list1[i] == 3) {
+      list1[i] = "i"
+    }
+    else if (list1[i] == 4) {
+      list1[i] = "o"
+    }
+    else if (list1[i] == 5) {
+      list1[i] = "u"
+    }
+  }
+  let zen1 = list1.join("")
+
+  return zen1
+
 }
+
+console.log(decode("h3 th2r2!"))
 
 // Desafio 10
 function techList(tec, name) {
