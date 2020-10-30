@@ -66,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2ToMouse = Math.abs(cat2 - mouse);
   let winner;
   if (cat1ToMouse === cat2ToMouse){
-    let empate = "Os gatos trombam e o rato foge";
+    let empate = "os gatos trombam e o rato foge";
     return empate;
   } else if (cat1ToMouse > cat2ToMouse){
     winner = "cat2";
@@ -96,11 +96,46 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let codigo = "";
+  for (let index = 0; index < string.length; index += 1){
+    if (string[index] == "a"){
+      codigo += "1";
+    } else if (string[index] == "e"){
+      codigo += "2";
+    } else if (string[index] == "i"){
+      codigo += "3";
+    } else if (string[index] == "o"){
+      codigo += "4";
+    } else if (string[index] == "u"){
+      codigo += "5";
+    } else {
+      codigo += string[index]
+    }
+  }
+  return codigo;
 }
-function decode() {
+
+function decode(codigo) {
   // seu código aqui
+  let frase = "";
+  for (let index = 0; index < codigo.length; index += 1){
+    if (codigo[index] == "1"){
+      frase += "a";
+    } else if (codigo[index] == "2"){
+      frase += "e";
+    } else if (codigo[index] == "3"){
+      frase += "i";
+    } else if (codigo[index] == "4"){
+      frase += "o";
+    } else if (codigo[index] == "5"){
+      frase += "u";
+    } else {
+      frase += codigo[index]
+    }
+  }
+  return frase;
 }
 
 // Desafio 10
