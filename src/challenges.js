@@ -12,7 +12,7 @@ function calcArea(base, height) {
   return area;
 }
 
-// Desafio 3
+// Desafio 3 CONCLUIDO
 function splitSentence(string) {
   let dividido = string.split(' ');
   return dividido;
@@ -49,8 +49,19 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let ditanciaCats = Math.abs(cat1 - cat2);
+  let distanciaMouseCat1 = Math.abs(mouse - cat1);
+  let distanciaMouseCat2 = Math.abs(mouse - cat2);
+  if (ditanciaCats == 0) {
+    return "os gatos trombam e o rato foge"
+  }
+  else if (distanciaMouseCat1 > distanciaMouseCat2) {
+    return "cat2";
+  }
+  else {
+    return "cat1";
+  }
 }
 
 // Desafio 8 CONCUIDO
