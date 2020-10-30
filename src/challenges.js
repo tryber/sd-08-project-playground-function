@@ -127,16 +127,59 @@ function techList(techs, name) {
       name: name
     }
   }
-  // result = sortedTechs;
   if (techs.length == 0){
     return 'Vazio!';
   }
   return sortedTechs;
 }
 
+// Pré 11
+function arrCounter (arr) {
+  let counter = {};
+  for (const element of arr) {
+    if (!counter[element]) {
+      counter[element] = 1;
+    } else {
+      counter[element] += 1;
+    }
+  }
+  return counter;
+}
+function appearMoreThan (obj, num) {
+  const values = Object.values(obj);
+  for (let i in values){
+    if (values[i] > num){
+      return true;
+    }
+  }
+  return false;
+}
+function anyMinorOrGretear (arr, minor, greater){
+  for (let key in arr){
+    if (arr[key] < minor || arr[key] > greater){
+      return true;
+    }
+  }
+  return false;
+}
+
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  const moreThan2 = appearMoreThan(arrCounter(numbers), 2),
+  minorGreater = anyMinorOrGretear(numbers, 0, 9);
+  if (moreThan2 || minorGreater){
+    return "não é possível gerar um número de telefone com esses valores";
+  } else if (numbers.length != 11){
+    return "Array com tamanho incorreto.";
+  }
+  const add = {
+    position: [0, 3, 9],
+    string: ['(', ') ', '-']
+  }
+  for (let key in add.position){
+    numbers.splice(add.position[key], 0, add.string[key]);
+  }
+  return numbers.join('');
 }
 
 // Desafio 12
