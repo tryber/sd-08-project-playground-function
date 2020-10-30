@@ -115,7 +115,7 @@ function fizzBuzz(arrayNumeros) {
 /* console.log(fizzBuzz([2, 15, 7, 9, 45])); */
 
 // Desafio 9
-function encode(texto) {
+function novoTexto(texto) {
   let novoTexto = '';
 
   for (let indice = 0; indice < texto.length; indice += 1) {
@@ -135,18 +135,6 @@ function encode(texto) {
       case 'u':
         novoTexto += '5';
         break;
-      default:
-        novoTexto += texto[indice];
-    }
-  }
-  return novoTexto;
-}
-
-function decode(texto) {
-  let novoTexto = '';
-
-  for (let indice = 0; indice < texto.length; indice += 1) {
-    switch (texto[indice]) {
       case '1':
         novoTexto += 'a';
         break;
@@ -167,6 +155,14 @@ function decode(texto) {
     }
   }
   return novoTexto;
+}
+
+function encode(texto) {  
+  return novoTexto(texto);
+}
+
+function decode(texto) {
+  return novoTexto(texto);
 }
 
 /* console.log(encode("hi there!"));
