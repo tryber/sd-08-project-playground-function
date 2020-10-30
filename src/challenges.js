@@ -29,18 +29,13 @@ function footballPoints(wins, ties) {
 }
 
 let biggestNumber = (numbers) => {
-  return numbers.reduce((previousValue, currentValue) => currentValue > previousValue ? currentValue : previousValue, 0);
-  let biggest = numbers[0];
-  for (number of numbers) {
-    if (number > biggest) {
-      biggest = number;
-    }
-  }
-  return biggest;
+  return numbers.reduce((previousValue, currentValue) =>
+    currentValue > previousValue ? currentValue : previousValue, 0);
 }
 
 let countElement = (container, element) => {
-  return container.reduce((previousValue, currentValue) => currentValue == element ? previousValue + 1 : previousValue, 0 /* Initial value*/);
+  return container.reduce((previousValue, currentValue) =>
+    currentValue == element ? previousValue + 1 : previousValue, 0 /* Initial value*/);
 }
 
 // Desafio 6
@@ -63,6 +58,11 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
+  return numbers.map((value) => {
+    let fizz = (value % 3) == 0;
+    let buzz = (value % 5) == 0;
+    return fizz ? buzz ? 'fizzBuzz' : 'fizz' : buzz ? 'buzz' : 'bug!';
+  });
   let fizzBuzzArray = [];
   for (number of numbers) {
     let fizz = (number % 3) == 0;
