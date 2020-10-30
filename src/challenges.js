@@ -73,8 +73,6 @@ function fizzBuzz(numeros) {
   }
   return(vetorResposta);
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
-
 
 // Desafio 9
 function encode(codigo) {
@@ -160,13 +158,30 @@ function generatePhoneNumber(vetor) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let possivel = false;
+  if (lineA < lineB+lineC && lineA > Math.abs(lineB-lineC)){
+    possivel = true;
+  } else if (lineB < lineA+lineC && lineB > Math.abs(lineA-lineC)) {
+    possivel = true;
+  } else if (lineC < lineB+lineA && lineC > Math.abs(lineB-lineA)) {
+    possivel = true;
+  }
+  return(possivel);
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(recebida) {
+  let inteiro = recebida.match(/\d+/g)
+  let soma = 0
+  for (i = 0; i < inteiro.length; i+=1){
+    soma += new Number(inteiro[i]);
+  }
+  if (soma == 1) {
+    return(soma + " copo de água");
+  } else {
+    return(soma + " copos de água")
+  }
 }
 
 
