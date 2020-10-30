@@ -86,17 +86,79 @@ function fizzBuzz(array) {
   return arrayToReturn
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
-
-
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+
+  let stringToArray = string.split("");
+  let stringToReturn = "";
+
+  for ( let index = 0; index < stringToArray.length; index += 1) {
+
+    let letter = stringToArray[index];
+
+    if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u') {
+         if (stringToArray[index] == 'a') {
+             stringToArray[index]  = '1'
+          }
+         if (stringToArray[index] == 'e') {
+             stringToArray[index]  = '2'
+          }
+         if (stringToArray[index] == 'i') {
+             stringToArray[index]  = '3'
+          }
+         if (stringToArray[index] == 'o') {
+            stringToArray[index]  = '4'
+          }
+         if (stringToArray[index] == 'u') {
+             stringToArray[index]  = '5'  }
+      }
+  }
+  for ( letter in stringToArray) {
+    stringToReturn += stringToArray[letter];
+  }
+    return stringToReturn
 }
-function decode() {
-  // seu código aqui
+console.log(encode("aeiou"))
+
+
+
+
+function decode(string) {
+
+let stringToArray = string.split("");
+let stringToReturn = "";
+
+
+for (eachLetter in stringToArray) {
+
+  let character = '';
+
+  if (character == '1' || character == '2' || character == '3' || character == '4' || character == '5') {
+    if (character == '1') {
+      stringToArray[character] = 'a'
+    }
+    if (character == '2') {
+      stringToArray[character] = 'e'
+    }
+    if (character == '3') {
+      stringToArray[character] = 'i'
+    }
+    if (character == '4') {
+      stringToArray[character] = 'o'
+    }
+    if (character == '5') {
+      stringToArray[character] = 'u'
+    }
+  }
 }
+  for (eachCharacter in stringToArray) {
+    stringToReturn += stringToArray[eachCharacter]
+  }
+  return stringToReturn
+
+}
+console.log(decode("12345"))
+
 
 // Desafio 10
 function techList() {
