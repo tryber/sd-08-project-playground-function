@@ -208,8 +208,8 @@ function techList(array, name) {
   if (array.length !== 0) {
     let key;
     let newArray = [];
-    for (key in list) {
-    newArray.push(makeObject(list[key], name));
+    for (key in array) {
+    newArray.push(makeObject(array[key], name));
     }
     return newArray;
   } else {  
