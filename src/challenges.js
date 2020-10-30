@@ -193,7 +193,22 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
+let result = false;
+let sumAB = lineA + lineB;
+let sumBC = lineB + lineC;
+let sumAC = lineA + lineC;
 
+let chekA = lineA < sumBC;
+let chekB = lineB < sumAC;
+let chekC = lineC < sumAB;
+
+if(chekA && chekB && chekC){
+  result = true
+} else{
+  result = false;
+}
+
+return result;
 }
 
 // Desafio 13
