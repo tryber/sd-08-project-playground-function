@@ -138,21 +138,20 @@ function decode() {
 // Desafio 10
 function techList(tech, name) {
   let listaOrdenada = tech.sort();
-  // let arrayCriado = [];
-  let arrayVazio = '';
+  let arrayCriado = [];
   let indice;
-
+  
+  if(listaOrdenada.length === 0){
+    return 'Vazio!'
+  } 
   for(indice = 0; indice < listaOrdenada.length; indice +=1){
-    if(listaOrdenada === []){
-      arrayVazio = 'Vazio!'
-    } else {
       arrayCriado.push({
        tech: listaOrdenada[indice],
         name: name
       })
     }
-  }
-  return arrayVazio;
+  
+  return arrayCriado;
 
 }
 // console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
