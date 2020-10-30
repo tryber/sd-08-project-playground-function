@@ -2,9 +2,9 @@
 function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
-  } else {
+  } 
     return false;
-  }
+  
 }
 compareTrue(true, true);
 
@@ -26,12 +26,12 @@ splitSentence('Fabio Higor de Almeida');
 function concatName(nomes) {
   let ultima = nomes.pop();
   let primeira = nomes.shift();
-  let final = [];
-  final.push(primeira);
-  final.unshift(ultima);
-  return final;
+  let final = ultima +', '+ primeira;
+  //final.push(primeira);
+  //final.unshift(ultima);
+  console.log(final)
 }
-let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+let nomes = ['Lucas','Cassiano','Ferraz','Paolillo'];
 concatName(nomes);
 
 // Desafio 5
@@ -62,7 +62,7 @@ highestCount(num);
 function catAndMouse(mouse, cat1, cat2) {
   let p1 = Math.abs(cat1 - mouse);
   let p2 = Math.abs(cat2 - mouse);
-  if (p1 == p2) {
+  if (p1 === p2) {
     console.log('os gatos trombam e o rato foge');
   } else if (p1 > p2) {
     console.log('cat 2');
