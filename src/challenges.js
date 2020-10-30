@@ -104,7 +104,7 @@ function fizzBuzz(divisivel) {
   let array = [];
     for (let cont = 0; cont <= divisivel.length -1; cont++) {
       if ((divisivel[cont] % 3 == 0) && (divisivel[cont] % 5 == 0)) {
-        array.push("fizzbuzz");
+        array.push("fizzBuzz");
       } else if (divisivel[cont] % 5 === 0) {
         array.push("buzz");
       } else if (divisivel[cont] % 3 === 0) {
@@ -115,7 +115,7 @@ function fizzBuzz(divisivel) {
     }
     return array;
     }
-  fizzBuzz([2, 15, 7, 9, 45]);
+  fizzBuzz([7, 9]);
 
 // Desafio 9
 function encode(vogais) {
