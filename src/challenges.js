@@ -128,7 +128,7 @@ function hydrate (text) {
   const arr = text.replace(/\D/g, '').split('')
   const sum =
     arr.reduce(function (acc, val) {
-      return parseInt(acc) + parseInt(val)
+      return parseInt(acc, 10) + parseInt(val, 10)
     }, 0) || 0
   if (sum < 2) return `${sum} copo de água`
   return `${sum} copos de água`
