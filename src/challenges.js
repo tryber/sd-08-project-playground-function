@@ -175,29 +175,32 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList(arrayList, name) {
-  let array = [];
-  let object = {
-    tech: arrayList,
+function techList(List, name) {
+  List = List.sort();
+  let orderVector = [];
+  let objList = {
+    tech: List,
     name: name
-  }
+  };
 
-  for (i=0;i<arrayList.length;i+=1) {
-    object.tech = arrayList[i];
-    console.log(object);
-  }
-
-  if (arrayList == ''){
+  if (List == ''){
     return 'Vazio!';
   } else {
-    return array;
+    for (i=0;i<List.length;i+=1) {
+      let element = {
+        tech: objList.tech[i],
+        name: name
+      };
+      orderVector.push(element);
+    }
+
+    return orderVector;
   }
 }
 
 // Desafio 11
 function generatePhoneNumber(arrayNumbers) {
-  let smallerOrLarger = 0;
-  let countNine = 0;
+  let countNumbers = [0,0,0,0,0,0,0,0,0,0];
   let ddd = '';
   let first = '';
   let second = '';
@@ -208,14 +211,20 @@ function generatePhoneNumber(arrayNumbers) {
 
   for (i=0;i<arrayNumbers.length;i+=1) {
     if (arrayNumbers[i] < 0 || arrayNumbers[i] > 9) {
-      smallerOrLarger += 1;
-    } else if (arrayNumbers[i] == 9) {
-      countNine += 1;
+      return 'não é possível gerar um número de telefone com esses valores';
+    } else {
+      for (j=0;j<countNumbers.length;j+=1) {
+        if (arrayNumbers[i] == j) {
+          countNumbers[j] += 1;
+        }
+      }
     }
   }
 
-  if (smallerOrLarger > 0 || countNine >= 3) {
-    return 'não é possível gerar um número de telefone com esses valores';
+  for (i=0;i<countNumbers.length;i+=1) {
+    if (countNumbers[i] > 2) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
   }
 
   for (i=0;i<arrayNumbers.length;i+=1) {
@@ -249,9 +258,36 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebidas) {
+  let copos = 0;
+
+  for (i=0;i<bebidas.length;i+=1) {
+    if (bebidas[i] == 1) {
+      copos += 1;
+    } else if (bebidas[i] == 2) {
+      copos += 2;
+    } else if (bebidas[i] == 3) {
+      copos += 3;
+    } else if (bebidas[i] == 4) {
+      copos += 4;
+    } else if (bebidas[i] == 5) {
+      copos += 5;
+    } else if (bebidas[i] == 6) {
+      copos += 6;
+    } else if (bebidas[i] == 7) {
+      copos += 7;
+    } else if (bebidas[i] == 8) {
+      copos += 8;
+    } else if (bebidas[i] == 9) {
+      copos += 9;
+    }
+  }
+
+  let frase = copos + ' copos de água';
+
+  return frase;
 }
+console.log(hydrate('5 bebidas doidas, 9 cervejas, 2 pingas, 5 tequilas'));
 
 
 module.exports = {
