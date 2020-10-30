@@ -170,8 +170,8 @@ function encode(palavra) {
 console.log(encode("hi there"))
 
 function decode(palavra1) {
-  
-  let list1= palavra1.split("")
+
+  let list1 = palavra1.split("")
 
   for (let i = 0; i < list1.length; i++) {
     if (list1[i] == 1) {
@@ -201,23 +201,35 @@ console.log(decode("h3 th2r2!"))
 // Desafio 10
 function techList(tec, name) {
 
-  let novo = {
-    tech: "",
-    name: " "
 
+  let listaOrdena = tec.sort();
+
+  let arrayvazio = "";
+  let arraycriado = [];
+
+
+  if (listaOrdena.length === 0) {
+    return "Vazio!"
   }
-
 
   for (let key in tec) {
-    novo.tech = tec[key]
-    novo.name = name
 
+    if (listaOrdena === []) {
+      arrayvazio = "Vazio!"
 
+    }
+    else {
 
+      arraycriado.push({
+        tech: listaOrdena[key],
+        name: name
+      })
+
+    }
 
   }
 
-  return novo
+  return arraycriado
 }
 
 console.log(techList(["tec1", "tec2", "tec3"], "zin"))
