@@ -185,7 +185,7 @@ function encode(phrase) {
   let phraseEncode = array5.join('');
   return phraseEncode;  
 }
- console.log(encode("observe que essa mensagem ficou oculta"));
+// console.log(encode("observe que essa mensagem ficou oculta"));
  
 
 function decode(phrase) {
@@ -198,12 +198,25 @@ function decode(phrase) {
   let phraseDecode = array5.join('');
   return phraseDecode;
 }
-console.log(decode('4bs2rv2 q52 2ss1 m2ns1g2m n14 f3c45 4c5lt1 12345'));
+// console.log(decode('4bs2rv2 q52 2ss1 m2ns1g2m n14 f3c45 4c5lt1 12345'));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function makeObject(tech, name) {
+  let objTech = new Object();
+  objTech["tech"] = tech;
+  objTech["name"] = name;
+  return objTech;
 }
+
+function techList(array, name) {
+  let key;
+  let newArray = [];
+  for (key in array) {
+    newArray.push(makeObject(array[key], name))
+  }
+  return newArray;
+}
+// console.log(techList(['item1', 'item2', 'item3', 'item4', 'item5'], 'Digo'))
 
 // Desafio 11
 function generatePhoneNumber() {
