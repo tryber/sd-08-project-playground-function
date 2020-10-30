@@ -50,13 +50,13 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
+  /*if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return 'os gatos trombam e o rato foge';
   }
   else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
   }
-  return 'cat2';
+  return 'cat2';*/
 }
 
 // Desafio 8 CONCLUIDO
@@ -104,7 +104,7 @@ function encode(palavra) {
 }
 
 function decode(palavra) {
-  let palavraDecodificada = '';
+/*  let palavraDecodificada = '';
   for (index in palavra) {
     if (palavra[index] === '1') {
       palavraDecodificada += 'a';
@@ -126,11 +126,11 @@ function decode(palavra) {
     }
     
   }
-  return palavraDecodificada;
+  return palavraDecodificada;*/
 }
 
 // Desafio 10
-function techList(tecnologias, nome) {
+function techList(tecnologias, name) {
   if (tecnologias.length === 0) {
     return 'Vazio!';
   }
@@ -139,12 +139,12 @@ function techList(tecnologias, nome) {
   for (let index = 0; index < tecnologias.length; index =+ 1) {
     let objetoTechs = {
       tech: techsOrdenadas[index],
-      nome,
+      name,
     }
     novaLista.push(objetoTechs)
   }
   return novaLista;
-}
+} 
 
 // Desafio 11
 function generatePhoneNumber() {
