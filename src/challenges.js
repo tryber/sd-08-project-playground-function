@@ -59,9 +59,18 @@ function highestCount(vetorNum) {
 //console.log(highestCount(teste));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let resultado;
+  let distanciaCat1 = cat1 - mouse;
+  let distanciaCat2 = cat2 - mouse;
+  if (distanciaCat1 < distanciaCat2) {
+    resultado = cat1;
+  } else {
+    resultado = cat2;
+  }
 }
+return resultado;
+//console.log(catAndMouse(10,5,3));
 
 // Desafio 8
 function fizzBuzz(vetorNum) {
@@ -107,7 +116,17 @@ function decode() {
 // Desafio 10
 function techList(vetor, name) {
   let resultado;
-
+  let vetorOrdenado;
+ /* let lista = {
+    tech: "";
+    name: "";
+  };
+  vetorOrdenado = vetor.sort();
+  for (let count in vetor) {
+    lista.tech = vetor[count];
+    lista.name = veetor[count];
+  }
+*/
 return resultado;
 }
 console.log
