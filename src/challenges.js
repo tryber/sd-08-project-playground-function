@@ -127,9 +127,39 @@ function encode(troca) {
   return vogal;
 }
 //console.log(encode('hi there!'))
-function decode() {
-  // seu código aqui
+function decode(text) {
+  // 1 -> a
+  // 2 -> e
+  // 3 -> i
+  // 4 -> o
+  // 5 -> u
+
+  let message = '';
+  for (let a = 0; a < text.length; a += 1) {
+    switch (text[a]) {
+      case '1':
+        message += 'a';
+        break;
+      case '2':
+        message += 'e';
+        break;
+      case '3':
+        message += 'i';
+        break;
+      case '4':
+        message += 'o';
+        break;
+      case '5':
+        message += 'u';
+        break;
+      default:
+        message += text[a];
+        break;
+    }
+  }
+  return message;
 }
+//console.log(decode ("h3 th2r2!"))
 
 // Desafio 10
 function techList() {
