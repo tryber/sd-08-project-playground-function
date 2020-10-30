@@ -160,7 +160,7 @@ function generatePhoneNumber(array) {
     return 'Array com tamanho incorreto.';
   }
 
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] < 0 || array[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
@@ -180,8 +180,8 @@ function generatePhoneNumber(array) {
 
   let number = '';
 
-  for (let i = 0; i < array.length; i++) {
-    number = "(" + array.slice(0, 2).join('') + ")" + " " + array.slice(2, 7).join('') + "-" + array.slice(7, 11).join('');
+  for (let i = 0; i < array.length; i += 1) {
+    number = `(${array.slice(0, 2).join('')}) ${array.slice(2, 7).join('')}-${array.slice(7, 11).join('')}`;
   }
 
   return number;
