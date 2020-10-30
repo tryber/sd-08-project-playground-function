@@ -105,11 +105,16 @@ function decode() {
 //console.log(encode(teste));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(vetor, name) {
+  let resultado;
 
-// Desafio 11
+return resultado;
+}
+console.log
+let teste = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let nome = "Wagner";
+console.log(encode(teste, nome));
+//Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
 }
