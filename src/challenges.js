@@ -199,7 +199,7 @@ function hydrate(string) {
   let cups = 0;
 
   for (let i = 0; i < numString.length; i += 1) {
-    cups += parseInt(numString[i]);
+    cups += parseInt(numString[i], 10);
   }
 
   return `${cups} copos de água`;
