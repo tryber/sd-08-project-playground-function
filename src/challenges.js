@@ -131,16 +131,18 @@ function decode(str) {
 
 // Desafio 10
 function techList(tech, name) {
-  let sortList = tech.sort();
-  let newTech = [];
-  for (let i = 0; i < sortList.length; i += 1) {
-    let techPush = sortList[i];
-    newTech.push({ techPush, name });
+  let sortedArray = tech.sort();
+  let listEnd = [];
+  for (let i = 0; i < tech.length; i += 1) {
+    listEnd.push({
+        tech: sortedArray[i],
+        name: name
+    });
   }
-  if (newTech.length === 0) {
-    return 'Vazio!';
+  if (listEnd.length == 0) {
+    return ("Vazio!");
   }
-  return newTech;
+  return listEnd;
 }
 
 // Desafio 11
