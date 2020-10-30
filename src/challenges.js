@@ -29,7 +29,6 @@ function concatName(phrase) {
   // seu código aqui
    return phrase[phrase.length-1] + ' ' + phrase[0];
   }
-  console.log(concatName());
   
 // Desafio 5
 function footballPoints(wins, ties) {
