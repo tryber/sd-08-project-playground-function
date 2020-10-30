@@ -84,7 +84,7 @@ function fizzBuzz(arrayNumbers) {
     } else if (arrayNumbers[property] % 5 === 0) {
       arrayString.push('buzz')
     } else {
-      arrayString.push('bug')
+      arrayString.push('bug!')
     }
   }
   return arrayString
