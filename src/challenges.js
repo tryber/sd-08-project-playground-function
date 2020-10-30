@@ -121,6 +121,9 @@ function decode(phrase) {
 
 // Desafio 10
 function techList(tecnologia, name) {
+  if (tecnologia.length === 0) {
+    return "Vazio!";
+  }
 const listaOrdenada = tecnologia.sort();
 let resultado = [];
 for (index = 0; index < listaOrdenada.length; index += 1) {
