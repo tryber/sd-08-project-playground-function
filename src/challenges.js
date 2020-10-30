@@ -51,11 +51,11 @@ concatName(['lucas', 'cassiano', 'ferraz', 'Paolillo']);
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  return (wins * 3) - ties;
+  let total = (wins * 3) - ties;
+  return total;
 }
 
 footballPoints(3, 2);
-
 
 // Desafio 6
 function highestCount(array) {
@@ -98,12 +98,12 @@ function fizzBuzz(divisivel) {
       } else if (divisivel[cont] % 3 === 0) {
         array.push("fizz");
       } else {
-        array.push("bug");
+        array.push("bug!");
       }
     }
     return array;
     }
-    console.log(fizzBuzz([2, 3, 5, 15, 7, 9, 45]));
+    console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(vogais) {
