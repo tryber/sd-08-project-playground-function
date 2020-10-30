@@ -25,15 +25,20 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arrayStrings) {
   // seu código aqui
-  let retorno = [];
-  retorno.push(arrayStrings[arrayStrings.length - 1]);
-  retorno.push(arrayStrings[0]);
+  let retorno = "";
+  retorno += arrayStrings[arrayStrings.length - 1];
+  retorno += ", "
+  retorno += arrayStrings[0];
   return retorno;
 }
-
+console.log(concatName(["Joao", "Lucas", "Junior"]));
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let winPoints = wins * 3;
+  let tiePoints = ties;
+  let totalPoints = winPoints + tiePoints;
+  return totalPoints;
 }
 
 // Desafio 6
