@@ -28,12 +28,13 @@ function highestCount(array) {
   let maior = array[0];
   let counter = 0;
   for (let pos = 0; pos < array.length; pos += 1) {
-    if (array[0] === maior) {
-      counter += 1;
-    }
-      if (array[pos] > maior) {
+    if (array[pos] > maior) {
       maior = array[pos];
-      counter = 1;
+    }
+  }
+  for (let pos = 0; pos < array.length; pos += 1) {
+    if (array[pos] === maior) {
+      counter += 1;
     }
   }
   return counter;
