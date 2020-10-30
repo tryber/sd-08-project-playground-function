@@ -153,7 +153,7 @@ function decode(string) {
 
 // Desafio 10
 function techList(tecnologia, name) {
-  if (tecnologia === []) {
+  if (tecnologia.length === 0) {
     return "Vazio!"
   }
   let arrayOrd = tecnologia.sort();
