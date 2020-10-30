@@ -254,7 +254,11 @@ function hydrate(string) {
   for(let pos = 0; pos < number.length; pos += 1){
     coposDeAgua += number[pos];
   }
-  return coposDeAgua + " copos de água"
+  if(coposDeAgua == 1){
+    return coposDeAgua + " copo de água";
+  } else{
+    return coposDeAgua + " copos de água"
+  }
 }
 
 module.exports = {
