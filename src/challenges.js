@@ -146,8 +146,8 @@ function decode(textoEmbaralhado) {
   }
   return console.log(stringCorreta);
 }
-encode("");
-decode("");
+//encode("hello");
+//decode("h2ll4");
 // Desafio 10
 function techList() {
   // seu código aqui
