@@ -1,23 +1,22 @@
 // Desafio 1
-function compareTrue(a,b) {
-  if ( a==true && b==true){
+function compareTrue(a, b) {
+  if ( a == true&&b == true) {
     return true;
-  }else{
+  } else {
     return false;
-  }
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   let area;
-  area = (base*height)/2;
+  area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
 function splitSentence(str) {
   let resultado;
-  resultado = str.split(" ");
+  resultado = str.split(' ');
   return resultado;
 }
 
@@ -25,7 +24,7 @@ function splitSentence(str) {
 function concatName(list) {
   let fraseFinal;
   let index = list.length;
-  fraseFinal=list[index-1] + ", " + list[0];
+  fraseFinal='${list[index - 1]} ,${list[0]}';
   return fraseFinal;
 }
 
