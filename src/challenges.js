@@ -194,7 +194,6 @@ function techList(arrayList, name) {
   }
 }
 
-
 // Desafio 11
 function generatePhoneNumber(arrayNumbers) {
   let smallerOrLarger = 0;
@@ -228,16 +227,25 @@ function generatePhoneNumber(arrayNumbers) {
       second = second + arrayNumbers[i];
     }
   }
+  let number = '(' + ddd + ') ' + first + '-' + second;
 
-  console.log(`(${ddd}) ${first}-${second}`);
+  return number;
 }
-generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]);
-
-
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sumAB = lineA + lineB;
+  let sumBC = lineB + lineC;
+  let sumCA = lineC + lineA;
+  let difAB = lineA - lineB;
+  let difBC = lineB - lineC;
+  let difCA = lineC - lineA;
+
+  if ((lineA < sumBC && lineA > Math.abs(difBC)) || (lineB < sumCA && lineB > Math.abs(difCA)) || (lineC < sumAB && lineC > Math.abs(difAB))) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
