@@ -104,7 +104,7 @@ function encode(palavra) {
 }
 
 function decode(palavra) {
-/*  let palavraDecodificada = '';
+  let palavraDecodificada = '';
   for (index in palavra) {
     if (palavra[index] === '1') {
       palavraDecodificada += 'a';
@@ -126,12 +126,12 @@ function decode(palavra) {
     }
     
   }
-  return palavraDecodificada;*/
+  return palavraDecodificada;
 }
 
 // Desafio 10
 function techList(tecnologias, name) {
-  if (tecnologias.length === 0) {
+  /*if (tecnologias.length === 0) {
     return 'Vazio!';
   }
   let techsOrdenadas = tecnologias.sort();
@@ -143,7 +143,7 @@ function techList(tecnologias, name) {
     }
     novaLista.push(objetoTechs)
   }
-  return novaLista;
+  return novaLista;*/
 } 
 
 // Desafio 11
