@@ -110,15 +110,16 @@ function generatePhoneNumber(arr) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let check = {
-    a: lineA < lineB + lineC && lineA > Math.abs(lineB - lineC),
-    b: lineB < lineA + lineC && lineB > Math.abs(lineA - lineC),
-    c: lineC < lineA + lineB && lineC > Math.abs(lineA - lineB),
+  let checks = {
+    a: 0,
+    b: 0,
+    c: 0,
   };
-  if (check.a && check.b && check.c) {
-    return true;
-  }
-  return false;
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) return false;
+  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) return false;
+  if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) return false;
+  console.log(checks);
+  return true;
 }
 
 // Desafio 13

@@ -115,6 +115,7 @@ function triangleCheck(lineA, lineB, lineC) {
     b: lineB < lineA + lineC && lineB > Math.abs(lineA - lineC),
     c: lineC < lineA + lineB && lineC > Math.abs(lineA - lineB),
   };
+  console.log(check);
   if (check.a && check.b && check.c) {
     return true;
   }
