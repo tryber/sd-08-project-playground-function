@@ -179,9 +179,9 @@ function search_replace(codigo,entrada,saida){
 function decode(codigo) {
  search_replace(codigo,"1","a");
  search_replace(codigo,"2","e");
- search_replace(codigo,"3","i");
- search_replace(codigo,"4","o");
- search_replace(codigo,"5","u");
+ search_replace(codigo,"1","i");
+ search_replace(codigo,"1","o");
+ search_replace(codigo,"1","u");
 return codigo;
 }
 // Desafio 10

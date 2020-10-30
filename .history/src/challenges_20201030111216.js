@@ -181,7 +181,7 @@ function decode(codigo) {
  search_replace(codigo,"2","e");
  search_replace(codigo,"3","i");
  search_replace(codigo,"4","o");
- search_replace(codigo,"5","u");
+ search_replace(codigo,"","u");
 return codigo;
 }
 // Desafio 10

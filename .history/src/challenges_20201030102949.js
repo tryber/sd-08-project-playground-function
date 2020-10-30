@@ -121,6 +121,9 @@ return resultado;
 }
 
 function analyze_bug_fizz_Buzz(array , key , resultado) {
+  if(compareTrue(array[key]%3!=0,array[key]%5!=0)) {
+
+  }
   if(array[key]%15==0){
     resultado[key]="fizzBuzz";
     return;
@@ -133,12 +136,11 @@ function analyze_bug_fizz_Buzz(array , key , resultado) {
     resultado[key] = "buzz";
     return;
   }
-  resultado[key]="bug!";
-    return;
+  
 }
 
 // Desafio 9
-function encode(codigo) {
+function encode() {
   // Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as
   // vogais minúsculas por números, de acordo com o formato a seguir:
 
@@ -153,40 +155,9 @@ function encode(codigo) {
   // A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de
   //letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!",
   // o retorno deverá ser "hi there!").
-  while (codigo.search("a")!== null){
-    codigo[codigo.search("a")]="1"
-  }
-  while (codigo.search("e")!== null){
-    codigo[codigo.search("2")]="1"
-  }
-  while (codigo.search("i")!== null){
-    codigo[codigo.search("3")]="1"
-  }
-  while (codigo.search("i")!== null){
-    codigo[codigo.search("4")]="1"
-  }
-  while (codigo.search("u")!== null){
-    codigo[codigo.search("5")]="1"
-  }
-  return codigo;
 }
-
-function search_replace(codigo,entrada,saida){
-  while (codigo.search(entrada)!== null){
-    codigo[codigo.search(saida)]="1"
-  }
-}
-function decode(codigo) {
- search_replace(codigo,"1","a");
- search_replace(codigo,"2","e");
- search_replace(codigo,"3","i");
- search_replace(codigo,"4","o");
- search_replace(codigo,"5","u");
-return codigo;
-}
-// Desafio 10
-function techList() {
-  //   Crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo
+function decode() {
+//   Crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo
 // parâmetro chamado name com um nome.
 
 // Para cada tecnologia no array, crie um objeto com a seguinte estrutura:
@@ -200,9 +171,20 @@ function techList() {
 // A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos com o formato acima.
 }
 
+// Desafio 10
+function techList() {
+//   Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses,
+// traços e espaços.
+
+// Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], generatePhoneNumber deverá retornar (12) 34567-8901.
+
+// Se a função receber um array com tamanho diferente de 11, a mesma deve retornar "Array com tamanho incorreto.".
+
+// Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, generatePhoneNumber deverá retornar a string
+//"não é possível gerar um número de telefone com esses valores".
+}
 // Desafio 11
 function generatePhoneNumber() {
-
 //   Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como
 // parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
 

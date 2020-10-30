@@ -156,8 +156,8 @@ function encode(codigo) {
   while (codigo.search("a")!== null){
     codigo[codigo.search("a")]="1"
   }
-  while (codigo.search("e")!== null){
-    codigo[codigo.search("2")]="1"
+  while (codigo.search("a")!== null){
+    codigo[codigo.search("a")]="1"
   }
   while (codigo.search("i")!== null){
     codigo[codigo.search("3")]="1"
@@ -168,21 +168,9 @@ function encode(codigo) {
   while (codigo.search("u")!== null){
     codigo[codigo.search("5")]="1"
   }
-  return codigo;
 }
+function decode() {
 
-function search_replace(codigo,entrada,saida){
-  while (codigo.search(entrada)!== null){
-    codigo[codigo.search(saida)]="1"
-  }
-}
-function decode(codigo) {
- search_replace(codigo,"1","a");
- search_replace(codigo,"2","e");
- search_replace(codigo,"3","i");
- search_replace(codigo,"4","o");
- search_replace(codigo,"5","u");
-return codigo;
 }
 // Desafio 10
 function techList() {

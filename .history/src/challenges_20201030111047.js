@@ -176,13 +176,8 @@ function search_replace(codigo,entrada,saida){
     codigo[codigo.search(saida)]="1"
   }
 }
-function decode(codigo) {
- search_replace(codigo,"1","a");
- search_replace(codigo,"2","e");
- search_replace(codigo,"3","i");
- search_replace(codigo,"4","o");
- search_replace(codigo,"5","u");
-return codigo;
+function decode() {
+ search_replace
 }
 // Desafio 10
 function techList() {

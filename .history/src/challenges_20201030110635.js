@@ -153,36 +153,10 @@ function encode(codigo) {
   // A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de
   //letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!",
   // o retorno deverá ser "hi there!").
-  while (codigo.search("a")!== null){
-    codigo[codigo.search("a")]="1"
-  }
-  while (codigo.search("e")!== null){
-    codigo[codigo.search("2")]="1"
-  }
-  while (codigo.search("i")!== null){
-    codigo[codigo.search("3")]="1"
-  }
-  while (codigo.search("i")!== null){
-    codigo[codigo.search("4")]="1"
-  }
-  while (codigo.search("u")!== null){
-    codigo[codigo.search("5")]="1"
-  }
-  return codigo;
+  while (codigo.search("a")!==)
 }
+function decode() {
 
-function search_replace(codigo,entrada,saida){
-  while (codigo.search(entrada)!== null){
-    codigo[codigo.search(saida)]="1"
-  }
-}
-function decode(codigo) {
- search_replace(codigo,"1","a");
- search_replace(codigo,"2","e");
- search_replace(codigo,"3","i");
- search_replace(codigo,"4","o");
- search_replace(codigo,"5","u");
-return codigo;
 }
 // Desafio 10
 function techList() {
