@@ -120,13 +120,13 @@ function decode(frase) {
 
 // Desafio 10
 function techList(techs, name) {
-  if (techs.length < 1){
+  if (techs.length < 1) {
     return 'Vazio!';
   }
   let array = [];
   for (let i in techs) {
     let tech = techs[i];
-    rv = {tech, name};
+    rv = { tech, name} ;
     array.push(rv);
   }
   return array.sort(function (a, b) {
@@ -137,11 +137,30 @@ function techList(techs, name) {
       return -1;
     }
   })
-} 
+}
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(number) {
+  let result = ''
+  if (number.length != 11){
+    result = 'Array com tamanho incorreto.'
+  } else {
+    for (let i in number){
+      let contRepeticao = 0;
+      let verificaNumero = number[i];
+      for (let i2 in number){
+        if (verificaNumero === number[i2]){
+          contRepeticao += 1;
+        }
+        if (number[i2] > 9 || number[i2] < 0 || contRepeticao >= 3){
+          result = 'não é possível gerar um número de telefone com esses valores';
+        } else {
+          result = '(' + number[0] + number[1] + ') ' + number[2] + number[3] + number[4] + number[5] + number[6] + "-" + number[7] + number[8] + number[9] + number[10];
+        }
+      } 
+    }
+  }
+  return result
 }
 
 // Desafio 12
