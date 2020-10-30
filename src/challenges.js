@@ -96,11 +96,46 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let sumario ={a:1,e:2,i:3,o:4,u:5},
+      letras = ['a','e','i','o','u'],
+      resultado = '',
+      chave = ''
+  for(let index in string){
+    
+    resultado += chave
+
+    for(let key in letras){
+      if(string[index] == letras[key]){
+        chave = sumario[(letras[key])]
+        break;
+      }
+      else{
+        chave = string[index]
+      }
+    } 
+  } return resultado
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let sumario ={'1':'a','2':'e','3':'i','4':'o','5':'u'},
+      letras = ['1','2','3','4','5'],
+      resultado = '',
+      chave = ''
+  for(let index in string){
+    
+    resultado += chave
+
+    for(let key in letras){
+      if(string[index] == letras[key]){
+        chave = sumario[(letras[key])]
+        break;
+      }
+      else{
+        chave = string[index]
+      }
+    } 
+  } return resultado
 }
 
 // Desafio 10
