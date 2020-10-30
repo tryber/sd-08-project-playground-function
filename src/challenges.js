@@ -68,11 +68,11 @@ function fizzBuzz(numbers) {
   let sequence = [];
     for (let index = 0; index < numbers.length; index += 1) {
       if (numbers[index] % 3 == 0 && numbers[index] % 5 == 0) {
-        sequence.push('fizz');
+        sequence.push('fizzBuzz');
       } else if (numbers[index] % 5 == 0) {
         sequence.push('buzz');
       } else if (numbers[index] % 3 == 0) {
-        sequence.push('fizzBuzz');
+        sequence.push('fizz');
       }else {
         sequence.push('bug!');
       }
