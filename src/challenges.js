@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
- return valor1 && valor2;
+  return valor1 && valor2;
 }
 
 // Desafio 2
@@ -31,11 +31,11 @@ function highestCount(arraydeNumero) {
   let maiorNumero = 0;
   let contador = 0;
   for (let index = 0; index < arraydeNumero.length; index += 1) {
-    if(arraydeNumero[index] > maiorNumero){
+    if (arraydeNumero[index] > maiorNumero){
       maiorNumero = arraydeNumero[index];
       contador = 0;
     }
-    if(arraydeNumero[index] == maiorNumero) {
+    if(arraydeNumero[index] === maiorNumero) {
       contador += 1;
     }
   }
@@ -56,8 +56,19 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arraydeNumero) {
+  for (let index = 0; index < arraydeNumero.length; index += 1){
+
+    if (arraydeNumero[index] % 3 == 0) {
+      return "fizz";
+    } else if (arraydeNumero[index] % 5 == 0) {
+      return "buzz";
+    } else if (arraydeNumero[index] % 3 == 0 && arraydeNumero[index] % 5 == 0) {
+      return "fizzbuzz"
+    } else {
+      return "bug!";
+    }
+  }
 }
 
 // Desafio 9
