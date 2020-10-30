@@ -14,14 +14,14 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(fullSentence) {
-  let splitWord = "";
+  let splitWord = '';
   let splittedSentence = [];
   for (let index = 0; index <= fullSentence.length; index += 1) {
-    if (fullSentence[index] !== " " && index !== fullSentence.length) {
+    if (fullSentence[index] !== ' ' && index !== fullSentence.length) {
       splitWord += fullSentence[index];
     } else {
       splittedSentence.push(splitWord);
-      splitWord = "";
+      splitWord = '';
     }
   }
   return splittedSentence;
@@ -29,13 +29,13 @@ function splitSentence(fullSentence) {
 
 // Desafio 4
 function concatName(namesList) {
-  let printedName = namesList[namesList.length - 1] + ", " + namesList[0];
+  let printedName = (namesList[namesList.length - 1] + ', ' + namesList[0]);
   return printedName;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = wins * 3 + ties;
+  let points = (wins * 3) + ties;
   return points;
 }
 
@@ -48,7 +48,7 @@ function highestCount(numbersList) {
       highestNumber = numbersList[index];
     }
   }
-  for (index = 0; index < numbersList.length; index += 1) {
+  for (let index = 0; index < numbersList.length; index += 1) {
     if (highestNumber === numbersList[index]) {
       highestNumberCounter += 1;
     }
@@ -59,11 +59,11 @@ function highestCount(numbersList) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-    return "cat1";
+    return 'cat1';
   } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
-    return "cat2";
+    return 'cat2';
   } else if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 
@@ -72,13 +72,13 @@ function fizzBuzz(numbersArray) {
   let stringArray = [];
   for (let index = 0; index < numbersArray.length; index += 1) {
     if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 !== 0) {
-      stringArray.push("fizz");
+      stringArray.push('fizz');
     } else if (numbersArray[index] % 3 !== 0 && numbersArray[index] % 5 === 0) {
-      stringArray.push("buzz");
+      stringArray.push('buzz');
     } else if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 === 0) {
-      stringArray.push("fizzBuzz");
+      stringArray.push('fizzBuzz');
     } else {
-      stringArray.push("bug!");
+      stringArray.push('bug!');
     }
   }
   return stringArray;
@@ -86,18 +86,18 @@ function fizzBuzz(numbersArray) {
 
 // Desafio 9
 function encode(encodeWord) {
-  let encodedString = "";
+  let encodedString = '';
   for (let index = 0; index < encodeWord.length; index += 1) {
-    if (encodeWord[index] === "a") {
-      encodedString += "1";
-    } else if (encodeWord[index] === "e") {
-      encodedString += "2";
-    } else if (encodeWord[index] === "i") {
-      encodedString += "3";
-    } else if (encodeWord[index] === "o") {
-      encodedString += "4";
-    } else if (encodeWord[index] === "u") {
-      encodedString += "5";
+    if (encodeWord[index] === 'a') {
+      encodedString += '1';
+    } else if (encodeWord[index] === 'e') {
+      encodedString += '2';
+    } else if (encodeWord[index] === 'i') {
+      encodedString += '3';
+    } else if (encodeWord[index] === 'o') {
+      encodedString += '4';
+    } else if (encodeWord[index] === 'u') {
+      encodedString += '5';
     } else {
       encodedString += encodeWord[index];
     }
@@ -106,18 +106,18 @@ function encode(encodeWord) {
 }
 
 function decode(decodeWord) {
-  let decodedString = "";
+  let decodedString = '';
   for (let index = 0; index < decodeWord.length; index += 1) {
-    if (decodeWord[index] === "1") {
-      decodedString += "a";
-    } else if (decodeWord[index] === "2") {
-      decodedString += "e";
-    } else if (decodeWord[index] === "3") {
-      decodedString += "i";
-    } else if (decodeWord[index] === "4") {
-      decodedString += "o";
-    } else if (decodeWord[index] === "5") {
-      decodedString += "u";
+    if (decodeWord[index] === '1') {
+      decodedString += 'a';
+    } else if (decodeWord[index] === '2') {
+      decodedString += 'e';
+    } else if (decodeWord[index] === '3') {
+      decodedString += 'i';
+    } else if (decodeWord[index] === '4') {
+      decodedString += 'o';
+    } else if (decodeWord[index] === '5') {
+      decodedString += 'u';
     } else {
       decodedString += decodeWord[index];
     }
@@ -128,7 +128,7 @@ function decode(decodeWord) {
 // Desafio 10
 function techList(techName, name) {
   if (techName.length === 0) {
-    return "Vazio!";
+    return 'Vazio!';
   } else {
     techName.sort();
     let techList = [];
@@ -144,8 +144,8 @@ function techList(techName, name) {
 
 // Desafio 11
 function generatePhoneNumber(phoneNumbers) {
-  if (phoneNumbers.length != 11) {
-    return "Array com tamanho incorreto.";
+  if (phoneNumbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
   } else {
     let mostRepeated = 0;
     let negativeNumber = 0;
@@ -170,7 +170,7 @@ function generatePhoneNumber(phoneNumbers) {
       }
     }
     if (mostRepeated >= 3 || negativeNumber > 0 || biggerThan9 > 0) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     } else {
       return `(${phoneNumbers[0]}${phoneNumbers[1]}) ${phoneNumbers[2]}${phoneNumbers[3]}${phoneNumbers[4]}${phoneNumbers[5]}${phoneNumbers[6]}-${phoneNumbers[7]}${phoneNumbers[8]}${phoneNumbers[9]}${phoneNumbers[10]}`;
     }
@@ -200,7 +200,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(drinks) {
-  let cups = drinks.replace(/\D/g, "");
+  let cups = drinks.replace(/\D/g, '');
   let waterCounter = 0;
   for (let index = 0; index < cups.length; index += 1) {
     waterCounter += Number(cups[index]);
