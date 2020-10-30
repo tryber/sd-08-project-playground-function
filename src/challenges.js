@@ -124,16 +124,14 @@ function decode(string) {
 // Desafio 10
 function techList(arrTech, parName) {
   let obj = [];
-  let newObj = {};
 
   for (let i = 0; i < arrTech.length; i += 1) { 
-    newObj = {
+    Obj.push({
       tech: arrTech[i],
       name: parName
-    }
-    obj.push(newObj);
+    })
   }
-  return obj;
+  return obj.length > 0 ? obj : 'Vazio!';
 }
 
 // Desafio 11
