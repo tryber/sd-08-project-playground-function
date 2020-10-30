@@ -7,7 +7,6 @@ function compareTrue(valueOne, valueTwo) {
   }
 }
 
-
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
@@ -18,16 +17,16 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  let words = string.split(' ');
+  let words = string.split(" ");
   return words;
-  }
+}
 
 // Desafio 4
 function concatName(arrayStrings) {
   // seu código aqui
   let retorno = "";
   retorno += arrayStrings[arrayStrings.length - 1];
-  retorno += ", "
+  retorno += ", ";
   retorno += arrayStrings[0];
   return retorno;
 }
@@ -45,14 +44,14 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   // seu código aqui
   let higher = numbers[0];
-  for (let i = 0; i < numbers.length; i += 1){
-    if (numbers[i] > higher){
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > higher) {
       higher = numbers[i];
     }
   }
   let repeticoes = 0;
-  for (let j = 0; j < numbers.length; j += 1){
-    if (numbers[j] === higher){
+  for (let j = 0; j < numbers.length; j += 1) {
+    if (numbers[j] === higher) {
       repeticoes += 1;
     }
   }
@@ -65,13 +64,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat1ToMouse = Math.abs(cat1 - mouse);
   let cat2ToMouse = Math.abs(cat2 - mouse);
   let winner;
-  if (cat1ToMouse === cat2ToMouse){
+  if (cat1ToMouse === cat2ToMouse) {
     let empate = "os gatos trombam e o rato foge";
     return empate;
-  } else if (cat1ToMouse > cat2ToMouse){
+  } else if (cat1ToMouse > cat2ToMouse) {
     winner = "cat2";
     return winner;
-  } else if (cat2ToMouse > cat1ToMouse){
+  } else if (cat2ToMouse > cat1ToMouse) {
     winner = "cat1";
     return winner;
   }
@@ -81,15 +80,15 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   // seu código aqui
   let resultado = [];
-  for (let i = 0; i < array.length; i += 1){
-    if (array[i] % 3 == 0 && array[i] % 5 == 0){
-      resultado.push("fizzBuzz")
-    } else if (array[i] % 3 == 0){
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+      resultado.push("fizzBuzz");
+    } else if (array[i] % 3 == 0) {
       resultado.push("fizz");
-    } else if (array[i] % 5 == 0){
+    } else if (array[i] % 5 == 0) {
       resultado.push("buzz");
     } else {
-      resultado.push("bug!")
+      resultado.push("bug!");
     }
   }
   return resultado;
@@ -99,19 +98,19 @@ function fizzBuzz(array) {
 function encode(string) {
   // seu código aqui
   let codigo = "";
-  for (let index = 0; index < string.length; index += 1){
-    if (string[index] == "a"){
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] == "a") {
       codigo += "1";
-    } else if (string[index] == "e"){
+    } else if (string[index] == "e") {
       codigo += "2";
-    } else if (string[index] == "i"){
+    } else if (string[index] == "i") {
       codigo += "3";
-    } else if (string[index] == "o"){
+    } else if (string[index] == "o") {
       codigo += "4";
-    } else if (string[index] == "u"){
+    } else if (string[index] == "u") {
       codigo += "5";
     } else {
-      codigo += string[index]
+      codigo += string[index];
     }
   }
   return codigo;
@@ -120,19 +119,19 @@ function encode(string) {
 function decode(codigo) {
   // seu código aqui
   let frase = "";
-  for (let index = 0; index < codigo.length; index += 1){
-    if (codigo[index] == "1"){
+  for (let index = 0; index < codigo.length; index += 1) {
+    if (codigo[index] == "1") {
       frase += "a";
-    } else if (codigo[index] == "2"){
+    } else if (codigo[index] == "2") {
       frase += "e";
-    } else if (codigo[index] == "3"){
+    } else if (codigo[index] == "3") {
       frase += "i";
-    } else if (codigo[index] == "4"){
+    } else if (codigo[index] == "4") {
       frase += "o";
-    } else if (codigo[index] == "5"){
+    } else if (codigo[index] == "5") {
       frase += "u";
     } else {
-      frase += codigo[index]
+      frase += codigo[index];
     }
   }
   return frase;
@@ -144,23 +143,58 @@ function techList(techArray, seuNome) {
   let array = techArray.sort();
   let vazio = "Vazio!";
   let saida = [];
-  
-  if (techArray.length > 0){
-  for (let key in array){
+
+  if (techArray.length > 0) {
+    for (let key in array) {
       let objeto = {};
       objeto.tech = array[key];
       objeto.name = seuNome;
       saida.push(objeto);
-  }
-  return saida;
-} else {
+    }
+    return saida;
+  } else {
     return vazio;
-}
+  }
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numerico) {
+  // seu código 
+  let telefone = "";
+  let erro = "Array com tamanho incorreto."
+  let impossivel = "não é possível gerar um número de telefone com esses valores"
+  if (numerico.length == 11){
+      let sorted = numerico.slice().sort();
+      for (let key in numerico){
+          let anterior = key-=1;
+          let proximo = key+=1;
+          if (sorted[key] < 0 || sorted[key] > 9){
+              return impossivel;
+              break;
+          } else if (sorted[key] == sorted[anterior] && sorted[key] == sorted[proximo]){
+              return impossivel;
+              break;
+          } else if (key == 0){
+              telefone += "(";
+              telefone += numerico[key];
+          } else if (key == 1){
+              telefone += numerico[key];
+              telefone += ")";
+              telefone += " ";
+          } else if (key > 1 && key < 6){
+              telefone += numerico[key];   
+          } else if (key == 6) { 
+              telefone += numerico[key]
+              telefone += "-"
+          } else if (key >= 7) {
+              telefone += numerico[key];
+          }
+      }
+      return telefone;
+  } else {
+      return erro;
+  }
+  
 }
 
 // Desafio 12
@@ -172,7 +206,6 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-
 
 module.exports = {
   calcArea,
@@ -189,4 +222,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
