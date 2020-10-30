@@ -68,17 +68,17 @@ console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 // Desafio 7
 let distance = 0;
 function catAndMouse(mouse, cat1, cat2) {
-     if ((distance = mouse - cat1) === (distance = mouse - cat2)) {
+     if ((distance = mouse - cat1) === (distance = Math.abs (mouse - cat2))) {
           result = "os gatos trombam e o rato foge";     
      }
-     else if (((distance = mouse - cat1) > (distance = mouse - cat2))) {
+     else if ((distance = mouse - cat1) > (distance = Math.abs (mouse - cat2))) {
           result = "cat1";        
      }
      else {
           result = "cat2";     
      }
-     return result   ;
-    };
+     return result;
+    };  
 
   
 console.log(catAndMouse(1 , 0, 2));
