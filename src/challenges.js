@@ -153,11 +153,11 @@ function techList(tecnologias, name) {
 }
 
 // Desafio 11
-function validInterval(digits) {
-  return !!digits.find(cur => cur < 0 || cur > 9);
+function validNumbers(digits) {
+  return !digits.find(cur => cur < 0 || cur > 9);
 }
 
-function validNumbers(digits) {
+function validCount(digits) {
   let counter = count(digits);
   for (let cur in counter) {
     if (counter[cur] >= 3) return false;
@@ -167,7 +167,7 @@ function validNumbers(digits) {
 
 function generatePhoneNumber(digits) {
   if (digits.length !== 11) return 'Array com tamanho incorreto.';
-  if (validNumbers(digits) && validInterval) {
+  if (validCount(digits) && validNumbers(digits)) {
     let numeroStr = digits.join('');
     let ddd = numeroStr.slice(0, 2);
     let partA = numeroStr.slice(2, 7);
