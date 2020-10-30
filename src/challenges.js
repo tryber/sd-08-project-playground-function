@@ -82,19 +82,19 @@ function encode(string) {
   let encodeString = '';
   for (let i = 0; i < string.length; i += 1) {
     if (string[i] == 'a') {
-      newString[i] == 1;
+      newString[i] == '1';
     }
     if (string[i] == 'e') {
-      newString[i] == 2;
+      newString[i] == '2';
     }
     if (string[i] == 'i') {
-      newString[i] == 3;
+      newString[i] == '3';
     }
     if (string[i] == 'o') {
-      newString[i] == 4;
+      newString[i] == '4';
     }
     if (string[i] == 'u') {
-      newString[i] == 5;
+      newString[i] == '5';
     } else {
       newString[i] == string[i];
     }
@@ -107,26 +107,26 @@ function decode() {
   let newString = '';
   let decodeString = '';
   for (let i = 0; i < string.length; i += 1) {
-    if (string[i] == 1) {
+    if (string[i] == '1') {
       newString[i] == 'a';
     }
-    if (string[i] == 2) {
+    if (string[i] == '2') {
       newString[i] == 'e';
     }
-    if (string[i] == 3) {
+    if (string[i] == '3') {
       newString[i] == 'i';
     }
-    if (string[i] == 4) {
+    if (string[i] == '4') {
       newString[i] == 'o';
     }
-    if (string[i] == 5) {
+    if (string[i] == '5') {
       newString[i] == 'u';
     } else {
       newString[i] == string[i];
     }
     decodeString += newString[i];
   }
-  return newString;
+  return decodeString;
 }
 
 // Desafio 10
