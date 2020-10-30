@@ -67,14 +67,16 @@ function catAndMouse(mouse, cat1, cat2) {
   let dCat2 = Math.sqrt(Math.pow((mouse - cat2), 2)); // >>----------> dAB = radix² (A - B)²
   
   if (dCat1 == dCat2)  {
-    return 'Os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
+
   } else if (dCat1 == 0 || dCat1 < dCat2) {
     return 'cat1';
+
   } else if (dCat2 == 0 || dCat1 > dCat2) {
     return 'cat2';
   }
 }
-// console.log(catAndMouse(-1, 3, 4));
+console.log(catAndMouse(-1, 3, 4));
 
 // >>----------> Desafio 8
 function fizzBuzz() {
