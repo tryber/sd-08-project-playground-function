@@ -23,7 +23,6 @@ calcArea(2, 3);
 
 
 
-
 // Desafio 3
 function splitSentence(str) {
   // seu código aqui
@@ -32,6 +31,7 @@ function splitSentence(str) {
   return final;
 }
 splitSentence("Go Trybe");
+
 
 
 
