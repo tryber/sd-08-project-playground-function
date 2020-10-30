@@ -1,10 +1,9 @@
 //Desafio 1
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2) {
-    return true;
-  } else {
     return false;
   }
+  return true;
 }
 console.log(compareTrue(true, true));
 
@@ -13,15 +12,16 @@ function calcArea(base, height) {
   let areaTriangulo = base * height / 2;
   return areaTriangulo;
 }
-calcArea(2, 10);
 
-
-
+console.log(calcArea(5, 2));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let transformacao = frase.split(' '); 
+  return transformacao; 
 }
+splitSentence('Para o alto e avante andre');
+
 
 // Desafio 4
 function concatName() {
@@ -52,6 +52,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
