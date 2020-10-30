@@ -179,15 +179,7 @@ function generatePhoneNumber(digits) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let lines = [lineA, lineB, lineC];
-  for (let i = 0; i < lines.length; i += 1) {
-    let sum = 0;
-    for (let j = 0; j < lines.length; j += 1) {
-      if (j !== i) sum += lines[j];
-    }
-    if (lines[i] >= sum) return false;
-  }
-  return true;
+  return lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB;
 }
 
 // Desafio 13
