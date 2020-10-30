@@ -20,9 +20,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(fullName) {
-  let firstName = fullName[0];
-  let lastName = fullName[fullName.length - 1];
-  return `${lastName}, ${firstName}`;
+  return `${fullName[fullName.length - 1]}, ${fullName[0]}`;
 }
 
 // Desafio 5
