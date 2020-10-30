@@ -125,6 +125,9 @@ function novoEncode(letra) {
   if (letra === 'i') {
     return '3';
   }
+  if (letra === 'o') {
+    return '43';
+  }
   return '';
 }
 
@@ -134,8 +137,6 @@ function encode(texto) {
   for (let indice = 0; indice < texto.length; indice += 1) {
     if (novoEncode(texto[indice]) !== '') {
       novoTexto += novoEncode(texto[indice]);
-    } else if (texto[indice] === 'o') {
-      novoTexto += '4';
     } else if (texto[indice] === 'u') {
       novoTexto += '5';
     } else {
