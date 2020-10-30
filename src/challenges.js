@@ -63,8 +63,8 @@ function highestCount(numArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let disMouseCat1 = cat1 - mouse;
-  let disMouseCat2 = cat2 - mouse;
+  let disMouseCat1 = Math.abs(cat1 - mouse);
+  let disMouseCat2 = Math.abs(cat2 - mouse);
   let messagem;
    if(disMouseCat1 < disMouseCat2){
     messagem = 'cat1';
@@ -73,9 +73,9 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     messagem = 'os gatos trombam e o rato foge';
   }
-  return (`"${messagem}"`);
+  return messagem;
 }
-// console.log(catAndMouse(1, 7, 7));
+// console.log(catAndMouse(1, 0, 2));
 
 
 // Desafio 8
@@ -109,13 +109,21 @@ function encode(phrase) {
     u: '5'
   }
   let phraseCodif = '';
-  
-  for( let key in codigos){
-    phraseCodif = phrase.replace(codigos);
+  let indice;
 
-  }
- 
-  // phraseCodif = phrase.replace(/u/g, "5");
+  for(indice = 0; indice < phrase.length; indice +=1){
+    for( let key in codigos){
+      if(phrase[indice] !== key){
+        phraseCodif = phrase[indice];
+      } else {
+        phraseCodif = codigos[key];
+      }
+
+    }
+  }  
+    
+    // phraseCodif = phrase.replace(codigos);
+    // phraseCodif = phrase.replace(/u/g, "5");
 
   return phraseCodif;
 
@@ -127,11 +135,27 @@ function decode() {
 
 
 
-
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let listaOrdenada = tech.sort();
+  // let arrayCriado = [];
+  let arrayVazio = '';
+  let indice;
+
+  for(indice = 0; indice < listaOrdenada.length; indice +=1){
+    if(listaOrdenada === []){
+      arrayVazio = 'Vazio!'
+    } else {
+      arrayCriado.push({
+       tech: listaOrdenada[indice],
+        name: name
+      })
+    }
+  }
+  return arrayVazio;
+
 }
+// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
