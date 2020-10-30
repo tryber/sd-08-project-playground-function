@@ -59,7 +59,6 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-
   let distance1 = 0
   let distance2 = 0
 
@@ -70,9 +69,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge'
   } else if (distance1 > distance2) {
     return 'cat2'
-  } else {
-    return 'cat1'
-  }
+  } return 'cat1'
 }
 console.log(catAndMouse(2, 6, 7))
 
