@@ -136,6 +136,32 @@ function encode(string) {
 
 function decode() {
   // seu código aqui
+  replace = [];
+  result = "";
+
+  for (index in string) {
+    switch (string[index]) {
+      case "1":
+        replace.push("a");
+        break;
+      case "2":
+        replace.push("e");
+        break;
+      case "3":
+        replace.push("i");
+        break;
+      case "4":
+        replace.push("o");
+        break;
+      case "5":
+        replace.push("u");
+        break;
+      default:
+        replace.push(string[index])
+    }
+    result += replace[index];
+  }     
+  return result;
 }
 
 // Desafio 10
