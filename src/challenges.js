@@ -104,10 +104,10 @@ function funcArray1(array) {
   let key;
   let array1 = [];
   for (key in array) {
-    if (array[key] === "a") {
-      array1.push("1");
-    } else if (array[key] === "1") {
-      array1.push("a");
+    if (array[key] === 'a') {
+      array1.push('1');
+    } else if (array[key] === '1') {
+      array1.push('a');
     } else {
       array1.push(array[key]);
     }
@@ -119,10 +119,10 @@ function funcArray2(array) {
   let key;
   let array2 = [];
   for (key in array) {
-    if (array[key] === "e") {
-      array2.push("2");
-    } else if (array[key] === "2") {
-      array2.push("e");      
+    if (array[key] === 'e') {
+      array2.push('2');
+    } else if (array[key] === '2') {
+      array2.push('e');
     } else {
       array2.push(array[key]);
     }
@@ -134,10 +134,10 @@ function funcArray3(array) {
   let key;
   let array3 = [];
   for (key in array) {
-    if (array[key] === "i") {
-      array3.push("3");
-    } else if (array[key] === "3") {
-      array3.push("i");      
+    if (array[key] === 'i') {
+      array3.push('3');
+    } else if (array[key] === '3') {
+      array3.push('i');
     } else {
       array3.push(array[key]);
     }
@@ -149,10 +149,10 @@ function funcArray4(array) {
   let key;
   let array4 = [];
   for (key in array) {
-    if (array[key] === "o") {
-      array4.push("4");
-    } else if (array[key] === "4") {
-      array4.push("o");
+    if (array[key] === 'o') {
+      array4.push('4');
+    } else if (array[key] === '4') {
+      array4.push('o');
     } else {
       array4.push(array[key]);
     }
@@ -164,10 +164,10 @@ function funcArray5(array) {
   let key;
   let array5 = [];
   for (key in array) {
-    if (array[key] === "u") {
-      array5.push("5");
-    } else if (array[key] === "5") {
-      array5.push("u");
+    if (array[key] === 'u') {
+      array5.push('5');
+    } else if (array[key] === '5') {
+      array5.push('u');
     } else {
       array5.push(array[key]);
     }
@@ -175,48 +175,48 @@ function funcArray5(array) {
   return array5;
 }
 
-function encode(phrase) {
+function translater(phrase) {
   let arrayChar = phrase.split('');
   let array1 = funcArray1(arrayChar);
   let array2 = funcArray2(array1);
   let array3 = funcArray3(array2);
   let array4 = funcArray4(array3);
   let array5 = funcArray5(array4);
-  let phraseEncode = array5.join('');
-  return phraseEncode;  
+  let newPhrase = array5.join('');
+  return newPhrase;
+}
+
+function encode(phrase) {
+  return translater(phrase);
 }
 // console.log(encode("observe que essa mensagem ficou oculta"));
- 
 
 function decode(phrase) {
-  let arrayChar = phrase.split('');
-  let array1 = funcArray1(arrayChar);
-  let array2 = funcArray2(array1);
-  let array3 = funcArray3(array2);
-  let array4 = funcArray4(array3);
-  let array5 = funcArray5(array4);
-  let phraseDecode = array5.join('');
-  return phraseDecode;
+  return translater(phrase);
 }
 // console.log(decode('4bs2rv2 q52 2ss1 m2ns1g2m n14 f3c45 4c5lt1 12345'));
 
 // Desafio 10
 function makeObject(tech, name) {
   let objTech = new Object();
-  objTech["tech"] = tech;
-  objTech["name"] = name;
+  objTech.tech = tech;
+  objTech.name = name;
   return objTech;
 }
 
 function techList(array, name) {
-  let key;
-  let newArray = [];
-  for (key in array) {
-    newArray.push(makeObject(array[key], name))
+  if (array.length !== 0) {
+    let key;
+    let newArray = [];
+    for (key in list) {
+    newArray.push(makeObject(list[key], name));
+    }
+    return newArray;
+  } else {  
+    return "Vazio!";
   }
-  return newArray;
 }
-// console.log(techList(['item1', 'item2', 'item3', 'item4', 'item5'], 'Digo'))
+// console.log(techList([], 'Digo'))
 
 // Desafio 11
 function generatePhoneNumber() {
