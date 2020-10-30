@@ -72,11 +72,30 @@ function footballPoints(wins, ties) {
     points = (3 * win) + (ties);
     return points;
 }
-console.log (footballPoints (10, 2));
 
 // Desafio 6
-function highestCount() {
+// Repetição do maior número
+// // Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a quantidade de vezes que o maior deles se repete.
+// 
+// // Exemplo: caso o parâmetro de highestCount seja uma array com valores [9, 1, 2, 3, 9, 5, 7], a função deverá retornar 2, que é a quantidade de vezes que o número 9 (maior número do array) se repete.
+
+function highestCount(numberArray) {
   // seu código aqui
+  let array = [0];
+  let maiorNumero = [];
+  let contador = 0;
+  for (i = 0; i < array.length; i++) {
+    if (arrayNumber [i] > array) {
+      maiorNumero = arrayNumber [i]
+      return maiorNumero;
+    }     
+  }
+  for (x = 0; x < array.length; i++) {
+    if (arrayNumber [x] <= maiorNumero) {
+      contador += 1;
+      return contador;
+    }
+  }
 }
 
 // Desafio 7
