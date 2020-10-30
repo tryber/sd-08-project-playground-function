@@ -152,7 +152,7 @@ function decode(string) {
 //console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList(tecnologia, nome) {
+function techList(tecnologia, name) {
   if (tecnologia === []) {
     return "Vazio!"
   }
@@ -161,12 +161,12 @@ function techList(tecnologia, nome) {
   for (i in arrayOrd) {
     let objeto = [];
     objeto["tech"] = tecnologia[i];
-    objeto["name"] = nome;
+    objeto["name"] = name;
     list.push(objeto);
   }
   return list;
 }
-//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
