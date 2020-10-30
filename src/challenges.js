@@ -239,8 +239,6 @@ function hydrate(bebibas) {
     return `${agua} copos de água`
   }
 }
-console.log(hydrate('1 cerveja'));
-
 
 module.exports = {
   calcArea,
