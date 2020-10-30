@@ -196,15 +196,10 @@ function mainValida(arrayNumbers) {
 }
 
 function montaPhoneNumber(phoneNumber, number, x) {
-  if (x == 0) {
-    phoneNumber += `(${number}`;
-  } else if (x === 1) {
-    phoneNumber += `${number}) `;
-  } else if (x > 1 && x <= 6) {
-    phoneNumber += number;
-    if (x == 6) {
-      phoneNumber += '-';
-    }
+  if (x == 0 || x === 1) {
+    phoneNumber += x === 0 ? `(${number}` : `${number}) `;
+  } else if (x === 6) {
+    phoneNumber += `${number}-`;
   } else {
     phoneNumber += number;
   }
