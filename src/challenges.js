@@ -137,13 +137,51 @@ function techList(list,name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(number) {
+  let maior=0;
+  let menor=0;
+  
+  let ddd,number1,number2,numberFull;
+  for (let index in list){
+    if (maior>=list[index]){
+      maior=maior;
+    }else{
+      maior=list[index];
+    }
+  }
+  for ( let index in list){
+    if(menor<=list[index]){
+      menor=menor;
+    }else{
+      menor=list[index];
+    }
+  }
+  if(maior<=9 && menor>=0 && number.length==10){
+    ddd="("+list[0]+list[1]+")";
+    number1=""+list[2]+list[3]+list[4]+list[5]+list[6]+"";
+    number2=""+list[7]+list[8]+list[9]+list[10];
+    numberFull=ddd+" "+number1+"-"+number2;
+    return numberFull;
+  }else if(number.length!=10){
+    return "Array com tamanho incorreto.";
+  }else if(maior>9 && menor<0){
+
+  }
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA,lineB,lineC) {
+  let condicao1,condicao2,condicaoFinal;
+  if( lineA<lineB+lineC && lineB<lineA+lineC && lineC<lineB+lineA){
+    condicao1=true;
+  }else if(lineA>Math.abs(lineB-lineC) && lineB>Math.abs(lineA-lineC) && lineC>Math.abs(lineA-lineB)){
+    condicao2=true;
+  }
+  if(condicao1==true && condicao2==true){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 // Desafio 13
