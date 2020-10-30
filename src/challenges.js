@@ -158,7 +158,7 @@ function techList(tech, name) {
     })
   }
   if (array.length == 0) {
-    console.log("Vazio!");
+    return ("Vazio!");
     return name;
 } else {
   console.log(name);
