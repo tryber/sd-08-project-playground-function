@@ -15,7 +15,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrStr) {
-  return arrStr[arrStr.length - 1] + ',' + arrStr[0]
+  return arrStr[arrStr.length - 1] + ', ' + arrStr[0]
 }
 
 // Desafio 5
@@ -28,7 +28,7 @@ function highestCount(array) {
   let maior = [Math.max(...array)];
   let countMax = [];
   for (let num in array) {
-        if (array[num] == maior) {
+        if (array[num] === maior) {
           countMax.push(num);
       };
   };  
@@ -37,8 +37,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = mouse - cat1;
-  let distanciaCat2 = mouse - cat2;
+  let distanciaCat1 = mouse + cat1;
+  let distanciaCat2 = mouse + cat2;
 
   if (distanciaCat1 < distanciaCat2) {
       return 'cat1';
