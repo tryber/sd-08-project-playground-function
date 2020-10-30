@@ -2,9 +2,9 @@
 function compareTrue(value1,value2) {
 
     if(value1 && value2 === true) {
-        return true;
+            return true;
         } else {
-        return false;
+            return false;
         }
 }
 
@@ -14,8 +14,8 @@ function calcArea(base,height) {
 }
 
 // Desafio 3
-function splitSentence(string) {
-  return string.split ("");
+function splitSentence(word) {
+  return word.split (" ");
 }
 
 // Desafio 4
@@ -25,20 +25,36 @@ function concatName(arrNames) {
   let lastName = arrNames [lastPosition];
   return lastName + ", " + firstName;
 }
-console.log (concatName (["joao","fernando","gabriel","mauricio"]))
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+    let totalpoints = (wins*3) + ties;
+    return totalpoints;
+
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrNumbers) {
+    let highestNumber = 0;
+    let highestRepeat = 0;
+
+    for(let i = 0;i < arrNumbers.length;i+=1){
+        if(arrNumbers[i] > highestNumber){
+            highestNumber = arrNumbers[i];
+            highestRepeat = 0;
+        }
+        if(arrNumbers[i] == highestNumber){
+            highestRepeat += 1;
+        }         
+    }
+       
+  return highestRepeat;
+
 }
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  
 }
 
 // Desafio 8
