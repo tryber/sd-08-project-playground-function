@@ -61,9 +61,18 @@ function concatName(list) {
 }
 
 // Desafio 5
-function footballPoints() {
+// Pontos no futebol
+// // // Escreva uma função com o nome footballPoints que receba o número de vitórias (esse parâmetro deverá se chamar wins) e o número de empates (esse parâmetro deverá se chamar ties) e retorne a quantidade de pontos que o time marcou em um campeonato.
+// 
+// Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
+
+function footballPoints(wins, ties) {
   // seu código aqui
+  let points = 0;
+    points = (3 * win) + (ties);
+    return points;
 }
+console.log (footballPoints (10, 2));
 
 // Desafio 6
 function highestCount() {
