@@ -53,7 +53,6 @@ function highestCount(arrayHighestCount) {
   }
   return cont
 }
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   mouse = Math.abs(mouse)
@@ -68,8 +67,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return "cat2"
   }
   return "os gatos trombam e o rato foge"
-}
-
 }
 
 // Desafio 8
