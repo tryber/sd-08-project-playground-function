@@ -100,7 +100,6 @@ function encode(word1) {
   }
   return list1.join('');
 }
-console.log(encode('Icaro'));
 
 function decode(word2) {
   let list2 = word2.split('');
@@ -119,12 +118,21 @@ function decode(word2) {
   }
   return list2.join('') ;
 }
-console.log(decode('3c1r4'));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+
+function techList(tech, name) {
+  let sortedArray = tech.sort();
+  let listEnd = [];
+  for (let i = 0; i < tech.length; i += 1) {
+      listEnd.push({
+          tech: sortedArray[i],
+          name: name
+      })
+  }
+  return listEnd;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Fernanda"))
 
 // Desafio 11
 function generatePhoneNumber() {
