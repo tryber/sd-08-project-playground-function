@@ -167,10 +167,11 @@ function techList(technologies, name) {
 }
 function validPhone(arrayNumber) {
   let count = 0;
-  if (arrayNumber.length < 0 || arrayNumber.length > 9) {
-    return false;
-  }
   for (let i = 0; i < arrayNumber.length; i += 1) {
+    count = 0;
+    if (arrayNumber[i] < 0 || arrayNumber[i] > 9) {
+      return false;
+    }
     for (let j = 0; j < arrayNumber.length; j++) {
       if (arrayNumber[i] === arrayNumber[j]) {
         count += 1;
@@ -188,7 +189,7 @@ function generatePhoneNumber(arrayNumber) {
   if (arrayNumber.length != 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (!validPhone) {
+  if (!validPhone(arrayNumber)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   for (let i = 0; i < arrayNumber.length; i++) {
