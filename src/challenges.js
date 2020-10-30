@@ -95,15 +95,15 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 function encode(string) {
   let newString = ''
   for (let property in string) {
-    if (string[property] === "a") {
+    if (string[property] === 'a') {
       newString += 1
-    } else if (string[property] === "e") {
+    } else if (string[property] === 'e') {
       newString += 2
-    } else if (string[property] === "i") {
+    } else if (string[property] === 'i') {
       newString += 3
-    } else if (string[property] === "o") {
+    } else if (string[property] === 'o') {
       newString += 4
-    } else if (string[property] === "u") {
+    } else if (string[property] === 'u') {
       newString += 5
     } else {
       newString += string[property]
@@ -116,16 +116,16 @@ console.log(encode('Flamengo'))
 function decode(stringNumbers) {
   let newString2 = ''
   for (let property in stringNumbers) {
-    if (stringNumbers[property] === "1") {
-      newString2 += "a"
-    } else if (stringNumbers[property] === "2") {
-      newString2 += "e"
-    } else if (stringNumbers[property] === "3") {
-      newString2 += "i"
-    } else if (stringNumbers[property] === "4") {
-      newString2 += "o"
-    } else if (stringNumbers[property] === "5") {
-      newString2 += "u"
+    if (stringNumbers[property] === '1') {
+      newString2 += 'a'
+    } else if (stringNumbers[property] === '2') {
+      newString2 += 'e'
+    } else if (stringNumbers[property] === '3') {
+      newString2 += 'i'
+    } else if (stringNumbers[property] === '4') {
+      newString2 += 'o'
+    } else if (stringNumbers[property] === '5') {
+      newString2 += 'u'
     } else {
       newString2 += stringNumbers[property]
     }
