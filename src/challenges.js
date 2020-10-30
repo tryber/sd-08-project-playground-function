@@ -133,14 +133,9 @@ function decode(str) {
 function techList(tech, name) {
   let sortedArray = tech.sort();
   let listEnd = [];
-  for (let i = 0; i < tech.length; i += 1) {
-    listEnd.push({
-        tech: sortedArray[i],
-        name: name
-    });
-  }
-  if (listEnd.length == 0) {
-    return ("Vazio!");
+  for (let i = 0; i < tech.length; i += 1) listEnd.push({ tech: `${sortedArray[i]}`, name: `${name}` });
+  if (listEnd.length === 0) {
+    return ('Vazio!');
   }
   return listEnd;
 }
