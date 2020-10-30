@@ -1,7 +1,12 @@
-// Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
+// Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
 
-// Para cada número da Array que seja divisível apenas por 3, apresente uma string "fizz";
-// Para cada número da Array que seja divisível apenas por 5, apresente uma string "buzz";
-// Caso o número seja divisível por 3 e 5, retorne a string "fizzBuzz";
-// Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
-// Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
+// a -> 1
+// e -> 2
+// i -> 3
+// o -> 4
+// u -> 5
+
+// Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!".
+
+// A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
+
