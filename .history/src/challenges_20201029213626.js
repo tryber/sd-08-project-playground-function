@@ -125,6 +125,7 @@ function hydrate(text) {
       return parseInt(acc) + parseInt(val);
     }, 0) || 0;
   if (sum < 2) return `${sum} copo de água`;
+
   return `${sum} copos de água`;
 }
 

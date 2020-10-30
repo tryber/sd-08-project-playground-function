@@ -1,0 +1,27 @@
+{
+  "name": "sd-08-project-playground-function",
+  "version": "0.0.1",
+  "description": "Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #VQV 🚀",
+  "main": "debug.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tryber/sd-08-project-playground-function.git"
+  },
+  "keywords": [],
+  "author": "Viviane Florido <vivianeflowt@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tryber/sd-08-project-playground-function/issues"
+  },
+  "homepage": "https://github.com/tryber/sd-08-project-playground-function#readme",
+  "dependencies": {
+    "jest": "26.6.1"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {}
+}
