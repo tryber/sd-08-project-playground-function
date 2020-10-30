@@ -83,17 +83,18 @@ highestCount([3, 1, 2, 3, 9, 5, 7]);
 function catAndMouse(mouse, cat1,  cat2) {
   // seu código aqui
   let gato = "";
-  if (cat1 - mouse < cat2 - mouse) {
+  if ((cat1 != mouse) === (cat2 != mouse)) {
+    gato = "os gatos trombam e o rato foge.";
+  }
+  else if (cat1 - mouse < cat2 - mouse) {
     gato = "cat1";
   } else if(cat2 - mouse < cat1 - mouse) {
     gato = "cat2";
-  } else {
-    gato = "os gatos trombam e o rato foge.";
   }
   return gato;
 }
 
-catAndMouse(6, 5, 2);
+console.log(catAndMouse(1, 0, 2));
 
 
 // Desafio 8
