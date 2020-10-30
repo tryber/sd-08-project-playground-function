@@ -51,22 +51,38 @@ function highestCount(parametro) {
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  let gameOver = "os gatos trombam e o rato foge",
-      catUmWiner = (cat1 + mouse) < (cat2 + mouse),
-      catDoisWiner = (cat2 + mouse) < (cat1 + mouse),
-      resultado = ''
-      
-      switch(true){
-        case catUmWiner:
-          resultado = 'cat1'
-        break;
-        case catDoisWiner:
-          resultado = 'cat2'
-        break;
-        default:
-          resultado = gameOver
-      }
-      return resultado
+  const gatoUmWin = () =>{
+          let resultado = 'cat1'
+          return resultado
+  } ,
+        gatoDoisWin = () => {
+          let resultado = 'cat2'
+          return resultado
+        },
+        gameOver = () => {
+          let resultado = "Os gatos trombam e o rato foge"
+          return resultado
+        },
+        
+        distanciaDoGatoUmParaORato = Math.abs(mouse - cat1),
+        distanciaDoGatoDoisParaORato = Math.abs(mouse - cat2),
+        gatoUmGanhouDoGatoDois = distanciaDoGatoUmParaORato < distanciaDoGatoDoisParaORato,
+        gatoDoisGanhouDoGatoUm = distanciaDoGatoUmParaORato > distanciaDoGatoDoisParaORato,
+        ambosOsGatosPerdemORato = distanciaDoGatoUmParaORato == distanciaDoGatoDoisParaORato
+
+        switch(true){
+          case gatoUmGanhouDoGatoDois:
+            gatoUmWin()
+          break;
+          case gatoDoisGanhouDoGatoUm:
+            gatoDoisWin()
+          break;
+          case ambosOsGatosPerdemORato:
+            gameOver()
+          break;
+          default:
+            console.log('Erro Interno :(')
+        }
 }
 
 // Desafio 8
