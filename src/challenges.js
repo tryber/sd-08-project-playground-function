@@ -133,18 +133,19 @@ function decode(str) {
 function techList(tech, name) {
   if (tech.length === 0) {
     return 'Vazio!';
-  } else {
-    let str = [];
-    tech = tech.sort();
-    for (let i = 0; i < tech.length; i += 1) {
-      str[i] = {
-        tech: tech[i],
-        nome: name,
-      };
-    }
-    return str;
   }
+  let str = [];
+  tech = tech.sort();
+  for (let i = 0; i < tech.length; i += 1) {
+    str[i] = {
+      tech: tech[i],
+      nome: name,
+    };
+  }
+  return str;
 }
+
+console.log(techList([], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber() {
