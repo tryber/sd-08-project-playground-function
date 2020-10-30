@@ -3,9 +3,9 @@ function compareTrue(valor1, valor2) {
   // seu código aqui
 
   if( valor1 == true && valor2 ==true){
-    console.log('true');
+    return('true');
   }else{
-    console.log('false');
+    return('false');
   };
 };
 
@@ -17,28 +17,68 @@ function compareTrue(valor1, valor2) {
 function calcArea(base, height) {
   let area = (base * height) / 2;
 
-  console.log(area);
-}
+  return(area);
+};
+
+
+
+
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(sentence) {
   // seu código aqui
-}
+  return sentence.split(' ');
+};
+
+
+
+
 
 // Desafio 4
-function concatName() {
+function concatName(name) {
   // seu código aqui
-}
+  return `${name[name.length - 1]}, ${name[0]}`;
+
+};
+
+
+
+
+
+
+
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return (wins * 3) + ties;
+
 }
 
+
+
+
+
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  array.sort();
+  
+  let greatest = array[array.length - 1];
+
+  for (let contador = array.length - 1; contador >= 0; contador -= 1) {
+    if (greatest === array[contador]) {
+      contador += 1;
+    }
+  }
+
+  return contador;
 }
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+
+
+
 
 // Desafio 7
 function catAndMouse() {
@@ -55,13 +95,13 @@ function fizzBuzz(param) {
   // seu código aqui
   for(contador = 1; contador <= param; contador += 1){
     if(contador % 3 === 0){
-      console.log(contador, "FizzBuzz");
+      return(contador, "FizzBuzz");
     }else if(contador % 5 === 0){
-      console.log(contador, "Buzz");
+      return(contador, "Buzz");
     }else if(contador % 15 === 0){
-      console.log(contador, "Fizz");
+      return(contador, "Fizz");
     }else{
-      console.log(contador);
+      return(contador);
     };
   };
 };
