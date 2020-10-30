@@ -13,13 +13,6 @@ function calcArea(base, height) {
 }
 
 
-
-
-
-
-
-
-
 // Desafio 3
 function splitSentence(palavras) {
   let arrayString = [];
@@ -30,27 +23,11 @@ function splitSentence(palavras) {
 }
 
 
-
-
-
-
-
 // Desafio 4
 
 function concatName(arrayNomes) {
   return (arrayNomes[arrayNomes.length - 1] + ", " + arrayNomes[0]);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Desafio 5
@@ -89,7 +66,7 @@ function highestCount(arrayNumeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 > mouse && cat1 < cat2){
+  if (cat1 < mouse && cat1 > mouse && cat1 < cat2){
     return "cat1";
   }else if (cat2 > mouse && cat2 < cat1){
     return "cat2";
@@ -97,6 +74,11 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   }
 }
+
+console.log(catAndMouse(1,0,2));
+
+
+
 
 
 
@@ -161,15 +143,24 @@ function decode() {
 
 // Desafio 10
 function techList(nomeTech, name) {  
-  
-  for (let key in nomeTech){
-    let nomes = [];
-        nomes = {
+  let nomesOrdenado = [];
+  let nomes = [];
+  for (let key in nomeTech){    
+        nomes.push({
         tech: nomeTech[key],
         name: name   
-    }
-    return nomes; 
+    })     
   }
+  nomesOrdenado.push(nomes.sort(function (a,b){
+    if (a.tech.length > b.tech.length){
+      return 1;
+    }else if (a.tech.length < b.tech.length){
+      return -1;
+    }else {
+      return 0;
+    }    
+  }))
+  return nomesOrdenado;
 }
 
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "ruben"));
@@ -191,10 +182,19 @@ function triangleCheck() {
   // seu código aqui
 }
 
+
+
+
+
+
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebida) {
+ 
 }
+
+
+
+
 
 
 module.exports = {
