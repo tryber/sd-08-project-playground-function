@@ -6,26 +6,25 @@ function compareTrue(valorX, valorY) {
     return false;
   }
 }
-
 console.log(compareTrue(true, true))
 
 // Desafio 2
 function calcArea(base, height) {
   let area;
   area = (base * height) /2;
-  console.log(area);
+  return area;
 }
 
-/*calcArea(8, 10)*/
+console.log(calcArea(8, 10))
 
 // Desafio 3 - as informações referentes ao split() foram retiradas do dev media:https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array.
 function splitSentence(word) {
     let array = [];
     array = word.split(" ");
-    console.log(array);
+    return array;
 }
 
-/*splitSentence('bruno candido morais');*/
+console.log(splitSentence('bruno candido morais'));
 
 // Desafio 4
 function concatName() {
