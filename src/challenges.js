@@ -6,18 +6,15 @@ function compareTrue(x,y) {
     return false;
   }
 }
-
 // Desafio 2
 function calcArea(base,height) {
   return (base*height)/2
 }
-
 // Desafio 3
 function splitSentence(string) {
   let array = string.split(" ")
   return array
-} console.log(splitSentence("vamo que vamo"))
-
+}
 // Desafio 4
 function concatName(arrayStrings) {
   array = []
@@ -26,13 +23,10 @@ function concatName(arrayStrings) {
   array=`${ultima}, ${primeira}`
   return array
 } 
-
 // Desafio 5
 function footballPoints(wins,ties) {
   return (wins*3)+(ties*1)
 }
-
-
 // Desafio 6
 function highestCount(arrayN) {
   let max = Math.max(...arrayN)
@@ -41,11 +35,8 @@ function highestCount(arrayN) {
     if (max == arrayN[i]){
       rep+=1
     }
-  }
-  return rep
+  }return rep
 } 
-
-
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
   let gato1 = Math.abs(mouse-cat1)
@@ -57,16 +48,11 @@ function catAndMouse(mouse,cat1,cat2) {
   } else {
     return "os gatos trombam e o rato foge"
   }
-} console.log(catAndMouse(10,4,22))
-
-
-
+}
 // Desafio 8
 function fizzBuzz(arrayFizz) {
   let arrayRetorno = []
-
   for (let i = 0; i < arrayFizz.length; i++){
-
       if (arrayFizz[i] % 3 == 0 && arrayFizz[i] % 5 == 0){
         arrayRetorno.push(`fizzBuzz`)
       } else if (arrayFizz[i] % 3 == 0 && arrayFizz[i] % 5 != 0){
@@ -76,20 +62,41 @@ function fizzBuzz(arrayFizz) {
       } else {
         arrayRetorno.push("bug!") 
       }
-  }
-  return arrayRetorno
-}console.log(fizzBuzz([2,15,7,9,45]))
+  }return arrayRetorno
+}
 
 
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(p) {
+  let a=p.replace(/a/gi,'1'),
+  e=a.replace(/e/gi,'2'),
+  i=e.replace(/i/gi,'3'),
+  o=i.replace(/o/gi,'4'),
+  u=o.replace(/u/gi,'5')
+  return u;
 }
-function decode() {
-  // seu código aqui
+function decode(p) {
+  let a=p.replace(/1/gi,'a'),
+  e=a.replace(/2/gi,'e'),
+  i=e.replace(/3/gi,'i'),
+  o=i.replace(/4/gi,'o'),
+  u=o.replace(/5/gi,'u')
+  return u;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 10
 function techList() {
