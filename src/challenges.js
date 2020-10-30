@@ -1,7 +1,7 @@
 // Desafio 1 :)
 function compareTrue(test1, test2) {
   let answer = false;
-  if (test1 && test2){
+  if (test1 && test2) {
     answer = true;
   }
   return answer;
@@ -9,29 +9,30 @@ function compareTrue(test1, test2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(phrase) {
-  return phrase.split(" ");
+  return phrase.split(' ');
 }
 
 // Desafio 4
 function concatName(name) {
-  return (name[name.length-1] + ", " + name[0]);
+  return (name[name.length-1] + ', ' + name[0]);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (3*wins + ties);
+  return ((3 * wins) + ties);
 }
 
 // Desafio 6
 function highestCount(numbers) {
-  let sorted = numbers.sort((a,b) => a - b), counter = 1;
-  for (let i = numbers.length - 1; i >=0; i -= 1){
-    if (sorted[i] == sorted[i - 1]){
+  let sorted = numbers.sort((a,b) => a - b), 
+  counter = 1;
+  for (let i = numbers.length - 1; i >= 0; i -= 1) {
+    if (sorted[i] === sorted[i - 1]) {
       counter += 1;
     } else {
       break;
@@ -42,29 +43,29 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let dist1 = Math.abs(cat1 - mouse), dist2 = Math.abs(cat2 - mouse), result;
+  let dist1 = Math.abs(cat1 - mouse), 
+  dist2 = Math.abs(cat2 - mouse);
   if (dist1 < dist2) {
-    result = "cat1";
+    return 'cat1';
   } else if (dist2 < dist1) {
-    result = "cat2";
+    return 'cat2';
   } else {
-    result = "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
-  return result;
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let result = [];
   for (let key in numbers) {
-    if (numbers[key]%3 == 0 && numbers[key]%5 == 0) {
-      result[key] = "fizzBuzz";
-    } else if (numbers[key]%3 == 0) {
-      result[key] = "fizz";
-    } else if (numbers[key]%5 == 0) {
-      result[key] = "buzz";
+    if (numbers[key] % 3 === 0 && numbers[key] % 5 === 0) {
+      result[key] = 'fizzBuzz';
+    } else if (numbers[key] % 3 === 0) {
+      result[key] = 'fizz';
+    } else if (numbers[key] % 5 === 0) {
+      result[key] = 'buzz';
     } else {
-      result[key] = "bug!";
+      result[key] = 'bug!';
     }
   }
   return result;
@@ -73,8 +74,8 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(phrase) {
   let phraseArray = phrase.split('');
-  for (let key in phraseArray){
-    switch (phraseArray[key]){
+  for (let key in phraseArray) {
+    switch (phraseArray[key]) {
       case 'a':
         phraseArray[key] = '1';
         break;
@@ -90,14 +91,16 @@ function encode(phrase) {
       case 'u':
         phraseArray[key] = '5';
         break;
+      default:
+        break
     }
   }
   return phraseArray.join('');
 }
 function decode(phrase) {
   let phraseArray = phrase.split('');
-  for (let key in phraseArray){
-    switch (phraseArray[key]){
+  for (let key in phraseArray) {
+    switch (phraseArray[key]) {
       case '1':
         phraseArray[key] = 'a';
         break;
@@ -113,6 +116,8 @@ function decode(phrase) {
       case '5':
         phraseArray[key] = 'u';
         break;
+      default:
+        break;
     }
   }
   return phraseArray.join('');
@@ -121,20 +126,20 @@ function decode(phrase) {
 // Desafio 10
 function techList(techs, name) {
   let sortedTechs = techs.sort();
-  for (let key in sortedTechs){
+  for (let key in sortedTechs) {
     sortedTechs[key] = {
       tech: sortedTechs[key],
-      name: name
+      name: name,
     }
   }
-  if (techs.length == 0){
+  if (techs.length === 0){
     return 'Vazio!';
   }
   return sortedTechs;
 }
 
 // Pré 11
-function arrCounter (arr) {
+function arrCounter(arr) {
   let counter = {};
   for (const element of arr) {
     if (!counter[element]) {
@@ -145,18 +150,18 @@ function arrCounter (arr) {
   }
   return counter;
 }
-function appearMoreThan (obj, num) {
+function appearMoreThan(obj, num) {
   const values = Object.values(obj);
-  for (let i in values){
-    if (values[i] > num){
+  for (let i in values) {
+    if (values[i] > num) {
       return true;
     }
   }
   return false;
 }
-function anyMinorOrGretear (arr, minor, greater){
-  for (let key in arr){
-    if (arr[key] < minor || arr[key] > greater){
+function anyMinorOrGretear(arr, minor, greater) {
+  for (let key in arr) {
+    if (arr[key] < minor || arr[key] > greater) {
       return true;
     }
   }
@@ -166,17 +171,17 @@ function anyMinorOrGretear (arr, minor, greater){
 // Desafio 11
 function generatePhoneNumber(numbers) {
   const moreThan2 = appearMoreThan(arrCounter(numbers), 2),
-  minorGreater = anyMinorOrGretear(numbers, 0, 9);
-  if (numbers.length != 11){
-    return "Array com tamanho incorreto.";
-  } else if (moreThan2 || minorGreater){
-    return "não é possível gerar um número de telefone com esses valores";
+    minorGreater = anyMinorOrGretear(numbers, 0, 9);
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  } else if (moreThan2 || minorGreater) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
   const add = {
     position: [0, 3, 9],
-    string: ['(', ') ', '-']
+    string: ['(', ') ', '-'],
   }
-  for (let key in add.position){
+  for (let key in add.position) {
     numbers.splice(add.position[key], 0, add.string[key]);
   }
   return numbers.join('');
@@ -192,18 +197,19 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(strg) {
-  let arr = strg.split(/[^0-9]*/), sum = 0;
+  let arr = strg.split(/[^0-9]*/), 
+    sum = 0;
   arr.pop();
-  for (let key in arr){
-    sum += parseInt(arr[key]);
+  for (let key in arr) {
+    sum += parseInt(arr[key], 10);
   }
   if (sum <= 0) {
-    return "bebeu nada?";
+    return 'bebeu nada?';
   }
-  if (sum == 1){
-    return sum + " copo de água";
+  if (sum === 1) {
+    return (sum + ' copo de água');
   }
-  return sum + " copos de água";
+  return (sum + ' copos de água');
 }
 
 module.exports = {
