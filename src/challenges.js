@@ -145,7 +145,7 @@ function encode(texto) {
     if (novoEncode(texto[indice]) !== '') {
       novoTexto += novoEncode(texto[indice]);
     } else if (novoEncode2(texto[indice]) !== '') {
-      novoTexto += novoEncode2(texto[indice]);    
+      novoTexto += novoEncode2(texto[indice]);
     } else {
       novoTexto += texto[indice];
     }
