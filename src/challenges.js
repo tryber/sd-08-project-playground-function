@@ -130,8 +130,45 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  if (validation(numbers) != true) {
+    return validation(numbers);
+  }
+  return formatingPhoneNumber(numbers);
+}
+
+function validation(numbers) {
+  if (numbers.length != 11) {
+    return 'Array com tamanho incorreto.'
+  }
+  for (let values of numbers) {
+    let repeat = 0;
+    for (let index of numbers) {
+      if (index === values) {
+        repeat += 1;
+      }
+      if (index < 0 || index > 9 || repeat >= 3) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+    }
+  }
+  return true;
+}
+
+function formatingPhoneNumber(numbers) {
+  let prefix = '';  
+  let ramal = '';
+  let final = '';
+  for (let num = 0; num < 2; num += 1) {
+    prefix += numbers[num];
+  }
+  for (let num = 2; num < 7; num += 1) {
+    ramal += numbers[num];
+  }
+  for (let num = 7; num < 11; num += 1) {
+    final += numbers[num];
+  }
+  return `(${prefix}) ${ramal}-${final}`;
 }
 
 // Desafio 12
