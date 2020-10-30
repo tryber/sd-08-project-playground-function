@@ -122,15 +122,16 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList(arrTech, name) {
+function techList(arrTech, parName) {
   let obj = [];
+  let newObj = {};
 
   for (let i = 0; i < arrTech.length; i += 1) { 
-    obj[i] = {
+    newObj = {
       tech: arrTech[i],
-      name: name
+      name: parName
     }
-    obj.push(obj[i]);
+    obj.push(newObj);
   }
   return obj;
 }
