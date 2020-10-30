@@ -100,11 +100,11 @@ function fizzBuzz(arrayNum) {
 // console.log(fizzBuzz([3, 1, 5, 10, 12, 14, 15, 19, 20]))
 
 // Desafio 9
-function translater(phrase) {
+function encode(phrase) {
   let arrayChar = phrase.split('');
   let key;
-  novoArr = [];
-  for (key in arrayChar){
+  let novoArr = [];
+  for (key in arrayChar) {
     switch (arrayChar[key]) {
       case 'a':
         novoArr.push('1');
@@ -121,6 +121,21 @@ function translater(phrase) {
       case 'u':
         novoArr.push('5');
         break;
+      default:
+        novoArr.push(arrayChar[key]);
+    }
+  }
+  return novoArr.join('');
+}
+// console.log(encode("observe que essa mensagem ficou oculta"));
+
+function decode(phrase) {
+  // return translater(phrase);
+  let arrayChar = phrase.split('');
+  let key;
+  let novoArr = [];
+  for (key in arrayChar) {
+    switch (arrayChar[key]) {
       case '1':
         novoArr.push('a');
         break;
@@ -142,22 +157,13 @@ function translater(phrase) {
   }
   return novoArr.join('');
 }
-
-function encode(phrase) {
-  return translater(phrase);
-}
- console.log(encode("observe que essa mensagem ficou oculta"));
-
-function decode(phrase) {
-  return translater(phrase);
-}
- console.log(decode('4bs2rv2 q52 2ss1 m2ns1g2m n14 f3c45 4c5lt1 12345'));
+// console.log(decode('4bs2rv2 q52 2ss1 m2ns1g2m n14 f3c45 4c5lt1 12345'));
 
 // Desafio 10
 function makeObject(tech, name) {
   let objTech = {
-  tech: tech,
-  name: name,
+    tech: tech,
+    name: name,
   };
   return objTech;
 }
@@ -168,7 +174,7 @@ function techList(array, name) {
     let key;
     let newArray = [];
     for (key in array) {
-    newArray.push(makeObject(array[key], name));
+      newArray.push(makeObject(array[key], name));
     }
     res = newArray;
   } else {
