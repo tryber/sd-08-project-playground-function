@@ -130,13 +130,13 @@ function techList(tech, name) {
           name: name
       })
   }
-  if (listEnd.lenghth == 0) {
-    return "Vazio!"
+  if (listEnd.length == 0) {
+    return ("Vazio!");
   }else {
     return listEnd;
   }
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Fernanda"))
+console.log(techList([],"Fernanda"))
 
 // Desafio 11
 function generatePhoneNumber() {
