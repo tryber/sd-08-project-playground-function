@@ -199,18 +199,11 @@ function techList(tech,nome) {
 
 // A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos com o formato acima.
 let listaTech =[];
-let objeto = {
+let obejeto = {
   tech:"",
   name:""
 };
-for ( const key in tech){
-  objeto.tech=tech[key];
-  objeto.name=nome;
-  listaTech[key]=objeto;
-}
-listaTech.objeto.tech.sort();
-return listaTech;
-
+for 
 }
 
 // Desafio 11

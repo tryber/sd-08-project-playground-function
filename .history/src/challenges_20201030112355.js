@@ -209,7 +209,7 @@ for ( const key in tech){
   listaTech[key]=objeto;
 }
 listaTech.objeto.tech.sort();
-return listaTech;
+return listaTe
 
 }
 

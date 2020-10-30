@@ -208,8 +208,6 @@ for ( const key in tech){
   objeto.name=nome;
   listaTech[key]=objeto;
 }
-listaTech.objeto.tech.sort();
-return listaTech;
 
 }
 

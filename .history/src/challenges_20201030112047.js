@@ -207,10 +207,8 @@ for ( const key in tech){
   objeto.tech=tech[key];
   objeto.name=nome;
   listaTech[key]=objeto;
+  
 }
-listaTech.objeto.tech.sort();
-return listaTech;
-
 }
 
 // Desafio 11
