@@ -218,7 +218,7 @@ function generatePhoneNumber(array) {
               phoneNumber += "(" + array[posPhone];
               break;
             case 2:
-              phoneNumber += ")" + array[posPhone];
+              phoneNumber += ") " + array[posPhone];
               break;
             case 7:
               phoneNumber += "-" + array[posPhone];
