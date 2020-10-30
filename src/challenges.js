@@ -90,7 +90,7 @@ function encode(string) {
   resultado = resultado.replace("i", "3");
   resultado = resultado.replace("o", "4");
   resultado = resultado.replace("u", "5");
-  
+  return resultado; 
 }
 function decode() {
   let = resultado = "";
@@ -114,6 +114,7 @@ console.log
 let teste = ["React", "Jest", "HTML", "CSS", "JavaScript"];
 let nome = "Wagner";
 console.log(encode(teste, nome));
+
 //Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
