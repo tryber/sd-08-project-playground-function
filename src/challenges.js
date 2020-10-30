@@ -65,9 +65,7 @@ function highestCount() {
 }
 
 // Desafio 7
-let cat1 = 2;
-let cat2 = 3;
-let mouse = 5;
+
 
 
 function catAndMouse(mouse, cat1, cat2) {
@@ -76,16 +74,26 @@ function catAndMouse(mouse, cat1, cat2) {
   let string2 = "cat2";
   let string3 = "os gatos trombam e o rato foge";
 
+  resultado = [];
+
+  
+
   if (mouse - cat1 < mouse - cat2) {
-    return "cat1";
+    resultado = string1;
 
-  } else if (mouse - cat2 < mouse - cat1) {
-    return "cat2";
+  } 
+  
+  if (mouse - cat2 < mouse - cat1) {
+    resultado = string2;
 
-  } else {
-    return "os gatos trombam e o rato foge";
+  } 
+  
+  if (mouse - cat1 == mouse - cat2) {
+    resultado = string3;
 
   }
+
+  return resultado;
     
 
 
