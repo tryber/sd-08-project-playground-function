@@ -4,9 +4,8 @@ function compareTrue(n1,n2) {
     return true
   } else {
     return false
-  } console.log(compareTrue(2,2));
 }
-
+} console.log(compareTrue(2,5));
 // Desafio 2
 function calcArea(base, height) {
   let calculo = (base * height) / 2;
