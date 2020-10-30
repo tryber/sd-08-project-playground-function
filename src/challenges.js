@@ -131,18 +131,16 @@ function decode(str) {
 
 // Desafio 10
 function techList(tech, name) {
-  let str = [];
-  let sortList = tech.sort()
-  for (let i = 0; i < tech.length; i += 1) {
-    str[i] = {
-      tech: sortList[i],
-      nome: name,
-    };
+  let sortList = tech.sort();
+  let newTech = [];
+  for (i = 0; i < sortList.length; i += 1) {
+    let tech = sortList[i];
+    newTech.push ({tech, name,});
   }
-  if (tech.length === 0) {
-    return ('Vazio!');
+  if (newTech.length === 0) {
+    return 'Vazio!';
   }
-  return str;
+  return newTech;
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
 "Lucas"));
@@ -165,21 +163,46 @@ function repetNumberCaracteres(arr) {
 
 // Desafio 11
 function generatePhoneNumber(arr) {
-  if (arr.length > 11) return ('Array com tamanho incorreto.');
-
-  let modelPhoneNumber = '(xx) xxxxx-xxxx';
-  for (let i = 0; i < arr.length; i += 1) {
-    if (arr[i] < 0 || arr[i] > 9) {
-      return ('não é possível gerar um número de telefone com esses valores');
-    }
-    modelPhoneNumber = modelPhoneNumber.replace('x', arr[i]);
+  let phoneNumber = '';
+  if (phoneArray.length !== 11) {
+    return "Array com tamanho incorreto."
   }
-  return repetNumberCaracteres(arr) ? ('não é possível gerar um número de telefone com esses valores') : modelPhoneNumber;
+  for (index in phoneArray){
+    let repeatcounter = 0;
+    for (indexTwo in phoneArray) {
+      if (phoneArray[index] === phoneArray[indexTwo]) {
+        repeatcounter += 1;
+      }
+      if (repeatcounter >= 3) {
+        return "não é possível gerar um número de telefone com esses valores"
+      }
+    }
+  }
+  for (let index = 0; index < phoneArray.length; index += 1) {
+    if (phoneArray[index] < 0 || phoneArray[index] > 9) {
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+  }
+  for (index in phoneArray){
+    phoneNumber = '(' + phoneArray.slice(0,2) + ')' + ' ' + phoneArray.slice(2,7) + '-' + phoneArray.slice(7,11);
+    break;
+  }
+  return phoneNumber.replace(/,/g, '');
 }
-
 // Desafio 12
 function triangleCheck() {
-  return lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB;
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
+    return true;
+  }
+  else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
+    return true;
+  }
+  else if (lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 // Desafio 13
