@@ -80,61 +80,23 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(string) {
-  let alfabeto = {
-      vogais: ['blankspace','a','e','i','o','u'],
-      vogaisCapital: ['blankspace','A','E','I','O','U'],
-      consoantes: [' ','!',,'?',':',',',,'.','b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','y','x','z','B','C','D','F','G','H','J','K','M','N','P','Q','R','S','T','V','X','W','Y','Z'],
-  }
-  let list = string.split("");
-  let listForEncode = [];
-  for (i in list){
-      for(vogal in alfabeto.vogais) {
-          if (list[i] == alfabeto.vogais[vogal]) {
-          listForEncode.push(vogal);
-          break
-          }
-      }
-      for(vogal in alfabeto.vogaisCapital) {
-          if (list[i] == alfabeto.vogaisCapital[vogal]) {
-          listForEncode.push(vogal);
-          break
-        }
-      }
-      for(consoante in alfabeto.consoantes){
-          if (list[i] == alfabeto.consoantes[consoante]) {
-              listForEncode.push(alfabeto.consoantes[consoante]);
-              break
-          }
-      }
-  }
-  return listForEncode.join(""); 
-} 
-
-function decode(string) {
-  let alfabeto = {
-      vogais: ['blankspace','a','e','i','o','u'],
-      consoantes: [' ','!',,'?',':',',','.','b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','y','x','z','B','C','D','F','G','H','J','K','M','N','P','Q','R','S','T','V','X','W','Y'],
-  }
-  let list = string.split("");
-  let listForEncode = [];
-  for (i in list){
-      for(vogal in alfabeto.vogais) {
-          if (list[i] == vogal) {
-          listForEncode.push(alfabeto.vogais[vogal]);
-          break
-          }
-      }    
-      for(consoante in alfabeto.consoantes){
-          if (list[i] == alfabeto.consoantes[consoante]) {
-              listForEncode.push(alfabeto.consoantes[consoante]);
-              break
-          }
-      }
-  }
-  return listForEncode.join("");  
+function encode(text){
+  let t_a = text.replace("a","1");
+  let t_e = t_a.replace("e","2");
+  let t_i = t_e.replace("i","3");
+  let t_o = t_i.replace("o","4");
+  let t_u = t_o.replace("u","5");
+  return t_u;
 }
 
+function decode(text){
+  let t_a = text.replace("1","a");
+  let t_e = t_a.replace("2","e");
+  let t_i = t_e.replace("3","i");
+  let t_o = t_i.replace("4","o");
+  let t_u = t_o.replace("5","u");
+  return t_u;
+}
 // Desafio 10
 function techList(array,name){
   array.sort();
