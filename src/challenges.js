@@ -46,14 +46,40 @@ function footballPoints(wins, ties) {
 footballPoints(5, 3);
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(vetorNum) {
+  let resultado;
+  vetorNum.sort((a,b) => a - b);
+  //
+  let numMaior = vetorNum[vetorNum.length -1];
+  let quantNum = 0;
+  for (count = 0; count < vetorNum.length; count += 1) {
+    if (numMaior == vetorNum[count]){
+      quantNum += 1;
+    }
+  }
+  resultado = quantNum;
+  return resultado;
 }
+let testeHighest = [15, 9, 8, 15, 2, 7];
+highestCount(testeHighest);
+//console.log(highestCount(teste));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let resultado;
+  let distanciaCat1 = mouse - cat1;
+  let distanciaCat2 = mouse - cat2;
+  if (distanciaCat1 < distanciaCat2) {
+    resultado = "cat1";
+  } else if (distanciaCat2 < distanciaCat1) {
+    resultado = "cat2";
+  } else {
+    resultado = "os gatos trombam e o rato foge";
+  }
+return resultado;
 }
+catAndMouse(10, 5, 3);
+//console.log(catAndMouse(10,5,3));
 
 // Desafio 8
 function fizzBuzz() {
