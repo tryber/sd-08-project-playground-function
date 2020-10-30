@@ -207,11 +207,22 @@ function generatePhoneNumber(arrayNumber) {
   }
   return resultado;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let condition;
+  if ((lineB + lineC) > lineA && Math.abs(lineB - lineC) < lineA) {
+    condition = true;
+  }
+  else if ((lineA + lineC) > lineB && Math.abs(lineA - lineC) < lineB) {
+    condition = true;
+  }
+  else if ((lineB + lineA) > lineC && Math.abs(lineB - lineA) < lineC) {
+    condition = true;
+  } else {
+    condition = false;
+  }
+  return condition;
 }
 
 // Desafio 13
