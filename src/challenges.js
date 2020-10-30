@@ -51,9 +51,9 @@ function highestCount(parametro) {
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {        
-  const distanciaDoGatoUmParaORato = Math.abs(mouse - cat1),
-        distanciaDoGatoDoisParaORato = Math.abs(mouse - cat2)
-  let   resultado = ''
+  let   distanciaDoGatoUmParaORato = Math.abs(cat1 - mouse),
+        distanciaDoGatoDoisParaORato = Math.abs(cat2 - mouse),
+        resultado = ''
         if(distanciaDoGatoUmParaORato < distanciaDoGatoDoisParaORato){
             resultado = 'cat1'
             return resultado
