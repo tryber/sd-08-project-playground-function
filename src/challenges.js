@@ -78,24 +78,22 @@ function catAndMouse(mouse, cat1, cat2) {
 
   
 
-  if (mouse - cat1 < mouse - cat2) {
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     resultado = string1;
 
   } 
   
-   else if (mouse - cat2 < mouse - cat1) {
+  if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
     resultado = string2;
+  }
 
-  } else {
+  if (Math.abs(mouse - cat2) === Math.abs(mouse - cat1)) {
     resultado = string3;
-
   }
 
   return resultado;
     
 
-
-  
 }
 
 // Desafio 8
