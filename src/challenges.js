@@ -65,8 +65,8 @@ function catAndMouse(mouse, cat1, cat2) {
 function classify(num) {
   let result = 'bug!';
   if (num % 3 === 0 && num % 5 === 0) result = 'fizzBuzz';
-  if (num % 3 === 0) result += 'fizz';
-  if (num % 5 === 0) result += 'buzz';
+  if (num % 3 === 0) result = 'fizz';
+  if (num % 5 === 0) result = 'buzz';
   return result;
 }
 
