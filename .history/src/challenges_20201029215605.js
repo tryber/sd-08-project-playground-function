@@ -101,7 +101,7 @@ function generatePhoneNumber(arr) {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] >= 10)
       return "não é possível gerar um número de telefone com esses valores";
-    if (arr.filter((x) => x == arr[i]).length >= 3)
+    if (arr.filter((x) => x == arr[i]).length > 3)
       return "não é possível gerar um número de telefone com esses valores";
   }
   // Format Telefone
