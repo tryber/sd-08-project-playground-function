@@ -12,14 +12,21 @@ compareTrue(true, true);
 //console.log(compareTrue(true, true))
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let resultado = (base * height) / 2;
+  return resultado;
 }
+calcArea(20, 30);
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let resultado = [];
+  resultado = string.split(" "); 
+  return resultado;
 }
+let testeSplit = "go trybe";
+splitSentence(testeSplit);
+//console.log(splitSentence(teste));
 
 // Desafio 4
 function concatName() {
