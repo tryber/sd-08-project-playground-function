@@ -128,13 +128,35 @@ function techList(array, name) {
 
 
 // Desafio 11
+//Método de contagem de itens do array: https://stackoverflow.com/a/19395302/;
+//Método array.some: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/some;
+function numValidator(array) {
+  let counts = {};
+
+  array.forEach((arrayElement) => counts[arrayElement] = (counts[arrayElement] || 0) + 1);
+
+  for (let key in counts) {
+    if (counts[key] >= 3) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
 function generatePhoneNumber(array) {
+  let errorMsg = 'não é possível gerar um número de telefone com esses valores';
+
   if (array.length != 11) {
     return 'Array com tamanho incorreto.';
   }
 
-  if (numValidator(array) === false) {
-    return 'não é possível gerar um número de telefone com esses valores';
+  if (array.some(element => element > 9 || element < 0)) {
+    return errorMsg;
+  }
+
+  if (! numValidator(array)) {
+    return errorMsg;
   }
 
   let ddd = `(${array[0]}${array[1]})`
@@ -144,22 +166,8 @@ function generatePhoneNumber(array) {
   return `${ddd} ${parteUm}-${parteDois}`
 }
 
-function numValidator(array) {
-  for (let outer in array) {
-    let count = 0;
-    for (let inner in array) {
-      if (array[outer] === array[inner]) {
-        count += 1;
-      }
-      if (count === 3 || array[inner] > 9 || array[inner] < 0) {
-        return false;
-      }
-    }
-  }
-  return true;
-}
+console.log(generatePhoneNumber([0, 2, 3, 2, 5, 5, 7, 8, 9, 0, 1]))
 
-console.log(generatePhoneNumber([9, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
