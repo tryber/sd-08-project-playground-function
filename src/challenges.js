@@ -51,11 +51,11 @@ concatName(['lucas', 'cassiano', 'ferraz', 'Paolillo']);
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let total = (wins * 3) - ties;
+  let total = (wins * 3) + ties;
   return total;
 }
 
-footballPoints(3, 2);
+console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount(array) {
