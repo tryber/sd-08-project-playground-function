@@ -18,8 +18,10 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(frase) {
-
+  let novoArray = frase.split(" ");
+  return novoArray;
 }
+//console.log(splitSentence("go trybe"));
 
 // Desafio 4
 function concatName(parametroArray) {
@@ -105,7 +107,7 @@ function encode(phrase) {
   phrase = phrase.replace(/u/g , "5");
   return phrase;
 }
-console.log(encode("hi there!"));
+//console.log(encode("hi there!"));
 
 function decode(phrase) {
   phrase = phrase.replace(/1/g , "a");
@@ -113,13 +115,22 @@ function decode(phrase) {
   phrase = phrase.replace(/3/g , "i");
   phrase = phrase.replace(/4/g , "o");
   phrase = phrase.replace(/5/g , "u");
+  return phrase;
 }
-console.log(decode("h3 th2r2!"));
+//console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnologia, name) {
+const listaOrdenada = tecnologia.sort();
+let resultado = [];
+for (index = 0; index < listaOrdenada.length; index += 1) {
+  resultado.push({tech:listaOrdenada[index], name:name});
 }
+return resultado;
+}
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Liisa"));
+
+  // seu código aqui
 
 // Desafio 11
 function generatePhoneNumber() {
