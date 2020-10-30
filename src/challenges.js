@@ -95,7 +95,7 @@ function catAndMouse(mouse, cat1,  cat2) {
   return gato;
 }
 
-console.log(catAndMouse(0, 3, 2));
+catAndMouse(0, 3, 2);
 
 
 // Desafio 8
