@@ -213,10 +213,10 @@ function hydrate(string) {
   }
 
   if (sum === 1) {
-    return `${sum} copo de água`;
-  } else {
-    return `${sum} copos de água`;
+    return '1 copo de água';
   }
+
+  return `${sum} copos de água`;
 }
 
 module.exports = {
