@@ -51,19 +51,19 @@ function highestCount(parametro) {
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {        
-  let distanciaDosCatUmParaORato = (cat1-mouse),
+  let distanciaDosGatoUmParaORato = (cat1-mouse),
      distanciaDoGatoDoisParaORato = (cat2-mouse)
   
-  if (distanciaDosCatUmParaORato < 0){
-    distanciaDosCatUmParaORato = -distanciaDosCatUmParaORato
+  if (distanciaDosGatoUmParaORato < 0){
+    distanciaDosGatoUmParaORato = -distanciaDosGatoUmParaORato
   }
   if (distanciaDoGatoDoisParaORato < 0) {
     distanciaDoGatoDoisParaORato = -distanciaDoGatoDoisParaORato
   }  
-  if (distanciaDosCatUmParaORato !== distanciaDoGatoDoisParaORato){
-    if ((distanciaDosCatUmParaORato) < (distanciaDoGatoDoisParaORato)){
+  if (distanciaDosGatoUmParaORato !== distanciaDoGatoDoisParaORato){
+    if ((distanciaDosGatoUmParaORato) < (distanciaDoGatoDoisParaORato)){
       return 'cat1'
-    } else if((distanciaDosCatUmParaORato) > (distanciaDoGatoDoisParaORato)){
+    } else if((distanciaDosGatoUmParaORato) > (distanciaDoGatoDoisParaORato)){
       return 'cat2'
     }
   } else {
@@ -72,9 +72,28 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(array) {
+  let resultado = []
+  for(let index in array){
+    let numeroDivisivelPorTresECinco = (array[index] % 3) == 0 && (array[index]) % 5 == 0,
+        numeroDivivelApenasPorTres   = (array[index] % 3) == 0 && (array[index]) % 5 !== 0,
+        numeroDivisivelApenasPorCinco = (array[index] % 3) !== 0 && (array[index]) % 5 == 0
+    switch (true) {
+      case numeroDivisivelPorTresECinco:
+        resultado.push('fizzBuzz')
+      break;
+      case numeroDivivelApenasPorTres:
+        resultado.push('fizz')
+      break;
+      case numeroDivisivelApenasPorCinco:
+        resultado.push('buzz')
+      break;
+      default:
+        resultado.push('bug!')
+    }
+  }
+  return resultado
+}fizzBuzz([15,21,2,5,3])
 
 // Desafio 9
 function encode() {
