@@ -15,7 +15,7 @@ function calcArea(base, height) {
   return area;
 }
 
-console.log(calcArea(8, 10))
+console.log(calcArea(8, 10));
 
 // Desafio 3 - as informações referentes ao split() foram retiradas do dev media:https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array.
 function splitSentence(word) {
@@ -27,13 +27,20 @@ function splitSentence(word) {
 console.log(splitSentence('bruno candido morais'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(last_first) {
+  let arrayName = [];
+  for(let index = 0; index < last_first.length; index++){
+   arrayName.push(last_first[index]);
+   
 }
+  return(arrayName[arrayName.length-1] + ", " + arrayName[0])
+}
+
+console.log(concatName(['Bruno', 'Candido', 'Morais']));
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+   
 }
 
 // Desafio 6
