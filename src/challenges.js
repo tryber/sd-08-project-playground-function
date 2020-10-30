@@ -50,17 +50,17 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let ditanciaCats = Math.abs(cat1 - cat2);
+  let ditanciaCats = Math.abs(cat1 - mouse) - Math.abs(cat2 - mouse);
   let distanciaMouseCat1 = Math.abs(mouse - cat1);
   let distanciaMouseCat2 = Math.abs(mouse - cat2);
   if (ditanciaCats === 0) {
-    return "os gatos trombam e o rato foge"
+    return 'os gatos trombam e o rato foge';
   }
   else if (distanciaMouseCat1 < distanciaMouseCat2) {
-    return "cat1";
+    return 'cat1';
   }
   else {
-    return "cat1";
+    return 'cat1';
   }
 }
 
@@ -135,9 +135,10 @@ function decode(palavra) {
 }
 
 // Desafio 10
-function techList() {
+function techList(tech, nome) {
   // seu código aqui
 }
+console.log(techList([css, html, react, javascript, nodejs], 'victor'))
 
 // Desafio 11
 function generatePhoneNumber() {
