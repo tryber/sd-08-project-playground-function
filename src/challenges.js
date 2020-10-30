@@ -11,7 +11,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(text) {
-  return text.split(" ");
+  return text.split(' ');
 }
 
 // Desafio 4
@@ -51,23 +51,22 @@ const relativeDistanceEval = function (target, hunter1, hunter2) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   const distRelative = relativeDistanceEval(mouse, cat1, cat2);
-  if (distRelative.hunter1 === distRelative.hunter2)
-    return "os gatos trombam e o rato foge";
+  if (distRelative.hunter1 === distRelative.hunter2) return 'os gatos trombam e o rato foge';
 
   if (distRelative.hunter1 < distRelative.hunter2) {
-    return "cat1";
+    return 'cat1';
   }
-  return "cat2";
+  return 'cat2';
 }
 
 // Desafio 8
 function fizzBuzz(arr) {
   const result = [];
   for (let i = 0; i < arr.length; i += 1) {
-    result[i] = "bug!";
-    if (arr[i] % 3 === 0) result[i] = "fizz";
-    if (arr[i] % 5 === 0) result[i] = "buzz";
-    if (arr[i] % 3 === 0 && arr[i] % 5 === 0) result[i] = "fizzBuzz";
+    result[i] = 'bug!';
+    if (arr[i] % 3 === 0) result[i] = 'fizz';
+    if (arr[i] % 5 === 0) result[i] = 'buzz';
+    if (arr[i] % 3 === 0 && arr[i] % 5 === 0) result[i] = 'fizzBuzz';
   }
   return result;
 }
@@ -75,35 +74,35 @@ function fizzBuzz(arr) {
 // Desafio 9
 function encode(text) {
   return text
-    .split("a")
-    .join("1")
-    .split("e")
-    .join("2")
-    .split("i")
-    .join("3")
-    .split("o")
-    .join("4")
-    .split("u")
-    .join("5");
+    .split('a')
+    .join('1')
+    .split('e')
+    .join('2')
+    .split('i')
+    .join('3')
+    .split('o')
+    .join('4')
+    .split('u')
+    .join('5');
 }
 
 function decode(text) {
   return text
-    .split("1")
-    .join("a")
-    .split("2")
-    .join("e")
-    .split("3")
-    .join("i")
-    .split("4")
-    .join("o")
-    .split("5")
-    .join("u");
+    .split('1')
+    .join('a')
+    .split('2')
+    .join('e')
+    .split('3')
+    .join('i')
+    .split('4')
+    .join('o')
+    .split('5')
+    .join('u');
 }
 
 // Desafio 10
 function techList(list, name) {
-  if (list.length === 0) return "Vazio!";
+  if (list.length === 0) return 'Vazio!';
   const result = [];
   list.sort().forEach((item) => {
     result.push({ tech: item, name });
@@ -113,13 +112,13 @@ function techList(list, name) {
 
 // Desafio 11
 function generatePhoneNumber(arr) {
-  if (arr.length !== 11) return "Array com tamanho incorreto.";
+  if (arr.length !== 11) return 'Array com tamanho incorreto.';
   for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] < 0 || arr[i] >= 10) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     if (arr.filter((x) => x === arr[i]).length >= 3) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   // Format Telefone
@@ -141,11 +140,10 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(text) {
-  const arr = text.replace(/\D/g, "").split("");
-  const sum =
-    arr.reduce(function (acc, val) {
-      return parseInt(acc, 10) + parseInt(val, 10);
-    }, 0) || 0;
+  const arr = text.replace(/\D/g, '').split('');
+  const sum = arr.reduce(function (acc, val) {
+    return parseInt(acc, 10) + parseInt(val, 10);
+  }, 0) || 0;
   if (sum < 2) return `${sum} copo de água`;
   return `${sum} copos de água`;
 }
