@@ -149,8 +149,8 @@ function decode(string) {
 // console.log(decode(string))
 
 // Desafio 10
- let array = ['React', 'Js', 'Zarabatana']
- let name = 'Lucas'
+// let array = ['React', 'Js', 'Zarabatana']
+// let name = 'Lucas'
 function techList(tech, name) {
   let result = []
   if (tech.length === 0) {
@@ -162,7 +162,7 @@ function techList(tech, name) {
   }
   return result
 }
-console.log(techList(array, name))
+// console.log(techList(array, name))
 
 // Desafio 11
 function generatePhoneNumber() {
