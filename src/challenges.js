@@ -246,9 +246,39 @@ function techList(techArray, namePar) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-    // seu código aqui
+function generatePhoneNumber(array11) {
+
+    //Putting all the digits together in a String
+    let numberWithoutMask = array11.join("");
+
+    let ddd = "";
+    let leftNumber = "";
+    let rightNumber = "";
+    let numberWithMask = "";
+
+    if (array11.length !== 11) {
+        return "Array com tamanho incorreto."
+    } else {
+
+        //On the following, I used the concepts learned here:
+        //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+
+
+        //Picking the area code 
+        ddd = numberWithoutMask.slice(0, 2);
+
+        //Picking the left half of the phone number
+        leftNumber = numberWithoutMask.slice(2, 7)
+
+        //Picking the right half of the phone number
+        rightNumber = numberWithoutMask.slice(7, 11)
+
+    }
+    console.log(`(${ddd}) ${leftNumber}-${rightNumber} `);
+
 }
+
+generatePhoneNumber([2, 1, 3, 5, 7, 5, 4, 1, 9, 3, 2]);
 
 // Desafio 12
 function triangleCheck() {
