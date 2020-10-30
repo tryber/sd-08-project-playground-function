@@ -46,7 +46,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arr) {
   const result = [];
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i += 1) {
     result[i] = 'bug!';
     if (arr[i] % 3 === 0) result[i] = 'fizz';
     if (arr[i] % 5 === 0) result[i] = 'buzz';
@@ -98,7 +98,7 @@ function techList(list, name) {
 function generatePhoneNumber(arr) {
   // Validation
   if (arr.length !== 11) return 'Array com tamanho incorreto.';
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] < 0 || arr[i] >= 10) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
