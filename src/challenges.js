@@ -78,7 +78,7 @@ function fizzBuzz(arrayNumbers) {
   let arrayString = []
   for (let property in arrayNumbers) {
     if ((arrayNumbers[property] % 3 === 0) && (arrayNumbers[property] % 5 === 0)) {
-      arrayString.push('fizBuzz')
+      arrayString.push('fizzBuzz')
     } else if (arrayNumbers[property] % 3 === 0) {
       arrayString.push('fizz')
     } else if (arrayNumbers[property] % 5 === 0) {
