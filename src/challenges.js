@@ -1,14 +1,13 @@
 // Desafio 1
 function compareTrue(num1,num2) {
-  if (num1==true && num2==true) {
-    console.log(true);
+  if (num1 == true && num2 == true) {
+    return true;
   }
 
 else { 
-    console.log(false);  
+    return false;  
   }
 }
-console.log(compareTrue(um,dois));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -57,7 +56,6 @@ function catAndMouse(mouse,cat1,cat2) {
   }
   }
 
-
 // Desafio 8
 function fizzBuzz(array) {
   let resposta = []
@@ -81,7 +79,6 @@ function fizzBuzz(array) {
   }
     return resposta
 }
-
 
 // Desafio 9
 function encode() {
@@ -128,3 +125,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
