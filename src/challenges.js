@@ -46,14 +46,17 @@ function highestCount() {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-    if () {
-
+  /* 
+  if () {
+      return cat1;
     } else if {
-
+      return cat2;
     } else {
-      
+      return 'os gatos trombam e o rato foge'
     }
+    */
 }
+console.log(catAndMouse());
 
 // Desafio 8
 function fizzBuzz() {
