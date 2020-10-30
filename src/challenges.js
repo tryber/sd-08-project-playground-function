@@ -102,7 +102,7 @@ function decode(string) {
 // Desafio 10
 function techList(techs = [], name) {
   let result = [];
-  techs.forEach(tech => {
+  techs.sort().forEach(tech => {
     result.push({ tech: tech, name: name })
   })
   return (result == "") ? "Vazio!" : result;
@@ -126,7 +126,6 @@ function generatePhoneNumber(numbers) {
         result.push(number);
       }
     })
-
     return result.join("");
 }
 
@@ -136,8 +135,13 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let counter = 0;
+  string = string.split("");
+  string.forEach(letter => {
+    if(letter.match(/\d/)) counter += parseInt(letter);
+});
+  return counter;
 }
 
 
