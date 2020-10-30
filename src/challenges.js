@@ -103,9 +103,27 @@ console.log(fizzBuzz([3,5,15,2,30]));
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let novaString = ('')
+  for(let index = 0; index < string.length; index+=1){
+    if(string[index] === 'a'){
+      novaString.push('1');
+    }else if(string[index] === 'e'){
+      novaString.push('2');
+    }else if(string[index] === 'i'){
+      novaString.push('3');
+    }else if(string[index] === 'o'){
+      novaString.push('4');
+    }else if(string[index] === 'u'){
+      novaString.push('5');
+    }
+    
+    
+  }
+  return novaString;
+
 }
+console.log(encode('hi there'));
 function decode() {
   // seu código aqui
 }
