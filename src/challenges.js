@@ -10,6 +10,7 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
+// Estudei mais sobre .split no site https://www.w3schools.com/
 function splitSentence(frase) {
   return frase.split(" ");
 }
@@ -27,6 +28,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// Estudei mais sobre contador no site https://pt.stackoverflow.com/
 function highestCount(arraydeNumero) {
   let maiorNumero = 0;
   let contador = 0;
@@ -58,15 +60,15 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arraydeNumero) {
   for (let index = 0; index < arraydeNumero.length; index += 1){
-
+    let retornoArray = [];
     if (arraydeNumero[index] % 3 == 0) {
-      return "fizz";
+      return retornoArray.push ("fizz");
     } else if (arraydeNumero[index] % 5 == 0) {
-      return "buzz";
+      return retornoArray.push ("buzz");
     } else if (arraydeNumero[index] % 3 == 0 && arraydeNumero[index] % 5 == 0) {
-      return "fizzbuzz"
+      return retornoArray.push ("fizzbuzz");
     } else {
-      return "bug!";
+      return retornoArray.push("bug!");
     }
   }
 }
