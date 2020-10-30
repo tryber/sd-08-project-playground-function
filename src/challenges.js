@@ -99,9 +99,14 @@ function encode(string) {
 }
 encode("Tiago");
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let stringSwap = { "1": "a", "2": "e", "3": "i", "4": "o", "5": "u" }
+  let encondeResult = "";
+  encondeResult = string.replace(/[12345]/gi, m => stringSwap[m])
+
+  return encondeResult;
 }
+decode("h3 th2r2!");
 
 // Desafio 10
 function techList() {
