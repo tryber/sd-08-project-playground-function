@@ -55,15 +55,12 @@ function catAndMouse(mouse,cat1,cat2) {
         distanciaDoGatoDoisParaORato = Math.abs(cat2 - mouse),
         resultado = ''
         if(distanciaDoGatoUmParaORato < distanciaDoGatoDoisParaORato){
-            resultado = 'cat1'
-            return resultado
+           return 'cat1'
           }
     else if(distanciaDoGatoUmParaORato > distanciaDoGatoDoisParaORato){
-            resultado = 'cat2'
-            return resultado
+            return 'cat2'
           }else{
-            resultado = "Os gatos trombam e o rato foge"
-            return resultado
+            return "Os gatos trombam e o rato foge"
           }          
 }
 
