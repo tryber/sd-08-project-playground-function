@@ -168,14 +168,14 @@ function generatePhoneNumber(numerico) {
   if (numerico.length == 11){
       let sorted = numerico.slice().sort();
       for (let key = 0; key < numerico.length; key += 1){
-        anterior = (key-1);
-        proximo = (key+1);
+        letra = key;
+        petra = key;
+        anterior = letra -= 1;
+        proximo = petra += 1;
           if (sorted[key] < 0 || sorted[key] > 9){
               return impossivel;
-              break;
           } else if (sorted[key] == sorted[anterior] && sorted[key] == sorted[proximo]){
               return impossivel;
-              break;
           } else if (key == 0){
               telefone += "(";
               telefone += numerico[key];
