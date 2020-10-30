@@ -8,7 +8,7 @@ function compareTrue(valor1, valor2) {
      return 'false';
   }
 }
-//console.log(compareTrue("true", "false"))
+//console.log(compareTrue("false", "true"))
 
 // Desafio 2
 function calcArea(base, height) {
@@ -30,13 +30,12 @@ function splitSentence(param) {
 // Desafio 4
 function concatName(param) {
   // seu código aqui
-  //let r
    let ultimoItem = param[param.length-1];
    let primeiroItem = param[0];
 
    return ultimoItem + ',' + ' ' + primeiroItem;
 }
-console.log(concatName('lucas','cassiano', 'ferraz', 'paolillo'))
+//console.log(concatName('lucas','cassiano', 'ferraz', 'paolillo'))
 
 // Desafio 5
 function footballPoints(wins, ties) {
