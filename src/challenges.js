@@ -70,9 +70,24 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(vetorNum) {
+  let resultado = [];
+  for (let count in vetorNum) {
+   if (vetorNum[count] % 3 == 0 && vetorNum[count] % 5 == 0) {
+         resultado.push("fizzBuzz");
+     } else if (vetorNum[count] % 3 == 0) {
+         resultado.push("fizz");
+     } else if (vetorNum[count] % 5 == 0) {
+         resultado.push("buzz");
+     } else {
+         resultado.push("bug!");
+     }
+  }
+  return resultado;
 }
+let testeFizzBuzz = [2, 15, 7, 9, 45];
+fizzBuzz(testeFizzBuzz);
+//console.log(fizzBuzz(vetorTeste));
 
 // Desafio 9
 function encode(string) {
@@ -96,7 +111,7 @@ function decode(string) {
 let testeEncode = "hi there!"
 let testeDecode = "h3 th2r2!"
 encode(testeEncode);
-Decode(testeDecode);
+decode(testeDecode);
 //console.log(encode(teste));
 
 function decode() {
