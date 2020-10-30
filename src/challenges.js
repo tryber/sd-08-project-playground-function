@@ -49,10 +49,10 @@ function catAndMouse(mouse,cat1,cat2) {
   }
   
   else if (Math.abs(cat2) < Math.abs(cat1)) {
-      return "cat2"
+    return "cat2"
     }
   else if (Math.abs(cat2) == Math.abs(cat1)){
-    console.log("os os gatos trombam e o rato foge")
+    return "os gatos trombam e o rato foge";
   }
   }
 
