@@ -91,20 +91,20 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   for (let index in array) {
-    if (array[index] % 15 === 0) {
+    let temp = array[index]
+    array[index] = 'bug!'
+    if (temp % 15 === 0) {
       array[index] = 'fizzBuzz'
-    } else if (array[index] % 5 === 0) {
+    } else if (temp % 5 === 0) {
       array[index] = 'buzz'
-    } else if (array[index] % 3 === 0) {
+    } else if (temp % 3 === 0) {
       array[index] = 'fizz'
-    } else {
-      array[index] = 'bug!'
     }
     // console.log(array)
   }
   return array
 }
-// console.log(fizzBuzz([2, 15, 7, 9, 45]))
+ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 // let string = 'a hello world'
