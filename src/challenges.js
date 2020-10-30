@@ -20,10 +20,10 @@ splitSentence = frase.split(' ') ;
 return splitSentence
 }
 
-// Desafio 4
+/// Desafio 4
 function concatName (arrayString) {
-  let primeiraUltima = arrayString[0] + " , "+ arrayString[arrayString.length - 1]+ " . ";
-  return primeiraUltima;
+  concatName = arrayString[0] + " , "+ arrayString[arrayString.length - 1]+ " . ";
+  return concatName;
 }
 
 // Desafio 5
