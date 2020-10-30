@@ -174,6 +174,7 @@ function triangleCheck(lineA,lineB,lineC) {
   let condicao1,condicao2,condicaoFinal;
   if( lineA<lineB+lineC && lineB<lineA+lineC && lineC<lineB+lineA){
     condicao1=true;
+  }
   if(lineA>Math.abs(lineB-lineC) && lineB>Math.abs(lineA-lineC) && lineC>Math.abs(lineA-lineB)){
     condicao2=true;
   }
