@@ -142,10 +142,35 @@ function decode(vogais) {
 }
 decode("12345");
 
+
+
+
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
+  let array = [];
+  let arrayOrdem = tech.sort();
+
+  for (let cont = 0; cont <= tech.length -1; cont++) {
+    array.push({
+      tech: arrayOrdem[cont],
+      name: name
+    })
+  
+  }
+  if (array.length == 0) {
+    console.log("Vazio!");
 }
+  console.log(name);
+  return array;
+}
+console.log(techList([], "Vinicius"));
+
+
+
+
+
+
 
 // Desafio 11
 function generatePhoneNumber() {
