@@ -76,15 +76,6 @@ let vogaisDecode = {
 
 function generalEncode(word, dictionary) {
   return word.split('').map((value) => dictionary.hasOwnProperty(value) ? dictionary[value] : value).join('');
-  let coded = '';
-  for (letter of word) {
-    if (dictionary.hasOwnProperty(letter)) {
-      coded += dictionary[letter];
-    } else {
-      coded += letter;
-    }
-  }
-  return coded;
 }
 
 // Desafio 9
