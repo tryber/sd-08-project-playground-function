@@ -71,7 +71,7 @@ function highestCount(teste) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = 0, dist2 = 0;
-  let result = " ";
+  let result = "";
 
   Math.abs(dist1) = mouse - cat1;
   Math.abs(dist2) = mouse - cat2;
@@ -83,7 +83,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     result = "os gatos trombam e o rato foge";
   }
-  return result
+  return result;
 }
 
 // Desafio 8
