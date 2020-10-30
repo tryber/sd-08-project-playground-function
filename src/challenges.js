@@ -113,7 +113,7 @@ function fizzBuzz(divisivel) {
     }
     return array;
     }
-    fizzBuzz([2, 15, 7, 9, 45]);
+  fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode(vogais) {
@@ -128,10 +128,15 @@ function encode(vogais) {
 encode("naaaaeiou");
 
 
-function decode() {
+function decode(vogais) {
   // seu código aqui
+  vogais = vogais.replace(/3/g , "i");
+  vogais = vogais.replace(/2/g , "e");
+  
+  return vogais;
 }
 
+decode("h3 th2r2");
 // Desafio 10
 function techList() {
   // seu código aqui
