@@ -29,6 +29,7 @@ function footballPoints(wins, ties) {
 }
 
 let biggestNumber = (numbers) => {
+  return numbers.reduce((previousValue, currentValue) => currentValue > previousValue ? currentValue : previousValue, 0);
   let biggest = numbers[0];
   for (number of numbers) {
     if (number > biggest) {
@@ -39,14 +40,7 @@ let biggestNumber = (numbers) => {
 }
 
 let countElement = (container, element) => {
-  return container.reduce((previousValue, currentValue) => currentValue == element ? previousValue + 1 : previousValue, 0);
-  let count = 0;
-  for (let index = 0; index < container.length; index += 1) {
-    if (container[index] == element) {
-      count += 1;
-    }
-  }
-  return count;
+  return container.reduce((previousValue, currentValue) => currentValue == element ? previousValue + 1 : previousValue, 0 /* Initial value*/);
 }
 
 // Desafio 6
