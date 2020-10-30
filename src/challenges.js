@@ -186,7 +186,7 @@ function generatePhoneNumber(array) {
     } else if (array[cont] > maior) {
       maior = array[cont];
     } else if (array.length > 4) {
-        array.splice(3, 0, "-");
+        
     } else {
       retorno = array.join();
     }
