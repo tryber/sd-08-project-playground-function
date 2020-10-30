@@ -101,8 +101,8 @@ function decode() {
   resultado = resultado.replace("5", "u");
   return resultado;
 }
-let teste = "hi there!"
-console.log(encode(teste));
+//let teste = "hi there!"
+//console.log(encode(teste));
 
 // Desafio 10
 function techList() {
