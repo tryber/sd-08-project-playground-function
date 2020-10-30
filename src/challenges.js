@@ -159,21 +159,23 @@ function techList(arrayTech, nome) {
     return 'Vazio!'
   }
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Mario'));
 
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
-  let resultado;
+  let resultado = `(${arrayNumber[0]}${arrayNumber[1]})${arrayNumber[2]}${arrayNumber[3]}${arrayNumber[4]}${arrayNumber[5]}${arrayNumber[6]}-${arrayNumber[7]}${arrayNumber[8]}${arrayNumber[9]}${arrayNumber[10]}`;
   let count = 0;
+  // Verifica o tamanho da Array
   if (arrayNumber.length != 11) {
     resultado = 'Array com tamanho incorreto'
   }
+  // Verifica se um número é maior que 9 ou menor que 0
   for (index in arrayNumber) {
     if (arrayNumber[index] > 9 || arrayNumber[index] < 0) {
       resultado = 'não é possível gerar um número de telefone com esses valores'
       break;
     }
   }
+  // Verifica se algum número se repete 3 vezes ou mais
   for (index2 in arrayNumber) {
     for (index3 in arrayNumber) {
       if (arrayNumber[index3] === arrayNumber[index2]) {
@@ -183,15 +185,13 @@ function generatePhoneNumber(arrayNumber) {
     if (count >= 3) {
       resultado = 'não é possível gerar um número de telefone com esses valores'
       break;
-    } else {
-      resultado = `(${arrayNumber[0]}${arrayNumber[1]})${arrayNumber[2]}${arrayNumber[3]}${arrayNumber[4]}${arrayNumber[5]}${arrayNumber[6]}-${arrayNumber[7]}${arrayNumber[8]}${arrayNumber[9]}${arrayNumber[10]}`
     }
     count = 0;
   }
 
   return resultado;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]))
 
 // Desafio 12
 function triangleCheck() {
