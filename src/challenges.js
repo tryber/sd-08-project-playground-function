@@ -202,6 +202,9 @@ function hydrate(string) {
     cups += parseInt(numString[i], 10);
   }
 
+  if (cups === 1) {
+    return `1 copo de água`;
+  }
   return `${cups} copos de água`;
 }
 
