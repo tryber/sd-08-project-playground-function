@@ -90,13 +90,13 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
 
-  let posicaofalta1 = mouse - cat1
-  let posicaofalta2 = mouse - cat2
+  let posicaofalta1 = Math.abs(mouse - cat1) ;
+  let posicaofalta2 = Math.abs (mouse - cat2) ;
 
   if (posicaofalta1 < posicaofalta2) {
     return "cat1"
   }
-  else if (posicaofalta1 > posicaofalta2) {
+  else if (posicaofalta2 < posicaofalta1) {
     return "cat2"
   }
   else {
@@ -174,9 +174,28 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tec,name) {
+
+let novo = {
+  tech :""    ,
+  name :" "
+
 }
+
+
+  for (let key in tec){
+  novo.tech = tec[key]
+  novo.name = name
+
+
+
+
+}
+
+return novo
+}
+
+console.log(techList(["tec1","tec2","tec3"],"zin"))
 
 // Desafio 11
 function generatePhoneNumber() {
