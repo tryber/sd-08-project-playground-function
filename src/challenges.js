@@ -35,8 +35,8 @@ function highestCount(array) {
       maior = array[pos];
       counter = 1;
     }
-  return counter;
   }
+  return counter;
 }
 
 // Desafio 7
