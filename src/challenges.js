@@ -186,7 +186,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let triBC = lineB + lineC;
 
   let lineComparer = [lineA, lineB, lineC]
-  
+
   if (lineComparer.some(compare => compare > triAB || compare > triAC || compare > triBC)) {
     return false;
   }
