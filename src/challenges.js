@@ -100,13 +100,54 @@ function fizzBuzz(arrayDeNumeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(texto) {
+  let textoCodificado = [];
+  let stringCodificada = "";
+  for (let key in texto) {
+    if (texto[key] == "a") {
+      textoCodificado.push("1");
+    } else if (texto[key] == "e") {
+      textoCodificado.push("2");
+    } else if (texto[key] == "i") {
+      textoCodificado.push("3");
+    } else if (texto[key] == "o") {
+      textoCodificado.push("4");
+    } else if (texto[key] == "u") {
+      textoCodificado.push("5");
+    } else {
+      textoCodificado.push(texto[key]);
+    }
+  }
+  for (let key in textoCodificado) {
+    stringCodificada += textoCodificado[key];
+  }
+  return console.log(stringCodificada);
 }
-function decode() {
-  // seu código aqui
+function decode(textoEmbaralhado) {
+  let textoCorreto = [];
+  let stringCorreta = "";
+  for (let key in textoEmbaralhado) {
+    if (textoEmbaralhado[key] == "1") {
+      textoCorreto.push("a");
+    } else if (textoEmbaralhado[key] == "2") {
+      textoCorreto.push("e");
+    } else if (textoEmbaralhado[key] == "3") {
+      textoCorreto.push("i");
+    } else if (textoEmbaralhado[key] == "4") {
+      textoCorreto.push("o");
+    } else if (textoEmbaralhado[key] == "5") {
+      textoCorreto.push("u");
+    } else {
+      textoCorreto.push(textoEmbaralhado[key]);
+    }
+  }
+  for (let key in textoCorreto) {
+    stringCorreta += textoCorreto[key];
+  }
+  return console.log(stringCorreta);
 }
-
+encode("");
+decode("");
 // Desafio 10
 function techList() {
   // seu código aqui
