@@ -27,14 +27,14 @@ console.log(splitSentence("Go trybe"));
 // Desafio 4 Pergimtar quando completo o requisito o avaliador tira minhas notas
 function concatName(phrase) {
   // seu código aqui
-   // return phrase[phrase.length-1] + ' ' +phrase[0];
+   // return phrase[phrase.length-1] + ' ' + phrase[0];
   }
   // console.log(concatName());
   
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
- return wins *3 + ties;
+ return wins * 3 + ties;
 }
 console.log(footballPoints(3, 1));
 
@@ -44,8 +44,15 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+    if () {
+
+    } else if {
+
+    } else {
+      
+    }
 }
 
 // Desafio 8
