@@ -23,9 +23,9 @@ function splitSentence(separate) {
   // seu código aqui
   return separate.split(' ');
 }
-console.log(splitSentence("Go trybe"));   
+console.log(splitSentence('Go trybe'));   
 
-// Desafio 4 Pergimtar quando completo o requisito o avaliador tira minhas notas
+// Desafio 4 
 function concatName(phrase) {
   // seu código aqui
    return phrase[phrase.length-1] + ', ' + phrase[0];
@@ -44,14 +44,13 @@ function highestCount() {
 }
 
 // Desafio 7
-// Usei o site https://www.w3schools.com/jsref/jsref_abs.asp para aprender mais sobre o método match.abs()
+// Usei o site https://www.w3schools.com/jsref/jsref_abs.asp para aprender mais sobre o método match.abs() 
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   
   let positionCat1 = Math.abs(mouse - cat1);
   let positionCat2 = Math.abs(mouse - cat2);
   
-
   if (positionCat1 < positionCat2) {
       return 'cat1';
     } else if (positionCat2 < positionCat1) {
@@ -64,9 +63,21 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(10, 9, 9));
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
+  let sequence = []
+    for () {
+      if () {
+
+      } else if () {
+
+      } else if () {
+
+      }else
+    }
+
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode() {
