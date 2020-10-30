@@ -84,9 +84,9 @@ function catAndMouse(mouse, cat1,  cat2) {
   // seu código aqui
   let gato = "";
   if (cat1 == (mouse - 1) && cat2 == (mouse + 1)) {
-    gato = "os gatos trombam e o rato foge.";
+    gato = "os gatos trombam e o rato foge";
   } else if (cat2 == (mouse - 1) && cat1 == (mouse + 1)) {
-      gato = "os gatos trombam e o rato foge.";
+    gato = "os gatos trombam e o rato foge";
   } else if (cat1 - mouse < cat2 - mouse) {
     gato = "cat1";
   } else if(cat2 - mouse < cat1 - mouse) {
