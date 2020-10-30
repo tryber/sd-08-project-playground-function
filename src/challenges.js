@@ -162,14 +162,19 @@ function numerosValidos(arrayNumbers) {
   return true;
 }
 
+function numerosRepetidosTest(arrayNumbers, numero) {
+  let contador = 0;
+  for (let y = 0; y < arrayNumbers.length; y += 1) {
+    if (arrayNumbers[y] === numero) {
+      contador += 1;
+    }
+  }
+  return contador;
+}
+
 function numerosRepetidos(arrayNumbers) {
   for (let x = 0; x < arrayNumbers.length; x += 1) {
-    let contador = 1;
-    for (let y = 1; y < arrayNumbers.length; y += 1) {
-      if (arrayNumbers[x] === arrayNumbers[y] && x !== y - 1) {
-        contador += 1;
-      }
-    }
+    let contador = numerosRepetidosTest(arrayNumbers, arrayNumbers[x]);
     if (contador >= 3) {
       return false;
     }
@@ -190,6 +195,22 @@ function mainValida(arrayNumbers) {
   return true;
 }
 
+function montaPhoneNumber(phoneNumber, number, x) {
+  if (x == 0) {
+    phoneNumber += `(${number}`;
+  } else if (x === 1) {
+    phoneNumber += `${number}) `;
+  } else if (x > 1 && x <= 6) {
+    phoneNumber += number;
+    if (x == 6) {
+      phoneNumber += '-';
+    }
+  } else {
+    phoneNumber += number;
+  }
+  return phoneNumber;
+}
+
 function generatePhoneNumber(arrayNumbers) {
   // seu código aqui
   let phoneNumber = '';
@@ -199,18 +220,7 @@ function generatePhoneNumber(arrayNumbers) {
   }
 
   for (let x = 0; x < arrayNumbers.length; x += 1) {
-    if (x == 0) {
-      phoneNumber += `(${arrayNumbers[x]}`;
-    } else if (x === 1) {
-      phoneNumber += `${arrayNumbers[x]}) `;
-    } else if (x > 1 && x <= 6) {
-      phoneNumber += arrayNumbers[x];
-      if (x == 6) {
-        phoneNumber += '-';
-      }
-    } else {
-      phoneNumber += arrayNumbers[x];
-    }
+    phoneNumber = montaPhoneNumber(phoneNumber, arrayNumbers[x], x);
   }
   return phoneNumber;
 }
