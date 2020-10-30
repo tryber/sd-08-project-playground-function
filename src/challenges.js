@@ -101,7 +101,7 @@ function fizzBuzz(arrayNumeros) {
   for (let indice = 0; indice < arrayNumeros.length; indice += 1) {
     numero = arrayNumeros[indice];
 
-    if(isDivisor3e5(numero) !== '') {
+    if (isDivisor3e5(numero) !== '') {
       arrayFizzBuzz.push(isDivisor3e5(numero));
     } else if (numero % 5 === 0) {
       arrayFizzBuzz.push('buzz');
@@ -141,6 +141,7 @@ function encode(texto) {
   }
   return novoTexto;
 }
+
 function decode(texto) {
   let novoTexto = '';
 
