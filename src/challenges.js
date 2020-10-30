@@ -81,20 +81,20 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(text){
-  let t_a = text.replace("a","1");
-  let t_e = t_a.replace("e","2");
-  let t_i = t_e.replace("i","3");
-  let t_o = t_i.replace("o","4");
-  let t_u = t_o.replace("u","5");
+  let t_a = text.replace(/a/g,"1");
+  let t_e = t_a.replace(/e/g,"2");
+  let t_i = t_e.replace(/i/g,"3");
+  let t_o = t_i.replace(/o/g,"4");
+  let t_u = t_o.replace(/u/g,"5");
   return t_u;
 }
 
 function decode(text){
-  let t_a = text.replace("1","a");
-  let t_e = t_a.replace("2","e");
-  let t_i = t_e.replace("3","i");
-  let t_o = t_i.replace("4","o");
-  let t_u = t_o.replace("5","u");
+  let t_a = text.replace(/1/g,"a");
+  let t_e = t_a.replace(/2/g,"e");
+  let t_i = t_e.replace(/3/g,"i");
+  let t_o = t_i.replace(/4/g,"o");
+  let t_u = t_o.replace(/5/g,"u");
   return t_u;
 }
 // Desafio 10
