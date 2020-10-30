@@ -163,7 +163,7 @@ function techList(nomeTech, name) {
   return nomesOrdenado;
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "ruben"));
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "ruben");
 
 
 
