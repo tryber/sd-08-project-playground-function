@@ -3,9 +3,9 @@ function compareTrue(valor1, valor2) {
   // seu código aqui
 
   if( valor1 == true && valor2 ==true){
-    return('true');
+    return true;
   }else{
-    return('false');
+    return false;
   };
 };
 
@@ -66,16 +66,19 @@ function highestCount(array) {
   
   let greatest = array[array.length - 1];
 
-  for (let contador = array.length - 1; contador >= 0; contador -= 1) {
-    if (greatest === array[contador]) {
-      contador += 1;
+  let greatestRep = 0;
+
+  for(i = array.length; i >= 0; i--){
+    if(array[i] === greatest){
+     greatestRep++;
     }
   }
 
-  return contador;
-}
+  return(greatestRep);
+};
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+
+
 
 
 
