@@ -13,10 +13,10 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(word) {
-  let arr = [],
-    newWord = ''
+  let arr = []
+  let newWord = ''
   for (let i = 0; i < word.length; i += 1) {
-    if (word[i] != ' ') {
+    if (word[i] !== ' ') {
       newWord += word[i]
     } else {
       arr.push(newWord)
@@ -56,8 +56,8 @@ function highestCount(arr) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distancia1 = Math.abs(mouse - cat1),
-    distancia2 = Math.abs(mouse - cat2);
+  let distancia1 = Math.abs(mouse - cat1)
+  let distancia2 = Math.abs(mouse - cat2);
   if (distancia1 === distancia2) {
     return 'os gatos trombam e o rato foge'
   } else if (distancia1 < distancia2) {
@@ -131,7 +131,7 @@ function techList(tech, name) {
   tech.sort()
   let arr = []
   for (let i = 0; i < tech.length; i += 1) {
-    arr.push({ tech: tech[i], name: name })
+    arr.push({ tech:tech[i], name })
   }
   return arr;
 }
@@ -139,31 +139,31 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(arr) {
   // verificacao
-  if (arr.length != 11) {
-    return "Array com tamanho incorreto."
+  if (arr.length !== 11) {
+    return 'Array com tamanho incorreto.'
   }
   let count = 0;
   for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] < 0 || arr[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores"
+      return 'não é possível gerar um número de telefone com esses valores'
     }
     for (let j = 0; j < arr.length; j += 1) {
       if (arr[i] === arr[j]) {
         count += 1;
       }
       if (count >= 3) {
-        return "não é possível gerar um número de telefone com esses valores"
+        return 'não é possível gerar um número de telefone com esses valores'
       }
     }
     count = 0;
   }
   // execucao
-  let cellNumber = "("
+  let cellNumber = '('
   for (let i = 0; i < arr.length; i += 1) {
     if (cellNumber.length === 3) {
-      cellNumber += ") "
+      cellNumber += ') '
     } else if (cellNumber.length === 10) {
-      cellNumber += "-"
+      cellNumber += '-'
     }
     cellNumber += arr[i];
   }
@@ -183,8 +183,11 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(word) {
+  var r = /\d+/;
+  var quantidade = word.match(r)
+  /** Source: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994 */
+  return `${quantidade[0]} copos de água`
 }
 
 
