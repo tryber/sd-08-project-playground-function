@@ -83,10 +83,11 @@ highestCount([3, 1, 2, 3, 9, 5, 7]);
 function catAndMouse(mouse, cat1,  cat2) {
   // seu código aqui
   let gato = "";
-  if ((cat1 != mouse) === (cat2 != mouse)) {
+  if (cat1 == (mouse - 1) && cat2 == (mouse + 1)) {
     gato = "os gatos trombam e o rato foge.";
-  }
-  else if (cat1 - mouse < cat2 - mouse) {
+  } else if (cat2 == (mouse - 1) && cat1 == (mouse + 1)) {
+      gato = "os gatos trombam e o rato foge.";
+  } else if (cat1 - mouse < cat2 - mouse) {
     gato = "cat1";
   } else if(cat2 - mouse < cat1 - mouse) {
     gato = "cat2";
@@ -94,7 +95,7 @@ function catAndMouse(mouse, cat1,  cat2) {
   return gato;
 }
 
-console.log(catAndMouse(1, 0, 2));
+console.log(catAndMouse(0, 3, 2));
 
 
 // Desafio 8
@@ -102,7 +103,7 @@ function fizzBuzz(divisivel) {
   // seu código aqui
   let array = [];
     for (let cont = 0; cont <= divisivel.length -1; cont++) {
-      if ((divisivel[cont] % 3 === 0) && (divisivel[cont] % 5 === 0)) {
+      if ((divisivel[cont] % 3 == 0) && (divisivel[cont] % 5 == 0)) {
         array.push("fizzbuzz");
       } else if (divisivel[cont] % 5 === 0) {
         array.push("buzz");
