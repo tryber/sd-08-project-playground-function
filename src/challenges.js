@@ -61,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let closestCat = "";
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     closestCat = "cat1";
-  } else if (Math.abs(cat2 - mouse)  < Math.abs(cat1 - mouse)) {
+  } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
     closestCat = "cat2";
   } else {
     closestCat = "os gatos trombam e o rato foge";
@@ -89,9 +89,16 @@ function fizzBuzz(array) {
 fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
+// Solução encontrada no Stackoverflow utilizando String.prototype.replace()
 function encode(string) {
-  // seu código aqui
+  let stringSwap = { "a": "1", "e": "2", "i": "3", "o": "4", "u": "5" }
+  let encondeResult = "";
+  encondeResult = string.replace(/[aeiou]/gi, m => stringSwap[m])
+
+  return encondeResult;
 }
+encode("Tiago");
+
 function decode() {
   // seu código aqui
 }
