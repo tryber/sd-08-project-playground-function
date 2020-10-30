@@ -36,6 +36,7 @@ function highestCount(array) {
       counter = 1;
     }
   return counter;
+  }
 }
 
 // Desafio 7
