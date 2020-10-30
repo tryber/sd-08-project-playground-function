@@ -1,32 +1,30 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 == true && valor2 == true) {
-    return(true);
+  if (valor1 === true && valor2 === true) {
+    return (true);
   } else {
-    return(false);
-  }  
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return((base*height)/2);
+  return ((base*height)/2);
 }
 
 // Desafio 3
 function splitSentence(string) {
   let novaString = string.split(" ");
-  return(novaString);
+  return (novaString);
 }
 
 // Desafio 4
 function concatName(ordenar) {
   let ordenado = ordenar[ordenar.length-1] + ", " + ordenar[0];
-  return(ordenado);
+  return (ordenado);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return((wins*3)+(ties*1));
+  return ((wins*3)+(ties*1));
 }
 
 // Desafio 6
@@ -41,7 +39,7 @@ function highestCount(numbers) {
       contador += 1;
     }
   }
-  return(contador);
+  return (contador);
 }
 
 // Desafio 7
@@ -49,11 +47,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = Math.abs(mouse-cat1);
   let distanciaCat2 = Math.abs(mouse-cat2);
   if (distanciaCat1 > distanciaCat2) {
-    return("cat2");
+    return ("cat2");
   } else if (distanciaCat1 < distanciaCat2) {
-    return("cat1");
+    return ("cat1");
   } else {
-    return("os gatos trombam e o rato foge");
+    return ("os gatos trombam e o rato foge");
   }
 }
 
@@ -71,7 +69,7 @@ function fizzBuzz(numeros) {
       vetorResposta.push("fizz");
     }
   }
-  return(vetorResposta);
+  return (vetorResposta);
 }
 
 // Desafio 9
@@ -83,7 +81,7 @@ function encode(codigo) {
     codigoNovo = codigoNovo.replace(/i/g, "3");
     codigoNovo = codigoNovo.replace(/o/g, "4");
     codigoNovo = codigoNovo.replace(/u/g, "5");
-    return(codigoNovo);
+    return (codigoNovo);
   }
 }
 
@@ -95,7 +93,7 @@ function decode(codigo) {
     codigoNovo = codigoNovo.replace(/3/g, "i");
     codigoNovo = codigoNovo.replace(/4/g, "o");
     codigoNovo = codigoNovo.replace(/5/g, "u");
-    return(codigoNovo);
+    return (codigoNovo);
   }
 }
 
@@ -109,9 +107,9 @@ function techList(tech, name) {
       tech: tech[index],
       name: name}));
     }
-    return(objetos);
+    return (objetos);
   } else {
-    return("Vazio!");
+    return ("Vazio!");
   }
 }
 
@@ -119,31 +117,30 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(vetor) {
   if (vetor.length != 11){
-    return("Array com tamanho incorreto.");
+    return ("Array com tamanho incorreto.");
   }
   for (index = 0; index < vetor.length; index +=1){
     let contadorRepetido = 0;
     if (vetor[index] < 0){
-      return("não é possível gerar um número de telefone com esses valores");
+      return ("não é possível gerar um número de telefone com esses valores");
     } else if (vetor[index] > 9){
-      return("não é possível gerar um número de telefone com esses valores");
+      return ("não é possível gerar um número de telefone com esses valores");
     }
-  
+
     for (segundoIndex = vetor.length; segundoIndex > index; segundoIndex -= 1) {
       if (vetor[segundoIndex-1] == vetor[index]){
         contadorRepetido +=1;
-      } 
+      }
       if (contadorRepetido > 2) {
-        return("não é possível gerar um número de telefone com esses valores");
-      } 
+        return ("não é possível gerar um número de telefone com esses valores");
+      }
     }
     contadorRepetido = 0;
   }
-  
+
   let espaco = "-";
   let final = "";
-  for (index = 1; index < vetor.length; index +=1) { 
-    
+  for (index = 1; index < vetor.length; index +=1) {
     if (index == 1){
       final = "(" + vetor[index-1] + vetor[index] + ") ";
     } else if (index > 0 && index < 7) {
@@ -154,7 +151,7 @@ function generatePhoneNumber(vetor) {
       final += vetor[index];
     }
   }
-  return(final);
+  return (final);
 }
 
 // Desafio 12
@@ -167,7 +164,7 @@ function triangleCheck(lineA, lineB, lineC) {
   } else if (lineC < lineB+lineA && lineC > Math.abs(lineB-lineA)) {
     possivel = true;
   }
-  return(possivel);
+  return (possivel);
 }
 
 // Desafio 13
@@ -178,9 +175,9 @@ function hydrate(recebida) {
     soma += new Number(inteiro[i]);
   }
   if (soma == 1) {
-    return(soma + " copo de água");
+    return (soma + " copo de água");
   } else {
-    return(soma + " copos de água")
+    return (soma + " copos de água")
   }
 }
 
