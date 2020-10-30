@@ -164,6 +164,7 @@ let techListPerName =  {
   }
 
   let returnList = [];
+  tecnologys = tecnologys.sort()
 
   if ( tecnologys.length == 0 ) {
     return "Vazio!"
@@ -177,6 +178,7 @@ let techListPerName =  {
   return returnList
 }
 
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
 
 // Desafio 11
