@@ -113,7 +113,7 @@ decode("h3 th2r2!");
 function techList(tech, name) {
   let resultArray = [];
   let orderedTechList = tech.sort();
-  if (tech === 0) {
+  if (tech.length === 0) {
     return "Vazio!";
   }
   for (let i in orderedTechList) {
