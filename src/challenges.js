@@ -159,13 +159,14 @@ function generatePhoneNumber(numbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let allLine = [lineA, lineB, lineC]
-  if ( lineA < lineB + lineC && lineB < lineC + lineA && lineC < lineA + lineB && Math.min(allLine) > Math.max(allLine) - Math.min(allLine)) {
+  if ( lineA < lineB + lineC && lineB < lineC + lineA && lineC < lineA + lineB && Math.min(lineA, lineB, lineC) > Math.max(lineA, lineB, lineC) - Math.min(lineA, lineB, lineC)) {
     return true;
   } else {
     return false;
   }
 }
+
+console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
 function hydrate(drink) {
