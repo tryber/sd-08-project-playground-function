@@ -181,29 +181,35 @@ function hydrate(frase) {
   frase.split = '';
   for (let i in frase) {
     if ((typeof frase[i] === 'number ') */
-  let result = 0;
+  let number = 0;
   for (let i in frase) {
     if (frase[i] === '1') {
-      result += 1;
+      number += 1;
     } else if (frase[i] === '2') {
-      result += 2;
+      number += 2;
     } else if (frase[i] === '3') {
-      result += 3;
+      number += 3;
     } else if (frase[i] === '4') {
-      result += 4;
+      number += 4;
     } else if (frase[i] === '5') {
-      result += 5;
+      number += 5;
     } else if (frase[i] === '6') {
-      result += 6;
+      number += 6;
     } else if (frase[i] === '7') {
-      result += 7;
+      number += 7;
     } else if (frase[i] === '8') {
-      result += 8;
+      number += 8;
     } else if (frase[i] === '9') {
-      result += 9;
+      number += 9;
+    }
+    let result;
+    if (number === 1) {
+      result = number + ' copo de água'
+    } else {
+      result = number + ' copos de água'
     }
   }
-  return result + ' copos de água'
+  return result
 }
 
 module.exports = {
