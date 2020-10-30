@@ -77,13 +77,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let string3 = "os gatos trombam e o rato foge";
 
   if (mouse - cat1 < mouse - cat2) {
-    return string1;
+    return "cat1";
 
   } else if (mouse - cat2 < mouse - cat1) {
-    return string2;
+    return "cat2";
 
   } else {
-    return string3;
+    return "os gatos trombam e o rato foge";
 
   }
     
