@@ -85,7 +85,7 @@ function encode(text) {
     .split('u')
     .join('5');
 }
-
+//
 function decode(text) {
   return text
     .split('1')
