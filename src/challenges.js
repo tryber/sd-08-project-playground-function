@@ -1,31 +1,26 @@
 // Desafio 1
 function compareTrue(a, b) {
   return a && b;
-  // seu código aqui
 }
 
 // Desafio 2
 function calcArea(base, height) {
   return base * height / 2;
-  // seu código aqui
 }
 
 // Desafio 3
 function splitSentence(sentence) {
   return sentence.split(' ');
-  // seu código aqui
 }
 
 // Desafio 4
 function concatName(names) {
   return names[names.length - 1] + ', ' + names[0];
-  // seu código aqui
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return wins * 3 + ties;
-  // seu código aqui
 }
 
 let biggestNumber = (numbers) => {
@@ -41,7 +36,6 @@ let countElement = (container, element) => {
 // Desafio 6
 function highestCount(numbers) {
   return countElement(numbers, biggestNumber(numbers));
-  // seu código aqui
 }
 
 // Desafio 7
@@ -53,7 +47,6 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     return cat1Distance > cat2Distance ? 'cat2' : 'cat1';
   }
-  // seu código aqui
 }
 
 // Desafio 8
@@ -63,7 +56,6 @@ function fizzBuzz(numbers) {
     let buzz = (value % 5) == 0;
     return fizz ? buzz ? 'fizzBuzz' : 'fizz' : buzz ? 'buzz' : 'bug!';
   });
-  // seu código aqui
 }
 
 let vogaisEncode = {
@@ -97,11 +89,9 @@ function generalEncode(word, dictionary) {
 // Desafio 9
 function encode(word) {
   return generalEncode(word, vogaisEncode);
-  // seu código aqui
 }
 function decode(word) {
   return generalEncode(word, vogaisDecode);
-  // seu código aqui
 }
 
 // Desafio 10
@@ -109,19 +99,6 @@ function techList(techs, name) {
   if (techs.length == 0) return 'Vazio!';
   techs.sort();
   return techs.map((value) => ({tech: value, name: name}));
-  if (techs.length > 0) {
-    let listOfTechs = [];
-    for (tech of techs) {
-      listOfTechs.push({
-        tech,
-        name
-      });
-    }
-    return listOfTechs;
-  } else {
-    return 'Vazio!';
-  }
-  // seu código aqui
 }
 
 // Desafio 11
@@ -143,13 +120,11 @@ function generatePhoneNumber(numberArray) {
     numberArray[3] + numberArray[4] + numberArray[5] + numberArray[6] +
     '-' + numberArray[7] + numberArray[8] + numberArray[9] + numberArray[10];
   }
-  // seu código aqui
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   return ((lineA + lineB > lineC) && (lineA + lineC > lineB) && (lineB + lineC > lineA));
-  // seu código aqui
 }
 
 // Desafio 13
@@ -162,7 +137,6 @@ function hydrate(text) {
   } else {
     return `${waterAmount} copos de água`
   }
-  // seu código aqui
 }
 
 
