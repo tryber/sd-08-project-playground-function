@@ -35,7 +35,7 @@ function splitSentence(string) {
 
 // >>-----------> Desafio 4
 function concatName(theArray) {
-  let saida = theArray[theArray.length-1] + ',' + theArray[0] + '.';
+  let saida = theArray[theArray.length-1] + ', ' + theArray[0];
   return saida;
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
@@ -62,11 +62,21 @@ function highestCount(entrada) {
   // console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 9]));
 
 // >>----------> Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let dCat1 = Math.sqrt(Math.pow((mouse - cat1), 2)); // Fórmula simplificada de menor distância: Teorema de Pitagoras.
+  let dCat2 = Math.sqrt(Math.pow((mouse - cat2), 2)); // >>----------> dAB = radix² (A - B)²
+  
+  if (dCat1 == dCat2)  {
+    return 'Os gatos trombam e o rato foge'
+  } else if (dCat1 == 0 || dCat1 < dCat2) {
+    return 'cat1';
+  } else if (dCat2 == 0 || dCat1 > dCat2) {
+    return 'cat2';
+  }
 }
+// console.log(catAndMouse(-1, 3, 4));
 
-// Desafio 8
+// >>----------> Desafio 8
 function fizzBuzz() {
   // seu código aqui
 }
