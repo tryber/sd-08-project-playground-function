@@ -2,9 +2,8 @@
 function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
-  } 
-    return false;
-  
+  }
+  return false;
 }
 compareTrue(true, true);
 
@@ -26,12 +25,12 @@ splitSentence('Fabio Higor de Almeida');
 function concatName(nomes) {
   let ultima = nomes.pop();
   let primeira = nomes.shift();
-  let final = ultima +', '+ primeira;
-  //final.push(primeira);
-  //final.unshift(ultima);
-  console.log(final)
+  let final = ultima + ', ' + primeira;
+  // final.push(primeira);
+  // final.unshift(ultima);
+  return final;
 }
-let nomes = ['Lucas','Cassiano','Ferraz','Paolillo'];
+let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 concatName(nomes);
 
 // Desafio 5
@@ -63,19 +62,32 @@ function catAndMouse(mouse, cat1, cat2) {
   let p1 = Math.abs(cat1 - mouse);
   let p2 = Math.abs(cat2 - mouse);
   if (p1 === p2) {
-    console.log('os gatos trombam e o rato foge');
+    return 'os gatos trombam e o rato foge';
   } else if (p1 > p2) {
-    console.log('cat 2');
+    return 'cat 2';
   } else if (p1 < p2) {
-    console.log('cat 1');
+    return 'cat 1';
   }
 }
 catAndMouse(0, -1, 1);
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+let arr = [2, 15, 7, 9, 45];
+function fizzBuzz(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 3 === 0 && arr[i] % 5 === 0) {
+      arr[i] = 'fizzBuzz';
+    } else if (arr[i] % 3 === 0) {
+      arr[i] = 'fizz';
+    } else if (arr[i] % 5 === 0) {
+      arr[i] = 'buzz';
+    } else {
+      arr[i] = 'bug!';
+    }
+  }
+  return arr;
 }
+fizzBuzz(arr);
 
 // Desafio 9
 function encode() {
