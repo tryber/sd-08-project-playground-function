@@ -131,7 +131,7 @@ function techList(tech, name) {
   tech.sort()
   let arr = []
   for (let i = 0; i < tech.length; i += 1) {
-    arr.push({ tech:tech[i], name })
+    arr.push({ tech: tech[i], name })
   }
   return arr;
 }
@@ -184,9 +184,12 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(word) {
-  var r = /\d+/;
-  var quantidade = word.match(r)
+  let r = /\d+/;
+  let quantidade = word.match(r)
   /** Source: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994 */
+  if (quantidade[0] === 1) {
+    return `${quantidade[0]} copo de água`
+  }
   return `${quantidade[0]} copos de água`
 }
 
