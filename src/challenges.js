@@ -98,8 +98,9 @@ function encode(word1) {
           list1[index] = 5;
       }
   }
-  return list1;
+  return list1.join('');
 }
+console.log(encode('Icaro'));
 
 function decode(word2) {
   let list2 = word2.split('');
@@ -116,8 +117,9 @@ function decode(word2) {
           list2[index] = 'u';
       }
   }
-  return list2 ;
+  return list2.join('') ;
 }
+console.log(decode('3c1r4'));
 
 // Desafio 10
 function techList() {
