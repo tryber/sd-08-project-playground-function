@@ -108,21 +108,54 @@ function techList(tech, name) {
       objetos.push(new Object({
       Tecnologia: tech[index],
       Nome: name}));
-      return(objetos);
     }
+    return(objetos);
   } else {
-    console.log("Vazio!");
-    return("");
+    return("Vazio!");
   }
 }
 
-console.log((techList([], "Victor")))
+
+//Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
+//Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], generatePhoneNumber deverá retornar (12) 34567-8901.
+//Se a função receber um array com tamanho diferente de 11, a mesma deve retornar "Array com tamanho incorreto.".
+//Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, generatePhoneNumber deverá retornar a string "não é possível gerar um número de telefone com esses valores".
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(vetor) {
+  /* if (vetor.length != 11){
+    return("Array com tamanho incorreto.");
+  }
+  for (index = 0; index < vetor.length; index +=1){
+    let contadorRepetido = 0;
+    if (vetor[index] < 0){
+      return("Não é possível gerar um número de telefone com esses valores");
+    } else if (vetor[index] > 9){
+      return("Não é possível gerar um número de telefone com esses valores");
+    }
+  
+    for (segundoIndex = vetor.length; segundoIndex > index; segundoIndex -= 1) {
+      if (vetor[segundoIndex-1] == vetor[index]){
+        contadorRepetido +=1;
+      } 
+      if (contadorRepetido > 2) {
+        return("Não é possível gerar um número de telefone com esses valores");
+      } 
+    }
+    contadorRepetido = 0;
+  }
+  
+  let ddd = [];
+  let primeiraParte = [];
+  let segundaParte = [];
+  for () { */
+    
+  }
+  
 }
 
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
@@ -149,4 +182,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
