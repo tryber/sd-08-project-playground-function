@@ -124,7 +124,7 @@ function techList(techs, name) {
   let array = [];
   for (let i in techs) {
     let tech = techs[i];
-    rv = { tech, name };
+    let rv = { tech, name };
     array.push(rv);
   }
   return array.sort(function (a, b) {
@@ -176,7 +176,6 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(frase) {
   /* let number = 0;
   number += frase.match(/\d+/)[1];
-  
   return number */
   /* let result = ;
   frase.split = '';
@@ -203,7 +202,7 @@ function hydrate(frase) {
     } else if (frase[i] === '9') {
       result += 9;
     }
-  } 
+  }
   return result + ' copos de água'
 }
 
