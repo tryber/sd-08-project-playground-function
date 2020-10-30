@@ -27,7 +27,7 @@ function footballPoints(wins, ties) {
 function hC(a, b) {
   let rep = 0;
   for (let i = 0; i < a.length; i += 1) {
-    if(a[i] === b) {
+    if (a[i] === b) {
       rep += 1;
     }
   }
@@ -66,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 function fB(a) {
-  if(a % 3 === 0 && a % 5 === 0) {
+  if (a % 3 === 0 && a % 5 === 0) {
     return 'fizzBuzz';
   }
 
@@ -154,7 +154,6 @@ function techList(a, name) {
 }
 
 function verifyArray(a) {
-  let count = 1;
   for (let i = 0; i < a.length; i += 1) {
     if (a[i] < 0 || a[i] > 9) {
       return false;
@@ -163,7 +162,8 @@ function verifyArray(a) {
   return true;
 }
 function verifyRep (a) {
-  let b = a.sort();
+  let b = [...a];
+  b.sort();
   let c = 1;
   for (let i = 1; i < b.length; i += 1) {
     if (b[i] === b[i - 1]) {
@@ -205,7 +205,7 @@ function generatePhoneNumber(a) {
         break;
     }
   }
-  
+
   return resp.join('');
 }
 
