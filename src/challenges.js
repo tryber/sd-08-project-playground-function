@@ -203,7 +203,7 @@ function hydrate(string) {
   }
 
   if (cups === 1) {
-    return `1 copo de água`;
+    return '1 copo de água';
   }
   return `${cups} copos de água`;
 }
