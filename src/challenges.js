@@ -66,16 +66,16 @@ function catAndMouse(mouse, cat1, cat2) {
   let disMouseCat1 = cat1 - mouse;
   let disMouseCat2 = cat2 - mouse;
   let messagem;
-   if(disMouseCat1 === disMouseCat2){
-    messagem = 'os gatos trombam e o rato foge';
-  } else if(disMouseCat1 < disMouseCat2){
+   if(disMouseCat1 < disMouseCat2){
     messagem = 'cat1';
-  } else {
+  } else if(disMouseCat1 > disMouseCat2){
     messagem = 'cat2';
+  } else {
+    messagem = 'os gatos trombam e o rato foge';
   }
   return (`"${messagem}"`);
 }
-// console.log(catAndMouse(1, 7, 8));
+// console.log(catAndMouse(1, 7, 7));
 
 
 // Desafio 8
