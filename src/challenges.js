@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a == true && b == true) {
+  if (a === true && b === true) {
     return true;
   } else {
     return false;
@@ -16,21 +16,22 @@ function calcArea(base, height) {
 calcArea(10, 5);
 
 function splitSentence(frase) {
-  let x = frase.split(" ");
+  let x = frase.split(' ');
   return x;
 }
-splitSentence("Fabio Higor de Almeida");
+splitSentence('Fabio Higor de Almeida');
 
 // Desafio 4
-let nomes = ["Lucas", "Cassiano", "Ferraz", "Paolillo"];
+
 function concatName(nomes) {
   let ultima = nomes.pop();
   let primeira = nomes.shift();
-
-  nomes.push(primeira);
-  nomes.unshift(ultima);
-  return nomes;
+  let final = [];
+  final.push(primeira);
+  final.unshift(ultima);
+  return final;
 }
+let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 concatName(nomes);
 
 // Desafio 5
@@ -48,7 +49,7 @@ function highestCount(num) {
   let y = 0;
 
   for (let i = 0; i < num.length; i++) {
-    if (num[i] == max) {
+    if (num[i] === max) {
       y += 1;
     }
   }
@@ -59,17 +60,17 @@ highestCount(num);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let p1 = cat1 - mouse;
-  let p2 = cat2 - mouse;
+  let p1 = Math.abs(cat1 - mouse);
+  let p2 = Math.abs(cat2 - mouse);
   if (p1 == p2) {
-    return "os gatos trombam e o rato foge";
+    console.log('os gatos trombam e o rato foge');
   } else if (p1 > p2) {
-    return "cat 2";
+    console.log('cat 2');
   } else if (p1 < p2) {
-    return "cat 1";
+    console.log('cat 1');
   }
 }
-catAndMouse(2, 6, 4);
+catAndMouse(0, -1, 1);
 
 // Desafio 8
 function fizzBuzz() {
