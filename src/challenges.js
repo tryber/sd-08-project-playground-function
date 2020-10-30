@@ -270,17 +270,24 @@ function decode(str) {
 
 // Desafio 10
 function techList(arrStr, name) {
+  
   let techName = arrStr;
-  techName.sort();
-  let outputObj = [];
-
-  for (let index = 0; index < techName.length; index += 1) {
-    let aux = {};
-    aux.tech = techName[index];
-    aux.name = name;
-    outputObj.push(aux);
+  if (techName.length == 0) {
+    let outputErro = "Vazio!";
+    return outputErro;
   }
-  return outputObj;
+  else {
+    techName.sort();
+    let outputObj = [];
+  
+    for (let index = 0; index < techName.length; index += 1) {
+      let aux = {};
+      aux.tech = techName[index];
+      aux.name = name;
+      outputObj.push(aux);
+    }
+    return outputObj;
+  }
 }
 
 // < Para o teste manual >
