@@ -76,13 +76,13 @@ function fizzBuzz(array) {
   let resultado = []
   for(let index in array){
     let numeroDivisivelPorTresECinco = (array[index] % 3) == 0 && (array[index]) % 5 == 0,
-        numeroDivivelApenasPorTres   = (array[index] % 3) == 0 && (array[index]) % 5 !== 0,
+        numeroDivisivelApenasPorTres   = (array[index] % 3) == 0 && (array[index]) % 5 !== 0,
         numeroDivisivelApenasPorCinco = (array[index] % 3) !== 0 && (array[index]) % 5 == 0
     switch (true) {
       case numeroDivisivelPorTresECinco:
         resultado.push('fizzBuzz')
       break;
-      case numeroDivivelApenasPorTres:
+      case numeroDivisivelApenasPorTres:
         resultado.push('fizz')
       break;
       case numeroDivisivelApenasPorCinco:
@@ -93,7 +93,7 @@ function fizzBuzz(array) {
     }
   }
   return resultado
-}fizzBuzz([15,21,2,5,3])
+}
 
 // Desafio 9
 function encode() {
