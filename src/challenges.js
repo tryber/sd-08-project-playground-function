@@ -72,16 +72,20 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse - cat1 > mouse - cat2){
+  let mouseMove = Math.abs(mouse)
+  let cat1Move = Math.abs(cat1)
+  let cat2Move = Math.abs(cat2)
+
+  if (Math.abs(mouseMove - cat1Move) < Math.abs(mouseMove - cat2Move)){
     return "cat1";
-  } else if (mouse - cat1 < mouse - cat2){
+  } else if (Math.abs(mouseMove - cat2Move) < Math.abs(mouseMove - cat1Move)){
     return "cat2";
   } else {
     return "os gatos trombam e o rato foge";
   }
 }
 
-console.log(catAndMouse(5, 3, 2));
+//console.log(catAndMouse(-1, -3, 2));
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -105,50 +109,39 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(literal) {
-  let troca = literal.toLowerCase();
-  for (i in troca){
-    if(troca[i] == "a"){
-      troca = troca.replace(troca[i], "1");
-    }
-    if(troca[i] == "e"){
-      troca = troca.replace(troca[i], "2");
-    }
-    if(troca[i] == "i"){
-      troca = troca.replace(troca[i], "3");
-    }
-    if(troca[i] == "o"){
-      troca = troca.replace(troca[i], "4");
-    }
-    if(troca[i] == "u"){
-      troca = troca.replace(troca[i], "5");
+  for (i in literal){
+    if(literal[i] == "a"){
+      literal = literal.replace(literal[i], "1");
+    } else if(literal[i] == "e"){
+      literal = literal.replace(literal[i], "2");
+    } else if(literal[i] == "i"){
+      literal = literal.replace(literal[i], "3");
+    } else if(literal[i] == "o"){
+      literal = literal.replace(literal[i], "4");
+    } else if(literal[i] == "u"){
+      literal = literal.replace(literal[i], "5");
     }
   }
-  return troca;
+  return literal;
 }
 
-
+//console.log(encode("hi there"))
 
 function decode(literal) {
-  let troca = literal.toLowerCase();
-
-  for (i in troca){
-    if(troca[i] == "1"){
-      troca = troca.replace(troca[i], "a");
-    }
-    if(troca[i] == "2"){
-      troca = troca.replace(troca[i], "e");
-    }
-    if(troca[i] == "3"){
-      troca = troca.replace(troca[i], "i");
-    }
-    if(troca[i] == "4"){
-      troca = troca.replace(troca[i], "o");
-    }
-    if(troca[i] == "5"){
-      troca = troca.replace(troca[i], "u");
+  for (i in literal){
+    if(literal[i] == "1"){
+      literal = literal.replace(literal[i], "a");
+    } else if(literal[i] == "2"){
+      literal = literal.replace(literal[i], "e");
+    } else if(literal[i] == "3"){
+      literal = literal.replace(literal[i], "i");
+    } else if(literal[i] == "4"){
+      literal = literal.replace(literal[i], "o");
+    } else if(literal[i] == "5"){
+      literal = literal.replace(literal[i], "u");
     }
   }
-  return troca;
+  return literal;
 }
 
 //console.log(decode("H3 th2r2!"));
