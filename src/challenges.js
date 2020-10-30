@@ -171,7 +171,21 @@ function techList(array, name) {
  
 // Desafio 11
 function generatePhoneNumber(array) {
-
+  let numeros = "";
+  let telefone = '', meioTel = '', fimTel = '';
+  for(let i = 0; i < array.length; i++){
+    numeros += array[i]
+  }
+  telefone = " ("+numeros[0]+""+numeros[1]+")";
+  for (let i = 2; i <= 6; i++){
+    meioTel += numeros[i]; 
+  }
+  telefone += meioTel +"-";
+  for(let i = 7; i <= 10; i++){
+    fimTel += numeros[i]
+  }
+  telefone += fimTel;
+  return telefone;
 }
 
 //console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
