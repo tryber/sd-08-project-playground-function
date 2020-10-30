@@ -141,13 +141,14 @@ function decode(codigo) {
 // Desafio 10
 function techList(techArray, seuNome) {
   // seu código aqui
+  let array = techArray.sort();
   let vazio = "Vazio!";
   let saida = [];
   
   if (techArray.length > 0){
-  for (let i = 0; i < techArray.length; i += 1){
+  for (let key in array){
       let objeto = {};
-      objeto.tech = techArray[i];
+      objeto.tech = array[key];
       objeto.name = seuNome;
       saida.push(objeto);
   }
