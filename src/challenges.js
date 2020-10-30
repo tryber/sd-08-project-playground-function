@@ -13,21 +13,18 @@ function calcArea(base,heigth) {
   // seu código aqui
   return (base * heigth)/2
 }
-
 // Desafio 3
 function splitSentence(string) {
   let array = string.split(' ');
   return array;
 }
  //console.log (splitSentence('go trybe'));
-
 // Desafio 4
 function concatName(string) {
   let primeiroUltimo = `${string[string.length - 1]}, ${string[0]}`;
   return primeiroUltimo;
 }
  //console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-
 // Desafio 5
 function footballPoints(wins,ties) {
   // seu código aqui
@@ -35,7 +32,6 @@ function footballPoints(wins,ties) {
   return totalPontos
 }
 //console.log(footballPoints(3,1))
-
 // Desafio 6
 function highestCount(arrayNumbers) {
   // seu código aqui
@@ -45,7 +41,6 @@ function highestCount(arrayNumbers) {
   for (let a = 0; a < numbers.length; a += 1) {
     if (numbers[numbers.length - 1] === numbers[a]) {
       quantidadeDeVezesDoMaior += 1;
-      
     }
   }
   return quantidadeDeVezesDoMaior;
