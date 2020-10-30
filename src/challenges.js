@@ -125,14 +125,11 @@ let stringToArray = string.split("");
 let stringToReturn = "";
 console.log(stringToArray)
 
-
   for (eachLetter in stringToArray) {
 
   let character = stringToArray[eachLetter];
 
   if (character == '1' || character == '2' || character == '3' || character == '4' || character == '5') {
-
-    console.log(character)
 
     if (stringToArray[eachLetter] == '1') {
         stringToArray[eachLetter]  = 'a'
@@ -159,12 +156,28 @@ console.log(stringToArray)
 
 }
 
-
-
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnologys, name) {
+let techListPerName =  {
+    tech: "NomeTech",
+    name: name
+  }
+
+  let returnList = [];
+
+  for (technology in tecnologys) {
+    techListPerName.tech = tecnologys[technology]
+    techListPerName.name = name
+    
+    console.log(techListPerName)
+    returnList += Object.assign(techListPerName)
+    
+  }
+
+  return returnList
 }
+
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
 // Desafio 11
 function generatePhoneNumber() {
