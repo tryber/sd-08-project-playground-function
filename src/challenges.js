@@ -107,7 +107,7 @@ function encode(string) {
              stringToArray[index]  = '3'
           }
          if (stringToArray[index] == 'o') {
-            stringToArray[index]  = '4'
+             stringToArray[index]  = '4'
           }
          if (stringToArray[index] == 'u') {
              stringToArray[index]  = '5'  }
@@ -118,46 +118,47 @@ function encode(string) {
   }
     return stringToReturn
 }
-console.log(encode("aeiou"))
-
-
-
 
 function decode(string) {
 
 let stringToArray = string.split("");
 let stringToReturn = "";
+console.log(stringToArray)
 
 
-for (eachLetter in stringToArray) {
+  for (eachLetter in stringToArray) {
 
-  let character = '';
+  let character = stringToArray[eachLetter];
 
   if (character == '1' || character == '2' || character == '3' || character == '4' || character == '5') {
-    if (character == '1') {
-      stringToArray[character] = 'a'
+
+    console.log(character)
+
+    if (stringToArray[eachLetter] == '1') {
+        stringToArray[eachLetter]  = 'a'
     }
-    if (character == '2') {
-      stringToArray[character] = 'e'
+    if (stringToArray[eachLetter] == '2') {
+        stringToArray[eachLetter]  = 'e'
     }
-    if (character == '3') {
-      stringToArray[character] = 'i'
+    if (stringToArray[eachLetter] == '3') {
+        stringToArray[eachLetter]  = 'i'
     }
-    if (character == '4') {
-      stringToArray[character] = 'o'
+    if (stringToArray[eachLetter] == '4') {
+        stringToArray[eachLetter]  = 'o'
     }
-    if (character == '5') {
-      stringToArray[character] = 'u'
+    if (stringToArray[eachLetter] == '5') {
+        stringToArray[eachLetter]  = 'u'
     }
   }
 }
+console.log(stringToArray)
   for (eachCharacter in stringToArray) {
     stringToReturn += stringToArray[eachCharacter]
   }
   return stringToReturn
 
 }
-console.log(decode("12345"))
+
 
 
 // Desafio 10
