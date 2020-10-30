@@ -51,11 +51,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat1Position = mouse - cat1;
   let cat2Position = mouse - cat2;
   if ((cat1Position ** 2) < (cat2Position ** 2)) {
-    return 'cat1';
+    return ('cat1');
   } else if ((cat1Position ** 2) > (cat2Position ** 2)) {
-    return 'cat2';
+    return ('cat2');
   }
-  return 'os gatos trombam e o rato foge';
+  return ('os gatos trombam e o rato foge');
 }
 
 // Desafio 8
@@ -131,53 +131,55 @@ function decode(str) {
 
 // Desafio 10
 function techList(tech, name) {
-  if (tech.length === 0) {
-    return 'Vazio!';
-  }
   let str = [];
-  tech = tech.sort();
+  let sortList = tech.sort()
   for (let i = 0; i < tech.length; i += 1) {
     str[i] = {
-      tech: tech[i],
+      tech: sortList[i],
       nome: name,
     };
   }
+  if (tech.length === 0) {
+    return ('Vazio!');
+  }
   return str;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
+"Lucas"));
 
 function repetNumberCaracteres(arr) {
   let countRepet = 0;
-    for (let i = 0; i < arr.length; i += 1) {
-      for (let x = 0; x < arr.length; x += 1) {
-        if (arr[i] === arr[x]) {
-          countRepet += 1;
-        }
-        if (countRepet > 2) {
-          return true;
-        }
+  for (let i = 0; i < arr.length; i += 1) {
+    for (let x = 0; x < arr.length; x += 1) {
+      if (arr[i] === arr[x]) {
+        countRepet += 1;
       }
-      countRepet = 0;
+      if (countRepet > 2) {
+        return true;
+      }
     }
+    countRepet = 0;
+  }
   return false;
 }
 
 // Desafio 11
 function generatePhoneNumber(arr) {
-  if (arr.length > 11) return 'Array com tamanho incorreto.';
+  if (arr.length > 11) return ('Array com tamanho incorreto.');
 
   let modelPhoneNumber = '(xx) xxxxx-xxxx';
   for (let i = 0; i < arr.length; i += 1) {
-    if (arr[i] < 0 ||arr[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+    if (arr[i] < 0 || arr[i] > 9) {
+      return ('não é possível gerar um número de telefone com esses valores');
     }
     modelPhoneNumber = modelPhoneNumber.replace('x', arr[i]);
   }
-  return repetNumberCaracteres(arr) ? 'não é possível gerar um número de telefone com esses valores' : modelPhoneNumber;
+  return repetNumberCaracteres(arr) ? ('não é possível gerar um número de telefone com esses valores') : modelPhoneNumber;
 }
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  return lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB;
 }
 
 // Desafio 13
