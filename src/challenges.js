@@ -128,12 +128,18 @@ function techList(array, name) {
 
 
 // Desafio 11
-//Método de contagem de itens do array: https://stackoverflow.com/a/19395302/;
-//Método array.some: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/some;
+// Método de contagem de itens do array: https://stackoverflow.com/a/19395302/;
+// Método array.some: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/some;
 function numValidator(array) {
   let counts = {};
 
-  array.forEach((arrayElement) => counts[arrayElement] = (counts[arrayElement] || 0) + 1);
+  for (let i = 0; i < array.length; i += 1) {
+    if (counts[array[i]]) {
+      counts[array[i]] += 1;
+    } else {
+      counts[array[i]] = 1;
+    }
+  }
 
   for (let key in counts) {
     if (counts[key] >= 3) {
@@ -147,7 +153,7 @@ function numValidator(array) {
 function generatePhoneNumber(array) {
   let errorMsg = 'não é possível gerar um número de telefone com esses valores';
 
-  if (array.length != 11) {
+  if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
@@ -155,7 +161,7 @@ function generatePhoneNumber(array) {
     return errorMsg;
   }
 
-  if (! numValidator(array)) {
+  if (!numValidator(array)) {
     return errorMsg;
   }
 
