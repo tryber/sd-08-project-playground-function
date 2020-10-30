@@ -287,6 +287,7 @@ function techList(arrStr, name) {
 
 
 // Desafio 11
+<<<<<<< HEAD
 function generatePhoneNumber(arrNum) {
   let aux = arrNum;
   let outputStr = '';
@@ -344,12 +345,11 @@ function generatePhoneNumber(arrNum) {
     outputStr = "Array com tamanho incorreto.";
   }
   return outputStr;
+=======
+function generatePhoneNumber() {
+  // seu código aqui
+>>>>>>> parent of dae62db... conclui o Desafio 11
 }
-
-// < Para o teste manual >
-// let arrayteste4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-// console.log(generatePhoneNumber(arrayteste4));
-
 
 // Desafio 12
 function triangleCheck() {
