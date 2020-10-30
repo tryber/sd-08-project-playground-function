@@ -105,7 +105,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let troca = string.toLowerCase();
+  let troca = string;
   for (i in troca){
     if(troca[i] == "a"){
       troca = troca.replace(troca[i], "1");
@@ -128,7 +128,7 @@ function encode(string) {
 //console.log(encode("hi there!"));
 
 function decode(string) {
-  let troca = string.toLowerCase();
+  let troca = string;
 
   for (i in troca){
     if(troca[i] == "1"){
