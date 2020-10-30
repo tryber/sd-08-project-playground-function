@@ -97,11 +97,11 @@ function encode(string) {
   let encoded = '';
 
   let vogals = {
-    'a': 1,
-    'e': 2,
-    'i': 3,
-    'o': 4,
-    'u': 5,
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
   }
 
   for (let i of string) {
