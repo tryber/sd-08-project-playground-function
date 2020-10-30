@@ -43,7 +43,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function numMaior(arrayNumbers){
+function numMaior(arrayNumbers) {
   let maior = 0;
 
   for (let x = 0; x < arrayNumbers.length; x += 1) {
@@ -146,30 +146,56 @@ function techList(arrayTech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(arrayNumbers) {
-  // seu código aqui
-  let phoneNumber = '';
-
+function arrayValido(arrayNumbers) {
   if (arrayNumbers.length !== 11) {
-    return 'Array com tamanho incorreto.';
+    return false;
   }
+  return true;
+}
 
+function numerosValidos(arrayNumbers) {
   for (let x = 0; x < arrayNumbers.length; x += 1) {
     if (arrayNumbers[x] < 0 || arrayNumbers[x] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      return false;
     }
   }
+  return true;
+}
 
+function numerosRepetidos(arrayNumbers) {
   for (let x = 0; x < arrayNumbers.length; x += 1) {
-    let contador = 0;
+    let contador = 1;
     for (let y = 1; y < arrayNumbers.length; y += 1) {
       if (arrayNumbers[x] === arrayNumbers[y] && x !== y - 1) {
         contador += 1;
       }
     }
     if (contador >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      return false;
     }
+  }
+  return true;
+}
+
+function mainValida(arrayNumbers) {
+  if (arrayValido(arrayNumbers) !== true) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (numerosValidos(arrayNumbers) !== true) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  if (numerosRepetidos(arrayNumbers) !== true) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return true;
+}
+
+function generatePhoneNumber(arrayNumbers) {
+  // seu código aqui
+  let phoneNumber = '';
+
+  if (mainValida(arrayNumbers) !== true) {
+    return mainValida(arrayNumbers);
   }
 
   for (let x = 0; x < arrayNumbers.length; x += 1) {
