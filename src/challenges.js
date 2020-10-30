@@ -138,15 +138,16 @@ function decode(string) {
 }//console.log(decode(str2))
 
 // Desafio 10
-let arrMat = ["React", "Jest", "HTML", "CSS", "JavaScript"]
-let strName = "Brn"
-let arrayObj = []
+//let arrMat = ["React", "Jest", "HTML", "CSS", "JavaScript"]
+//let strName = "Brn"
+
 //let obj = {}
 
 function techList(array, name) {
   let nome = name
   let materias = array.sort()
   let error = "Vazio!"
+  let arrayObj = []
   if(nome.length === 0){
     return error
   }else {
@@ -159,7 +160,7 @@ function techList(array, name) {
     }
   }
   return arrayObj
-}console.log(techList(arrMat, strName))
+}//console.log(techList(arrMat, strName))
 
 // Desafio 11
 function generatePhoneNumber() {
