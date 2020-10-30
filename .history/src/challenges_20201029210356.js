@@ -123,12 +123,10 @@ function triangleCheck(lineA = 0, lineB = 0, lineC = 0) {
 
 // Desafio 13
 function hydrate(text = "") {
-  let arr = text.replace(/\D/g, "").split("");
-  let sum =
-    arr.reduce(function (acc, val) {
-      return parseInt(acc) + parseInt(val);
-    }, 0) || 0;
-  return `${sum} copos de água`;
+  console.log(text);
+  let arr = text.replace(/\D/g, "");
+
+  return;
 }
 
 module.exports = {
