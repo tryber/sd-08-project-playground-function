@@ -119,8 +119,8 @@ function techList(array, name) {
     temp.name = name;
     list.push(temp);
   }
-  if (list == []) {
-    return "Vazio!"
+  if (array == "") {
+    return 'Vazio!'
   } else {
   return list;
   }
@@ -160,7 +160,7 @@ function generatePhoneNumber(numbers) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let allLine = [lineA, lineB, lineC]
-  if ( lineA < lineB + lineC && lineB < lineC + lineA && lineC < lineA + lineB && Math.min(allLine) > Math.max(all) - Math.min(allLine)) {
+  if ( lineA < lineB + lineC && lineB < lineC + lineA && lineC < lineA + lineB && Math.min(allLine) > Math.max(allLine) - Math.min(allLine)) {
     return true;
   } else {
     return false;
