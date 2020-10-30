@@ -98,11 +98,63 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let string = "hi there!";
+
+function encode(string) {
+
+  var resultado = [];
+
+  for (let i = 0; i < string.length; i++) {
+
+    if (string[i] == 'a') {
+      resultado = string.replace('a', 1);
+
+    } else if (string[i] == 'e') {
+      resultado = string.replace('e', 2);
+
+    } else if (string[i] == 'i') {
+      resultado = string.replace('i', 3);
+
+    } else if (string[i] == 'o') {
+      resultado = string.replace('o', 4);
+
+    } else if (string[i] == 'u') {
+      resultado = string.replace('u', 5);
+    }
+  }
+
+  return resultado;
+  
 }
-function decode() {
-  // seu código aqui
+
+let string2 = "h3 th2r2!";
+
+function decode(string2) {
+
+  var resultado2 = [];
+
+  for (let i2 = 0; i2 < string2.length; i2++) {
+
+    if (string2[i2] == 1) {
+      resultado2 = string2.replace(1, 'a');
+
+    } else if (string2[i2] == 2) {
+      resultado2 = string2.replace(2, 'e');
+
+    } else if (string2[i2] == 3) {
+      resultado2 = string2.replace(3, 'i');
+
+    } else if (string2[i2] == 4) {
+      resultado2 = string2.replace(4, 'o');
+
+    } else if (string2[i2] == 5) {
+      resultado2 = string2.replace(5, 'u');
+
+    }
+  }
+
+  return resultado2;
+  
 }
 
 // Desafio 10
