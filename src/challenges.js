@@ -126,7 +126,7 @@ function novoEncode(letra) {
     return '3';
   }
   if (letra === 'o') {
-    return '43';
+    return '4';
   }
   return '';
 }
