@@ -159,17 +159,61 @@ function decode(text) {
   }
   return message;
 }
-//console.log(decode ("h3 th2r2!"))
+console.log(decode ("h3 th2r2!"))
 
 // Desafio 10
-function techList() {
+function techList(leraning,name) {
   // seu código aqui
+  let list = leraning;
+  let returned = [];
+
+  if(list.length === 0){
+    return 'Vazio!';
+  }
+  for(let tech of list){
+    returned.push({
+      tech,
+      name,
+    });
+  }
+  return returned;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
+"Lucas"))
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(number) {
   // seu código aqui
+  
+  if (number.length !== 11){
+    return 'Array com tamanho incorreto.'
+  }
+  
+  for(let a = 0; a < number.length; a+= 1){
+   if(number[a] < 0 || number[a] > 9 ){
+     return 'não é possível gerar um número de telefone com esses valores';
+   }
+  }
+  let contRepeat = 0;
+  for(let b = 0; b < number.length; b += 1){
+    contRepeat = 0
+    for(let c = 0 ; c < number.length; c += 1){
+      if ( number[b] === number[c]){
+        contRepeat += 1
+      }
+    }
+    if ( contRepeat >= 3){
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  number.splice(0, 0, '(');
+  number.splice(3, 0, ')');
+  number.splice(4, 0, ' ');
+  number.splice(10, 0, '-');
+  return number.join('');
+
 }
+//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck() {
