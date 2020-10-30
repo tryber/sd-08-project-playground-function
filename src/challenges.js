@@ -125,7 +125,7 @@ function techList(arrayTech, name) {
   let hardSkills = [];
 
   if (arrayTech.length < 1) {
-    return 'vazio!';
+    return 'Vazio!';
   }
 
   arrayTech.sort();
@@ -195,15 +195,28 @@ function triangleCheck(lineA, lineB, lineC) {
   let somaC_B = lineC + lineB;
 
   if ((somaA_B > lineC) && (somaA_C > lineB) && (somaC_B > lineA)) {
-      return true;
+    return true;
   } else {
-      return false;
+    return false;
   }
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(drinks) {
   // seu código aqui
+  let resultado = drinks.match(/\d+/g);
+  let total = 0;
+
+  for (let x = 0; x < resultado.length; x += 1) {
+    total += parseInt(resultado[x]);
+  }
+
+  if (total == 1) {
+    return `${total} copo de água`;
+  } else {
+    return `${total} copos de água`;
+  }
+  
 }
 
 
