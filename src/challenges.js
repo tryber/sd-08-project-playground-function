@@ -29,14 +29,21 @@ splitSentence(testeSplit);
 //console.log(splitSentence(teste));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(vetorString) {
+  let resultado = "";
+  resultado = vetorString[vetorString.length -1] + "," + " " + vetorString[0];
+  return resultado;
 }
+let testeConcat = ["Wagner", "Berna", "Medeiros", "Azevedo"];
+concatName(testeConcat);
+//console.log(concatName(teste));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let resultado = (wins * 3) + (ties * 1);
+  return resultado;
 }
+footballPoints(5, 3);
 
 // Desafio 6
 function highestCount() {
