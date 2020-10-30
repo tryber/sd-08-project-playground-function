@@ -30,41 +30,34 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-
-function generateFreqObject(array) {
-  let countlist = {};
-  let n = 0;
-  let freq = 0;
-  for (let i = 0; i < array.length; i += 1) {
-    let num = array[i];
-    countlist[num]= countlist[num]? countlist[num]+1 : 1;
-  }
-  return countlist;
-}
+function getHighestNumber(array){
+  let maxNumber = array.reduce(function(a,b) {
+    return Math.max(a,b);
+  });
+  return maxNumber;
+};
 function highestCount(array) {
-  generateFreqLIst(array);
-  for(j in countlist){
-    if (j >= n) {
-        n = j;
-        freq=countlist[j];   
-    }
+let number = getHighestNumber(array);
+let freq = 0;
+for (i in array) {
+  (array[i] == number)? freq += 1: freq = freq;
 }
-return freq;     
+return freq;
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  dmouseCat1 = Math.abs(mouse-cat1);
-  dmouseCat2 = Math.abs(mouse-cat2);
-  console.log(dmouseCat1,dmouseCat2);
-  if (dmouseCat2 > dmouseCat1){
-    return 'cat1';
-  } else if (dmouseCat1 > dmouseCat2){
-    return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
-  } 
+
+function calculateDistance(mouse,cat){
+  let dmouseCat = Math.abs(mouse-cat);
+  return dmouseCat
 }
+
+function catAndMouse(mouse, cat1, cat2) {
+  let dmouseCat1 = calculateDistance(mouse,cat1);
+  let dmouseCat2 = calculateDistance(mouse,cat2);
+  (dmouseCat1 ==dmouseCat2)?  'os gatos trombam e o rato foge' : (dmouseCat1 >=dmouseCat2)? 'cat1': 'cat2';
+}
+
 
 // Desafio 8
 function fizzBuzz(array) {
