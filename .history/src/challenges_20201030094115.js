@@ -115,22 +115,19 @@ function fizzBuzz(array) {
 let resultado = [];
 for (const key in array){
   resultado[key] ="";
-  analyze_bug_fizz_Buzz(array,key,resultado);
-}
-return resultado;
-}
-function analyze_bug_fizz_Buzz(array, key,resultado){
-  if(compareTrue(array[key]%3!=0,array[key]%5!=0)) {
+   if (array[key]%3!=0 && array[key]%5!=0) {
     resultado[key]="bug!";
   }
   else if(array[key]%3 === 0){
     resultado[key]="fizz";
   }
-  if(array[key]%5 === 0){
+  else if(array[key]%5 === 0){
     resultado[key] += "Buzz";
   }
-}
+  
+return resultado;
 
+}
 // Desafio 9
 function encode() {
   // Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as

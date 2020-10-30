@@ -115,12 +115,12 @@ function fizzBuzz(array) {
 let resultado = [];
 for (const key in array){
   resultado[key] ="";
-  analyze_bug_fizz_Buzz(array,key,resultado);
+  analyze_bug_fizz_Buzz(array)
 }
 return resultado;
 }
 function analyze_bug_fizz_Buzz(array, key,resultado){
-  if(compareTrue(array[key]%3!=0,array[key]%5!=0)) {
+  if (array[key]%3!=0 && array[key]%5!=0) {
     resultado[key]="bug!";
   }
   else if(array[key]%3 === 0){

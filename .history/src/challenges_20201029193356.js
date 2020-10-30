@@ -30,7 +30,7 @@ function splitSentence(string) {
 // de strings separadas por cada espaço na string original.
 // Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
   var array = string.split(" ");
-  return array;
+  return array
 }
 
 // Desafio 4
@@ -42,11 +42,10 @@ function concatName(array) {
 // independente do tamanho da array.
 
 // Isso quer dizer que, caso o parâmetro passado para concatName seja a Array
-// ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
-  let resultado = array[array.length-1]
-  resultado += ", ";
-  resultado += array[0];
-return resultado;
+// ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá
+// retornar Paolillo, Lucas.
+let resultado = string(array[array.length] +", "+array[0]);
+return res
 }
 
 // Desafio 5
@@ -114,21 +113,17 @@ function fizzBuzz(array) {
 // ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
 let resultado = [];
 for (const key in array){
-  resultado[key] ="";
-  analyze_bug_fizz_Buzz(array,key,resultado);
-}
-return resultado;
-}
-function analyze_bug_fizz_Buzz(array, key,resultado){
-  if(compareTrue(array[key]%3!=0,array[key]%5!=0)) {
-    resultado[key]="bug!";
+  if ( array[key]%3 === 0 ){
+    resultado[key] += "fizz";
   }
-  else if(array[key]%3 === 0){
-    resultado[key]="fizz";
-  }
-  if(array[key]%5 === 0){
+  else if ( array[key]%5 === 0 ){
     resultado[key] += "Buzz";
   }
+  else{
+    resultado[key] = "bug!";
+  }
+}
+return resultado;
 }
 
 // Desafio 9
