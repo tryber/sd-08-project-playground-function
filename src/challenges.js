@@ -122,15 +122,19 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList(arrTech, parName) {
+function techList(tecnologias, name) {
   let obj = [];
 
-  for (let i = 0; i < arrTech.length; i += 1) { 
+  for (let i = 0; i < tecnologias.length; i += 1) {
     Obj.push({
-      tech: arrTech[i],
-      name: parName
+      tech: tecnologias[i],
+      name
     })
   }
+  obj = obj.sort((a, b) => {
+    return (a.tech > b.tech) ? 1 : ((b.tech > a.tech) ? -1 : 0);
+  });
+
   return obj.length > 0 ? obj : 'Vazio!';
 }
 
