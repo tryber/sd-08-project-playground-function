@@ -64,9 +64,9 @@ function fizzBuzz(arrayNum) {
   for (let index = 0; index < arrayNum.length; index += 1) {
     if (arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0) {
       arr.push('fizzBuzz');
-    } else if (arrayNum[index] % 3 === 0 && !arrayNum[index] % 5 === 0) {
+    } else if (arrayNum[index] % 3 === 0) {
       arr.push('fizz');
-    } else if (arrayNum[index] % 5 === 0 && !arrayNum[index] % 3 === 0) {
+    } else if (arrayNum[index] % 5 === 0) {
       arr.push('buzz');
     } else {
       arr.push('bug!');
@@ -77,35 +77,63 @@ function fizzBuzz(arrayNum) {
 
 // Desafio 9
 function encode(str) {
-  let code = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  let decodeStr = str.replace(/1/g, 'a');
-  decodeStr = decodeStr.replace(/2/g, 'e');
-  decodeStr = decodeStr.replace(/3/g, 'i');
-  decodeStr = decodeStr.replace(/4/g, 'o');
-  return decodeStr.replace(/5/g, 'u');
+  let encodeStr = str.split('');
+  for (let i = 0; i < encodeStr.length; i += 1) {
+    switch (encodeStr[i]) {
+      case 'a':
+        encodeStr[i] = '1';
+        break;
+      case 'e':
+        encodeStr[i] = '2';
+        break;
+      case 'i':
+        encodeStr[i] = '3';
+        break;
+      case 'o':
+        encodeStr[i] = '4';
+        break;
+      case 'u':
+        encodeStr[i] = '5';
+        break;
+      default:
+        break;
+    }
+  }
+  return encodeStr.join('');
 }
 
 function decode(str) {
-  let decodeStr = str.replace(/a/g, 1);
-  decodeStr = decodeStr.replace(/e/g, 2);
-  decodeStr = decodeStr.replace(/i/g, 3);
-  decodeStr = decodeStr.replace(/o/g, 4);
-  return decodeStr.replace(/u/g, 5);
+  let decodeStr = str.split('');
+  for (let i = 0; i < decodeStr.length; i += 1) {
+    switch (decodeStr[i]) {
+      case '1':
+        decodeStr[i] = 'a';
+        break;
+      case '2':
+        decodeStr[i] = 'e';
+        break;
+      case '3':
+        decodeStr[i] = 'i';
+        break;
+      case '4':
+        decodeStr[i] = 'o';
+        break;
+      case '5':
+        decodeStr[i] = 'u';
+        break;
+      default:
+        break;
+    }
+  }
+  let arrStr = decodeStr.join('');
+  return arrStr;
 }
-
-console.log(encode('Beto'));
 
 // Desafio 10
 function techList(tech, name) {
   if (tech.length === 0) {
     return 'Vazio!';
-  }else{
+  } else {
     let str = [];
     tech = tech.sort();
     for (let i = 0; i < tech.length; i += 1) {
@@ -114,7 +142,7 @@ function techList(tech, name) {
         nome: name,
       };
     }
-    return str
+    return str;
   }
 }
 
