@@ -106,14 +106,15 @@ function techList(tech, name) {
     tech.sort();
     for (index = 0; index < tech.length; index += 1){
       objetos.push(new Object({
-      Tecnologia: tech[index],
-      Nome: name}));
+      tech: tech[index],
+      name: name}));
     }
     return(objetos);
   } else {
     return("Vazio!");
   }
 }
+
 
 // Desafio 11
 function generatePhoneNumber(vetor) {
@@ -123,9 +124,9 @@ function generatePhoneNumber(vetor) {
   for (index = 0; index < vetor.length; index +=1){
     let contadorRepetido = 0;
     if (vetor[index] < 0){
-      return("Não é possível gerar um número de telefone com esses valores");
+      return("não é possível gerar um número de telefone com esses valores");
     } else if (vetor[index] > 9){
-      return("Não é possível gerar um número de telefone com esses valores");
+      return("não é possível gerar um número de telefone com esses valores");
     }
   
     for (segundoIndex = vetor.length; segundoIndex > index; segundoIndex -= 1) {
@@ -133,7 +134,7 @@ function generatePhoneNumber(vetor) {
         contadorRepetido +=1;
       } 
       if (contadorRepetido > 2) {
-        return("Não é possível gerar um número de telefone com esses valores");
+        return("não é possível gerar um número de telefone com esses valores");
       } 
     }
     contadorRepetido = 0;
