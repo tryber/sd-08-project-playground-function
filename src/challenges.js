@@ -30,7 +30,8 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
+
+function generateFreqObject(array) {
   let countlist = {};
   let n = 0;
   let freq = 0;
@@ -38,6 +39,10 @@ function highestCount(array) {
     let num = array[i];
     countlist[num]= countlist[num]? countlist[num]+1 : 1;
   }
+  return countlist;
+}
+function highestCount(array) {
+  generateFreqLIst(array);
   for(j in countlist){
     if (j >= n) {
         n = j;
