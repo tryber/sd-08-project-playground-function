@@ -125,7 +125,7 @@ function techList(arrayTech, name) {
   let hardSkills = [];
 
   if (arrayTech.length < 1) {
-    return 'vazio';
+    return 'vazio!';
   }
 
   arrayTech.sort();
@@ -184,8 +184,21 @@ function generatePhoneNumber(arrayNumbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  lineA = Math.abs(lineA);
+  lineB = Math.abs(lineB);
+  lineC = Math.abs(lineC);
+
+  let somaA_B = lineA + lineB;
+  let somaA_C = lineA + lineC;
+  let somaC_B = lineC + lineB;
+
+  if ((somaA_B > lineC) && (somaA_C > lineB) && (somaC_B > lineA)) {
+      return true;
+  } else {
+      return false;
+  }
 }
 
 // Desafio 13
