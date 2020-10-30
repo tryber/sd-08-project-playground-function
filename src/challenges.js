@@ -121,8 +121,24 @@ function encode(palavra) {
   }
   return nPalavra;
 }
-function decode() {
-  // seu código aqui
+function decode(palavra) {
+  let nPalavra = ' ';
+  for (let i = 0; i < palavra.length; i += 1) {
+    if (palavra[i] === '1') {
+      nPalavra += 'a';
+    } else if (palavra[i] === '2') {
+      nPalavra += 'e';
+    } else if (palavra[i] === '3') {
+      nPalavra += 'i';
+    } else if (palavra[i] === '4') {
+      nPalavra += 'o';
+    } else if (palavra[i] === '5') {
+      nPalavra += 'u';
+    } else {
+      nPalavra += palavra[i];
+    }
+  }
+  return nPalavra;
 }
 
 // Desafio 10
