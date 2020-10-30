@@ -59,18 +59,17 @@ function catAndMouse(mouse, cat1, cat2) {
   mouse = Math.abs(mouse)
   cat1 = Math.abs(cat1)
   cat2 = Math.abs(cat2)
-  string =""
 
-  if (cat1 - mouse < cat2 - mouse) {
-    string ="cat1"
-    return string
-
-  } else if (cat2 - mouse < cat1 - mouse) {
-    string = "cat2"
-    return string
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return "cat1"
   }
-  string = "os gatos trombam e o rato foge"
-  return string
+
+  if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
+    return "cat2"
+  }
+  return "os gatos trombam e o rato foge"
+}
+
 }
 
 // Desafio 8
