@@ -135,12 +135,31 @@ function decode(string) {
     }
   }let decodeStr = mainArr.join('')
   return decodeStr
-}console.log(decode(str2))
+}//console.log(decode(str2))
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+let arrMat = ["React", "Jest", "HTML", "CSS", "JavaScript"]
+let strName = "Brn"
+let arrayObj = []
+//let obj = {}
+
+function techList(array, name) {
+  let nome = name
+  let materias = array.sort()
+  let error = "Vazio!"
+  if(nome.length === 0){
+    return error
+  }else {
+    for (i in materias){
+      materias[i] = {
+        tech: materias[i],
+        name: nome
+      }
+      arrayObj.push(materias[i])
+    }
+  }
+  return arrayObj
+}console.log(techList(arrMat, strName))
 
 // Desafio 11
 function generatePhoneNumber() {
