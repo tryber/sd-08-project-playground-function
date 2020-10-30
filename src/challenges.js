@@ -65,17 +65,19 @@ console.log(catAndMouse(10, 9, 9));
 // Desafio 8
 function fizzBuzz(numbers) {
   // seu código aqui
-  let sequence = []
-    for () {
-      if () {
-
-      } else if () {
-
-      } else if () {
-
-      }else
+  let sequence = [];
+    for (let index = 0; index < numbers.length; index += 1) {
+      if (numbers[index] % 3 == 0) {
+        sequence.push('fizz');
+      } else if (numbers[index] % 5 == 0) {
+        sequence.push('buzz');
+      } else if (numbers[index] % 3 == 0 && numbers[index] % 5 == 0) {
+        sequence.push('fizzBuzz');
+      }else {
+        sequence.push('bug!');
+      }
     }
-
+  return sequence;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
