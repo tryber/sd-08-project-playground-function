@@ -43,27 +43,27 @@ return numerodePontos
 
 // Desafio 6
 function highestCount(array) {
-let elemento = 0;
-let count = 0; 
-let elementoTemporario;
-let counterTemporario;
 
-for ( index =0; index < array.length; index += 1) {
- elementoTemporario = array[index];
- counterTemporario = 0; 
-for (counter = 0; counter < array.length; counter += 1){
-  if ( array[counter] == elementoTemporario ) {
-    counterTemporario +=     
-  
-     (counterTemporario > count)
-          elemento = elementoTemporario;
-          count = counterTemporario
+let conta = 0 ;
+let contrep= 0; 
+
+  for ( index1 = 0; index1 < array.length; index1 +=1) {
+    for ( index2 = index1 + 1; index2 < array.length; index2 +=1 ) {
+
+      if ( array[index1] == array[index2]){
+        conta ++
+        break;
+      } if (conta < contrep) {
+        contrep = conta ;
+
       }
-  }
+    }
 
-  return elemento;
+    return conta 
+  }
+ 
 }
-}
+console.log( highestCount [[9, 1, 2, 3, 9, 5, 7]])
 
 // Desafio 7
 function catAndMouse() {
