@@ -115,15 +115,9 @@ function techList(tech, name) {
   }
 }
 
-
-//Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
-//Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], generatePhoneNumber deverá retornar (12) 34567-8901.
-//Se a função receber um array com tamanho diferente de 11, a mesma deve retornar "Array com tamanho incorreto.".
-//Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, generatePhoneNumber deverá retornar a string "não é possível gerar um número de telefone com esses valores".
-
 // Desafio 11
 function generatePhoneNumber(vetor) {
-  /* if (vetor.length != 11){
+  if (vetor.length != 11){
     return("Array com tamanho incorreto.");
   }
   for (index = 0; index < vetor.length; index +=1){
@@ -145,17 +139,25 @@ function generatePhoneNumber(vetor) {
     contadorRepetido = 0;
   }
   
-  let ddd = [];
-  let primeiraParte = [];
-  let segundaParte = [];
-  for () { 
-    
-  }*/
-  
+  let espaco = "-";
+  let final = "";
+  for (index = 0; index < 11; index +=1) { 
+    let aleatorio = vetor[Math.floor(Math.random()*(11 - 0)+0)];
+    if (index == 0){
+      final = "(" + vetor[Math.floor(Math.random()*(11 - 0)+0)] + vetor[Math.floor(Math.random()*(11 - 0)+0)] + ") ";
+    } else if (index < 6) {
+      final += aleatorio;
+    } else if (index == 6) {
+      final += espaco;
+    } else if (index > 6) {
+      final += aleatorio;
+    }
+  }
+  return(final);
 }
 
 
-//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
