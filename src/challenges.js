@@ -80,7 +80,7 @@ highestCount([3, 1, 2, 3, 9, 5, 7]);
 
 
 // Desafio 7
-function catAndMouse(cat1,  cat2, mouse) {
+function catAndMouse(mouse, cat1,  cat2) {
   // seu código aqui
   let gato = "";
   if (cat1 - mouse < cat2 - mouse) {
@@ -135,8 +135,8 @@ function decode(vogais) {
   
   return vogais;
 }
-
 decode("h3 th2r2");
+
 // Desafio 10
 function techList() {
   // seu código aqui
