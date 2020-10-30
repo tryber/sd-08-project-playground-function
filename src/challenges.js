@@ -101,6 +101,7 @@ function fizzBuzz(array) {
 }
 console.log(fizzBuzz([3,5,15,2,30]));
 
+
 // Desafio 9
 function encode() {
   // seu código aqui
