@@ -74,7 +74,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let string2 = "cat2";
   let string3 = "os gatos trombam e o rato foge";
 
-  resultado = [];
+  let resultado = [];
 
   
 
@@ -83,12 +83,10 @@ function catAndMouse(mouse, cat1, cat2) {
 
   } 
   
-  if (mouse - cat2 < mouse - cat1) {
+   else if (mouse - cat2 < mouse - cat1) {
     resultado = string2;
 
-  } 
-  
-  if (mouse - cat1 == mouse - cat2) {
+  } else {
     resultado = string3;
 
   }
