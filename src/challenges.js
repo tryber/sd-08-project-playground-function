@@ -176,10 +176,28 @@ function triangleCheck(a, b, c) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(string) {
+  //Não consegui decorar para que serve cada parte, mas esse código vai separar números negativos, positivos, um número ou mais, inclui a parte decimal, e pega todas as correspondências
+  let regex = /[+-]?\d+(?:\.\d+)?/g;
 
+  //Variável que receberá a palavra
+  let str = string;
+
+  let quantAgua = 0;
+
+  let match;
+  //O exec() vai procurar casos que coincidam com o regex, quando não achar mais nem um ele retorna null
+  while (match = regex.exec(str)) {
+    let value = Number(match[0])
+    quantAgua += value;
+  }
+  //Fonte: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+  if(quantAgua > 1){
+    return `${quantAgua} copos de água`
+  }else{
+    return `${quantAgua} copo de água`
+  }
+}
 
 module.exports = {
   calcArea,
