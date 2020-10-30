@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
   // seu código aqui
-  if(bool1 == true && bool2 == true){
+  if (bool1 === true && bool2 === true){
     return true;
-  } else{
+  } else {
     return false;
   }
 }
@@ -117,7 +117,7 @@ function encode(sentence) {
         break;
       default:
         newSentence += sentence.slice(pos, pos+1);
-    }    
+    }
   }
   return newSentence;
 }
@@ -144,7 +144,7 @@ function decode(sentence) {
         break;
       default:
         newSentence += sentence.slice(pos, pos+1);
-    }    
+    }
   }
   return newSentence;
 }
