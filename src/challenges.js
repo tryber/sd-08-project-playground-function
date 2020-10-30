@@ -22,9 +22,10 @@ return splitSentence
 
 /// Desafio 4
 function concatName (arrayString) {
-  concatName = arrayString[0] + " , "+ arrayString[arrayString.length - 1]+ " . ";
-  return concatName;
+  let primeiroUltimo = arrayString[arrayString.length - 1] + " , "+ arrayString[0] + " . ";
+  return primeiroUltimo;
 }
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
