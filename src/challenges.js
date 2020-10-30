@@ -8,6 +8,7 @@ function compareTrue(comp01, comp02) {
   }
   return resultado;
 }
+(compareTrue(true, true);
 //console.log(compareTrue(true, true))
 
 // Desafio 2
@@ -15,16 +16,16 @@ function calcArea(base, height) {
   let resultado = (base * height) / 2;
   return resultado;
 }
-
+calcArea(20, 30);
 // Desafio 3
 function splitSentence(string) {
   let resultado = [];
   resultado = string.split(" "); 
   return resultado;
 }
-//let teste = "go trybe";
+let testeSplit = "go trybe";
+splitSentence(testeSplit);
 //console.log(splitSentence(teste));
-
 
 // Desafio 4
 function concatName(vetorString) {
@@ -32,7 +33,8 @@ function concatName(vetorString) {
   resultado = vetorString[vetorString.length -1] + "," + " " + vetorString[0];
   return resultado;
 }
-//let teste = ["Wagner", "Berna", "Medeiros", "Azevedo"];
+let testeConcat = ["Wagner", "Berna", "Medeiros", "Azevedo"];
+concatName(testeConcat);
 //console.log(concatName(teste));
 
 // Desafio 5
@@ -40,11 +42,13 @@ function footballPoints(wins, ties) {
   let resultado = (wins * 3) + (ties * 1);
   return resultado;
 }
+footballPoints(5, 3);
 
 // Desafio 6
 function highestCount(vetorNum) {
   let resultado;
   vetorNum.sort((a,b) => a - b);
+  //
   let numMaior = vetorNum[vetorNum.length -1];
   let quantNum = 0;
   for (count = 0; count < vetorNum.length; count += 1) {
@@ -55,21 +59,25 @@ function highestCount(vetorNum) {
   resultado = quantNum;
   return resultado;
 }
-//let teste = [15, 9, 8, 15, 2, 7];
+let testeHighest = [15, 9, 8, 15, 2, 7];
+highestCount(testeHighest);
 //console.log(highestCount(teste));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let resultado;
-  let distanciaCat1 = cat1 - mouse;
-  let distanciaCat2 = cat2 - mouse;
+  let distanciaCat1 = mouse - cat1;
+  let distanciaCat2 = mouse - cat2;
   if (distanciaCat1 < distanciaCat2) {
-    resultado = cat1;
+    resultado = "cat1";
+  } else if (distanciaCat2 < distanciaCat1) {
+    resultado = "cat2";
   } else {
-    resultado = cat2;
+    resultado = "os gatos trombam e o rato foge";
   }
-}
 return resultado;
+}
+catAndMouse(10, 5, 3);
 //console.log(catAndMouse(10,5,3));
 
 // Desafio 8
@@ -88,7 +96,8 @@ function fizzBuzz(vetorNum) {
   }
   return resultado;
 }
-//let vetorTeste = [2, 15, 7, 9, 45];
+let testeFizzBuzz = [2, 15, 7, 9, 45];
+fizzBuzz(testeFizzBuzz);
 //console.log(fizzBuzz(vetorTeste));
 
 // Desafio 9
@@ -101,7 +110,7 @@ function encode(string) {
   resultado = resultado.replace("u", "5");
   return resultado; 
 }
-function decode() {
+function decode(string) {
   let = resultado = "";
   resultado = string.replace("1", "a");
   resultado = resultado.replace("2", "e");
@@ -110,14 +119,18 @@ function decode() {
   resultado = resultado.replace("5", "u");
   return resultado;
 }
-//let teste = "hi there!"
+let testeEncode = "hi there!"
+let testeDecode = "h3 th2r2!"
+encode(testeEncode);
+Decode(testeDecode);
 //console.log(encode(teste));
 
 // Desafio 10
 function techList(vetor, name) {
+/*
   let resultado;
   let vetorOrdenado;
- /* let lista = {
+  let lista = {
     tech: "";
     name: "";
   };
@@ -126,13 +139,16 @@ function techList(vetor, name) {
     lista.tech = vetor[count];
     lista.name = veetor[count];
   }
-*/
+
 return resultado;
+
 }
 console.log
 let teste = ["React", "Jest", "HTML", "CSS", "JavaScript"];
 let nome = "Wagner";
 console.log(encode(teste, nome));
+*/ }
+
 
 //Desafio 11
 function generatePhoneNumber() {
