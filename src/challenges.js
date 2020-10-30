@@ -189,12 +189,22 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-console.log(triangleCheck(10,13,2));
+
 // Desafio 13
 function hydrate(strg) {
-  
+  let arr = strg.split(/[^0-9]*/), sum = 0;
+  arr.pop();
+  for (let key in arr){
+    sum += parseInt(arr[key]);
+  }
+  if (sum <= 0) {
+    return "bebeu nada?";
+  }
+  if (sum == 1){
+    return sum + " copo de água";
+  }
+  return sum + " copos de água";
 }
-console.log(parseInt("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   calcArea,
