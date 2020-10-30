@@ -22,16 +22,21 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(param) {
   // seu código aqui
-  let resultado = param.split(' ');
-  return resultado;
+  let resultado = param.split(" ") ;
+   return resultado;
 }
 //console.log(splitSentence('Go Trybe'));
 
 // Desafio 4
-function concatName() {
+function concatName(param) {
   // seu código aqui
-   
+  //let r
+   let ultimoItem = param[param.length-1];
+   let primeiroItem = param[0];
+
+   return ultimoItem + ',' + ' ' + primeiroItem;
 }
+console.log(concatName('lucas','cassiano', 'ferraz', 'paolillo'))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -44,7 +49,7 @@ function footballPoints(wins, ties) {
 //console.log(footballPoints(2,2));
 
 // Desafio 6
-function highestCount(...param) {
+function highestCount(param) {
   // seu código aqui
   let res = 0;
   let cont = 0;
