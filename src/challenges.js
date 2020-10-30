@@ -167,10 +167,10 @@ function anyMinorOrGretear (arr, minor, greater){
 function generatePhoneNumber(numbers) {
   const moreThan2 = appearMoreThan(arrCounter(numbers), 2),
   minorGreater = anyMinorOrGretear(numbers, 0, 9);
-  if (moreThan2 || minorGreater){
-    return "não é possível gerar um número de telefone com esses valores";
-  } else if (numbers.length != 11){
+  if (numbers.length != 11){
     return "Array com tamanho incorreto.";
+  } else if (moreThan2 || minorGreater){
+    return "não é possível gerar um número de telefone com esses valores";
   }
   const add = {
     position: [0, 3, 9],
@@ -189,12 +189,12 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-
+console.log(triangleCheck(10,13,2));
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(strg) {
+  
 }
-
+console.log(parseInt("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   calcArea,
