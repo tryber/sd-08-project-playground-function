@@ -192,7 +192,11 @@ function hydrate(string) {
   for (let index in numbers){
     sum+=numbers[index];
   }
-  return sum+" copos de água"
+  if(sum==1){
+    return sum+" copo de água";
+  }else{
+    return sum+" copos de água";
+  }
 }
 
 
