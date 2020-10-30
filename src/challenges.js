@@ -200,12 +200,6 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   string = string.match(/\d+/g);
 
-  for (let i in string) {
-    if (string[i] < i || string[i] > 9){
-      return;
-    }
-  }
-
   let sum = 0;
 
   for (let i = 0; i < string.length; i += 1) {
