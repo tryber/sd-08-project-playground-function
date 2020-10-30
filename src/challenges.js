@@ -141,7 +141,7 @@ function techList(techs, name) {
 function generatePhoneNumber(number) {
   let result = '';
   if (number.length !== 11) {
-    result = 'Array com tamanho incorreto.';
+    return Array com tamanho incorreto.';
   } else {
     for (let i in number) {
       let contRepeticao = 0;
@@ -150,8 +150,8 @@ function generatePhoneNumber(number) {
         if (verificaNumero === number[i2]) {
           contRepeticao += 1;
         }
-        if (number[i2] > 9 || number[i2] < 0 || contRepeticao >= 3) {
-          result = 'não é possível gerar um número de telefone com esses valores';
+        if (number[i] > 9 || number[i] < 0 || contRepeticao >= 3) {
+          return 'não é possível gerar um número de telefone com esses valores';
         } else {
           result = '(' + number[0] + number[1] + ') ' + number[2] + number[3] + number[4] + number[5] + number[6] + "-" + number[7] + number[8] + number[9] + number[10];
         }
