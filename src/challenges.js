@@ -40,8 +40,6 @@ function concatName(name) {
   let string = '';
   
   string = string + name[name.length-1] + ', ' + name[0];
-  //array.push(name[name.length-1]);
-  //array.push(name[0]);
 
   return string;
 }
@@ -53,8 +51,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumbers) {
   // seu código aqui
+  let maior = arrayNumbers[0];
+  let cont = 0;
+
+  for (i=0;i<arrayNumbers.length;i+=1) {
+    if (arrayNumbers[i] > maior) {
+      maior = arrayNumbers[i];
+      cont = 1;
+    } else if (arrayNumbers[i] == maior) {
+      cont = cont + 1;
+    }
+  }
+
+  return cont;
 }
 
 // Desafio 7
