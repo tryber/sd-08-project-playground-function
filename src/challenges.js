@@ -59,26 +59,24 @@ function fizzBuzz(numbersArray) {
   let newArray = []
 
   for (i in arrayNumbers) {
+    if (arrayNumbers[i] % 3 == 0) {
+      newArray.push("fizz") }
+    if (arrayNumbers[i] % 5 == 0) {
+      newArray.push("buzz")
+    }
     if (arrayNumbers[i] % 3 == 0 && arrayNumbers[i] % 5 === 0) {
       newArray.push("fizzBuzz")
-    } else if (arrayNumbers[i] % 3 == 0) {
-      newArray.push("fizz")
-    } else if (arrayNumbers[i] % 5 == 0) {
-      newArray.push("buzz")
-    } else {
+    }
       newArray.push("bug!")
     }
+    return newArray
   }
-  return newArray
-}
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  return string.split('a').join('1').split('e').join('2').split('i').join('3').split('o').join('4').split('u').join('5')
 }
-
-function decode() {
-  // seu código aqui
+function decode(string) {
+ return string.split('1').join('a').split('2').join('e').split('3').join('i').split('4').join('o').split('5').join('u')
 }
 
 // Desafio 10
