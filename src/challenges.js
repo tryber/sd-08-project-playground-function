@@ -28,7 +28,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let sorted = numbers.sort((a,b) => a - b);
+  let sorted = numbers.sort((a, b) => a - b);
   let counter = 1;
 
   for (let i = numbers.length - 1; i >= 0; i -= 1) {
@@ -72,57 +72,28 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode(phrase) {
+function encodePattern(phrase, arrToSearch, arrToReplace) {
+  if (arrToReplace.length !== arrToSearch.length) {
+    return 'Arrays precisam ter o mesmo tamanho';
+  } 
+
   let phraseArray = phrase.split('');
 
   for (let i = 0; i < phraseArray.length; i += 1) {
-    switch (phraseArray[i]) {
-      case 'a':
-        phraseArray[i] = '1';
-        break;
-      case 'e':
-        phraseArray[i] = '2';
-        break;
-      case 'i':
-        phraseArray[i] = '3';
-        break;
-      case 'o':
-        phraseArray[i] = '4';
-        break;
-      case 'u':
-        phraseArray[i] = '5';
-        break;
-      default:
-        break
+    for (let j = 0; j < arrToReplace.length; j += 1) {
+      if (phraseArray[i] === arrToSearch[j]) {
+        phraseArray[i] = arrToReplace[j];
+      }
     }
   }
   return phraseArray.join('');
 }
-function decode(toDecode) {
-  let toDecodeArray = toDecode.split('');
 
-  for (let i = 0; i < toDecodeArray.length; i += 1) {
-    switch (toDecodeArray[i]) {
-      case '1':
-        toDecodeArray[i] = 'a';
-        break;
-      case '2':
-        toDecodeArray[i] = 'e';
-        break;
-      case '3':
-        toDecodeArray[i] = 'i';
-        break;
-      case '4':
-        toDecodeArray[i] = 'o';
-        break;
-      case '5':
-        toDecodeArray[i] = 'u';
-        break;
-      default:
-        break;
-    }
-  }
-  return toDecodeArray.join('');
+function encode(phrase) {
+  return encodePattern(phrase, ['a', 'e', 'i', 'o', 'u'], ['1', '2', '3', '4', '5']);
+}
+function decode(toDecode) {
+  return encodePattern(toDecode, ['1', '2', '3', '4', '5'],['a', 'e', 'i', 'o', 'u']);
 }
 
 // Desafio 10
@@ -205,8 +176,8 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(strg) {
   let arr = strg.split(/[^0-9]*/);
   let sum = 0;
-  
   arr.pop();
+
   for (let i = 0; i < arr.length; i += 1) {
     sum += parseInt(arr[i], 10);
   }
