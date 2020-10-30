@@ -84,11 +84,11 @@ function encode(str) {
     o: 4,
     u: 5,
   };
-  let arr = str.split('');
-  for (let i in arr) {
-    if (arr[i] in code) arr[i] = code[arr[i]];
-  }
-  return arr.join('');
+  let decodeStr = str.replace(/1/g, 'a');
+  decodeStr = decodeStr.replace(/2/g, 'e');
+  decodeStr = decodeStr.replace(/3/g, 'i');
+  decodeStr = decodeStr.replace(/4/g, 'o');
+  return decodeStr.replace(/5/g, 'u');
 }
 
 function decode(str) {
@@ -99,17 +99,23 @@ function decode(str) {
   return decodeStr.replace(/u/g, 5);
 }
 
+console.log(encode('Beto'));
+
 // Desafio 10
 function techList(tech, name) {
-  let str = [];
-  tech = tech.sort();
-  for (let i = 0; i < tech.length; i = i + 1) {
-    str[i] = {
-      tech: tech[i],
-      nome: name,
-    };
+  if (tech.length === 0) {
+    return 'Vazio!';
+  }else{
+    let str = [];
+    tech = tech.sort();
+    for (let i = 0; i < tech.length; i += 1) {
+      str[i] = {
+        tech: tech[i],
+        nome: name,
+      };
+    }
+    return str
   }
-  return str;
 }
 
 // Desafio 11
