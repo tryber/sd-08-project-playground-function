@@ -66,13 +66,15 @@ function fizzBuzz(numeros) {
     } else if (numeros[index]%3 == 0 && numeros[index]%5 == 0) {
       vetorResposta.push("fizzBuzz");
     }else if (numeros[index]%5 == 0) {
-      vetorResposta.push("fizz")
+      vetorResposta.push("buzz")
     } else if (numeros[index]%3 == 0) {
-      vetorResposta.push("buzz");
+      vetorResposta.push("fizz");
     }
   }
   return(vetorResposta);
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
+
 
 // Desafio 9
 function encode(codigo) {
@@ -142,23 +144,21 @@ function generatePhoneNumber(vetor) {
   
   let espaco = "-";
   let final = "";
-  for (index = 0; index < 11; index +=1) { 
-    let aleatorio = vetor[Math.floor(Math.random()*(11 - 0)+0)];
-    if (index == 0){
-      final = "(" + vetor[Math.floor(Math.random()*(11 - 0)+0)] + vetor[Math.floor(Math.random()*(11 - 0)+0)] + ") ";
-    } else if (index < 6) {
-      final += aleatorio;
-    } else if (index == 6) {
-      final += espaco;
-    } else if (index > 6) {
-      final += aleatorio;
+  for (index = 1; index < vetor.length; index +=1) { 
+    
+    if (index == 1){
+      final = "(" + vetor[index-1] + vetor[index] + ") ";
+    } else if (index > 0 && index < 7) {
+      final += vetor[index];
+    } else if (index == 7) {
+      final += espaco + vetor[index];
+    } else if (index > 7) {
+      final += vetor[index];
     }
   }
   return(final);
 }
 
-
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
