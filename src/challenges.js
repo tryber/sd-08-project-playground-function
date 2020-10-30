@@ -139,8 +139,22 @@ function decode(codigo) {
 }
 
 // Desafio 10
-function techList() {
+function techList(techArray, seuNome) {
   // seu código aqui
+  let vazio = "Vazio!";
+  let saida = [];
+  
+  if (techArray.length > 0){
+  for (let i = 0; i < techArray.length; i += 1){
+      let objeto = {};
+      objeto.tech = techArray[i];
+      objeto.name = seuNome;
+      saida.push(objeto);
+  }
+  return saida;
+} else {
+    return vazio;
+}
 }
 
 // Desafio 11
