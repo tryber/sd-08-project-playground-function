@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(n1,n2) {
-  if(n1 == n2) {
+  if(n1 == n2 && n2 == n1) {
     return true
   } else {
     return false
 }
-} console.log(compareTrue(2,5));
+} console.log(compareTrue(2,2));
 // Desafio 2
 function calcArea(base, height) {
   let calculo = (base * height) / 2;
