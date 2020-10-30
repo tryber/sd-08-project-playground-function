@@ -188,7 +188,13 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {}
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA + lineB > lineC || lineB + lineC > lineA || lineA + lineC > lineB && Math.abs(lineA - lineB) < lineC || Math.abs(lineA - lineC) < lineB || Math.abs(lineB - lineC) < lineA) {
+    return true;
+  }
+
+  return false;
+}
 
 // Desafio 13
 function hydrate() {}
