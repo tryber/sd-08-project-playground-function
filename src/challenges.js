@@ -146,17 +146,21 @@ console.log(decode('M1r34'))
 // Desafio 10
 function techList(arrayTech, nome) {
   let arrayObjetos = [];
+  let sortArrayTech = arrayTech.sort();
   for (let index = 0; index < arrayTech.length; index += 1) {
-    arrayObjetos.push({
-
-      tech: arrayTech[index],
+    arrayObjetos[index] = {
+      tech: sortArrayTech[index],
       name: nome
-
-    }) 
+    };
   }
- return arrayObjetos;
+  if (arrayTech.length > 0) {
+   return arrayObjetos;
+  } else {
+    return 'Vazio!'
+  }
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Mario'))
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Mario'));
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
