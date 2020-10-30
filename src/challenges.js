@@ -127,8 +127,9 @@ function novoEncode(letra) {
   }
   if (letra === 'o') {
     return '4';
-  }
-  return '';
+  } else {
+    return '';
+  }  
 }
 
 function encode(texto) {
