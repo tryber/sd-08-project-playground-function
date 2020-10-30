@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   // seu código aqui
-  return valor1 == true && valor2 == true ? true : false;
+  return valor1 === true && valor2 === true ? true : false;
 }
 
 // Desafio 2
@@ -14,7 +14,7 @@ function calcArea(base, height) {
 function splitSentence(palavra) {
   // seu código aqui
   let arrayString = [];
-  arrayString = palavra.split(" ");
+  arrayString = palavra.split(' ');
   return arrayString;
 }
 
@@ -22,7 +22,7 @@ function splitSentence(palavra) {
 function concatName(arrayString) {
   // seu código aqui
   let index = arrayString.length - 1;
-  let stringPalavras = arrayString[index] + ', ' + arrayString[0];
+  let stringPalavras = `${arrayString[index]}, ${arrayString[0]}`;
 
   return stringPalavras;
 }
@@ -55,7 +55,7 @@ function highestCount(arrayNumbers) {
   }
 
   for (let x = 0; x < arrayNumbers.length; x += 1) {
-    if (arrayNumbers[x] == maior) {
+    if (arrayNumbers[x] === maior) {
       repete += 1;
     }
   }
@@ -65,32 +65,30 @@ function highestCount(arrayNumbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let dist_cat1_mouse = Math.abs(cat1 - mouse);
-  let dist_cat2_mouse = Math.abs(cat2 - mouse);
+  let distCat1_mouse = Math.abs(cat1 - mouse);
+  let distCat2_mouse = Math.abs(cat2 - mouse);
 
-  if (dist_cat1_mouse == dist_cat2_mouse) {
+  if (distCat1_mouse === distCat2_mouse) {
     return 'os gatos trombam e o rato foge';
-  } else if (dist_cat1_mouse < dist_cat2_mouse) {
-    return 'cat1';
-  } else {
-    return 'cat2';
   }
+  if (distCat1Mouse < distCat2Mouse) {
+    return 'cat1';
+  }
+  return 'cat2';
 }
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
-
   let newArray = [];
-
   for (let x = 0; x < arrayNumbers.length; x += 1) {
-    if (arrayNumbers[x] % 3 == 0 && arrayNumbers[x] % 5 == 0) {
-      newArray.push("fizzBuzz");
-    } else if (arrayNumbers[x] % 3 == 0) {
-      newArray.push("fizz");
-    } else if (arrayNumbers[x] % 5 == 0) {
-      newArray.push("buzz");
+    if (arrayNumbers[x] % 3 === 0 && arrayNumbers[x] % 5 === 0) {
+      newArray.push('fizzBuzz');
+    } else if (arrayNumbers[x] % 3 === 0) {
+      newArray.push('fizz');
+    } else if (arrayNumbers[x] % 5 === 0) {
+      newArray.push('buzz');
     } else {
-      newArray.push("bug!")
+      newArray.push('bug!');
     }
   }
   return newArray;
@@ -99,13 +97,13 @@ function fizzBuzz(arrayNumbers) {
 // Desafio 9
 function encode(palavra) {
   // seu código aqui
-  let nova_palavra = palavra.replace(/a/g, '1');
-  nova_palavra = nova_palavra.replace(/e/g, '2');
-  nova_palavra = nova_palavra.replace(/i/g, '3');
-  nova_palavra = nova_palavra.replace(/o/g, '4');
-  nova_palavra = nova_palavra.replace(/u/g, '5');
+  let nova_Palavra = palavra.replace(/a/g, '1');
+  nova_Palavra = nova_Palavra.replace(/e/g, '2');
+  nova_Palavra = nova_Palavra.replace(/i/g, '3');
+  nova_Palavra = nova_Palavra.replace(/o/g, '4');
+  nova_Palavra = nova_Palavra.replace(/u/g, '5');
 
-  return nova_palavra;
+  return nova_Palavra;
 }
 
 function decode(palavra) {
@@ -130,7 +128,7 @@ function techList(arrayTech, name) {
 
   arrayTech.sort();
   for (let x = 0; x < arrayTech.length; x += 1) {
-    let objNovo = new Object;
+    let objNovo = new Object();
     objNovo.tech = arrayTech[x];
     objNovo.name = name;
 
@@ -142,35 +140,35 @@ function techList(arrayTech, name) {
 // Desafio 11
 function generatePhoneNumber(arrayNumbers) {
   // seu código aqui
-  let phoneNumber = "";
+  let phoneNumber = '';
 
-  if (arrayNumbers.length != 11) {
-    return "Array com tamanho incorreto.";
+  if (arrayNumbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
 
   for (let x = 0; x < arrayNumbers.length; x += 1) {
     if (arrayNumbers[x] < 0 || arrayNumbers[x] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 
   for (let x = 0; x < arrayNumbers.length; x += 1) {
     let contador = 0;
     for (let y = 1; y < arrayNumbers.length; y += 1) {
-      if (arrayNumbers[x] == arrayNumbers[y] && x != y - 1) {
+      if (arrayNumbers[x] === arrayNumbers[y] && x !== y - 1) {
         contador += 1;
       }
     }
     if (contador >= 3) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 
   for (let x = 0; x < arrayNumbers.length; x += 1) {
     if (x == 0) {
-      phoneNumber += '(' + arrayNumbers[x];
-    } else if (x == 1) {
-      phoneNumber += arrayNumbers[x] + ') ';
+      phoneNumber += `(${arrayNumbers[x]}`;
+    } else if (x === 1) {
+      phoneNumber += `${arrayNumbers[x]}) `;
     } else if (x > 1 && x <= 6) {
       phoneNumber += arrayNumbers[x];
       if (x == 6) {
@@ -190,15 +188,14 @@ function triangleCheck(lineA, lineB, lineC) {
   lineB = Math.abs(lineB);
   lineC = Math.abs(lineC);
 
-  let somaA_B = lineA + lineB;
-  let somaA_C = lineA + lineC;
-  let somaC_B = lineC + lineB;
+  let somaA_b = lineA + lineB;
+  let somaA_c = lineA + lineC;
+  let somaC_b = lineC + lineB;
 
-  if ((somaA_B > lineC) && (somaA_C > lineB) && (somaC_B > lineA)) {
+  if ((somaA_b > lineC) && (somaA_c > lineB) && (somaC_b > lineA)) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 13
@@ -211,15 +208,12 @@ function hydrate(drinks) {
     total += parseInt(resultado[x]);
   }
 
-  if (total == 1) {
+  if (total === 1) {
     return `${total} copo de água`;
   } else {
     return `${total} copos de água`;
   }
-  
 }
-
-
 module.exports = {
   calcArea,
   catAndMouse,
