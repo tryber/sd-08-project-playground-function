@@ -77,7 +77,6 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode(frase) {
-  frase.split = '';
   let result = '';
   for (let i in frase) {
     if (frase[i] === 'a') {
@@ -98,7 +97,6 @@ function encode(frase) {
 }
 
 function decode(frase) {
-  frase.split = '';
   let result = '';
   for (let i in frase) {
     if (frase[i] === '1') {
@@ -141,9 +139,9 @@ function techList(techs, name) {
 
 // Desafio 11
 function generatePhoneNumber(number) {
-  let result = ''
+  let result = '';
   if (number.length !== 11) {
-    result = 'Array com tamanho incorreto.'
+    result = 'Array com tamanho incorreto.';
   } else {
     for (let i in number) {
       let contRepeticao = 0;
@@ -160,7 +158,7 @@ function generatePhoneNumber(number) {
       }
     }
   }
-  return result
+  return result;
 }
 
 // Desafio 12
@@ -175,10 +173,39 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(frase) {
+  /* let number = 0;
+  number += frase.match(/\d+/)[1];
+  
+  return number */
+  /* let result = ;
+  frase.split = '';
+  for (let i in frase) {
+    if ((typeof frase[i] === 'number ') */
+  let result = 0;
+  for (let i in frase) {
+    if (frase[i] === '1') {
+      result += 1;
+    } else if (frase[i] === '2') {
+      result += 2;
+    } else if (frase[i] === '3') {
+      result += 3;
+    } else if (frase[i] === '4') {
+      result += 4;
+    } else if (frase[i] === '5') {
+      result += 5;
+    } else if (frase[i] === '6') {
+      result += 6;
+    } else if (frase[i] === '7') {
+      result += 7;
+    } else if (frase[i] === '8') {
+      result += 8;
+    } else if (frase[i] === '9') {
+      result += 9;
+    }
+  } 
+  return result + ' copos de água'
 }
-
 
 module.exports = {
   calcArea,
