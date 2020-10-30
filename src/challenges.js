@@ -93,8 +93,49 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {}
-function decode() {}
+function encode(string) {
+  let encoded = '';
+
+  let vogals = {
+    'a': 1,
+    'e': 2,
+    'i': 3,
+    'o': 4,
+    'u': 5,
+  }
+
+  for (let i of string) {
+    if (vogals[i] === undefined) {
+      encoded += i;
+    } else {
+      encoded += vogals[i];
+    }
+  }
+
+  return encoded;
+}
+
+function decode(string) {
+  let decoded = '';
+
+  let numbers = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  }
+
+  for (let i of string) {
+    if (numbers[i] === undefined) {
+      decoded += i;
+    } else {
+      decoded += numbers[i];
+    }
+  }
+
+  return decoded;
+}
 
 // Desafio 10
 function techList() {}
