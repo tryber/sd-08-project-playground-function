@@ -163,11 +163,13 @@ function generatePhoneNumber(numerico) {
   let telefone = "";
   let erro = "Array com tamanho incorreto."
   let impossivel = "não é possível gerar um número de telefone com esses valores"
+  let anterior = 0;
+  let proximo = 0;
   if (numerico.length == 11){
       let sorted = numerico.slice().sort();
-      for (let key in numerico){
-          let anterior = key-=1;
-          let proximo = key+=1;
+      for (let key = 0; key < numerico.length; key += 1){
+        anterior = (key-1);
+        proximo = (key+1);
           if (sorted[key] < 0 || sorted[key] > 9){
               return impossivel;
               break;
@@ -189,6 +191,7 @@ function generatePhoneNumber(numerico) {
           } else if (key >= 7) {
               telefone += numerico[key];
           }
+        
       }
       return telefone;
   } else {
