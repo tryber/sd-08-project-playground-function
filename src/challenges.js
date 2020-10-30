@@ -85,12 +85,12 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let result = '';
+  let result = [];
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       result = 'fizBuzz';
     } else if (array[i] % 3 === 0) {
-      result='fizz';
+      result = 'fizz';
     } else if (array[i] % 5 === 0) {
       result = 'buzz';
     } else {
@@ -102,11 +102,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode() {
-  // let list = palavra.split("");
-
-  // for (let i = 0; i < list.length; i += 1) {
-  //   if (list)
-  // }
+  // seu código aqui
 }
 function decode() {
   // seu código aqui
