@@ -22,7 +22,7 @@ return splitSentence
 
 /// Desafio 4
 function concatName (arrayString) {
-  let primeiroUltimo = arrayString[arrayString.length - 1] + " , "+ arrayString[0] + " . ";
+  let primeiroUltimo = arrayString[arrayString.length - 1] + " , " + arrayString[0];
   return primeiroUltimo;
 }
 
