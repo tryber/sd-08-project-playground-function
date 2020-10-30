@@ -115,58 +115,58 @@ function fizzBuzz(arrayNumeros) {
 /* console.log(fizzBuzz([2, 15, 7, 9, 45])); */
 
 // Desafio 9
-function novoTextoDecode(caracter) {
-  switch (caracter) {
-    case 'a':
-      return '1';
-    case 'e':
-      return '2';
-    case 'i':
-      return '3';
-    case 'o':
-      return '4';
-    case 'u':
-      return '5';
-    default:
-      return caracter;
-  }
-}
+function encode(texto) {
+  let novoTexto = '';
 
-function novoTextoEncode(caracter) {
-  switch (caracter) {
-    case '1':
-      return 'a';
-    case '2':
-      return 'e';
-    case '3':
-      return 'i';
-    case '4':
-      return 'o';
-    case '5':
-      return 'u';
-    default:
-      return caracter;
-  }
-}
-
-function novoTexto(texto, tipo) {
-  let textoNovo = '';
   for (let indice = 0; indice < texto.length; indice += 1) {
-    if (tipo === 'Decode') {
-      textoNovo += novoTextoEncode(texto[indice]);
-    } else {
-      textoNovo += novoTextoDecode(texto[indice]);
+    switch (texto[indice]) {
+      case 'a':
+        novoTexto += '1';
+        break;
+      case 'e':
+        novoTexto += '2';
+        break;
+      case 'i':
+        novoTexto += '3';
+        break;
+      case 'o':
+        novoTexto += '4';
+        break;
+      case 'u':
+        novoTexto += '5';
+        break;
+      default:
+        novoTexto += texto[indice];
     }
   }
-  return textoNovo;
-}
-
-function encode(texto) {
-  return novoTexto(texto, 'Encode');
+  return novoTexto;
 }
 
 function decode(texto) {
-  return novoTexto(texto, 'Decode');
+  let novoTexto = '';
+
+  for (let indice = 0; indice < texto.length; indice += 1) {
+    switch (texto[indice]) {
+      case '1':
+        novoTexto += 'a';
+        break;
+      case '2':
+        novoTexto += 'e';
+        break;
+      case '3':
+        novoTexto += 'i';
+        break;
+      case '4':
+        novoTexto += 'o';
+        break;
+      case '5':
+        novoTexto += 'u';
+        break;
+      default:
+        novoTexto += texto[indice];
+    }
+  }
+  return novoTexto;
 }
 
 /* console.log(encode("hi there!"));
