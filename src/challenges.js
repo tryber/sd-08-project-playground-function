@@ -94,11 +94,10 @@ function encode(palavra) {
     }
     else if (palavra[index] === 'u') {
       palavraCodificada += '5';
-    } 
+    }
     else {
       palavraCodificada += palavra[index];
     }
-    
   }
   return palavraCodificada;
 }
@@ -120,11 +119,10 @@ function decode(palavra) {
     }
     else if (palavra[index] === '5') {
       palavraDecodificada += 'u';
-    } 
+    }
     else {
       palavraDecodificada += palavra[index];
     }
-    
   }
   return palavraDecodificada;
 }
@@ -134,10 +132,8 @@ function techList(array, name) {
   if (array.length === 0) {
     return 'Vazio!'
   }
-  
   let techOrdenada = array.sort();
   let arrayOrdenado = [];
-
   for (index in array) {
     let objetoTech = {
       tech: techOrdenada[index],
