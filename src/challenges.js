@@ -41,17 +41,24 @@ function footballPoints(wins, tie) {
 
 // Desafio 6
 function highestCount(numArray) {
-  let maiorValor = Math.max.apply(null, numArray);
+  // let maiorValor = Math.max.apply(null, numArray);
+  let maiorValor1 = numArray[0];
   let vezesMaiorValor = 0;
   let indice;
   for( indice =0; indice < numArray.length -1; indice +=1){
-    if(numArray[indice] === maiorValor){
+    if (numArray[indice] > maiorValor1){
+      maiorValor1 = numArray[indice];
+    }
+  }
+
+  for( indice =0; indice < numArray.length; indice +=1){
+    if(numArray[indice] === maiorValor1){
       vezesMaiorValor += 1;
     }
   }
   return vezesMaiorValor;
 }
-// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 10, 9]));
 
 
 // Desafio 7
@@ -114,7 +121,7 @@ function encode(phrase) {
 function decode() {
   // seu código aqui
 }
-console.log(encode("hi there!"));
+// console.log(encode("hi there!"));
 
 
 
