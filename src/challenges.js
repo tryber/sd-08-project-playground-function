@@ -148,7 +148,9 @@ function decode(literal) {
 
 // Desafio 10
 function techList(array, name) {
-  if(array == null || array.length == 0){
+  if(array.length == 0){
+    return "Vazio!";
+  } else {
     let tecnologias = array.sort();
     let arr = [];
     let objeto = {};
@@ -161,13 +163,11 @@ function techList(array, name) {
       arr[i] = objeto;    
     }
     return arr;
-  } else {
-    return "Vazio!";
   }
   
 }
 
-//console.log(techList("João"))
+//console.log(techList([], "João"))
  
 // Desafio 11
 function generatePhoneNumber(array) {
