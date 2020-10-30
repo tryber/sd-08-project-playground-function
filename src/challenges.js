@@ -172,7 +172,7 @@ function generatePhoneNumber(array) {
         repetitions += 1;
       }
 
-      if (repetitions > 3) {
+      if (repetitions >= 3) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
     }
