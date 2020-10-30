@@ -65,21 +65,9 @@ highestCount(testeHighest);
 //console.log(highestCount(teste));
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let resultado;
-  let distanciaCat1 = mouse - cat1;
-  let distanciaCat2 = mouse - cat2;
-  if (distanciaCat1 < distanciaCat2) {
-    resultado = "cat1";
-  } else if (distanciaCat2 < distanciaCat1) {
-    resultado = "cat2";
-  } else {
-    resultado = "os gatos trombam e o rato foge";
-  }
-return resultado;
+function catAndMouse() {
+  // seu código aqui
 }
-catAndMouse(10, 5, 3);
-//console.log(catAndMouse(10,5,3));
 
 // Desafio 8
 function fizzBuzz() {
