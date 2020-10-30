@@ -54,25 +54,19 @@ function catAndMouse(mouse,cat1,cat2) {
   const distanciaDoGatoUmParaORato = Math.abs(mouse - cat1),
         distanciaDoGatoDoisParaORato = Math.abs(mouse - cat2),
         gatoUmGanhouDoGatoDois = distanciaDoGatoUmParaORato < distanciaDoGatoDoisParaORato,
-        gatoDoisGanhouDoGatoUm = distanciaDoGatoUmParaORato > distanciaDoGatoDoisParaORato,
-        ambosOsGatosPerdemORato = distanciaDoGatoUmParaORato == distanciaDoGatoDoisParaORato
-  let resultado = ''
-        switch(true){
-          case gatoUmGanhouDoGatoDois:
+        gatoDoisGanhouDoGatoUm = distanciaDoGatoUmParaORato > distanciaDoGatoDoisParaORato
+  let   resultado = ''
+        if(gatoUmGanhouDoGatoDois == true){
             resultado = 'cat1'
             return resultado
-          break;
-          case gatoDoisGanhouDoGatoUm:
+          }
+    else if(gatoDoisGanhouDoGatoUm == true){
             resultado = 'cat2'
             return resultado
-          break;
-          case ambosOsGatosPerdemORato:
+          }else{
             resultado = "Os gatos trombam e o rato foge"
             return resultado
-          break;
-          default:
-            console.log('Erro Interno :(')
-        }
+          }          
 }
 
 // Desafio 8
