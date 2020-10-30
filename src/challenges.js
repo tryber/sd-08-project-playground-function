@@ -83,12 +83,26 @@ function fizzBuzz(vetorNum) {
 //console.log(fizzBuzz(vetorTeste));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let = resultado = "";
+  resultado = string.replace("a", "1");
+  resultado = resultado.replace("e", "2");
+  resultado = resultado.replace("i", "3");
+  resultado = resultado.replace("o", "4");
+  resultado = resultado.replace("u", "5");
+  
 }
 function decode() {
-  // seu código aqui
+  let = resultado = "";
+  resultado = string.replace("1", "a");
+  resultado = resultado.replace("2", "e");
+  resultado = resultado.replace("3", "i");
+  resultado = resultado.replace("4", "o");
+  resultado = resultado.replace("5", "u");
+  return resultado;
 }
+let teste = "hi there!"
+console.log(encode(teste));
 
 // Desafio 10
 function techList() {
