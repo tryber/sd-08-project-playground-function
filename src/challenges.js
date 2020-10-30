@@ -129,7 +129,7 @@ function techList(array, name) {
 
 // Desafio 11
 // Método array.some: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/some;
-function numValidator(array) {
+function repObjMaker(array) {
   let counts = {};
 
   for (let i = 0; i < array.length; i += 1) {
@@ -139,9 +139,15 @@ function numValidator(array) {
       counts[array[i]] = 1;
     }
   }
+  return counts;
+}
 
-  for (let key in counts) {
-    if (counts[key] >= 3) {
+
+function numValidator(array) {
+  let reps = repObjMaker(array);
+
+  for (let key in reps) {
+    if (reps[key] >= 3) {
       return false;
     }
   }
