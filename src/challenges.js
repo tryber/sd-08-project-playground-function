@@ -71,17 +71,17 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = mouse - cat1;
   let distanciaCat2 = mouse - cat2;
 
-  if(distanciaCat1 > distanciaCat2) {
+  if(distanciaCat1 < distanciaCat2) {
     return 'cat1'
   }
-  else if(distanciaCat1 < distanciaCat2) {
+  else if(distanciaCat2 < distanciaCat1) {
     return 'cat2'
   } 
   else {
     return 'os gatos trombam e o rato foge'
   }
 }
-//console.log(catAndMouse(5, 15, 15));
+console.log(catAndMouse(20, 10, 15));
 
 
 // Desafio 8
@@ -159,9 +159,25 @@ function decode(text) {
 
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayTec, name) {
+  newList = [];
+  let arraySort = arrayTec.sort();
+  
+  for(let index in arraySort) {
+    let object = {
+      tech: '',
+      name: ''
+    };
+  
+    object.tech = arraySort[index];
+    object.name = name;
+
+    newList.push(object);
+  }
+  return newList;
 }
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+
 
 // Desafio 11
 function generatePhoneNumber() {
