@@ -23,7 +23,9 @@ function concatName(arr) {
 
 // Desafio 5
 function footballPoints(win, ties) {
-  return win * 3 + ties * 1;
+  const winPoints = win * 3 || 0;
+  const tiesPoints = ties * 1 || 0;
+  return winPoints + tiesPoints;
 }
 
 // Desafio 6
@@ -52,52 +54,22 @@ function decode(text) {
 
 // Desafio 10
 function techList(list, name) {
-  if (list.length === 0) return "Vazio!";
-  // const result = [];
-  // list.sort().forEach((item) => {
-  //   result.push({ tech: item, name });
-  // });
   return helper.techListFactory(list, name);
 }
 
 // Desafio 11
 function generatePhoneNumber(arr) {
-  // Validation
-  // if (arr.length !== 11) return "Array com tamanho incorreto.";
-  // for (let i = 0; i < arr.length; i += 1) {
-  //   if (arr[i] < 0 || arr[i] >= 10) {
-  //     return "não é possível gerar um número de telefone com esses valores";
-  //   }
-  //   if (arr.filter((x) => x === arr[i]).length >= 3) {
-  //     return "não é possível gerar um número de telefone com esses valores";
-  //   }
-  // }
-  // // Format Telefone
   return helper.phoneNumberGeneratorFacade(arr);
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  const check = {
-    a: lineA < lineB + lineC && lineA > Math.abs(lineB - lineC),
-    b: lineB < lineA + lineC && lineB > Math.abs(lineA - lineC),
-    c: lineC < lineA + lineB && lineC > Math.abs(lineA - lineB),
-  };
-  if (check.a && check.b && check.c) {
-    return true;
-  }
-  return false;
+  return helper.triangleCheckEval(lineA, lineB, lineC);
 }
 
 // Desafio 13
 function hydrate(text) {
-  const arr = text.replace(/\D/g, "").split("");
-  const sum =
-    arr.reduce(function (acc, val) {
-      return parseInt(acc, 10) + parseInt(val, 10);
-    }, 0) || 0;
-  if (sum < 2) return `${sum} copo de água`;
-  return `${sum} copos de água`;
+  return helper.hydrateFacade(text);
 }
 
 module.exports = {

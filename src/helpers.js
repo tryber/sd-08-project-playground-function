@@ -85,3 +85,33 @@ module.exports.phoneNumberGeneratorFacade = function (arr) {
   // Format Telefone
   return `(${arr[0]}${arr[1]}) ${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`;
 };
+
+module.exports.triangleCheckEval = function (a, b, c) {
+  const evalList = {
+    a: a < b + c && a > Math.abs(b - c),
+    b: b < a + c && b > Math.abs(a - c),
+    c: c < a + b && c > Math.abs(a - b),
+  };
+  if (evalList.a && evalList.b && evalList.c) {
+    return true;
+  }
+  return false;
+};
+
+module.exports.hydrateFacade = function (text) {
+  if (typeof text !== 'string') {
+    throw new Error('parameter needs be string');
+  }
+  const arr = text.replace(/\D/g, '').split('');
+  const sum = arr.reduce(function (acc, val) {
+    return parseInt(acc, 10) + parseInt(val, 10);
+  }, 0) || 0;
+  if (sum < 2) return `${sum} copo de água`;
+  return `${sum} copos de água`;
+};
+
+module.exports.footballPointsCalc = function (win, ties) {
+  const winPoints = win * 3;
+  const tiesPoints = ties * 1;
+  return winPoints + tiesPoints;
+};
