@@ -58,7 +58,7 @@ function highestCount(arrayNumbers) {
   // seu código aqui
   let repete = 0;
   let maior = numMaior(arrayNumbers);
-  
+
   for (let x = 0; x < arrayNumbers.length; x += 1) {
     if (arrayNumbers[x] === maior) {
       repete += 1;
@@ -83,17 +83,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function returnTexBuzz(number) {
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  return number % 5 === 0 ? 'buzz' : 'bug!';
+}
+
 function fizzBuzz(arrayNumbers) {
   let newArray = [];
   for (let x = 0; x < arrayNumbers.length; x += 1) {
     if (arrayNumbers[x] % 3 === 0 && arrayNumbers[x] % 5 === 0) {
       newArray.push('fizzBuzz');
-    } else if (arrayNumbers[x] % 3 === 0) {
-      newArray.push('fizz');
-    } else if (arrayNumbers[x] % 5 === 0) {
-      newArray.push('buzz');
     } else {
-      newArray.push('bug!');
+      newArray.push(returnTexBuzz(arrayNumbers[x]));
     }
   }
   return newArray;
