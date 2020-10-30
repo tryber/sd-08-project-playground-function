@@ -142,24 +142,6 @@ function techList(tech, name) {
   }
   return newTech;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
-"Lucas"));
-
-function repetNumberCaracteres(arr) {
-  let countRepet = 0;
-  for (let i = 0; i < arr.length; i += 1) {
-    for (let x = 0; x < arr.length; x += 1) {
-      if (arr[i] === arr[x]) {
-        countRepet += 1;
-      }
-      if (countRepet > 2) {
-        return true;
-      }
-    }
-    countRepet = 0;
-  }
-  return false;
-}
 
 // Desafio 11
 function generatePhoneNumber(arr) {
@@ -190,7 +172,7 @@ function generatePhoneNumber(arr) {
   return phoneNumber.replace(/,/g, '');
 }
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     return true;
   }
@@ -206,8 +188,16 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(alcoolDrink) {
+  let resultNumbers = alcoolDrink.match(/\d/g);
+  let sum = 0;
+  for (let index = 0; index < resultNumbers.length; index += 1) {
+    sum += Number(resultNumbers[index]);
+  }
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  }
+  return `${sum} copos de água`;
 }
 
 module.exports = {
