@@ -62,8 +62,8 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let cat1ToMouse = cat1 - mouse;
-  let cat2ToMouse = cat2 - mouse;
+  let cat1ToMouse = Math.abs(cat1 - mouse);
+  let cat2ToMouse = Math.abs(cat2 - mouse);
   let winner;
   if (cat1ToMouse === cat2ToMouse){
     let empate = "Os gatos trombam e o rato foge";
@@ -71,16 +71,28 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (cat1ToMouse > cat2ToMouse){
     winner = "cat2";
     return winner;
-  } else {
+  } else if (cat2ToMouse > cat1ToMouse){
     winner = "cat1";
     return winner;
   }
 }
 
-
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+  let resultado = [];
+  for (let i = 0; i < array.length; i += 1){
+    if (array[i] % 3 == 0 && array[i] % 5 == 0){
+      resultado.push("fizzBuzz")
+    } else if (array[i] % 3 == 0){
+      resultado.push("fizz");
+    } else if (array[i] % 5 == 0){
+      resultado.push("buzz");
+    } else {
+      resultado.push("bug!")
+    }
+  }
+  return resultado;
 }
 
 // Desafio 9
