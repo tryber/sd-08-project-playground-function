@@ -33,10 +33,30 @@ function catAndMouse() {
   // seu código aqui
 }
 
+
+
+
+
+
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(param) {
   // seu código aqui
-}
+  for(contador = 1; contador <= param; contador += 1){
+    if(contador % 3 === 0){
+      console.log(contador, "Fizz");
+    }else if(contador % 5 === 0){
+      console.log(contador, "Buzz");
+    }else if(contador % 15 === 0){
+      console.log(contador, "FizzBuzz");
+    }else{
+      console.log(contador);
+    };
+  };
+};
+
+
+
+
 
 // Desafio 9
 function encode() {
