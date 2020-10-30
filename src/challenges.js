@@ -147,7 +147,7 @@ function techList(array, name) {
 
   array = array.sort();
 
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i += 1) {
     techs.push({ tech: array[i], name });
   }
 
