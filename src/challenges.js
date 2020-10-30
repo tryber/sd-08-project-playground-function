@@ -187,7 +187,7 @@ function hydrate(word) {
   let r = /\d+/;
   let quantidade = word.match(r)
   /** Source: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994 */
-  if (quantidade[0] === 1) {
+  if (quantidade[0] === '1') {
     return `${quantidade[0]} copo de água`
   }
   return `${quantidade[0]} copos de água`
