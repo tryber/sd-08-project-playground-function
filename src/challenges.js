@@ -138,11 +138,11 @@ function encode(string) {
 // let string = '1 h2ll4 w4rld'
 function decode(string) {
   for (let index = 0; index < string.length; index += 1) {
-    string.replace('1', 'a')
-    string.replace('2', 'e')
-    string.replace('3', 'i')
-    string.replace('4', 'o')
-    string.replace('5', 'u')
+    string = string.replace('1', 'a')
+    string = string.replace('2', 'e')
+    string = string.replace('3', 'i')
+    string = string.replace('4', 'o')
+    string = string.replace('5', 'u')
   }
   return string
 }
