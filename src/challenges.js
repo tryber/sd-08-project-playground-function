@@ -139,6 +139,10 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+
   let techs = [];
 
   array = array.sort();
@@ -147,7 +151,7 @@ function techList(array, name) {
     techs.push({ tech: array[i], name });
   }
 
-  array.length === 0 ? 'Vazio!' : techs;
+  return techs;
 }
 
 // Desafio 11
