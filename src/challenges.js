@@ -76,11 +76,12 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   }
 }
-console.log(catAndMouse(-1, 3, 4));
+// console.log(catAndMouse(-1, 3, 4));
 
 // >>----------> Desafio 8
 function fizzBuzz(arrayFizz) {
   let mesageFizz = [];
+
   for (let indice in arrayFizz) {
     if(arrayFizz[indice] % 3 == 0 && arrayFizz[indice] % 5 == 0){
       mesageFizz.push("fizzBuzz");
@@ -99,13 +100,47 @@ function fizzBuzz(arrayFizz) {
 }
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+// >>----------> Desafio 9
+function encode(string) {
+  let encode = '';
+  for (let indice in string) {
+    if (string[indice] == 'a') {
+      encode += '1';
+    }else if (string[indice] == 'e') {
+      encode += '2';
+    }else if(string[indice] == 'i') {
+      encode += '3';
+    }else if(string[indice] == 'o') {
+      encode += '4';
+    }else if(string[indice] == 'u') {
+      encode += '5';
+    } else encode +=string[indice];
+  }
+  return encode;
 }
-function decode() {
-  // seu código aqui
+// >>-----> # <-----<<
+function decode(string) {
+  let decode = '';
+  for (let indice in string) {
+    if (string[indice] == '1') {
+      decode += 'a';
+    }else if (string[indice] == '2') {
+      decode += 'e';
+    }else if(string[indice] == '3') {
+      decode += 'i';
+    }else if(string[indice] == '4') {
+      decode += 'o';
+    }else if(string[indice] == '5') {
+      decode += 'u';
+    } else decode +=string[indice];
+  }
+  return decode;
 }
+// let teste = encode('hi there!')
+// let teste2 = decode(encode('h3 there!'));
+// console.log(teste);
+// console.log(teste2);
+// console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList() {
