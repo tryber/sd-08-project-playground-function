@@ -1,71 +1,203 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(booleanOne, booleanTwo) {
+  if (booleanOne && booleanTwo) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  var splitString = string.split(" ");
+  return splitString;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let concat = array[array.length - 1] + ", " + array[0];
+  return concat;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = (wins * 3) + ties;
+  return pontos;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let sortArray = array.sort(function (a, b) { return a - b });
+  let highestNumber = sortArray[sortArray.length - 1];
+  console.log(sortArray);
+  let repeatCount = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] == highestNumber) {
+      repeatCount += 1;
+    }
+  }
+  return repeatCount;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distCat1 = Math.abs(cat1 - mouse);
+  let distCat2 = Math.abs(cat2 - mouse);
+
+  if (distCat1 < distCat2) {
+    return "cat1";
+  } else if (distCat2 < distCat1) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let novaArray = [];
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+      novaArray.push("fizzBuzz")
+    } else if (array[i] % 3 == 0) {
+      novaArray.push("fizz");
+    } else if (array[i] % 5 == 0) {
+      novaArray.push("buzz");
+    } else {
+      novaArray.push("bug!");
+    }
+  }
+  return novaArray;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encodeLetters = ["a", "e", "i", "o", "u"]
+  let encodedValues = [1, 2, 3, 4, 5]
+
+  //Passa a string para um array
+  let encodedString = string.split("");
+
+  for (let i = 0; i < encodedString.length; i += 1) {
+    //Compara se a letra atual é igual a ela mesma mas em caixa baixa porque queremos substituir apenas as lowe case
+    //&&  Procura essa letra minuscula no encodeLetters, se devolver -1 é porque a letra não está la
+    if (encodedString[i] == encodedString[i].toLowerCase() && encodeLetters.indexOf(encodedString[i]) != -1) {
+      //Substitui a letra atual de encodedString pelo número equivalente no encodedValues
+      encodedString[i] = encodedValues[encodeLetters.indexOf(encodedString[i])];
+    }
+  }
+
+  //Une todos os elementos do array
+  return encodedString.join("");
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let encodeLetters = ["a", "e", "i", "o", "u"];
+
+  //Precisei colocar os números como string porque o indexOf estava retornando -1
+  let encodedValues = ["1", "2", "3", "4", "5"];
+
+  //Passa a string para um array
+  let encodedString = string.split("");
+
+  for (let i = 0; i < encodedString.length; i += 1) {
+    //Verificar se a posição atual da encodedString é igual a alguma das posições de encodedValues
+    if (encodedValues.indexOf(encodedString[i]) != -1) {
+      //Substitui o número pela letra equivalente
+      encodedString[i] = encodeLetters[encodedValues.indexOf(encodedString[i])];
+    }
+  }
+
+  //Une todos os elementos do array
+  return encodedString.join("");
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let sortArray = array.sort();
+  let newArray = [];
+  for (let key in array) {
+    let insert = {
+      tech: array[key], 
+      name: name
+    }
+    newArray.push(insert)
+  }
+
+  if (array.length == 0) {
+    return "Vazio!";
+  } else {
+    return newArray;
+  }
+  
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  if(array.length != 11){
+    return "Array com tamanho incorreto.";
+  }
+
+  for(let key in array)  {
+    let counter = 0;
+    if(array[key]>9 || array[key]<0){
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+
+    for(let i = 0; i<array.length; i+=1){
+      if(array[key] == array[i]){
+        counter += 1;
+      }
+      if(counter >= 3){
+        return "não é possível gerar um número de telefone com esses valores";
+      }
+    }
+  }
+  let formatNumber = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+  return formatNumber;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) {
+  let test1 = a + b > c;
+  let test2 = b + c > a;
+  let test3 = a + c > b;
+  if(test1 && test2 && test3){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(string) {
+  //Não consegui decorar para que serve cada parte, mas esse código vai separar números negativos, positivos, um número ou mais, inclui a parte decimal, e pega todas as correspondências
+  let regex = /[+-]?\d+(?:\.\d+)?/g;
 
+  //Variável que receberá a palavra
+  let str = string;
+
+  let quantAgua = 0;
+
+  let match;
+  //O exec() vai procurar casos que coincidam com o regex, quando não achar mais nem um ele retorna null
+  while (match = regex.exec(str)) {
+    let value = Number(match[0])
+    quantAgua += value;
+  }
+  //Fonte: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+  if(quantAgua > 1){
+    return `${quantAgua} copos de água`
+  }else{
+    return `${quantAgua} copo de água`
+  }
+}
 
 module.exports = {
   calcArea,
