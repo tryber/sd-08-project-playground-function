@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(n1,n2) {
-  if(n1 % 2 == 0 && n2 % 2 == 1) {
+  if(n1 && n2) {
     return true
   } else {
     return false
@@ -14,7 +14,8 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  let frase = [];
+
 }
 
 // Desafio 4
