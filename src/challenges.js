@@ -130,7 +130,11 @@ function techList(tech, name) {
           name: name
       })
   }
-  return listEnd;
+  if (listEnd.lenghth == 0) {
+    return "Vazio!"
+  }else {
+    return listEnd;
+  }
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Fernanda"))
 
