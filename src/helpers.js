@@ -37,6 +37,7 @@ module.exports.decodeText = function (text) {
 };
 
 module.exports.techListFactory = function (list, name) {
+  if (list.length === 0) return 'Vazio!';
   const result = [];
   list.sort().forEach((item) => {
     result.push({ tech: item, name });

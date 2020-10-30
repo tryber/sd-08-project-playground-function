@@ -1,4 +1,4 @@
-const helper = require("./helpers");
+const helper = require('./helpers');
 
 // Desafio 1
 function compareTrue(value1, value2) {
@@ -13,7 +13,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(text) {
-  return text.split(" ");
+  return text.split(' ');
 }
 
 // Desafio 4
