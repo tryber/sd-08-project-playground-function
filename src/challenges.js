@@ -25,7 +25,6 @@ function splitSentence(frase) {
       string = string + frase[i];
     }
   }
-
   array.push(string);
 
   return array;
@@ -260,6 +259,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(bebidas) {
   let copos = 0;
+  let frase = '';
 
   for (i=0;i<bebidas.length;i+=1) {
     if (bebidas[i] == 1) {
@@ -283,12 +283,14 @@ function hydrate(bebidas) {
     }
   }
 
-  let frase = copos + ' copos de água';
+  if (copos == 1) {
+    frase = copos + ' copo de água';
+  } else {
+    frase = copos + ' copos de água';
+  }
 
   return frase;
 }
-console.log(hydrate('5 bebidas doidas, 9 cervejas, 2 pingas, 5 tequilas'));
-
 
 module.exports = {
   calcArea,
