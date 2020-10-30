@@ -107,16 +107,16 @@ function encode(phrase) {
     i: '3',
     o: '4',
     u: '5'
-  }
+  };
   let phraseCodif = '';
   let indice;
 
   for(indice = 0; indice < phrase.length; indice +=1){
     for( let key in codigos){
-      if(phrase[indice] !== key){
-        phraseCodif = phrase[indice];
+      if(phrase[indice] === key){
+        phraseCodif += codigos[key];
       } else {
-        phraseCodif = codigos[key];
+        phraseCodif += phrase[indice];
       }
 
     }
@@ -131,7 +131,7 @@ function encode(phrase) {
 function decode() {
   // seu código aqui
 }
-// console.log(encode("hi there!"));
+console.log(encode("hi there!"));
 
 
 
