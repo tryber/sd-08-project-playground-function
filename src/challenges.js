@@ -49,9 +49,26 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
+// função divisíveis
+function divisively (num) {
+  if ((num % 3 == 0) && (num % 5 == 0)) {
+      return 'fizzBuzz'
+  } else if (num % 5 == 0) {
+      return 'buzz'
+  } else if (num % 3 == 0) {
+      return 'fizz'
+  } else {
+      return 'bug!'
+  }
+}
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let arr = [];
+  for (let num in array) {
+    arr.push(divisively(array[num]));
+  }
+  return arr;
 }
 
 // Desafio 9
