@@ -26,10 +26,9 @@ function splitSentence(phrase) {
 function concatName(arrayStr) {
   let first = arrayStr[0];
   let last = arrayStr[arrayStr.length - 1];
-  let name = last + ', ' + first;
-  return name;
+  return `${last}, ${first}`;
 }
-// console.log(concatName(['Rodrigo', 'de Castro', 'Bandeira', 'Costa']));
+ console.log(concatName(['Rodrigo', 'de Castro', 'Bandeira', 'Costa']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -68,12 +67,12 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(0, 2, 2));
 
 // Desafio 8
-function fizz(Num) {
+function checkFizz(Num) {
   if ((Num % 3) === 0) {
     return true;
   }
 }
-function buzz(Num) {
+function checkBuzz(Num) {
   if ((Num % 5) === 0) {
     return true;
   }
@@ -81,12 +80,12 @@ function buzz(Num) {
 function fizzBuzz(arrayNum) {
   let result = [];
   let key;
-  for (key = 0; key < arrayNum.length; key += 1) {
-    if (fizz(arrayNum[key]) && buzz(arrayNum[key])) {
+  for (key in arrayNum) {
+    if (checkFizz(arrayNum[key]) && checkBuzz(arrayNum[key])) {
       result.push('fizzBuzz');
-    } else if (fizz(arrayNum[key]) && !buzz(arrayNum[key])) {
+    } else if (checkFizz(arrayNum[key]) && !checkBuzz(arrayNum[key])) {
       result.push('fizz');
-    } else if (!fizz(arrayNum[key]) && buzz(arrayNum[key])) {
+    } else if (!checkFizz(arrayNum[key]) && checkBuzz(arrayNum[key])) {
       result.push('buzz');
     } else {
       result.push('bug!');
