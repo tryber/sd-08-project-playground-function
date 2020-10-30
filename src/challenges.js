@@ -89,13 +89,44 @@ function fizzBuzz(array) {
       
   }
 
-console.log(fizzBuzz([2,15,7,9,45]))
+//console.log(fizzBuzz([2,15,7,9,45]))
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(troca) {
+  // a -> 1
+  // e -> 2
+  // i -> 3
+  // o -> 4
+  // u -> 5
+
+  let vogal = '';
+  for (let a = 0; a < troca.length; a += 1) {
+    switch (troca[a]) {
+      case 'a':
+        vogal += 1;
+        break;
+      case 'e':
+        vogal += 2;
+        break;
+      case 'i':
+        vogal += 3;
+        break;
+      case 'o':
+        vogal += 4;
+        break;
+      case 'u':
+        vogal += 5;
+        break;
+      default:
+        vogal += troca[a];
+        break;
+    }
+  }
+
+  return vogal;
 }
+console.log(encode('hi there!'))
 function decode() {
   // seu código aqui
 }
