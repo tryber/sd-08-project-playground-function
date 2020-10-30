@@ -109,7 +109,7 @@ function generatePhoneNumber(arr) {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
+function triangleCheck(lineA = 0, lineB = 0, lineC = 0) {
   // Checks
   if (lineA < lineB + lineC && lineA > Math.abs(lineB + lineC)) return false;
   if (lineB < lineA + lineC && lineB > Math.abs(lineA + lineC)) return false;
@@ -118,7 +118,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate(text) {
+function hydrate(text = "") {
   let arr = text.replace(/\D/g, "").split("");
   let sum =
     arr.reduce(function (acc, val) {

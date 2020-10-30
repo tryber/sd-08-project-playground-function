@@ -1,31 +1,33 @@
 // Desafio 1
-function compareTrue(value1, value2) {
+function compareTrue(value1 = false, value2 = false) {
   if (value1 && value2) return true;
   return false;
 }
 
 // Desafio 2
-function calcArea(base, height) {
+function calcArea(base = 0, height = 0) {
   return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence(text) {
+function splitSentence(text = "") {
   return text.split(" ");
 }
 
 // Desafio 4
-function concatName(arr) {
+function concatName(arr = []) {
+  // let result = arr.toString();
+  // result = result.split(",").join(", ").trim();
   return `${arr[arr.length - 1]}, ${arr[0]}`;
 }
 
 // Desafio 5
-function footballPoints(win, ties) {
+function footballPoints(win = 0, ties = 0) {
   return win * 3 + ties * 1;
 }
 
 // Desafio 6
-function highestCount(arr) {
+function highestCount(arr = []) {
   const max = arr.reduce(function (a, b) {
     return Math.max(a, b);
   });
@@ -33,7 +35,7 @@ function highestCount(arr) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+function catAndMouse(mouse = 0, cat1 = 0, cat2 = 0) {
   let distRelative = {
     cat1: Math.abs(cat1 - mouse),
     cat2: Math.abs(cat2 - mouse),
@@ -44,7 +46,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arr) {
+function fizzBuzz(arr = []) {
   let result = [];
   for (let i = 0; i < arr.length; i++) {
     result[i] = "bug!";
@@ -56,7 +58,7 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode(text) {
+function encode(text = "") {
   return text
     .split("a")
     .join("1")
@@ -70,7 +72,7 @@ function encode(text) {
     .join("5");
 }
 
-function decode(text) {
+function decode(text = "") {
   return text
     .split("1")
     .join("a")
@@ -85,7 +87,7 @@ function decode(text) {
 }
 
 // Desafio 10
-function techList(techList, name) {
+function techList(techList = [], name = "") {
   if (techList.length === 0) return "Vazio!";
   let result = [];
   techList.sort().forEach((tech) => {
@@ -95,7 +97,7 @@ function techList(techList, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(arr) {
+function generatePhoneNumber(arr = []) {
   // Validation
   if (arr.length === 0) return "Array com tamanho incorreto.";
   if (arr.length > 12) return "Array com tamanho incorreto.";
@@ -109,7 +111,7 @@ function generatePhoneNumber(arr) {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
+function triangleCheck(lineA = 0, lineB = 0, lineC = 0) {
   // Checks
   if (lineA < lineB + lineC && lineA > Math.abs(lineB + lineC)) return false;
   if (lineB < lineA + lineC && lineB > Math.abs(lineA + lineC)) return false;
@@ -118,7 +120,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate(text) {
+function hydrate(text = "") {
   let arr = text.replace(/\D/g, "").split("");
   let sum =
     arr.reduce(function (acc, val) {

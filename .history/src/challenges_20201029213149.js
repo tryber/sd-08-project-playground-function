@@ -118,7 +118,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate(text) {
+function hydrate(text = "") {
   let arr = text.replace(/\D/g, "").split("");
   let sum =
     arr.reduce(function (acc, val) {
