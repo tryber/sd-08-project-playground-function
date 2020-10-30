@@ -165,10 +165,45 @@ function techList(technologies, name) {
     return objectArray;
   }
 }
-
-// Desafio 11
-function generatePhoneNumber() {
+function validPhone(arrayNumber) {
+  let count = 0;
+  if (arrayNumber.length < 0 || arrayNumber > 9) {
+    return false;
+  }
+  for (let i = 0; i < arrayNumber.length; i += 1) {
+    for (let j = 0; j < arrayNumber.length; j++) {
+      if (arrayNumber[i] === arrayNumber[j]) {
+        count += 1;
+      }
+      if (count >= 3) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+function generatePhoneNumber(arrayNumber) {
   // seu código aqui
+  let numberFormated = '';
+  if (arrayNumber.length != 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (!validPhone) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  for (let i = 0; i < arrayNumber.length; i++) {
+    if (i === 0) {
+      numberFormated += `(`;
+    }
+    if (i === 2) {
+      numberFormated += `) `;
+    }
+    if (i === 7) {
+      numberFormated += `-`;
+    }
+    numberFormated += arrayNumber[i];
+  }
+  return numberFormated;
 }
 
 // Desafio 12
