@@ -54,7 +54,7 @@ function highestCount(array) {
   let cont = 0;
   for (let i = 0; i < array.length; i++){
     numero = array[i];
-    for(let j = 1; j < array.length; j++){
+    for(let j = 0; j < array.length; j++){
       if(numero < array[j]){
         maiorNumero = array[j];
       }
@@ -67,14 +67,17 @@ function highestCount(array) {
   }
   return cont;
 }
-  console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+
+//console.log(highestCount([9, 1, 3, 9, 9, 3, 9]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (mouse - cat1 < mouse - cat2){
     return "cat1";
-  } else {
+  } else if (mouse - cat1 > mouse - cat2){
     return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
   }
 }
 
@@ -92,7 +95,7 @@ function fizzBuzz(array) {
     } else if (array[i] % 5 == 0) {
       a[i] = "buzz";
     }  else {
-      a[i] = "bug";
+      a[i] = "bug!";
     }
   }
   return a;
@@ -121,6 +124,8 @@ function encode(literal) {
   return troca;
 }
 
+
+
 function decode(literal) {
   let troca = literal.toLowerCase();
 
@@ -144,11 +149,11 @@ function decode(literal) {
   return troca;
 }
 
-console.log(decode("t3xt2 m4lh1d5"))
+//console.log(decode("H3 th2r2!"));
 
 // Desafio 10
 function techList() {
-  // seu código aqui
+
 }
 
 // Desafio 11
