@@ -8,7 +8,7 @@ function compareTrue(a, b) {
     }
   }
 
-  compareTrue(true,true);
+compareTrue(true,true);
 
 
 
@@ -55,7 +55,7 @@ function footballPoints(wins, ties) {
   return total;
 }
 
-console.log(footballPoints(1, 2));
+footballPoints(1, 2);
 
 // Desafio 6
 function highestCount(array) {
@@ -165,7 +165,7 @@ function techList(tech, name) {
   return array;
 }
 }
-console.log(techList([], "Lucas"));
+techList([], "Lucas");
 
 
 
@@ -174,14 +174,56 @@ console.log(techList([], "Lucas"));
 
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {
   // seu código aqui
+  let retorno = "0";
+  let repet = 0;
+  let maior = 0;
+  for (let cont = 0; cont <= array.length; cont++) {
+
+    if ((array[cont] < 0) || array[cont] > 9) {
+      retorno = "não é possível gerar um número de telefone com esses valores";
+    } else if (array[cont] > maior) {
+      maior = array[cont];
+    } else if (array.length > 4) {
+        array.splice(3, 0, "-");
+    } else {
+      retorno = array.join();
+    }
+  }
+  for (let cont = 0; cont <= array.length; cont++) {
+  if (array[cont] == array[cont] + 1) {
+    repet += 1;
+  } else if (repet >= 3) {
+     retorno = "não é possível gerar um número de telefone com esses valores";
+  } 
+  }
+  return retorno;
 }
 
+generatePhoneNumber([1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+
+
+
+
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let possivel = false;
+  if (lineA > (lineB + lineC) && lineA < Math.abs(lineB - lineC) && lineA < Math.abs(lineC - lineB)){
+    possivel = false;
+  } else if (lineB > (lineA + lineC) && lineB < Math.abs(lineA - lineC) && lineB < Math.abs(lineC - lineA)){
+    possivel = false;
+  } else if (lineC > (lineA + lineB) && lineC < Math.abs(lineB - lineA) && lineC < Math.abs(lineA - lineB)){
+    possivel = false;
+  } else {
+    possivel = true;
+  }
+  return possivel;
 }
+console.log(triangleCheck(2, 14, 8));
+
+
 
 // Desafio 13
 function hydrate() {
