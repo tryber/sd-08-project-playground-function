@@ -185,8 +185,6 @@ function generatePhoneNumber(array) {
       retorno = "não é possível gerar um número de telefone com esses valores";
     } else if (array[cont] > maior) {
       maior = array[cont];
-    } else if (array.length > 4) {
-        
     } else {
       retorno = array.join();
     }
@@ -201,7 +199,7 @@ function generatePhoneNumber(array) {
   return retorno;
 }
 
-generatePhoneNumber([1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+console.log(generatePhoneNumber([1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 
 
@@ -210,18 +208,18 @@ generatePhoneNumber([1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let possivel = false;
-  if (lineA > (lineB + lineC) && lineA < Math.abs(lineB - lineC) && lineA < Math.abs(lineC - lineB)){
+  if (Math.abs(lineB - lineC) > lineA && Math.abs(lineC - lineB) > lineA){
     possivel = false;
-  } else if (lineB > (lineA + lineC) && lineB < Math.abs(lineA - lineC) && lineB < Math.abs(lineC - lineA)){
+  } else if (Math.abs(lineA - lineC) > lineB && Math.abs(lineC - lineA) > lineB){
     possivel = false;
-  } else if (lineC > (lineA + lineB) && lineC < Math.abs(lineB - lineA) && lineC < Math.abs(lineA - lineB)){
+  } else if (Math.abs(lineB - lineA) > lineC && Math.abs(lineA - lineB) > lineC){
     possivel = false;
   } else {
     possivel = true;
   }
   return possivel;
 }
-console.log(triangleCheck(2, 14, 8));
+console.log(triangleCheck(5, 8, 4));
 
 
 
