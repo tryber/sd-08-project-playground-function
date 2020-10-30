@@ -67,15 +67,13 @@ function fizzBuzz(a) {
     if (a[i] % 3 === 0) {
       if (a[i] % 5 === 0) {
         resp.push('fizzBuzz');
-        continue;
       }
       resp.push('fizz');
-      continue;
     } else if (a[i] % 5 === 0) {
       resp.push('buzz');
-      continue;
+    } else {
+      resp.push('bug!');
     }
-    resp.push('bug!');
   }
   return resp;
 }
@@ -149,24 +147,90 @@ function techList(a, name) {
   let resp = [];
 
   for (let i = 0; i < base.length; i += 1) {
-    resp.push({tech: base[i], name: name});
+    resp.push({ tech: base[i], name: name });
   }
   return resp;
 }
 
+function verifyArray(a) {
+  let count = 1;
+  for (let i = 0; i < a.length; i += 1) {
+    if (a[i] < 0 || a[i] > 9) {
+      return false;
+    }
+
+    if (i > 0 && a[i] === a[i - 1]) {
+      count += 1;
+    } else {
+      count = 1;
+    }
+
+    if (count === 3) {
+      return false;
+    }
+  }
+  return true;
+}
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(a) {
+  if (a.length != 11) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  if (!verifyArray(a)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+
+  let resp = ['('];
+  for (let i = 0; i < a.length; i += 1) {
+    switch (i) {
+      case 2:
+        resp.push(') ');
+        resp.push(a[i]);
+        break;
+      case 7:
+        resp.push('-');
+        resp.push(a[i]);
+        break;
+      default:
+        resp.push(a[i]);
+        break;
+    }
+  }
+  
+  return resp.join('');
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let AB = lineA + lineB;
+  let BC = lineB + lineC;
+  let CA = lineC + lineA;
+
+  let negAB = Math.abs(lineA - lineB);
+  let negBC = Math.abs(lineB - lineC);
+  let negCA = Math.abs(lineC - lineA);
+
+  if (negAB > lineC || negBC > lineA || negCA > lineB || AB < lineC || BC < lineA || CA < lineB) {
+    return false;
+  }
+
+  return true;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(a) {
+  let match = a.match(/(\d+)/g);
+  let resp = 0;
+
+  for (let i = 0; i < match.length; i += 1) {
+    resp += parseInt(match[i]);
+  }
+
+  if (resp === 1) {
+    return '1 copo de água';
+  }
+  return `${resp} copos de água`;
 }
 
 
@@ -201,3 +265,10 @@ console.log(fizzBuzz([9, 25]));
 console.log(encode('Hi, guys, whats up?'));
 console.log(decode(encode('Hi, guys, whats up?')));
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, -1, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 19, 1, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 9, 9, 9, 1, 1]));
+console.log(triangleCheck(10,12,11));
+console.log(triangleCheck(1,1,11));
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
