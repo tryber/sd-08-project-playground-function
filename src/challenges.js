@@ -25,18 +25,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numbers) {
+function count(arr) {
   let counter = {};
-
-  for (let i = 0; i < numbers.length; i += 1) {
-    let cur = numbers[i];
+  for (let i = 0; i < arr.length; i += 1) {
+    let cur = arr[i];
     if (!counter[cur]) {
       counter[cur] = 1;
     } else {
       counter[cur] += 1;
     }
   }
+  return counter;
+}
 
+function highestCount(numbers) {
+  let counter = count(numbers);
   let highest = Math.max(...numbers);
   return counter[highest];
 }
@@ -58,24 +61,28 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function classify(num) {
+  let result = '';
+  if (num % 3 === 0) {
+    result += 'fizz';
+  }
+  if (num % 5 === 0) {
+    result += 'buzz';
+  }
+  if (result === '') {
+    result = 'bug!';
+  }
+  if (result === 'fizzbuzz') {
+    result = 'fizzBuzz';
+  }
+  return result;
+}
+
 function fizzBuzz(numbers) {
   let result = [];
   for (let i = 0; i < numbers.length; i += 1) {
-    let str = '';
     let cur = numbers[i];
-    if (cur % 3 === 0) {
-      str += 'fizz';
-    }
-    if (cur % 5 === 0) {
-      str += 'buzz';
-    }
-    if (str === 'fizzbuzz') {
-      str = 'fizzBuzz';
-    }
-    if (str === '') {
-      str = 'bug!';
-    }
-    result.push(str);
+    result.push(classify(cur));
   }
   return result;
 }
@@ -103,16 +110,18 @@ function encode(str) {
   return result;
 }
 
+function translate(ch) {
+  for (let cur in vowels) {
+    if (ch === vowels[cur]) return cur;
+  }
+  return ch;
+}
+
 function decode(str) {
-  let result = ''; // string em branco
+  let result = '';
   for (let i = 0; i < str.length; i += 1) {
-    let letter = str[i]; // letra atual
-    for (let cur in vowels) {
-      if (letter === vowels[cur]) {
-        letter = cur;
-      }
-    }
-    result += letter;
+    let code = str[i];
+    result += translate(code);
   }
   return result;
 }
@@ -144,42 +153,29 @@ function techList(tecnologias, name) {
 }
 
 // Desafio 11
-function validNumber(digits) {
-  if (digits.find(cur => cur < 0 || cur > 9)) {
-    return false;
-  }
+function validInterval(digits) {
+  return !!digits.find(cur => cur < 0 || cur > 9);
+}
 
-  for (let i = 0; i < digits.length; i += 1) {
-    let count = 1;
-    for (let j = 0; j < digits.length; j += 1) {
-      if (i !== j && digits[i] === digits[j]) {
-        count += 1;
-      }
-    }
-    if (count >= 3) return false;
+function validNumbers(digits) {
+  let counter = count(digits);
+  for (let cur in counter) {
+    if (counter[cur] >= 3) return false;
   }
-
   return true;
 }
 
 function generatePhoneNumber(digits) {
-  if (digits.length !== 11) {
-    return 'Array com tamanho incorreto.';
+  if (digits.length !== 11) return 'Array com tamanho incorreto.';
+  if (validNumbers(digits) && validInterval) {
+    let numeroStr = digits.join('');
+    let ddd = numeroStr.slice(0, 2);
+    let partA = numeroStr.slice(2, 7);
+    let partB = numeroStr.slice(7, 11);
+    return `(${ddd}) ${partA}-${partB}`;
   }
-
-  if (!validNumber(digits)) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-
-  let numeroStr = digits.join('');
-  let ddd = numeroStr.slice(0, 2);
-  let partA = numeroStr.slice(2, 7);
-  let partB = numeroStr.slice(7, 11);
-
-  return `(${ddd}) ${partA}-${partB}`;
+  return 'não é possível gerar um número de telefone com esses valores';
 }
-
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
