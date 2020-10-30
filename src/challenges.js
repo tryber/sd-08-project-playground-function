@@ -1,37 +1,75 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(a, b) {
+  if (a == true && b == true) {
+    return true;
+  } else {
+    return false;
+  }
 }
+compareTrue(true, true);
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let result = (base * height) / 2;
+  return result;
 }
+calcArea(10, 5);
 
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let x = frase.split(" ");
+  return x;
 }
+splitSentence("Fabio Higor de Almeida");
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let nomes = ["Lucas", "Cassiano", "Ferraz", "Paolillo"];
+function concatName(nomes) {
+  let ultima = nomes.pop();
+  let primeira = nomes.shift();
+
+  nomes.push(primeira);
+  nomes.unshift(ultima);
+  return nomes;
 }
+concatName(nomes);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(highestCount, ties) {
+  let vitorias = highestCount * 3;
+  let empates = ties;
+  let result = empates + vitorias;
+  return result;
 }
+footballPoints(5, 3);
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(num) {
+  let max = Math.max(...num);
+  let y = 0;
+
+  for (let i = 0; i < num.length; i++) {
+    if (num[i] == max) {
+      y += 1;
+    }
+  }
+  return y;
 }
+let num = [9, 1, 2, 3, 9, 5, 7];
+highestCount(num);
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let p1 = cat1 - mouse;
+  let p2 = cat2 - mouse;
+  if (p1 == p2) {
+    return "os gatos trombam e o rato foge";
+  } else if (p1 > p2) {
+    return "cat 2";
+  } else if (p1 < p2) {
+    return "cat 1";
+  }
 }
+catAndMouse(2, 6, 4);
 
 // Desafio 8
 function fizzBuzz() {
@@ -66,7 +104,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -82,4 +119,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
