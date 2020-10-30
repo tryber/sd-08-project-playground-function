@@ -90,8 +90,8 @@ function catAndMouse() {
 function fizzBuzz(divisivel) {
   // seu código aqui
   let array = [];
-    for (let cont = 0; cont <= divisivel.length; cont++) {
-      if (divisivel[cont] % 3 === 0 && divisivel[cont] % 5 === 0) {
+    for (let cont = 0; cont <= divisivel.length -1; cont++) {
+      if ((divisivel[cont] % 3 === 0) && (divisivel[cont] % 5 === 0)) {
         array.push("fizzbuzz");
       } else if (divisivel[cont] % 5 === 0) {
         array.push("buzz");
