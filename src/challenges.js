@@ -68,7 +68,7 @@ function fizzBuzz(arrayNumbers) {
       newArray.push("bug!")
     }
   }
-  return console.log(newArray)
+  return newArray
 }
 // Desafio 9
 function encode(string) {
