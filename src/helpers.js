@@ -109,9 +109,3 @@ module.exports.hydrateFacade = function (text) {
   if (sum < 2) return `${sum} copo de água`;
   return `${sum} copos de água`;
 };
-
-module.exports.footballPointsCalc = function (win, ties) {
-  const winPoints = win * 3;
-  const tiesPoints = ties * 1;
-  return winPoints + tiesPoints;
-};
