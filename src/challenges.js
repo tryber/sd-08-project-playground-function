@@ -53,18 +53,18 @@ function catAndMouse(mouse, cat1, cat2) {
   let ditanciaCats = Math.abs(cat1 - cat2);
   let distanciaMouseCat1 = Math.abs(mouse - cat1);
   let distanciaMouseCat2 = Math.abs(mouse - cat2);
-  if (ditanciaCats == 0) {
+  if (ditanciaCats === 0) {
     return "os gatos trombam e o rato foge"
   }
-  else if (distanciaMouseCat1 > distanciaMouseCat2) {
-    return "cat2";
+  else if (distanciaMouseCat1 < distanciaMouseCat2) {
+    return "cat1";
   }
   else {
     return "cat1";
   }
 }
 
-// Desafio 8 CONCUIDO
+// Desafio 8 CONCLUIDO
 function fizzBuzz(numeros) {
   let valores = [];
   for(let index in numeros){
@@ -81,7 +81,7 @@ function fizzBuzz(numeros) {
   return valores;
 }
 
-// Desafio 9 
+// Desafio 9 CONCLUIDO
 function encode(palavra) {
   let palavraCodificada = '';
   for (index in palavra) {
