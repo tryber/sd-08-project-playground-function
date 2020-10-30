@@ -42,11 +42,10 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Distance = Math.abs(mouse - cat1);
   let cat2Distance = Math.abs(mouse - cat2);
-  if (cat1Distance == cat2Distance) {
+  if (cat1Distance == cat2Distance)
     return "os gatos trombam e o rato foge";
-  } else {
+  else
     return cat1Distance > cat2Distance ? 'cat2' : 'cat1';
-  }
 }
 
 // Desafio 8
@@ -95,18 +94,16 @@ function techList(techs, name) {
 
 // Desafio 11
 function generatePhoneNumber(numberArray) {
-  if (numberArray.length !== 11) {
+  if (numberArray.length !== 11)
     return "Array com tamanho incorreto.";
-  } else {
+  else {
     for (number of numberArray) {
-      if (number < 0 || number > 9) {
+      if (number < 0 || number > 9)
         return "não é possível gerar um número de telefone com esses valores";
-      }
     }
     for (let testNumber = 0; testNumber < 10; testNumber += 1) {
-      if (countElement(numberArray, testNumber) >= 3) {
+      if (countElement(numberArray, testNumber) >= 3)
         return "não é possível gerar um número de telefone com esses valores";
-      }
     }
     return '(' + numberArray[0] + numberArray[1] + ')' + ' ' + numberArray[2] +
     numberArray[3] + numberArray[4] + numberArray[5] + numberArray[6] +
@@ -124,11 +121,10 @@ function hydrate(text) {
   let waterAmount = text.match(/\d+/g)
   .map((value) => parseInt(value))
   .reduce((previousValue, currentValue) => previousValue + currentValue);
-  if (waterAmount === 1) {
+  if (waterAmount === 1)
     return '1 copo de água';
-  } else {
-    return `${waterAmount} copos de água`
-  }
+  else
+    return `${waterAmount} copos de água`;
 }
 
 
