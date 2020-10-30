@@ -167,7 +167,7 @@ function techList(technologies, name) {
 }
 function validPhone(arrayNumber) {
   let count = 0;
-  if (arrayNumber.length < 0 || arrayNumber > 9) {
+  if (arrayNumber.length < 0 || arrayNumber.length > 9) {
     return false;
   }
   for (let i = 0; i < arrayNumber.length; i += 1) {
