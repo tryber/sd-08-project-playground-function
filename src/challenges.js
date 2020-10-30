@@ -193,7 +193,7 @@ function generatePhoneNumber(array) {
     for(let i = 0; i < array.length; i++){
       numeros += array[i]
     }
-    telefone = " ("+numeros[0]+""+numeros[1]+") ";
+    telefone = "("+numeros[0]+""+numeros[1]+") ";
     for (let i = 2; i <= 6; i++){
       meioTel += numeros[i]; 
     }
