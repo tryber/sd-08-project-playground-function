@@ -84,6 +84,16 @@ console.log(catAndMouse(10, 4, 22));
 console.log(catAndMouse(1, 0, 2)); */
 
 // Desafio 8
+function isDivisor3e5(numero) {
+  if (numero % 3 === 0 && numero % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (numero % 3 !== 0 && numero % 5 !== 0) {
+    return 'bug!';
+  }
+  return '';
+}
+
 function fizzBuzz(arrayNumeros) {
   let arrayFizzBuzz = [];
   let numero;
@@ -91,10 +101,8 @@ function fizzBuzz(arrayNumeros) {
   for (let indice = 0; indice < arrayNumeros.length; indice += 1) {
     numero = arrayNumeros[indice];
 
-    if (numero % 15 === 0) {
-      arrayFizzBuzz.push('fizzBuzz');
-    } else if (numero % 3 !== 0 && numero % 5 !== 0) {
-      arrayFizzBuzz.push('bug!');
+    if(isDivisor3e5(numero) !== '') {
+      arrayFizzBuzz.push(isDivisor3e5(numero));
     } else if (numero % 5 === 0) {
       arrayFizzBuzz.push('buzz');
     } else {
