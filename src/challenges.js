@@ -70,7 +70,6 @@ function highestCount(teste) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let mouse = 5, cat1 = 2, cat2 = 3;
   let dist1 = 0, dist2 = 0;
   let result = " ";
 
