@@ -128,27 +128,14 @@ function decode(str) {
 
 // Desafio 10
 function techList(tecnologias, name) {
+  tecnologias = tecnologias.sort();
   let lista = [];
-
   for (let tecnologia of tecnologias) {
     lista.push({
       tech: tecnologia,
       name,
     });
   }
-
-  lista = lista.sort((a, b) => {
-    if (a.tech < b.tech) {
-      return -1;
-    }
-
-    if (a.tech > b.tech) {
-      return 1;
-    }
-
-    return 0;
-  });
-
   return lista.length > 0 ? lista : 'Vazio!';
 }
 
