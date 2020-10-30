@@ -1,10 +1,9 @@
 // Desafio 1 :)
 function compareTrue(test1, test2) {
-  let answer = false;
   if (test1 && test2) {
-    answer = true;
+    return true;
   }
-  return answer;
+  return false;
 }
 
 // Desafio 2
@@ -19,7 +18,7 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(name) {
-  return `${name[name.length-1]}, ${name[0]}`;
+  return `${name[name.length - 1]}, ${name[0]}`;
 }
 
 // Desafio 5
@@ -29,8 +28,9 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let sorted = numbers.sort((a,b) => a - b),
-    counter = 1;
+  let sorted = numbers.sort((a,b) => a - b);
+  let counter = 1;
+
   for (let i = numbers.length - 1; i >= 0; i -= 1) {
     if (sorted[i] === sorted[i - 1]) {
       counter += 1;
@@ -43,8 +43,9 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let dist1 = Math.abs(cat1 - mouse), 
-    dist2 = Math.abs(cat2 - mouse);
+  let dist1 = Math.abs(cat1 - mouse);
+  let dist2 = Math.abs(cat2 - mouse);
+
   if (dist1 < dist2) {
     return 'cat1';
   } else if (dist2 < dist1) {
@@ -73,6 +74,7 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(phrase) {
   let phraseArray = phrase.split('');
+
   for (let i = 0; i < phraseArray.length; i += 1) {
     switch (phraseArray[i]) {
       case 'a':
@@ -98,6 +100,7 @@ function encode(phrase) {
 }
 function decode(toDecode) {
   let toDecodeArray = toDecode.split('');
+
   for (let i = 0; i < toDecodeArray.length; i += 1) {
     switch (toDecodeArray[i]) {
       case '1':
@@ -125,6 +128,7 @@ function decode(toDecode) {
 // Desafio 10
 function techList(techs, name) {
   let sortedTechs = techs.sort();
+
   for (let i = 0; i < sortedTechs.length; i += 1) {
     sortedTechs[i] = {
       tech: sortedTechs[i],
@@ -136,10 +140,11 @@ function techList(techs, name) {
   }
   return sortedTechs;
 }
-console.log(techList(['samba', 'html', 'css', 'rock'], 'danone'));
+
 // Pré 11
 function arrCounter(arr) {
   let counter = {};
+
   for (const element of arr) {
     if (!counter[element]) {
       counter[element] = 1;
@@ -151,6 +156,7 @@ function arrCounter(arr) {
 }
 function appearMoreThan(obj, num) {
   const values = Object.values(obj);
+
   for (let i = 0; i < values.length; i += 1) {
     if (values[i] > num) {
       return true;
@@ -169,8 +175,9 @@ function anyMinorOrGretear(arr, minor, greater) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  const moreThan2 = appearMoreThan(arrCounter(numbers), 2),
-    minorGreater = anyMinorOrGretear(numbers, 0, 9);
+  const moreThan2 = appearMoreThan(arrCounter(numbers), 2);
+  const minorGreater = anyMinorOrGretear(numbers, 0, 9);
+
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else if (moreThan2 || minorGreater) {
@@ -196,8 +203,9 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(strg) {
-  let arr = strg.split(/[^0-9]*/), 
-    sum = 0;
+  let arr = strg.split(/[^0-9]*/);
+  let sum = 0;
+  
   arr.pop();
   for (let i = 0; i < arr.length; i += 1) {
     sum += parseInt(arr[i], 10);
