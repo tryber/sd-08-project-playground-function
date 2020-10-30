@@ -184,14 +184,17 @@ function generatePhoneNumber(phoneNumbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
+  let sideA = false;
+  let sideB = false;
+  let sideC = false;
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
-    let sideA = true;
+    sideA = true;
   }
   if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
-    let sideB = true;
+    sideB = true;
   }
   if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
-    let sideC = true;
+    sideC = true;
   }
   if (sideA == true && sideB == true && sideC == true) {
     return true;
