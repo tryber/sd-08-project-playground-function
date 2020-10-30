@@ -174,10 +174,10 @@ function generatePhoneNumber(phoneNumbers) {
         biggerThan9 += 1;
       }
     }
-    if (mostRepeated >=3 || negativeNumber > 0 || biggerThan9 > 0) {
+    if (mostRepeated >= 3 || negativeNumber > 0 || biggerThan9 > 0) {
       return "não é possível gerar um número de telefone com esses valores";
     } else {
-      return `(${phoneNumbers[0]}${phoneNumbers[1]}) ${phoneNumbers[2]}${phoneNumbers[3]}${phoneNumbers[4]}${phoneNumbers[5]}${phoneNumbers[6]}-${phoneNumbers[7]}${phoneNumbers[8]}${phoneNumbers[9]}${phoneNumbers[10]}`
+      return `(${phoneNumbers[0]}${phoneNumbers[1]}) ${phoneNumbers[2]}${phoneNumbers[3]}${phoneNumbers[4]}${phoneNumbers[5]}${phoneNumbers[6]}-${phoneNumbers[7]}${phoneNumbers[8]}${phoneNumbers[9]}${phoneNumbers[10]}`;
     }
   }
 }
@@ -203,13 +203,14 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
-// let teste = [2, 2, 2, 6, 1,3,4,7,8,2,0];
-// console.log(generatePhoneNumber(teste));
-
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let cups = drinks.replace(/\D/g, "");
+  let waterCounter = 0;
+  for (index = 0; index < cups.length; index += 1) {
+    waterCounter += Number(cups[index]);
+  }
+  return `${waterCounter} copos de água`;
 }
 
 module.exports = {
