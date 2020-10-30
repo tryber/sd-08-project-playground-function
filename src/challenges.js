@@ -121,15 +121,21 @@ function novoEncode(letra) {
   }
   if (letra === 'e') {
     return '2';
-  }
+  }  
+  return '';
+}
+
+function novoEncode2(letra) {  
   if (letra === 'i') {
     return '3';
   }
   if (letra === 'o') {
     return '4';
-  } else {
-    return '';
-  }  
+  }
+  if (letra === 'u') {
+    return '5';
+  }
+  return '';
 }
 
 function encode(texto) {
@@ -138,8 +144,8 @@ function encode(texto) {
   for (let indice = 0; indice < texto.length; indice += 1) {
     if (novoEncode(texto[indice]) !== '') {
       novoTexto += novoEncode(texto[indice]);
-    } else if (texto[indice] === 'u') {
-      novoTexto += '5';
+    } else if (novoEncode2(texto[indice]) !== '') {
+      novoTexto += novoEncode2(texto[indice]);    
     } else {
       novoTexto += texto[indice];
     }
