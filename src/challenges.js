@@ -177,7 +177,7 @@ let techListPerName =  {
   return returnList
 }
 
-console.log(techList([], "Lucas"))
+
 
 // Desafio 11
 function generatePhoneNumber() {
