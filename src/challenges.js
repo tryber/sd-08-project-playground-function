@@ -102,7 +102,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(palavra) {
-  let nPalavra = ' ';
+  let nPalavra = '';
   for (let i = 0; i < palavra.length; i += 1) {
     if (palavra[i] === 'a') {
       nPalavra += 1;
@@ -121,7 +121,7 @@ function encode(palavra) {
   return nPalavra;
 }
 function decode(palavra) {
-  let nPalavra = ' ';
+  let nPalavra = '';
   for (let i = 0; i < palavra.length; i += 1) {
     if (palavra[i] === '1') {
       nPalavra += 'a';
