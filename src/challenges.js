@@ -51,7 +51,6 @@ function highestCount(arrayNumbers) {
   return quantidadeDeVezesDoMaior;
 }
 //console.log(highestCount([1,9, 2, 3, 9, 5, 7, 9, 10,9]))
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(cat1 - mouse);
@@ -67,7 +66,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
  //console.log(catAndMouse(2, 3, 2));
-
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
@@ -86,12 +84,9 @@ function fizzBuzz(array) {
     }
   }
   return arrayMessage;
-      
   }
 
 //console.log(fizzBuzz([2,15,7,9,45]))
-
-
 // Desafio 9
 function encode(troca) {
   // a -> 1
@@ -99,7 +94,6 @@ function encode(troca) {
   // i -> 3
   // o -> 4
   // u -> 5
-
   let vogal = '';
   for (let a = 0; a < troca.length; a += 1) {
     switch (troca[a]) {
@@ -123,7 +117,6 @@ function encode(troca) {
         break;
     }
   }
-
   return vogal;
 }
 //console.log(encode('hi there!'))
@@ -133,7 +126,6 @@ function decode(text) {
   // 3 -> i
   // 4 -> o
   // 5 -> u
-
   let message = '';
   for (let a = 0; a < text.length; a += 1) {
     switch (text[a]) {
@@ -160,23 +152,21 @@ function decode(text) {
   return message;
 }
 console.log(decode ("h3 th2r2!"))
-
 // Desafio 10
-function techList(leraning,name) {
-  // seu código aqui
-  let list = leraning;
-  let returned = [];
-
-  if(list.length === 0){
-    return 'Vazio!';
+function techList(learn, name) {
+  if (learn == 0) {
+    return "Vazio!";
   }
-  for(let tech of list){
-    returned.push({
-      tech,
-      name,
-    });
+  let learnTechnology = [];
+  for (let i in learn) {
+    let organization = learn.sort();
+    let includeTechList = {
+      tech: learn[i],
+      name: name,
+    };
+    learnTechnology.push(includeTechList);
   }
-  return returned;
+  return learnTechnology;
 }
 //console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
 //"Lucas"))
@@ -184,7 +174,6 @@ function techList(leraning,name) {
 // Desafio 11
 function generatePhoneNumber(number) {
   // seu código aqui
-  
   if (number.length !== 11){
     return 'Array com tamanho incorreto.'
   }
@@ -211,10 +200,8 @@ function generatePhoneNumber(number) {
   number.splice(4, 0, ' ');
   number.splice(10, 0, '-');
   return number.join('');
-
 }
 //console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
-
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
