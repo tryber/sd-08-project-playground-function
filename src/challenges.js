@@ -165,21 +165,19 @@ let techListPerName =  {
 
   let returnList = [];
 
+  if ( tecnologys.length == 0 ) {
+    return "Vazio!"
+  } else {
+
   for (technology in tecnologys) {
     techListPerName = { tech : tecnologys[technology], name : name }
-    //techListPerName.tech = tecnologys[technology]
-    //techListPerName.name = name
-
-    console.log(techListPerName)
-
     returnList.push(techListPerName)
-
-
   }
+}
   return returnList
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
+console.log(techList([], "Lucas"))
 
 // Desafio 11
 function generatePhoneNumber() {
