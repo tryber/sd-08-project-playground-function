@@ -18,6 +18,7 @@ function calcArea(base, height) {
 calcArea();
 
 // Desafio 3
+//Apesar de não termos visto o conteúdo "split" usei esse site para aprender sobre e responder ao exercicio - https://hcode.com.br/blog/dividindo-strings-com-metodo-split
 function splitSentence(separate) {
   // seu código aqui
   return separate.split(' ');
@@ -43,19 +44,24 @@ function highestCount() {
 }
 
 // Desafio 7
+// Usei o site https://www.w3schools.com/jsref/jsref_abs.asp para aprender mais sobre o método match.abs()
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  /* 
-  if () {
-      return cat1;
-    } else if {
-      return cat2;
+  
+  let positionCat1 = Math.abs(mouse - cat1);
+  let positionCat2 = Math.abs(mouse - cat2);
+  
+
+  if (positionCat1 < positionCat2) {
+      return 'cat1';
+    } else if (positionCat2 < positionCat1) {
+      return 'cat2';
     } else {
-      return 'os gatos trombam e o rato foge'
+      return 'os gatos trombam e o rato foge';
     }
-    */
+    
 }
-console.log(catAndMouse());
+console.log(catAndMouse(10, 9, 9));
 
 // Desafio 8
 function fizzBuzz() {
