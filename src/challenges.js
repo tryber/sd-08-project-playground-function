@@ -65,15 +65,13 @@ function highestCount(valores) {
 // console.log(highestCount(valores))
 
 // Desafio 7
-let mouse = 0;
-let cat1 = 2;
-let cat2 = 2;
+
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distMouseCat1 = Math.abs(mouse - cat1);
   let distMouseCat2 = Math.abs(mouse - cat2);
-  let sameDistance = Math.abs(cat1 - cat2);
-  if (sameDistance == 0) {
+ 
+  if (distMouseCat1 - distMouseCat2 == 0) {
     return 'os gatos trombam e o rato foge'
   } else if (distMouseCat1 < distMouseCat2) {
     return 'cat1'
@@ -81,7 +79,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2'
   }
 }
-console.log(catAndMouse(mouse, cat1, cat2))
+console.log(catAndMouse(1,0,2))
 
 // Desafio 8
 let parametro = [2, 15, 7, 9, 45]
