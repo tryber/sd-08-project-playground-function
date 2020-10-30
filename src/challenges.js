@@ -48,26 +48,19 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(cat1 - mouse);
   let distCat2 = Math.abs(cat2 - mouse);
-
-  if (distCat1 < distCat2) {
-    return 'cat1';
-  }
-
-  if (distCat2 < distCat1) {
-    return 'cat2';
-  }
-
-  return 'os gatos trombam e o rato foge';
+  let result = 'os gatos trombam e o rato foge';
+  if (distCat1 < distCat2) result = 'cat1';
+  if (distCat2 < distCat1) result = 'cat2';
+  return result;
 }
 
 // Desafio 8
 // https://github.com/tryber/sd-08-project-playground-function/blob/vivianeflorido-project-playground-function/src/challenges.js
 function classify(num) {
-  let result = 'bug!';
-  if (num % 3 === 0 && num % 5 === 0) result = 'fizzBuzz';
-  if (num % 3 === 0) result = 'fizz';
-  if (num % 5 === 0) result = 'buzz';
-  return result;
+  if (num % 3 === 0 && num % 5 === 0) return 'fizzBuzz';
+  if (num % 3 === 0) return 'fizz';
+  if (num % 5 === 0) return 'buzz';
+  return 'bug!';
 }
 
 function fizzBuzz(numbers) {
