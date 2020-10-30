@@ -5,14 +5,12 @@ function compareTrue(firstBoolean, secondBoolean) {
   }
   return false;
 }
-compareTrue(true, true);
 
 // Desafio 2
 function calcArea(base, height) {
   let result = (base * height) / 2;
   return result;
 }
-calcArea(5, 5);
 
 // Desafio 3
 function splitSentence(string) {
@@ -20,7 +18,6 @@ function splitSentence(string) {
   splitArray = string.split(" ");
   return splitArray;
 }
-splitSentence("go Trybe");
 
 // Desafio 4
 function concatName(array) {
@@ -28,7 +25,6 @@ function concatName(array) {
   result = array[array.length - 1] + ", " + array[0];
   return result;
 }
-concatName(["Joao", "Pedro", "Maria", "Paulo"]);
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -36,7 +32,6 @@ function footballPoints(wins, ties) {
   result = wins * 3 + ties;
   return result;
 }
-footballPoints(5, 5);
 
 // Desafio 6
 function highestCount(array) {
@@ -54,7 +49,6 @@ function highestCount(array) {
   }
   return count;
 }
-highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -68,7 +62,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return closestCat;
 }
-catAndMouse(1, 0, 2);
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -86,7 +79,6 @@ function fizzBuzz(array) {
   }
   return result;
 }
-fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
 // Solução encontrada no Stackoverflow utilizando String.prototype.replace()
@@ -97,7 +89,6 @@ function encode(string) {
 
   return encondeResult;
 }
-encode("Tiago");
 
 // Solução encontrada no Stackoverflow utilizando String.prototype.replace()
 function decode(string) {
@@ -107,7 +98,6 @@ function decode(string) {
 
   return encondeResult;
 }
-decode("h3 th2r2!");
 
 // Desafio 10
 function techList(tech, name) {
@@ -124,12 +114,31 @@ function techList(tech, name) {
   }
   return resultArray;
 }
-techList(["Javascript", "CSS", "HTML"], "Tiago");
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let result = "";
+  let formattedNumber = "";
+  let repeatedNumber = array[0];
+  let count = 1;
+  if (array.length !== 11) {
+    result = "Array com tamanho incorreto.";
+  } else {
+      for (i = 1; i < array.length; i++) {
+        if (array[i] === repeatedNumber) {
+          count += 1;
+        } 
+        if (array[i] < 0 || array[i] > 9 || count === 3) {
+          result = "não é possível gerar um número de telefone com esses valores"
+        }
+      }
+    }
+  for (j = 0; j < array.length; j++) {
+    
+  }  
+  return result;
 }
+console.log(generatePhoneNumber([1, 2, 3, 1, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
