@@ -2,8 +2,6 @@
 function compareTrue(boolean1, boolean2) {
   if (boolean1 === true && boolean2 === true) {
     return true;
-  } else {
-    return false;
   }
 }
 
@@ -29,7 +27,7 @@ function splitSentence(fullSentence) {
 
 // Desafio 4
 function concatName(namesList) {
-  let printedName = (namesList[namesList.length - 1] + ', ' + namesList[0]);
+  let printedName = `${namesList[namesList.length - 1]}, ${namesList[0]}`;
   return printedName;
 }
 
