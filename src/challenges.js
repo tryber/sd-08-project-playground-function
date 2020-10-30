@@ -34,10 +34,7 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
-  // seu código aqui
-  let repete = 0;
-  let num = 0;
+function count2(array){
   for(let i in array){
     if(array[i] > num){
       num = array[i];
@@ -48,14 +45,17 @@ function highestCount(array) {
       repete += 1;
     }
   }
+}
+function highestCount(array) {
+  // seu código aqui
+  let repete = 0;
+  let num = 0;
+  count2(array);
   return repete;
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
-  let case1 = Math.abs(cat1 - mouse);
-  let case2 = Math.abs(cat2 - mouse);
+function cas1Case2(case1,case2){
   if (case1 < case2){
     return 'cat1';
   } else if (case2 < case1) {
@@ -64,11 +64,15 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
+function catAndMouse(mouse, cat1, cat2) {
+  // seu código aqui
+  let case1 = Math.abs(cat1 - mouse);
+  let case2 = Math.abs(cat2 - mouse);
+  return cas1Case2(case1,case2);
+}
 
 // Desafio 8
-function fizzBuzz(array) {
-  // seu código aqui
-  let newArray = [];
+function fizzBuzz2(array){
   for(let i in array){
     if(array[i] % 3 == 0 && array[i] % 5 == 0){
       newArray.push('fizzBuzz');
@@ -80,12 +84,15 @@ function fizzBuzz(array) {
       newArray.push('bug!')
     }
   }
+}
+function fizzBuzz(array) {
+  let newArray = [];
+  fizzBuzz2(array);
   return newArray;
 }
 
 // Desafio 9
-function encode(word) {
-  let novoWord = '';
+function encode2(word){
   for(let i in word){
     if(word[i] === 'a'){
       novoWord += '1';
@@ -105,11 +112,13 @@ function encode(word) {
       novoWord += word[i]
     }
   }
+}
+function encode(word) {
+  let novoWord = '';
+  encode2(word);
   return novoWord
 }
-function decode(word2) {
-  // seu código aqui
-  let novoWord2 = '';
+function decode2(word2){
   for(let i in word2){
     if(word2[i] === '1'){
       novoWord2 += 'a';
@@ -129,12 +138,15 @@ function decode(word2) {
       novoWord2 += word2[i]
     }
   }
+}
+function decode(word2) {
+  let novoWord2 = '';
+  decode2(word2);
   return novoWord2
 }
 
 // Desafio 10
 function techList(tech, name) {
-  // seu código aqui
   let obj = [];
   tech.sort();
   if(tech.length > 0){
@@ -152,41 +164,46 @@ function techList(tech, name) {
 }
 
 // Desafio 11
+function naoPossivel(array){
+  for (let i = 0; i < array.length; i += 1) {
+    let sum = 0;
+    if (array[i] < 0 || array[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    for (let j = 0; j < array.length; j += 1) {
+      if (array[i] === array[j]){
+        sum += 1;
+        if (sum >= 3){
+          return 'não é possível gerar um número de telefone com esses valores';
+        }
+      }
+    }
+}
+
+function geraTel(array){
+  for(let i in array){
+    if(i == 0){
+        telefone += '('+array[0]
+    }
+    if(i == 1){
+        telefone += array[1]+') '
+    }
+    if(i == 7){
+        telefone += '-'+array[7];
+    }
+    if(i == 2 || i == 3  || i == 4  || i == 5 || i == 6 || i == 8 || i == 9  || i == 10){
+        telefone += array[i];
+    }
+}
+}
+
+}
 function generatePhoneNumber(array) {
   let telefone = '';
   if (array.length === 11) {
-
-      for (let i = 0; i < array.length; i += 1) {
-          let sum = 0;
-          if (array[i] < 0 || array[i] > 9) {
-            return 'não é possível gerar um número de telefone com esses valores';
-          }
-          for (let j = 0; j < array.length; j += 1) {
-            if (array[i] === array[j]){
-              sum += 1;
-              if (sum >= 3){
-                return 'não é possível gerar um número de telefone com esses valores';
-              }
-            }
-          }
-      }
-
-      for(let i in array){
-          if(i == 0){
-              telefone += '('+array[0]
-          }
-          if(i == 1){
-              telefone += array[1]+') '
-          }
-          if(i == 7){
-              telefone += '-'+array[7];
-          }
-          if(i == 2 || i == 3  || i == 4  || i == 5 || i == 6 || i == 8 || i == 9  || i == 10){
-              telefone += array[i];
-          }
-      }
-
-      return telefone;
+    naoPossivel(array)
+    geraTel(array)
+    return telefone;
   }
   return 'Array com tamanho incorreto.';
 }
@@ -194,18 +211,15 @@ function generatePhoneNumber(array) {
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
 let result = false;
-let sumAB = lineA + lineB;
-let sumBC = lineB + lineC;
-let sumAC = lineA + lineC;
+  let sumAB = lineA + lineB;
+  let sumBC = lineB + lineC;
+  let sumAC = lineA + lineC;
 
-let chekA = lineA < sumBC;
-let chekB = lineB < sumAC;
-let chekC = lineC < sumAB;
-
+  let chekA = lineA < sumBC;
+  let chekB = lineB < sumAC;
+  let chekC = lineC < sumAB;
 if(chekA && chekB && chekC){
   result = true
-} else{
-  result = false;
 }
 
 return result;
