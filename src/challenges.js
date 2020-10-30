@@ -190,7 +190,10 @@ function hydrate(ticket) {
       cupOfWater += number;
     }
   }
-  return cupOfWater;
+  if (cupOfWater === 1) {
+    return '1 copo de água'
+  }
+  return `${cupOfWater} copos de água`;
 }
 
 module.exports = {
