@@ -1,7 +1,7 @@
-// Desafio 1
+// >>----------> Desafio 1
 function compareTrue(primeiroBoleano, segundoBolenao) {
   
-  if(primeiroBoleano == true && segundoBolenao == true) {
+  if (primeiroBoleano == true && segundoBolenao == true) {
     return true;
   } else if(primeiroBoleano == false || segundoBolenao == false){
     return false;
@@ -10,22 +10,22 @@ function compareTrue(primeiroBoleano, segundoBolenao) {
 // let a = true, b = false;
 // console.log(compareTrue(a, b));
 
-// Desafio 2
+// >>----------> Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
 // console.log(calcArea(2, 6));
 
-// Desafio 3
+// >>----------> Desafio 3
 function splitSentence(string) {
   let retorno = [];
   let pegaArray = '';
 
   for (let indice = 0; indice <= string.length; indice++) {
-    if(string[indice] == ' ' || indice == string.length){
+    if (string[indice] == ' ' || indice == string.length){
       retorno.push(pegaArray);
       pegaArray = '';
-    }else if(string[indice] != ' ') {
+    }else if (string[indice] != ' ') {
       pegaArray += string[indice];
     }
   }
@@ -33,24 +33,35 @@ function splitSentence(string) {
 }
 // console.log(splitSentence('wr ra'));
 
-// Desafio 4
+// >>-----------> Desafio 4
 function concatName(theArray) {
-  return theArray[theArray.length-1] + ', ' + theArray[0] + ' .';
+  let saida = theArray[theArray.length-1] + ',' + theArray[0] + '.';
+  return saida;
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
-// Desafio 5
+// >>----------> Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties * 1);
 }
-console.log(footballPoints(1, 3));
+// console.log(footballPoints(1, 3));
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+// >>----------> Desafio 6
+function highestCount(entrada) {
+  let maior = Math.max.apply(Math, entrada);
+  
+  let repeticoes = 0;
+
+  for (let indice in entrada) {
+    if (maior == entrada[indice]) {
+      repeticoes++ ;
+    }
+  }
+  return repeticoes;// retornará repeticoes;
 }
+  // console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 9]));
 
-// Desafio 7
+// >>----------> Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
