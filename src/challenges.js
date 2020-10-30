@@ -59,14 +59,14 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arraydeNumero) {
+  let retornoArray = [];
   for (let index = 0; index < arraydeNumero.length; index += 1){
-    let retornoArray = [];
-    if (arraydeNumero[index] % 3 == 0) {
-      return retornoArray.push ("fizz");
+    if (arraydeNumero[index] % 3 == 0 && arraydeNumero[index] % 5 == 0) {
+      return retornoArray.push ("fizzbuzz");
     } else if (arraydeNumero[index] % 5 == 0) {
       return retornoArray.push ("buzz");
-    } else if (arraydeNumero[index] % 3 == 0 && arraydeNumero[index] % 5 == 0) {
-      return retornoArray.push ("fizzbuzz");
+    } else if (arraydeNumero[index] % 3 == 0) {
+      return retornoArray.push ("fizz");
     } else {
       return retornoArray.push("bug!");
     }
