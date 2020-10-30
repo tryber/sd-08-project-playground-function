@@ -1,6 +1,6 @@
 // Desafio 1
 
-function compareTrue (valor1 , valor2) {
+function compareTrue(valor1, valor2) {
   if (valor1 && valor2) {
     return true;
   } else {
@@ -10,42 +10,42 @@ function compareTrue (valor1 , valor2) {
 
 // Desafio 2
 
-function calcArea (base , height) {
-  let area = base * height / 2;
-  return area;  
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
 
-function splitSentence (literal) {
+function splitSentence(literal) {
   let split = literal.split(" ");
   return split;
 }
 
 // Desafio 4
 
-function concatName (array) {
+function concatName(array) {
   let string;
   for (i in array) {
     if (i == array.length - 1) {
-        string = array[i];
+      string = array[i];
     }
   }
   if (array[0]) {
-      string += ", " + array[0];
+    string += ", " + array[0];
   }
   return string;
 }
 
 // Desafio 5
 
-function footballPoints (wins , ties) {
+function footballPoints(wins, ties) {
   let pontos = 0;
-  for(i = 0; i < wins; i += 1) {
-      pontos = wins * 3;
+  for (i = 0; i < wins; i += 1) {
+    pontos = wins * 3;
   }
-  for(i = 0; i < ties; i += 1) {
-      pontos += 1;
+  for (i = 0; i < ties; i += 1) {
+    pontos += 1;
   }
   return pontos;
 }
@@ -60,7 +60,7 @@ function highestCount(array) {
     for (let j = 0; j < array.length; j += 1) {
       if (maiorNumero < array[j]) {
         maiorNumero = array[j];
-      } 
+      }
     }
   }
   for (let k = 0; k < array.length; k += 1) {
@@ -75,10 +75,10 @@ function highestCount(array) {
 
 // Desafio 7
 
-function catAndMouse (mouse , cat1 , cat2) {
-  let mouseMove = Math.abs(mouse)
-  let cat1Move = Math.abs(cat1)
-  let cat2Move = Math.abs(cat2)
+function catAndMouse(mouse, cat1, cat2) {
+  let mouseMove = Math.abs(mouse);
+  let cat1Move = Math.abs(cat1);
+  let cat2Move = Math.abs(cat2);
 
   if (Math.abs(mouseMove - cat1Move) < Math.abs(mouseMove - cat2Move)) {
     return "cat1";
@@ -93,9 +93,9 @@ function catAndMouse (mouse , cat1 , cat2) {
 
 // Desafio 8
 
-function fizzBuzz (array) {
+function fizzBuzz(array) {
   let a = [];
-  
+
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 3 == 0) {
       if (array[i] % 5 == 0) {
@@ -105,7 +105,7 @@ function fizzBuzz (array) {
       }
     } else if (array[i] % 5 == 0) {
       a[i] = "buzz";
-    }  else {
+    } else {
       a[i] = "bug!";
     }
   }
@@ -114,7 +114,7 @@ function fizzBuzz (array) {
 
 // Desafio 9
 
-function encode (literal) {
+function encode(literal) {
   for (i in literal) {
     if (literal[i] == "a") {
       literal = literal.replace(literal[i], "1");
@@ -133,7 +133,7 @@ function encode (literal) {
 
 //console.log(encode("hi there"))
 
-function decode (literal) {
+function decode(literal) {
   for (i in literal) {
     if (literal[i] == "1") {
       literal = literal.replace(literal[i], "a");
@@ -154,7 +154,7 @@ function decode (literal) {
 
 // Desafio 10
 
-function techList (array , name) {
+function techList(array, name) {
   if (array.length == 0) {
     return "Vazio!";
   } else {
@@ -165,19 +165,18 @@ function techList (array , name) {
       objeto = {
         tech: tecnologias[i],
         name: name,
-      }
-      arr[i] = objeto;    
+      };
+      arr[i] = objeto;
     }
     return arr;
   }
 }
 
 //console.log(techList([], "João"))
- 
+
 // Desafio 11
 
-function generatePhoneNumber (array) {
-   
+function generatePhoneNumber(array) {
   if (array.length != 11) {
     return "Array com tamanho incorreto.";
   } else {
@@ -186,22 +185,24 @@ function generatePhoneNumber (array) {
       for (let j = 0; j < array.length; j += 1) {
         if (array[i] == array[j]) {
           cont += 1;
-        } 
+        }
       }
-      if (array[i] < 0 || array[i] > 9 || cont >= 3) { 
+      if (array[i] < 0 || array[i] > 9 || cont >= 3) {
         return "não é possível gerar um número de telefone com esses valores";
       }
     }
     let numeros = "";
-    let telefone = '', meioTel = '', fimTel = '';
+    let telefone = "",
+      meioTel = "",
+      fimTel = "";
     for (let i = 0; i < array.length; i += 1) {
       numeros += array[i];
     }
-    telefone = "("+numeros[0]+""+numeros[1]+") ";
+    telefone = "(" + numeros[0] + "" + numeros[1] + ") ";
     for (let i = 2; i <= 6; i += 1) {
-      meioTel += numeros[i]; 
+      meioTel += numeros[i];
     }
-    telefone += meioTel +"-";
+    telefone += meioTel + "-";
     for (let i = 7; i <= 10; i += 1) {
       fimTel += numeros[i];
     }
@@ -214,7 +215,7 @@ function generatePhoneNumber (array) {
 
 // Desafio 12
 
-function triangleCheck (lineA , lineB , lineC) {
+function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     return true;
   } else {
@@ -224,13 +225,13 @@ function triangleCheck (lineA , lineB , lineC) {
 
 // Desafio 13
 
-function hydrate (literal) {
+function hydrate(literal) {
   let agua = 0;
 
   for (i in literal) {
     let a = literal[i];
     if (a * a) {
-      agua += parseInt(a); 
+      agua += parseInt(a);
     }
   }
   if (agua > 1) {
@@ -257,4 +258,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
