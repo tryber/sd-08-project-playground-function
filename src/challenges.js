@@ -76,7 +76,7 @@ function fizzBuzz(numeros) {
   return valores;
 }
 
-// Desafio 9 CONCLUIDO
+// Desafio 9 CONCLUID
 function encode(palavra) {
   let palavraCodificada = '';
   for (index in palavra) {
