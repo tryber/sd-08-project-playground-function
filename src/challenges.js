@@ -166,18 +166,20 @@ let techListPerName =  {
   let returnList = [];
 
   for (technology in tecnologys) {
-    techListPerName.tech = tecnologys[technology]
-    techListPerName.name = name
-    
-    console.log(techListPerName)
-    returnList += Object.assign(techListPerName)
-    
-  }
+    techListPerName = { tech : tecnologys[technology], name : name }
+    //techListPerName.tech = tecnologys[technology]
+    //techListPerName.name = name
 
+    console.log(techListPerName)
+
+    returnList.push(techListPerName)
+
+
+  }
   return returnList
 }
 
-//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
 // Desafio 11
 function generatePhoneNumber() {
