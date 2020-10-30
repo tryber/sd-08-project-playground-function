@@ -151,7 +151,7 @@ function decode(text) {
   }
   return message;
 }
-console.log(decode ("h3 th2r2!"))
+//console.log(decode ("h3 th2r2!"))
 // Desafio 10
 function techList(learn, name) {
   if (learn == 0) {
@@ -203,14 +203,19 @@ function generatePhoneNumber(number) {
 }
 //console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA,lineB,lineC) {
   // seu código aqui
+  let checkA = lineA < (lineB + lineC ) && lineA > Math.abs(lineB - lineC);
+  let checkB = lineB < (lineA + lineC ) && lineB > Math.abs(lineA - lineC);
+  let checkC = lineC < (lineB + lineA ) && lineC > Math.abs(lineB - lineA);
+  return checkA && checkB && checkC;
 }
-
+console.log(triangleCheck(10,14,8))
 // Desafio 13
 function hydrate() {
   // seu código aqui
 }
+//console.log(hydrate(10,14,8))
 
 
 module.exports = {
