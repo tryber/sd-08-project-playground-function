@@ -121,11 +121,11 @@ function novoEncode(letra) {
   }
   if (letra === 'e') {
     return '2';
-  }  
+  }
   return '';
 }
 
-function novoEncode2(letra) {  
+function novoEncode2(letra) {
   if (letra === 'i') {
     return '3';
   }
