@@ -19,7 +19,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arr) {
-  return arr.slice(0, 1) + " " + arr.slice(-1);
+  return arr.slice(0, 1) + ", " + arr.slice(-1);
 }
 
 // Desafio 5
@@ -43,46 +43,91 @@ function highestCount(arr) {
   arr.forEach(value => {
     if (value > largest) largest = value;
   });
-  arr.forEach(value => value == largest && number++ );
+  arr.forEach(value => value == largest && number++);
   return number;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  return Math.abs(cat1 - mouse) == Math.abs(cat2 - mouse)? "os gatos trombam e o rato foge": Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)? "cat2": "cat1";
+  return Math.abs(cat1 - mouse) == Math.abs(cat2 - mouse) ? "os gatos trombam e o rato foge" : Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse) ? "cat2" : "cat1";
 }
 
 // Desafio 8
 function fizzBuzz(arr) {
-  arr.forEach(function (value) {
-    if(value % 3 == 0 && value % 5 == 0) {
-      console.log("fizzBuzz");
-    } else if(value % 3 == 0) {
-      console.log("fizz");
-    } else if(value % 5 == 0) {
-      console.log("buzz");
+  let result = [];
+  arr.forEach(value => {
+    if ((value % 3 == 0) && (value % 5 == 0)) {
+      result.push("fizzBuzz");
+    } else if ((value % 3 == 0)) {
+      result.push("fizz");
+    } else if ((value % 5 == 0)) {
+      result.push("buzz");
     } else {
-      console.log("bug!");
+      result.push("bug!");
     }
-  });
+  })
+  return result;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let code = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  }
+  string = string.split("");
+  string.forEach((letter, index) => Object.keys(code).forEach(key => {
+    if (letter == key) string[index] = code[key]
+  }));
+  return string.join("");
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let code = {
+    1: "a",
+    2: "e",
+    3: "i",
+    4: "o",
+    5: "u"
+  }
+  string = string.split("");
+  string.forEach((letter, index) => Object.keys(code).forEach(key => {
+    if (letter == key) string[index] = code[key]
+  }));
+  return string.join("");
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs = [], name) {
+  let result = [];
+  techs.forEach(tech => {
+    result.push({ tech: tech, name: name })
+  })
+  return (result == "") ? "Vazio!" : result;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  let counter = 0;
+  let result = [];
+    numbers.forEach((number, index) => {
+       if(index == 0) {
+        result.push("(");
+        result.push(number);
+      } else if(index == 2) {
+        result.push(")");
+        result.push(number);
+      } else if(index == 7) {
+        result.push("-");
+        result.push(number);
+      } else {
+        result.push(number);
+      }
+    })
+
+    return result.join("");
 }
 
 // Desafio 12
