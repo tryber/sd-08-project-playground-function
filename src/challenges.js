@@ -31,7 +31,7 @@ function concatName(arrayStrings) {
   retorno += arrayStrings[0];
   return retorno;
 }
-console.log(concatName(["Joao", "Lucas", "Junior"]));
+
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
@@ -42,10 +42,23 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
   // seu código aqui
+  let higher = numbers[0];
+  for (let i = 0; i < numbers.length; i += 1){
+    if (numbers[i] > higher){
+      higher = numbers[i];
+    }
+  }
+  let repeticoes = 0;
+  for (let j = 0; j < numbers.length; j += 1){
+    if (numbers[j] === higher){
+      repeticoes += 1;
+    }
+  }
+  return repeticoes;
 }
-
+console.log(highestCount([2, 5, 3, 6, 6, 3, 1]));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
