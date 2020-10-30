@@ -63,13 +63,6 @@ function fizzBuzz(numbers) {
     let buzz = (value % 5) == 0;
     return fizz ? buzz ? 'fizzBuzz' : 'fizz' : buzz ? 'buzz' : 'bug!';
   });
-  let fizzBuzzArray = [];
-  for (number of numbers) {
-    let fizz = (number % 3) == 0;
-    let buzz = (number % 5) == 0;
-    fizzBuzzArray.push(fizz ? buzz ? 'fizzBuzz' : 'fizz' : buzz ? 'buzz' : 'bug!');
-  }
-  return fizzBuzzArray;
   // seu código aqui
 }
 
@@ -114,6 +107,7 @@ function decode(word) {
 // Desafio 10
 function techList(techs, name) {
   techs.sort();
+  return techs.map((value) => ({tech: value, name: name}));
   if (techs.length > 0) {
     let listOfTechs = [];
     for (tech of techs) {
