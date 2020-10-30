@@ -28,7 +28,7 @@ function concatName(arrayStr) {
   let last = arrayStr[arrayStr.length - 1];
   return `${last}, ${first}`;
 }
- console.log(concatName(['Rodrigo', 'de Castro', 'Bandeira', 'Costa']));
+// console.log(concatName(['Rodrigo', 'de Castro', 'Bandeira', 'Costa']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -68,14 +68,18 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function checkFizz(Num) {
+  let check;
   if ((Num % 3) === 0) {
-    return true;
+    check = true;
   }
+  return check;
 }
 function checkBuzz(Num) {
+  let check;
   if ((Num % 5) === 0) {
-    return true;
+    check = true;
   }
+  return check;
 }
 function fizzBuzz(arrayNum) {
   let result = [];
@@ -96,13 +100,105 @@ function fizzBuzz(arrayNum) {
 // console.log(fizzBuzz([3, 1, 5, 10, 12, 14, 15, 19, 20]))
 
 // Desafio 9
-function encode() {
-  // NADA
+function funcArray1(array) {
+  let key;
+  let array1 = [];
+  for (key in array) {
+    if (array[key] === "a") {
+      array1.push("1");
+    } else if (array[key] === "1") {
+      array1.push("a");
+    } else {
+      array1.push(array[key]);
+    }
+  }
+  return array1;
 }
 
-function decode() {
-  // seu código aqui
+function funcArray2(array) {
+  let key;
+  let array2 = [];
+  for (key in array) {
+    if (array[key] === "e") {
+      array2.push("2");
+    } else if (array[key] === "2") {
+      array2.push("e");      
+    } else {
+      array2.push(array[key]);
+    }
+  }
+  return array2;
 }
+
+function funcArray3(array) {
+  let key;
+  let array3 = [];
+  for (key in array) {
+    if (array[key] === "i") {
+      array3.push("3");
+    } else if (array[key] === "3") {
+      array3.push("i");      
+    } else {
+      array3.push(array[key]);
+    }
+  }
+  return array3;
+}
+
+function funcArray4(array) {
+  let key;
+  let array4 = [];
+  for (key in array) {
+    if (array[key] === "o") {
+      array4.push("4");
+    } else if (array[key] === "4") {
+      array4.push("o");
+    } else {
+      array4.push(array[key]);
+    }
+  }
+  return array4;
+}
+
+function funcArray5(array) {
+  let key;
+  let array5 = [];
+  for (key in array) {
+    if (array[key] === "u") {
+      array5.push("5");
+    } else if (array[key] === "5") {
+      array5.push("u");
+    } else {
+      array5.push(array[key]);
+    }
+  }
+  return array5;
+}
+
+function encode(phrase) {
+  let arrayChar = phrase.split('');
+  let array1 = funcArray1(arrayChar);
+  let array2 = funcArray2(array1);
+  let array3 = funcArray3(array2);
+  let array4 = funcArray4(array3);
+  let array5 = funcArray5(array4);
+  let phraseEncode = array5.join('');
+  return phraseEncode;  
+}
+ console.log(encode("observe que essa mensagem ficou oculta"));
+ 
+
+function decode(phrase) {
+  let arrayChar = phrase.split('');
+  let array1 = funcArray1(arrayChar);
+  let array2 = funcArray2(array1);
+  let array3 = funcArray3(array2);
+  let array4 = funcArray4(array3);
+  let array5 = funcArray5(array4);
+  let phraseDecode = array5.join('');
+  return phraseDecode;
+}
+console.log(decode('4bs2rv2 q52 2ss1 m2ns1g2m n14 f3c45 4c5lt1 12345'));
 
 // Desafio 10
 function techList() {
