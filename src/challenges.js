@@ -24,23 +24,28 @@ function footballPoints(wins, ties) {
   return ((3 * wins) + ties);
 }
 
+function hC(a, b) {
+  let rep = 0;
+  for (let i = 0; i < a.length; i += 1) {
+    if(a[i] === b) {
+      rep += 1;
+    }
+  }
+
+  return rep;
+}
+
 // Desafio 6
 function highestCount(a) {
   let maj = -100000;
-  let rep = 0;
 
   for (let num = 0; num < a.length; num += 1) {
     if (a[num] > maj) {
       maj = a[num];
     }
   }
-  for (let num = 0; num < a.length; num += 1) {
-    if (a[num] === maj) {
-      rep += 1;
-    }
-  }
 
-  return rep;
+  return hC(a, maj);
 }
 
 function calcDist(a, b) {
@@ -60,22 +65,56 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'cat1';
 }
 
+function fB(a) {
+  if(a % 3 === 0 && a % 5 === 0) {
+    return 'fizzBuzz';
+  }
+
+  if (a % 3 === 0) {
+    return 'fizz';
+  }
+
+  if (a % 5 === 0) {
+    return 'buzz';
+  }
+
+  return 'bug!';
+}
+
 // Desafio 8
 function fizzBuzz(a) {
   let resp = [];
   for (let i = 0; i < a.length; i += 1) {
-    if (a[i] % 3 === 0) {
-      if (a[i] % 5 === 0) {
-        resp.push('fizzBuzz');
-      }
-      resp.push('fizz');
-    } else if (a[i] % 5 === 0) {
-      resp.push('buzz');
-    } else {
-      resp.push('bug!');
-    }
+    resp.push(fB(a[i]));
   }
   return resp;
+}
+
+function encDecHand(a) {
+  switch (a) {
+    case 'a':
+      return '1';
+    case 'e':
+      return '2';
+    case 'i':
+      return '3';
+    case 'o':
+      return '4';
+    case 'u':
+      return '5';
+    case '1':
+      return 'a';
+    case '2':
+      return 'e';
+    case '3':
+      return 'i';
+    case '4':
+      return 'o';
+    case '5':
+      return 'u';
+    default:
+      return a;
+  }
 }
 
 // Desafio 9
@@ -84,58 +123,20 @@ function encode(a) {
   let resp = [];
 
   for (let i = 0; i < base.length; i += 1) {
-    switch (base[i]) {
-      case 'a':
-        resp.push('1');
-        break;
-      case 'e':
-        resp.push('2');
-        break;
-      case 'i':
-        resp.push('3');
-        break;
-      case 'o':
-        resp.push('4');
-        break;
-      case 'u':
-        resp.push('5');
-        break;
-      default:
-        resp.push(base[i]);
-        break;
-    }
+    resp.push(encDecHand(base[i]));
   }
 
   return resp.join('');
 }
 function decode(a) {
   let base = a.split('');
-  let resp = [];
+  let ex = [];
 
   for (let i = 0; i < base.length; i += 1) {
-    switch (base[i]) {
-      case '1':
-        resp.push('a');
-        break;
-      case '2':
-        resp.push('e');
-        break;
-      case '3':
-        resp.push('i');
-        break;
-      case '4':
-        resp.push('o');
-        break;
-      case '5':
-        resp.push('u');
-        break;
-      default:
-        resp.push(base[i]);
-        break;
-    }
+    ex.push(encDecHand(base[i]));
   }
 
-  return resp.join('');
+  return ex.join('');
 }
 
 // Desafio 10
@@ -158,17 +159,24 @@ function verifyArray(a) {
     if (a[i] < 0 || a[i] > 9) {
       return false;
     }
-
-    if (i > 0 && a[i] === a[i - 1]) {
-      count += 1;
+  }
+  return true;
+}
+function verifyRep (a) {
+  let b = a.sort();
+  let c = 1;
+  for (let i = 1; i < b.length; i += 1) {
+    if (b[i] === b[i - 1]) {
+      c += 1;
     } else {
-      count = 1;
+      c = 1;
     }
 
-    if (count === 3) {
+    if (c === 3) {
       return false;
     }
   }
+
   return true;
 }
 // Desafio 11
@@ -177,7 +185,7 @@ function generatePhoneNumber(a) {
     return 'Array com tamanho incorreto.';
   }
 
-  if (!verifyArray(a)) {
+  if (!verifyArray(a) || !verifyRep(a)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
@@ -211,7 +219,15 @@ function triangleCheck(lineA, lineB, lineC) {
   let negBC = Math.abs(lineB - lineC);
   let negCA = Math.abs(lineC - lineA);
 
-  if (negAB > lineC || negBC > lineA || negCA > lineB || AB < lineC || BC < lineA || CA < lineB) {
+  if (negAB > lineC || negBC > lineA) {
+    return false;
+  }
+
+  if (negCA > lineB || AB < lineC) {
+    return false;
+  }
+
+  if (BC < lineA || CA < lineB) {
     return false;
   }
 
@@ -224,7 +240,7 @@ function hydrate(a) {
   let resp = 0;
 
   for (let i = 0; i < match.length; i += 1) {
-    resp += parseInt(match[i]);
+    resp += parseInt(match[i], 10);
   }
 
   if (resp === 1) {
@@ -251,24 +267,6 @@ module.exports = {
   triangleCheck,
 }
 
-console.log(compareTrue(true, false));
-console.log(compareTrue(true, true));
-console.log(calcArea(12, 4));
-console.log(splitSentence('The Best Game Dev'));
-console.log(concatName(['Natanael', 'Enéas', 'da', 'Silva', 'Neto']));
-console.log(footballPoints(3, 2));
-console.log(highestCount([1, 2, 9, 9, 15, 15, 15]));
-console.log(catAndMouse(0, 2, 3));
-console.log(catAndMouse(0, -4, 3));
-console.log(catAndMouse(0, -3, 3));
-console.log(fizzBuzz([9, 25]));
-console.log(encode('Hi, guys, whats up?'));
-console.log(decode(encode('Hi, guys, whats up?')));
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, -1, 1]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 19, 1, 1]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 9, 9, 9, 1, 1]));
-console.log(triangleCheck(10,12,11));
-console.log(triangleCheck(1,1,11));
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+console.log(generatePhoneNumber([1, 2, 1, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9]));
