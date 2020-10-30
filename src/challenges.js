@@ -102,8 +102,24 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(palavra) {
+  let nPalavra = ' ';
+  for (let i = 0; i < palavra.length; i += 1) {
+    if (palavra[i] === 'a') {
+      nPalavra += 1;
+    } else if (palavra[i] === 'e') {
+      nPalavra += 2;
+    } else if (palavra[i] === 'i') {
+      nPalavra += 3;
+    } else if (palavra[i] === 'o') {
+      nPalavra += 4;
+    } else if (palavra[i] === 'u') {
+      nPalavra += 5;
+    } else {
+      nPalavra += palavra[i];
+    }
+  }
+  return nPalavra;
 }
 function decode() {
   // seu código aqui
