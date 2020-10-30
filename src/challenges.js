@@ -212,7 +212,7 @@ function hydrate(string) {
     sum += parseInt(string[i]);
   }
 
-  return sum;
+  return `${sum} copo de água`;
 }
 
 module.exports = {
