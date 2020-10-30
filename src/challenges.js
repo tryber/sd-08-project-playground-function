@@ -126,7 +126,7 @@ function encode(troca) {
 
   return vogal;
 }
-console.log(encode('hi there!'))
+//console.log(encode('hi there!'))
 function decode() {
   // seu código aqui
 }
