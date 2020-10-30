@@ -73,40 +73,33 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-const vowels = {
-  a: '1',
-  e: '2',
-  i: '3',
-  o: '4',
-  u: '5',
-};
+// Tive vários insights fazendo pair programing com a Viviane (https://github.com/vivianeflowt)
+// e resolvi fazer um refatoramento nesse requisito
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+function codeToCh(code) {
+  return vowels[code - 1] || code;
+}
+
+function chToCode(ch) {
+  let index = vowels.indexOf(ch);
+  if (index !== -1) return index + 1;
+  return ch;
+}
 
 function encode(str) {
   let result = '';
   for (let i = 0, len = str.length; i < len; i += 1) {
-    const letter = str[i];
-    const index = letter.toLowerCase();
-    if (!vowels[index]) {
-      result += letter;
-    } else {
-      result += vowels[index];
-    }
+    result += chToCode(str[i]);
   }
   return result;
-}
-
-function translate(ch) {
-  for (let cur in vowels) {
-    if (ch === vowels[cur]) return cur;
-  }
-  return ch;
 }
 
 function decode(str) {
   let result = '';
   for (let i = 0; i < str.length; i += 1) {
     let code = str[i];
-    result += translate(code);
+    result += codeToCh(code);
   }
   return result;
 }
