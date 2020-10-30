@@ -82,64 +82,18 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(6,2,10))
 
 // Desafio 8
-function fizzBuzz(array) {
-  let frase = [];
-  for(let index = 0; index < array.length; index +=1){
-    if((array[index] % 5 == 0 && array[index] % 3 == 0 )){
-      frase.push('fizzBuzz');
-    }else if(array[index]%5 == 0 ){
-      frase.push('buzz');
-    }else if(array[index]% 3 == 0){
-      frase.push('fizz');
-    }else{
-      frase.push('bug!');
-    }
-  }
-  return frase;
-  
-}
-console.log(fizzBuzz([3,5,15,2,25, 30]))
-
-// Desafio 9
-function encode(string) {
-  for(let index = 0; index < string.length; index +=1){
-    if(string[index] == 'a'){
-      string[index] = 1;
-    }else if(string[index] == 'e'){
-      string[index] = 2;
-    }else if(string[index] == 'i'){
-      string[index] = 3;
-    }else if(string[index] == 'o'){
-      string[index] = 4;
-    }else if(string[index] == 'u'){
-      string[index] = 5;
-    }
-    return string;
-  }
-  
-  
-}
-function decode(outraString) {
-  for(let index = 0; index < outraString.length; index +=1){
-    if(outraString[index] == 1){
-      outraString[index] = 'a';
-    }else if(outraString[index] == 2){
-      outraString[index] = 'e';
-    }else if(outraString[index] == 3){
-      outraString[index] = 'i';
-    }else if(outraString[index] == 4){
-      outraString[index] = 'o';
-    }else if(outraString[index] == 5){
-      outraString[index] = u;
-    }
-    return outraString
-  }
- return encode
- return decode
+function fizzBuzz() {
   // seu código aqui
 }
-console.log(encode('hi there!'));
-console.log(decode(outraString));
+
+// Desafio 9
+function encode() {
+  // seu código aqui
+}
+function decode() {
+  // seu código aqui
+}
+
 // Desafio 10
 function techList() {
   // seu código aqui
