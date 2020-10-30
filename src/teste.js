@@ -10,8 +10,8 @@
 
 // A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
 
-  // let list = palavra.split("");
+  let palavra = 'hi there!';
 
-  // for (let i = 0; i < list.length; i += 1) {
-  //   if (list)
-  // }
+  for (let i = 0; i < palavra.length; i += 1){
+      
+  }

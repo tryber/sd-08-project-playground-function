@@ -86,15 +86,16 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let result = [];
+
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      result = 'fizBuzz';
+      result.push('fizBuzz');
     } else if (array[i] % 3 === 0) {
-      result = 'fizz';
+      result.push('fizz');
     } else if (array[i] % 5 === 0) {
-      result = 'buzz';
+      result.push('buzz');
     } else {
-      result = 'bug!';
+      result.push('bug!');
     }
   }
   return result;
