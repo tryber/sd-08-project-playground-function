@@ -119,25 +119,28 @@ function encode(texto) {
   let novoTexto = '';
 
   for (let indice = 0; indice < texto.length; indice += 1) {
-    switch (texto[indice]) {
-      case 'a':
-        novoTexto += '1';
-        break;
-      case 'e':
-        novoTexto += '2';
-        break;
-      case 'i':
-        novoTexto += '3';
-        break;
-      case 'o':
-        novoTexto += '4';
-        break;
-      case 'u':
-        novoTexto += '5';
-        break;
-      default:
-        novoTexto += texto[indice];
+    if (texto[indice] === 'a') {
+      novoTexto += '1';
+      continue;
     }
+    if (texto[indice] === 'e') {
+      novoTexto += '2';
+      continue;
+    }
+    if (texto[indice] === 'i') {
+      novoTexto += '3';
+      continue;
+    }
+    if (texto[indice] === 'o') {
+      novoTexto += '4';
+      continue;
+    }
+    if (texto[indice] === 'u') {
+      novoTexto += '5';
+      continue;
+    }
+
+    novoTexto += texto[indice];
   }
   return novoTexto;
 }
