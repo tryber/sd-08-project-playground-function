@@ -114,7 +114,7 @@ function techList(tech, name) {
   let resultArray = [];
   let orderedTechList = tech.sort();
   if (tech === 0) {
-    console.log("Vazio!");
+    return "Vazio!";
   }
   for (let i in orderedTechList) {
     resultArray.push({
