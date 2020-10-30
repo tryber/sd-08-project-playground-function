@@ -171,9 +171,9 @@ function techList(array, name) {
  
 // Desafio 11
 function generatePhoneNumber(array) {
-  let cont = 0;
-
+   
   for(let i = 0; i < array.length; i++){
+    let cont = 0;
     for(let j = 0; j < array.length; j++){
       if(array[i] == array[j]){
         cont++;
@@ -204,7 +204,7 @@ function generatePhoneNumber(array) {
   }
 }
 
-//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]))
+//console.log(generatePhoneNumber([1, 2, 3, 4, 6, 6, 8, 9, 1, 2]))
 
 // Desafio 12
 function triangleCheck() {
