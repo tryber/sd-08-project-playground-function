@@ -138,7 +138,17 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {}
+function techList(array, name) {
+  let techs = [];
+
+  array = array.sort();
+
+  for (i in array) {
+    techs.push({ tech: array[i], name });
+  }
+
+  return techs;
+}
 
 // Desafio 11
 function generatePhoneNumber() {}
