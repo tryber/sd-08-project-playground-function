@@ -1,6 +1,6 @@
 const c = require("./src/challenges")
 console.clear();
-// ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
-const arr = [2, 15, 7, 9, 45];
-const resposta = c.fizzBuzz(arr);
+// ["h3 th2r2!".
+const arr = "hi there!";
+const resposta = c.encode(arr);
 console.log(resposta);
