@@ -189,7 +189,7 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA + lineB > lineC || lineB + lineC > lineA || lineA + lineC > lineB && Math.abs(lineA - lineB) < lineC || Math.abs(lineA - lineC) < lineB || Math.abs(lineB - lineC) < lineA) {
+  if (lineA + lineB > lineC && lineB + lineC > lineA && lineA + lineC > lineB && Math.abs(lineA - lineB) < lineC && Math.abs(lineA - lineC) < lineB && Math.abs(lineB - lineC) < lineA) {
     return true;
   }
 
