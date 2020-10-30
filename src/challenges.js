@@ -143,11 +143,11 @@ function techList(array, name) {
 
   array = array.sort();
 
-  for (i in array) {
+  for (let i = 0; i < array.length; i++) {
     techs.push({ tech: array[i], name });
   }
 
-  return techs;
+  array.length === 0 ? 'Vazio!' : techs;
 }
 
 // Desafio 11
