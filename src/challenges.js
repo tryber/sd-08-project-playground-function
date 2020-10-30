@@ -58,11 +58,25 @@ function highestCount(numbers) {
   }
   return repeticoes;
 }
-console.log(highestCount([2, 5, 3, 6, 6, 3, 1]));
+
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let cat1ToMouse = cat1 - mouse;
+  let cat2ToMouse = cat2 - mouse;
+  let winner;
+  if (cat1ToMouse === cat2ToMouse){
+    let empate = "Os gatos trombam e o rato foge";
+    return empate;
+  } else if (cat1ToMouse > cat2ToMouse){
+    winner = "cat2";
+    return winner;
+  } else {
+    winner = "cat1";
+    return winner;
+  }
 }
+
 
 // Desafio 8
 function fizzBuzz() {
