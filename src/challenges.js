@@ -179,10 +179,18 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(ticket) {
+  let split = ticket.split("")
+  let cupOfWater = 0;
+  for (let char of split) {
+    let number = parseInt(char);
+    //verifica se 'number' é um NaN ou não. Se não for adiciona o número de bebidas ao número de copos d'água
+    if (isNaN(number) === false) {
+      cupOfWater += number;
+    }
+  }
+  return cupOfWater;
 }
 
 module.exports = {
