@@ -121,26 +121,17 @@ function encode(texto) {
   for (let indice = 0; indice < texto.length; indice += 1) {
     if (texto[indice] === 'a') {
       novoTexto += '1';
-      continue;
-    }
-    if (texto[indice] === 'e') {
+    } else if (texto[indice] === 'e') {
       novoTexto += '2';
-      continue;
-    }
-    if (texto[indice] === 'i') {
+    } else if (texto[indice] === 'i') {
       novoTexto += '3';
-      continue;
-    }
-    if (texto[indice] === 'o') {
+    } else if (texto[indice] === 'o') {
       novoTexto += '4';
-      continue;
-    }
-    if (texto[indice] === 'u') {
+    } else if (texto[indice] === 'u') {
       novoTexto += '5';
-      continue;
+    } else {
+      novoTexto += texto[indice];
     }
-
-    novoTexto += texto[indice];
   }
   return novoTexto;
 }
