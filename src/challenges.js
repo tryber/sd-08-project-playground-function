@@ -202,15 +202,16 @@ function hydrate(frase) {
     } else if (frase[i] === '9') {
       number += 9;
     }
-    let result;
-    if (number === 1) {
-      result = number + ' copo de água'
-    } else {
-      result = number + ' copos de água'
-    }
   }
-  return result
+  let result;
+    if (number === 1) {
+      result = number + ' copo de água';
+    } else {
+      result = number + ' copos de água';
+    }
+  return result;
 }
+
 
 module.exports = {
   calcArea,
