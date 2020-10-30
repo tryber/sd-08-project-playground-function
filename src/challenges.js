@@ -212,11 +212,11 @@ function hydrate(string) {
     sum += parseInt(string[i]);
   }
 
-  if (sum > 1) {
-    return `${sum} copos de água`
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  } else {
+    return `${sum} copos de água`;
   }
-
-  return `${sum} copo de água`;
 }
 
 module.exports = {
