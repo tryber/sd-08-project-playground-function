@@ -48,7 +48,6 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(teste) {
   let maior = 0;
-  let key = 0;
   let obj = {};
 
   for (let index = 0; index < teste.length; index += 1) {
@@ -64,8 +63,8 @@ function highestCount(teste) {
       maior = chave;
     }
   }
-  key = obj[maior];
-  return key;
+  maior = obj[maior];
+  return maior;
 }
 
 
