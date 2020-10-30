@@ -55,7 +55,8 @@ function calculateDistance(mouse,cat){
 function catAndMouse(mouse, cat1, cat2) {
   let dmouseCat1 = calculateDistance(mouse,cat1);
   let dmouseCat2 = calculateDistance(mouse,cat2);
-  (dmouseCat1 ==dmouseCat2)?  'os gatos trombam e o rato foge' : (dmouseCat1 >=dmouseCat2)? 'cat1': 'cat2';
+  let statement = (dmouseCat1 == dmouseCat2)?'os gatos trombam e o rato foge': (dmouseCat1 >=dmouseCat2)? 'cat1': 'cat2';
+  console.log(statement);  
 }
 
 
