@@ -134,10 +134,13 @@ function decode(vogais) {
   // seu código aqui
   vogais = vogais.replace(/3/g , "i");
   vogais = vogais.replace(/2/g , "e");
+  vogais = vogais.replace(/4/g , "o");
+  vogais = vogais.replace(/1/g , "a");
+  vogais = vogais.replace(/5/g , "u");
   
   return vogais;
 }
-decode("h3 th2r2");
+decode("12345");
 
 // Desafio 10
 function techList() {
