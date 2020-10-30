@@ -106,6 +106,7 @@ function decode(word) {
 
 // Desafio 10
 function techList(techs, name) {
+  if (techs.length == 0) return 'Vazio!';
   techs.sort();
   return techs.map((value) => ({tech: value, name: name}));
   if (techs.length > 0) {
