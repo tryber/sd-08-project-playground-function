@@ -183,7 +183,7 @@ function generatePhoneNumber(array) {
           cont++;
         } 
       }
-      if(array[i] == 0 || array[i] > 9 || cont >= 3){ 
+      if(array[i] < 0 || array[i] > 9 || cont >= 3){ 
         return "não é possível gerar um número de telefone com esses valores";
       }
     }
@@ -206,7 +206,7 @@ function generatePhoneNumber(array) {
   }
 }
 
-//console.log(generatePhoneNumber([1, 2, 3, 4, 6, 6, 8, 9, 1, 2]))
+//console.log(generatePhoneNumber([1, -2, 3, 4, 6, 6, 8, 9, 1, 2, 5]))
 
 // Desafio 12
 function triangleCheck() {
