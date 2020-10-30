@@ -54,7 +54,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbersArray) {
+function fizzBuzz(arrayNumbers) {
   // seu código aqui
   let newArray = []
 
