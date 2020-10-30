@@ -50,18 +50,13 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let ditanciaCats = Math.abs(cat1 - mouse) - Math.abs(cat2 - mouse);
-  let distanciaMouseCat1 = Math.abs(mouse - cat1);
-  let distanciaMouseCat2 = Math.abs(mouse - cat2);
-  if (ditanciaCats === 0) {
+  if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return 'os gatos trombam e o rato foge';
   }
-  else if (distanciaMouseCat1 < distanciaMouseCat2) {
+  else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
   }
-  else {
-    return 'cat1';
-  }
+  return 'cat2';
 }
 
 // Desafio 8 CONCLUIDO
@@ -141,7 +136,7 @@ function techList(tecnologias, nome) {
   }
   let techsOrdenadas = tecnologias.sort();
   let novaLista = [];
-  for (let index in tecnologias) {
+  for (let index = 0; index < tecnologias.length; index =+ 1) {
     let objetoTechs = {
       tech: techsOrdenadas[index],
       nome,
