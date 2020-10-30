@@ -90,7 +90,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  for (let index in array) {
+  for (let index = 0; index < array.length; index += 1) {
     let temp = array[index]
     array[index] = 'bug!'
     if (temp % 15 === 0) {
@@ -104,7 +104,7 @@ function fizzBuzz(array) {
   }
   return array
 }
- console.log(fizzBuzz([2, 15, 7, 9, 45]))
+// console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 // let string = 'a hello world'
