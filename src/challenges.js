@@ -62,7 +62,7 @@ function fizzBuzz(arraydeNumero) {
   let retornoArray = [];
   for (let index = 0; index < arraydeNumero.length; index += 1){
     if (arraydeNumero[index] % 3 == 0 && arraydeNumero[index] % 5 == 0) {
-      return retornoArray.push ("fizzbuzz");
+      return retornoArray.push ("fizzBuzz");
     } else if (arraydeNumero[index] % 5 == 0) {
       return retornoArray.push ("buzz");
     } else if (arraydeNumero[index] % 3 == 0) {
