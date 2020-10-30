@@ -148,7 +148,7 @@ decode("12345");
 // Desafio 10
 function techList(tech, name) {
   // seu código aqui
-  let array = "Vazio!";
+  let array = [];
   let arrayOrdem = tech.sort();
 
   for (let cont = 0; cont <= tech.length -1; cont++) {
@@ -165,7 +165,7 @@ function techList(tech, name) {
   return array;
 }
 }
-console.log(techList([], "Vinicius"));
+console.log(techList([], "Lucas"));
 
 
 
