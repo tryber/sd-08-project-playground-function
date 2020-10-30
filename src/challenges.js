@@ -33,15 +33,6 @@ function footballPoints(wins,ties) {
 }
 
 
-
-
-
-
-
-
-
-
-
 // Desafio 6
 function highestCount(arrayN) {
   let max = Math.max(...arrayN)
@@ -53,9 +44,6 @@ function highestCount(arrayN) {
   }
   return rep
 } 
-
-
-
 
 
 // Desafio 7
@@ -75,23 +63,22 @@ function catAndMouse(mouse,cat1,cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayFizz) {
-  for (let i in arrayFizz){
-    
-      if (i % 3 === 0 && i % 5 === 0){//Caso o número seja inteiro e multiplo de 3 e 5 imprime "FizzBuzz"
-          console.log("FizzBuzz") 
-      } else if (i % 3 === 0 && i % 5 !== 0){//Caso o número seja inteiro e multiplo apenas de 3 imprime "Fizz"
-          console.log("Fizz")
-      } else if (i % 3 !== 0 && i % 5 === 0){//Caso o número seja inteiro e multiplo apenas de 5 imprime "Buzz"
-          console.log("Buzz")
+  let arrayRetorno = []
+
+  for (let i = 0; i < arrayFizz.length; i++){
+
+      if (arrayFizz[i] % 3 == 0 && arrayFizz[i] % 5 == 0){
+        arrayRetorno.push(`fizzBuzz`)
+      } else if (arrayFizz[i] % 3 == 0 && arrayFizz[i] % 5 != 0){
+        arrayRetorno.push("fizz")
+      } else if (arrayFizz[i] % 3 != 0 && arrayFizz[i] % 5 == 0){
+        arrayRetorno.push("buzz")
       } else {
-          console.log(i) //Imprime os demais número que não sejam múltiplos de 3 ou 5
+        arrayRetorno.push("bug!") 
       }
   }
-}
-
-
-
-
+  return arrayRetorno
+}console.log(fizzBuzz([2,15,7,9,45]))
 
 
 
