@@ -9,8 +9,7 @@ function compareTrue(boolean1, boolean2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height) / 2;
-  return area;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -18,7 +17,7 @@ function splitSentence(fullSentence) {
   let splitWord = "";
   let splittedSentence = [];
   for (let index = 0; index <= fullSentence.length; index += 1) {
-    if (fullSentence[index] != " " && index != fullSentence.length) {
+    if (fullSentence[index] !== " " && index !== fullSentence.length) {
       splitWord += fullSentence[index];
     } else {
       splittedSentence.push(splitWord);
@@ -45,16 +44,12 @@ function highestCount(numbersList) {
   let highestNumber = 0;
   let highestNumberCounter = 0;
   for (let index = 0; index < numbersList.length; index += 1) {
-    for (let index2 = 0; index2 < numbersList.length; index2 += 1) {
-      if (index != index2) {
-        if (numbersList[index] > highestNumber) {
-          highestNumber = numbersList[index];
-        }
-      }
+    if (numbersList[index] > highestNumber) {
+      highestNumber = numbersList[index];
     }
   }
   for (index = 0; index < numbersList.length; index += 1) {
-    if (highestNumber == numbersList[index]) {
+    if (highestNumber === numbersList[index]) {
       highestNumberCounter += 1;
     }
   }
@@ -67,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return "cat1";
   } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     return "cat2";
-  } else if (Math.abs(cat1 - mouse) == Math.abs(cat2 - mouse)) {
+  } else if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return "os gatos trombam e o rato foge";
   }
 }
@@ -76,11 +71,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbersArray) {
   let stringArray = [];
   for (let index = 0; index < numbersArray.length; index += 1) {
-    if (numbersArray[index] % 3 == 0 && numbersArray[index] % 5 != 0) {
+    if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 !== 0) {
       stringArray.push("fizz");
-    } else if (numbersArray[index] % 3 != 0 && numbersArray[index] % 5 == 0) {
+    } else if (numbersArray[index] % 3 !== 0 && numbersArray[index] % 5 === 0) {
       stringArray.push("buzz");
-    } else if (numbersArray[index] % 3 == 0 && numbersArray[index] % 5 == 0) {
+    } else if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 === 0) {
       stringArray.push("fizzBuzz");
     } else {
       stringArray.push("bug!");
@@ -93,15 +88,15 @@ function fizzBuzz(numbersArray) {
 function encode(encodeWord) {
   let encodedString = "";
   for (let index = 0; index < encodeWord.length; index += 1) {
-    if (encodeWord[index] == "a") {
+    if (encodeWord[index] === "a") {
       encodedString += "1";
-    } else if (encodeWord[index] == "e") {
+    } else if (encodeWord[index] === "e") {
       encodedString += "2";
-    } else if (encodeWord[index] == "i") {
+    } else if (encodeWord[index] === "i") {
       encodedString += "3";
-    } else if (encodeWord[index] == "o") {
+    } else if (encodeWord[index] === "o") {
       encodedString += "4";
-    } else if (encodeWord[index] == "u") {
+    } else if (encodeWord[index] === "u") {
       encodedString += "5";
     } else {
       encodedString += encodeWord[index];
@@ -113,15 +108,15 @@ function encode(encodeWord) {
 function decode(decodeWord) {
   let decodedString = "";
   for (let index = 0; index < decodeWord.length; index += 1) {
-    if (decodeWord[index] == "1") {
+    if (decodeWord[index] === "1") {
       decodedString += "a";
-    } else if (decodeWord[index] == "2") {
+    } else if (decodeWord[index] === "2") {
       decodedString += "e";
-    } else if (decodeWord[index] == "3") {
+    } else if (decodeWord[index] === "3") {
       decodedString += "i";
-    } else if (decodeWord[index] == "4") {
+    } else if (decodeWord[index] === "4") {
       decodedString += "o";
-    } else if (decodeWord[index] == "5") {
+    } else if (decodeWord[index] === "5") {
       decodedString += "u";
     } else {
       decodedString += decodeWord[index];
@@ -132,7 +127,7 @@ function decode(decodeWord) {
 
 // Desafio 10
 function techList(techName, name) {
-  if (techName.length == 0) {
+  if (techName.length === 0) {
     return "Vazio!";
   } else {
     techName.sort();
@@ -159,7 +154,7 @@ function generatePhoneNumber(phoneNumbers) {
       let repeatCounter = 0;
       let timesRepeated = 0;
       for (let index2 = 0; index2 < phoneNumbers.length; index2 += 1) {
-        if (phoneNumbers[index] == phoneNumbers[index2]) {
+        if (phoneNumbers[index] === phoneNumbers[index2]) {
           repeatCounter += 1;
         }
       }
@@ -196,7 +191,7 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
     sideC = true;
   }
-  if (sideA == true && sideB == true && sideC == true) {
+  if (sideA === true && sideB === true && sideC === true) {
     return true;
   } else {
     return false;
@@ -210,7 +205,7 @@ function hydrate(drinks) {
   for (let index = 0; index < cups.length; index += 1) {
     waterCounter += Number(cups[index]);
   }
-  if (waterCounter == 1) {
+  if (waterCounter === 1) {
     return `${waterCounter} copo de água`;
   } else {
     return `${waterCounter} copos de água`;
