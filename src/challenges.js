@@ -88,7 +88,7 @@ function fizzBuzz(array) {
 
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      result.push('fizBuzz');
+      result.push('fizzBuzz');
     } else if (array[i] % 3 === 0) {
       result.push('fizz');
     } else if (array[i] % 5 === 0) {
@@ -97,8 +97,9 @@ function fizzBuzz(array) {
       result.push('bug!');
     }
   }
-  return result;
+  result result;
 }
+
 
 // Desafio 9
 function encode(palavra) {
