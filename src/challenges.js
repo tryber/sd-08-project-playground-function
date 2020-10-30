@@ -83,11 +83,40 @@ function fizzBuzz(arrayBase) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word1) {
+  let list1 = word1.split('');
+  for (let index = 0; index < list1.length; index += 1) {
+      if (list1[index] == 'a') {
+          list1[index] = 1;
+      }else if (list1[index] == 'e') {
+          list1[index] = 2;
+      }else if (list1[index] == 'i') {
+          list1[index] = 3;
+      }else if (list1[index] == 'o') {
+          list1[index] = 4;
+      }else if (list1[index] == 'u') {
+          list1[index] = 5;
+      }
+  }
+  return list1;
 }
-function decode() {
-  // seu código aqui
+
+function decode(word2) {
+  let list2 = word2.split('');
+  for (let index = 0; index < list2.length; index += 1) {
+      if (list2[index] == '1') {
+          list2[index] = 'a';
+      }else if (list2[index] == '2') {
+          list2[index] = 'e';
+      }else if (list2[index] == '3') {
+          list2[index] = 'i';
+      }else if (list2[index] == '4') {
+          list2[index] = 'o';
+      }else if (list2[index] == '5') {
+          list2[index] = 'u';
+      }
+  }
+  return list2 ;
 }
 
 // Desafio 10
