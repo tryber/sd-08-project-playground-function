@@ -92,7 +92,7 @@ function fizzBuzz(array) {
     }else if(array[index]% 3 == 0){
       frase.push('fizz');
     }else{
-      frase.push('bug');
+      frase.push('bug!');
     }
   }
   return frase;
@@ -139,7 +139,7 @@ function decode(outraString) {
   // seu código aqui
 }
 console.log(encode('hi there!'));
-console.log(decode('h3 th2r2!'));
+console.log(decode(outraString));
 // Desafio 10
 function techList() {
   // seu código aqui
