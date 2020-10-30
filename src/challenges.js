@@ -209,9 +209,15 @@ function generatePhoneNumber(array) {
 //console.log(generatePhoneNumber([1, -2, 3, 4, 6, 6, 8, 9, 1, 2, 5]))
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if(lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)){
+    return true;
+  } else {
+    return false;
+  }
 }
+
+//console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
 function hydrate() {
