@@ -48,7 +48,7 @@ function highestCount(numeros) {
   return repete;
 }
 
-// Desafio 7
+// Desafio 7 CONCLUIDO
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return 'os gatos trombam e o rato foge';
@@ -130,21 +130,23 @@ function decode(palavra) {
 }
 
 // Desafio 10
-function techList(tecnologias, name) {
-  /*if (tecnologias.length === 0) {
-    return 'Vazio!';
+function techList(array, name) {
+  if (array.length === 0) {
+    return 'Vazio!'
   }
-  let techsOrdenadas = tecnologias.sort();
-  let novaLista = [];
-  for (let index = 0; index < tecnologias.length; index =+ 1) {
-    let objetoTechs = {
-      tech: techsOrdenadas[index],
+  
+  let techOrdenada = array.sort();
+  let arrayOrdenado = [];
+
+  for (index in array) {
+    let objetoTech = {
+      tech: techOrdenada[index],
       name,
     }
-    novaLista.push(objetoTechs)
+    arrayOrdenado.push(objetoTech)
   }
-  return novaLista;*/
-} 
+  return arrayOrdenado;
+}
 
 // Desafio 11
 function generatePhoneNumber() {
