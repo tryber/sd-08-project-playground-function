@@ -50,8 +50,9 @@ function highestCount(array) {
   let cont = 0;
 
   for (let i = 0; i < array.length; i += 1) {
+    maiorNumero = array[i];
     for (let j = 0; j < array.length; j += 1) {
-      if (array[i] < array[j]) {
+      if (maiorNumero < array[j]) {
         maiorNumero = array[j];
       }
     }
@@ -74,9 +75,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat1Move = Math.abs(cat1);
   let cat2Move = Math.abs(cat2);
 
-  if (Math.abs(mouseMove - cat1Move) < Math.abs(mouseMove - cat2Move)) return "cat1";
-  if (Math.abs(mouseMove - cat2Move) < Math.abs(mouseMove - cat1Move)) return "cat2";
-  return "os gatos trombam e o rato foge";
+  if (Math.abs(mouseMove - cat1Move) < Math.abs(mouseMove - cat2Move)) {
+    return "cat1";
+  } else if (Math.abs(mouseMove - cat2Move) < Math.abs(mouseMove - cat1Move)) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 //console.log(catAndMouse(-1, -3, 2));
@@ -105,7 +110,7 @@ function fizzBuzz(array) {
 // Desafio 9
 
 function encode(literal) {
-  for (let i in literal) {
+  for (i in literal) {
     if (literal[i] == "a") {
       literal = literal.replace(literal[i], "1");
     } else if (literal[i] == "e") {
@@ -124,7 +129,7 @@ function encode(literal) {
 //console.log(encode("hi there"))
 
 function decode(literal) {
-  for (let i in literal) {
+  for (i in literal) {
     if (literal[i] == "1") {
       literal = literal.replace(literal[i], "a");
     } else if (literal[i] == "2") {
@@ -218,7 +223,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(literal) {
   let agua = 0;
 
-  for (let i in literal) {
+  for (i in literal) {
     let a = literal[i];
     if (a * a) {
       agua += parseInt(a);
