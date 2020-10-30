@@ -61,20 +61,12 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+// https://github.com/tryber/sd-08-project-playground-function/blob/vivianeflorido-project-playground-function/src/challenges.js
 function classify(num) {
-  let result = '';
-  if (num % 3 === 0) {
-    result += 'fizz';
-  }
-  if (num % 5 === 0) {
-    result += 'buzz';
-  }
-  if (result === '') {
-    result = 'bug!';
-  }
-  if (result === 'fizzbuzz') {
-    result = 'fizzBuzz';
-  }
+  let result = 'bug!';
+  if (num % 3 === 0 && num % 5 === 0) result = 'fizzBuzz';
+  if (num % 3 === 0) result += 'fizz';
+  if (num % 5 === 0) result += 'buzz';
   return result;
 }
 
