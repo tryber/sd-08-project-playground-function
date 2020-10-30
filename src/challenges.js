@@ -93,7 +93,7 @@ function fizzBuzz(array) {
     if (array[index] % 3 == 0 && array[index] % 5 == 0) {
       string.push("fizzBuzz");
     } else if (array[index] % 5 == 0) {
-      string.push("Buzz");
+      string.push("buzz");
     } else if  (array[index] % 3 == 0){
       string.push("fizz");
     }else{
