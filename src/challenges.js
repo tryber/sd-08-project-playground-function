@@ -162,36 +162,52 @@ function techList(arrayTech, nome) {
 
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
-  let resultado = `(${arrayNumber[0]}${arrayNumber[1]}) ${arrayNumber[2]}${arrayNumber[3]}${arrayNumber[4]}${arrayNumber[5]}${arrayNumber[6]}-${arrayNumber[7]}${arrayNumber[8]}${arrayNumber[9]}${arrayNumber[10]}`;
+  let resultado;
+  let arrayCount = [];
   let count = 0;
-  // Verifica o tamanho da Array
-  if (arrayNumber.length != 11) {
-    resultado = 'Array com tamanho incorreto.'
-  }
-  // Verifica se um número é maior que 9 ou menor que 0
-  for (index in arrayNumber) {
-    if (arrayNumber[index] > 9 || arrayNumber[index] < 0) {
-      resultado = 'não é possível gerar um número de telefone com esses valores'
-      break;
-    }
-  }
-  // Verifica se algum número se repete 3 vezes ou mais
-  for (index2 in arrayNumber) {
-    for (index3 in arrayNumber) {
-      if (arrayNumber[index3] === arrayNumber[index2]) {
+  let verifyQuantity;
+  // Conta a quantidade de vezes que um número aparece na arrayNumber.
+  for (let index = 0; index < arrayNumber.length; index += 1) {
+    for (let index2 = 0; index2 < arrayNumber.length; index2 += 1) {
+      if (arrayNumber[index2] === arrayNumber[index]) {
         count += 1;
       }
     }
-    if (count >= 3) {
-      resultado = 'não é possível gerar um número de telefone com esses valores'
-      break;
-    }
+    arrayCount[index] = count;
     count = 0;
   }
+  for (index = 0; index < arrayCount.length; index += 1) {
+    if (arrayCount[index] >= 3) {
+      verifyQuantity = true;
+      break;
+    } else {
+      verifyQuantity = false;
+    }
+  }
+  // Verifica se algum número é maior que 9 ou menor que 0.
+  let verifyLimit;
+  for (let index = 0; index < arrayNumber.length;  index += 1) {
+    if (arrayNumber[index] > 9 || arrayNumber[index] < 0) {
+      verifyLimit = true;
+      break;
+    } else {
+      verifyLimit = false
+    }
+  }
 
+  // Verifica se arrayNumber tem tamanho menor que 11 ou maior que 11.
+  if (arrayNumber.length > 11 || arrayNumber.length < 11) {
+    resultado = 'Array com tamanho incorreto.'
+  }
+
+  else if (verifyLimit === true || verifyQuantity === true) {
+    resultado = 'não é possível gerar um número de telefone com esses valores'
+  } else {
+    resultado = `(${arrayNumber[0]}${arrayNumber[1]}) ${arrayNumber[2]}${arrayNumber[3]}${arrayNumber[4]}${arrayNumber[5]}${arrayNumber[6]}-${arrayNumber[7]}${arrayNumber[8]}${arrayNumber[9]}${arrayNumber[10]}`
+  }
   return resultado;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
