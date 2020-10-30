@@ -56,41 +56,21 @@ function fizzBuzz(arr) {
 
 // Desafio 9
 function encode(text) {
-  return text
-    .split("a")
-    .join("1")
-    .split("e")
-    .join("2")
-    .split("i")
-    .join("3")
-    .split("o")
-    .join("4")
-    .split("u")
-    .join("5");
+  return helper.encodeText(text);
 }
 
 function decode(text) {
-  return text
-    .split("1")
-    .join("a")
-    .split("2")
-    .join("e")
-    .split("3")
-    .join("i")
-    .split("4")
-    .join("o")
-    .split("5")
-    .join("u");
+  return helper.decodeText(text);
 }
 
 // Desafio 10
 function techList(list, name) {
   if (list.length === 0) return "Vazio!";
-  const result = [];
-  list.sort().forEach((item) => {
-    result.push({ tech: item, name });
-  });
-  return result;
+  // const result = [];
+  // list.sort().forEach((item) => {
+  //   result.push({ tech: item, name });
+  // });
+  return helper.techListFactory(list, name);
 }
 
 // Desafio 11
