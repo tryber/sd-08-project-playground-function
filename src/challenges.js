@@ -135,10 +135,21 @@ function decode(palavra) {
 }
 
 // Desafio 10
-function techList(tech, nome) {
-  // seu código aqui
+function techList(tecnologias, nome) {
+  if (tecnologias.length === 0) {
+    return 'Vazio!';
+  }
+  let techsOrdenadas = tecnologias.sort();
+  let novaLista = [];
+  for (let index in tecnologias) {
+    let objetoTechs = {
+      tech: techsOrdenadas[index],
+      nome,
+    }
+    novaLista.push(objetoTechs)
+  }
+  return novaLista;
 }
-console.log(techList([css, html, react, javascript, nodejs], 'victor'))
 
 // Desafio 11
 function generatePhoneNumber() {
