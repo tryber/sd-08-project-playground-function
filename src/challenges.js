@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(n1,n2) {
-  if(n1 == n2 && n2 == n1) {
+  if(n1 % 2 == 0 && n2 % 2 == 1) {
     return true
   } else {
     return false
-}
+  }
 }
 // Desafio 2
 function calcArea(base, height) {
