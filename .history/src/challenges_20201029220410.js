@@ -111,9 +111,9 @@ function generatePhoneNumber(arr) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // Checks
-  if (lineA < lineB + lineC || lineA > Math.abs(lineB - lineC)) return false;
-  if (lineB < lineA + lineC || lineB > Math.abs(lineA - lineC)) return false;
-  if (lineC < lineA + lineB || lineC > Math.abs(lineA - lineB)) return false;
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) return false;
+  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) return false;
+  if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) return false;
   return true;
 }
 
