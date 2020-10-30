@@ -134,9 +134,23 @@ let phrase2 = '';
 console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let listOfTech = [];
+  if (tech === null || tech.length === 0) {
+    return "Vazio!";
+  } else {
+    tech.sort();
+    for (let key in tech) {
+      let objectTech = {
+        tech: tech[key],
+        name: name
+      }
+      listOfTech.push(objectTech);
+    }
+    return listOfTech;
+  }
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],'Aline'));
 
 // Desafio 11
 function generatePhoneNumber() {
