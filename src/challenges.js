@@ -17,11 +17,24 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(param) {
-  sentence = [];
-  sentence.push(param.split(' '));
+
+  let sentence = [];
+  let palavra = "";
+  
+  for (index = 0; index < param.length; index++){
+    for(index2 = index; param[index2] != " "; index2++){
+      if(index2 != 0){
+        index2 ++;
+      }
+      // palavra += param[index2];
+    } 
+    sentence.push(palavra);
+    palavra = "";
+  }
+  param.split(' ');
   return sentence;
 }
-// console.log(splitSentence("go Trybe"));
+console.log(splitSentence("go Trybe"));
 
 // Desafio 4
 function concatName(param) {
@@ -44,14 +57,54 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(10, 5));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(param) {
+
+  let numero = 0;
+  let contador = 0;
+  let parametro = param.length;
+
+  for(index = 0; index < parametro; index++){
+    if( param[index] > numero ){
+      numero = param[index];
+    }
+  }
+  for(index2 = 0; index2 < parametro; index2++){
+    if (param[index2] === numero){
+      contador ++;
+    }
+  }
+  return contador;
 }
 
+// let vetor = [9, 1, 2, 3, 9, 5, 7];
+// console.log(highestCount(vetor));
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+
+function catAndMouse(mouse, cat1, cat2) {
+    
+let distGato1 = mouse - cat1;
+let distGato2 = mouse - cat2;
+
+if(Math.sign(distGato1) == -1){
+    distGato1 *= -1;
+}else{
+    distGato1 -= 1;
 }
+if(Math.sign(distGato2) == -1){
+    distGato2 *= -1;
+}else{
+    distGato2 -1;
+}
+ if(distGato1 < distGato2){
+   return "cat1";
+ }else if(distGato2 < distGato1){
+   return "cat2";
+ }else if(distGato1 == distGato2){
+   return "os gatos trombam e o rato foge";
+ }
+}
+// console.log(catAndMouse(1, 3, 5));
 
 // Desafio 8
 function fizzBuzz() {
