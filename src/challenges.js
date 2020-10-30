@@ -166,7 +166,7 @@ function generatePhoneNumber(arrayNumber) {
   let count = 0;
   // Verifica o tamanho da Array
   if (arrayNumber.length != 11) {
-    resultado = 'Array com tamanho incorreto'
+    resultado = 'Array com tamanho incorreto.'
   }
   // Verifica se um número é maior que 9 ou menor que 0
   for (index in arrayNumber) {
