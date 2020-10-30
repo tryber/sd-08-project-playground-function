@@ -321,32 +321,40 @@ function generatePhoneNumber(arrNum) {
   //Organiza a string de output
 
   if (aux.length == 11) {
-    for (let index in aux) {
-      if (index == 0) {
-        outputStr = '(' + aux[index];
-      }
-      else if (index == 1) {
-        outputStr += aux[index] + ') ';
-      }
-      else if (index >= 2 && index <= 5) {
-        outputStr += aux[index];
-      }
-      else if (index == 6) {
-        outputStr += aux[index] + "-";
-      }
-      else {
-        outputStr += aux[index];
+    if (verificaRepetido == false || verificaArray == false) {
+      outputStr = "não é possível gerar um número de telefone com esses valores";
+    }
+    else {
+      for (let index in aux) {
+        if (index == 0) {
+          outputStr = '(' + aux[index];
+        }
+        else if (index == 1) {
+          outputStr += aux[index] + ') ';
+        }
+        else if (index >= 2 && index <= 5) {
+          outputStr += aux[index];
+        }
+        else if (index == 6) {
+          outputStr += aux[index] + "-";
+        }
+        else {
+          outputStr += aux[index];
+        }
       }
     }
-  }
-  else if (verificaRepetido == false || verificaArray == false) {
-    outputStr = "não é possível gerar um número de telefone com esses valores";
+    
   }
   else {
     outputStr = "Array com tamanho incorreto.";
   }
   return outputStr;
 }
+
+// < Para o teste manual >
+// let arrayteste4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+// console.log(generatePhoneNumber(arrayteste4));
+
 
 // Desafio 12
 function triangleCheck() {
