@@ -128,7 +128,6 @@ function techList(array, name) {
 
 
 // Desafio 11
-// Método de contagem de itens do array: https://stackoverflow.com/a/19395302/;
 // Método array.some: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/some;
 function numValidator(array) {
   let counts = {};
