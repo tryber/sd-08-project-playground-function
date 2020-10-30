@@ -42,9 +42,10 @@ function concatName(array) {
 // independente do tamanho da array.
 
 // Isso quer dizer que, caso o parâmetro passado para concatName seja a Array
-// ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá
-// retornar Paolillo, Lucas.
-// let resultado.concat(array[array.length],", ", array[0]);
+// ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
+  let resultado = array[array.length-1]
+  resultado += ", ";
+  resultado += array[0];
 return resultado;
 }
 
@@ -114,6 +115,14 @@ function fizzBuzz(array) {
 let resultado = [];
 for (const key in array){
   resultado[key] ="";
+  switch (array[key]) {
+    case value:
+
+      break;
+
+    default:
+      break;
+  }
   if ( array[key]%3 === 0 ){
     resultado[key] += "fizz";
   }
