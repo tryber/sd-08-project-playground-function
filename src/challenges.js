@@ -90,8 +90,8 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
 
-  let posicaofalta1 = Math.abs(mouse - cat1) ;
-  let posicaofalta2 = Math.abs (mouse - cat2) ;
+  let posicaofalta1 = Math.abs(mouse - cat1);
+  let posicaofalta2 = Math.abs(mouse - cat2);
 
   if (posicaofalta1 < posicaofalta2) {
     return "cat1"
@@ -113,31 +113,31 @@ console.log(catAndMouse(6, 4, 3))
 // Desafio 8
 function fizzBuzz(nmrs) {
 
-  let ret = nmrs
+  let sequencia = [];
 
-  for (let i = 0; i < ret.length; i++) {
-    
-    if (ret[i] % 3 == 0 && ret[i] % 5 != 0) {
-      console.log("fizz")
+  for (let i = 0; i < nmrs.length; i += 1) {
+
+    if (nmrs[i] % 3 == 0 && nmrs[i] % 5 != 0) {
+      sequencia.push("fizz")
     }
-    else if (ret[i] % 5 == 0 && ret[i] % 3 != 0) {
-      console.log("buzz")
+    else if (nmrs[i] % 5 == 0 && nmrs[i] % 3 != 0) {
+      sequencia.push("buzz")
     }
-    else if (ret[i] % 3 == 0 && ret[i] % 5 == 0) {
-     
-      console.log("fizzBuzz")
+    else if (nmrs[i] % 3 == 0 && nmrs[i] % 5 == 0) {
+
+      sequencia.push("fizzBuzz")
 
     }
-    else if(ret[i] % 3 != 0 && ret[i] % 5 != 0) 
-      console.log("bug!")
+    else if (nmrs[i] % 3 != 0 && nmrs[i] % 5 != 0)
+      sequencia.push("bug!")
 
 
   }
-return
+  return sequencia
 
 }
 
-fizzBuzz([2, 15, 7, 9, 45])
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(palavra) {
@@ -174,28 +174,28 @@ function decode() {
 }
 
 // Desafio 10
-function techList(tec,name) {
+function techList(tec, name) {
 
-let novo = {
-  tech :""    ,
-  name :" "
+  let novo = {
+    tech: "",
+    name: " "
 
+  }
+
+
+  for (let key in tec) {
+    novo.tech = tec[key]
+    novo.name = name
+
+
+
+
+  }
+
+  return novo
 }
 
-
-  for (let key in tec){
-  novo.tech = tec[key]
-  novo.name = name
-
-
-
-
-}
-
-return novo
-}
-
-console.log(techList(["tec1","tec2","tec3"],"zin"))
+console.log(techList(["tec1", "tec2", "tec3"], "zin"))
 
 // Desafio 11
 function generatePhoneNumber() {
