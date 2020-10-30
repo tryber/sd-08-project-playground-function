@@ -27,12 +27,12 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let maior = array[0];
   let counter = 0;
-  for (pos in array) {
+  for (let pos in array) {
     if (array[pos] > maior) {
       maior = array[pos];
     }
   }
-  for (pos in array) {
+  for (let pos in array) {
     if (array[pos] === maior) {
       counter += 1;
     }
