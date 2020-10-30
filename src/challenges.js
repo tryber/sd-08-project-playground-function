@@ -1,7 +1,6 @@
 // Guilherme Ribeiro
 // Desafio 1
 function compareTrue(a,b) {
-  // seu código aqui
   if (a && b == true) {
     return true;
   }
@@ -10,13 +9,11 @@ function compareTrue(a,b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  // seu código aqui
   return ((base*height)/2);
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  // seu código aqui
   let string = "";
   let array = [];
 
@@ -36,7 +33,6 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(name) {
-  // seu código aqui
   let string = '';
   
   string = string + name[name.length-1] + ', ' + name[0];
@@ -46,13 +42,11 @@ function concatName(name) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  // seu código aqui
   return (wins*3+ties);
 }
 
 // Desafio 6
 function highestCount(arrayNumbers) {
-  // seu código aqui
   let maior = arrayNumbers[0];
   let cont = 0;
 
@@ -70,7 +64,6 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
   let dist1 = 0;
   let dist2 = 0;
 
@@ -96,8 +89,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+  let arrayStrings = [];
+
+  for (i=0;i<arrayNumbers.length;i+=1) {
+    if (arrayNumbers[i] % 3 == 0) {
+      if (arrayNumbers[i] % 5 == 0) {
+        arrayStrings.push('fizzBuzz');//fizzBuzz
+      } else {
+        arrayStrings.push('fizz');//fizz
+      }
+    } else {
+      if (arrayNumbers[i] % 5 == 0) {
+        arrayStrings.push('buzz');//buzz
+      } else {
+        arrayStrings.push('bug!');//bug!
+      }
+    }
+  }
+
+  return arrayStrings;
 }
 
 // Desafio 9
