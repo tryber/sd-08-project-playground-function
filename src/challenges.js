@@ -22,18 +22,19 @@ function splitSentence(separate) {
   // seu código aqui
   return separate.split(' ');
 }
-console.log(splitSentence("Go trybe"));
+console.log(splitSentence("Go trybe"));   
 
 // Desafio 4
-function concatName() {
+function concatName(phrase) {
   // seu código aqui
-}
-
+    return phrase[phrase.length-1] + ' ' +phrase[0];
+  }
+  console.log(concatName());
+  
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
  return wins *3 + ties;
- 
 }
 console.log(footballPoints(3, 1));
 
