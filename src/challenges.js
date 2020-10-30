@@ -13,6 +13,7 @@ function splitSentence(string) {
   let array = string.split(" ");
   return array;
 }
+//string.split() https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
 
 // Desafio 4
 function concatName(arrayDeStrings) {
@@ -39,12 +40,22 @@ function highestCount(array) {
     }
   }
   return  count;
-}
+} // Math.max.apply ==> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat01 = 'cat1'
+  let cat02 = 'cat2'
+  let string = 'os gatos trombam e o rato foge';
+  if ( (mouse - cat1) < (mouse - cat2)) {
+    return cat02
+  } else if ((mouse - cat2) < (mouse - cat1)) {
+    return cat01
+  } else {
+    return string;
+  }
 }
+console.log(catAndMouse(5, 3, 2));
 
 // Desafio 8
 function fizzBuzz(array) {
