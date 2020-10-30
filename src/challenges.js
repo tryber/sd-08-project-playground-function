@@ -210,7 +210,11 @@ function hydrate(drinks) {
   for (index = 0; index < cups.length; index += 1) {
     waterCounter += Number(cups[index]);
   }
-  return `${waterCounter} copos de água`;
+  if (waterCounter == 1) {
+    return `${waterCounter} copo de água`;
+  } else {
+    return `${waterCounter} copos de água`;
+  }
 }
 
 module.exports = {
