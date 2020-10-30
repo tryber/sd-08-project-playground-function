@@ -1,12 +1,9 @@
 // Desafio 1
 function compareTrue(a, b) {
   // seu código aqui
-  if (a && b) {
-    return true
-  }
+  if (a && b) return true
   return false
 }
-
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
@@ -16,15 +13,13 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  let newArray = string.split(" ")
-  return newArray
+  return string.split(" ")
 }
 
 // Desafio 4
 function concatName(arrayNames) {
   // seu código aqui
-  let newString = arrayNames.pop().toString() + ", " + arrayNames[0].toString()
-  return newString
+  return `${arrayNames.pop()}, ${arrayNames[0]}`
 }
 
 // Desafio 5
@@ -44,8 +39,6 @@ function highestCount(arrayHighestCount) {
       topNumber = arrayHighestCount[i]
     }
   }
-  console.log(topNumber)
-
   for (j in arrayHighestCount) {
     if (topNumber === arrayHighestCount[j]) {
       cont++
@@ -55,23 +48,28 @@ function highestCount(arrayHighestCount) {
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  mouse = Math.abs(mouse)
-  cat1 = Math.abs(cat1)
-  cat2 = Math.abs(cat2)
-
-  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    return "cat1"
-  }
-
-  if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
-    return "cat2"
-  }
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) return "cat1"
+  if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) return "cat2"
   return "os gatos trombam e o rato foge"
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbersArray) {
   // seu código aqui
+  let newArray = []
+
+  for (i in arrayNumbers) {
+    if (arrayNumbers[i] % 3 == 0 && arrayNumbers[i] % 5 === 0) {
+      newArray.push("fizzBuzz")
+    } else if (arrayNumbers[i] % 3 == 0) {
+      newArray.push("fizz")
+    } else if (arrayNumbers[i] % 5 == 0) {
+      newArray.push("buzz")
+    } else {
+      newArray.push("bug!")
+    }
+  }
+  return newArray
 }
 
 // Desafio 9
