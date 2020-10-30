@@ -2,12 +2,12 @@
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return (true);
-  } else {
+  }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return ((base*height)/2);
+  return ((base*height) / 2);
 }
 
 // Desafio 3
@@ -24,7 +24,7 @@ function concatName(ordenar) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return ((wins*3)+(ties*1));
+  return ((wins * 3) + (ties * 1));
 }
 
 // Desafio 6
@@ -59,13 +59,13 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numeros) {
   let vetorResposta = []
   for (index = 0; index < numeros.length; index +=1) {
-    if (numeros[index]%3 && numeros[index]%5 != 0) {
+    if (numeros[index] % 3 && numeros[index] % 5 != 0) {
       vetorResposta.push("bug!");
-    } else if (numeros[index]%3 == 0 && numeros[index]%5 == 0) {
+    } else if (numeros[index] % 3 == 0 && numeros[index] % 5 == 0) {
       vetorResposta.push("fizzBuzz");
-    }else if (numeros[index]%5 == 0) {
+    }else if (numeros[index] % 5 == 0) {
       vetorResposta.push("buzz")
-    } else if (numeros[index]%3 == 0) {
+    } else if (numeros[index] % 3 == 0) {
       vetorResposta.push("fizz");
     }
   }
@@ -157,11 +157,11 @@ function generatePhoneNumber(vetor) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let possivel = false;
-  if (lineA < lineB+lineC && lineA > Math.abs(lineB-lineC)){
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)){
     possivel = true;
-  } else if (lineB < lineA+lineC && lineB > Math.abs(lineA-lineC)) {
+  } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
     possivel = true;
-  } else if (lineC < lineB+lineA && lineC > Math.abs(lineB-lineA)) {
+  } else if (lineC < lineB + lineA && lineC > Math.abs(lineB - lineA)) {
     possivel = true;
   }
   return (possivel);
@@ -180,6 +180,7 @@ function hydrate(recebida) {
     return (soma + " copos de água")
   }
 }
+console.log(hydrate("1 cerveja"))
 
 
 module.exports = {
