@@ -106,20 +106,20 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   let troca = string;
-  for (i in troca){
-    if(troca[i] == "a"){
+  for (i in troca) {
+    if (troca[i] == "a") {
       troca = troca.replace(troca[i], "1");
     }
-    if(troca[i] == "e"){
+    if (troca[i] == "e") {
       troca = troca.replace(troca[i], "2");
     }
-    if(troca[i] == "i"){
+    if (troca[i] == "i") {
       troca = troca.replace(troca[i], "3");
     }
-    if(troca[i] == "o"){
+    if (troca[i] == "o") {
       troca = troca.replace(troca[i], "4");
     }
-    if(troca[i] == "u"){
+    if (troca[i] == "u") {
       troca = troca.replace(troca[i], "5");
     }
   }
@@ -130,20 +130,20 @@ function encode(string) {
 function decode(string) {
   let troca = string;
 
-  for (i in troca){
-    if(troca[i] == "1"){
+  for (i in troca) {
+    if (troca[i] == "1") {
       troca = troca.replace(troca[i], "a");
     }
-    if(troca[i] == "2"){
+    if (troca[i] == "2") {
       troca = troca.replace(troca[i], "e");
     }
-    if(troca[i] == "3"){
+    if (troca[i] == "3") {
       troca = troca.replace(troca[i], "i");
     }
-    if(troca[i] == "4"){
+    if (troca[i] == "4") {
       troca = troca.replace(troca[i], "o");
     }
-    if(troca[i] == "5"){
+    if (troca[i] == "5") {
       troca = troca.replace(troca[i], "u");
     }
   }
@@ -155,16 +155,17 @@ function decode(string) {
 function techList(tecnologia, name) {
   if (tecnologia.length === 0) {
     return "Vazio!"
+  } else {
+    let tecnoligaOrdenada = tecnologia.sort();
+    let list = [];
+    for (i in tecnoligaOrdenada) {
+      let objeto = {};
+      objeto["tech"] = tecnologia[i];
+      objeto["name"] = name;
+      list.push(objeto);
+    }
+    return list;
   }
-  let arrayOrd = tecnologia.sort();
-  let list = [];
-  for (i in arrayOrd) {
-    let objeto = [];
-    objeto["tech"] = tecnologia[i];
-    objeto["name"] = name;
-    list.push(objeto);
-  }
-  return list;
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
