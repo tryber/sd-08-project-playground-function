@@ -8,7 +8,7 @@ function compareTrue(comp01, comp02) {
   }
   return resultado;
 }
-(compareTrue(true, true);
+compareTrue(true, true);
 //console.log(compareTrue(true, true))
 
 // Desafio 2
