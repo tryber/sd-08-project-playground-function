@@ -51,17 +51,24 @@ function highestCount(parametro) {
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {        
-  let   distanciaDoGatoUmParaORato = Math.abs(cat1 - mouse),
-        distanciaDoGatoDoisParaORato = Math.abs(cat2 - mouse),
-        resultado = ''
-        if(distanciaDoGatoUmParaORato < distanciaDoGatoDoisParaORato){
-           return 'cat1'
-          }
-    else if(distanciaDoGatoUmParaORato > distanciaDoGatoDoisParaORato){
-            return 'cat2'
-          }else{
-            return "Os gatos trombam e o rato foge"
-          }          
+  let distanciaDosCatUmParaORato = (cat1-mouse),
+     distanciaDoGatoDoisParaORato = (cat2-mouse)
+  
+  if (distanciaDosCatUmParaORato < 0){
+    distanciaDosCatUmParaORato = -distanciaDosCatUmParaORato
+  }
+  if (distanciaDoGatoDoisParaORato < 0) {
+    distanciaDoGatoDoisParaORato = -distanciaDoGatoDoisParaORato
+  }  
+  if (distanciaDosCatUmParaORato !== distanciaDoGatoDoisParaORato){
+    if ((distanciaDosCatUmParaORato) < (distanciaDoGatoDoisParaORato)){
+      return 'cat1'
+    } else if((distanciaDosCatUmParaORato) > (distanciaDoGatoDoisParaORato)){
+      return 'cat2'
+    }
+  } else {
+    return "os gatos trombam e o rato foge"
+  }          
 }
 
 // Desafio 8
