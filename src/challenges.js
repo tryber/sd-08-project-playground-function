@@ -42,25 +42,23 @@ return numerodePontos
 }
 
 // Desafio 6
-function highestCount(array) {
+function highestCount(arraye) {
 
-let conta = 0 ;
-let contrep= 0; 
-
-  for ( index1 = 0; index1 < array.length; index1 +=1) {
-    for ( index2 = index1 + 1; index2 < array.length; index2 +=1 ) {
-
-      if ( array[index1] == array[index2]){
-        conta ++
-        break;
-      } if (conta < contrep) {
-        contrep = conta ;
-
-      }
-    }
-
-    return conta 
+  let maiorNumero = arraye[index]; 
+  let conta = 0;
+  let maior = 0
+  for ( index =0; index < arraye.length; index += 1) {
+   
+      if ( arraye[index] > maiorNumero) {
+  
+          maior = arraye[index]
+  
+      } if ( maiorNumero === arraye[index]) {
+          conta++
+      } 
   }
+  
+  return conta ;
  
 }
 console.log( highestCount [[9, 1, 2, 3, 9, 5, 7]])
