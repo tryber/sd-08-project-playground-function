@@ -88,7 +88,7 @@ function catAndMouse(mouse, cat1,  cat2) {
   } else if(cat2 - mouse < cat1 - mouse) {
     gato = "cat2";
   } else {
-    gato = "os gatos trombam e o rato foge."
+    gato = "os gatos trombam e o rato foge.";
   }
   return gato;
 }
