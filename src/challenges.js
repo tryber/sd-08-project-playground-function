@@ -115,20 +115,26 @@ function fizzBuzz(array) {
 let resultado = [];
 for (const key in array){
   resultado[key] ="";
-  analyze_bug_fizz_Buzz(array,key,resultado);
+  analyze_bug_fizz_Buzz(array , key , resultado);
 }
 return resultado;
 }
-function analyze_bug_fizz_Buzz(array, key,resultado){
-  if(compareTrue(array[key]%3!=0,array[key]%5!=0)) {
-    resultado[key]="bug!";
+
+function analyze_bug_fizz_Buzz(array , key , resultado) {
+  if(array[key]%15==0){
+    resultado[key]="fizzBuzz";
+    return;
   }
-  else if(array[key]%3 === 0){
+  if(array[key]%3 === 0){
     resultado[key]="fizz";
+    return;
   }
-  if(array[key]%5 === 0){
-    resultado[key] += "Buzz";
+  if(array[key]%5 === 0 ){
+    resultado[key] = "buzz";
+    return;
   }
+  resultado[key]="bug!";
+    return;
 }
 
 // Desafio 9
