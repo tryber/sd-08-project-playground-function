@@ -156,13 +156,14 @@ function techList(tech, name) {
       tech: arrayOrdem[cont],
       name: name
     })
-  
   }
   if (array.length == 0) {
     console.log("Vazio!");
-}
+    return name;
+} else {
   console.log(name);
   return array;
+}
 }
 console.log(techList([], "Vinicius"));
 
