@@ -226,9 +226,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebibas) {
+  // Encontrei a solução para retirar números de string nesse post: https://pt.stackoverflow.com/questions/3719/como-obter-apenas-os-n%C3%BAmeros-de-uma-string-em-javascript
+  let quatityDrink = bebibas.split(/\D+/);
+  let agua = 0;
+  for (let index = 0; index < quatityDrink.length - 1; index += 1) {
+    agua += parseInt(quatityDrink[index], 10);
+  }
+  if (agua < 2) {
+    return '1 copo de água'
+  } else {
+    return `${agua} copos de água`
+  }
 }
+console.log(hydrate('1 cerveja'));
 
 
 module.exports = {
