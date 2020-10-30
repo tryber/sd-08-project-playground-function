@@ -113,8 +113,8 @@ function encode(string) {
       else{
         chave = string[index]
       }
-    } 
-  } return resultado
+    } return resultado
+  } 
 }
 
 function decode(string) {
@@ -134,8 +134,8 @@ function decode(string) {
       else{
         chave = string[index]
       }
-    } 
-  } return resultado
+    } return resultado
+  } 
 }
 
 // Desafio 10
