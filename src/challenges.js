@@ -8,7 +8,7 @@ function compareTrue(comprar, pagar) {
     return true;
   } return false;
 }
-console.log (compareTrue(comprar, pagar));
+// console.log (compareTrue(comprar, pagar));
 
 // Desafio 2
 let base = 2;
@@ -17,7 +17,7 @@ function calcArea(base, height) {
   // seu código aqui
   return (base * height) / 2;
 }
-console.log(calcArea(base, height));
+// console.log(calcArea(base, height));
 
 // Desafio 3
 let frase = 'go Trybe'
@@ -25,7 +25,7 @@ function splitSentence(frase) {
   // seu código aqui
   return frase.split(' ')
 }
-console.log(splitSentence(frase));
+// console.log(splitSentence(frase));
 
 // Desafio 4
 let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
@@ -35,7 +35,7 @@ function concatName(array) {
     return (array[array.length-1] + ', '  + array[0])
   }
 }
-console.log(concatName(array));
+// console.log(concatName(array));
 
 // Desafio 5
 let wins = 12;
@@ -45,7 +45,7 @@ function footballPoints(wins, ties) {
   let total = (wins * 3 + ties * 1);
   return total
 }
-console.log(`O total de pontos conquistados é ${footballPoints(wins,ties)}.`);
+// console.log(`O total de pontos conquistados é ${footballPoints(wins,ties)}.`);
 
 // Desafio 6
 let valores = [9, 1, 2, 3, 9, 5, 7, 13, 13, 50, 50, 50, 100];
@@ -62,12 +62,12 @@ function highestCount(valores) {
   return repeticao
 }
 
-console.log(highestCount(valores))
+// console.log(highestCount(valores))
 
 // Desafio 7
 let mouse = 0;
-let cat1 = 1;
-let cat2 = 5;
+let cat1 = 2;
+let cat2 = 2;
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distMouseCat1 = Math.abs(mouse - cat1);
@@ -102,7 +102,7 @@ function fizzBuzz(parametro) {
   return array
 }
 
-console.log(fizzBuzz(parametro));
+// console.log(fizzBuzz(parametro));
 
 // Desafio 9
 let saudacao = 'hi there!"';
