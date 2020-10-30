@@ -10,23 +10,23 @@ function compareTrue(valor1, valor2) {
 // Desafio 2
 function calcArea(base, height) {
   let areaTriangulo = (base * height) / 2
-  return areaTriangulo 
+  return areaTriangulo;
 }
 
 // Desafio 3
 function splitSentence(stringToSplit) {
-  return stringToSplit.split(' ') 
+  return stringToSplit.split(' '); 
 }
 
 
 // Desafio 4
 function concatName(arrayString) {
-  return [arrayString.length - 1], [arrayString[0]] 
+  return [arrayString.length - 1], [arrayString[0]]; 
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
