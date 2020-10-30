@@ -130,6 +130,7 @@ function highestCount(arrNum) {
 function catAndMouse(mouse, cat1, cat2) {
   let unidDist1 = cat1 - mouse;
   let unidDist2 = cat2 - mouse;
+  let outputStr = "";
 
 // Torna as distancias positivas
 
@@ -142,18 +143,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
   if (unidDist1 < unidDist2) {
-    return `"cat1"`;
+    outputStr = "cat1";
   }
   else if (unidDist1 > unidDist2) {
-    return `"cat2"`;
+    outputStr = "cat2";
   }
   else {
-    return `"os gatos trombam e o rato foge"`;
+    outputStr = "os gatos trombam e o rato foge";
   }
+  return outputStr;
 }
 
 // < Para o teste manual >
-// console.log(catAndMouse(-1, -4, 2));
+// console.log(catAndMouse(-1, 3, 2));
 
 
 // Desafio 8
@@ -287,7 +289,6 @@ function techList(arrStr, name) {
 
 
 // Desafio 11
-<<<<<<< HEAD
 function generatePhoneNumber(arrNum) {
   let aux = arrNum;
   let outputStr = '';
@@ -345,10 +346,6 @@ function generatePhoneNumber(arrNum) {
     outputStr = "Array com tamanho incorreto.";
   }
   return outputStr;
-=======
-function generatePhoneNumber() {
-  // seu código aqui
->>>>>>> parent of dae62db... conclui o Desafio 11
 }
 
 // Desafio 12
