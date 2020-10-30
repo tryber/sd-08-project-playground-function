@@ -62,23 +62,24 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arr) {
   let newArray = [];
-    for (let i = 0; i < arr.length; i += 1) {
-      if ((arr[i] % 3 === 0) && (arr[i] % 5 !== 0)) {
-        newArray.push('fizz');
-      } else if ((arr[i] % 3 !== 0) && (arr[i] % 5 === 0)) {
-        newArray.push('buzz');
-      } else if ((arr[i] % 3 === 0) && (arr[i] % 5 === 0)) {
-        newArray.push('fizzBuzz');
-      } else {
-        newArray.push('bug!');
-      }
+  for (let i = 0; i < arr.length; i += 1) {
+    if ((arr[i] % 3 === 0) && (arr[i] % 5 !== 0)) {
+      newArray.push('fizz');
+    } else if ((arr[i] % 3 !== 0) && (arr[i] % 5 === 0)) {
+      newArray.push('buzz');
+    } else if ((arr[i] % 3 === 0) && (arr[i] % 5 === 0)) {
+      newArray.push('fizzBuzz');
+    } else {
+      newArray.push('bug!');
     }
+  }
   return newArray;
 }
 
 // Desafio 9
 function encode(string) {
   let newString = '';
+  let encodeString = '';
   for (let i = 0; i < string.length; i += 1) {
     if (string[i] == 'a') {
       newString[i] == 1;
@@ -97,11 +98,14 @@ function encode(string) {
     } else {
       newString[i] == string[i];
     }
+    encodeString += newString[i];
   }
-  return newString;
+  return encodeString;
 }
+
 function decode() {
   let newString = '';
+  let decodeString = '';
   for (let i = 0; i < string.length; i += 1) {
     if (string[i] == 1) {
       newString[i] == 'a';
@@ -120,6 +124,7 @@ function decode() {
     } else {
       newString[i] == string[i];
     }
+    decodeString += newString[i];
   }
   return newString;
 }
