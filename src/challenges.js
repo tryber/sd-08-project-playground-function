@@ -104,12 +104,52 @@ function fizzBuzz(array) {
 //console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let troca = string.toLowerCase();
+  for (i in troca){
+    if(troca[i] == "a"){
+      troca = troca.replace(troca[i], "1");
+    }
+    if(troca[i] == "e"){
+      troca = troca.replace(troca[i], "2");
+    }
+    if(troca[i] == "i"){
+      troca = troca.replace(troca[i], "3");
+    }
+    if(troca[i] == "o"){
+      troca = troca.replace(troca[i], "4");
+    }
+    if(troca[i] == "u"){
+      troca = troca.replace(troca[i], "5");
+    }
+  }
+  return troca;
 }
-function decode() {
-  // seu código aqui
+//console.log(encode("hi there!"));
+
+function decode(string) {
+  let troca = string.toLowerCase();
+
+  for (i in troca){
+    if(troca[i] == "1"){
+      troca = troca.replace(troca[i], "a");
+    }
+    if(troca[i] == "2"){
+      troca = troca.replace(troca[i], "e");
+    }
+    if(troca[i] == "3"){
+      troca = troca.replace(troca[i], "i");
+    }
+    if(troca[i] == "4"){
+      troca = troca.replace(troca[i], "o");
+    }
+    if(troca[i] == "5"){
+      troca = troca.replace(troca[i], "u");
+    }
+  }
+  return troca;
 }
+//console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
