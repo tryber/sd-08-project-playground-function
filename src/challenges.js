@@ -121,7 +121,7 @@ function encode(texto) {
   for (let key in textoCodificado) {
     stringCodificada += textoCodificado[key];
   }
-  return console.log(stringCodificada);
+  return stringCodificada;
 }
 function decode(textoEmbaralhado) {
   let textoCorreto = [];
@@ -144,7 +144,7 @@ function decode(textoEmbaralhado) {
   for (let key in textoCorreto) {
     stringCorreta += textoCorreto[key];
   }
-  return console.log(stringCorreta);
+  return stringCorreta;
 }
 //encode("hello");
 //decode("h2ll4");
