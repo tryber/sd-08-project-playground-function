@@ -97,7 +97,7 @@ function fizzBuzz(array) {
       result.push('bug!');
     }
   }
-  result result;
+  return result;
 }
 
 

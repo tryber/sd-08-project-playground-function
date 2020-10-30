@@ -45,12 +45,13 @@
 
 let arry = [];
   let aOrdem = tech.sort();
+  let listEnd = [];
 
   if(aOrdem.length === 0){
       return 'Vazio!'
   }
 
-  for (let cont = 0; cont < tech.length-1; cont +=1){
+  for (let cont = 0; cont < tech.length; cont +=1){
     array.push({
       tehc: array[cont];
       name: name
@@ -59,4 +60,3 @@ let arry = [];
 
 
 
-  
