@@ -115,16 +115,25 @@ function fizzBuzz(arrayNumeros) {
 /* console.log(fizzBuzz([2, 15, 7, 9, 45])); */
 
 // Desafio 9
+function novoEncode(letra) {
+  if (letra === 'a') {
+    return '1';
+  }
+  if (letra === 'e') {
+    return '2';
+  }
+  if (letra === 'i') {
+    return '3';
+  }
+  return '';
+}
+
 function encode(texto) {
   let novoTexto = '';
 
   for (let indice = 0; indice < texto.length; indice += 1) {
-    if (texto[indice] === 'a') {
-      novoTexto += '1';
-    } else if (texto[indice] === 'e') {
-      novoTexto += '2';
-    } else if (texto[indice] === 'i') {
-      novoTexto += '3';
+    if (novoEncode(texto[indice]) !== '') {
+      novoTexto += novoEncode(texto[indice]);
     } else if (texto[indice] === 'o') {
       novoTexto += '4';
     } else if (texto[indice] === 'u') {
