@@ -88,21 +88,15 @@ function encode(sentence) {
   for (let i = 0; i < sentence.length; i += 1) {
     if (sentence[i].toLowerCase() === 'a') {
       sentenceEncoded += 1;
-    }
-    if (sentence[i].toLowerCase() === 'e') {
+    } else if (sentence[i].toLowerCase() === 'e') {
       sentenceEncoded += 2;
-    }
-    if (sentence[i].toLowerCase() === 'i') {
+    } else if (sentence[i].toLowerCase() === 'i') {
       sentenceEncoded += 3;
-    }
-    if (sentence[i].toLowerCase() === 'o') {
+    } else if (sentence[i].toLowerCase() === 'o') {
       sentenceEncoded += 4;
-    }
-    if (sentence[i].toLowerCase() === 'u') {
+    } else if (sentence[i].toLowerCase() === 'u') {
       sentenceEncoded += 5;
-    } else {
-      sentenceEncoded += sentence[i];
-    }
+    } else sentenceEncoded += sentence[i];
   }
   return sentenceEncoded;
 }
@@ -111,31 +105,17 @@ function decode(sentence) {
   // seu código aqui
   let sentenceDecoded = '';
   for (let i = 0; i < sentence.length; i += 1) {
-    switch (sentence[i]) {
-      case '1': {
-        sentenceDecoded += 'a';
-        break;
-      }
-      case '2': {
-        sentenceDecoded += 'e';
-        break;
-      }
-      case '3': {
-        sentenceDecoded += 'i';
-        break;
-      }
-      case '4': {
-        sentenceDecoded += 'o';
-        break;
-      }
-      case '5': {
-        sentenceDecoded += 'u';
-        break;
-      }
-      default: {
-        sentenceDecoded += sentence[i];
-      }
-    }
+    if (sentence[i] === '1') {
+      sentenceDecoded += 'a';
+    } else if (sentence[i] === '2') {
+      sentenceDecoded += 'e';
+    } else if (sentence[i] === '3') {
+      sentenceDecoded += 'i';
+    } else if (sentence[i] === '4') {
+      sentenceDecoded += 'o';
+    } else if (sentence[i] === '5') {
+      sentenceDecoded += 'u';
+    } else sentenceDecoded += sentence[i];
   }
   return sentenceDecoded;
 }
