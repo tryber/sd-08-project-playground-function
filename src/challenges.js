@@ -50,8 +50,8 @@ function highestCount(arrayNumeros) {
   let maiorNumero = 0;
   let contNumero = 0;
 
-      for (let i in arrayNumeros) {
-          if (maiorNumero > (arrayNumeros[i]));
+      for (let i = 0; i <arrayNumeros.length; i +=1) {
+          if ((arrayNumeros[i]) > maiorNumero);
             maiorNumero = arrayNumeros[i];{
           }
       }
@@ -62,16 +62,16 @@ function highestCount(arrayNumeros) {
       }
       return contNumero;
 };
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 
 // Desafio 7
 let distance = 0;
 function catAndMouse(mouse, cat1, cat2) {
-     if ((distance = mouse - cat1) === (distance = Math.abs (mouse - cat2))) {
+     if ((distance = Math.abs (mouse - cat1)) === (distance = Math.abs (mouse - cat2))) {
           result = "os gatos trombam e o rato foge";     
      }
-     else if ((distance = mouse - cat1) > (distance = Math.abs (mouse - cat2))) {
+     else if ((distance = Math.abs (mouse - cat1)) < (distance = Math.abs (mouse - cat2))) {
           result = "cat1";        
      }
      else {
@@ -81,7 +81,7 @@ function catAndMouse(mouse, cat1, cat2) {
     };  
 
   
-console.log(catAndMouse(1 , 0, 2));
+console.log(catAndMouse(10 , 4, 22));
 
 
 // Desafio 8
