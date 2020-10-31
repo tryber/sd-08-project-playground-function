@@ -138,18 +138,21 @@ function decode(string) {
 // Ok!
 
 // Desafio 10
-function techList(tech, name) {
+function techList(techs, name) {
+  let techOrd = techs.sort();
   let object = [];
-  if (tech.length === 0) {
+  if (techOrd.length === 0) {
     object = 'Vazio!';
   } else {
-    for (let i = 0; i < tech.length; i += 1) {
-      object.push({ tech: tech[i], name: name });
+    for (let i = 0; i < techOrd.length; i += 1) {
+      object.push({ tech: techOrd[i], name: name });
     }
   }
   return object;
 }
-// Ok! Uffa!
+let techs = ["React", "Jest", "HTML", "CSS", "JavaScript"]; let name = "Lucas";
+console.log(techList(techs, name))
+// Ok! A desgraça não falou, mas era em ordem alfabética ¬¬"
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
