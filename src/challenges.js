@@ -332,8 +332,6 @@ function generatePhoneNumber(array11) {
     }
 }
 
-console.log(generatePhoneNumber([2, 5, 3, 5, 7, 5, 4, 1, 1, 3, 2]));
-
 // Desafio 12
 function triangleCheck() {
     // seu código aqui
