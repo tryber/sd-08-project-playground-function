@@ -364,9 +364,26 @@ function generatePhoneNumber(arrNum) {
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let itIsTriangle = false;
+  let lados = [lineA , lineB , lineC];
+
+  if (lados[0] < lados[1] + lados[2] && lados[0] > Math.abs(lados[1] - lados[2])) {
+    itIsTriangle = true;
+  }
+  else if (lados[1] < lados[2] + lados[0] && lados[1] > Math.abs(lados[2] - lados[0])) {
+    itIsTriangle = true;
+  }
+  else if (lados[2] < lados[0] + lados[1] && lados[2] > Math.abs(lados[0] - lados[1])) {
+    itIsTriangle = true;
+  }
+
+  return itIsTriangle;
 }
+
+// < Para o teste manual >
+// console.log(triangleCheck(10, 14, 8));
+
 
 // Desafio 13
 function hydrate() {
