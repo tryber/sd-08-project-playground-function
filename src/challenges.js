@@ -20,7 +20,7 @@ function concatName(arrStr) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + (ties * 1)
+  return (wins * 3) + ties 
 }
 
 // Desafio 6
@@ -73,15 +73,34 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  let stringSwap = { "a": "1", "e": "2", "i": "3", "o": "4", "u": "5" };
+  let encondeResult = "";
+  encondeResult = string.replace(/[aeiou]/gi, m => stringSwap[m]);
+
+  return encondeResult;
 }
 function decode() {
-  // seu código aqui
+  let stringSwap = { "1": "a", "2": "e", "3": "i", "4": "o", "5": "u" }
+  let encondeResult = "";
+  encondeResult = string.replace(/[12345]/gi, m => stringSwap[m]);
+
+  return encondeResult;
 }
 
 // Desafio 10
 function techList() {
-  // seu código aqui
+  let resultArray = [];
+  let orderedTechList = tech.sort();
+  if (tech.length === 0) {
+    return "Vazio!";
+  }
+  for (let i in orderedTechList) {
+    resultArray.push({
+      tech: orderedTechList[i],
+      name: name,
+    });
+  }
+  return resultArray;
 }
 
 // Desafio 11
