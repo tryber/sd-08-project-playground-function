@@ -141,7 +141,7 @@ function decode(numbers) {
   let result = "";
 
   for (key in numbers) {
-    switch (string[key]) {
+    switch (numbers[key]) {
       case "1":
         replace.push("a");
         break;
