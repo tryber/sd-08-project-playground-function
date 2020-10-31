@@ -171,25 +171,25 @@ function techList(tecnologia, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-    if (array.length != 11) {
-        return "Array com tamanho incorreto.";
+  if (array.length != 11) {
+    return "Array com tamanho incorreto.";
+  }
+  for (let key in array) {
+    let count = 0;
+    if (array[key] > 9 || array[key] < 0) {
+      return "não é possível gerar um número de telefone com esses valores";
     }
-    for (let key in array) {
-        let count = 0;
-        if (array[key] > 9 || array[key] < 0) {
-            return "não é possível gerar um número de telefone com esses valores";
-        }
-        for (let i = 0; i < array.length; i += 1) {
-            if (array[key] == array[i]) {
-                count += 1;
-            }
-            if (count >= 3) {
-                return "não é possível gerar um número de telefone com esses valores";
-            }
-        }
+    for (let i = 0; i < array.length; i += 1) {
+      if (array[key] == array[i]) {
+        count += 1;
+      }
+      if (count >= 3) {
+        return "não é possível gerar um número de telefone com esses valores";
+      }
     }
-    let numTelefone = "(" + array[0] + array[1] + ") " + array[2] + array[3] + array[4] + array[5] + array[6] + "-" + array[7] + array[8] + array[9] + array[10];
-    return numTelefone;
+  }
+  let numTelefone = "(" + array[0] + array[1] + ") " + array[2] + array[3] + array[4] + array[5] + array[6] + "-" + array[7] + array[8] + array[9] + array[10];
+  return numTelefone;
 }
 //console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 3, 3, 3, 1]));
 //console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 3, 3, 3, 1]));
@@ -197,9 +197,23 @@ function generatePhoneNumber(array) {
 //console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 3, 3, 3, 1, 9]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(num1, num2, num3) {
+  if (num1 < (num2 + num3)) {
+    return true;
+  } else if (num2 < (num1 + num3)) {
+    return true;
+  } else if (num3 < (num1 + num2)) {
+    return true;
+  }
+  if (Math.abs(num1 - num2)) {
+    return true;
+  } else if (Math.abs(num1 - num3)) {
+    return true;
+  } else if (Math.abs(num2 - num3)) {
+    return true;
+  }
 }
+//console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
