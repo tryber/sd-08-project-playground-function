@@ -127,7 +127,7 @@ function decode(palavra) {
   return palavraDecodificada;
 }
 
-// Desafio 10
+// Desafio 10 CONCLUIDO
 function techList(array, name) {
   if (array.length === 0) {
     return 'Vazio!'
@@ -150,9 +150,13 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
+    return true;
+  }
+  return false;
 }
+console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
 function hydrate() {
