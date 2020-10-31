@@ -198,19 +198,15 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(num1, num2, num3) {
-  if (num1 > (num2 + num3)) {
+  if ((num1 > (num2 + num3)) || (num2 > (num1 + num3)) || (num3 > (num1 + num2))) {
     return false;
-  } else if (num2 > (num1 + num3)) {
-    return false;
-  } else if (num3 > (num1 + num2)) {
-    return false;
+  } else if ((num1 < (num2 + num3)) && (num2 < (num1 + num3)) && (num3 < (num1 + num2))) {
+    return true;
   }
-  if (num1 < (Math.abs(num2 - num3))) {
+  if ((num1 < (Math.abs(num2 - num3))) || (num2 < (Math.abs(num1 - num3))) || (num3 < (Math.abs(num1 - num2)))) {
     return false;
-  } else if (num2 < (Math.abs(num1 - num3))) {
-    return false;
-  } else if (num3 < (Math.abs(num1 - num2))) {
-    return false;
+  } else if ((num1 > (Math.abs(num2 - num3))) && (num2 > (Math.abs(num1 - num3))) && (num3 > (Math.abs(num1 - num2)))) {
+    return true;
   }
 }
 //console.log(triangleCheck(16, 9, 2));
@@ -218,6 +214,10 @@ function triangleCheck(num1, num2, num3) {
 //console.log(triangleCheck(6, 2, 2));
 //console.log(triangleCheck(12, 17, 4));
 //console.log(triangleCheck(5, 10, 3));
+//console.log(triangleCheck(10, 14, 8));
+//console.log(triangleCheck(2, 3, 4));
+//console.log(triangleCheck(16, 20, 30));
+
 
 // Desafio 13
 function hydrate() {
