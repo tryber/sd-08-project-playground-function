@@ -55,14 +55,14 @@ function highestCount(arrayNumber) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distCat1 = Math.abs((mouse) - (cat1));
-  let distCat2 = Math.abs((mouse) - (cat2));
+  let distCat1 = Math.abs(mouse - cat1);
+  let distCat2 = Math.abs(mouse - cat2);
   if (distCat1 < distCat2) {
-    return 'cat1'
+    return 'cat1';
   } else if (distCat1 > distCat2) {
-    return 'cat2'
+    return 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   }
 }
 // Ok!
@@ -73,29 +73,67 @@ function fizzBuzz(array) {
   let fizzBuzz15 = 'fizzBuzz';
   let fizz3 = 'fizz';
   let buzz5 = 'buzz';
-  let bug = 'bug!'
- for (i = 0; i < array.length; i += 1) {
-   if (array[i] % 15 === 0) {
-     fizzBuzzing.push(fizzBuzz15)
-   } else if (array[i] % 3 === 0) {
-     fizzBuzzing.push(fizz3)
-   } else if (array[i] % 5 === 0) {
-     fizzBuzzing.push(buzz5)
-   } else {
-     fizzBuzzing.push(bug)
-   }
- }
-  return fizzBuzzing
+  let bug = 'bug!';
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] % 15 === 0) {
+      fizzBuzzing.push(fizzBuzz15);
+    } else if (array[i] % 3 === 0) {
+      fizzBuzzing.push(fizz3);
+    } else if (array[i] % 5 === 0) {
+      fizzBuzzing.push(buzz5);
+    } else {
+      fizzBuzzing.push(bug);
+    }
+  }
+  return fizzBuzzing;
 }
 // Ok!!
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let str = string.split('');
+  for (let i = 0; i < str.length; i += 1) {
+    if (str[i] === 'a') {
+      str[i] = '1';
+    }
+    if (str[i] === 'e') {
+      str[i] = '2';
+    }
+    if (str[i] === 'i') {
+      str[i] = '3';
+    }
+    if (str[i] === 'o') {
+      str[i] = '4';
+    }
+    if (str[i] === 'u') {
+      str[i] = '5';
+    }
+  }
+  return str.join('');
 }
-function decode() {
-  // seu código aqui
+// Ok!
+function decode(string) {
+  let str = string.split('');
+  for (let i = 0; i < str.length; i += 1) {
+    if (str[i] === '1') {
+      str[i] = 'a';
+    }
+    if (str[i] === '2') {
+      str[i] = 'e';
+    }
+    if (str[i] === '3') {
+      str[i] = 'i';
+    }
+    if (str[i] === '4') {
+      str[i] = 'o';
+    }
+    if (str[i] === '5') {
+      str[i] = 'u';
+    }
+  }
+  return str.join('');
 }
+// Ok!
 
 // Desafio 10
 function techList() {
