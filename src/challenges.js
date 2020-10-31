@@ -62,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
     statement = 'cat2';
   }
   else {
-    statement = 'cat1'
+    statement = 'cat1';
   }
   if (dmouseCat1 === dmouseCat2) {
     statement = 'os gatos trombam e o rato foge';
@@ -86,7 +86,7 @@ function compare(number) {
 }
 function fizzBuzz(array) {
   let list = [];
-  for (let i = 0; i <= array.length; i += 1) {
+  for (let i = 0; i < array.length; i += 1) {
     let result = compare(array[i])
     list.push(result);
   }
@@ -132,7 +132,6 @@ function decode(text) {
 function techList(array, name) {
   array.sort();
   let listWithObjects = [];
-  let objectInList = {};
   if (array.length === 0) {
     return 'Vazio!';
   }
