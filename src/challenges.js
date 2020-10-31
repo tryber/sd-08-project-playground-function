@@ -36,7 +36,7 @@ function splitSentence(sentence) {
 function concatName(arrayOfNames) {
   // seu código aqui
   let firstName = arrayOfNames[0];
-  let lastName = arrayOfNames[arrayOfNames.length-1];
+  let lastName = arrayOfNames[arrayOfNames.length - 1];
   return lastName + ", " + firstName;
 }
 
