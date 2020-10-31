@@ -66,13 +66,25 @@ function highestCount(arraye) {
  
 }
 
-
-console.log (highestCount([9, 1, 9, 2, 3, 9, 5, 7, 9]))
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-}
+  let maiorValor = mouse *1;
+  let valor2 = cat1 * 1;
+  let valor3= cat2 *1;
+ let valor4 = (" os gatos estão a mesma distancia do rato")
+  if ( valor2/maiorValor > valor3/maiorValor) {
+    return valor2
+  } else if ( valor3/maiorValor > valor2/maiorValor) {
+    return valor3
+  } else  if (valor2 && valor3/maiorValor === 0  );
+    return valor4
+  }
 
+
+
+
+// console.log ( catAndMouse(6, 5, 5))
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
