@@ -156,11 +156,11 @@ function hydrate(Drink) {
       sum += Number(cupWater[index]);
     }
     if (sum === 1) {
-      return `${sum} copo de água.`;
+      return `${sum} copos de água.`;
     }
     return `${sum} copos de água.`;
   }
-  console.log(hydrate('5 copos de caipirinha'));
+
 
 
 module.exports = {
