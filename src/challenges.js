@@ -74,7 +74,7 @@ function fizzBuzz(array) {
     } else if (array[i] % 5 === 0) {
       result.push("buzz");
     } else {
-      result.push("bug!")
+      result.push("bug!");
     }
   }
   return result;
@@ -83,18 +83,18 @@ function fizzBuzz(array) {
 // Desafio 9
 // Solução encontrada no Stackoverflow utilizando String.prototype.replace()
 function encode(string) {
-  let stringSwap = { "a": "1", "e": "2", "i": "3", "o": "4", "u": "5" }
+  let stringSwap = { a: "1", e: "2", i: "3", o: "4", u: "5" };
   let encondeResult = "";
-  encondeResult = string.replace(/[aeiou]/gi, m => stringSwap[m])
+  encondeResult = string.replace(/[aeiou]/gi, (m) => stringSwap[m]);
 
   return encondeResult;
 }
 
 // Solução encontrada no Stackoverflow utilizando String.prototype.replace()
 function decode(string) {
-  let stringSwap = { "1": "a", "2": "e", "3": "i", "4": "o", "5": "u" }
+  let stringSwap = { 1: "a", 2: "e", 3: "i", 4: "o", 5: "u" };
   let encondeResult = "";
-  encondeResult = string.replace(/[12345]/gi, m => stringSwap[m])
+  encondeResult = string.replace(/[12345]/gi, (m) => stringSwap[m]);
 
   return encondeResult;
 }
@@ -109,7 +109,7 @@ function techList(tech, name) {
   for (let i in orderedTechList) {
     resultArray.push({
       tech: orderedTechList[i],
-      name: name
+      name: name,
     });
   }
   return resultArray;
@@ -119,25 +119,28 @@ function techList(tech, name) {
 // Expressão regular encontrada no Stackoverflow - https://stackoverflow.com/questions/17650197/mask-javascript-variable-value
 function generatePhoneNumber(array) {
   let result = "";
-  let repeatedNumber = array[0];
-  let count = 1;
+  // let repeatedNumber = array[0];
+  let counts = [];
+  let count = 0;
   let rawString = array.join("");
-  result = rawString.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1)$2-$3")
+  // result = rawString.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1)$2-$3")
   if (array.length !== 11) {
     result = "Array com tamanho incorreto.";
-  } else {
-      for (i = 1; i < array.length; i++) {
-        if (array[i] === repeatedNumber) {
-          count += 1;
-        }
-        if (array[i] < 0 || array[i] > 9 || count === 3) {
-          result = "não é possível gerar um número de telefone com esses valores"
-        }
-      }
+  }
+  for (i = 0; i <= array.length; i += 1) {
+    if (counts[array[i]] === undefined) {
+      counts[array[i]] = 1;
+    } else {
+      count += 1;
     }
+  }
+
+  if (array[i] < 0 || array[i] > 9 || count >= 3) {
+    result = "não é possível gerar um número de telefone com esses valores";
+  }
+
   return result;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
