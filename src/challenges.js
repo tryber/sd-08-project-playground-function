@@ -69,8 +69,8 @@ highestCount(testeHighest);
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let resultado;
-  let distanciaCat1 = Math.round(cat1 - mouse);
-  let distanciaCat2 = Math.round(cat2 - mouse);
+  let distanciaCat1 = Math.abs(cat1 - mouse);
+  let distanciaCat2 = Math.abs(cat2 - mouse);
   if (distanciaCat1 < distanciaCat2) {
     resultado = "cat1";
   } else if (distanciaCat2 < distanciaCat1) {
@@ -80,9 +80,9 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 return resultado;
 }
-catAndMouse(2, 5, 3);
+catAndMouse(7, 6, 2);
 //Math.abs comando aprendido no site (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs)
-//console.log(catAndMouse(10,5,3));
+//console.log(catAndMouse(2,5,3));
 
 // Desafio 8
 function fizzBuzz(vetorNum) {
