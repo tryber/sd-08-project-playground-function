@@ -149,9 +149,18 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(Drink) {
+    let cupWater = Drink.match(/\d/g);
+    let sum = 0;
+    for (let index = 0; index < cupWater.length; index += 1) {
+      sum += Number(cupWater[index]);
+    }
+    if (sum === 1) {
+      return `Beba ${sum} copo(s) de água.`;
+    }
+    return `Beba ${sum} copos(s) de água.`;
+  }
+  console.log(hydrate('5 copos de caipirinha'));
 
 
 module.exports = {
