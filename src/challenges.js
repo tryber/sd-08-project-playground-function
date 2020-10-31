@@ -36,12 +36,6 @@ function footballPoints(wins, ties) {
   return pontosTotal + wins + ties;
 }
 
-
-
-
-
-
-
 // Desafio 6
 function highestCount(arrayNumbers) {
   let bigger = 0;
@@ -54,11 +48,6 @@ function highestCount(arrayNumbers) {
   }
  return counter;
 }
-
-
-
-
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -99,30 +88,44 @@ function fizzBuzz(arrayNumeros) {
 
 // Desafio 9
 function encode(palavra) {
-  let resultado = "";
-  for (let vogais=0; vogais<palavra.length; vogais++){
-    if (palavra[vogais] == "a"){
-      resultado += 1;
-    }else if (palavra[vogais] == "e"){
-      resultado += 2;
-    } else if (palavra[vogais] == "i"){
-      resultado += 3;
-    } else if (palavra[vogais] == "o"){
-      resultado += 4;
-    } else if (palavra[vogais] == "u"){
-      resultado += 5;
+  let result = "";
+  for (let key in palavra){
+    if (palavra[key] == "a"){
+      result += 1;
+    }else if (palavra[key] == "e"){
+      result += 2;
+    } else if (palavra[key] == "i"){
+      result += 3;
+    } else if (palavra[key] == "o"){
+      result += 4;
+    } else if (palavra[key] == "u"){
+      result += 5;
     }else {
-      resultado += palavra[vogais];
+      result += palavra[key];
     }
   }
-  return resultado;
+  return result;
 }
-console.log(encode("hi there!"));
 
 
-
-function decode() {
-  // seu código aqui
+function decode(palavra) {
+  let result = "";
+  for (let key in palavra){
+    if (palavra[key] == 1){
+      result += "a";
+    } else if (palavra[key] == 2){
+      result += "e";
+    } else if (palavra[key] == 3){
+      result += "i";
+    } else if (palavra[key] == 4){
+      result += "o";
+    } else if (palavra[key] == 5){
+      result += "u";
+    } else {
+      result += palavra[key];
+    }
+  }
+  return result;
 }
 
 
@@ -155,10 +158,39 @@ function techList(nomeTech, name) {
 
 
 
+
+
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayPhone) {
+  let numberPhone = "";
+  for (let key in arrayPhone){
+    let bigPhone = 0;
+    let counter = 0;
+  
+
+    if (counter > 2 || arrayPhone[key] < 0 || arrayPhone[key] > 9){
+      numberPhone += "não é possível gerar um número de telefone com esses valores";
+    } 
+    return numberPhone;
+  }  
 }
+
+console.log(generatePhoneNumber([1, 1, 3, 4, 5, 6, 8, 19, 0, 1]));
+
+
+
+/*
+else if (arrayPhone.length == 11){
+  numberPhone += ("("+arrayPhone[0]+arrayPhone[1]+")"+arrayPhone[2]+arrayPhone[3]+arrayPhone[4]
+  +arrayPhone[5]+arrayPhone[6]+"-"+arrayPhone[7]+arrayPhone[8]+arrayPhone[9]+arrayPhone[10]);
+} else if (arrayPhone.length !== 11){
+  numberPhone += "Array com tamanho incorreto.";
+} 
+*/
+
+
+
+
 
 // Desafio 12
 function triangleCheck() {
