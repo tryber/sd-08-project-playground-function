@@ -8,19 +8,16 @@ function compareTrue(a, b) {
   }
   return result;
 }
-// console.log (compareTrue(true, true))
 
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-// console.log(calcArea(10, 0))
 
 // Desafio 3
 function splitSentence(phrase) {
   return phrase.split(' ');
 }
-// console.log(splitSentence('Rodrigo de Castro'))
 
 // Desafio 4
 function concatName(arrayStr) {
@@ -28,13 +25,11 @@ function concatName(arrayStr) {
   let last = arrayStr[arrayStr.length - 1];
   return `${last}, ${first}`;
 }
-// console.log(concatName(['Rodrigo', 'de Castro', 'Bandeira', 'Costa']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties * 1);
 }
-// console.log(footballPoints(3, 1));
 
 // Desafio 6
 function highestCount(arrayNum) {
@@ -48,7 +43,6 @@ function highestCount(arrayNum) {
   }
   return count;
 }
-// console.log(highestCount([0, 1, 8, 3, 4, 8, 5, 6, 8, 8, 7, 8, 5, 2, 3]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -64,80 +58,40 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return result;
 }
-// console.log(catAndMouse(0, 2, 2));
 
 // Desafio 8
-function checkBug(listFizz) {
-  let index;
-  let listBug = [];
-  for (index = 0; index < listFizz.length; index += 1) {
-    if ((typeof (listFizz[index])) === 'number') {
-      listBug.push('bug!');
-    } else {
-      listBug.push(listFizz[index]);
-    }
+function checkFizzBuzz(num) {
+  let res
+  if (num % 15 === 0) {
+      res = 'fizzBuzz'
+  } else if (num % 15 !== 0 && num % 3 === 0) {
+      res = 'fizz'
+  } else if (num % 15 !== 0 && num % 5 === 0) {
+      res = 'buzz'
   }
-  return listBug;
+  return res;
 }
 
-function checkFizz(listBuzz) {
-  let index;
-  let listFizz = [];
-  for (index = 0; index < listBuzz.length; index += 1) {
-    switch ((listBuzz[index] % 3)) {
-      case 0:
-        listFizz.push('fizz');
-        break;
-      default:
-        listFizz.push(listBuzz[index]);
-    }
+function fizzBuzz(arr) {
+  let list = [];
+  for (let key in arr) {
+      let fb = checkFizzBuzz(arr[key]);
+      switch (fb) {
+          case 'fizzBuzz':
+              list.push(fb);
+              break;
+          case 'fizz':
+              list.push(fb);
+              break;
+          case 'buzz':
+              list.push(fb);
+              break;
+          default:
+              list.push('bug!');
+      }
   }
-  return listFizz;
+  return list;
 }
-
-function checkBuzz(listFizzBuzz) {
-  let index;
-  let listBuzz = [];
-  for (index = 0; index < listFizzBuzz.length; index += 1) {
-    switch ((listFizzBuzz[index] % 5)) {
-      case 0:
-        listBuzz.push('buzz');
-        break;
-      default:
-        listBuzz.push(listFizzBuzz[index]);
-    }
-  }
-  return listBuzz;
-}
-
-function checkFizzBuzz(arrayNum) {
-  let index;
-  let listFizzBuzz = [];
-  for (index = 0; index < arrayNum.length; index += 1) {
-    switch ((arrayNum[index] % 15)) {
-      case 0:
-        listFizzBuzz.push('fizzBuzz');
-        break;
-      default:
-        listFizzBuzz.push(arrayNum[index]);
-    }
-  }
-  return listFizzBuzz;
-}
-
-function fizzBuzz(arrayNum) {
-  let listFizzBuzz;
-  let listBuzz;
-  let listFizz;
-  let listBug;
-  listFizzBuzz = checkFizzBuzz(arrayNum);
-  listBuzz = checkBuzz(listFizzBuzz);
-  listFizz = checkFizz(listBuzz);
-  listBug = checkBug(listFizz);
-  return listBug;
-}
-
-// console.log(fizzBuzz([3, 1, 5, 10, 12, 14, 15, 19, 20]))
 
 // Desafio 9
 function encode(phrase) {
@@ -167,7 +121,6 @@ function encode(phrase) {
   }
   return arrayEncoded.join('');
 }
-// console.log(encode("observe que essa mensagem ficou oculta"));
 
 function decode(encoded) {
   // return translater(phrase);
@@ -197,7 +150,6 @@ function decode(encoded) {
   }
   return arrayDecoded.join('');
 }
-// console.log(decode('4bs2rv2 q52 2ss1 m2ns1g2m n14 f3c45 4c5lt1 12345'));
 
 // Desafio 10
 function makeObject(tech, name) {
@@ -220,7 +172,6 @@ function techList(array, name) {
   }
   return res;
 }
-// console.log(techList([5, 3, 11, 15, 2, 7, 9], 'Digo'))
 
 // Desafio 11
 function searchCopies(arrayNum, num) {
@@ -271,7 +222,6 @@ function generatePhoneNumber(arrayNum) {
   }
   return res;
 }
-// console.log(generatePhoneNumber([7, 7, 8, 8, 1, 2, 3, 4, 1, 6, 1, 2]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -296,7 +246,6 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return res;
 }
-// console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
 function countDrinks(str) {
@@ -348,8 +297,6 @@ function hydrate(str) {
   }
   return res;
 }
-// console.log(hydrate('1 copo de vinho'))
-
 
 module.exports = {
   calcArea,
