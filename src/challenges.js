@@ -30,8 +30,11 @@ function splitSentence(separate) {
 // Desafio 4 
 function concatName(phrase) {
   // seu código aqui
+  // criação da array para receber a resposta
   let result = [];
+  // tive que criar um laço para varrer a array phrase
   for (let key in phrase) {
+    //tenho que pegar a última posição do array e a primeira e estou jogando a resposta na array "result"
     result = phrase[phrase.length-1] + ', ' + phrase[0];
   }
   return result;
@@ -70,11 +73,12 @@ function highestCount(numbers) {
 // Usei o site https://www.w3schools.com/jsref/jsref_abs.asp para aprender mais sobre o método match.abs() 
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  
+  //defini variáveis para encontrar a posição dos "cat1" e "cat2" em relação ao rato, destaque que o metodo match.abs serve para definir a posição mesmo que algum dos parâmetros tenham valores negativos.
   let positionCat1 = Math.abs(mouse - cat1);
   let positionCat2 = Math.abs(mouse - cat2);
+  //Criei uma variável que vai receber a resposta
   let result = ''; 
-
+//Essa estrutura vai definir qual dos gatos vai pegar o rato
   if (positionCat1 < positionCat2) {
       result = 'cat1';
     } else if (positionCat2 < positionCat1) {
@@ -89,14 +93,19 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   // seu código aqui
+  //Essa é a array que vai receber as respostas
   let sequence = [];
+    // Vou varrer o array 
     for (let index = 0; index < numbers.length; index += 1) {
+      // Caso encontre numeros divisiveis por 3, 5 ou ambos
       if (numbers[index] % 3 == 0 && numbers[index] % 5 == 0) {
+        // Jogo essas frases na array "sequence"
         sequence.push('fizzBuzz');
       } else if (numbers[index] % 5 == 0) {
         sequence.push('buzz');
       } else if (numbers[index] % 3 == 0) {
         sequence.push('fizz');
+        // Caso não encontre nenhuma variável vou retornar a palavra 'bug' para o array "sequence"
       }else {
         sequence.push('bug!');
       }
@@ -108,23 +117,52 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(word) {
   // seu código aqui
-let newphrase = '';
-    //vou varrer a string "word"
+  // variável responsável por armazenar o resultado da varredura
+  let encodePhrase = '';
+    //vou varrer a string "word" com a variável key
   for (let key in word) {
-      //se achar "a" vai substituir por 1 na variável nova frase
+      //e substituir vogais por numeros em "encodephrase"
     if (word[key] === 'a') {
-      newphrase += '1';
-      //caso não ache pode repetir a palavra da string
+      encodePhrase += '1';
+    } else if (word[key] === 'e') {
+      encodePhrase += '2';
+    } else if (word[key] === 'i') {
+      encodePhrase += '3';
+    } else if (word[key] === 'o') {
+      encodePhrase += '4';
+    } else if (word[key] === 'u') {
+      encodePhrase += '5';
+      //caso não tenha vogais vai retornar a posição "original"
     } else {
-      newphrase += word[key];
+      encodePhrase += word[key];
     }
   }
-  return newphrase;
+  return encodePhrase;
 }
-function decode() {
-  //seu código aqui
+function decode(word2) {
+  //criação de uma string para receber o resultado
+  let decodePhrase = '';
+  // varrer a string "word2" com "key"
+  for (let key in word2) {
+    // e caso encontre números, substitui por vogais e joga o resultado em "decodePhrase"
+    if (word2[key] === '1') {
+      decodePhrase += 'a';
+    } else if (word2[key] === '2') {
+      decodePhrase += 'e';
+    } else if (word2[key] === '3') {
+      decodePhrase += 'i';
+    } else if (word2[key] === '4') {
+      decodePhrase += 'o';
+    } else if (word2[key] === '5') {
+      decodePhrase += 'u';
+      //caso não encontre numeros vai só repetir o que achou em "decodePhrase"
+    } else {
+      decodePhrase += word2[key];
+    }
+  } 
+  return decodePhrase;
 }
-console.log(encode('dazan'));
+
 
 // Desafio 10
 function techList() {
