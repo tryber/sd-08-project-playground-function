@@ -9,7 +9,7 @@ function compareTrue(valor1, valor2) {
   };
 };
 
-
+compareTrue(true , false);
 
 
 
@@ -96,16 +96,8 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(param) {
   // seu código aqui
-  for(contador = 1; contador <= param; contador += 1){
-    if(contador % 3 === 0){
-      return(contador, "FizzBuzz");
-    }else if(contador % 5 === 0){
-      return(contador, "Buzz");
-    }else if(contador % 15 === 0){
-      return(contador, "Fizz");
-    }else{
-      return(contador);
-    };
+  for(contador = 1; contador <= param.length; contador += 1){
+      console.log(contador)
   };
 };
 
