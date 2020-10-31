@@ -63,32 +63,32 @@ function catAndMouse(mouse, cat1, cat2) {
 function checkFizzBuzz(num) {
   let res
   if (num % 15 === 0) {
-      res = 'fizzBuzz'
+    res = 'fizzBuzz'
   } else if (num % 15 !== 0 && num % 3 === 0) {
-      res = 'fizz'
+    res = 'fizz'
   } else if (num % 15 !== 0 && num % 5 === 0) {
-      res = 'buzz'
+    res = 'buzz'
   }
   return res;
 }
 
 function fizzBuzz(arr) {
   let list = [];
-  for (let key in arr) {
-      let fb = checkFizzBuzz(arr[key]);
-      switch (fb) {
-          case 'fizzBuzz':
-              list.push(fb);
-              break;
-          case 'fizz':
-              list.push(fb);
-              break;
-          case 'buzz':
-              list.push(fb);
-              break;
-          default:
-              list.push('bug!');
-      }
+  for (let key = 0; key < arr.length; key += 1) {
+    let fb = checkFizzBuzz(arr[key]);
+    switch (fb) {
+      case 'fizzBuzz':
+        list.push(fb);
+        break;
+      case 'fizz':
+        list.push(fb);
+        break;
+      case 'buzz':
+        list.push(fb);
+        break;
+      default:
+        list.push('bug!');
+    }
   }
   return list;
 }
@@ -123,7 +123,6 @@ function encode(phrase) {
 }
 
 function decode(encoded) {
-  // return translater(phrase);
   let arrayCharCod = encoded.split('');
   let key;
   let arrayDecoded = [];
@@ -226,18 +225,12 @@ function generatePhoneNumber(arrayNum) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let res;
-  let a = lineA;
-  let b = lineB;
-  let c = lineC;
-  let bc = b - c;
-  let ac = a - c;
-  let ab = a - b;
-  let checkA1 = Math.abs(bc) < a;
-  let checkB1 = Math.abs(ac) < b;
-  let checkC1 = Math.abs(ab) < c;
-  let checkA2 = a < (b + c);
-  let checkB2 = b < (a + c);
-  let checkC2 = c < (a + b);
+  let checkA1 = Math.abs((lineB - lineC)) < lineA;
+  let checkB1 = Math.abs((lineA - lineC)) < lineB;
+  let checkC1 = Math.abs((lineA - lineB)) < lineC;
+  let checkA2 = lineA < (lineB + lineC);
+  let checkB2 = lineB < (lineA + lineC);
+  let checkC2 = lineC < (lineA + lineB);
   let listRes = [checkA1, checkB1, checkC1, checkA2, checkB2, checkC2];
   if (listRes.includes(false)) {
     res = false;
