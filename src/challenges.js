@@ -155,10 +155,19 @@ encode(testeEncode);
 decode(testeDecode);
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(vetor, name) {
+  let resultado = [];
+  for (let count in vetor) {
+    resultado.push({
+    tech: vetor[count],
+    name: name,
+    });
+  }
+  return resultado;
 }
-
+let tecnologias = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let nome = "Wagner";
+techList(tecnologias, nome)
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
