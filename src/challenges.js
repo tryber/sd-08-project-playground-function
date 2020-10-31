@@ -322,7 +322,7 @@ function generatePhoneNumber(array11) {
 
 
         //Applying the telephone mask to the number
-        maskedNumber = `(${ddd}) ${leftNumber}-${rightNumber} `
+        maskedNumber = `(${ddd}) ${leftNumber}-${rightNumber}`;
 
         //Returning the masked telephone number
         return maskedNumber;
