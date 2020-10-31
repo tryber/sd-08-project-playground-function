@@ -64,7 +64,7 @@ function highestCount(numeros) {
   }
   return contNum;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -198,22 +198,26 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(num1, num2, num3) {
-  if (num1 < (num2 + num3)) {
-    return true;
-  } else if (num2 < (num1 + num3)) {
-    return true;
-  } else if (num3 < (num1 + num2)) {
-    return true;
+  if (num1 > (num2 + num3)) {
+    return false;
+  } else if (num2 > (num1 + num3)) {
+    return false;
+  } else if (num3 > (num1 + num2)) {
+    return false;
   }
-  if (Math.abs(num1 - num2)) {
-    return true;
-  } else if (Math.abs(num1 - num3)) {
-    return true;
-  } else if (Math.abs(num2 - num3)) {
-    return true;
+  if (num1 < (Math.abs(num2 - num3))) {
+    return false;
+  } else if (num2 < (Math.abs(num1 - num3))) {
+    return false;
+  } else if (num3 < (Math.abs(num1 - num2))) {
+    return false;
   }
 }
-//console.log(triangleCheck(10, 14, 8));
+//console.log(triangleCheck(16, 9, 2));
+//console.log(triangleCheck(10, 3, 4));
+//console.log(triangleCheck(6, 2, 2));
+//console.log(triangleCheck(12, 17, 4));
+//console.log(triangleCheck(5, 10, 3));
 
 // Desafio 13
 function hydrate() {
