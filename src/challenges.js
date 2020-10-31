@@ -249,7 +249,7 @@ function techList(techArray, namePar) {
 function generatePhoneNumber(array11) {
 
     //Putting all the digits together in a String
-    let numberWithoutMask = array11.join("");
+    let numNoMask = array11.join("");
 
     let ddd = "";
     let leftNumber = "";
@@ -265,20 +265,25 @@ function generatePhoneNumber(array11) {
 
 
         //Picking the area code 
-        ddd = numberWithoutMask.slice(0, 2);
+        ddd = numNoMask.slice(0, 2);
 
         //Picking the left half of the phone number
-        leftNumber = numberWithoutMask.slice(2, 7)
+        leftNumber = numNoMask.slice(2, 7)
 
         //Picking the right half of the phone number
-        rightNumber = numberWithoutMask.slice(7, 11)
+        rightNumber = numNoMask.slice(7, 11)
 
     }
-    console.log(`(${ddd}) ${leftNumber}-${rightNumber} `);
+
+    //Applying the telephone mask to the number
+    numberWithMask = `(${ddd}) ${leftNumber}-${rightNumber} `
+
+    //Returning the masked telephone number
+    return numberWithMask;
 
 }
 
-generatePhoneNumber([2, 1, 3, 5, 7, 5, 4, 1, 9, 3, 2]);
+console.log(generatePhoneNumber([2, 1, 3, 5, 7, 5, 4, 1, 9, 3, 2]));
 
 // Desafio 12
 function triangleCheck() {
