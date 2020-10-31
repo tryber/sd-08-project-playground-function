@@ -110,8 +110,19 @@ function decode(reverse) {
 }
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
+  let ordenado = tech.sort();
+  let array = [];
+
+  if (tech.length === 0) {
+    return 'Vazio!'
+  }
+
+  for (let x in ordenado) {
+    array.push({ tech: ordenado[x], name: name });
+  }
+  return array;
 }
 
 // Desafio 11
