@@ -120,8 +120,33 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+// FizzBuzz
+// Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
+
+// Para cada número da Array que seja divisível apenas por 3, apresente uma string "fizz";
+// Para cada número da Array que seja divisível apenas por 5, apresente uma string "buzz";
+// Caso o número seja divisível por 3 e 5, retorne a string "fizzBuzz";
+// Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
+// Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
+
+function fizzBuzz(array) {
   // seu código aqui
+  let result = [];
+  for (i = 0; i < array.length; i++) {
+    if (array [i] % 3 === 0 && array [i] % 5 !== 0) {
+      result [i] = "fizz";
+      return result;
+    } else if (array [i] % 5 === 0 && array [i] % 3 !== 0) {
+      result [i] = "buzz";
+      return result;
+    } else if (array [i] % 3 === 0 && array [i] % 5 === 0) {
+      result [i] = "fizzBuzz";
+      return result;
+    } else {
+      result [i] = "bug!";
+      return result;
+    }
+  }
 }
 
 // Desafio 9
