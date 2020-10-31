@@ -126,7 +126,7 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numberPhone) {
+function generatePhoneNumber() {
   // seu código aqui
   
 }
