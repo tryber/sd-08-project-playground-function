@@ -21,7 +21,7 @@ return umaString.split(' ');
 
 // Desafio 4
 function concatName() {
- 
+  // seu código aqui
 }
 
 // Desafio 5
