@@ -105,12 +105,54 @@ fizzBuzz(testeFizzBuzz);
 //console.log(fizzBuzz(vetorTeste));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let resultado;
+  let vogais = ["a", "e", "i", "o", "u"];
+  let numeros = [1, 2, 3, 4, 5];
+  let fraseCodificada = "";
+  for (letra = 0; letra < string.length; letra += 1){
+    let letraComparar = string[letra];
+    let substituir = 0;
+    for (count = 0; count < vogais.length; count += 1) {
+      if (letraComparar == vogais[count]) {
+        substituir = numeros[count];
+      } 
+    }
+    if (substituir !== 0){
+        fraseCodificada += substituir;
+      } else {
+        fraseCodificada += letraComparar;
+      }
+  }
+  resultado = fraseCodificada;
+  return resultado;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+ let resultado;
+  let vogais = ["a", "e", "i", "o", "u"];
+  let numeros = [1, 2, 3, 4, 5];
+  let fraseCodificada = "";
+  for (letra = 0; letra < string.length; letra += 1){
+    let letraComparar = string[letra];
+    let substituir = 0;
+    for (count = 0; count < numeros.length; count += 1) {
+      if (letraComparar == numeros[count]) {
+        substituir = vogais[count];
+      } 
+    }
+    if (substituir !== 0){
+        fraseCodificada += substituir;
+      } else {
+        fraseCodificada += letraComparar;
+      }
+  }
+  resultado = fraseCodificada;
+  return resultado;
 }
+let testeEncode = "hi there!"
+let testeDecode = "h3 th2r2!"
+encode(testeEncode);
+decode(testeDecode);
 
 // Desafio 10
 function techList() {
