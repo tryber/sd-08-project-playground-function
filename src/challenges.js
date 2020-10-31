@@ -47,20 +47,20 @@ console.log(footballPoints(7, 3));
 
 // Desafio 6
 function highestCount(arrayNumeros) {
-  let maiorNumero = 0;
+  let maiorNumero = arrayNumeros[0];
   let contNumero = 0;
 
-      for (let i = 0; i <arrayNumeros.length; i +=1) {
-          if ((arrayNumeros[i]) > maiorNumero);
+      for (let i = 1; i < arrayNumeros.length; i += 1) {
+          if (maiorNumero < arrayNumeros[i]); 
             maiorNumero = arrayNumeros[i];{
           }
       }
-      for (let i in arrayNumeros) {
-          if (maiorNumero === arrayNumeros[i]) {
-            contNumero++
+      for (let i2 = 0; i2 < arrayNumeros.length; i2 += 1) {
+          if (maiorNumero == arrayNumeros[i2]) {
+            contNumero += 1;
           }
       }
-      return contNumero;
+      return contNumero
 };
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
@@ -169,9 +169,10 @@ console.log(decode("h3 th2r2!"));
 
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(array, name) {
+
+};
+console.log((["React", "Jest", "HTML", "CSS", "JavaScript"]), "Lucas");
 
 // Desafio 11
 function generatePhoneNumber() {
