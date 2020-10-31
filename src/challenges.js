@@ -26,6 +26,7 @@ function splitSentence(string) {
 }
 let testeSplit = "go trybe";
 splitSentence(testeSplit);
+//.split comando aprendido no site: (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split)
 //console.log(splitSentence(teste));
 
 // Desafio 4
@@ -62,6 +63,7 @@ function highestCount(vetorNum) {
 }
 let testeHighest = [15, 9, 8, 15, 2, 7];
 highestCount(testeHighest);
+//.sort comando aprendido no site: (https://ricardo-reis.medium.com/o-m%C3%A9todo-sort-do-array-javascript-482576734e0a)
 //console.log(highestCount(teste));
 
 // Desafio 7
