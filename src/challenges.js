@@ -47,7 +47,7 @@ function highestCount(num) {
   let max = Math.max(...num);
   let y = 0;
 
-  for (let i = 0; i < num.length; i++) {
+  for (let i = 0; i < num.length; i += 1) {
     if (num[i] === max) {
       y += 1;
     }
@@ -62,40 +62,58 @@ function catAndMouse(mouse, cat1, cat2) {
   let p1 = Math.abs(cat1 - mouse);
   let p2 = Math.abs(cat2 - mouse);
   if (p1 === p2) {
-    return 'os gatos trombam e o rato foge';
+    let m1 = 'os gatos trombam e o rato foge';
+    return m1;
   } else if (p1 > p2) {
-    return 'cat 2';
+    let g2 = 'cat2';
+    return g2;
   } else if (p1 < p2) {
-    return 'cat 1';
+    let g1 = 'cat1';
+    return g1;
   }
 }
-catAndMouse(0, -1, 1);
+catAndMouse(1, 2, 5);
 
 // Desafio 8
 let arr = [2, 15, 7, 9, 45];
-function fizzBuzz(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 3 === 0 && arr[i] % 5 === 0) {
+function fizzBuzz(a) {
+  for (let i = 0; i < arr.length; i += 1) {
+    if (a[i] % 3 === 0 && a[i] % 5 === 0) {
       arr[i] = 'fizzBuzz';
-    } else if (arr[i] % 3 === 0) {
+    } else if (a[i] % 3 === 0) {
       arr[i] = 'fizz';
-    } else if (arr[i] % 5 === 0) {
+    } else if (a[i] % 5 === 0) {
       arr[i] = 'buzz';
     } else {
       arr[i] = 'bug!';
     }
   }
-  return arr;
+  return a;
 }
 fizzBuzz(arr);
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let st = 'hi there!';
+function encode(a) {
+  let reple = a.replace(/a/g, '1');
+  reple = reple.replace(/e/g, '2');
+  reple = reple.replace(/i/g, '3');
+  reple = reple.replace(/o/g, '4');
+  reple = reple.replace(/u/g, '5');
+  return reple;
 }
-function decode() {
-  // seu código aqui
+encode(st);
+
+let stnum = 'h3 th2r2!';
+function decode(a) {
+  let reple = a.replace(/1/g, 'a');
+  reple = reple.replace(/2/g, 'e');
+  reple = reple.replace(/3/g, 'i');
+  reple = reple.replace(/4/g, 'o');
+  reple = reple.replace(/5/g, 'u');
+  return reple;
 }
+decode(stnum);
 
 // Desafio 10
 function techList() {
