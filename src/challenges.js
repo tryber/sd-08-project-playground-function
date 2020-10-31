@@ -71,8 +71,8 @@ function checkBug(listFizz) {
   let index;
   let listBug = [];
   for (index = 0; index < listFizz.length; index += 1) {
-    if ((typeof (listFizz[index])) === "number") {
-      listBug.push("bug!");
+    if ((typeof (listFizz[index])) === 'number') {
+      listBug.push('bug!');
     } else {
       listBug.push(listFizz[index]);
     }
@@ -86,7 +86,7 @@ function checkFizz(listBuzz) {
   for (index = 0; index < listBuzz.length; index += 1) {
     switch ((listBuzz[index] % 3)) {
       case 0:
-        listFizz.push("fizz");
+        listFizz.push('fizz');
         break;
       default:
         listFizz.push(listBuzz[index]);
@@ -101,7 +101,7 @@ function checkBuzz(listFizzBuzz) {
   for (index = 0; index < listFizzBuzz.length; index += 1) {
     switch ((listFizzBuzz[index] % 5)) {
       case 0:
-        listBuzz.push("buzz");
+        listBuzz.push('buzz');
         break;
       default:
         listBuzz.push(listFizzBuzz[index]);
@@ -116,7 +116,7 @@ function checkFizzBuzz(arrayNum) {
   for (index = 0; index < arrayNum.length; index += 1) {
     switch ((arrayNum[index] % 15)) {
       case 0:
-        listFizzBuzz.push("fizzBuzz");
+        listFizzBuzz.push('fizzBuzz');
         break;
       default:
         listFizzBuzz.push(arrayNum[index]);
@@ -130,12 +130,11 @@ function fizzBuzz(arrayNum) {
   let listBuzz;
   let listFizz;
   let listBug;
-  let key;
-    listFizzBuzz = checkFizzBuzz(arrayNum);
-    listBuzz = checkBuzz(listFizzBuzz);
-    listFizz = checkFizz(listBuzz);
-    listBug = checkBug(listFizz);
-    return listBug;
+  listFizzBuzz = checkFizzBuzz(arrayNum);
+  listBuzz = checkBuzz(listFizzBuzz);
+  listFizz = checkFizz(listBuzz);
+  listBug = checkBug(listFizz);
+  return listBug;
 }
 
 // console.log(fizzBuzz([3, 1, 5, 10, 12, 14, 15, 19, 20]))
