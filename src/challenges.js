@@ -142,28 +142,20 @@ function decode() {
 
 
 // Desafio 10
-function techList(nomeTech, name) {  
-  let nomesOrdenado = [];
-  let nomes = [];
-  for (let key in nomeTech){    
-        nomes.push({
-        tech: nomeTech[key],
+function techList(nomeTech, name) {    
+  let nomesOrdenado = nomeTech.sort();
+  for (let key in nomesOrdenado){    
+        nomesOrdenado.push({
+        tech: nomesOrdenado[key],
         name: name   
-    })     
+    });     
   }
-  nomesOrdenado.push(nomes.sort(function (a,b){
-    if (a.tech.length > b.tech.length){
-      return 1;
-    }else if (a.tech.length < b.tech.length){
-      return -1;
-    }else {
-      return 0;
-    }    
-  }))
+  if (nomesOrdenado.length === 0){
+    return "Vazio!";
+  }
   return nomesOrdenado;
 }
 
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "ruben");
 
 
 
