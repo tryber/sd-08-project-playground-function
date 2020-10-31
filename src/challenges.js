@@ -285,11 +285,9 @@ function generatePhoneNumber(array11) {
                 //Taking each array11's number to be compared
                 for (let compareNum = 0; compareNum < array11.length; compareNum += 1) {
 
-                    //If it's not the same posiiton
-                    if (currentNum === compareNum) {
-                        //It doesn't count
-                    }
+                    //If current number matches with the number compard to
                     if (array11[currentNum] === array11[compareNum]) {
+
                         repCounter += 1;
                     }
 
