@@ -223,9 +223,55 @@ function techList(array, name) {
 // console.log(techList([5, 3, 11, 15, 2, 7, 9], 'Digo'))
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function searchCopies(arrayNum, num) {
+  let key;
+  let res;
+  let count = 0;
+  for (key = 0; key < arrayNum.length; key += 1) {
+    if (arrayNum[key] === num) {
+      count += 1;
+    }
+  }
+  if (count >= 3) {
+    res = 'block';
+  } else {
+    res = 'ok';
+  }
+  return res
 }
+
+function checkNum(num) {
+  let res;
+  if (num < 0 || num > 9) {
+    res = 'block'
+  } else {
+    res = 'ok'
+  }
+  return res;
+}
+
+function generatePhoneNumber(arrayNum) {
+  let res;
+  let key;
+  if (arrayNum.length != 11) {
+    res = 'Array com tamanho incorreto.'
+  } else {
+    let listCopies = [];
+    let listNumInvalid = [];
+    for (key = 0; key < arrayNum.length; key += 1) {
+      let num = arrayNum[key];
+      listCopies.push(searchCopies(arrayNum, num));
+      listNumInvalid.push(checkNum(num));
+      if (listNumInvalid.includes('block') || listCopies.includes('block')) {
+        res = 'não é possível gerar um número de telefone com esses valores'
+      } else {
+        res = `(${arrayNum[0]}${arrayNum[1]})${arrayNum[2]}${arrayNum[3]}${arrayNum[4]}${arrayNum[5]}${arrayNum[6]}-${arrayNum[7]}${arrayNum[8]}${arrayNum[9]}${arrayNum[10]}`
+      }
+    }
+  }
+  return res;
+}
+// console.log(generatePhoneNumber([7, 7, 8, 8, 1, 2, 3, 4, 1, 6, 1, 2]))
 
 // Desafio 12
 function triangleCheck() {
