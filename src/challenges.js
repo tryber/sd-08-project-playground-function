@@ -44,31 +44,30 @@ return numerodePontos
 // Desafio 6
 function highestCount(arraye) {
    
-  let maiorNumero = 0;
+  let maiorNumero = arraye[0];
   let conta = 0;
+  let maioral = 0
+  
 
-  for ( let index = 0; index < arraye.length; index += 1) {
+  for ( let index = 0; index <= arraye.length -1 ; index += 1) {
    
       if ( arraye[index] > maiorNumero) {
+        
+          maioral = arraye[index]
   
-          maiorNumero = arraye[index]
-  
-      }
-
-      for (let index2 = index + 1 ; index2 < arraye.length; index2 +=1 ) {
-      
-      if ( maiorNumero === arraye[index]) {
+      } if ( maiorNumero === arraye[index]) {
           conta++
-          break
-      } 
-    }
+          
+      }  
+
+      }
   
-  }
   return conta;
  
 }
 
 
+console.log (highestCount([9, 1, 9, 2, 3, 9, 5, 7, 9]))
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
