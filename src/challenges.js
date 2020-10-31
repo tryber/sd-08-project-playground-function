@@ -1,11 +1,13 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   // seu código aqui
+  let result = '';
   if (value1 && value2){
-    return true;
+    result = true;
   } else {
-    return false;
+    result = false;
   }
+  return result;
 }
 
 
@@ -28,13 +30,20 @@ function splitSentence(separate) {
 // Desafio 4 
 function concatName(phrase) {
   // seu código aqui
-   return phrase[phrase.length-1] + ', ' + phrase[0];
+  let result = [];
+  for (let key in phrase) {
+    result = phrase[phrase.length-1] + ', ' + phrase[0];
   }
+  return result;
+  }
+  
   
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
- return wins * 3 + ties;
+  let points = 0;
+  points = wins * 3 + ties;
+  return points;
 }
 
 
@@ -64,16 +73,18 @@ function catAndMouse(mouse, cat1, cat2) {
   
   let positionCat1 = Math.abs(mouse - cat1);
   let positionCat2 = Math.abs(mouse - cat2);
-  
+  let result = ''; 
+
   if (positionCat1 < positionCat2) {
-      return 'cat1';
+      result = 'cat1';
     } else if (positionCat2 < positionCat1) {
-      return 'cat2';
+      result ='cat2';
     } else {
-      return 'os gatos trombam e o rato foge';
+      result = 'os gatos trombam e o rato foge';
     }
-    
+  return result;
 }
+
 
 // Desafio 8
 function fizzBuzz(numbers) {
@@ -95,12 +106,25 @@ function fizzBuzz(numbers) {
 
 
 // Desafio 9
-function encode() {
+function encode(word) {
   // seu código aqui
+let newphrase = '';
+    //vou varrer a string "word"
+  for (let key in word) {
+      //se achar "a" vai substituir por 1 na variável nova frase
+    if (word[key] === 'a') {
+      newphrase += '1';
+      //caso não ache pode repetir a palavra da string
+    } else {
+      newphrase += word[key];
+    }
+  }
+  return newphrase;
 }
-function decode() {
+//function decode() {
   // seu código aqui
-}
+//}
+console.log(encode('dazan'));
 
 // Desafio 10
 function techList() {
