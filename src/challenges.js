@@ -156,9 +156,9 @@ function hydrate(Drink) {
       sum += Number(cupWater[index]);
     }
     if (sum === 1) {
-      return `${sum} copos de água.`;
+      return `${sum} copos de água`;
     }
-    return `${sum} copos de água.`;
+    return `${sum} copos de água`;
   }
 
 
