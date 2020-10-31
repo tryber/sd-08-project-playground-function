@@ -121,9 +121,9 @@ let newphrase = '';
   }
   return newphrase;
 }
-//function decode() {
-  // seu código aqui
-//}
+function decode() {
+  //seu código aqui
+}
 console.log(encode('dazan'));
 
 // Desafio 10
