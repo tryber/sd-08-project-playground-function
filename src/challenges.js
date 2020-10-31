@@ -1,7 +1,7 @@
 // Guilherme Ribeiro
 // Desafio 1
 function compareTrue(a, b) {
-  if (a && b == true) {
+  if (a && b === true) {
     return true;
   }
   return false;
@@ -17,7 +17,7 @@ function splitSentence(frase) {
   let string = '';
   let array = [];
 
-  for (i = 0; i < frase.length; i += 1) {
+  for (let i = 0; i < frase.length; i += 1) {
     if (frase[i] === ' ') {
       array.push(string);
       string = '';
@@ -35,15 +35,14 @@ function concatName(name) {
   let firstName = name[0];
   let lastName = name[name.length - 1];
 
-  let string = lastName + ', ' + firstName;
+  let string = (`${lastName}, ${firstName}`);
 
   return string;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-
-  return (wins * 3 + ties);
+  return ((wins * 3) + ties);
 }
 
 // Desafio 6
@@ -51,11 +50,11 @@ function highestCount(arrayNumbers) {
   let maior = arrayNumbers[0];
   let cont = 0;
 
-  for (i = 0; i < arrayNumbers.length; i += 1) {
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
     if (arrayNumbers[i] > maior) {
       maior = arrayNumbers[i];
       cont = 1;
-    } else if (arrayNumbers[i] == maior) {
+    } else if (arrayNumbers[i] === maior) {
       cont += 1;
     }
   }
@@ -81,7 +80,7 @@ function catAndMouse(mouse, cat1, cat2) {
     dist2 = cat2 - mouse;
   }
 
-  if (dist1 == dist2) {
+  if (dist1 === dist2) {
     frase = 'os gatos trombam e o rato foge';
   } else if (dist1 < dist2) {
     frase = 'cat1';
@@ -96,15 +95,15 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayNumbers) {
   let arrayStrings = [];
 
-  for (i = 0; i < arrayNumbers.length; i += 1) {
-    if (arrayNumbers[i] % 3 == 0) {
-      if (arrayNumbers[i] % 5 == 0) {
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    if (arrayNumbers[i] % 3 === 0) {
+      if (arrayNumbers[i] % 5 === 0) {
         arrayStrings.push('fizzBuzz');
       } else {
         arrayStrings.push('fizz');
       }
     } else {
-      if (arrayNumbers[i] % 5 == 0) {
+      if (arrayNumbers[i] % 5 === 0) {
         arrayStrings.push('buzz');
       } else {
         arrayStrings.push('bug!');
@@ -120,7 +119,7 @@ function encode(string) {
   let frase = '';
   let letra = '';
 
-  for (i = 0; i < string.length; i += 1) {
+  for (let i = 0; i < string.length; i += 1) {
     letra = string[i];
     switch (letra) {
       case 'a':
@@ -151,7 +150,7 @@ function decode(string) {
   let frase = '';
   let letra = '';
 
-  for (i = 0; i < string.length; i += 1) {
+  for (let i = 0; i < string.length; i += 1) {
     letra = string[i];
     switch (letra) {
       case '1':
@@ -185,16 +184,16 @@ function techList(List, name) {
   let orderVector = [];
   let objList = {
     tech: List,
-    name: name
+    name: name,
   };
 
-  if (List == '') {
+  if (List === '') {
     resultado = 'Vazio!';
   } else {
     for (i = 0; i < List.length; i += 1) {
       let element = {
         tech: objList.tech[i],
-        name: name
+        name: name,
       };
       orderVector.push(element);
     }
@@ -210,47 +209,49 @@ function generatePhoneNumber(arrayNumbers) {
   let ddd = '';
   let first = '';
   let second = '';
-  let resultado = null;
+  let resultado = '';
 
   if (arrayNumbers.length !== 11) {
     resultado = 'Array com tamanho incorreto.';
-  }
-
-  for (i = 0; i < arrayNumbers.length; i += 1) {
-    if (arrayNumbers[i] < 0 || arrayNumbers[i] > 9) {
-      resultado = 'não é possível gerar um número de telefone com esses valores';
-    } else {
-      for (j = 0; j < countNumbers.length; j +=1 ) {
-        if (arrayNumbers[i] == j) {
-          countNumbers[j] += 1;
+  } else {
+    for (let i = 0; i < arrayNumbers.length; i += 1) {
+      if (arrayNumbers[i] < 0 || arrayNumbers[i] > 9) {
+        resultado = 'não é possível gerar um número de telefone com esses valores';
+      } else {
+        for (let j = 0; j < countNumbers.length; j += 1) {
+          if (arrayNumbers[i] === j) {
+            countNumbers[j] += 1;
+          }
         }
       }
     }
-  }
 
-  for (i = 0; i < countNumbers.length; i += 1) {
-    if (countNumbers[i] > 2) {
-      resultado = 'não é possível gerar um número de telefone com esses valores';
+    for (let i = 0; i < countNumbers.length; i += 1) {
+      if (countNumbers[i] > 2) {
+        resultado = 'não é possível gerar um número de telefone com esses valores';
+      }
     }
-  }
 
-  for (i = 0; i < arrayNumbers.length; i += 1) {
-    if (i < 2) {
-      ddd += arrayNumbers[i];
-    } else if (i < 7) {
-      first += arrayNumbers[i];
-    } else {
-      second += arrayNumbers[i];
+    if (resultado === '') {
+      for (let i = 0; i < arrayNumbers.length; i += 1) {
+        if (i < 2) {
+          ddd += arrayNumbers[i];
+        } else if (i < 7) {
+          first += arrayNumbers[i];
+        } else {
+          second += arrayNumbers[i];
+        }
+      }
+      resultado = (`(${ddd}) ${first}-${second}`);
     }
-  }
-  resultado = (`(${ddd}) ${first}-${second}`);
+}
 
   return resultado;
 }
 
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
+  let resultado = true;
   let sumAB = lineA + lineB;
   let sumBC = lineB + lineC;
   let sumCA = lineC + lineA;
@@ -259,10 +260,12 @@ function triangleCheck(lineA, lineB, lineC) {
   let difCA = lineC - lineA;
 
   if ((lineA < sumBC && lineA > Math.abs(difBC)) || (lineB < sumCA && lineB > Math.abs(difCA)) || (lineC < sumAB && lineC > Math.abs(difAB))) {
-    return true;
+    resultado = true;
   } else {
-    return false;
+    resultado = false;
   }
+
+  return resultado;
 }
 
 // Desafio 13
@@ -270,29 +273,29 @@ function hydrate(bebidas) {
   let copos = 0;
   let frase = '';
 
-  for (i = 0; i < bebidas.length; i += 1) {
-    if (bebidas[i] == 1) {
+  for (let i = 0; i < bebidas.length; i += 1) {
+    if (bebidas[i] === 1) {
       copos += 1;
-    } else if (bebidas[i] == 2) {
+    } else if (bebidas[i] === 2) {
       copos += 2;
-    } else if (bebidas[i] == 3) {
+    } else if (bebidas[i] === 3) {
       copos += 3;
-    } else if (bebidas[i] == 4) {
+    } else if (bebidas[i] === 4) {
       copos += 4;
-    } else if (bebidas[i] == 5) {
+    } else if (bebidas[i] === 5) {
       copos += 5;
-    } else if (bebidas[i] == 6) {
+    } else if (bebidas[i] === 6) {
       copos += 6;
-    } else if (bebidas[i] == 7) {
+    } else if (bebidas[i] === 7) {
       copos += 7;
-    } else if (bebidas[i] == 8) {
+    } else if (bebidas[i] === 8) {
       copos += 8;
-    } else if (bebidas[i] == 9) {
+    } else if (bebidas[i] === 9) {
       copos += 9;
     }
   }
 
-  if (copos == 1) {
+  if (copos === 1) {
     frase = (`${copos} copo de água`);
   } else {
     frase = (`${copos} copos de água`);
