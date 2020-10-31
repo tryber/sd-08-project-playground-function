@@ -9,14 +9,16 @@ function compareTrue(a, b){
 
 // Desafio 2
 function calcArea(base, height) {
-calcArea = (10, 50);
-return (base * height)/2;
+calcArea(10,50);
+return (base * height)/2
 }
   
+
 // Desafio 3
-function splitSentence(param1) {
-splitSentence("Oi Victor");
-return param1.split(' ');
+function splitSentence(a) {
+  let umaString = "Oi Victor"
+  splitSentence(umaString);
+return umaString.split(' ')
 }
 
 // Desafio 4
