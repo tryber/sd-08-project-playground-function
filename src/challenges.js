@@ -279,7 +279,7 @@ function generatePhoneNumber(array11) {
 
                 //Returns an error
                 return "não é possível gerar um número de telefone com esses valores";
-                break;
+                break
 
             } else {
 
@@ -295,40 +295,44 @@ function generatePhoneNumber(array11) {
                 }
             }
 
+
+
             if (repCounter >= 3) {
 
                 return "não é possível gerar um número de telefone com esses valores"
 
-            } else {
-
-                //On the following, I used the concepts learned here:
-                //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/slice
-
-
-                //Picking the area code 
-                ddd = numNoMask.slice(0, 2);
-
-                //Picking the left half of the phone number
-                leftNumber = numNoMask.slice(2, 7)
-
-                //Picking the right half of the phone number
-                rightNumber = numNoMask.slice(7, 11)
-
-
-
-                //Applying the telephone mask to the number
-                maskedNumber = `(${ddd}) ${leftNumber}-${rightNumber} `
-
-                //Returning the masked telephone number
-                return maskedNumber;
             }
 
 
         }
+
+        //On the following, I used the concepts learned here:
+        //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+
+
+        //Picking the area code 
+        ddd = numNoMask.slice(0, 2);
+
+        //Picking the left half of the phone number
+        leftNumber = numNoMask.slice(2, 7)
+
+        //Picking the right half of the phone number
+        rightNumber = numNoMask.slice(7, 11)
+
+
+
+        //Applying the telephone mask to the number
+        maskedNumber = `(${ddd}) ${leftNumber}-${rightNumber} `
+
+        //Returning the masked telephone number
+        return maskedNumber;
+
+
+
     }
 }
 
-console.log(generatePhoneNumber([2, 1, 3, 5, 7, 5, 4, 1, 10, 3, 2]));
+console.log(generatePhoneNumber([2, 5, 3, 5, 7, 5, 4, 1, 1, 3, 2]));
 
 // Desafio 12
 function triangleCheck() {
