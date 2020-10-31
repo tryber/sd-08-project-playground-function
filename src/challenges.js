@@ -38,17 +38,16 @@ function footballPoints(wins, ties) {
 }//console.log(footballPoints(9, 10))
 
 // Desafio 6
-let arrayGG = [9, 1, 2, 3, 9, 5, 7]
+//let arrayGG = [9, 1, 2, 3, 9, 5, 7]
 function highestCount(array) {
-  let numbers = array
-  let maiorNum = numbers[0]
+  let maiorNum = array[0]
   let contador = 0
-  for (i in numbers){
-    if (numbers[i] > maiorNum){
-      maiorNum = numbers[i]
+  for (i in array) {
+    if (array[i] > maiorNum) {
+      maiorNum = array[i]
     }
-  }for (k in numbers){
-    if (numbers[k] === maiorNum){
+  } for (k in array) {
+    if (array[k] === maiorNum) {
       contador += 1
     }
   }
@@ -65,93 +64,84 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist2 = mouse - (gato2)
   distRatGat1 = Math.abs(dist1)
   distRatGat2 = Math.abs(dist2)
-  if(distRatGat1 < distRatGat2){
+  if (distRatGat1 < distRatGat2) {
     answer = 'cat1'
-  }else if (distRatGat2 < distRatGat1){
+  } else if (distRatGat2 < distRatGat1) {
     answer = 'cat2'
-  }else {
+  } else {
     answer = "os gatos trombam e o rato foge"
-  }return answer
+  } return answer
 }//console.log(catAndMouse(3, 2 ,2))
 
 // Desafio 8
-let arrayFizz = [2, 15, 7, 9, 45]
+//let arrayFizz = [2, 15, 7, 9, 45]
 function fizzBuzz(array) {
-  let varMain = array
   let resultado = []
   let fizz = "fizz"
   let buzz = "buzz"
   let bug = "bug!"
   let fb = "fizzBuzz"
-  for(i in varMain){
-    if(varMain[i] % 3 === 0 && varMain[i] % 5 === 0){
+  for (i in array) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       resultado.push(fb)
-    }else if (varMain[i] % 5 === 0){
+    } else if (array[i] % 5 === 0) {
       resultado.push(buzz)
-    }else if (varMain[i] % 3 === 0){
+    } else if (array[i] % 3 === 0) {
       resultado.push(fizz)
-    }else{
+    } else {
       resultado.push(bug)
     }
-  }return resultado
+  } return resultado
 }//console.log(fizzBuzz(arrayFizz))
 
 // Desafio 9
-let str = "Hello Modafoca"
+//let str = "Hello Modafoca"
 function encode(string) {
-  let mainVar = string
-  let mainArr = mainVar.split('')
-  
-  for(i in mainArr){
-    if(mainArr[i] === 'a'){
+  let mainArr = string.split('')
+
+  for (i in mainArr) {
+    if (mainArr[i] === 'a') {
       mainArr[i] = '1'
-    }else if(mainArr[i] === 'e'){
+    } else if (mainArr[i] === 'e') {
       mainArr[i] = '2'
-    }else if(mainArr[i] === 'i'){
+    } else if (mainArr[i] === 'i') {
       mainArr[i] = '3'
-    }else if(mainArr[i] === 'o'){
+    } else if (mainArr[i] === 'o') {
       mainArr[i] = '4'
-    }else if(mainArr[i] === 'u'){
+    } else if (mainArr[i] === 'u') {
       mainArr[i] = '5'
     }
-  }let encodeStr = mainArr.join('')
+  } let encodeStr = mainArr.join('')
   return encodeStr
 }//console.log(encode(str))
-let str2 = "h3 th2r2!"
+//let str2 = "h3 th2r2!"
 function decode(string) {
-  let mainVar = string
-  let mainArr = mainVar.split('')
-    for(i in mainArr){
-    if(mainArr[i] === '1'){
+  let mainArr = string.split('')
+  for (i in mainArr) {
+    if (mainArr[i] === '1') {
       mainArr[i] = 'a'
-    }else if(mainArr[i] === '2'){
+    } else if (mainArr[i] === '2') {
       mainArr[i] = 'e'
-    }else if(mainArr[i] === '3'){
+    } else if (mainArr[i] === '3') {
       mainArr[i] = 'i'
-    }else if(mainArr[i] === '4'){
+    } else if (mainArr[i] === '4') {
       mainArr[i] = 'o'
-    }else if(mainArr[i] === '5'){
+    } else if (mainArr[i] === '5') {
       mainArr[i] = 'u'
     }
-  }let decodeStr = mainArr.join('')
+  } let decodeStr = mainArr.join('')
   return decodeStr
 }//console.log(decode(str2))
-
-// Desafio 10
-let arrMat = []
-let strName = "Brn"
-
-//let obj = {}
 
 function techList(array, name) {
   let nome = name
   let materias = array.sort()
   let error = "Vazio!"
   let arrayObj = []
-  if(materias.length === 0){
+  if (materias.length === 0) {
     return error
-  }else {
-    for (i in materias){
+  } else {
+    for (i in materias) {
       materias[i] = {
         tech: materias[i],
         name: nome
@@ -160,7 +150,7 @@ function techList(array, name) {
     }
   }
   return arrayObj
-}console.log(techList(arrMat, strName))
+}//console.log(techList(arrMat, strName))
 
 // Desafio 11
 function generatePhoneNumber() {
