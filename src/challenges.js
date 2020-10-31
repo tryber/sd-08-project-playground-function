@@ -244,10 +244,10 @@ function triangleCheck(lineA, lineB, lineC) {
   let condicao6 = Math.abs(lineB - lineC) < lineA;
 
   if(condicao1 && condicao2 && condicao3 && condicao4 && condicao5 && condicao6) {
-    return 'true'
+    return true
   }
   else {
-    return 'false'
+    return false
   }
 }
 console.log(triangleCheck(10, 14, 8));
