@@ -2,7 +2,7 @@
 function compareTrue(boo, lean) {
   if (boo === true && lean === true) {
     return true
-  }return false
+  } return false
 }
 
 // Desafio 2
@@ -51,7 +51,7 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) { 
+function catAndMouse(mouse, cat1, cat2) {
   let answer = ''
   let dist1 = mouse - (cat1)
   let dist2 = mouse - (cat2)
@@ -125,18 +125,17 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   let materias = array.sort()
-  let error = "Vazio!"
+  let error = 'Vazio!'
   let arrayObj = []
   if (materias.length === 0) {
     return error
-  } else {
-    for (let i in materias) {
+  } for (let i in materias) {
       materias[i] = {
         tech: materias[i],
-        name: name
+        name: name,
       }
       arrayObj.push(materias[i])
-    }
+    
   }
   return arrayObj
 }
