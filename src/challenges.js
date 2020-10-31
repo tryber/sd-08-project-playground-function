@@ -39,9 +39,23 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(3, 1));
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
   // seu código aqui
+  let bigger = 1;
+  let bigger2 = 0;
+  for (let counter = 0; counter < numbers.length; counter += 1) {
+     if (bigger < numbers[counter]) {
+       bigger = numbers[counter];
+     }
+  }
+  for (let index in numbers) {
+    if (bigger === numbers[index]) {
+      bigger2 += 1;
+    }
+  }
+  return bigger2;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 // Usei o site https://www.w3schools.com/jsref/jsref_abs.asp para aprender mais sobre o método match.abs() 
