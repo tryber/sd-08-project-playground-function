@@ -95,14 +95,14 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
   let vowels = { "a": "1", "e": "2", "i": "3", "o": "4", "u": "5" };
   let result = "";
   result = string.replace(/[aeiou]/gi, v => vowels[v]);
   return result
 }
-function decode() {
+function decode(reverse) {
   // seu código aqui
   let vowels = { "1": "a", "2": "e", "3": "i", "4": "o", "5": "u" };
   let result = reverse.replace(/[12345]/gi, y => vowels[y]);
