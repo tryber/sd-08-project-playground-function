@@ -237,15 +237,15 @@ function searchCopies(arrayNum, num) {
   } else {
     res = 'ok';
   }
-  return res
+  return res;
 }
 
 function checkNum(num) {
   let res;
   if (num < 0 || num > 9) {
-    res = 'block'
+    res = 'block';
   } else {
-    res = 'ok'
+    res = 'ok';
   }
   return res;
 }
@@ -253,7 +253,7 @@ function checkNum(num) {
 function generatePhoneNumber(arrayNum) {
   let res;
   let key;
-  if (arrayNum.length != 11) {
+  if (arrayNum.length !== 11) {
     res = 'Array com tamanho incorreto.'
   } else {
     let listCopies = [];
@@ -263,9 +263,9 @@ function generatePhoneNumber(arrayNum) {
       listCopies.push(searchCopies(arrayNum, num));
       listNumInvalid.push(checkNum(num));
       if (listNumInvalid.includes('block') || listCopies.includes('block')) {
-        res = 'não é possível gerar um número de telefone com esses valores'
+        res = 'não é possível gerar um número de telefone com esses valores';
       } else {
-        res = `(${arrayNum[0]}${arrayNum[1]})${arrayNum[2]}${arrayNum[3]}${arrayNum[4]}${arrayNum[5]}${arrayNum[6]}-${arrayNum[7]}${arrayNum[8]}${arrayNum[9]}${arrayNum[10]}`
+        res = `(${arrayNum[0]}${arrayNum[1]}) ${arrayNum[2]}${arrayNum[3]}${arrayNum[4]}${arrayNum[5]}${arrayNum[6]}-${arrayNum[7]}${arrayNum[8]}${arrayNum[9]}${arrayNum[10]}`;
       }
     }
   }
@@ -274,14 +274,81 @@ function generatePhoneNumber(arrayNum) {
 // console.log(generatePhoneNumber([7, 7, 8, 8, 1, 2, 3, 4, 1, 6, 1, 2]))
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let res;
+  let a = lineA;
+  let b = lineB;
+  let c = lineC;
+  let bc = b - c;
+  let ac = a - c;
+  let ab = a - b;
+  let checkA1 = Math.abs(bc) < a;
+  let checkB1 = Math.abs(ac) < b;
+  let checkC1 = Math.abs(ab) < c;
+  let checkA2 = a < (b + c);
+  let checkB2 = b < (a + c);
+  let checkC2 = c < (a + b);
+  let listRes = [checkA1, checkB1, checkC1, checkA2, checkB2, checkC2];
+  if (listRes.includes(false)) {
+    res = false;
+  } else {
+    res = true;
+  }
+  return res;
 }
+// console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function countDrinks(str) {
+  let arrayChar = str.split('');
+  count = 0;
+  for (let index = 0; index < arrayChar.length; index += 1) {
+    switch (arrayChar[index]) {
+      case '1':
+        count += 1;
+        break;
+      case '2':
+        count += 2;
+        break;
+      case '3':
+        count += 3;
+        break;
+      case '4':
+        count += 4;
+        break;
+      case '5':
+        count += 5;
+        break;
+      case '6':
+        count += 6;
+        break;
+      case '7':
+        count += 7;
+        break;
+      case '8':
+        count += 8;
+        break;
+      case '9':
+        count += 9;
+        break;
+      default:
+        count += 0;
+    }
+  }
+  return count;
 }
+
+function hydrate(str) {
+  let res;
+  let drinks = countDrinks(str);
+  if (drinks === 1) {
+    res = `${drinks} copo de água`
+  } else {
+    res = `${drinks} copos de água`
+  }
+  return res;
+}
+// console.log(hydrate('1 copo de vinho'))
 
 
 module.exports = {
