@@ -4,7 +4,7 @@ function compareTrue(bool1, bool2) {
 
   if (bool1 && bool2) {
     return true;
-  } 
+  }
     return false;
 }
 
