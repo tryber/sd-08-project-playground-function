@@ -120,13 +120,13 @@ function isNumber(number) {
   }
   return number;
 }
-function decode(text) {
-  let newText = '';
-  for (let i = 0; i < text.length; i += 1) {
-    let index = isNumber(text[i]);
-    newText += index;
+function decode(encodedText) {
+  let newDecode = '';
+  for (let i = 0; i < encodedText.length; i += 1) {
+    let indexForDecode = isNumber(encodedText[i]);
+    newDecode += indexForDecode;
   }
-  return newText;
+  return newDecode;
 }
 // Desafio 10
 function techList(array, name) {
