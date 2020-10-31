@@ -144,16 +144,17 @@ function decode() {
 // Desafio 10
 function techList(nomeTech, name) {    
   let nomesOrdenado = nomeTech.sort();
+  let resultado = [];
   if (nomesOrdenado.length === 0){
     return "Vazio!";
   }
   for (let key in nomesOrdenado){    
-        nomesOrdenado.push({
+        resultado.push({
         tech: nomesOrdenado[key],
         name: name   
     });     
   }  
-  return nomesOrdenado;
+  return resultado;
 }
 
 
