@@ -251,36 +251,82 @@ function generatePhoneNumber(array11) {
     //Putting all the digits together in a String
     let numNoMask = array11.join("");
 
+    //Area code
     let ddd = "";
+    //Left half of the phone number
     let leftNumber = "";
+    //Right half of the phone number
     let rightNumber = "";
+    //Final result
     let maskedNumber = "";
+    //Counter for the repetition of each number
+    let repCounter = 0;
 
     if (array11.length !== 11) {
         return "Array com tamanho incorreto."
     } else {
 
-        //On the following, I used the concepts learned here:
-        //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+        //Running through the array11
+        for (let currentNum = 0; currentNum < array11.length; currentNum += 1) {
+
+            //Reseting the counter on each ireration
+            repCounter = 0;
+
+            //If the current number is lower or higher than the requested
+            if (
+                array11[currentNum] < 0 ||
+                array11[currentNum] > 9) {
+
+                //Returns an error
+                return "não é possível gerar um número de telefone com esses valores"
+
+            } else {
+
+                //Taking each array11's number to be compared
+                for (let compareNum = 0; compareNum < array11.length; compareNum += 1) {
+
+                    //If it's not the same posiiton
+                    if (currentNum === compareNum) {
+                        //It doesn't count
+                    }
+                    if (array11[currentNum] === array11[compareNum]) {
+                        repCounter += 1;
+                    }
+
+                }
+            }
+
+            if (repCounter >= 3) {
+
+                return "não é possível gerar um número de telefone com esses valores"
+
+            } else {
+
+                //On the following, I used the concepts learned here:
+                //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/slice
 
 
-        //Picking the area code 
-        ddd = numNoMask.slice(0, 2);
+                //Picking the area code 
+                ddd = numNoMask.slice(0, 2);
 
-        //Picking the left half of the phone number
-        leftNumber = numNoMask.slice(2, 7)
+                //Picking the left half of the phone number
+                leftNumber = numNoMask.slice(2, 7)
 
-        //Picking the right half of the phone number
-        rightNumber = numNoMask.slice(7, 11)
+                //Picking the right half of the phone number
+                rightNumber = numNoMask.slice(7, 11)
 
+
+
+                //Applying the telephone mask to the number
+                maskedNumber = `(${ddd}) ${leftNumber}-${rightNumber} `
+
+                //Returning the masked telephone number
+                return maskedNumber;
+            }
+
+
+        }
     }
-
-    //Applying the telephone mask to the number
-    maskedNumber = `(${ddd}) ${leftNumber}-${rightNumber} `
-
-    //Returning the masked telephone number
-    return maskedNumber;
-
 }
 
 console.log(generatePhoneNumber([2, 1, 3, 5, 7, 5, 4, 1, 9, 3, 2]));
