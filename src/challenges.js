@@ -68,23 +68,29 @@ function highestCount(arraye) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let maiorValor = mouse *1;
-  let valor2 = cat1 * 1;
-  let valor3= cat2 *1;
+  let maiorValor = mouse;
+  let valor2 = cat1;
+  let valor3= cat2;
   let resultado = " ";
 
-  if ( valor2/maiorValor > valor3/maiorValor) {
-    resultado = 'cat1'
-  } else if ( valor3/maiorValor > valor2/maiorValor) {
-    resultado =  'cat2'
-  } else  if ((valor2/maiorValor === valor3/maiorValor)){
-    resultado = 'os gatos trombam e o rato foge'
+
+  let maiordistancia = Math.abs(maiorValor)
+  let distancia1 = Math.abs(valor2 - maiordistancia);
+  let distancia2 = Math.abs(valor3 - maiordistancia); 
   
-  }
+  if ( distancia1 < distancia2) {
+    resultado = 'cat1'
+  } else if ( distancia2 < distancia1)  {
+    resultado =  'cat2'
+  } else  if (distancia1 === distancia2) {
+    resultado = ('os gatos trombam e o rato foge')
+  } 
+
+  
   return resultado;
 
 }
-
+console.log ( catAndMouse(0, 3, 2))
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
