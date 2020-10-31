@@ -400,11 +400,19 @@ function hydrate(str) {
     }
   }
   
-  return `${output} copos de água`;
+  if (output == 1) {
+    return `${output} copo de água`;
+  }
+  else if (output > 1) {
+    return `${output} copos de água`;
+  }
+  else {
+    return `ainda não bebeu nada?`
+  }
 }
 
 // < Para o teste manual >
-// console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+console.log(hydrate(" copo de vinho"));
 
 
 module.exports = {
