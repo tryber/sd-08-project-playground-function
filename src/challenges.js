@@ -119,7 +119,6 @@ function techList(tech, name) {
 // Expressão regular encontrada no Stackoverflow - https://stackoverflow.com/questions/17650197/mask-javascript-variable-value
 function generatePhoneNumber(array) {
   let result = "";
-  let formattedNumber = "";
   let repeatedNumber = array[0];
   let count = 1;
   let rawString = array.join("");
@@ -135,8 +134,8 @@ function generatePhoneNumber(array) {
         }
       }
     }
-    formattedNumber = rawString.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1)$2-$3")
-  return formattedNumber;
+    result = rawString.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1)$2-$3")
+  return result;
 }
 
 // Desafio 12
