@@ -16,9 +16,10 @@ function calcArea(base, height) {
 calcArea(50, 10)
 
 // Desafio 3
-function splitSentence() {
-    
+function splitSentence(sentence) {
+  return sentence.split(" ");
 }
+splitSentence("Yago Rocha de Souza Lima");
 
 // Desafio 4
 function concatName(nomes) {
@@ -26,7 +27,7 @@ function concatName(nomes) {
  let resultado = lastName + ',' + ' ' + nomes[0];
   return resultado;
  }
-console.log(concatName(['Patricia', 'Carlin', 'Martins']));
+concatName(['Patricia', 'Carlin', 'Martins']);
 
 // Desafio 5
 function footballPoints() {
