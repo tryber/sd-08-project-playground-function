@@ -51,19 +51,21 @@ function highestCount(arrayNumber) {
   }
   return totalLength.length;
 }
-// Ok, but too complex ¬¬!
+// Ok, but a little too complex ¬¬!
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(mouse - cat1);
   let distCat2 = Math.abs(mouse - cat2);
+  let result;
   if (distCat1 < distCat2) {
-    return 'cat1';
+    result = 'cat1';
   } else if (distCat1 > distCat2) {
-    return 'cat2';
+    result = 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge';
+    result = 'os gatos trombam e o rato foge';
   }
+  return result;
 }
 // Ok!
 
@@ -136,9 +138,14 @@ function decode(string) {
 // Ok!
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let object = {}
+  for (i = 0; i < tech.length; i += 1) {
+   object[i] = {tech: tech[i], name: name};
+  }
+  return object
 }
+// Ok! Uffa!
 
 // Desafio 11
 function generatePhoneNumber() {
