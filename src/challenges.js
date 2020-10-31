@@ -103,47 +103,45 @@ function isVogal(character) {
 }
 function encode(text) {
   let newText = '';
-  for (i = 0;i < text.length; i += 1) {
+  for (let i = 0;i < text.length; i += 1) {
     let index = isVogal(text[i]);
     newText += index;
   }
   return newText;
 }
 function isNumber(number) {
-  let numbersList = ['1' , '2' , '3' , '4' , '5'];
-  let vogais= ['a','e','i','o','u'];
+  let numbersList = ['1', '2', '3', '4', '5'];
+  let vogais= ['a', 'e', 'i', 'o', 'u'];
   let result= numbersList.indexOf(number);
-  if(result >= 0) {
+  if( result >= 0) {
     let resultFromVogal = vogais[result]
     return resultFromVogal;
-  } else {
-    return number;
-  }
+  } 
+  return number;
 }
 function decode(text) {
   let newText = '';
-  for (i = 0;i < text.length; i += 1) {
+  for (let i = 0;i < text.length; i += 1) {
     let index = isNumber(text[i]);
     newText += index;
   }
   return newText;
 }
 // Desafio 10
-function techList(array,name) {
+function techList(array, name) {
   array.sort();
   let listWithObjects = [];
-  objectInLIst = {};
-  if (array.length == 0) {
+  let objectInLIst = {};
+  if (array.length === 0) {
     return 'Vazio!';
-  } else {
-    for(i in array) {
-      listWithObjects.push(objectInLIst = {
-          'tech' : array[i],
-          'name' : name,
-      });
-    }
-  return listWithObjects;  
   }
+  for(let i = 0; i < array.length; i += 1) {
+    listWithObjects.push(objectInLIst = {
+        'tech' : array[i],
+        'name' : name,
+    });
+  }
+  return listWithObjects;  
 }
 
 // Desafio 11
