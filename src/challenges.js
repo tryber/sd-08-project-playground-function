@@ -90,11 +90,13 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// fiz com ajuda de meu colega Daniel da Turma 8
+function encode(string) {
+ return string.split('a').join(1).split('e').join(2).split('i').join(3).split('o').join(4).split('u').join(5);
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  return string.split(1).join('a').split(2).join('e').split(3).join('i').split(4).join('o').split(5).join('u');
 }
 
 function createObject(array, name) {
