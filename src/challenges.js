@@ -14,10 +14,9 @@ return (base * height)/2;
 }
   
 // Desafio 3
-function splitSentence(a) {
-  let splitPalavra = "Oi Victor";
-  splitSentence(splitPalavra);
-  return splitPalavra.split(" ");
+function splitSentence(param1) {
+splitSentence("Oi Victor");
+return param1.split(" ");
 }
 
 // Desafio 4
