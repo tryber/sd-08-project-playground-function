@@ -209,9 +209,6 @@ function triangleCheck(num1, num2, num3) {
     return true;
   }
 }
-//console.log(triangleCheck(16, 9, 2));
-//console.log(triangleCheck(10, 3, 4));
-//console.log(triangleCheck(6, 2, 2));
 //console.log(triangleCheck(12, 17, 4));
 //console.log(triangleCheck(5, 10, 3));
 //console.log(triangleCheck(10, 14, 8));
@@ -220,9 +217,26 @@ function triangleCheck(num1, num2, num3) {
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(phrase) {
+  let reg = /\d+/g;
+  let result = phrase.match(reg);
+  let newResult = [];
+  let coposAgua = 0;
+  for (i in result) {
+    if (result[i] >= 1 && result[i] <= 9) {
+      newResult.push(parseInt(result[i]));
+      coposAgua = coposAgua + newResult[i];
+    } else {
+      return "Tomar água não vai adiantar - error 404"
+    }
+  }
+  return coposAgua + " copos de água";
 }
+console.log(hydrate("1 cerveja e 5 copos de terra"));
+console.log(hydrate("3 cachaça, 10 cervejas e 3 copo de vinho"));
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+
+
 
 
 module.exports = {
