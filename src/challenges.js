@@ -26,7 +26,7 @@ function concatName(nomes) {
  let resultado = lastName + ',' + ' ' + nomes[0];
   return resultado;
  }
-concatName(['Yago', 'Rocha']);
+console.log(concatName(['Patricia', 'Carlin', 'Martins']));
 
 // Desafio 5
 function footballPoints() {
