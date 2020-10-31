@@ -75,8 +75,6 @@ function compare(number){
    
   return statement;   
 }
-
-
 function fizzBuzz(array) {
   let list = [] 
   for (i in array){
@@ -87,22 +85,42 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(text){
-  let t_a = text.replace(/a/g,"1");
-  let t_e = t_a.replace(/e/g,"2");
-  let t_i = t_e.replace(/i/g,"3");
-  let t_o = t_i.replace(/o/g,"4");
-  let t_u = t_o.replace(/u/g,"5");
-  return t_u;
+function isVogal(character){
+  let vogais= ['a','e','i','o','u'];
+  let result= vogais.indexOf(character)+1;
+  if(result > 0){
+    return result;
+  } else{
+    return character;
+  }
 }
-
-function decode(text){
-  let t_a = text.replace(/1/g,"a");
-  let t_e = t_a.replace(/2/g,"e");
-  let t_i = t_e.replace(/3/g,"i");
-  let t_o = t_i.replace(/4/g,"o");
-  let t_u = t_o.replace(/5/g,"u");
-  return t_u;
+ function encode(text){
+   let newText = '';
+  for (i = 0;i < text.length; i+=1){
+   let index =isVogal(text[i]);
+   newText += index;
+  }
+  return newText;
+}
+function isNumber(number){
+  let numbersList = ['1','2','3','4','5'];
+  let vogais= ['a','e','i','o','u'];
+  let result= numbersList.indexOf(number);
+  if(result >= 0){
+    let resultFromVogal = vogais[result]
+    return resultFromVogal;
+  } else{
+    return number;
+  }
+}
+// console.log(isNumber('!'));
+ function decode(text){
+   let newText = '';
+  for (i = 0;i < text.length; i+=1){
+   let index =isNumber(text[i]);
+   newText += index;
+  }
+  return newText;
 }
 // Desafio 10
 function techList(array,name){
