@@ -66,16 +66,16 @@ function highestCount(arrayNumeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 < mouse && cat1 > mouse && cat1 < cat2){
+  if (Math.abs(cat1 > mouse) && Math.abs(cat1 < cat2)){
     return "cat1";
-  }else if (cat2 > mouse && cat2 < cat1){
+  }else if (Math.abs(cat2 > mouse) && Math.abs(cat2 < cat1)){
     return "cat2";
-  }else if (cat1 == cat2 && cat1 == mouse && cat2 == mouse){
+  }else {
     return "os gatos trombam e o rato foge";
   }
 }
 
-console.log(catAndMouse(1,0,2));
+
 
 
 
@@ -156,7 +156,6 @@ function techList(nomeTech, name) {
   }  
   return resultado;
 }
-
 
 
 
