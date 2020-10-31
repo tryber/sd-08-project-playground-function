@@ -60,11 +60,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let statement = '';
   if (dmouseCat1 > dmouseCat2) {
     statement = 'cat2';
+  } 
+  else if (dmouseCat2 > dmouseCat1) {
+    statement = 'cat1';  
   }
   else {
-    statement = 'cat1';
-  }
-  if (dmouseCat1 === dmouseCat2) {
     statement = 'os gatos trombam e o rato foge';
   }
   return statement;
@@ -123,8 +123,8 @@ function isNumber(number) {
 function decode(encodedText) {
   let newDecode = '';
   for (let i = 0; i < encodedText.length; i += 1) {
-    let indexForDecode = isNumber(encodedText[i]);
-    newDecode += indexForDecode;
+    let indexForDecode = isNumber(encodedText.charAt(i));
+    newDecode = newDecode + indexForDecode;
   }
   return newDecode;
 }
