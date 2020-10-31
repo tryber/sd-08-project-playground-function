@@ -176,10 +176,22 @@ techList(tecnologias, nome)
 // Desafio 11
 function generatePhoneNumber(vetorNum) {
   let resultado = "";
+  let numIncorreto = false;
+  let numRepetido3x = false;
+  for (numAtual in vetorNum) {
+    let numComparar = vetorNum[numAtual];
+    let contadorNum = 0;
+    if (numComparar < 0 || numComparar > 9) {
+      numIncorreto = true;
+    }
+    for (count )  
+  }
+
+
   if (vetorNum.length !== 11) {
-    resultado = "Array com tamanho incorreto."
-  } else {
-    
+    resultado = "Array com tamanho incorreto.";
+  } else if (numIncorreto == true || numRepetido3x == true) {
+    resultado = "não é possível gerar um número de telefone com esses valores";
   }
   
   return resultado;
