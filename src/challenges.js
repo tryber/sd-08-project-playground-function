@@ -116,32 +116,35 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-// Expressão regular encontrada no Stackoverflow - https://stackoverflow.com/questions/17650197/mask-javascript-variable-value
+// Expressão regular encontrada em - https://stackoverflow.com/questions/17650197/mask-javascript-variable-value
+// Foreach function encontrada em - https://www.codegrepper.com/code-examples/javascript/count+duplicates+array+js
 function generatePhoneNumber(array) {
   let result = "";
   let counts = [];
-  let count = 0;
   let rawString = array.join("");
-  result = rawString.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3")
+  result = rawString.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3");
   if (array.length !== 11) {
     result = "Array com tamanho incorreto.";
   } else {
-      array.forEach(function(i) { counts[i] = (counts[i]||0) + 1;});
-      for (let i = 0; i < array.length; i++) {
-        if (array[i] < 0 || array[i] > 9 || counts[i] >= 3) {
-          result = "não é possível gerar um número de telefone com esses valores";
-        }
+    array.forEach(function (i) {
+      counts[i] = (counts[i] || 0) + 1;
+    });
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] < 0 || array[i] > 9 || counts[i] >= 3) {
+        result = "não é possível gerar um número de telefone com esses valores";
       }
     }
-  
-  // uniqueCount.forEach(function(i) { count[i] = (count[i]||0) + 1;});
+  }
   return result;
 }
-console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sumAB = lineA + lineB > lineC;
+  let sumAC = lineA + lineC > lineB;
+  let sumBC = lineB + lineC > lineA;
+
+  return sumAB && sumAC && sumBC;
 }
 
 // Desafio 13
