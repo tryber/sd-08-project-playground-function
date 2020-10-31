@@ -382,13 +382,29 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // < Para o teste manual >
-// console.log(triangleCheck(10, 14, 8));
+// console.log(triangleCheck(14, 8, 10));
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// Solução com o entendimento via "https://www.codegrepper.com/code-examples/delphi/how+to+exract+numbers+from+string+in+js"
+function hydrate(str) {
+  
+  let output = 0;
+  str = str.split(" ");
+
+  for(let i = 0; i < str.length; i += 1) {
+    let num = ""; 
+    if(isNaN(str[i])==false){
+      num+=str[i];
+      output += parseInt(num);
+    }
+  }
+  
+  return `${output} copos de água`;
 }
+
+// < Para o teste manual >
+// console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 
 module.exports = {
