@@ -126,21 +126,18 @@ function generatePhoneNumber(array) {
   if (array.length !== 11) {
     result = "Array com tamanho incorreto.";
   } else {
-    for (i = 1; i <= array.length; i += 1) {
-      if (counts[array[i]] === undefined) {
-        counts[array[i]] = 1;
-      } else {
-        count += 1;
-      }
-      if (array[i] < 0 || array[i] > 9 || count >= 3) {
-        result = "não é possível gerar um número de telefone com esses valores";
+      array.forEach(function(i) { counts[i] = (counts[i]||0) + 1;});
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] < 0 || array[i] > 9 || counts[i] >= 3) {
+          result = "não é possível gerar um número de telefone com esses valores";
+        }
       }
     }
-  }
-
+  
+  // uniqueCount.forEach(function(i) { count[i] = (count[i]||0) + 1;});
   return result;
 }
-console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
+console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
 
 // Desafio 12
 function triangleCheck() {
