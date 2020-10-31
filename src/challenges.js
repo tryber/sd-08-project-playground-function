@@ -156,9 +156,9 @@ function hydrate(Drink) {
       sum += Number(cupWater[index]);
     }
     if (sum === 1) {
-      return `Beba ${sum} copo(s) de água.`;
+      return `${sum} copo de água.`;
     }
-    return `Beba ${sum} copos(s) de água.`;
+    return `${sum} copos de água.`;
   }
   console.log(hydrate('5 copos de caipirinha'));
 
