@@ -16,7 +16,8 @@ return (base * height)/2;
 // Desafio 3
 function splitSentence(param1) {
 splitSentence("Oi Victor");
-return param1.split(" ");
+param1.split(" ");
+return splitSentence;
 }
 
 // Desafio 4
