@@ -30,7 +30,7 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let result = wins * 3 + ties * 1;
+  let result = (wins * 3) + (ties * 1);
   return result;
 }
 
@@ -67,11 +67,11 @@ function fizzBuzz(array) {
   // seu código aqui
   let result = [];
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       result[i] = 'fizzBuzz';
-    } else if (array[i] % 3 == 0) {
+    } else if (array[i] % 3 === 0) {
       result[i] = 'fizz';
-    } else if (array[i] % 5 == 0) {
+    } else if (array[i] % 5 === 0) {
       result[i] = 'buzz';
     } else {
       result[i] = 'bug!';
@@ -86,30 +86,22 @@ function encode(sentence) {
   // seu código aqui
   let sentenceEncoded = '';
   for (let i = 0; i < sentence.length; i += 1) {
-    switch (sentence[i].toLowerCase()) {
-      case 'a': {
-        sentenceEncoded += 1;
-        break;
-      }
-      case 'e': {
-        sentenceEncoded += 2;
-        break;
-      }
-      case 'i': {
-        sentenceEncoded += 3;
-        break;
-      }
-      case 'o': {
-        sentenceEncoded += 4;
-        break;
-      }
-      case 'u': {
-        sentenceEncoded += 5;
-        break;
-      }
-      default: {
-        sentenceEncoded += sentence[i];
-      }
+    if (sentence[i].toLowerCase() === 'a') {
+      sentenceEncoded += 1;
+    }
+    if (sentence[i].toLowerCase() === 'e') {
+      sentenceEncoded += 2;
+    }
+    if (sentence[i].toLowerCase() === 'i') {
+      sentenceEncoded += 3;
+    }
+    if (sentence[i].toLowerCase() === 'o') {
+      sentenceEncoded += 4;
+    }
+    if (sentence[i].toLowerCase() === 'u') {
+      sentenceEncoded += 5;
+    } else {
+      sentenceEncoded += sentence[i];
     }
   }
   return sentenceEncoded;
@@ -172,7 +164,7 @@ function validPhone(arrayNumber) {
     if (arrayNumber[i] < 0 || arrayNumber[i] > 9) {
       return false;
     }
-    for (let j = 0; j < arrayNumber.length; j++) {
+    for (let j = 0; j < arrayNumber.length; j += 1) {
       if (arrayNumber[i] === arrayNumber[j]) {
         count += 1;
       }
@@ -192,7 +184,7 @@ function generatePhoneNumber(arrayNumber) {
   if (!validPhone(arrayNumber)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  for (let i = 0; i < arrayNumber.length; i++) {
+  for (let i = 0; i < arrayNumber.length; i += 1) {
     if (i === 0) {
       numberFormated += `(`;
     }
@@ -221,7 +213,7 @@ function hydrate(drinks) {
   let numberOfDrinks = drinks.match(/\d/g);
   let totalDrinks = 0;
 
-  for (let i = 0; i < numberOfDrinks.length; i++) {
+  for (let i = 0; i < numberOfDrinks.length; i += 1) {
     totalDrinks += Number(numberOfDrinks[i]);
   }
   if (totalDrinks == 1) {
