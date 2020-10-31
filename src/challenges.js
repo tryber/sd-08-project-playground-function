@@ -144,14 +144,25 @@ function decode(input) {
   } 
   return palavraDecodificada;
 }decode("h3 th2r2!")
-  // seu código aqui
-
-
+  
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
-
+function techList(array, name) {
+  let arrayBase = [];
+  
+  for (let i = 0; i < array.length; i += 1) {
+    arrayBase.push(array[i]);    
+  }
+  arrayBase.sort();
+    for (let i = 0; i < arrayBase.length; i +=1)   {
+      let objeto = {
+        tech: arrayBase[i],
+        name: name
+      }
+      console.log(objeto);
+  }
+  
+}techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Ruâni")
+  
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
