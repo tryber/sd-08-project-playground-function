@@ -246,7 +246,7 @@ function countDrinks(str) {
   let list = str.match(regex);
   let sum = 0;
   for (let i = 0; i < list.length; i += 1) {
-    sum += parseInt(list[i]);
+    sum += parseInt(list[i], 10);
   }
   return sum;
 }
