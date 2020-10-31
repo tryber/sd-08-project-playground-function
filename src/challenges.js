@@ -269,7 +269,7 @@ function generatePhoneNumber(array11) {
         //Running through the array11
         for (let currentNum = 0; currentNum < array11.length; currentNum += 1) {
 
-            //Reseting the counter on each ireration
+            //Reseting the counter in each iteration
             repCounter = 0;
 
             //If the current number is lower or higher than the requested
@@ -278,7 +278,8 @@ function generatePhoneNumber(array11) {
                 array11[currentNum] > 9) {
 
                 //Returns an error
-                return "não é possível gerar um número de telefone com esses valores"
+                return "não é possível gerar um número de telefone com esses valores";
+                break;
 
             } else {
 
@@ -327,7 +328,7 @@ function generatePhoneNumber(array11) {
     }
 }
 
-console.log(generatePhoneNumber([2, 1, 3, 5, 7, 5, 4, 1, 9, 3, 2]));
+console.log(generatePhoneNumber([2, 1, 3, 5, 7, 5, 4, 1, 10, 3, 2]));
 
 // Desafio 12
 function triangleCheck() {
