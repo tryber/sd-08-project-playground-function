@@ -1,11 +1,11 @@
 // Desafio 1
-function compareTrue(value1 , value2) {
+function compareTrue(value1, value2) {
   return value1 && value2;
 }
 
 // Desafio 2
-function calcArea(base , height) {
-  let area = (base * height)/2;
+function calcArea(base, height) {
+  let area = (base * height) / 2;
   return area;
 }
 
@@ -31,16 +31,16 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function getHighestNumber(array) {
-  let maxNumber = array.reduce(function(a , b) {
-  return Math.max(a , b);
+  let maxNumber = array.reduce (function(a, b) {
+    return Math.max(a, b);
   });
   return maxNumber;
 }
 function highestCount(array) {
   let number = getHighestNumber(array);
   let freq = 0;
-  for (let i = 0; i<= array.length; i += 1) {
-    if(array[i] === number) { 
+  for (let i = 0; i <= array.length; i += 1) {
+    if (array[i] === number) {
       freq += 1;
     }
   }
@@ -49,24 +49,24 @@ function highestCount(array) {
 
 // Desafio 7
 
-function calculateDistance(mouse,cat) {
+function calculateDistance(mouse, cat) {
   let dmouseCat = Math.abs(mouse - cat);
   return dmouseCat;
 }
 
-function catAndMouse(mouse, cat1 , cat2) {
-  let dmouseCat1 = calculateDistance(mouse , cat1);
-  let dmouseCat2 = calculateDistance(mouse , cat2);
+function catAndMouse(mouse, cat1, cat2) {
+  let dmouseCat1 = calculateDistance(mouse, cat1);
+  let dmouseCat2 = calculateDistance(mouse, cat2);
   let statement = '';
-  if(dmouseCat1 === dmouseCat2) {
-    statement = 'os gatos trombam e o rato foge';
-  }   
   if (dmouseCat1 > dmouseCat2) {
     statement = 'cat2';
-  } else {
+  }else {
     statement = 'cat1'
   }
-  return statement;  
+  if(dmouseCat1 === dmouseCat2) {
+    statement = 'os gatos trombam e o rato foge';
+  }
+return statement;
 }
 
 // Desafio 8
@@ -74,18 +74,18 @@ function compare(number) {
   let statement = 'bug!';
   if (number % 3 === 0) {
     statement = 'fizz';
-  } 
+  }
   if (number % 5 === 0) {
     statement = 'buzz';
   }
-  if (number % 3  === 0 && number % 5 === 0) {
+  if (number % 3 === 0 && number % 5 === 0) {
     statement = 'fizzBuzz';
-  } 
-  return statement;   
+  }
+  return statement;
 }
 function fizzBuzz(array) {
   let list = [];
-  for (i in array) {
+  for (let i = 0; i <= array.length; i =+ 1) {
     let result = compare(array[i])
     list.push(result);
   }
@@ -94,21 +94,20 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function isVogal(character) {
-  let vogais = ['a' , 'e' , 'i' , 'o' ,' u'];
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
   let result = vogais.indexOf(character) + 1;
-  if(result > 0) {
+  if (result > 0) {
     return result;
-  } else {
-    return character;
   }
+  return character;
 }
 function encode(text) {
   let newText = '';
   for (i = 0;i < text.length; i += 1) {
-     let index = isVogal(text[i]);
-     newText += index;
-   }
- return newText;
+    let index = isVogal(text[i]);
+    newText += index;
+  }
+  return newText;
 }
 function isNumber(number) {
   let numbersList = ['1' , '2' , '3' , '4' , '5'];
@@ -121,7 +120,6 @@ function isNumber(number) {
     return number;
   }
 }
-// console.log(isNumber('!'));
 function decode(text) {
   let newText = '';
   for (i = 0;i < text.length; i += 1) {
