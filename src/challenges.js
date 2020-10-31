@@ -254,7 +254,7 @@ function generatePhoneNumber(array11) {
     let ddd = "";
     let leftNumber = "";
     let rightNumber = "";
-    let numberWithMask = "";
+    let maskedNumber = "";
 
     if (array11.length !== 11) {
         return "Array com tamanho incorreto."
@@ -276,10 +276,10 @@ function generatePhoneNumber(array11) {
     }
 
     //Applying the telephone mask to the number
-    numberWithMask = `(${ddd}) ${leftNumber}-${rightNumber} `
+    maskedNumber = `(${ddd}) ${leftNumber}-${rightNumber} `
 
     //Returning the masked telephone number
-    return numberWithMask;
+    return maskedNumber;
 
 }
 
