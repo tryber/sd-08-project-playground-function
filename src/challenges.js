@@ -9,7 +9,8 @@ function compareTrue(num1, num2) {
 
 // Desafio 2
 function calcArea(num1, num2) {
-  let base = num1; let altura = num2;
+  let base = num1;
+  let altura = num2;
   let areaTriangulo = (base * altura) / 2;
   return areaTriangulo;
 }
@@ -37,7 +38,8 @@ concatName(["Lucas", "Cassiano", "Ferraz", "Paollilo"]);
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let vitorias = wins * 3; let empates = ties * 1;
+  let vitorias = wins * 3;
+  let empates = ties * 1;
   let pontos = vitorias + empates;
   return pontos;
 }
@@ -59,26 +61,30 @@ function highestCount(input) {
       numberOfOccurrences += 1;
     } else {
       break;
-    }  
+    }
   return numberOfOccurrences;
 }
 highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let gato1 = cat1; let gato2 = cat2; let rato = mouse;
-  let distGato1Rato = Math.abs(gato1 - rato); let distRatoGato1 = Math.abs(rato - gato1);
-  let distGato2Rato = Math.abs(gato2 - rato); let distRatoGato2 = Math.abs(rato - gato2);
-
-  if (distGato1Rato < distGato2Rato || distRatoGato1 < distRatoGato2) {
+  let gato1 = cat1;
+  let gato2 = cat2;
+  let rato = mouse;
+  let distGato1Rato = Math.abs(gato1 - rato);
+  let distGato2Rato = Math.abs(gato2 - rato);  
+//função Math.abs observada em artigo do Thiago Pederzolli (Turma 7), disponível em: https://dev.to/thiagopederzolli/facilitando-a-matematica-de-seus-codigos-5bom
+  if (distGato1Rato < distGato2Rato) {
     return "cat1";
-  } else if (distGato2Rato < distGato1Rato || distRatoGato2 < distRatoGato1) {
+  } else if (distGato2Rato < distGato1Rato) {
     return "cat2";
   } else {
+    console.log("os gatos trombam e o rato foge")
     return "os gatos trombam e o rato foge";
   }
 }
 catAndMouse(1, 0, 2);
+
 // Desafio 8
 function fizzBuzz(input) {
   let retorno = [];
@@ -92,18 +98,54 @@ function fizzBuzz(input) {
     } else {
       retorno.push("bug!");
     }
-  }  
+  }
   return retorno;
 }
 fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
-function encode() {
+function encode(input) {
+    
+    let palavraCodificada = "";
+    for(let i = 0; i < input.length; i += 1){                   
+      if (input[i] == "a"){
+        palavraCodificada += 1;
+    } else if (input[i] == "e"){
+        palavraCodificada += 2;
+      } else if (input[i] == "i"){
+        palavraCodificada += 3;
+      } else if (input[i] == "o"){
+        palavraCodificada += 4;
+      } else if (input[i] == "u"){
+        palavraCodificada += 5;
+      } else {
+        palavraCodificada += input[i]
+      }
+    } 
+    return palavraCodificada;
+  }encode("hi there!")
+
+function decode(input) {
+  let palavraDecodificada = "";
+  for(let i = 0; i < input.length; i += 1){                   
+    if (input[i] == 1){
+      palavraDecodificada += "a";
+  } else if (input[i] == 2){
+      palavraDecodificada += "e";
+    } else if (input[i] == 3){
+      palavraDecodificada += "i";
+    } else if (input[i] == 4){
+      palavraDecodificada += "o";
+    } else if (input[i] == 5){
+      palavraDecodificada += "u";
+    } else {
+      palavraDecodificada += input[i]
+    }
+  } 
+  return palavraDecodificada;
+}decode("h3 th2r2!")
   // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+
 
 // Desafio 10
 function techList() {
