@@ -41,7 +41,7 @@ function highestCount(arrayNum) {
   let maxNum = Math.max(...arrayNum);
   let key;
   let count = 0;
-  for (key in arrayNum) {
+  for (key = 0; key < arrayNum.length; key += 1) {
     if (maxNum === arrayNum[key]) {
       count += 1;
     }
@@ -84,7 +84,7 @@ function checkBuzz(Num) {
 function fizzBuzz(arrayNum) {
   let result = [];
   let key;
-  for (key in arrayNum) {
+  for (key = 0; key < arrayNum.length; key += 1) {
     if (checkFizz(arrayNum[key]) && checkBuzz(arrayNum[key])) {
       result.push('fizzBuzz');
     } else if (checkFizz(arrayNum[key]) && !checkBuzz(arrayNum[key])) {
@@ -103,78 +103,76 @@ function fizzBuzz(arrayNum) {
 function encode(phrase) {
   let arrayChar = phrase.split('');
   let key;
-  let novoArr = [];
-  for (key in arrayChar) {
+  let arrayEncoded = [];
+  for (key = 0; key < arrayChar.length; key += 1) {
     switch (arrayChar[key]) {
       case 'a':
-        novoArr.push('1');
+        arrayEncoded.push('1');
         break;
       case 'e':
-        novoArr.push('2');
+        arrayEncoded.push('2');
         break;
       case 'i':
-        novoArr.push('3');
+        arrayEncoded.push('3');
         break;
       case 'o':
-        novoArr.push('4');
+        arrayEncoded.push('4');
         break;
       case 'u':
-        novoArr.push('5');
+        arrayEncoded.push('5');
         break;
       default:
-        novoArr.push(arrayChar[key]);
+        arrayEncoded.push(arrayChar[key]);
     }
   }
   return novoArr.join('');
 }
 // console.log(encode("observe que essa mensagem ficou oculta"));
 
-function decode(phrase) {
+function decode(encoded) {
   // return translater(phrase);
-  let arrayChar = phrase.split('');
+  let arrayCharCod = encoded.split('');
   let key;
-  let novoArr = [];
-  for (key in arrayChar) {
-    switch (arrayChar[key]) {
+  let arrayDecoded = [];
+  for (key = 0; key < arrayCharCod.length; key += 1) {
+    switch (arrayCharCod[key]) {
       case '1':
-        novoArr.push('a');
+        arrayDecoded.push('a');
         break;
       case '2':
-        novoArr.push('e');
+        arrayDecoded.push('e');
         break;
       case '3':
-        novoArr.push('i');
+        arrayDecoded.push('i');
         break;
       case '4':
-        novoArr.push('o');
+        arrayDecoded.push('o');
         break;
       case '5':
-        novoArr.push('u');
+        arrayDecoded.push('u');
         break;
       default:
-        novoArr.push(arrayChar[key]);
+        arrayDecoded.push(arrayCharCod[key]);
     }
   }
-  return novoArr.join('');
+  return arrayDecoded.join('');
 }
 // console.log(decode('4bs2rv2 q52 2ss1 m2ns1g2m n14 f3c45 4c5lt1 12345'));
 
 // Desafio 10
 function makeObject(tech, name) {
-  let objTech = {
-    tech: tech,
-    name: name,
-  };
+  let objTech = {tech: tech, name: name};
   return objTech;
 }
 
 function techList(array, name) {
   let res;
-  if (array.length !== 0) {
+  let list = array.sort();
+  if (list.length !== 0) {
     let key;
     let newArray = [];
-    for (key in array) {
-      newArray.push(makeObject(array[key], name));
+    for (key = 0; key < list.length; key += 1) {
+      newArray.push(makeObject(list[key], name));
     }
     res = newArray;
   } else {
@@ -182,7 +180,7 @@ function techList(array, name) {
   }
   return res;
 }
-// console.log(techList([], 'Digo'))
+// console.log(techList([5, 3, 2, 7, 9], 'Digo'))
 
 // Desafio 11
 function generatePhoneNumber() {
