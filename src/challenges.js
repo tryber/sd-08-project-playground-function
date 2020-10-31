@@ -135,12 +135,12 @@ function encode(string) {
   return result;
 }
 
-function decode() {
+function decode(numbers) {
   // seu código aqui
   let replace = [];
   let result = "";
 
-  for (key in string) {
+  for (key in numbers) {
     switch (string[key]) {
       case "1":
         replace.push("a");
@@ -158,7 +158,7 @@ function decode() {
         replace.push("u");
         break;
       default:
-        replace.push(string[key])
+        replace.push(numbers[key])
     }
     result += replace[key];
   }     
