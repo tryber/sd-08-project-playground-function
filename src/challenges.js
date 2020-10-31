@@ -1,42 +1,30 @@
-//Feliz aniversário Lucas Cassiano Ferraz Paolillo
-
 // Desafio 1
 function compareTrue(status1, status2) {
   return status1 && status2;
   }
-//console.log(compareTrue('true', 'true'));
-
 
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height)/2;
   return area;
 }
-//console.log(calcArea(20, 50));
-
 
 // Desafio 3
 function splitSentence(string) {
   let array = string.split(' ');
-  return array; 
+  return array;
 }
-//console.log(splitSentence('go Trybe'));
-
 
 // Desafio 4
 function concatName(arrayStrig) {
   return `${arrayStrig[arrayStrig.length-1]}, ${arrayStrig[0]}`
 }
-//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = (3 * wins) + (1 * ties);
   return pontos;
 }
-//console.log(footballPoints(5, 2));
-
 
 // Desafio 6
 function highestCount(array) {
@@ -47,7 +35,7 @@ function highestCount(array) {
         max = array[find];
         fixed = find-1;
         find = array.length;
-      } 
+      }
       else if (find == array.length-1) {
         max = array[fixed];
         fixed = array.length;
@@ -63,46 +51,37 @@ function highestCount(array) {
   }
   return count;
 }
-//console.log(highestCount([2, 9, 1, 2, 3, 9, 5, 7]));
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = 0;
   let distanciaCat2  = 0;
-  
   if(cat1 > mouse) {
     distanciaCat1 = cat1 - mouse;
   }
   else {
     distanciaCat1 = mouse - cat1;
   }
- 
   if(cat2 > mouse) {
     distanciaCat2 = cat2 - mouse;
   }
   else {
     distanciaCat2 = mouse - cat2;
   }
- 
-
   if(distanciaCat1 < distanciaCat2) {
-    return 'cat1'
+    return 'cat1';
   }
   else if(distanciaCat2 < distanciaCat1) {
-    return 'cat2'
-  } 
+    return 'cat2';
+  }
   else {
     return 'os gatos trombam e o rato foge'
   }
 }
-console.log(catAndMouse(10, 4, 22));
-
 
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
-
   for(let index in array) {
     if(array[index]%3 == 0 && array[index]%5 == 0) {
       newArray.push('fizzBuzz');
@@ -119,8 +98,6 @@ function fizzBuzz(array) {
   }
   return newArray;
 }
-//console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 
 // Desafio 9
 function encode(text) { //hi there!
@@ -131,10 +108,8 @@ function encode(text) { //hi there!
     o: 4,
     u: 5
   };
-
   let arrayString = text.split('');
   let newText = '';
-
   for(let index = 0; index < text.length; index += 1) {
     for(let key in codec) {
       if(key == arrayString[index]) {
@@ -145,8 +120,6 @@ function encode(text) { //hi there!
   }
   return newText;
 }
-//console.log(encode("hi there!"));
-
 
 function decode(text) {
   codec = {
@@ -156,10 +129,8 @@ function decode(text) {
     o: 4,
     u: 5
   };
-
   let arrayString = text.split('');
   let newText = '';
-
   for(let index = 0; index < text.length; index += 1) {
     for(let key in codec) {
       if(codec[key] == arrayString[index]) {
@@ -170,34 +141,25 @@ function decode(text) {
   }
   return newText;
 }
-//console.log(decode("h3 th2r2!"));
-
 
 // Desafio 10
 function techList(arrayTec, name) {
   if(arrayTec.length == 0 || arrayTec == null) {
     return 'Vazio!';
   }
-    
   newList = [];
   let arraySort = arrayTec.sort();
-  
   for(let index in arraySort) {
     let object = {
       tech: '',
       name: ''
     };
-  
     object.tech = arraySort[index];
     object.name = name;
-
     newList.push(object);
   }
   return newList;
 }
-//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
-//console.log(techList([]));
-
 
 // Desafio 11
 function generatePhoneNumber(arrayPhone) {
@@ -219,10 +181,10 @@ function generatePhoneNumber(arrayPhone) {
       phoneNumber = '(' + arrayPhone[index];
     }
     else if(index == 1) {
-      phoneNumber += arrayPhone[index] + ') '; 
+      phoneNumber += arrayPhone[index] + ') ';
     }
     else if(index == 6) {
-      phoneNumber += arrayPhone[index] + '-'; 
+      phoneNumber += arrayPhone[index] + '-';
     }
     else {
       phoneNumber += arrayPhone[index];
@@ -230,19 +192,15 @@ function generatePhoneNumber(arrayPhone) {
   }
   return phoneNumber;
 }
-//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let condicao1 = (lineA + lineB) > lineC;
   let condicao2 = (lineA + lineC) > lineB;
   let condicao3 = (lineB + lineC) > lineA;
-
   let condicao4 = Math.abs(lineA - lineB) < lineC;
   let condicao5 = Math.abs(lineA - lineC) < lineB;
   let condicao6 = Math.abs(lineB - lineC) < lineA;
-
   if(condicao1 && condicao2 && condicao3 && condicao4 && condicao5 && condicao6) {
     return true
   }
@@ -250,19 +208,15 @@ function triangleCheck(lineA, lineB, lineC) {
     return false
   }
 }
-//console.log(triangleCheck(10, 14, 8));
-
 
 // Desafio 13
 function hydrate(string) {
   let regex = /\d+/g;
   let cupsWater = 0;
   let numbers = string.match(regex);
-
   for(let index in numbers) {
     cupsWater += parseInt(numbers[index]);
   }
-
   if(cupsWater == 1) {
     return `${cupsWater} copo de água`;
   }
@@ -270,8 +224,6 @@ function hydrate(string) {
     return `${cupsWater} copos de água`;
   }
 }
-//console.log(hydrate("1 cachaça"));
-
 
 module.exports = {
   calcArea,
