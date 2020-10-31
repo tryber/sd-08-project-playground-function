@@ -184,13 +184,21 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(word) {
-  let r = /\d+/;
+  let r = /\d+/g;
   let quantidade = word.match(r)
   /** Source: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994 */
-  if (quantidade[0] === '1') {
-    return `${quantidade[0]} copo de água`
+  if (quantidade.length === 1) {
+    if (quantidade[0] === '1') {
+      return `${quantidade[0]} copo de água`
+    }
+    return `${quantidade[0]} copos de água`
+  } else {
+    let count = 0;
+    for (let i = 0; i < quantidade.length; i += 1) {
+      count += quantidade[i];
+    }
+    return `${quantidade[0]} copos de água`
   }
-  return `${quantidade[0]} copos de água`
 }
 
 
