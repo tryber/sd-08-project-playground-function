@@ -158,11 +158,15 @@ decode(testeDecode);
 function techList(vetor, name) {
   vetor.sort();
   let resultado = [];
-  for (let count in vetor) {
-    resultado.push({
-    tech: vetor[count],
-    name: name,
-    });
+  if (vetor.length == 0) {
+    resultado = "Vazio!"
+  } else {
+    for (let count in vetor) {
+      resultado.push({
+      tech: vetor[count],
+      name: name,
+      });
+    }
   }
   return resultado;
 }
