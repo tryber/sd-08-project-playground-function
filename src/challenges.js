@@ -172,6 +172,7 @@ function techList(array, name) {
 function generatePhoneNumber(array) {
   // seu código aqui
   let phoneNumber = '';
+  let objArray = {};
   // Inicializa um novo array com o objeto criado acima.
   let newArray = [];
   if (array.length !== 11) {
@@ -257,10 +258,9 @@ function hydrate(string) {
     coposDeAgua += number[pos];
   }
   if (coposDeAgua === 1) {
-    return coposDeAgua + ' copo de água';
-  } else {
-    return coposDeAgua + ' copos de água';
-  }
+    return `${coposDeAgua} copo de água`;
+  } 
+  return `${coposDeAgua} copos de água`;
 }
 
 module.exports = {
