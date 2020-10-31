@@ -33,11 +33,11 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let contador = 0;
   let maior = 0
-  for (indice = 0; indice < numbers.length; indice += 1) {
-    if (maior < numbers[indice]){
-    maior = numbers[indice];
-    contador = 1;
-    } else if (maior == numbers[indice]){
+  for (let indice = 0; indice < numbers.length; indice += 1) {
+    if (maior < numbers[indice]) {
+      maior = numbers[indice];
+      contador = 1;
+    } else if (maior === numbers[indice]) {
       contador += 1;
     }
   }
@@ -46,8 +46,8 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = Math.abs(mouse-cat1);
-  let distanciaCat2 = Math.abs(mouse-cat2);
+  let distanciaCat1 = Math.abs(mouse - cat1);
+  let distanciaCat2 = Math.abs(mouse - cat2);
   if (distanciaCat1 > distanciaCat2) {
     return ('cat2');
   } else if (distanciaCat1 < distanciaCat2) {
@@ -60,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numeros) {
   let vetorResposta = []
-  for (index = 0; index < numeros.length; index +=1) {
+  for (let index = 0; index < numeros.length; index +=1) {
     if (numeros[index] % 3 && numeros[index] % 5 != 0) {
       vetorResposta.push('bug!');
     } else if (numeros[index] % 3 == 0 && numeros[index] % 5 == 0) {
@@ -104,7 +104,7 @@ function techList(tech, name) {
   if (tech.length != 0){
     let objetos = [];
     tech.sort();
-    for (index = 0; index < tech.length; index += 1){
+    for (let index = 0; index < tech.length; index += 1) {
       objetos.push(new Object({
       tech: tech[index],
       name: name}));
@@ -121,15 +121,15 @@ function generatePhoneNumber(vetor) {
   if (vetor.length != 11){
     return ('Array com tamanho incorreto.');
   }
-  for (index = 0; index < vetor.length; index +=1){
+  for (let index = 0; index < vetor.length; index +=1) {
     let contadorRepetido = 0;
-    if (vetor[index] < 0){
+    if (vetor[index] < 0) {
       return ('não é possível gerar um número de telefone com esses valores');
     } else if (vetor[index] > 9){
       return ('não é possível gerar um número de telefone com esses valores');
     }
 
-    for (segundoIndex = vetor.length; segundoIndex > index; segundoIndex -= 1) {
+    for (let segundoIndex = vetor.length; segundoIndex > index; segundoIndex -= 1) {
       if (vetor[segundoIndex-1] == vetor[index]){
         contadorRepetido +=1;
       }
@@ -142,7 +142,7 @@ function generatePhoneNumber(vetor) {
 
   let espaco = '-';
   let final = '';
-  for (index = 1; index < vetor.length; index +=1) {
+  for (let index = 1; index < vetor.length; index +=1) {
     if (index == 1){
       final = '(' + vetor[index-1] + vetor[index] + ') ';
     } else if (index > 0 && index < 7) {
@@ -159,7 +159,7 @@ function generatePhoneNumber(vetor) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let possivel = false;
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)){
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     possivel = true;
   } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
     possivel = true;
@@ -173,7 +173,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(recebida) {
   let inteiro = recebida.match(/\d+/g)
   let soma = 0
-  for (i = 0; i < inteiro.length; i+=1){
+  for (let i = 0; i < inteiro.length; i+=1) {
     soma += new Number(inteiro[i]);
   }
   if (soma == 1) {
@@ -182,8 +182,6 @@ function hydrate(recebida) {
     return (soma + ' copos de água')
   }
 }
-console.log(hydrate('1 cerveja'))
-
 
 module.exports = {
   calcArea,
