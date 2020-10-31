@@ -156,6 +156,7 @@ decode(testeDecode);
 
 // Desafio 10
 function techList(vetor, name) {
+  vetor.sort();
   let resultado = [];
   for (let count in vetor) {
     resultado.push({
