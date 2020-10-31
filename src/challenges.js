@@ -30,10 +30,13 @@ function concatName(nomes) {
 concatName(['Patricia', 'Carlin', 'Martins']);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let vitoria = (wins * 3);
+  let empates = (ties * 1);
+  let points = (vitoria + empates);
+  return points;
 }
-
+footballPoints(10, 5);
 // Desafio 6
 function highestCount() {
   // seu código aqui
