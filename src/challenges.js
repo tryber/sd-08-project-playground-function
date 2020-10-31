@@ -16,14 +16,14 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(str) {
-  return str.split(" ");
+  return str.split(' ');
 }
 // Ok! (?)
 
 // Desafio 4
 function concatName(array) {
   let concat1 = [array.pop(), array[0]];
-  return concat1.join(", ");
+  return concat1.join(', ');
 }
 // Ok!
 
@@ -51,24 +51,43 @@ function highestCount(arrayNumber) {
   }
   return totalLength.length;
 }
-// Ok!!
+// Ok, but too complex ¬¬!
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs((mouse) - (cat1));
   let distCat2 = Math.abs((mouse) - (cat2));
   if (distCat1 < distCat2) {
-    return "cat1"
+    return 'cat1'
   } else if (distCat1 > distCat2) {
-    return "cat2"
+    return 'cat2'
   } else {
-    return "os gatos trombam e o rato foge"
+    return 'os gatos trombam e o rato foge'
   }
 }
-//Ok!
+// Ok!
 
 // Desafio 8
-function fizzBuzz(array) {}
+function fizzBuzz(array) {
+  let fizzBuzzing = [];
+  let fizzBuzz15 = 'fizzBuzz';
+  let fizz3 = 'fizz';
+  let buzz5 = 'buzz';
+  let bug = 'bug!'
+ for (i = 0; i < array.length; i += 1) {
+   if (array[i] % 15 === 0) {
+     fizzBuzzing.push(fizzBuzz15)
+   } else if (array[i] % 3 === 0) {
+     fizzBuzzing.push(fizz3)
+   } else if (array[i] % 5 === 0) {
+     fizzBuzzing.push(buzz5)
+   } else {
+     fizzBuzzing.push(bug)
+   }
+ }
+  return fizzBuzzing
+}
+// Ok!!
 
 // Desafio 9
 function encode() {
