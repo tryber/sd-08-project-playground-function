@@ -140,10 +140,10 @@ console.log(techList([],"Fernanda"))
 
 // Desafio 11
 function generatePhoneNumber(num) {
-    if (arrayphone(num) == false) {
+    if (arrayphone(num) != true) {
+        return arrayphone(num);
+      }
       return formating(num);
-    }
-    return arrayphone(num);
   }
   
   function arrayphone(num) {
@@ -163,7 +163,7 @@ function generatePhoneNumber(num) {
     }
     return true;
   }
-  
+
   function formating(num) {
     let prefixo = '';  
     let inicio = '';
@@ -179,7 +179,7 @@ function generatePhoneNumber(num) {
     }
     return `(${prefixo}) ${inicio}-${final}`;
   }
-  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+  console.log(generatePhoneNumber([1, 2, 3, 4, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
