@@ -116,11 +116,13 @@ function techList(tech, name) {
 }
 
 // Desafio 11
+// Expressão regular encontrada no Stackoverflow - https://stackoverflow.com/questions/17650197/mask-javascript-variable-value
 function generatePhoneNumber(array) {
   let result = "";
   let formattedNumber = "";
   let repeatedNumber = array[0];
   let count = 1;
+  let rawString = array.join("");
   if (array.length !== 11) {
     result = "Array com tamanho incorreto.";
   } else {
@@ -133,12 +135,9 @@ function generatePhoneNumber(array) {
         }
       }
     }
-  for (j = 0; j < array.length; j++) {
-    
-  }  
-  return result;
+    formattedNumber = rawString.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1)$2-$3")
+  return formattedNumber;
 }
-console.log(generatePhoneNumber([1, 2, 3, 1, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
