@@ -301,7 +301,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function countDrinks(str) {
   let arrayChar = str.split('');
-  count = 0;
+  let count = 0;
   for (let index = 0; index < arrayChar.length; index += 1) {
     switch (arrayChar[index]) {
       case '1':
