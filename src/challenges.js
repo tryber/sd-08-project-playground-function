@@ -130,14 +130,12 @@ function techList(array, name) {
   if (materias.length === 0) {
     return error
   } for (let i in materias) {
-      materias[i] = {
-        tech: materias[i],
-        name: name,
-      }
-      arrayObj.push(materias[i])
-    
-  }
-  return arrayObj
+    materias[i] = {
+      tech: materias[i],
+      name: name,
+    }
+    arrayObj.push(materias[i])
+  } return arrayObj
 }
 
 // Desafio 11
