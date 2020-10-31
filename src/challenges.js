@@ -64,25 +64,11 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let dist1 = 0;
-  let dist2 = 0;
   let frase = '';
 
-  if (mouse > cat1) {
-    dist1 = mouse - cat1;
-  } else {
-    dist1 = cat1 - mouse;
-  }
-
-  if (mouse > cat2) {
-    dist2 = mouse - cat2;
-  } else {
-    dist2 = cat2 - mouse;
-  }
-
-  if (dist1 === dist2) {
+  if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
     frase = 'os gatos trombam e o rato foge';
-  } else if (dist1 < dist2) {
+  } else if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     frase = 'cat1';
   } else {
     frase = 'cat2';
@@ -96,18 +82,14 @@ function fizzBuzz(arrayNumbers) {
   let arrayStrings = [];
 
   for (let i = 0; i < arrayNumbers.length; i += 1) {
-    if (arrayNumbers[i] % 3 === 0) {
-      if (arrayNumbers[i] % 5 === 0) {
-        arrayStrings.push('fizzBuzz');
-      } else {
-        arrayStrings.push('fizz');
-      }
+    if ((arrayNumbers[i] % 3 === 0) && (arrayNumbers[i] % 5 !== 0)) {
+      arrayStrings.push('fizz');
+    } else if ((arrayNumbers[i] % 3 !== 0) && (arrayNumbers[i] % 5 === 0)) {
+      arrayStrings.push('buzz');
+    } else if ((arrayNumbers[i] % 3 === 0) && (arrayNumbers[i] % 5 === 0)) {
+      arrayStrings.push('fizzBuzz');
     } else {
-      if (arrayNumbers[i] % 5 === 0) {
-        arrayStrings.push('buzz');
-      } else {
-        arrayStrings.push('bug!');
-      }
+      arrayStrings.push('bug!');
     }
   }
 
@@ -121,25 +103,19 @@ function encode(string) {
 
   for (let i = 0; i < string.length; i += 1) {
     letra = string[i];
-    switch (letra) {
-      case 'a':
-        frase += '1';
-        break;
-      case 'e':
-        frase += '2';
-        break;
-      case 'i':
-        frase += '3';
-        break;
-      case 'o':
-        frase += '4';
-        break;
-      case 'u':
-        frase += '5';
-        break;
-      default:
-        frase += letra;
-        break;
+    
+    if (letra === 'a') {
+      frase += 1;
+    } else if (letra === 'e') {
+      frase += 2;
+    } else if (letra === 'i') {
+      frase += 3;
+    } else if (letra === 'o') {
+      frase += 4;
+    } else if (letra === 'u') {
+      frase += 5;
+    } else {
+      frase += letra;
     }
   }
 
@@ -152,25 +128,19 @@ function decode(string) {
 
   for (let i = 0; i < string.length; i += 1) {
     letra = string[i];
-    switch (letra) {
-      case '1':
-        frase += 'a';
-        break;
-      case '2':
-        frase += 'e';
-        break;
-      case '3':
-        frase += 'i';
-        break;
-      case '4':
-        frase += 'o';
-        break;
-      case '5':
-        frase += 'u';
-        break;
-      default:
-        frase += letra;
-        break;
+    
+    if (letra === '1') {
+      frase += 'a';
+    } else if (letra === '2') {
+      frase += 'e';
+    } else if (letra === '3') {
+      frase += 'i';
+    } else if (letra === '4') {
+      frase += 'o';
+    } else if (letra === '5') {
+      frase += 'u';
+    } else {
+      frase += letra;
     }
   }
 
@@ -179,7 +149,7 @@ function decode(string) {
 
 // Desafio 10
 function techList(List, name) {
-  List = List.sort();
+  let orderList = List.sort();
   let resultado = null;
   let orderVector = [];
   let objList = {
@@ -187,10 +157,10 @@ function techList(List, name) {
     name: name,
   };
 
-  if (List === '') {
+  if (orderList.length === 0) {
     resultado = 'Vazio!';
   } else {
-    for (i = 0; i < List.length; i += 1) {
+    for (let i = 0; i < orderList.length; i += 1) {
       let element = {
         tech: objList.tech[i],
         name: name,
@@ -244,7 +214,7 @@ function generatePhoneNumber(arrayNumbers) {
       }
       resultado = (`(${ddd}) ${first}-${second}`);
     }
-}
+  }
 
   return resultado;
 }
@@ -258,8 +228,23 @@ function triangleCheck(lineA, lineB, lineC) {
   let difAB = lineA - lineB;
   let difBC = lineB - lineC;
   let difCA = lineC - lineA;
+  let lineAok = false;
+  let lineBok = false;
+  let lineCok = false;
 
-  if ((lineA < sumBC && lineA > Math.abs(difBC)) || (lineB < sumCA && lineB > Math.abs(difCA)) || (lineC < sumAB && lineC > Math.abs(difAB))) {
+  if ((lineA < sumBC) && (lineA > Math.abs(difBC))) {
+    lineAok = true;
+  }
+
+  if ((lineB < sumCA) && (lineB > Math.abs(difCA))) {
+    lineBok = true;
+  }
+
+  if ((lineC < sumAB) && (lineC > Math.abs(difAB))) {
+    lineCok = true;
+  }
+
+  if (lineAok || lineBok || lineCok) {
     resultado = true;
   } else {
     resultado = false;
@@ -274,23 +259,23 @@ function hydrate(bebidas) {
   let frase = '';
 
   for (let i = 0; i < bebidas.length; i += 1) {
-    if (bebidas[i] === 1) {
+    if (bebidas[i] === '1') {
       copos += 1;
-    } else if (bebidas[i] === 2) {
+    } else if (bebidas[i] === '2') {
       copos += 2;
-    } else if (bebidas[i] === 3) {
+    } else if (bebidas[i] === '3') {
       copos += 3;
-    } else if (bebidas[i] === 4) {
+    } else if (bebidas[i] === '4') {
       copos += 4;
-    } else if (bebidas[i] === 5) {
+    } else if (bebidas[i] === '5') {
       copos += 5;
-    } else if (bebidas[i] === 6) {
+    } else if (bebidas[i] === '6') {
       copos += 6;
-    } else if (bebidas[i] === 7) {
+    } else if (bebidas[i] === '7') {
       copos += 7;
-    } else if (bebidas[i] === 8) {
+    } else if (bebidas[i] === '8') {
       copos += 8;
-    } else if (bebidas[i] === 9) {
+    } else if (bebidas[i] === '9') {
       copos += 9;
     }
   }
