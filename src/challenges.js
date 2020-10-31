@@ -176,30 +176,31 @@ techList([], "Lucas");
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
-  let retorno = "0";
-  let repet = 0;
+  let retorno = "";
+  let repet = 1;
   let maior = 0;
-  for (let cont = 0; cont <= array.length; cont++) {
-
-    if ((array[cont] < 0) || array[cont] > 9) {
-      retorno = "não é possível gerar um número de telefone com esses valores";
-    } else if (array[cont] > maior) {
-      maior = array[cont];
-    } else {
-      retorno = array.join();
+  let indiceRepet = array[0];
+    if (array.length !== 11) {
+      retorno = "Array com tamanho incorreto.";
     }
-  }
-  for (let cont = 0; cont <= array.length; cont++) {
-  if (array[cont] == array[cont] + 1) {
-    repet += 1;
-  } else if (repet >= 3) {
-     retorno = "não é possível gerar um número de telefone com esses valores";
+  for (let cont = 1; cont <= array.length; cont++) {
+  if (array[cont] === indiceRepet) {
+  repet += 1;
   } 
+  if (repet >= 3) {
+    retorno = "não é possível gerar um número de telefone com esses valores";
+  }
+}
+  if (array.length === 11) {
+    let parte1 = array.join("").slice(0,2);
+    let parte2 = array.join("").slice(2,6);
+    let parte3 = array.join("").slice(7,10);
+    retorno = `(${parte1})${parte2}-${parte3}`  
   }
   return retorno;
+  //}
 }
-
-console.log(generatePhoneNumber([1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 3, 4, 5, 1, 3, 7, 8, 3, 9, 0, 2]));
 
 
 
