@@ -44,14 +44,14 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function numRepete(arrayNumbers, maior) {
-  let repete = 0;
+  let iCont = 0;
 
   for (let x = 0; x < arrayNumbers.length; x += 1) {
     if (arrayNumbers[x] === maior) {
-      repete += 1;
+      iCont += 1;
     }
   }
-  return repete;
+  return iCont;
 }
 
 function highestCount(arrayNumbers) {
