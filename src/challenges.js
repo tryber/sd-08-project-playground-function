@@ -103,11 +103,12 @@ function fizzBuzz(array) {
   return string;
 }
 
+
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  replace = [];
-  result = "";
+  let replace = [];
+  let result = "";
 
   for (index in string) {
     switch (string[index]) {
@@ -136,11 +137,11 @@ function encode(string) {
 
 function decode() {
   // seu código aqui
-  replace = [];
-  result = "";
+  let replace = [];
+  let result = "";
 
-  for (index in string) {
-    switch (string[index]) {
+  for (key in string) {
+    switch (string[key]) {
       case "1":
         replace.push("a");
         break;
@@ -157,9 +158,9 @@ function decode() {
         replace.push("u");
         break;
       default:
-        replace.push(string[index])
+        replace.push(string[key])
     }
-    result += replace[index];
+    result += replace[key];
   }     
   return result;
 }
