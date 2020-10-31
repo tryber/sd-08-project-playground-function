@@ -146,16 +146,12 @@ function decode(input) {
 }decode("h3 th2r2!")
   
 // Desafio 10
-function techList(name,array) {
+function techList(array,name) {
   let arrayBase = [];
   let retorno = new Array();
 
-  if (array == undefined && retorno.length == 0){
-    console.log("Vazio!")
-    return "Vazio!"
-       
-  } else {
-  for (let i = 0; i < array.length; i += 1) {
+  if (Array.isArray(array)){
+    for (let i = 0; i < array.length; i += 1) {
     arrayBase.push(array[i]);
   }
   
@@ -169,8 +165,13 @@ function techList(name,array) {
   }  
   console.log(retorno)
   return retorno
-  }  
-} techList("Lucas", ["React", "Jest", "HTML", "CSS", "JavaScript"])
+   
+  } else {
+  console.log("Vazio!")
+  return "Vazio!"
+  
+}
+ } techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas")
   
 // Desafio 11
 function generatePhoneNumber() {
