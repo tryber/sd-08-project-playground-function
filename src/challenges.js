@@ -126,7 +126,7 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numberPhone) {
   // seu código aqui
   let = fone = '';
   if (numberPhone.length > 11) {
@@ -160,7 +160,7 @@ function generatePhoneNumber() {
       fone += numberPhone[i];
     }
   }
-  
+
   return fone;
 }
 
