@@ -163,6 +163,23 @@ function generatePhoneNumber(num) {
     }
     return true;
   }
+  
+  function formating(num) {
+    let prefixo = '';  
+    let inicio = '';
+    let final = '';
+    for (let n = 0; n < 2; n += 1) {
+      prefixo += num[n];
+    }
+    for (let n = 2; n < 7; n += 1) {
+      inicio += num[n];
+    }
+    for (let n = 7; n < 11; n += 1) {
+      final += num[n];
+    }
+    return `(${prefixo}) ${inicio}-${final}`;
+  }
+  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
