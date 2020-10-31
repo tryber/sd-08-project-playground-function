@@ -7,7 +7,7 @@ function compareTrue(value1, value2) {
     return false;
   }
 }
-compareTrue();
+
 
 // Desafio 2
 function calcArea(base, height) {
@@ -15,7 +15,7 @@ function calcArea(base, height) {
   let area = (base * height)/2;
   return area;
 }
-calcArea();
+
 
 // Desafio 3
 //Apesar de não termos visto o conteúdo "split" usei esse site para aprender sobre e responder ao exercicio - https://hcode.com.br/blog/dividindo-strings-com-metodo-split
@@ -23,7 +23,7 @@ function splitSentence(separate) {
   // seu código aqui
   return separate.split(' ');
 }
-console.log(splitSentence('Go trybe'));   
+  
 
 // Desafio 4 
 function concatName(phrase) {
@@ -36,7 +36,7 @@ function footballPoints(wins, ties) {
   // seu código aqui
  return wins * 3 + ties;
 }
-console.log(footballPoints(3, 1));
+
 
 // Desafio 6
 function highestCount(numbers) {
@@ -55,7 +55,7 @@ function highestCount(numbers) {
   }
   return bigger2;
 }
-highestCount();
+
 
 // Desafio 7
 // Usei o site https://www.w3schools.com/jsref/jsref_abs.asp para aprender mais sobre o método match.abs() 
@@ -74,7 +74,6 @@ function catAndMouse(mouse, cat1, cat2) {
     }
     
 }
-console.log(catAndMouse(10, 9, 9));
 
 // Desafio 8
 function fizzBuzz(numbers) {
@@ -94,7 +93,6 @@ function fizzBuzz(numbers) {
   return sequence;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
@@ -108,8 +106,7 @@ function decode() {
 function techList() {
   // seu código aqui
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"]
-"Tiago"));
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
@@ -124,7 +121,6 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
 }
-triangleCheck();
 
 // Desafio 13
 function hydrate() {
