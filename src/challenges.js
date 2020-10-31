@@ -84,9 +84,16 @@ function highestCount(array) {
 
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-}
+  if(cat1 > cat2 && cat1 <= mouse){
+    return 'cat1';
+  }else if(cat2 > cat1 && cat2 <=mouse){
+    return 'cat2';
+  }else if(cat1 === cat2){
+    return'os gatos trombam e o rato foge';
+  };
+};
 
 
 
@@ -96,9 +103,22 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(param) {
   // seu código aqui
-  for(contador = 1; contador <= param.length; contador += 1){
-      console.log(contador)
+
+  fizzBuzzNumbers=[];
+
+  for(contador = 0; contador < param.length; contador += 1){
+      if(param[contador] % 15 === 0){
+        fizzBuzzNumbers.push('fizzBuzz');
+      }else if(param[contador] % 5 === 0){
+        fizzBuzzNumbers.push('buzz');
+      }else if(param[contador] % 3 === 0){
+        fizzBuzzNumbers.push('fizz');
+      }else{
+        fizzBuzzNumbers.push('bug!');
+      }
   };
+
+  return fizzBuzzNumbers;
 };
 
 
