@@ -15,22 +15,22 @@ function calcArea(base, height) {
 calcArea(10, 5);
 
 function splitSentence(frase) {
-  let x = frase.split(" ");
+  let x = frase.split(' ');
   return x;
 }
-splitSentence("Fabio Higor de Almeida");
+splitSentence('Fabio Higor de Almeida');
 
 // Desafio 4
 
 function concatName(nomes) {
   let ultima = nomes.pop();
   let primeira = nomes.shift();
-  let final = ultima + ", " + primeira;
+  let final = ultima + ', ' + primeira;
   // final.push(primeira);
   // final.unshift(ultima);
   return final;
 }
-let nomes = ["Lucas", "Cassiano", "Ferraz", "Paolillo"];
+let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 concatName(nomes);
 
 // Desafio 5
@@ -62,13 +62,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let p1 = Math.abs(cat1 - mouse);
   let p2 = Math.abs(cat2 - mouse);
   if (p1 === p2) {
-    let m1 = "os gatos trombam e o rato foge";
+    let m1 = 'os gatos trombam e o rato foge';
     return m1;
   } else if (p1 > p2) {
-    let g2 = "cat2";
+    let g2 = 'cat2';
     return g2;
   } else if (p1 < p2) {
-    let g1 = "cat1";
+    let g1 = 'cat1';
     return g1;
   }
 }
@@ -77,40 +77,41 @@ catAndMouse(1, 2, 5);
 // Desafio 8
 let arr = [2, 15, 7, 9, 45];
 function fizzBuzz(a) {
-  for (let i = 0; i < arr.length; i += 1) {
-    if (a[i] % 3 === 0 && a[i] % 5 === 0) {
-      arr[i] = "fizzBuzz";
-    } else if (a[i] % 3 === 0) {
-      arr[i] = "fizz";
-    } else if (a[i] % 5 === 0) {
-      arr[i] = "buzz";
+  let vd = a;
+  for (let i = 0; i < vd.length; i += 1) {
+    if (vd[i] % 3 === 0 && vd[i] % 5 === 0) {
+      vd[i] = 'fizzBuzz';
+    } else if (vd[i] % 3 === 0) {
+      vd[i] = 'fizz';
+    } else if (vd[i] % 5 === 0) {
+      vd[i] = 'buzz';
     } else {
-      arr[i] = "bug!";
+      vd[i] = 'bug!';
     }
   }
-  console.log(arr);
+  console.log(vd);
 }
 fizzBuzz(arr);
 
 // Desafio 9
-let st = "hi there!";
+let st = 'hi there!';
 function encode(a) {
-  let reple = a.replace(/a/g, "1");
-  reple = reple.replace(/e/g, "2");
-  reple = reple.replace(/i/g, "3");
-  reple = reple.replace(/o/g, "4");
-  reple = reple.replace(/u/g, "5");
-  return reple;
+  repleM = a.replace(/a/g, '1');
+  repleM = repleM.replace(/e/g, '2');
+  repleM = repleM.replace(/i/g, '3');
+  repleM = repleM.replace(/o/g, '4');
+  repleM = repleM.replace(/u/g, '5');
+  return repleM;
 }
 encode(st);
 
-let stnum = "h3 th2r2!";
-function decode(a) {
-  let reple = a.replace(/1/g, "a");
-  reple = reple.replace(/2/g, "e");
-  reple = reple.replace(/3/g, "i");
-  reple = reple.replace(/4/g, "o");
-  reple = reple.replace(/5/g, "u");
+let stnum = 'h3 th2r2!';
+function decode(c) {
+  reple = c.replace(/1/g, 'a');
+  reple = reple.replace(/2/g, 'e');
+  reple = reple.replace(/3/g, 'i');
+  reple = reple.replace(/4/g, 'o');
+  reple = reple.replace(/5/g, 'u');
   return reple;
 }
 decode(stnum);
