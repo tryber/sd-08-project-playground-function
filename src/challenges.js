@@ -67,36 +67,77 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(0, 2, 2));
 
 // Desafio 8
-function checkFizz(Num) {
-  let check;
-  if ((Num % 3) === 0) {
-    check = true;
-  }
-  return check;
-}
-function checkBuzz(Num) {
-  let check;
-  if ((Num % 5) === 0) {
-    check = true;
-  }
-  return check;
-}
-function fizzBuzz(arrayNum) {
-  let result = [];
-  let key;
-  for (key = 0; key < arrayNum.length; key += 1) {
-    if (checkFizz(arrayNum[key]) && checkBuzz(arrayNum[key])) {
-      result.push('fizzBuzz');
-    } else if (checkFizz(arrayNum[key]) && !checkBuzz(arrayNum[key])) {
-      result.push('fizz');
-    } else if (!checkFizz(arrayNum[key]) && checkBuzz(arrayNum[key])) {
-      result.push('buzz');
+function checkBug(listFizz) {
+  let index;
+  let listBug = [];
+  for (index = 0; index < listFizz.length; index += 1) {
+    if ((typeof (listFizz[index])) === "number") {
+      listBug.push("bug!");
     } else {
-      result.push('bug!');
+      listBug.push(listFizz[index]);
     }
   }
-  return result;
+  return listBug;
 }
+
+function checkFizz(listBuzz) {
+  let index;
+  let listFizz = [];
+  for (index = 0; index < listBuzz.length; index += 1) {
+    switch ((listBuzz[index] % 3)) {
+      case 0:
+        listFizz.push("fizz");
+        break;
+      default:
+        listFizz.push(listBuzz[index]);
+    }
+  }
+  return listFizz;
+}
+
+function checkBuzz(listFizzBuzz) {
+  let index;
+  let listBuzz = [];
+  for (index = 0; index < listFizzBuzz.length; index += 1) {
+    switch ((listFizzBuzz[index] % 5)) {
+      case 0:
+        listBuzz.push("buzz");
+        break;
+      default:
+        listBuzz.push(listFizzBuzz[index]);
+    }
+  }
+  return listBuzz;
+}
+
+function checkFizzBuzz(arrayNum) {
+  let index;
+  let listFizzBuzz = [];
+  for (index = 0; index < arrayNum.length; index += 1) {
+    switch ((arrayNum[index] % 15)) {
+      case 0:
+        listFizzBuzz.push("fizzBuzz");
+        break;
+      default:
+        listFizzBuzz.push(arrayNum[index]);
+    }
+  }
+  return listFizzBuzz;
+}
+
+function fizzBuzz(arrayNum) {
+  let listFizzBuzz;
+  let listBuzz;
+  let listFizz;
+  let listBug;
+  let key;
+    listFizzBuzz = checkFizzBuzz(arrayNum);
+    listBuzz = checkBuzz(listFizzBuzz);
+    listFizz = checkFizz(listBuzz);
+    listBug = checkBug(listFizz);
+    return listBug;
+}
+
 // console.log(fizzBuzz([3, 1, 5, 10, 12, 14, 15, 19, 20]))
 
 // Desafio 9
@@ -125,7 +166,7 @@ function encode(phrase) {
         arrayEncoded.push(arrayChar[key]);
     }
   }
-  return novoArr.join('');
+  return arrayEncoded.join('');
 }
 // console.log(encode("observe que essa mensagem ficou oculta"));
 
@@ -161,7 +202,7 @@ function decode(encoded) {
 
 // Desafio 10
 function makeObject(tech, name) {
-  let objTech = {tech: tech, name: name};
+  let objTech = { tech, name };
   return objTech;
 }
 
@@ -180,7 +221,7 @@ function techList(array, name) {
   }
   return res;
 }
-// console.log(techList([5, 3, 2, 7, 9], 'Digo'))
+// console.log(techList([5, 3, 11, 15, 2, 7, 9], 'Digo'))
 
 // Desafio 11
 function generatePhoneNumber() {
