@@ -57,9 +57,8 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
-  } else {
-    return 'cat2';
   }
+  return 'cat2';
 }
 
 // Desafio 8
@@ -158,7 +157,7 @@ function validPhone(arrayNumber) {
 function generatePhoneNumber(arrayNumber) {
   // seu código aqui
   let numberFormated = '';
-  if (arrayNumber.length != 11) {
+  if (arrayNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   if (!validPhone(arrayNumber)) {
@@ -166,13 +165,13 @@ function generatePhoneNumber(arrayNumber) {
   }
   for (let i = 0; i < arrayNumber.length; i += 1) {
     if (i === 0) {
-      numberFormated += `(`;
+      numberFormated += '(';
     }
     if (i === 2) {
-      numberFormated += `) `;
+      numberFormated += ') ';
     }
     if (i === 7) {
-      numberFormated += `-`;
+      numberFormated += '-';
     }
     numberFormated += arrayNumber[i];
   }
@@ -184,7 +183,8 @@ function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     return true;
-  } else return false;
+  }
+  return false;
 }
 
 // Desafio 13
@@ -196,12 +196,10 @@ function hydrate(drinks) {
   for (let i = 0; i < numberOfDrinks.length; i += 1) {
     totalDrinks += Number(numberOfDrinks[i]);
   }
-  if (totalDrinks == 1) {
-    return `1 copo de água`;
+  if (totalDrinks === 1) {
+    return '1 copo de água';
   }
-  if (totalDrinks > 1) {
-    return `${totalDrinks} copos de água`;
-  }
+  return `${totalDrinks} copos de água`;
 }
 
 module.exports = {
