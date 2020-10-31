@@ -230,7 +230,11 @@ function hydrate(phrase) {
       return "Tomar água não vai adiantar - error 404"
     }
   }
-  return coposAgua + " copo de água";
+  if (coposAgua > 1) {
+    return coposAgua + " copos de água";
+  } else {
+    return coposAgua + " copo de água";
+  }
 }
 //console.log(hydrate("1 cerveja e 5 copos de terra"));
 //console.log(hydrate("3 cachaça, 10 cervejas e 3 copo de vinho"));
