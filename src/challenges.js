@@ -61,20 +61,27 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
+function compare(number){
+  let statement = 'bug!';
+  if (number%3 ==0){
+    statement = 'fizz';
+    } 
+  if (number%5 ==0) {
+    statement = 'buzz';
+      }
+  if (number%3  == 0 && number%5 == 0){
+    statement = 'fizzBuzz';
+  }
+   
+  return statement;   
+}
+
+
 function fizzBuzz(array) {
-  list = [];
+  let list = [] 
   for (i in array){
-      if (array[i]%3  == 0 && array[i]%5 == 0){
-          list.push('fizzBuzz');
-      } else if (array[i]%3 ==0 || array[i]%5 == 0) {
-          if (array[i]%3 ==0){
-              list.push('fizz');
-          } else {
-            list.push('buzz');
-          }     
-      } else {
-        list.push('bug!');
-      }     
+    let result = compare(array[i])
+    list.push(result);
   }
   return list;
 }
