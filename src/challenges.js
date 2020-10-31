@@ -139,12 +139,18 @@ function decode(string) {
 
 // Desafio 10
 function techList(tech, name) {
-  let object = {}
-  for (i = 0; i < tech.length; i += 1) {
-   object[i] = {tech: tech[i], name: name};
+  let object = {};
+  if (tech.length === 0) {
+    object = 'Vazio!';
+  } else {
+    for (i = 0; i < tech.length; i += 1) {
+      object[i] = { tech: tech[i], name: name };
+    }
   }
-  return object
+  return object;
 }
+let techn = []; let name = 'John'
+console.log(techList(techn, name))
 // Ok! Uffa!
 
 // Desafio 11
