@@ -250,13 +250,27 @@ function triangleCheck(lineA, lineB, lineC) {
     return false
   }
 }
-console.log(triangleCheck(10, 14, 8));
+//console.log(triangleCheck(10, 14, 8));
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let regex = /\d+/g;
+  let cupsWater = 0;
+  let numbers = string.match(regex);
+
+  for(let index in numbers) {
+    cupsWater += parseInt(numbers[index]);
+  }
+
+  if(cupsWater == 1) {
+    return `${cupsWater} copo de água`;
+  }
+  else {
+    return `${cupsWater} copos de água`;
+  }
 }
+//console.log(hydrate("1 cachaça"));
 
 
 module.exports = {
