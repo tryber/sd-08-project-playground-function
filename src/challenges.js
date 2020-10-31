@@ -72,11 +72,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let maiorValor = mouse *1;
   let valor2 = cat1 * 1;
   let valor3= cat2 *1;
+  let valor5 = "cat1";
+  let valor6 = "cat2";
  let valor4 = ("os gatos trombam e o rato foge")
   if ( valor2/maiorValor > valor3/maiorValor) {
-    return valor2
+    return valor5
   } else if ( valor3/maiorValor > valor2/maiorValor) {
-    return valor3
+    return valor6
   } else  if (valor2 && valor3/maiorValor === 0  );
     return valor4
   }
@@ -84,7 +86,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 
-// console.log ( catAndMouse(6, 5, 5))
+console.log ( catAndMouse(6, 5, 5))
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
