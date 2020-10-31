@@ -57,7 +57,7 @@ function highestCount(arrayOfNumbers) {
     }
   }
   for (let key = 0; key < arrayOfNumbers.length; key += 1) {
-    if (higherNumber == arrayOfNumbers[key]) {
+    if (higherNumber === arrayOfNumbers[key]) {
       countNumber += 1;
     }
   }
@@ -69,7 +69,7 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   if ((Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse))) {
     return 'cat1';
-  }else if ((Math.abs(cat1 - mouse)) > (Math.abs(cat2 - mouse))) {
+  } else if ((Math.abs(cat1 - mouse)) > (Math.abs(cat2 - mouse))) {
     return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
@@ -80,12 +80,12 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayOfNumbers) {
   // seu código aqui
   let fizbuz = [];
-  for (let pos = 0; pos < arrayOfNumbers.length; pos += 1){
-    if (arrayOfNumbers[pos] % 3 == 0 && arrayOfNumbers[pos] % 5 == 0) {
+  for (let pos = 0; pos < arrayOfNumbers.length; pos += 1) {
+    if (arrayOfNumbers[pos] % 3 === 0 && arrayOfNumbers[pos] % 5 === 0) {
       fizbuz.push('fizzBuzz');
-    } else if (arrayOfNumbers[pos] % 3 == 0) {
+    } else if (arrayOfNumbers[pos] % 3 === 0) {
       fizbuz.push('fizz');
-    } else if (arrayOfNumbers[pos] % 5 == 0) {
+    } else if (arrayOfNumbers[pos] % 5 === 0) {
       fizbuz.push('buzz');
     } else {
       fizbuz.push('bug!');
@@ -97,9 +97,9 @@ function fizzBuzz(arrayOfNumbers) {
 // Desafio 9
 function encode(sentence) {
   // seu código aqui
-  let newSentence = "";
+  let newSentence = '';
   for (let pos = 0; pos < sentence.length; pos += 1) {
-    switch (sentence.slice(pos, pos+1)) {
+    switch (sentence.slice(pos, pos + 1)) {
       case 'a':
         newSentence += '1';
         break;
@@ -116,7 +116,7 @@ function encode(sentence) {
         newSentence += '5';
         break;
       default:
-        newSentence += sentence.slice(pos, pos+1);
+        newSentence += sentence.slice(pos, pos + 1);
     }
   }
   return newSentence;
@@ -126,7 +126,7 @@ function decode(sentence) {
   // seu código aqui
   let newSentence = '';
   for (let pos = 0; pos < sentence.length; pos += 1) {
-    switch (sentence.slice(pos, pos+1)) {
+    switch (sentence.slice(pos, pos + 1)) {
       case '1':
         newSentence += 'a';
         break;
@@ -139,11 +139,11 @@ function decode(sentence) {
       case '4':
         newSentence += 'o';
         break;
-      case "5":
+      case '5':
         newSentence += 'u';
         break;
       default:
-        newSentence += sentence.slice(pos, pos+1);
+        newSentence += sentence.slice(pos, pos + 1);
     }
   }
   return newSentence;
@@ -155,7 +155,7 @@ function techList(array, name) {
   let sortedArray = array.sort();
   let listSkills = [];
 
-  if (sortedArray.length != 0) {
+  if (sortedArray.length !== 0) {
     for (let pos = 0; pos < sortedArray.length; pos += 1) {
       let skills = {};
       skills.tech = sortedArray[pos];
@@ -163,7 +163,7 @@ function techList(array, name) {
       listSkills[pos] = skills;
     }
     return listSkills;
-  } else{
+  } else {
     return 'Vazio!';
   }
 }
@@ -172,11 +172,10 @@ function techList(array, name) {
 function generatePhoneNumber(array) {
   // seu código aqui
   let phoneNumber = '';
-  // Cria um objeto contendo o primeiro número do array passado e o número de repetições desse número que inicialmente é zero.
-  let objArray = {};
   // Inicializa um novo array com o objeto criado acima.
   let newArray = [];
-  // Verifica se o array é maior ou menor que 11, caso for, encerra a função retornando o valor abaixo.
+  // Verifica se o array é maior ou menor que 11, caso for, 
+  // encerra a função retornando o valor abaixo.
   if (array.length != 11) {
     return 'Array com tamanho incorreto.';
   } else {
