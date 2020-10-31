@@ -1,6 +1,6 @@
 // Guilherme Ribeiro
 // Desafio 1
-function compareTrue(a,b) {
+function compareTrue(a, b) {
   if (a && b == true) {
     return true;
   }
@@ -9,20 +9,20 @@ function compareTrue(a,b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return ((base*height)/2);
+  return ((base * height) / 2);
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  let string = "";
+  let string = '';
   let array = [];
 
-  for (i=0 ; i<frase.length ; i+=1) {
-    if (frase[i] === " ") {
+  for (i = 0; i < frase.length; i += 1) {
+    if (frase[i] === ' ') {
       array.push(string);
-      string = "";
+      string = '';
     } else {
-      string = string + frase[i];
+      string += frase[i];
     }
   }
   array.push(string);
@@ -32,16 +32,18 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(name) {
-  let string = '';
-  
-  string = string + name[name.length-1] + ', ' + name[0];
+  let firstName = name[0];
+  let lastName = name[name.length - 1];
+
+  let string = lastName + ', ' + firstName;
 
   return string;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins*3+ties);
+
+  return (wins * 3 + ties);
 }
 
 // Desafio 6
@@ -49,12 +51,12 @@ function highestCount(arrayNumbers) {
   let maior = arrayNumbers[0];
   let cont = 0;
 
-  for (i=0;i<arrayNumbers.length;i+=1) {
+  for (i = 0; i < arrayNumbers.length; i += 1) {
     if (arrayNumbers[i] > maior) {
       maior = arrayNumbers[i];
       cont = 1;
     } else if (arrayNumbers[i] == maior) {
-      cont = cont + 1;
+      cont += 1;
     }
   }
 
@@ -65,6 +67,7 @@ function highestCount(arrayNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = 0;
   let dist2 = 0;
+  let frase = '';
 
   if (mouse > cat1) {
     dist1 = mouse - cat1;
@@ -79,30 +82,32 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
   if (dist1 == dist2) {
-    return 'os gatos trombam e o rato foge';
+    frase = 'os gatos trombam e o rato foge';
   } else if (dist1 < dist2) {
-    return 'cat1';
+    frase = 'cat1';
   } else {
-    return 'cat2';
+    frase = 'cat2';
   }
+
+  return frase;
 }
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let arrayStrings = [];
 
-  for (i=0;i<arrayNumbers.length;i+=1) {
+  for (i = 0; i < arrayNumbers.length; i += 1) {
     if (arrayNumbers[i] % 3 == 0) {
       if (arrayNumbers[i] % 5 == 0) {
-        arrayStrings.push('fizzBuzz');//fizzBuzz
+        arrayStrings.push('fizzBuzz');
       } else {
-        arrayStrings.push('fizz');//fizz
+        arrayStrings.push('fizz');
       }
     } else {
       if (arrayNumbers[i] % 5 == 0) {
-        arrayStrings.push('buzz');//buzz
+        arrayStrings.push('buzz');
       } else {
-        arrayStrings.push('bug!');//bug!
+        arrayStrings.push('bug!');
       }
     }
   }
@@ -115,26 +120,26 @@ function encode(string) {
   let frase = '';
   let letra = '';
 
-  for (i=0;i<string.length;i+=1) {
+  for (i = 0; i < string.length; i += 1) {
     letra = string[i];
     switch (letra) {
       case 'a':
-        frase = frase + '1';
+        frase += '1';
         break;
       case 'e':
-        frase = frase + '2';
+        frase += '2';
         break;
       case 'i':
-        frase = frase + '3';
+        frase += '3';
         break;
       case 'o':
-        frase = frase + '4';
+        frase += '4';
         break;
       case 'u':
-        frase = frase + '5';
+        frase += '5';
         break;
       default:
-        frase = frase + letra;
+        frase += letra;
         break;
     }
   }
@@ -146,26 +151,26 @@ function decode(string) {
   let frase = '';
   let letra = '';
 
-  for (i=0;i<string.length;i+=1) {
+  for (i = 0; i < string.length; i += 1) {
     letra = string[i];
     switch (letra) {
       case '1':
-        frase = frase + 'a';
+        frase += 'a';
         break;
       case '2':
-        frase = frase + 'e';
+        frase += 'e';
         break;
       case '3':
-        frase = frase + 'i';
+        frase += 'i';
         break;
       case '4':
-        frase = frase + 'o';
+        frase += 'o';
         break;
       case '5':
-        frase = frase + 'u';
+        frase += 'u';
         break;
       default:
-        frase = frase + letra;
+        frase += letra;
         break;
     }
   }
@@ -176,43 +181,46 @@ function decode(string) {
 // Desafio 10
 function techList(List, name) {
   List = List.sort();
+  let resultado = null;
   let orderVector = [];
   let objList = {
     tech: List,
     name: name
   };
 
-  if (List == ''){
-    return 'Vazio!';
+  if (List == '') {
+    resultado = 'Vazio!';
   } else {
-    for (i=0;i<List.length;i+=1) {
+    for (i = 0; i < List.length; i += 1) {
       let element = {
         tech: objList.tech[i],
         name: name
       };
       orderVector.push(element);
     }
-
-    return orderVector;
+    resultado = orderVector;
   }
+
+  return resultado;
 }
 
 // Desafio 11
 function generatePhoneNumber(arrayNumbers) {
-  let countNumbers = [0,0,0,0,0,0,0,0,0,0];
+  let countNumbers = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   let ddd = '';
   let first = '';
   let second = '';
+  let resultado = null;
 
   if (arrayNumbers.length !== 11) {
-    return 'Array com tamanho incorreto.';
+    resultado = 'Array com tamanho incorreto.';
   }
 
-  for (i=0;i<arrayNumbers.length;i+=1) {
+  for (i = 0; i < arrayNumbers.length; i += 1) {
     if (arrayNumbers[i] < 0 || arrayNumbers[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      resultado = 'não é possível gerar um número de telefone com esses valores';
     } else {
-      for (j=0;j<countNumbers.length;j+=1) {
+      for (j = 0; j < countNumbers.length; j +=1 ) {
         if (arrayNumbers[i] == j) {
           countNumbers[j] += 1;
         }
@@ -220,25 +228,26 @@ function generatePhoneNumber(arrayNumbers) {
     }
   }
 
-  for (i=0;i<countNumbers.length;i+=1) {
+  for (i = 0; i < countNumbers.length; i += 1) {
     if (countNumbers[i] > 2) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      resultado = 'não é possível gerar um número de telefone com esses valores';
     }
   }
 
-  for (i=0;i<arrayNumbers.length;i+=1) {
+  for (i = 0; i < arrayNumbers.length; i += 1) {
     if (i < 2) {
-      ddd = ddd + arrayNumbers[i];
+      ddd += arrayNumbers[i];
     } else if (i < 7) {
-      first = first + arrayNumbers[i];
+      first += arrayNumbers[i];
     } else {
-      second = second + arrayNumbers[i];
+      second += arrayNumbers[i];
     }
   }
-  let number = '(' + ddd + ') ' + first + '-' + second;
+  resultado = (`(${ddd}) ${first}-${second}`);
 
-  return number;
+  return resultado;
 }
+
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -261,7 +270,7 @@ function hydrate(bebidas) {
   let copos = 0;
   let frase = '';
 
-  for (i=0;i<bebidas.length;i+=1) {
+  for (i = 0; i < bebidas.length; i += 1) {
     if (bebidas[i] == 1) {
       copos += 1;
     } else if (bebidas[i] == 2) {
@@ -284,9 +293,9 @@ function hydrate(bebidas) {
   }
 
   if (copos == 1) {
-    frase = copos + ' copo de água';
+    frase = (`${copos} copo de água`);
   } else {
-    frase = copos + ' copos de água';
+    frase = (`${copos} copos de água`);
   }
 
   return frase;
