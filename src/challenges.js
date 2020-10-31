@@ -242,42 +242,13 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function countDrinks(str) {
-  let arrayChar = str.split('');
-  let count = 0;
-  for (let index = 0; index < arrayChar.length; index += 1) {
-    switch (arrayChar[index]) {
-      case '1':
-        count += 1;
-        break;
-      case '2':
-        count += 2;
-        break;
-      case '3':
-        count += 3;
-        break;
-      case '4':
-        count += 4;
-        break;
-      case '5':
-        count += 5;
-        break;
-      case '6':
-        count += 6;
-        break;
-      case '7':
-        count += 7;
-        break;
-      case '8':
-        count += 8;
-        break;
-      case '9':
-        count += 9;
-        break;
-      default:
-        count += 0;
-    }
+  let regex = /\d+/g;
+  let list = str.match(regex);
+  let sum = 0;
+  for (let i = 0; i < list.length; i += 1) {
+    sum += parseInt(list[i]);
   }
-  return count;
+  return sum;
 }
 
 function hydrate(str) {
