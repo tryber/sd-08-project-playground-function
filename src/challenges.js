@@ -165,16 +165,16 @@ function fizzBuzz(arrNum) {
 
   for (let index = 0; index < inputArrNumbers.length; index += 1) {
     if (inputArrNumbers[index] % 3 == 0 && inputArrNumbers[index] % 5 != 0) {
-      outputArr.push("fizz");
+      outputArr.push('fizz');
     }
     else if (inputArrNumbers[index] % 3 != 0 && inputArrNumbers[index] % 5 == 0) {
-      outputArr.push("buzz");
+      outputArr.push('buzz');
     }
     else if (inputArrNumbers[index] %3 == 0 && inputArrNumbers[index] % 5 == 0) {
-      outputArr.push("fizzbuzz");
+      outputArr.push('fizzBuzz');
     } 
     else {
-      outputArr.push("bug!");
+      outputArr.push('bug!');
     }
   }
   return outputArr;
