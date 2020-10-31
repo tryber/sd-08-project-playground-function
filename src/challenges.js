@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue(a, b){
-  if (a === true && b === true ){
+function compareTrue(a, b) {
+  if (a === true && b === true ) {
     return true;
   } else {
     return false;
@@ -9,16 +9,15 @@ function compareTrue(a, b){
 
 // Desafio 2
 function calcArea(base, height) {
-calcArea(10,50);
+calcArea(10, 50);
 return (base * height)/2
 }
   
 
 // Desafio 3
-function splitSentence(a) {
-  let umaString = "Oi Victor"
-  splitSentence(umaString);
-return umaString.split(' ')
+function splitSentence() {
+let umaString = "Oi Victor";
+return umaString.split(' ');
 }
 
 // Desafio 4
