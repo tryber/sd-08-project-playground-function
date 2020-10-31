@@ -150,7 +150,7 @@ function techList(array,name) {
   let arrayBase = [];
   let retorno = new Array();
 
-  if (Array.isArray(array)){
+  if (Array.isArray(array) && array.length != 0){
     for (let i = 0; i < array.length; i += 1) {
     arrayBase.push(array[i]);
   }
@@ -171,7 +171,7 @@ function techList(array,name) {
   return "Vazio!"
   
 }
- } techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas")
+ } techList(["React","Jest", "HTML", "CSS", "JavaScript"], "Lucas")
   
 // Desafio 11
 function generatePhoneNumber() {
