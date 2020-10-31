@@ -5,7 +5,7 @@ function compareTrue(bool1, bool2) {
   if (bool1 && bool2) {
     return true;
   }
-    return false;
+  return false;
 }
 
 // Desafio 2
@@ -37,7 +37,7 @@ function concatName(arrayOfNames) {
   // seu código aqui
   let firstName = arrayOfNames[0];
   let lastName = arrayOfNames[arrayOfNames.length - 1];
-  return lastName + ", " + firstName;
+  return lastName + ', ' + firstName;
 }
 
 // Desafio 5
@@ -68,11 +68,11 @@ function highestCount(arrayOfNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   if ((Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse))) {
-    return "cat1";
+    return 'cat1';
   }else if ((Math.abs(cat1 - mouse)) > (Math.abs(cat2 - mouse))) {
-    return "cat2";
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 
@@ -82,13 +82,13 @@ function fizzBuzz(arrayOfNumbers) {
   let fizbuz = [];
   for (let pos = 0; pos < arrayOfNumbers.length; pos += 1){
     if (arrayOfNumbers[pos] % 3 == 0 && arrayOfNumbers[pos] % 5 == 0) {
-      fizbuz.push("fizzBuzz");
+      fizbuz.push('fizzBuzz');
     } else if (arrayOfNumbers[pos] % 3 == 0) {
-      fizbuz.push("fizz");
+      fizbuz.push('fizz');
     } else if (arrayOfNumbers[pos] % 5 == 0) {
-      fizbuz.push("buzz");
+      fizbuz.push('buzz');
     } else {
-      fizbuz.push("bug!");
+      fizbuz.push('bug!');
     }
   }
   return fizbuz;
@@ -100,20 +100,20 @@ function encode(sentence) {
   let newSentence = "";
   for (let pos = 0; pos < sentence.length; pos += 1) {
     switch (sentence.slice(pos, pos+1)) {
-      case "a":
-        newSentence += "1";
+      case 'a':
+        newSentence += '1';
         break;
-      case "e":
-        newSentence += "2";
+      case 'e':
+        newSentence += '2';
         break;
-      case "i":
-        newSentence += "3";
+      case 'i':
+        newSentence += '3';
         break;
-      case "o":
-        newSentence += "4";
+      case 'o':
+        newSentence += '4';
         break;
-      case "u":
-        newSentence += "5";
+      case 'u':
+        newSentence += '5';
         break;
       default:
         newSentence += sentence.slice(pos, pos+1);
@@ -124,23 +124,23 @@ function encode(sentence) {
 
 function decode(sentence) {
   // seu código aqui
-  let newSentence = "";
+  let newSentence = '';
   for (let pos = 0; pos < sentence.length; pos += 1) {
     switch (sentence.slice(pos, pos+1)) {
-      case "1":
-        newSentence += "a";
+      case '1':
+        newSentence += 'a';
         break;
-      case "2":
-        newSentence += "e";
+      case '2':
+        newSentence += 'e';
         break;
-      case "3":
-        newSentence += "i";
+      case '3':
+        newSentence += 'i';
         break;
-      case "4":
-        newSentence += "o";
+      case '4':
+        newSentence += 'o';
         break;
       case "5":
-        newSentence += "u";
+        newSentence += 'u';
         break;
       default:
         newSentence += sentence.slice(pos, pos+1);
@@ -164,28 +164,28 @@ function techList(array, name) {
     }
     return listSkills;
   } else{
-    return "Vazio!";
+    return 'Vazio!';
   }
 }
 
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
-  let phoneNumber = "";
+  let phoneNumber = '';
   // Cria um objeto contendo o primeiro número do array passado e o número de repetições desse número que inicialmente é zero.
   let objArray = {};
   // Inicializa um novo array com o objeto criado acima.
   let newArray = [];
   // Verifica se o array é maior ou menor que 11, caso for, encerra a função retornando o valor abaixo.
   if (array.length != 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   } else {
     // 'For' para verificar cada posição do array de 11 elementos.
     for (let pos = 0; pos < array.length; pos += 1) {
       let isReapeted = false;
       // Condição para verificar se algum dos elementos é menor que zero ou maior que nove, caso seja, retorna valor abaixo encerrando a função.
       if (array[pos] < 0 || array[pos] > 9) {
-        return "não é possível gerar um número de telefone com esses valores";
+        return 'não é possível gerar um número de telefone com esses valores';
         break;
       } else {
         // 'For' para verificar cada posição do newArray criado no início da função.
@@ -208,20 +208,20 @@ function generatePhoneNumber(array) {
     // Verificar se há algum número com mais de 3 repeats.
     for (let chave in newArray) {
       if (newArray[chave].repeat >= 3) {
-        return "não é possível gerar um número de telefone com esses valores";
+        return 'não é possível gerar um número de telefone com esses valores';
         break;
       } else if (chave == (newArray.length -1)) {
         // Constrói o phoneNumber no formato solicitado.
         for (let posPhone = 0; posPhone < array.length; posPhone += 1) {
           switch (posPhone) {
             case 0:
-              phoneNumber += "(" + array[posPhone];
+              phoneNumber += '(' + array[posPhone];
               break;
             case 2:
-              phoneNumber += ") " + array[posPhone];
+              phoneNumber += '') ' + array[posPhone];
               break;
             case 7:
-              phoneNumber += "-" + array[posPhone];
+              phoneNumber += '-' + array[posPhone];
               break;
             default:
               phoneNumber += array[posPhone];
@@ -255,9 +255,9 @@ function hydrate(string) {
     coposDeAgua += number[pos];
   }
   if (coposDeAgua == 1) {
-    return coposDeAgua + " copo de água";
+    return coposDeAgua + ' copo de água';
   } else {
-    return coposDeAgua + " copos de água"
+    return coposDeAgua + ' copos de água';
   }
 }
 
