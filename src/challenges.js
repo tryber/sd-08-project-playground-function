@@ -72,20 +72,21 @@ function catAndMouse(mouse, cat1, cat2) {
   let maiorValor = mouse *1;
   let valor2 = cat1 * 1;
   let valor3= cat2 *1;
-  let valor5 = "cat1";
-  let valor6 = "cat2";
- let valor4 = ("os gatos trombam e o rato foge")
+  let resultado = " "
+//   let valor5 = "cat1";
+//   let valor6 = "cat2";
+//  let valor4 = ("os gatos trombam e o rato foge")
   if ( valor2/maiorValor > valor3/maiorValor) {
-    return valor5
+    resultado = 'cat1'
   } else if ( valor3/maiorValor > valor2/maiorValor) {
-    return valor6
-  } else  if (valor2 && valor3/maiorValor === 0  );
-    return valor4
+    resultado =  'cat2'
+  } else  if ((valor2 === valor3)){
+    resultado = 'os gatos trombam e o rato foge'
+  
   }
+  return resultado
 
-
-
-
+}
 console.log ( catAndMouse(6, 5, 5))
 // Desafio 8
 function fizzBuzz() {
