@@ -122,21 +122,22 @@ function generatePhoneNumber(array) {
   let repeatedNumber = array[0];
   let count = 1;
   let rawString = array.join("");
+  result = rawString.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1)$2-$3")
   if (array.length !== 11) {
     result = "Array com tamanho incorreto.";
   } else {
       for (i = 1; i < array.length; i++) {
         if (array[i] === repeatedNumber) {
           count += 1;
-        } 
+        }
         if (array[i] < 0 || array[i] > 9 || count === 3) {
           result = "não é possível gerar um número de telefone com esses valores"
         }
       }
     }
-    result = rawString.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1)$2-$3")
   return result;
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
