@@ -31,7 +31,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function getHighestNumber(array) {
-  let maxNumber = array.reduce (function(a, b) {
+  let maxNumber = array.reduce(function (a, b) {
     return Math.max(a, b);
   });
   return maxNumber;
@@ -60,13 +60,14 @@ function catAndMouse(mouse, cat1, cat2) {
   let statement = '';
   if (dmouseCat1 > dmouseCat2) {
     statement = 'cat2';
-  }else {
+  }
+  else {
     statement = 'cat1'
   }
-  if(dmouseCat1 === dmouseCat2) {
+  if (dmouseCat1 === dmouseCat2) {
     statement = 'os gatos trombam e o rato foge';
   }
-return statement;
+  return statement;
 }
 
 // Desafio 8
@@ -85,7 +86,7 @@ function compare(number) {
 }
 function fizzBuzz(array) {
   let list = [];
-  for (let i = 0; i <= array.length; i =+ 1) {
+  for (let i = 0; i <= array.length; i += 1) {
     let result = compare(array[i])
     list.push(result);
   }
@@ -103,7 +104,7 @@ function isVogal(character) {
 }
 function encode(text) {
   let newText = '';
-  for (let i = 0;i < text.length; i += 1) {
+  for (let i = 0; i < text.length; i += 1) {
     let index = isVogal(text[i]);
     newText += index;
   }
@@ -111,17 +112,17 @@ function encode(text) {
 }
 function isNumber(number) {
   let numbersList = ['1', '2', '3', '4', '5'];
-  let vogais= ['a', 'e', 'i', 'o', 'u'];
-  let result= numbersList.indexOf(number);
-  if( result >= 0) {
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
+  let result = numbersList.indexOf(number);
+  if (result >= 0) {
     let resultFromVogal = vogais[result]
     return resultFromVogal;
-  } 
+  }
   return number;
 }
 function decode(text) {
   let newText = '';
-  for (let i = 0;i < text.length; i += 1) {
+  for (let i = 0; i < text.length; i += 1) {
     let index = isNumber(text[i]);
     newText += index;
   }
@@ -131,17 +132,17 @@ function decode(text) {
 function techList(array, name) {
   array.sort();
   let listWithObjects = [];
-  let objectInLIst = {};
+  let objectInList = {};
   if (array.length === 0) {
     return 'Vazio!';
   }
-  for(let i = 0; i < array.length; i += 1) {
-    listWithObjects.push(objectInLIst = {
-        'tech' : array[i],
-        'name' : name,
+  for (let i = 0; i < array.length; i += 1) {
+    listWithObjects.push(objectInList = {
+      tech: array[i],
+      name: name,
     });
   }
-  return listWithObjects;  
+  return listWithObjects;
 }
 
 // Desafio 11
