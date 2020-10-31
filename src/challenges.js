@@ -77,15 +77,6 @@ function fizzBuzz(arrayNumeros) {
   return arrayResultado; 
 }
 
-
-
-
-
-
-
-
-
-
 // Desafio 9
 function encode(palavra) {
   let result = "";
@@ -107,7 +98,6 @@ function encode(palavra) {
   return result;
 }
 
-
 function decode(palavra) {
   let result = "";
   for (let key in palavra){
@@ -127,13 +117,6 @@ function decode(palavra) {
   }
   return result;
 }
-
-
-
-
-
-
-
 
 // Desafio 10
 function techList(nomeTech, name) {    
@@ -193,9 +176,14 @@ else if (arrayPhone.length == 11){
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {  
+
+  
 }
+
+
+
+
 
 
 
