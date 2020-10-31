@@ -103,27 +103,50 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
+
+function tipoDeCodigo(t) {
+  if (t === 0) {
+    return [/a/g, /e/g, /i/g, /o/g, /u/g];
+  }
+  return [/1/g, /2/g, /3/g, /4/g, /5/g];
+}
+
+function alteraPalavra(palavra, codigo, chave) {
+  const contador = 5;
+  let aux = '';
+  for (let i = 0; i < contador; i += 1) {
+    aux = palavra.replace(codigo[i], `${chave[i]}`);
+    palavra = aux;
+  }
+  return palavra;
+}
+
+function encodeDecode(palavra, t) {
+  let nums = ['1', '2', '3', '4', '5'];
+  let letras = ['a', 'e', 'i', 'o', 'u'];
+  let codifcacao = tipoDeCodigo(t);
+  if (t === 0) {
+    palavra = alteraPalavra(palavra, codifcacao, nums);
+  } else {
+    palavra = alteraPalavra(palavra, codifcacao, letras);
+  }
+  return palavra
+}
+
 function encode(palavra) {
   // seu código aqui
-  let nova_Palavra = palavra.replace(/a/g, '1');
-  nova_Palavra = nova_Palavra.replace(/e/g, '2');
-  nova_Palavra = nova_Palavra.replace(/i/g, '3');
-  nova_Palavra = nova_Palavra.replace(/o/g, '4');
-  nova_Palavra = nova_Palavra.replace(/u/g, '5');
+  let nova_Palavra = encodeDecode(palavra, 0)
 
   return nova_Palavra;
 }
 
 function decode(palavra) {
   // seu código aqui
-  let nova_palavra = palavra.replace(/1/g, 'a');
-  nova_palavra = nova_palavra.replace(/2/g, 'e');
-  nova_palavra = nova_palavra.replace(/3/g, 'i');
-  nova_palavra = nova_palavra.replace(/4/g, 'o');
-  nova_palavra = nova_palavra.replace(/5/g, 'u');
+  let nova_palavra = encodeDecode(palavra, 1);
 
   return nova_palavra;
 }
+
 
 // Desafio 10
 function techList(arrayTech, name) {
