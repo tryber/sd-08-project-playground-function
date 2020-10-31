@@ -135,10 +135,11 @@ function techList(array, name) {
   if (array.length === 0) {
     return 'Vazio!';
   }
+
   for (let i = 0; i < array.length; i += 1) {
-    listWithObjects.push(objectInList = {
+    listWithObjects.push({
       tech: array[i],
-      name: name,
+      name,
     });
   }
   return listWithObjects;
