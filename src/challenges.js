@@ -139,9 +139,30 @@ function techList(tech, name) {
 console.log(techList([],"Fernanda"))
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+function generatePhoneNumber(num) {
+    if (arrayphone(num) == false) {
+      return formating(num);
+    }
+    return arrayphone(num);
+  }
+  
+  function arrayphone(num) {
+    if (num.length != 11) {
+      return 'Array com tamanho incorreto.'
+    }
+    for (let val of num) {
+      let repeat = 0;
+      for (let index of num) {
+        if (index === val) {
+          repeat += 1;
+        }
+        if (index < 0 || index > 9 || repeat >= 3) {
+          return 'não é possível gerar um número de telefone com esses valores';
+        }
+      }
+    }
+    return true;
+  }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -164,8 +185,6 @@ function hydrate(Drink) {
     }
     return `${sum} copos de água`;
   }
-
-
 
 module.exports = {
   calcArea,
