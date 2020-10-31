@@ -149,19 +149,28 @@ function techList(tech, name) {
   }
   return object;
 }
-let techn = []; let name = 'John'
-console.log(techList(techn, name))
 // Ok! Uffa!
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numbers) {
   // seu código aqui
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let result;
+  if (
+    Math.abs(
+      lineA > lineB - lineC && lineB > lineA - lineC && lineC > lineA - lineB
+    )
+  ) {
+    result = true;
+  } else {
+    result = false;
+  }
+  return result;
 }
+// Ok!
 
 // Desafio 13
 function hydrate() {
