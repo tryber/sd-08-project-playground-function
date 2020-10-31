@@ -6,10 +6,14 @@ function compareTrue(a, b){
     return false;
   }
 }
+
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+base = 4
+height = 4
+return (base * height)/2
 }
+  
 
 // Desafio 3
 function splitSentence() {
