@@ -89,7 +89,7 @@ function fizzBuzz(a) {
       mostrar[i] = "bug!";
     }
   }
-  console.log(mostrar);
+  return mostrar;
 }
 let arr = [2, 15, 7, 9, 45];
 fizzBuzz(arr);
