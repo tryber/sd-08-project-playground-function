@@ -158,7 +158,7 @@ function techList(array, name) {
         tech: arrayBase[i],
         name: name
       }
-      console.log(objeto);
+      return(objeto);
   }
   
 }techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Ruâni")
