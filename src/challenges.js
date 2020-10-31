@@ -20,12 +20,11 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let palavras = array
-  let lastWord = palavras[palavras.length - 1]
-  let firstWord = palavras[0]
-  return lastWord + ', ' + firstWord
+  let lastWord = array[array.length - 1]
+  let firstWord = array[0]
+  let concat = lastWord + ', ' +firstWord
+  return concat
 }
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let qtdVitorias = wins
