@@ -174,9 +174,18 @@ let tecnologias = ["React", "Jest", "HTML", "CSS", "JavaScript"];
 let nome = "Wagner";
 techList(tecnologias, nome)
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(vetorNum) {
+  let resultado = "";
+  if (vetorNum.length !== 11) {
+    resultado = "Array com tamanho incorreto."
+  } else {
+    
+  }
+  
+  return resultado;
 }
+let phone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+generatePhoneNumber(phone);
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
