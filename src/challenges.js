@@ -13,10 +13,10 @@ calcArea = (10, 50)
 return (base * height)/2
 }
   
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(a) {
+  splitSentence("Oi Victor")
+  return splitSentence.split(" ")
 }
 
 // Desafio 4
