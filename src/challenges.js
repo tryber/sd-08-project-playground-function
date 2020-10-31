@@ -72,7 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let maiorValor = mouse *1;
   let valor2 = cat1 * 1;
   let valor3= cat2 *1;
- let valor4 = (" os gatos estão a mesma distancia do rato")
+ let valor4 = ("os gatos trombam e o rato foge")
   if ( valor2/maiorValor > valor3/maiorValor) {
     return valor2
   } else if ( valor3/maiorValor > valor2/maiorValor) {
