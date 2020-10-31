@@ -12,7 +12,6 @@ function calcArea(base, height) {
   return (base * height / 2);
 }
 
-
 // Desafio 3
 function splitSentence(palavras) {
   let arrayString = [];
@@ -22,13 +21,10 @@ function splitSentence(palavras) {
   return arrayString;
 }
 
-
 // Desafio 4
-
 function concatName(arrayNomes) {
   return (arrayNomes[arrayNomes.length - 1] + ", " + arrayNomes[0]);
 }
-
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -46,8 +42,6 @@ function footballPoints(wins, ties) {
 
 
 
-
-
 // Desafio 6
 function highestCount(arrayNumbers) {
   let bigger = 0;
@@ -58,15 +52,12 @@ function highestCount(arrayNumbers) {
     }
     if (bigger == arrayNumbers[key]){
       counter ++;
-    }  
+    } else if (bigger != arrayNumbers[key]){
+      counter = 1;
+    }
   }
  return counter;
 }
-
-
-
-
-
 
 
 
@@ -85,13 +76,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-
-
-
-
-
-
-
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
   let arrayResultado = [];
@@ -108,6 +92,8 @@ function fizzBuzz(arrayNumeros) {
   } 
   return arrayResultado; 
 }
+
+
 
 
 
