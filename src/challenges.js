@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   // seu código aqui
-  return valor1 === true && valor2 === true ? true : false;
+  return valor1 === true && valor2 === true;
 }
 
 // Desafio 2
@@ -131,16 +131,16 @@ function encodeDecode(palavra, t) {
 
 function encode(palavra) {
   // seu código aqui
-  let nova_Palavra = encodeDecode(palavra, 0)
+  let novaPalavra = encodeDecode(palavra, 0)
 
-  return nova_Palavra;
+  return novaPalavra;
 }
 
 function decode(palavra) {
   // seu código aqui
-  let nova_palavra = encodeDecode(palavra, 1);
+  let novaPalavra = encodeDecode(palavra, 1);
 
-  return nova_palavra;
+  return novaPalavra;
 }
 
 
@@ -155,7 +155,7 @@ function techList(arrayTech, name) {
 
   arrayTech.sort();
   for (let x = 0; x < arrayTech.length; x += 1) {
-    let objNovo = new Object();
+    let objNovo = {};
     objNovo.tech = arrayTech[x];
     objNovo.name = name;
 
@@ -206,7 +206,7 @@ function mainValida(arrayNumbers) {
 }
 
 function montaPhoneNumber(phoneNumber, number, x) {
-  if (x == 0 || x === 1) {
+  if (x === 0 || x === 1) {
     phoneNumber += x === 0 ? `(${number}` : `${number}) `;
   } else if (x === 6) {
     phoneNumber += `${number}-`;
@@ -237,11 +237,11 @@ function triangleCheck(lineA, lineB, lineC) {
   lineB = Math.abs(lineB);
   lineC = Math.abs(lineC);
 
-  let somaA_b = lineA + lineB;
-  let somaA_c = lineA + lineC;
-  let somaC_b = lineC + lineB;
+  let somaAb = lineA + lineB;
+  let somaAc = lineA + lineC;
+  let somaCb = lineC + lineB;
 
-  if ((somaA_b > lineC) && (somaA_c > lineB) && (somaC_b > lineA)) {
+  if ((somaAb > lineC) && (somaAc > lineB) && (somaCb > lineA)) {
     return true;
   }
   return false;
@@ -254,14 +254,13 @@ function hydrate(drinks) {
   let total = 0;
 
   for (let x = 0; x < resultado.length; x += 1) {
-    total += parseInt(resultado[x]);
+    total += parseInt(resultado[x], 2);
   }
 
   if (total === 1) {
     return `${total} copo de água`;
-  } else {
-    return `${total} copos de água`;
-  }
+  } 
+  return `${total} copos de água`;
 }
 module.exports = {
   calcArea,
