@@ -66,12 +66,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let diferencaCat2 = mouse - cat2;
   
   if (diferencaCat1 < diferencaCat2){
-    return "cat1"
-  }else if(diferencaCat2 < diferencaCat1){
-    return "cat2"
+    return'cat1'
+  } else if (diferencaCat2 < diferencaCat1){
+    return 'cat2'
   }
-  return "os gatos trombam e o rato foge"
-
+  return 'os gatos trombam e o rato foge'
 }
 
 
