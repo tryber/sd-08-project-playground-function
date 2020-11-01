@@ -41,9 +41,20 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  let gatoVencedor;
+  if(cat1==cat2){
+    gatoVencedor = "os gatos trombam e o rato foge";
+  }else if((cat1-mouse)>(cat2-mouse)) {
+    gatoVencedor = "cat2";
+  }else if((cat2-mouse)>(cat1-mouse)) {
+    gatoVencedor = "cat1";
+  }else{
+    gatoVencedor = "Digite somente posições válidas";
+  }
+  return gatoVencedor;
 }
+console.log(catAndMouse(2,3,3))
 
 // Desafio 8
 function fizzBuzz() {
