@@ -52,7 +52,10 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   const newArray = array.map(function (fb) {
-    return (fb % 3 === 0 && fb % 5 === 0) ? 'fizzBuzz' : (fb % 3 === 0) ? 'fizz' : (fb % 5 === 0) ? 'buzz' : 'bug!';
+    if (fb % 3 === 0 && fb % 5 === 0) return 'fizzBuzz';
+    if (fb % 3 === 0) return 'fizz';
+    if (fb % 5 === 0) return 'buzz';
+    return 'bug!';
   });
   return newArray;
 }
