@@ -168,7 +168,6 @@ function generatePhoneNumber(numberPhone) {
     return 'Array com tamanho incorreto.';
   }
 }
-}
 
 // Desafio 12
 function triangleCheck() {
