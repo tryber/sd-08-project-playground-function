@@ -56,9 +56,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat1Move = Math.abs(cat1);
   let cat2Move = Math.abs(cat2);
 
-  if (Math.abs(mouseMove - cat1Move) < Math.abs(mouseMove - cat2Move)) return "cat1"; 
-  if (Math.abs(mouseMove - cat2Move) < Math.abs(mouseMove - cat1Move)) return "cat2"; 
-  return "os gatos trombam e o rato foge";
+  if (Math.abs(mouseMove - cat1Move) < Math.abs(mouseMove - cat2Move)) return 'cat1'; 
+  if (Math.abs(mouseMove - cat2Move) < Math.abs(mouseMove - cat1Move)) return 'cat2'; 
+  return 'os gatos trombam e o rato foge';
 }
 
 //console.log(catAndMouse(-1, -3, 2));
@@ -67,12 +67,11 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function fizzBuzz(array) {
   let fizzBuzz = [];
-
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 == 0 && array[i] % 5 == 0) { fizzBuzz[i] = "fizz"; } 
-    else { fizzBuzz[i] = "bug!"; }
-    if (array[i] % 3 == 0) fizzBuzz[i] = "fizzBuzz";        
-    if (array[i] % 5 == 0) fizzBuzz[i] = "buzz";
+    if (array[i] % 3 == 0 && array[i] % 5 == 0) fizzBuzz[i] = 'fizz'; 
+    if (array[i] % 3 == 0) fizzBuzz[i] = 'fizzBuzz';        
+    if (array[i] % 5 == 0) fizzBuzz[i] = 'buzz';
+    if (array[i] % 3 != 0 && array[i] % 5 != 0) fizzBuzz[i] = 'bug!';
   }
   return fizzBuzz;
 }
@@ -81,11 +80,13 @@ function fizzBuzz(array) {
 
 function encode(literal) {
   for (let i in literal) {
-    if (literal[i] == "a") literal = literal.replace(literal[i], "1"); 
-    if (literal[i] == "e") literal = literal.replace(literal[i], "2");
-    if (literal[i] == "i") literal = literal.replace(literal[i], "3");
-    if (literal[i] == "o") literal = literal.replace(literal[i], "4");
-    if (literal[i] == "u") literal = literal.replace(literal[i], "5");
+    if (!(literal[i]*literal[i])) {
+      if (literal[i] == "a") literal = literal.replace(literal[i], "1"); 
+      if (literal[i] == "e") literal = literal.replace(literal[i], "2");
+      if (literal[i] == "i") literal = literal.replace(literal[i], "3");
+      if (literal[i] == "o") literal = literal.replace(literal[i], "4");
+      if (literal[i] == "u") literal = literal.replace(literal[i], "5");
+    }
   }
   return literal;
 }
@@ -94,13 +95,15 @@ function encode(literal) {
 
 function decode(literal) {
   for (let i in literal) {
-    if (literal[i] == "1") literal = literal.replace(literal[i], "a");
-    if (literal[i] == "2") literal = literal.replace(literal[i], "e");
-    if (literal[i] == "3") literal = literal.replace(literal[i], "i");
-    if (literal[i] == "4") literal = literal.replace(literal[i], "o");
-    if (literal[i] == "5") literal = literal.replace(literal[i], "u");
+    if (literal[i]*literal[i]) {
+      if (literal[i] == "1") literal = literal.replace(literal[i], "a");
+      if (literal[i] == "2") literal = literal.replace(literal[i], "e");
+      if (literal[i] == "3") literal = literal.replace(literal[i], "i");
+      if (literal[i] == "4") literal = literal.replace(literal[i], "o");
+      if (literal[i] == "5") literal = literal.replace(literal[i], "u");
+    }
   }
-  return literal;
+  return cont;
 }
 
 //console.log(decode("H3 th2r2!"));
