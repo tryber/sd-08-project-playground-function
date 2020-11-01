@@ -51,24 +51,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  function fizzBuzz(array) {
-    let newArray = [];
-  
-    for (let i = 0; i < array.length; i += 1) {
-      if (array[i] % 15 === 0) {
-        newArray.push('fizzBuzz')
-      } else if (array[i] % 5 === 0) {
-        newArray.push('buzz')
-      } else if (array[i] % 3 === 0) {
-        newArray.push('fizz')
-      } else {
-        newArray.push('bug!')
-      }
+function fizzBuzz(array) {
+  let newArray = [];
+
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] % 15 === 0) {
+      newArray.push('fizzBuzz')
+    } else if (array[i] % 5 === 0) {
+      newArray.push('buzz')
+    } else if (array[i] % 3 === 0) {
+      newArray.push('fizz')
+    } else {
+      newArray.push('bug!')
     }
-    return newArray;
   }
-}
+  return newArray;
+  }
 
 // Desafio 9
 function encode() {
