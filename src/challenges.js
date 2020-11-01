@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  
+
   if (value1 && value2 === true) {
     return true;
   }
@@ -16,28 +16,28 @@ function calcArea(base, height) {
   return area;
 }
 
- 
+
 // Desafio 3
 function splitSentence(word) {
   resultado = word.split(" ");
   return resultado;
-  
+
 }
 
 // Desafio 4
 function concatName(strings) {
-  
-  let last = strings.length -1;
+
+  let last = strings.length - 1;
   let first = strings[0];
   let namesArray = strings[last];
   return namesArray + ", " + first;
 }
 
-  
+
 
 // Desafio 5
-function footballPoints(wins,ties) {
-  return((wins*3) + ties);
+function footballPoints(wins, ties) {
+  return ((wins * 3) + ties);
 }
 
 
@@ -47,13 +47,13 @@ function highestCount(numbers) {
   let highestNumber = 0;
   let highestRepeat = 0;
 
-  for(let i = 0; i < numbers.length; i+=1) {
-    if(numbers[i] > highestNumber) { 
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > highestNumber) {
       highestNumber = numbers[i];
       highestRepeat = 0;
-    } 
+    }
 
-    if(numbers[i] == highestNumber) {
+    if (numbers[i] == highestNumber) {
       highestRepeat += 1;
 
     }
@@ -68,9 +68,9 @@ function catAndMouse() {
   distCat1 = Math.abs(cat1 - mouse);
   distCat2 = Math.abs(cat2 - mouse);
 
-  if(distCat1 < distCat2) {
+  if (distCat1 < distCat2) {
     return 'cat1'
-  } else if(distCat1 > distCat2) {
+  } else if (distCat2 < distCat1) {
     return 'cat2'
   } else {
     return 'os gatos trombam e o rato foge';
