@@ -167,12 +167,22 @@ function generatePhoneNumber(numberPhone) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  if (lineA < (lineB + lineC) || lineB < (lineA + lineC) || lineC < (lineA + lineB)) {
-    return true;
-  } else {
-    return false;
+  let maiorLado = '';
+  if (lineA > lineB && lineA > lineC) {
+    maiorLado = lineA;
+  }
+  if (lineB > lineA && lineB > lineC) {
+    maiorLado = lineB;
+  }
+  if (lineC > lineA && lineC > lineB) {
+    maiorLado = lineC;
   }
 
+
+  if (maiorLado < lineA + lineB || maiorLado < lineA + lineC || maiorLado < lineB + lineA || maiorLado < lineB + lineC || maiorLado < lineC + lineA || maiorLado < lineC + lineB) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
