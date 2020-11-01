@@ -144,6 +144,7 @@ function generatePhoneNumber(numberPhone) {
       }
     }
 
+    
     for (let i in numberPhone) {
       if (i == 0) {
         fone += '(' + numberPhone[0];
