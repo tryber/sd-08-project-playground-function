@@ -149,7 +149,7 @@ function generatePhoneNumber(array) {
         fone += '(' + array[0];
       }
       if (i == 1) {
-        fone += array[1] + ')'
+        fone += array[1] + ') '
       }
       if (i == 7) {
         fone += '-' + array[7];
