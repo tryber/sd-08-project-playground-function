@@ -1,26 +1,27 @@
 // Desafio 1
 function compareTrue(a, b) {
-  
-  if (a===true && b===true){
+
+  if (a === true && b === true) {
     return true;
-  } else {return false;
-  
+  } else {
+    return false;
+
+  };
+
+
 };
-  
-
-};
 
 
-  
-  
-  // seu código aqui
+
+
+// seu código aqui
 
 
 
 // Desafio 2
 function calcArea(base, height) {
-  
-  return (base * height)/2;
+
+  return (base * height) / 2;
 
 }
 
@@ -28,8 +29,17 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  let gpPalavra = "go Trybe";
+  let recebe = [];
+
+  recebe = gpPalavra.split(" ");
+  return recebe;
 }
+
+
+
+  // seu código aqui
+
 
 // Desafio 4
 function concatName() {
