@@ -1,12 +1,7 @@
 // Desafio 1
 function compareTrue(num1, num2) {
-  if (num1 !== num2 && num1 > num2) {
-    return true;
-  } else {
-    return false;
-  }  
+  reurn num1 && num2;
 } 
-console.log(compareTrue(9, 7));
 // Desafio 2
 function calcArea(base, height) {
  let area = (base*height) / 2;
@@ -15,18 +10,9 @@ function calcArea(base, height) {
 console.log(calcArea(2, 3));
 // Desafio 3
 function splitSentence(string) {
-  let array = [];
-  for (index = 0; index < string.length; index =+ 1) {
-    let word = "";
-    if (string[index] !== " ") {
-      word =+ string[index];
-    } else {
-      array.push(word);
-    }
-  }
+  let array = string.split(" ");
   return array;
 }
-console.log(splitSentence("Go Trybe"));
 // Desafio 4
 function concatName() {
   // seu código aqui
