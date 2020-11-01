@@ -29,8 +29,8 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence() {
-  let gpPalavra = "go Trybe";
-  let recebe = [];
+  var gpPalavra = "go Trybe";
+  var recebe = [];
   recebe = gpPalavra.split(" ");
 
 }
