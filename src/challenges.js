@@ -144,8 +144,21 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-// seu código aqui
+function techList(arrayString, name) {
+  arrayString.sort();
+  let arrayAux = [];
+  
+  for (let key in arrayString){
+        arrayString[key] = objeto = {
+        tech: arrayString[key],
+        name: name
+      }
+    }
+    if (arrayString.length == 0){
+      return "Vazio!"
+    } else {
+      return arrayString;
+    }
 }
 
 // Desafio 11
