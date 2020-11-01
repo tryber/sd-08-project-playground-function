@@ -6,6 +6,7 @@ function compareTrue(bool1,bool2) {
     return false;
   }
 }
+console.log(compareTrue(true, true))
 
 // Desafio 2
 function calcArea(base,height) {
@@ -13,27 +14,35 @@ function calcArea(base,height) {
   areaTriangulo = (base * height) / 2;
   return areaTriangulo;
 }
+console.log(calcArea(4,6))
 
 // Desafio 3
 //Bibliografia: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array. 
 https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array. 
 
 function splitSentence(string) {
-  let dividido=[];
+  let dividido = [];
   dividido = string.split(" ");
   return dividido;
 }
 console.log(splitSentence("ola povo"))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(array) {
+  let invertido = [];
+  for(let i = 0; i < array.length; i++){
+  invertido.push(array[i]);
+  }
+  return(invertido[invertido.length-1] + ", " + invertido[0])
+} 
+console.log(concatName(['pedro','joão','rosa','maria']))
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {
+  let points = (wins *3) + ties;
+  return points;
+} 
+console.log(footballPoints(3,2))
 
 // Desafio 6
 function highestCount() {
@@ -58,9 +67,9 @@ console.log(catAndMouse(2,3,3))
 
 // Desafio 8
 function fizzBuzz(array) {
-  let divisiveis=[];
-  for(let i=0;i<array.length;i++){
-    if((array[i]%3==0)&&(array[i]%5==0)) {
+  let divisiveis = [];
+  for(let i=0; i< array.length; i++){
+    if((array[i]%3==0) && (array[i]%5==0)) {
     divisiveis[i] = "fizzBuzz"
     }else if(array[i]%3==0) {
       divisiveis[i] = "fizz";
@@ -72,7 +81,7 @@ function fizzBuzz(array) {
   }
   return divisiveis;
 }
-  console.log(fizzBuzz([2,3,15,30]));
+console.log(fizzBuzz([2,3,15,30]));
 
 // Desafio 9
 function encode() {
