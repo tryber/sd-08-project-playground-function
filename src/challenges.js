@@ -158,7 +158,7 @@ function generatePhoneNumber(numberPhone) {
     if (i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 8 || i == 9 || i == 10) {
       fone += numberPhone[i];
     }
-    if (numberPhone != 11) {
+    if (numberPhone.length > 11) {
       return 'Array com tamanho incorreto.';
     }
   
