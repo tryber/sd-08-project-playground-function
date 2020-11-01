@@ -28,11 +28,14 @@ function calcArea(base, height) {
 
 
 // Desafio 3
-function splitSentence(frase) {
-let  recebe = frase.split(" ");
-return recebe;
-}
+function splitSentence() {
+  let arr;
+  let frase = "ca-sa"
+  arr = frase.split(" "); 
+  console.log (arr);
 
+}
+//console.log (splitSentence(arr));
 
 
   // seu código aqui
