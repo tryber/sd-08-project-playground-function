@@ -1,16 +1,12 @@
 // Desafio 1
 function compareTrue(bol1, bol2) {
-  if (typeof bol1 === "boolean" && typeof bol2 === "boolean") {
-    let output = false;
-    if (bol1 == true && bol2 == true) {
-      output = true;
-    }
-    return output;
+  let output = false;
+  if (bol1 === true && bol2 === true) {
+    output = true;
   }
-  else {
-    return `ERROR > tipos não é booleanos!`;
-  }
+  return output;
 }
+
 
 // < Para o teste manual >
 // let a = true;
@@ -34,29 +30,23 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(str) {
-  if (typeof str === "string") {
-    let inputStr = "" + str;
-    let arrayDeStr = [];
-    let auxiliar = '';
+  let inputStr = "" + str;
+  let arrayDeStr = [];
+  let auxiliar = '';
 
-    for (let index = 0; index < inputStr.length; index += 1) {
-    
-      if (inputStr[index] != " ") {
-        auxiliar += inputStr[index];
-      }
-      else {
-        arrayDeStr.push(auxiliar);
-        auxiliar = '';
-      }
+  for (let index=0; index<inputStr.length; index+=1) {
+
+    if (inputStr[index] !== ' ') {
+      auxiliar += inputStr[index];
     }
-    arrayDeStr.push(auxiliar);
+    else {
+      arrayDeStr.push(auxiliar);
+      auxiliar = '';
+    }
+  }
+  arrayDeStr.push(auxiliar);
 
-    return arrayDeStr;
-  }
-  else {
-    return `ERROR > tipo não é string!`;
-  }
-  
+  return arrayDeStr;
 }
 
 // < Para o teste manual >
@@ -65,16 +55,10 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arrStr) {
-  if (typeof arrStr === "object") {
-    let inputArrStr = arrStr;
-    let outputStr = '';
-    outputStr = arrStr[inputArrStr.length - 1] + ', ' + arrStr[0];
-    return outputStr;
-  }
-  else {
-    return `ERROR > tipo não é objeto Array!`
-  }
-  
+  let inputArrStr = arrStr;
+  let outputStr = '';
+  outputStr = arrStr[inputArrStr.length - 1] + ', ' + arrStr[0];
+  return outputStr;
 }
 
 // < Para o teste manual >
@@ -84,12 +68,7 @@ function concatName(arrStr) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  if (typeof wins === "number" && typeof ties === "number") {
-    return ((3 * wins) + ties);
-  }
-  else {
-    return `ERROR > tipos não são números!`
-  }
+  return ((3 * wins) + ties);
 }
 
 // < Para o teste manual >
@@ -97,29 +76,22 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrNum) {
-  if (typeof arrNum === "object") {
-    let inputArrNum = arrNum;
-    let maiorNum = inputArrNum[0];
-    let contador = 0;
+  let inputArrNum = arrNum;
+  let maiorNum = inputArrNum[0];
+  let contador = 0;
 
-    for (let index = 0; index < inputArrNum.length; index += 1) {
-      if (inputArrNum[index] > maiorNum) {
-        maiorNum = inputArrNum[index];
-      }
+  for (let index=0; index<inputArrNum.length; index+=1) {
+    if (inputArrNum[index] > maiorNum) {
+      maiorNum = inputArrNum[index];
     }
-    for (let index = 0; index < inputArrNum.length; index += 1) {
-      if (inputArrNum[index] == maiorNum) {
-        contador += 1;
-      }
+  }
+  for (let index=0; index<inputArrNum.length; index+=1) {
+    if (inputArrNum[index] == maiorNum) {
+      contador += 1;
     }
-
-    return contador;
   }
-  else {
-    return `ERROR > tipo não é objeto Array!`
+  return contador;
   }
-  
-}
 
 // < Para o teste manual >
 // let arrayteste = [9, 1, 2, 3, 9, 5, 7];
@@ -163,7 +135,7 @@ function fizzBuzz(arrNum) {
   let inputArrNumbers = arrNum;
   let outputArr = [];
 
-  for (let index = 0; index < inputArrNumbers.length; index += 1) {
+  for (let index=0; index<inputArrNumbers.length; index+=1) {
     if (inputArrNumbers[index] % 3 == 0 && inputArrNumbers[index] % 5 != 0) {
       outputArr.push('fizz');
     }
@@ -172,7 +144,7 @@ function fizzBuzz(arrNum) {
     }
     else if (inputArrNumbers[index] %3 == 0 && inputArrNumbers[index] % 5 == 0) {
       outputArr.push('fizzBuzz');
-    } 
+    }
     else {
       outputArr.push('bug!');
     }
@@ -193,75 +165,64 @@ function fizzBuzz(arrNum) {
 // u -> 5
 
 function encode(str) {
-  if (typeof str === "string") {
-    let inputStr = str;
-    let outputStr = "";
-  
-    for (let index in inputStr) {
-      switch (inputStr[index]) {
-        case 'a':
-          outputStr += '1';
-          break;
-        case 'e':
-          outputStr += '2';
-          break;
-        case 'i':
-          outputStr += '3';
-          break;
-        case 'o':
-          outputStr += '4';
-          break;
-        case 'u':
-          outputStr += '5';
-          break;
-        default :
-          outputStr += inputStr[index];
-          break;
-      }
+  let inputStr = str;
+  let outputStr = "";
+
+  for (let index in inputStr) {
+    switch (inputStr[index]) {
+      case 'a':
+        outputStr += '1';
+        break;
+      case 'e':
+        outputStr += '2';
+        break;
+      case 'i':
+        outputStr += '3';
+        break;
+      case 'o':
+        outputStr += '4';
+        break;
+      case 'u':
+        outputStr += '5';
+        break;
+      default :
+        outputStr += inputStr[index];
+        break;
     }
-    return outputStr;
   }
-  else {
-    return `ERROR > tipo não é string!`;
-  }
-  
+  return outputStr;
 }
 
 // < Para o teste manual >
 // console.log(encode("oi e bom te ver nu, ta!"));
 
 function decode(str) {
-  if (typeof str === "string") {
-    let inputStr = str;
-    let outputStr = "";
-  
-    for (let index in inputStr) {
-      switch (inputStr[index]) {
-        case '1':
-          outputStr += 'a';
-          break;
-        case '2':
-          outputStr += 'e';
-          break;
-        case '3':
-          outputStr += 'i';
-          break;
-        case '4':
-          outputStr += 'o';
-          break;
-        case '5':
-          outputStr += 'u';
-          break;
-        default :
-          outputStr += inputStr[index];
-          break;
-      }
+  let inputStr = str;
+  let outputStr = "";
+
+  for (let index in inputStr) {
+    switch (inputStr[index]) {
+      case '1':
+        outputStr += 'a';
+        break;
+      case '2':
+        outputStr += 'e';
+        break;
+      case '3':
+        outputStr += 'i';
+        break;
+      case '4':
+        outputStr += 'o';
+        break;
+      case '5':
+        outputStr += 'u';
+        break;
+      default :
+        outputStr += inputStr[index];
+        break;
     }
-    return outputStr;
   }
-  else {
-    return `ERROR > tipo não é string!`;
-  }
+  return outputStr;
 }
 
 // < Para o teste manual >
@@ -270,7 +231,7 @@ function decode(str) {
 
 // Desafio 10
 function techList(arrStr, name) {
-  
+
   let techName = arrStr;
   if (techName.length == 0) {
     let outputErro = "Vazio!";
@@ -279,8 +240,8 @@ function techList(arrStr, name) {
   else {
     techName.sort();
     let outputObj = [];
-  
-    for (let index = 0; index < techName.length; index += 1) {
+
+    for (let index=0; index<techName.length; index+=1) {
       let aux = {};
       aux.tech = techName[index];
       aux.name = name;
@@ -304,16 +265,16 @@ function generatePhoneNumber(arrNum) {
 
   //Verifica condições do array
 
-  for (let index = 0; index < aux.length; index += 1) {
+  for (let index=0; index<aux.length; index+=1) {
     let contador = 0;
 
     if (aux[index] < 0 || aux[index] > 9) {
       verificaArray = false;
       break;
     }
-    
-    for (let j = 0 ; j < aux.length; j += 1) {
-      
+
+    for (let j=0 ; j<aux.length; j+=1) {
+
       if (aux[index] == aux[j]) {
         contador += 1;
       }
@@ -350,7 +311,7 @@ function generatePhoneNumber(arrNum) {
         }
       }
     }
-    
+
   }
   else {
     outputStr = "Array com tamanho incorreto.";
@@ -388,18 +349,18 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 // Solução com o entendimento via "https://www.codegrepper.com/code-examples/delphi/how+to+exract+numbers+from+string+in+js"
 function hydrate(str) {
-  
+
   let output = 0;
   str = str.split(" ");
 
-  for(let i = 0; i < str.length; i += 1) {
-    let num = ""; 
+  for(let i=0; i<str.length; i+=1) {
+    let num = "";
     if(isNaN(str[i])==false){
       num+=str[i];
       output += parseInt(num);
     }
   }
-  
+
   if (output == 1) {
     return `${output} copo de água`;
   }
@@ -407,12 +368,12 @@ function hydrate(str) {
     return `${output} copos de água`;
   }
   else {
-    return `ainda não bebeu nada?`
+    return `ainda não bebeu nada.`
   }
 }
 
 // < Para o teste manual >
-console.log(hydrate(" copo de vinho"));
+// console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 
 module.exports = {
