@@ -147,9 +147,18 @@ function triangleCheck(lineA, lineB, lineC) {
   return sumAB && sumAC && sumBC;
 }
 
+// Arrow function usada a partir do conteúdo encontrado neste link: https://www.freecodecamp.org/news/reduce-f47a7da511a9/
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let onlyNumbersArray = string.match(/\d+/g).map(Number);
+  let sumArray = onlyNumbersArray.reduce((drinks1, drinks2) => drinks1 + drinks2);
+  let result = "";
+  if (sumArray === 1) {
+    result = `${sumArray} copo de água`;
+  }
+  result = `${sumArray} copos de água`;
+
+  return result;
 }
 
 module.exports = {
