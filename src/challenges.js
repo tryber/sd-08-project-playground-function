@@ -116,7 +116,10 @@ function generatePhoneNumber(n) {
         return "não é possível gerar um número de telefone com esses valores"
       }         
     }    
-  }return retorno
+  } else {
+    return "Array com tamanho incorreto."
+  }
+  return retorno
 }
 
 
