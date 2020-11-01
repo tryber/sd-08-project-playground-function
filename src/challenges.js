@@ -166,8 +166,30 @@ function decode(numbers) {
 }
 
 // Desafio 10
-function techList() {
+// link onde consultei como usar o sort para um array de objetos:
+// https://www.edsonemiliano.com.br/blog/como-ordenar-uma-array-de-objetos-com-javascript-sort/#:~:text=Caso%20voc%C3%AA%20tenha%20um%20array,usar%20o%20m%C3%A9todo%20sort().&text=return%20(a.,nome%20%3E%20b.
+function techList(technologies, name) {
   // seu código aqui
+  let technologiesObject;
+  let listObject = [];
+  
+  for (index = 0; index < technologies.length; index += 1) {
+    technologiesObject = {
+      tech: technologies[index],
+      name:name
+    };
+    
+    listObject.push(technologiesObject);
+  }
+
+  if (listObject.length > 0) {
+    listObject.sort(function (a, b) {
+      return (a.tech > b.tech) ? 1 : ((b.tech > a.tech) ? -1 : 0);
+      });
+    return listObject.sort();
+  } else {
+    return "Vazio!";
+  }
 }
 
 // Desafio 11
