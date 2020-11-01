@@ -1,17 +1,17 @@
 // Desafio 1
 function compareTrue(bool1,bool2) {
-  let resultado;
-  if(bool1 === true && bool2 === true){
-    resultado = true; 
+  if((bool1 === true) && (bool2 === true)){
+    return true; 
   }else{
-    resultado = false;
+    return false;
   }
-  return resultado;
 }
 
 // Desafio 2
 function calcArea(base,height) {
-  return (base * height) / 2;
+  let areaTriangulo;
+  areaTriangulo = (base * height) / 2;
+  return areaTriangulo;
 }
 
 // Desafio 3
@@ -21,7 +21,7 @@ https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:
 function splitSentence(string) {
   let dividido=[];
   dividido = string.split(" ");
-  return dividido
+  return dividido;
 }
 console.log(splitSentence("ola povo"))
 
@@ -57,9 +57,22 @@ function catAndMouse(mouse,cat1,cat2) {
 console.log(catAndMouse(2,3,3))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let divisiveis=[];
+  for(let i=0;i<array.length;i++){
+    if((array[i]%3==0)&&(array[i]%5==0)) {
+    divisiveis[i] = "fizzBuzz"
+    }else if(array[i]%3==0) {
+      divisiveis[i] = "fizz";
+    }else if(array[i]%5==0) {
+      divisiveis[i] = "buzz";
+    }else {
+      divisiveis[i] = "bug!"
+    }    
+  }
+  return divisiveis;
 }
+  console.log(fizzBuzz([2,3,15,30]));
 
 // Desafio 9
 function encode() {
