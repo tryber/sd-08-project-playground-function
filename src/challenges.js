@@ -98,40 +98,26 @@ function techList(array,name) {
 
 
 // Desafio 11
-function generatePhoneNumber(array) {
-  let retorno="",verificaRepetir=0;
-  if(array.length == 11){
-
-    for(let i=0;i<array.length;i++){ //continuar amanhã esta idéia
-      verificaRepetir=array.indexOf(i);
-    }
-
-    retorno=`(${array[0]}${array[1]})${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
-   
-  } else {
-    return "Array com tamanho incorreto."
-  }
-  return retorno
+function generatePhoneNumber(n) {  
+  let numeroT,
+  retorno = (`(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`) 
+  function find(n, val) {
+    let repeat = [], i = -1,cont=0;
+    while ((i = n.indexOf(val, i+1)) != -1){
+        repeat.push(i);
+    }  cont = repeat.length
+    return cont;
+  }  
+  //função acima conta quantas vezes o número se repete, consultada na internet porém fiz modificações.  
+  if(n.length == 11){
+    for(let i=0;i<n.length;i++){ 
+      numeroT = find(n,n[i])
+      if (n[i]< 0 || n[i]>9 || numeroT>=3){
+        return "não é possível gerar um número de telefone com esses valores"
+      }         
+    }    
+  }return retorno
 }
-// generatePhoneNumber([1,1,9,4,5,6,7,8,9,5,1])
-
-//-----------------------------------------------------------
-
-// let array = [1,1,9,4,5,6,7,8,9,5,1],verificaRepetir=0;
-
-// for(let i=0;i<array.length;i++){ 
-
-//     if(array[i]==array[i+1]){
-//       verificaRepetir+=1
-
-//       if (verificaRepetir>=3){
-//         // console.log("Números repetidos" + verificaRepetir)
-//         break
-//       }
-//     }
-// } console.log(verificaRepetir)
-
-//-----------------------------------------------------------
 
 
 // Desafio 12
@@ -148,32 +134,6 @@ function triangleCheck(lineA,lineB,lineC) {
     return false;
   }
 }
-
-
-
-// let palavra = "1 cachaça, 5 cervejas e 1 copo de vinho1",
-// array=[],cont=0;
-
-// for(let i=0;i<palavra.length;i+=1){
-//   cont=palavra[i]
-//   if(
-//     cont.isInteger(palavra[i])
-//     ){
-//     cont+=parseInt(palavra[i],10);
-//   }
-  
-    
-  
-  
-// }
-
-// console.log(Number.isInteger(cont))
-
-// console.log(isInteger(5))
-
-
-
-
 
 // Desafio 13
 function hydrate(string) {
