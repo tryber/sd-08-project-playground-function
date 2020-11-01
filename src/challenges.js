@@ -235,20 +235,29 @@ console.log(generatePhoneNumber([1, 2, 3, 4, ]))
 // Desafio 12
 function triangleCheck(sidesTriangules) {
 
-  //console.log(sidesTriangules)
+  let sideA =  Math.abs( sidesTriangules[0] - sidesTriangules[1] )
+  let sideB =  Math.abs( sidesTriangules[1] - sidesTriangules[2] )
+  let sideC =  Math.abs( sidesTriangules[2] - sidesTriangules[0] )
 
-  let sideA =  sidesTriangules[0] + sidesTriangules[1];
-  let sideB =  sidesTriangules[1] + sidesTriangules[2];
-  let sideC =  sidesTriangules[2] + sidesTriangules[0];
+  console.log(sideA, sideB, sideC)
 
-  //console.log(sideA, sideB, sideC)
+  // necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois
 
-if (sidesTriangules[0] < sideA  && sidesTriangules[1] < sideB && sidesTriangules[2] < sideC ) {
+ // if (sidesTriangules[0] < sideA  && sidesTriangules[1] < sideB && sidesTriangules[2] < sideC ) {
+
+  // necessário que a medida de qualquer um dos lados e maior que o valor absoluto da diferença entre essas medidas.
+
+  if ( sidesTriangules[0] > sideA  && sidesTriangules[1] > sideB && sidesTriangules[2] > sideC ) {
   return "true"
+} else {
+  return "false"
 }
 
 }
 console.log(triangleCheck([10, 14, 8]))
+console.log(triangleCheck([10, 3, 4]))
+console.log(triangleCheck([6, 2, 2]))
+console.log(triangleCheck([16, 9, 2]))
 
 // Desafio 13
 function hydrate() {
