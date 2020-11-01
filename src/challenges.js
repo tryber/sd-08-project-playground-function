@@ -127,16 +127,14 @@ function techList(tech, name) {
 
 // Desafio 11
 function generatePhoneNumber(numberPhone) {
-  // seu código aqui
   let fone = '';
   if (numberPhone.length === 11) {
-
-    for (let x = 0; x < numberPhone.length; x++) {
+    for (let x = 0; x < numberPhone.length; x += 1) {
       let cont = 0;
       if (numberPhone[x] < 0 || numberPhone[x] > 9) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
-      for (let y = 0; y < numberPhone.length; y++) {
+      for (let y = 0; y < numberPhone.length; y += 1) {
         if (numberPhone[x] === numberPhone[y]) {
           cont += 1;
           if (cont >= 3) {
@@ -163,7 +161,6 @@ function generatePhoneNumber(numberPhone) {
     return fone;
   }
   return 'Array com tamanho incorreto.';
-
 }
 
 // Desafio 12
