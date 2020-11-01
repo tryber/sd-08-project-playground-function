@@ -25,7 +25,8 @@ splitSentence('Fabio Higor de Almeida');
 function concatName(nomes) {
   let ultima = nomes.pop();
   let primeira = nomes.shift();
-  let final = ultima + ',' + primeira;
+  let esp = ', '
+  let final = ultima + esp + primeira;
   // final.push(primeira);
   // final.unshift(ultima);
   return final;
@@ -37,7 +38,7 @@ concatName(nomes);
 function footballPoints(highestCount, ties) {
   let vitorias = highestCount * 3;
   let result = ties + vitorias;
-  console.log(result);
+   return result;
 }
 footballPoints(5, 3);
 
