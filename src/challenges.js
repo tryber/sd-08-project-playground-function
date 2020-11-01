@@ -18,13 +18,13 @@ function calcArea(num1, num2) {
 // Desafio 3
 function splitSentence(input) {
   let frase = [];
-
   for (let i = 0; i < input.length; i += 1) {
     frase += input[i];
   }
   let novoArray = frase.split(" ");
   return novoArray;
 }
+
 splitSentence("go Trybe");
 
 // Desafio 4
@@ -43,28 +43,29 @@ function footballPoints(wins, ties) {
   let pontos = vitorias + empates;
   return pontos;
 }
+
 footballPoints(10, 5);
 
 // Desafio 6
-function highestCount(input) {
-  let arrayBase = [];
+// function highestCount(input) {
+//   let arrayBase = [];
+//   for (let i = 0; i < input.length; i += 1) {
+//     arrayBase.push(input[i]);
+//   }
+//   arrayBase.sort(function (a, b) {
+//     return a - b;
+//   });
+//   let numberOfOccurrences = 1;
+//   for (let i = arrayBase.length - 1; i >= 0; i -= 1)
+//     if (arrayBase[i] == arrayBase[i - 1]) {
+//       numberOfOccurrences += 1;
+//     } else {
+//       break;
+//     }
+//   return numberOfOccurrences;
+// }
 
-  for (let i = 0; i < input.length; i += 1) {
-    arrayBase.push(input[i]);
-  }
-  arrayBase.sort(function (a, b) {
-    return a - b;
-  });
-  let numberOfOccurrences = 1;
-  for (let i = arrayBase.length - 1; i >= 0; i -= 1)
-    if (arrayBase[i] == arrayBase[i - 1]) {
-      numberOfOccurrences += 1;
-    } else {
-      break;
-    }
-  return numberOfOccurrences;
-}
-highestCount([9, 1, 2, 3, 9, 5, 7]);
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -83,6 +84,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   }
 }
+
 catAndMouse(1, 0, 2);
 
 // Desafio 8
@@ -101,36 +103,38 @@ function fizzBuzz(input) {
   }
   return retorno;
 }
+
 fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
-function encode(input) {
-    
-    let palavraCodificada = "";
-    for(let i = 0; i < input.length; i += 1){                   
-      if (input[i] == "a"){
-        palavraCodificada += 1;
+function encode(input) {    
+  let palavraCodificada = "";
+  for(let i = 0; i < input.length; i += 1){                   
+    if (input[i] == "a"){
+      palavraCodificada += 1;
     } else if (input[i] == "e"){
-        palavraCodificada += 2;
-      } else if (input[i] == "i"){
-        palavraCodificada += 3;
-      } else if (input[i] == "o"){
-        palavraCodificada += 4;
-      } else if (input[i] == "u"){
-        palavraCodificada += 5;
-      } else {
-        palavraCodificada += input[i]
-      }
-    } 
-    return palavraCodificada;
-  }encode("hi there!")
+      palavraCodificada += 2;
+    } else if (input[i] == "i"){
+      palavraCodificada += 3;
+    } else if (input[i] == "o"){
+      palavraCodificada += 4;
+    } else if (input[i] == "u"){
+      palavraCodificada += 5;
+    } else {
+      palavraCodificada += input[i]
+    }
+  } 
+  return palavraCodificada;
+}
+
+encode("hi there!")
 
 function decode(input) {
   let palavraDecodificada = "";
   for(let i = 0; i < input.length; i += 1){                   
     if (input[i] == 1){
       palavraDecodificada += "a";
-  } else if (input[i] == 2){
+    } else if (input[i] == 2){
       palavraDecodificada += "e";
     } else if (input[i] == 3){
       palavraDecodificada += "i";
@@ -144,38 +148,37 @@ function decode(input) {
   } 
   console.log(palavraDecodificada);
   return palavraDecodificada;
-}decode("h3 th2r2")
+}
+decode("h3 th2r2")
   
 // Desafio 10
 function techList(array,name) {
   let arrayBase = [];
-  let retorno = new Array();
-
+  let retorno = [];
   if (Array.isArray(array) && array.length != 0){
     for (let i = 0; i < array.length; i += 1) {
-    arrayBase.push(array[i]);
-  }
+      arrayBase.push(array[i]);
+    }
   
-  arrayBase.sort();
-    for (let i = 0; i < arrayBase.length; i +=1)   {
+    arrayBase.sort();
+    for (let i = 0; i < arrayBase.length; i +=1){
       let objeto = {
         tech: arrayBase[i],
         name: name
       }
       retorno.push(objeto)
-  }  
-  console.log(retorno)
-  return retorno
-   
+    }  
+    console.log(retorno)
+    return retorno
+    
   } else {
-  console.log("Vazio!")
-  return "Vazio!"
-  
-}
- } techList(["React","Jest", "HTML", "CSS", "JavaScript"], "Lucas")
+    console.log("Vazio!")
+    return "Vazio!"  
+  }
+} 
+techList(["React","Jest", "HTML", "CSS", "JavaScript"], "Lucas")
   
 // Desafio 11
-
 function validNumber(arr) {
   for (let i = 0; i < arr.length; i++) {
     let atual = arr[i];
@@ -198,7 +201,8 @@ function validRepetition(arr) {
   }
   return true;
 }
-
+​
+// Desafio 11
 function generatePhoneNumber(input) {
   if (input.length !== 11) return 'Array com tamanho incorreto.'; //verifica se o length é 11
   if (validNumber(input) && validRepetition(input)) { // verifica se estão entre 0 e 9, e se algum repete mais que 3 vezes
@@ -210,6 +214,8 @@ function generatePhoneNumber(input) {
   }
   return "não é possível gerar um número de telefone com esses valores";
 }
+​
+console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 5, 8, 9, 0]));
 
 // Desafio 12
 function triangleCheck() {
