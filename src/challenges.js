@@ -1,17 +1,29 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(bool1,bool2) {
+  if((bool1 === true) && (bool2 === true)){
+    return true; 
+  }else{
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+  let areaTriangulo;
+  areaTriangulo = (base * height) / 2;
+  return areaTriangulo;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+//Bibliografia: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array. 
+https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array. 
+
+function splitSentence(string) {
+  let dividido=[];
+  dividido = string.split(" ");
+  return dividido;
 }
+console.log(splitSentence("ola povo"))
 
 // Desafio 4
 function concatName() {
@@ -29,14 +41,38 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  let gatoVencedor;
+  if(cat1==cat2){
+    gatoVencedor = "os gatos trombam e o rato foge";
+  }else if((cat1-mouse)>(cat2-mouse)) {
+    gatoVencedor = "cat2";
+  }else if((cat2-mouse)>(cat1-mouse)) {
+    gatoVencedor = "cat1";
+  }else{
+    gatoVencedor = "Digite somente posições válidas";
+  }
+  return gatoVencedor;
 }
+console.log(catAndMouse(2,3,3))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let divisiveis=[];
+  for(let i=0;i<array.length;i++){
+    if((array[i]%3==0)&&(array[i]%5==0)) {
+    divisiveis[i] = "fizzBuzz"
+    }else if(array[i]%3==0) {
+      divisiveis[i] = "fizz";
+    }else if(array[i]%5==0) {
+      divisiveis[i] = "buzz";
+    }else {
+      divisiveis[i] = "bug!"
+    }    
+  }
+  return divisiveis;
 }
+  console.log(fizzBuzz([2,3,15,30]));
 
 // Desafio 9
 function encode() {
