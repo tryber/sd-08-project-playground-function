@@ -233,9 +233,22 @@ function generatePhoneNumber(array) {
 console.log(generatePhoneNumber([1, 2, 3, 4, ]))
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(sidesTriangules) {
+
+  //console.log(sidesTriangules)
+
+  let sideA =  sidesTriangules[0] + sidesTriangules[1];
+  let sideB =  sidesTriangules[1] + sidesTriangules[2];
+  let sideC =  sidesTriangules[2] + sidesTriangules[0];
+
+  //console.log(sideA, sideB, sideC)
+
+if (sidesTriangules[0] < sideA  && sidesTriangules[1] < sideB && sidesTriangules[2] < sideC ) {
+  return "true"
 }
+
+}
+console.log(triangleCheck([10, 14, 8]))
 
 // Desafio 13
 function hydrate() {
