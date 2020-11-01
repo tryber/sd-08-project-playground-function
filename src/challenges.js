@@ -155,9 +155,9 @@ function hydrate(string) {
   let result = "";
   if (sumArray === 1) {
     result = `${sumArray} copo de água`;
-  }
+  } else {
   result = `${sumArray} copos de água`;
-
+  }
   return result;
 }
 
