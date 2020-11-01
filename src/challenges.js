@@ -20,15 +20,15 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(array) {
-  let result = "";
-  result = array[array.length - 1] + ", " + array[0];
+  let result = '';
+  result = array[array.length - 1] + ','  + array[0];
   return result;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  points =(wins * 3) + ties;
-  return points; 
+let  points =(wins * 3) + ties;
+  return points;
 }
 
 // Desafio 6
