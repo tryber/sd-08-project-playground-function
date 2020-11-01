@@ -19,9 +19,9 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName(frase) {
-  //frase = [joao, maria, jose];
-  let arrLista = [[frase.lengt - 1], frase[0]];
+function concatName(frase, arrLista) {
+  // frase = [joao, maria, jose];
+  arrLista = [[frase.lengt - 1], frase[0]];
   return arrLista;
 }
 
