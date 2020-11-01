@@ -45,7 +45,14 @@ function highestCount(meuArray) {
   return arrayMaior.length;
 }
 // Desafio 7
-function catAndMouse() {}
+function catAndMouse(mouse, cat1, cat2) {
+  let possible1 = math.abs(cat1 - mouse);
+  let possible2 = math.abs(cat2 - mouse);
+  let string = "os gatos trombam e o rato foge";
+  if (possible1 < possible2) return cat1;
+  if (possible2 < possible1) return cat2;
+  if (possible1 == possible2) return string;
+}
 
 // Desafio 8
 function fizzBuzz(array) {
