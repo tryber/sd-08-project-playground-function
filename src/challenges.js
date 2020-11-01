@@ -142,8 +142,9 @@ function decode(input) {
       palavraDecodificada += input[i]
     }
   } 
+  console.log(palavraDecodificada);
   return palavraDecodificada;
-}decode("h3 th2r2!")
+}decode("h3 th2r2")
   
 // Desafio 10
 function techList(array,name) {
@@ -174,9 +175,28 @@ function techList(array,name) {
  } techList(["React","Jest", "HTML", "CSS", "JavaScript"], "Lucas")
   
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+function generatePhoneNumber(input) {
+
+  if (input.length != 11){
+    return "Array com tamanho incorreto"
+  }
+  let arrayBase = [];
+  for (let i = 0; i < input.length; i += 1) {
+    arrayBase.push(input[i]);
+  }
+  arrayBase.sort();
+  let numberOfOccurrences = 1;
+  for (let i = arrayBase.length - 1; i >= 0; i -= 1) {
+    if (arrayBase[i] == arrayBase[i - 1]) {
+      numberOfOccurrences += 1;      
+    }    
+    if (numberOfOccurrences >= 3 || arrayBase[i] < 0 || arrayBase[i] > 9){
+      return "Não é possível gerar um número de telefone com esses valores"    
+    }
+  }
+      return "(" + input[0] + input[1] + ")" + input[2] + input[3] + input[4] + input[5] + input[6] + "-" + input[7] + input[8] + input[9] + input[10]
+   } generatePhoneNumber([1,3,4,5,6,7,8,9,0,1,2])
+  
 
 // Desafio 12
 function triangleCheck() {
