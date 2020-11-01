@@ -239,7 +239,7 @@ function triangleCheck(sidesTriangules) {
   let sideB =  Math.abs( sidesTriangules[1] - sidesTriangules[2] )
   let sideC =  Math.abs( sidesTriangules[2] - sidesTriangules[0] )
 
-  console.log(sideA, sideB, sideC)
+  //console.log(sideA, sideB, sideC)
 
   // necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois
 
@@ -254,10 +254,10 @@ function triangleCheck(sidesTriangules) {
 }
 
 }
-console.log(triangleCheck([10, 14, 8]))
-console.log(triangleCheck([10, 3, 4]))
-console.log(triangleCheck([6, 2, 2]))
-console.log(triangleCheck([16, 9, 2]))
+console.log(triangleCheck([10, 13, 2]))
+console.log(triangleCheck([12, 17, 4]))
+console.log(triangleCheck([5, 10, 3]))
+
 
 // Desafio 13
 function hydrate() {
