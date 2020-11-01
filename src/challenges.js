@@ -84,12 +84,43 @@ function fizzBuzz(array) {
   return newArray;
 }
 
+const objetoVogal = {
+  ["a"]: 1,
+  ["e"]: 2,
+  ["i"]: 3,
+  ["o"]: 4,
+  ["u"]: 5,
+};
+
+const objetoNumero = {
+  1: "a",
+  2: "e",
+  3: "i",
+  4: "o",
+  5: "u",
+};
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(palavra) {
+  const palavraArray = Array.from(palavra);
+  for (let pos in palavraArray) {
+    let letra = palavraArray[pos];
+    if (letra in objetoVogal) {
+      palavraArray[pos] = objetoVogal[letra];
+    }
+  }
+  return palavraArray.join("");
 }
-function decode() {
-  // seu código aqui
+
+function decode(palavra) {
+  const palavraArray = Array.from(palavra);
+  for (let pos in palavraArray) {
+    let letra = palavraArray[pos];
+    if (letra in objetoNumero) {
+      palavraArray[pos] = objetoNumero[letra];
+    }
+  }
+  return palavraArray.join("");
 }
 
 // Desafio 10
