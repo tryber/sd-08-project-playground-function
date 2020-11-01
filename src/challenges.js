@@ -129,10 +129,9 @@ function techList(tech, name) {
 function generatePhoneNumber(numberPhone) {
   // seu código aqui
   let fone = '';
-  
-  if (numberPhone.length > 11) {
-    return 'Array com tamanho incorreto.';
-  }else {
+
+  if (numberPhone.length == 11) {
+
     for (let x = 0; x < numberPhone.length; x++) {
       let cont = 0;
       if (numberPhone[x] < 0 || numberPhone[x] > 9) {
@@ -147,7 +146,7 @@ function generatePhoneNumber(numberPhone) {
         }
       }
     }
-  
+
     for (let i in numberPhone) {
       if (i == 0) {
         fone += '(' + numberPhone[0];
@@ -161,11 +160,13 @@ function generatePhoneNumber(numberPhone) {
       if (i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 8 || i == 9 || i == 10) {
         fone += numberPhone[i];
       }
-      
-    
+
+
     }
-  
     return fone;
+  } else {
+    return 'Array com tamanho incorreto.';
+  }
 }
 }
 
