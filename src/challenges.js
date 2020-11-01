@@ -1,49 +1,49 @@
 // Desafio 1
 
-function compareTrue(valor1, valor2) {
+function compareTrue (valor1, valor2) {
   if (valor1 && valor2) return true; 
   return false;
 }
 
 // Desafio 2
 
-function calcArea(base, height) {
+function calcArea (base, height) {
   let area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
 
-function splitSentence(literal) {
+function splitSentence (literal) {
   let split = literal.split(' ');
   return split;
 }
 
 // Desafio 4
 
-function concatName(array) {
+function concatName (array) {
   let string;
-  for (let i in array) {if (i == array.length - 1) string = array[i];}
+  for (let i in array) { if (i == array.length - 1) string = array[i]; }
   if (array[0]) string += ", " + array[0];
   return string;
 }
 
 // Desafio 5
 
-function footballPoints(wins, ties) {
+function footballPoints (wins, ties) {
   let pontos = 0;
-  for (let i = 0; i < wins; i += 1) {pontos = wins * 3;}
-  for (i = 0; i < ties; i += 1) {pontos += 1;}
+  for (let i = 0; i < wins; i += 1) { pontos = wins * 3; }
+  for (let i = 0; i < ties; i += 1) { pontos += 1; }
   return pontos;
 }
 
 // Desafio 6
 
-function highestCount(array) {
+function highestCount (array) {
   let maiorNumero = array[0];
   let cont = 0;
   Math.max.apply(null, array);
-  for (let k = 0; k < array.length; k += 1) {if (maiorNumero == array[k]) cont += 1;}
+  for (let k = 0; k < array.length; k += 1) { if (maiorNumero == array[k]) cont += 1; }
   return cont;
 }
 
@@ -51,7 +51,7 @@ function highestCount(array) {
 
 // Desafio 7
 
-function catAndMouse(mouse, cat1, cat2) {
+function catAndMouse (mouse, cat1, cat2) {
   let mouseMove = Math.abs(mouse);
   let cat1Move = Math.abs(cat1);
   let cat2Move = Math.abs(cat2);
@@ -65,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 
-function fizzBuzz(array) {
+function fizzBuzz (array) {
   let fizzBuzz = [];
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 3 == 0 && array[i] % 5 == 0) { fizzBuzz[i] = 'fizzBuzz'; } 
@@ -76,11 +76,11 @@ function fizzBuzz(array) {
   return fizzBuzz;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+//console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 
-function encode(literal) {
+function encode (literal) {
   for (let i in literal) {
     if (!(literal[i]*literal[i])) {
       if (literal[i] == "a") literal = literal.replace(literal[i], "1"); 
@@ -95,7 +95,7 @@ function encode(literal) {
 
 //console.log(encode("hi there"))
 
-function decode(literal) {
+function decode (literal) {
   for (let i in literal) {
     if (literal[i]*literal[i]) {
       if (literal[i] == "1") literal = literal.replace(literal[i], "a");
@@ -112,7 +112,7 @@ function decode(literal) {
 
 // Desafio 10
 
-function techList(array, name) {
+function techList (array, name) {
   if (array.length == 0) return "Vazio!";
   let tecnologias = array.sort();
   let arr = [];
@@ -131,7 +131,7 @@ function techList(array, name) {
 
 // Desafio 11
 
-function generatePhoneNumber(array) {
+function generatePhoneNumber (array) {
   if (array.length != 11) return "Array com tamanho incorreto.";
   for (let i = 0; i < array.length; i += 1) {
     let cont = 0;
@@ -152,14 +152,14 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 
-function triangleCheck(lineA, lineB, lineC) {
+function triangleCheck (lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) return true;
   return false;
 }
 
 // Desafio 13
 
-function hydrate(literal) {
+function hydrate (literal) {
   let agua = 0;
   for (let i in literal) {
     let a = literal[i];
