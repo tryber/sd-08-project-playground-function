@@ -39,7 +39,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(frase) {
- let arrLista = [frase[-1],frase[0]];
+ let arrLista = [[frase.lengt-1],frase[0]];
 return arrLista;
 
 }
