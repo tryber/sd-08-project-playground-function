@@ -45,9 +45,7 @@ function highestCount(meuArray) {
   return arrayMaior.length;
 }
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse() {}
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -102,7 +100,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return result;
 }
-console.log(triangleCheck(10, 14, 8));
+
 // Desafio 13
 function hydrate() {
   // seu código aqui
