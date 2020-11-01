@@ -2,7 +2,7 @@
 
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2) return true; 
-  else return false;
+  return false;
 }
 
 // Desafio 2
@@ -69,8 +69,8 @@ function fizzBuzz(array) {
   let fizzBuzz = [];
 
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 == 0 && array[i] % 5 == 0) fizzBuzz[i] = "fizz";
-    else fizzBuzz[i] = "bug!";
+    if (array[i] % 3 == 0 && array[i] % 5 == 0) { fizzBuzz[i] = "fizz"; } 
+    else { fizzBuzz[i] = "bug!"; }
     if (array[i] % 3 == 0) fizzBuzz[i] = "fizzBuzz";        
     if (array[i] % 5 == 0) fizzBuzz[i] = "buzz";
   }
@@ -80,7 +80,7 @@ function fizzBuzz(array) {
 // Desafio 9
 
 function encode(literal) {
-  for (i in literal) {
+  for (let i in literal) {
     if (literal[i] == "a") literal = literal.replace(literal[i], "1"); 
     if (literal[i] == "e") literal = literal.replace(literal[i], "2");
     if (literal[i] == "i") literal = literal.replace(literal[i], "3");
@@ -93,7 +93,7 @@ function encode(literal) {
 //console.log(encode("hi there"))
 
 function decode(literal) {
-  for (i in literal) {
+  for (let i in literal) {
     if (literal[i] == "1") literal = literal.replace(literal[i], "a");
     if (literal[i] == "2") literal = literal.replace(literal[i], "e");
     if (literal[i] == "3") literal = literal.replace(literal[i], "i");
@@ -130,15 +130,15 @@ function generatePhoneNumber(array) {
   if (array.length != 11) return "Array com tamanho incorreto.";
   for (let i = 0; i < array.length; i += 1) {
     let cont = 0;
-    for (let j = 0; j < array.length; j += 1) {if (array[i] == array[j]) cont += 1;}
+    for (let j = 0; j < array.length; j += 1) { if (array[i] == array[j]) cont += 1; }
       if (array[i] < 0 || array[i] > 9 || cont >= 3) return "não é possível gerar um número de telefone com esses valores";
   }
   let numeros = "", telefone = "", meioTel = "", fimTel = "";
-  for (let i = 0; i < array.length; i += 1) {numeros += array[i];}
+  for (let i = 0; i < array.length; i += 1) { numeros += array[i]; }
   telefone = "(" + numeros[0] + "" + numeros[1] + ") ";
-  for (let i = 2; i <= 6; i += 1) {meioTel += numeros[i];}
+  for (let i = 2; i <= 6; i += 1) { meioTel += numeros[i]; }
   telefone += meioTel + "-";
-  for (let i = 7; i <= 10; i += 1) {fimTel += numeros[i];}
+  for (let i = 7; i <= 10; i += 1) { fimTel += numeros[i]; }
   telefone += fimTel;
   return telefone;
 }
@@ -156,7 +156,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 function hydrate(literal) {
   let agua = 0;
-  for (i in literal) {
+  for (let i in literal) {
     let a = literal[i];
     if (a * a) agua += parseInt(a);
   }
