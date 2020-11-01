@@ -167,7 +167,7 @@ function generatePhoneNumber(numberPhone) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  if (lineA < (lineB + lineC) || lineB < (lineA + lineB) || lineC < (lineB + lineA)) {
+  if (lineA < (lineB + lineC) || lineB < (lineA + lineC) || lineC < (lineA + lineB)) {
     return true;
   } else {
     return false;
