@@ -192,12 +192,12 @@ function hydrate(string) {
   let numbers = string.replace(/\D+/g, "");
   let copos = 0;
   for (let x in numbers) {
-    copos += Number(numbers[x]);
+    copos += parseInt(numbers[x]);
   }
   if (copos === 1) {
-    console.log(copos + ' copo de água');
+    return copos + ' copo de água';
   } else {
-    console.log(copos + 'copos de água');
+    return copos + ' copos de água';
   }
 
 }
