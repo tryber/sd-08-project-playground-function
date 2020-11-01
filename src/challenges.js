@@ -248,13 +248,13 @@ function triangleCheck(lineA, lineB, lineC) {
 
   if ( ( lineA > sideANeg  && lineB > sideBNeg && lineC > sideCNeg ) ||
        ( lineA < sideAPlus && lineB < sideBPlus && lineC < sideCPlus  ) ) {
-        return false
-      } else {
         return true
+      } else {
+        return false
       }
 
 }
-console.log(triangleCheck(16, 9, 2))
+console.log(triangleCheck(10, 14, 8))
 
 
 
