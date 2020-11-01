@@ -20,8 +20,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(ArraydeStrings) {
-    return [ArraydeStrings.lenght - 1] + "," + ArraydeStrings[0];
+function concatName(arrayDeStrings) {
+    return [arrayDeStrings.lenght - 1] + "," + arrayDeStrings[0];
 }
 
 // Desafio 5
@@ -30,13 +30,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-    // seu código aqui
+function highestCount(arrayDeNumeros) {
+
 }
 
 // Desafio 7
-function catAndMouse() {
-    // seu código aqui
+function catAndMouse(a, b, c) {
+    let cat1 = Math.abs(c - a);
+    let cat2 = Math.abs(c - b);
+    if (cat1 < cat2) {
+        return "Cat A";
+    } else if (cat2 < cat1) {
+        return "Cat B";
+    } else {
+        return "Mouse C";
+    }
 }
 
 // Desafio 8
