@@ -21,13 +21,13 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(array) {
   let result = '';
-  result = array[array.length - 1] + ','  + array[0];
+  result = array[array.length - 1] + ',' + array[0];
   return result;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-let  points =(wins * 3) + ties;
+  let  points = (wins * 3) + ties;
   return points;
 }
 
