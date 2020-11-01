@@ -1,14 +1,9 @@
 // Desafio 1
 function compareTrue(a, b) {
-
   if (a === true && b === true) {
     return true;
-  } else {
+  } 
     return false;
-
-  };
-
-
 };
 
 
@@ -26,22 +21,16 @@ function calcArea(base, height) {
 }
 
 
-
-// Desafio 3
 function splitSentence(frase) {
   let arr;
-  arr = frase.split(" "); 
+  arr = frase.split(" ");
   return arr;
-
 }
-  // seu código aqui
-
 
 // Desafio 4
 function concatName(frase) {
- let arrLista = [[frase.lengt-1],frase[0]];
-return arrLista;
-
+  let arrLista = [[frase.lengt - 1], frase [0]];
+  return arrLista;
 }
 
 // Desafio 5
