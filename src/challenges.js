@@ -31,9 +31,8 @@ function calcArea(base, height) {
 function splitSentence() {
   let gpPalavra = "go Trybe";
   let recebe = [];
-
   recebe = gpPalavra.split(" ");
-  return recebe;
+
 }
 
 
