@@ -32,7 +32,7 @@ function splitSentence() {
   var gpPalavra = "go Trybe";
   var recebe = [];
   recebe = gpPalavra.split(" ");
-
+  return recebe;
 }
 
 
