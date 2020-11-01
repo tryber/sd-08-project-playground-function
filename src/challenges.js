@@ -68,13 +68,15 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let fizzBuzz = [];
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 == 0 && array[i] % 5 == 0) fizzBuzz[i] = 'fizz'; 
-    if (array[i] % 3 == 0) fizzBuzz[i] = 'fizzBuzz';        
-    if (array[i] % 5 == 0) fizzBuzz[i] = 'buzz';
-    if (array[i] % 3 != 0 && array[i] % 5 != 0) fizzBuzz[i] = 'bug!';
+    if (array[i] % 3 == 0 && array[i] % 5 == 0) { fizzBuzz[i] = 'fizzBuzz'; } 
+    else if (array[i] % 3 == 0) { fizzBuzz[i] = 'fizz'; }        
+    else if (array[i] % 5 == 0) { fizzBuzz[i] = 'buzz'; }
+    else { fizzBuzz[i] = 'bug!'; }
   }
   return fizzBuzz;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 
@@ -103,7 +105,7 @@ function decode(literal) {
       if (literal[i] == "5") literal = literal.replace(literal[i], "u");
     }
   }
-  return cont;
+  return literal;
 }
 
 //console.log(decode("H3 th2r2!"));
