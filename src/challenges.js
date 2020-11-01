@@ -150,15 +150,50 @@ function techList(techs, name) {
   }
   return object;
 }
-let techs = ["React", "Jest", "HTML", "CSS", "JavaScript"]; let name = "Lucas";
-console.log(techList(techs, name))
-// Ok! A desgraça não falou, mas era em ordem alfabética ¬¬"
+// Ok! 
 
 // Desafio 11
-function generatePhoneNumber(numbers) {
-  // seu código aqui
-}
+// function generatePhoneNumber(numbers) {
+//   let tel
+//   if (phoneCheckQtd(numbers) === 'tamanho errado') {
+// tel = "Array com tamanho incorreto."
+//} else if (phoneCheckQtd(numbers) === 'numeros errados' || phoneCheckRepeat === 'numeros repetidos demais' {
+//   tel = não é possível gerar um número de telefone com esses valores"
+//   } else if () {
+//}
+//   return tel
+// }
 
+function phoneCheckQtd(numbers) {
+  let phoneNumbers
+  if (numbers.length != 11) {
+    phoneNumbers = 'tamanho errado'
+  } 
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] < 0 || numbers[i] > 9) {
+    phoneNumbers = 'numeros errados'
+  }
+  return phoneNumbers
+  }
+
+function phoneCheckRepeat(numbers)  
+  let sortNumbers = numbers.sort();
+  let totalRepeated = [];
+  for (let i = 0; i < sortNumbers.length; i += 1) {
+    if (sortNumbers[i+1] === sortNumbers[i] || sortNumbers[i] === sortNumbers[i-1]) {
+      totalRepeated.push(sortNumbers[i]) 
+    }
+  }
+  if (totalRepeated.length >= 3) {
+    console.log(sortNumbers)
+    console.log(totalRepeated)
+    console.log(totalRepeated.length)
+    phoneNumbers = false
+  }
+  return phoneNumbers
+}
+let phone = [1, 5, 4, 4, 9, 5, 6, 8, 9, 6, 1, 3];
+console.log(phoneCheck(phone))
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let result;
