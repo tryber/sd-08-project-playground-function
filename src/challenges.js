@@ -144,7 +144,7 @@ function generatePhoneNumber(numberPhone) {
       }
     }
 
-    
+
     for (let i in numberPhone) {
       if (i == 0) {
         fone += '(' + numberPhone[0];
@@ -167,6 +167,12 @@ function generatePhoneNumber(numberPhone) {
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
+  if (lineA < (lineB + lineC) || lineB < (lineA - lineB) || lineC < (lineB - lineA)) {
+    return true;
+  } else {
+    return false;
+  }
+
 }
 
 // Desafio 13
