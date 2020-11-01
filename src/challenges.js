@@ -182,9 +182,55 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+
+  let phoneNumber = '';
+
+  for (number in array) {
+    phoneNumber += array[number]
+  }
+
+  //console.log(phoneNumber)
+  
+  let numberToReturn = '';
+  let cont = 0;
+
+  if (array.length > 11) {
+    return "Array com tamanho incorreto."
+  }
+
+  for (number in array) {
+    if (array[number] < 0 || array[number] > 9 ) {
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+  }
+
+  let a =1;
+  for (let i = 0; i < array.length; i += 1 ) {
+    //console.log(array.length)
+    //console.log(array[i])
+    for (let a = i+1 ; a < array.length; a += 1 ) {
+      //console.log("ops",array[a])
+      if (array[i] == array[a]) {
+        //console.log(array[i], array[a])
+        cont += 1;
+      }
+    }
+  }
+  if (cont > 3) {
+    return "não é possível gerar um número de telefone com esses valores"
+  }
+
+  numberToReturn = '('
+  numberToReturn += phoneNumber.substring(0,2)
+  numberToReturn += ')'
+  numberToReturn +=  ' '
+  numberToReturn += phoneNumber.substring(2,7)
+  numberToReturn += '-'
+  numberToReturn += phoneNumber.substring(7,11)
+  return numberToReturn
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 3, 0, 1]))
 
 // Desafio 12
 function triangleCheck() {
