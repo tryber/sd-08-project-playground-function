@@ -154,7 +154,7 @@ function techList(List, name) {
   let orderVector = [];
   let objList = {
     tech: List,
-    nome: name,
+    name: name,
   };
 
   if (orderList.length === 0) {
@@ -163,7 +163,7 @@ function techList(List, name) {
     for (let i = 0; i < orderList.length; i += 1) {
       let element = {
         tech: objList.tech[i],
-        nome: name,
+        name: name,
       };
       orderVector.push(element);
     }
