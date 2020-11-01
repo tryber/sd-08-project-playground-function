@@ -253,8 +253,8 @@ console.log(triangleCheck(10, 14, 8))
 // Desafio 13
 function hydrate(string) {
 
-  let matches = string.match(/\d+/g).map(Number);
-  let sum = 0;
+let sum = 0;
+let matches = string.match(/\d+/g).map(Number);
 
 for (number in matches){
   sum += matches[number]
