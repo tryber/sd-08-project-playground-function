@@ -129,8 +129,7 @@ function techList(tech, name) {
 function generatePhoneNumber(numberPhone) {
   // seu código aqui
   let fone = '';
-
-  if (numberPhone.length == 11) {
+  if (numberPhone.length === 11) {
 
     for (let x = 0; x < numberPhone.length; x++) {
       let cont = 0;
@@ -155,18 +154,16 @@ function generatePhoneNumber(numberPhone) {
         fone += numberPhone[1] + ')'
       }
       if (i == 7) {
-        fone += '-' + numberPhone[7]
+        fone += '-' + numberPhone[7];
       }
       if (i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 8 || i == 9 || i == 10) {
         fone += numberPhone[i];
       }
-
-
     }
     return fone;
-  } else {
-    return 'Array com tamanho incorreto.';
   }
+  return 'Array com tamanho incorreto.';
+
 }
 
 // Desafio 12
