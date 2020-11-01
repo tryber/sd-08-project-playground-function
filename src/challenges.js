@@ -18,7 +18,7 @@ return (base * height)/2;
 function splitSentence() {
 let umaString = "go Trybe";
 return umaString.split(' ');
-
+}
 // Desafio 4
 function concatName() {
   // seu código aqui
