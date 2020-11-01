@@ -39,9 +39,12 @@ function concatName(last_first) {
 console.log(concatName(['Bruno', 'Candido', 'Morais']));
 
 // Desafio 5
-function footballPoints() {
-   
+function footballPoints(wins, ties) {
+  let points = (wins *3) + ties;
+  return points;
 }
+
+console.log(footballPoints(5, 1));
 
 // Desafio 6
 function highestCount() {
@@ -49,9 +52,18 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2){ 
+  let winner;
+  if((cat2 - mouse) == (cat1 - mouse)) {
+  winner = 'Os gatos trombam e o rato foge'
+  }else if((cat1 - mouse) < (cat2 - mouse)){
+    winner = 'cat1';
+  }else{
+    winner = 'cat2';
+  }
+  return winner;
+}  
+console.log(catAndMouse(1, 4, 4));
 
 // Desafio 8
 function fizzBuzz() {
