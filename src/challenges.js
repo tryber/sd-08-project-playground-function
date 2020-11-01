@@ -191,11 +191,11 @@ function generatePhoneNumber(array) {
   }
 
   //console.log(phoneNumber)
-  
+
   let numberToReturn = '';
   let cont = 0;
 
-  if (array.length > 11) {
+  if (array.length != 11) {
     return "Array com tamanho incorreto."
   }
 
@@ -230,7 +230,7 @@ function generatePhoneNumber(array) {
   numberToReturn += phoneNumber.substring(7,11)
   return numberToReturn
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 3, 0, 1]))
+console.log(generatePhoneNumber([1, 2, 3, 4, ]))
 
 // Desafio 12
 function triangleCheck() {
