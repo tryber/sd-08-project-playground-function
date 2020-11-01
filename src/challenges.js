@@ -21,7 +21,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(arrLista) {
   let frase = '';
-  arrLista = [joao, ana, maria];
+  arrLista = ["joao", "ana", "maria"];
   frase = arrLista[[arrLista.lengt - 1], arrlista[0]];
   return frase;
 }
