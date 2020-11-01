@@ -85,14 +85,24 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) return true;
-  if (lineB < lineA + lineC && lineB > Math.abs(lineC - lineB)) return true;
-  if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) return true;
-  else {
-    return false;
+  let result = false;
+  let somaAB = lineA + lineC;
+  let somaBC = lineB + lineC;
+  let somaAC = lineA + lineC;
+  let condA = lineA < somaBC;
+  let condB = lineB < somaAC;
+  let condC = lineC < somaAB;
+  let valorAbsAB = Math.abs(lineA - lineB);
+  let valorAbsBC = Math.abs(lineB - lineC);
+  let valorAbsAC = Math.abs(lineA - lineC);
+  if (condA && condB && condC && valorAbsAB && valorAbsAC && valorAbsBC) {
+    result = true;
+  } else {
+    result = false;
   }
+  return result;
 }
-
+console.log(triangleCheck(10, 14, 8));
 // Desafio 13
 function hydrate() {
   // seu código aqui
