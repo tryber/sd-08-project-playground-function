@@ -247,11 +247,11 @@ function triangleCheck(sidesTriangules) {
   // necessário que a medida de qualquer um dos lados e maior que o valor absoluto da diferença entre essas medidas.
 
   if ( ( sidesTriangules[0] > sideANeg  && sidesTriangules[1] > sideBNeg && sidesTriangules[2] > sideCNeg ) ||
-       ( sidesTriangules[0] < sideAPlus && sidesTriangules[1] < sideABlus && sidesTriangules[2] < sideCPlus  ) ) {
-          return true;
-  } else {
-      return false;
-  }
+       ( sidesTriangules[0] < sideAPlus && sidesTriangules[1] < sideBPlus && sidesTriangules[2] < sideCPlus  ) ) {
+        return true
+      } else {
+        return false
+      }
 
 }
 console.log(triangleCheck([10, 14, 8]))
