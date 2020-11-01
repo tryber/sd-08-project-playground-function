@@ -48,53 +48,62 @@ function catAndMouse(a, b, c) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-    // seu código aqui
-}
+function fizzBuzz(array_de_numeros) {
+    for (i = 0; i < array_de_numeros.lenght - 1; i += ) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            return "fizzBuzz";
+        } else if (i % 3 == 0) {
+            return "fizz";
+        } else if (i % 5 == 0) {
+            return "buzz";
+        } else {
+            return "bug!";
+        };
+    }
 
-// Desafio 9
-function encode() {
-    // seu código aqui
-}
+    // Desafio 9
+    function encode() {
+        // seu código aqui
+    }
 
-function decode() {
-    // seu código aqui
-}
+    function decode() {
+        // seu código aqui
+    }
 
-// Desafio 10
-function techList() {
-    // seu código aqui
-}
+    // Desafio 10
+    function techList() {
+        // seu código aqui
+    }
 
-// Desafio 11
-function generatePhoneNumber() {
-    // seu código aqui
-}
+    // Desafio 11
+    function generatePhoneNumber() {
+        // seu código aqui
+    }
 
-// Desafio 12
-function triangleCheck() {
-    // seu código aqui
-}
+    // Desafio 12
+    function triangleCheck() {
+        // seu código aqui
+    }
 
-// Desafio 13
-function hydrate() {
-    // seu código aqui
-}
+    // Desafio 13
+    function hydrate() {
+        // seu código aqui
+    }
 
 
-module.exports = {
-    calcArea,
-    catAndMouse,
-    compareTrue,
-    concatName,
-    decode,
-    encode,
-    fizzBuzz,
-    footballPoints,
-    generatePhoneNumber,
-    techList,
-    highestCount,
-    hydrate,
-    splitSentence,
-    triangleCheck,
-}
+    module.exports = {
+        calcArea,
+        catAndMouse,
+        compareTrue,
+        concatName,
+        decode,
+        encode,
+        fizzBuzz,
+        footballPoints,
+        generatePhoneNumber,
+        techList,
+        highestCount,
+        hydrate,
+        splitSentence,
+        triangleCheck,
+    }
