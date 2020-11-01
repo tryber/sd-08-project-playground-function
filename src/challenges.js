@@ -65,7 +65,6 @@ function fizzBuzz(array) {
   }
   return arrayFizzBuzz;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode() {
   // seu código aqui
@@ -85,8 +84,11 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC))
+    if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC))
+      if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineC)) return true;
+      else false;
 }
 
 // Desafio 13
