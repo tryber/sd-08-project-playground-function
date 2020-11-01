@@ -52,19 +52,12 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let newArray = [];
-
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 15 === 0) {
-      newArray.push('fizzBuzz')
-    } else if (array[i] % 5 === 0) {
-      newArray.push('buzz')
-    } else if (array[i] % 3 === 0) {
-      newArray.push('fizz')
-    } else {
-      newArray.push('bug!')
-    }
-  }
+  const newArray = array.map(function(fb) {
+    if (fb % 3 === 0 && fb % 5 === 0) return "fizzBuzz";
+    if (fb % 3 === 0) return "fizz";
+    if (fb % 5 === 0) return "buzz";
+    return "bug!";
+  });
   return newArray;
 }
 
