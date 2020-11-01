@@ -153,33 +153,31 @@ function encode(codigo) {
   // A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de
   //letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!",
   // o retorno deverá ser "hi there!").
-
-
-  codigo=search_replace(codigo,"a","1");
-  codigo=search_replace(codigo,"e","2");
-  codigo=search_replace(codigo,"i","3");
-  codigo=search_replace(codigo,"o","4");
-  codigo=search_replace(codigo,"u","5");
+  search_replace(codigo,"a","1");
+  search_replace(codigo,"e","2");
+  search_replace(codigo,"i","3");
+  search_replace(codigo,"o","4");
+  search_replace(codigo,"u","5");
   return codigo;
 }
 
 function search_replace(codigo,entrada,saida){
-  while(codigo.search(entrada)>0){
-  codigo = codigo.replace(entrada,saida)
+  while (codigo.search(entrada) >= 0 ){
+    codigo[codigo.search(entrada)]="saida"
+    console.log(codigo.search(entrada))
+    console.log()
   }
- return codigo
 }
-
 function decode(codigo) {
-  codigo=search_replace(codigo,"1","a");
-  codigo=search_replace(codigo,"2","e");
-  codigo=search_replace(codigo,"3","i");
-  codigo=search_replace(codigo,"4","o");
-  codigo=search_replace(codigo,"5","u");
+ search_replace(codigo,"1","a");
+ search_replace(codigo,"2","e");
+ search_replace(codigo,"3","i");
+ search_replace(codigo,"4","o");
+ search_replace(codigo,"5","u");
 return codigo;
 }
 // Desafio 10
-function techList(tech=[],nome) {
+function techList(tech,nome) {
   //   Crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo
 // parâmetro chamado name com um nome.
 
@@ -197,54 +195,32 @@ let objeto = {
   tech:"",
   name:""
 };
-for (let  key=0 ; key<tech.length ; key++){
+for ( const key in tech){
   objeto.tech=tech[key];
   objeto.name=nome;
-  console.log("")
-  console.log(key)
-  console.log(objeto);
-  console.log(listaTech)
-  listaTech[key]=objeto.name + objeto.tech;
+  listaTech[key]=objeto;
 }
-//listaTech.sort();
+listaTech.objeto.tech.sort();
 return listaTech;
 
 }
 
 // Desafio 11
-function generatePhoneNumber(numeros=[]) {
-  // Crie uma função chamada `generatePhoneNumber` que receba uma array com 11 números e retorne
-  // um número de telefone, respeitando parênteses, traços e espaços.
-  // Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1],
-  // `generatePhoneNumber` deverá retornar `(12) 34567-8901`.
-  // - Se a função receber um array com tamanho diferente de 11, a mesma deve
-  // retornar `"Array com tamanho incorreto."`.
-  // - Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3
-  // vezes ou mais, `generatePhoneNumber` deverá retornar a string
-  // `"não é possível gerar um número de telefone com esses valores"`.
-  let ordenado = numeros.sort
-  if(checkPhoneNumber0(ordenado)===false) {return "não é possível gerar um número de telefone com esses valores"}
-  if(checkPhoneNumber1(ordenado)===false) {return "não é possível gerar um número de telefone com esses valores"}
-  if(numeros.length!=11){return "Array com tamanho incorreto."}
-  let resultado="";
-  resultado=resultado.concat("(",numeros[0],numeros[1],") ",numeros[2],numeros[3],numeros[4],numeros[5],numeros[6],"-",numeros[7],numeros[8],numeros[9],numeros[10])
-  return resultado;
-}
-function checkPhoneNumber0(ordenado){
-  for(let  key in ordenado){
-    if(ordenado[key]<0||ordenado[key]>9){
-      return  false;
-    }
-    return true;
-}
-}
-function checkPhoneNumber1(ordenado){
-  for(let  key in ordenado){
-    if(ordenado[key]===ordenado[key+1] && ordenado[key+1]===ordenado[key+2] && ordenado[key+2]===ordenado[key+3]){
-      return false;
-    }
-    return true;
-}
+function generatePhoneNumber() {
+
+//   Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como
+// parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
+
+// Para tanto, tenha em mente algumas considerações:
+
+// Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e
+// maior que o valor absoluto da diferença entre essas medidas.
+
+// Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
+
+// O retorno da sua função deverá ser um booleano.
+
+// Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
 }
 
 // Desafio 12

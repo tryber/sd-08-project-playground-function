@@ -204,7 +204,8 @@ for (let  key=0 ; key<tech.length ; key++){
   console.log(key)
   console.log(objeto);
   console.log(listaTech)
-  listaTech[key]=objeto.name + objeto.tech;
+  listaTech[key]=objeto.;
+  objeto.tech="";
 }
 //listaTech.sort();
 return listaTech;
@@ -212,39 +213,21 @@ return listaTech;
 }
 
 // Desafio 11
-function generatePhoneNumber(numeros=[]) {
-  // Crie uma função chamada `generatePhoneNumber` que receba uma array com 11 números e retorne
-  // um número de telefone, respeitando parênteses, traços e espaços.
-  // Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1],
-  // `generatePhoneNumber` deverá retornar `(12) 34567-8901`.
-  // - Se a função receber um array com tamanho diferente de 11, a mesma deve
-  // retornar `"Array com tamanho incorreto."`.
-  // - Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3
-  // vezes ou mais, `generatePhoneNumber` deverá retornar a string
-  // `"não é possível gerar um número de telefone com esses valores"`.
-  let ordenado = numeros.sort
-  if(checkPhoneNumber0(ordenado)===false) {return "não é possível gerar um número de telefone com esses valores"}
-  if(checkPhoneNumber1(ordenado)===false) {return "não é possível gerar um número de telefone com esses valores"}
-  if(numeros.length!=11){return "Array com tamanho incorreto."}
-  let resultado="";
-  resultado=resultado.concat("(",numeros[0],numeros[1],") ",numeros[2],numeros[3],numeros[4],numeros[5],numeros[6],"-",numeros[7],numeros[8],numeros[9],numeros[10])
-  return resultado;
-}
-function checkPhoneNumber0(ordenado){
-  for(let  key in ordenado){
-    if(ordenado[key]<0||ordenado[key]>9){
-      return  false;
-    }
-    return true;
-}
-}
-function checkPhoneNumber1(ordenado){
-  for(let  key in ordenado){
-    if(ordenado[key]===ordenado[key+1] && ordenado[key+1]===ordenado[key+2] && ordenado[key+2]===ordenado[key+3]){
-      return false;
-    }
-    return true;
-}
+function generatePhoneNumber() {
+
+//   Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como
+// parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
+
+// Para tanto, tenha em mente algumas considerações:
+
+// Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e
+// maior que o valor absoluto da diferença entre essas medidas.
+
+// Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
+
+// O retorno da sua função deverá ser um booleano.
+
+// Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
 }
 
 // Desafio 12

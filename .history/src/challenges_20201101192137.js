@@ -222,29 +222,11 @@ function generatePhoneNumber(numeros=[]) {
   // - Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3
   // vezes ou mais, `generatePhoneNumber` deverá retornar a string
   // `"não é possível gerar um número de telefone com esses valores"`.
-  let ordenado = numeros.sort
-  if(checkPhoneNumber0(ordenado)===false) {return "não é possível gerar um número de telefone com esses valores"}
-  if(checkPhoneNumber1(ordenado)===false) {return "não é possível gerar um número de telefone com esses valores"}
-  if(numeros.length!=11){return "Array com tamanho incorreto."}
-  let resultado="";
-  resultado=resultado.concat("(",numeros[0],numeros[1],") ",numeros[2],numeros[3],numeros[4],numeros[5],numeros[6],"-",numeros[7],numeros[8],numeros[9],numeros[10])
-  return resultado;
-}
-function checkPhoneNumber0(ordenado){
-  for(let  key in ordenado){
-    if(ordenado[key]<0||ordenado[key]>9){
-      return  false;
-    }
-    return true;
-}
-}
-function checkPhoneNumber1(ordenado){
-  for(let  key in ordenado){
-    if(ordenado[key]===ordenado[key+1] && ordenado[key+1]===ordenado[key+2] && ordenado[key+2]===ordenado[key+3]){
-      return false;
-    }
-    return true;
-}
+  let ortdenado = numeros
+  for(let  key in números){
+    if(numeros[key]<0||numeros[key]>9)
+  }
+
 }
 
 // Desafio 12

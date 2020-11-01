@@ -227,8 +227,7 @@ function generatePhoneNumber(numeros=[]) {
   if(checkPhoneNumber1(ordenado)===false) {return "não é possível gerar um número de telefone com esses valores"}
   if(numeros.length!=11){return "Array com tamanho incorreto."}
   let resultado="";
-  resultado=resultado.concat("(",numeros[0],numeros[1],") ",numeros[2],numeros[3],numeros[4],numeros[5],numeros[6],"-",numeros[7],numeros[8],numeros[9],numeros[10])
-  return resultado;
+  resultado=resultado
 }
 function checkPhoneNumber0(ordenado){
   for(let  key in ordenado){
