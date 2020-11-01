@@ -179,7 +179,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 
 
-  if (maiorLado < lineA + lineB && maiorLado < lineA + lineC && maiorLado < lineB + lineA && maiorLado < lineB 
+  if (maiorLado < lineA + lineB && maiorLado < lineA + lineC && maiorLado < lineB + lineA && maiorLado < lineB
     + lineC && maiorLado < lineC + lineA && maiorLado < lineC + lineB) {
     return true;
   }
@@ -189,6 +189,17 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate() {
   // seu código aqui
+  let numbers = string.replace(/\D+/g, "");
+  let copos = 0;
+  for (let x in numbers) {
+    copos += parseInt(numbers[x]);
+  }
+  if (copos === 1) {
+    console.log(copos + ' copo de água');
+  } else {
+    console.log(copos + 'copos de água');
+  }
+
 }
 
 
