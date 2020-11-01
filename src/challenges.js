@@ -99,9 +99,40 @@ function decode(p) {
 
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(array,name) {
+  let objeto = {};    
+  objeto["tech"]=array; 
+  objeto["name"]=name;
+
+  return objeto;
+}console.log(techList(["html"],"felipe"))
+
+
+
+
+let objeto = [];  
+let array = ['react','jest','html','css','javascript'];
+//   for(i in array){
+//     objeto[i]=["tech"]=array[i],
+//     objeto["name"]="felipe";
+//   }  
+// console.log(objeto)
+
+
+
+objeto = [{`tech: ${array[0]}`}]; 
+console.log(objeto)
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 11
 function generatePhoneNumber(array) {
@@ -182,9 +213,32 @@ function triangleCheck(lineA,lineB,lineC) {
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(string) {
+  let repl = string.replace(/\s/g, ''),int = 0;
+  for(var i=0;i<repl.length;i++){
+    if(isNaN(repl[i])==false){  
+    int+=parseInt(repl[i])
+    }
+  }
+  if(int==1){
+    return (`${int} copo de água`);
+  }else{
+    return (`${int} copos de água`);
+  }
+}console.log(hydrate("1cerveja"));
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 module.exports = {
