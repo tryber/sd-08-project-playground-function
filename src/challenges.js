@@ -2,34 +2,25 @@
 function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
-  } 
-    return false;
-};
-
-
-
-
-// seu código aqui
-
-
+  }
+  return false;
+}
 
 // Desafio 2
 function calcArea(base, height) {
-
   return (base * height) / 2;
-
 }
 
-
+// Desafio 3
 function splitSentence(frase) {
   let arr;
-  arr = frase.split(" ");
+  arr = frase.split(' ');
   return arr;
 }
 
 // Desafio 4
 function concatName(frase) {
-  let arrLista = [[frase.lengt - 1], frase [0]];
+  let arrLista = [[frase.lengt - 1], frase[0]];
   return arrLista;
 }
 
