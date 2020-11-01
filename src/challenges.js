@@ -70,9 +70,12 @@ function catAndMouse() {
 
   if (distCat1 < distCat2) {
     return 'cat1'
-  } else if (distCat2 < distCat1) {
+  } 
+  
+  if (distCat2 < distCat1) {
     return 'cat2'
-  } else {
+  } 
+  if (distCat1 == distCat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
