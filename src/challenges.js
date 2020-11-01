@@ -1,5 +1,6 @@
 // Desafio 1
 function compareTrue(num1, num2) {
+<<<<<<< HEAD
   if (num1 !== num2 && num1 > num2) {
     return true;
   } else {
@@ -7,6 +8,16 @@ function compareTrue(num1, num2) {
   }  
 }
 console.log(compareTrue(9, 7));
+=======
+  if (num1 != num2 && num1 > num2) {
+    return true;
+  }else{
+    return false;
+  }  
+  }
+  console.log(compareTrue(9, 7));
+
+>>>>>>> b5e3e3970ab572a9e6d54f08bc512e695bf79c40
 
 // Desafio 2
 function calcArea(base, height) {
