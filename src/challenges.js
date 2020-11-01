@@ -49,7 +49,7 @@ function catAndMouse(a, b, c) {
 
 // Desafio 8
 function fizzBuzz(array_de_numeros) {
-    for (i = 0; i < array_de_numeros.lenght - 1; i +=) {
+    for (i = 0; i < array_de_numeros.lenght - 1; i+=) {
         if (i % 3 == 0 && i % 5 == 0) {
             return "fizzBuzz";
         } else if (i % 3 == 0) {
