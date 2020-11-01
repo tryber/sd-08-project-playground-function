@@ -18,8 +18,10 @@ ccalcArea(10,20);
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
-}
+  var resultado = ['Go, Trybe'];
+  return resultado;
+  }
+  console.log(splitSentence());
 
 // Desafio 4
 function concatName() {
