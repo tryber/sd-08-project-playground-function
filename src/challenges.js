@@ -187,7 +187,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
   let numbers = string.replace(/\D+/g, "");
   let copos = 0;
