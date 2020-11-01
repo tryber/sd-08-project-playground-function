@@ -14,8 +14,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-    // seu código aqui
+//O método split() divide uma String numa lista ordenada (substrings), colocando numa array, e retorna o array.
+function splitSentence(string) {
+    return string.split("");
 }
 
 // Desafio 4
