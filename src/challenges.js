@@ -1,31 +1,32 @@
 // Desafio 1
-function compareTrue(bool1,bool2) {
+function compareTrue(bool1, bool2) {
   if(bool1 === true && bool2 === true){
     return true; 
   }else{
     return false;
   }
 }
-console.log(compareTrue(true, true))
+console.log(compareTrue(true, true));
+
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   let areaTriangulo;
   areaTriangulo = (base * height) / 2;
   return areaTriangulo;
 }
-console.log(calcArea(4,6))
+console.log(calcArea(4,6));
+
 
 // Desafio 3
-//Bibliografia: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array. 
-https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array. 
-
+//Bibliografia: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array.
 function splitSentence(string) {
   let dividido = [];
   dividido = string.split(" ");
   return dividido;
 }
-console.log(splitSentence("ola povo"))
+console.log(splitSentence("ola povo"));
+
 
 // Desafio 4
 function concatName(array) {
@@ -35,14 +36,16 @@ function concatName(array) {
   }
   return(invertido[invertido.length-1] + ", " + invertido[0])
 } 
-console.log(concatName(['pedro','joão','rosa','maria']))
+console.log(concatName(['pedro', 'joão' , 'rosa', 'maria']));
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = (wins *3) + ties;
   return points;
 } 
-console.log(footballPoints(3,2))
+console.log(footballPoints(3, 2));
+
 
 // Desafio 6
 function highestCount() {
@@ -50,20 +53,20 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   let gatoVencedor;
   if(cat1==cat2){
     gatoVencedor = "os gatos trombam e o rato foge";
-  }else if((cat1-mouse)>(cat2-mouse)) {
+  }else if((cat1-mouse) > (cat2-mouse)) {
     gatoVencedor = "cat2";
-  }else if((cat2-mouse)>(cat1-mouse)) {
+  }else if((cat2-mouse) >( cat1-mouse)) {
     gatoVencedor = "cat1";
   }else{
     gatoVencedor = "Digite somente posições válidas";
   }
   return gatoVencedor;
 }
-console.log(catAndMouse(2,3,3))
+console.log(catAndMouse(2, 3, 3))
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -81,7 +84,7 @@ function fizzBuzz(array) {
   }
   return divisiveis;
 }
-console.log(fizzBuzz([2,3,15,30]));
+console.log(fizzBuzz([2, 3, 15, 30]));
 
 // Desafio 9
 function encode() {
