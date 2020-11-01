@@ -1,9 +1,9 @@
 // Desafio 1
-function compareTrue(n1 , n2) {
-  if(n1 % 2 == 1 && n2 % 2 == 1){
+function compareTrue(n1, n2) {
+  if (n1 % 2 == 1 && n2 % 2 == 1) {
     return true;
-  }else{
-    return false
+  } else {
+    return false;
   }
 }
 
@@ -11,71 +11,77 @@ function compareTrue(n1 , n2) {
 function calcArea(base, height) {
   calcArea = (base * height) / 2;
   return calcArea;
-
 }
 
 // Desafio 3
 function splitSentence(frase) {
-splitSentence = frase.split(' ') ;
-return splitSentence
+  splitSentence = frase.split(" ");
+  return splitSentence;
 }
 
 /// Desafio 4
-function concatName (arrayString) {
-  let primeiroUltimo = arrayString[arrayString.length - 1] + ", " + arrayString[0];
+function concatName(arrayString) {
+  let primeiroUltimo =
+    arrayString[arrayString.length - 1] + ", " + arrayString[0];
   return primeiroUltimo;
 }
 
-
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = (wins * 3) + (ties * 1);
-  console.log(pontos)
+  let pontos = wins * 3 + ties * 1;
+  console.log(pontos);
   return pontos;
 }
 
 // Desafio 6
 function highestCount(numbers) {
-  let maiorNumber = 0
-  let contador = 0
+  let maiorNumber = 0;
+  let contador = 0;
 
   for (let index = 0; index < numbers.length; index++) {
-
     if (maiorNumber < numbers[index]) {
-      maiorNumber = numbers[index]
+      maiorNumber = numbers[index];
     }
   }
-
 
   for (let index2 = 0; index2 < numbers.length; index2++) {
-
     if (maiorNumber == numbers[index2]) {
-      contador++
+      contador++;
     }
   }
-  console.log(contador)
+  console.log(contador);
 
-  return contador
-  
+  return contador;
 }
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let diferencaCat1 = Math.abs(mouse - cat1);
   let diferencaCat2 = Math.abs(mouse - cat2);
-  
-  if (diferencaCat1 < diferencaCat2){
-    return'cat1'
-  } else if (diferencaCat2 < diferencaCat1){
-    return 'cat2'
+
+  if (diferencaCat1 < diferencaCat2) {
+    return "cat1";
+  } else if (diferencaCat2 < diferencaCat1) {
+    return "cat2";
   }
-  return 'os gatos trombam e o rato foge'
+  return "os gatos trombam e o rato foge";
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  const newArray = [];
+  for (let valor of array) {
+    if (valor % 3 == 0 && valor % 5 == 0) {
+      newArray.push("fizzBuzz");
+    } else if (valor % 5 == 0) {
+      newArray.push("buzz");
+    } else if (valor % 3 == 0) {
+      newArray.push("fizz");
+    } else {
+      newArray.push("bug!");
+    }
+  }
+  return newArray;
 }
 
 // Desafio 9
@@ -106,7 +112,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -122,4 +127,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
