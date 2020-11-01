@@ -19,11 +19,10 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName(arrLista) {
-  let frase = '';
-  arrLista = ["joao", "ana", "maria"];
-  frase = arrLista[[arrLista.lengt - 1], arrlista[0]];
-  return frase;
+function concatName(array) {
+  let result = "";
+  result = array[array.length - 1] + ", " + array[0];
+  return result;
 }
 
 // Desafio 5
