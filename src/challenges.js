@@ -233,28 +233,28 @@ function generatePhoneNumber(array) {
 console.log(generatePhoneNumber([1, 2, 3, 4, ]))
 
 // Desafio 12
-function triangleCheck(sidesTriangules) {
+function triangleCheck(lineA, lineB, lineC) {
 
-  let sideANeg =  Math.abs( sidesTriangules[0] - sidesTriangules[1] )
-  let sideBNeg =  Math.abs( sidesTriangules[1] - sidesTriangules[2] )
-  let sideCNeg =  Math.abs( sidesTriangules[2] - sidesTriangules[0] )
+  let sideANeg =  Math.abs( lineA - lineB )
+  let sideBNeg =  Math.abs( lineB - lineC )
+  let sideCNeg =  Math.abs( lineC - lineA )
 
-  let sideAPlus =  Math.abs( sidesTriangules[0] + sidesTriangules[1] )
-  let sideBPlus =  Math.abs( sidesTriangules[1] + sidesTriangules[2] )
-  let sideCPlus =  Math.abs( sidesTriangules[2] + sidesTriangules[0] )
+  let sideAPlus =  Math.abs( lineA + lineB )
+  let sideBPlus =  Math.abs( lineB + lineC )
+  let sideCPlus =  Math.abs( lineC + lineA )
 
   // necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois
   // necessário que a medida de qualquer um dos lados e maior que o valor absoluto da diferença entre essas medidas.
 
-  if ( ( sidesTriangules[0] > sideANeg  && sidesTriangules[1] > sideBNeg && sidesTriangules[2] > sideCNeg ) ||
-       ( sidesTriangules[0] < sideAPlus && sidesTriangules[1] < sideBPlus && sidesTriangules[2] < sideCPlus  ) ) {
+  if ( ( lineA > sideANeg  && lineB > sideBNeg && lineC > sideCNeg ) ||
+       ( lineA < sideAPlus && lineB < sideBPlus && lineC < sideCPlus  ) ) {
         return true
       } else {
         return false
       }
 
 }
-console.log(triangleCheck([10, 14, 8]))
+console.log(triangleCheck(10, 14, 8))
 
 
 
