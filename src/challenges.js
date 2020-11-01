@@ -103,7 +103,7 @@ function encode(string) {
 
   for (let i = 0; i < string.length; i += 1) {
     letra = string[i];
-    
+
     if (letra === 'a') {
       frase += 1;
     } else if (letra === 'e') {
@@ -128,7 +128,7 @@ function decode(string) {
 
   for (let i = 0; i < string.length; i += 1) {
     letra = string[i];
-    
+
     if (letra === '1') {
       frase += 'a';
     } else if (letra === '2') {
@@ -154,7 +154,7 @@ function techList(List, name) {
   let orderVector = [];
   let objList = {
     tech: List,
-    name: name,
+    "name": name,
   };
 
   if (orderList.length === 0) {
@@ -163,7 +163,7 @@ function techList(List, name) {
     for (let i = 0; i < orderList.length; i += 1) {
       let element = {
         tech: objList.tech[i],
-        name: name,
+        "name": name,
       };
       orderVector.push(element);
     }
