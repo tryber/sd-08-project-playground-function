@@ -238,10 +238,9 @@ function triangleCheck(lineA, lineB, lineC) {
   // necessário que a medida de qualquer um dos lados e maior que o valor absoluto da diferença entre essas medidas.
   // necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois
 
-  if  ( ( lineA > Math.abs(lineA - lineB) && lineB > Math.abs(lineB - lineC) && lineC > Math.abs(lineC - lineA) )
+  if (( lineA > Math.abs(lineA - lineB) && lineB > Math.abs(lineB - lineC) && lineC > Math.abs(lineC - lineA))
         ||
-        ( lineA < (lineC + lineB) && lineB < (lineA + lineC) && lineC < (lineB + lineA)  ) )
-      {
+        ( lineA < (lineC + lineB) && lineB < (lineA + lineC) && lineC < (lineB + lineA))){
         return true
       } else {
         return false
@@ -252,9 +251,21 @@ console.log(triangleCheck(10, 14, 8))
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+
+  let matches = string.match(/\d+/g).map(Number);
+  let sum = 0;
+
+for (number in matches){
+  sum += matches[number]
 }
+
+  return sum + " copos de água"
+
+}
+console.log(hydrate("1 cerveja"))
+
+
 
 
 module.exports = {
