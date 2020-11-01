@@ -87,7 +87,7 @@ function generatePhoneNumber() {
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC))
     if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC))
-      if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineC)) return true;
+      if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) return true;
       else false;
 }
 
