@@ -1,13 +1,19 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(num1, num2) {
+  if (num1 !== num2 && num1 > num2) {
+    return true;
+  } else {
+    return false;
+  }  
 }
+console.log(compareTrue(9, 7));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+ let area = (base*height) / 2;
+ return area;
 }
-
+console.log(calcArea(2, 3));
 // Desafio 3
 function splitSentence() {
   // seu código aqui
