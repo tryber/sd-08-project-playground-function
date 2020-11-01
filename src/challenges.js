@@ -235,24 +235,19 @@ console.log(generatePhoneNumber([1, 2, 3, 4, ]))
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
 
-  let sideANeg =  Math.abs( lineA - lineB )
-  let sideBNeg =  Math.abs( lineB - lineC )
-  let sideCNeg =  Math.abs( lineC - lineA )
-
-  let sideAPlus =  Math.abs( lineA + lineB )
-  let sideBPlus =  Math.abs( lineB + lineC )
-  let sideCPlus =  Math.abs( lineC + lineA )
-
-  // necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois
   // necessário que a medida de qualquer um dos lados e maior que o valor absoluto da diferença entre essas medidas.
+  // necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois
 
-  if ( ( lineA > sideANeg  && lineB > sideBNeg && lineC > sideCNeg ) ||
-       ( lineA < sideAPlus && lineB < sideBPlus && lineC < sideCPlus  ) ) {
+  if  ( lineA > Math.abs(lineA - lineB) && lineB > Math.abs(lineB - lineC) && lineC > Math.abs(lineC - lineA) )
+
+      //   ||
+      //  ( lineA < (lineA + lineB) && lineB < (lineB + lineC) && lineC < (lineC + lineA)  ) ) 
+
+       {
         return true
       } else {
         return false
       }
-
 }
 console.log(triangleCheck(10, 14, 8))
 
