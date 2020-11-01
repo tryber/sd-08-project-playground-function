@@ -67,7 +67,6 @@ function fizzBuzz(arrayFizz) {
 
 
 
-
 // Desafio 9
 function encode(p) {
   let a=p.replace(/a/gi,'1'),
@@ -87,17 +86,6 @@ function decode(p) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 // Desafio 10
 function techList(array,name) {
   let objeto = {};    
@@ -106,31 +94,6 @@ function techList(array,name) {
 
   return objeto;
 }console.log(techList(["html"],"felipe"))
-
-
-
-
-let objeto = [];  
-let array = ['react','jest','html','css','javascript'];
-//   for(i in array){
-//     objeto[i]=["tech"]=array[i],
-//     objeto["name"]="felipe";
-//   }  
-// console.log(objeto)
-
-
-
-objeto = [{`tech: ${array[0]}`}]; 
-console.log(objeto)
-
-
-
-
-
-
-
-
-
 
 
 
@@ -225,20 +188,7 @@ function hydrate(string) {
   }else{
     return (`${int} copos de água`);
   }
-}console.log(hydrate("1cerveja"));
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 module.exports = {
