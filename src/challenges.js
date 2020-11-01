@@ -248,15 +248,15 @@ function triangleCheck(sidesTriangules) {
   // necessário que a medida de qualquer um dos lados e maior que o valor absoluto da diferença entre essas medidas.
 
   if ( sidesTriangules[0] > sideA  && sidesTriangules[1] > sideB && sidesTriangules[2] > sideC ) {
-  return "true"
+  return true
 } else {
-  return "false"
+  return false
 }
 
 }
-console.log(triangleCheck([10, 13, 2]))
-console.log(triangleCheck([12, 17, 4]))
-console.log(triangleCheck([5, 10, 3]))
+console.log(triangleCheck([10, 14, 8]))
+console.log(triangleCheck([2, 3, 4]))
+console.log(triangleCheck([16, 20, 30]))
 
 
 // Desafio 13
