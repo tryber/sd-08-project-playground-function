@@ -20,9 +20,8 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(frase, arrLista) {
-  // frase = [joao, maria, jose];
-  arrLista = [[frase.lengt - 1], frase[0]];
-  return arrLista;
+  frase = arrLista[arrLista.lengt - 1], arrlista[0];
+  return frase;
 }
 
 // Desafio 5
