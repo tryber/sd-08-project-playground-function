@@ -9,16 +9,19 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
-calcArea(10, 50);
-return (base * height) / 2;
+calcArea(2, 6);
+return (base * height) / 2
 }
   
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(a) {
 let umaString = "go Trybe";
-return umaString.split(' ');
+umaString.split(' ');
+splitSentence(umaString);
+return splitSentence;
 }
+
 // Desafio 4
 function concatName() {
   // seu código aqui
