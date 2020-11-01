@@ -175,28 +175,41 @@ function techList(array,name) {
  } techList(["React","Jest", "HTML", "CSS", "JavaScript"], "Lucas")
   
 // Desafio 11
-function generatePhoneNumber(input) {
 
-  if (input.length != 11){
-    return "Array com tamanho incorreto."
+function validNumber(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let atual = arr[i];
+    if (atual < 0 || atual > 9) return false;
   }
-  let arrayBase = [];
-  for (let i = 0; i < input.length; i += 1) {
-    arrayBase.push(input[i]);
+  return true;
+}
+​
+function count(num, arr) {
+  let numberOfOccurrences = 0;
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i] == num) numberOfOccurrences += 1;
   }
-  arrayBase.sort();
-  let numberOfOccurrences = 1;
-  for (let i = arrayBase.length - 1; i >= 0; i -= 1) {
-    if (arrayBase[i] == arrayBase[i - 1]) {
-      numberOfOccurrences += 1;      
-    }    
-    if (numberOfOccurrences >= 3 || arrayBase[i] < 0 || arrayBase[i] > 9){
-      return "não é possível gerar um número de telefone com esses valores"    
-    }
+  return numberOfOccurrences;
+}
+​
+function validRepetition(arr) {
+  for (let i = 0; i < arr.length; i += 1) {
+    if (count(arr[i], arr) >= 3) return false;
   }
-      return "(" + input[0] + input[1] + ")" + " " + input[2] + input[3] + input[4] + input[5] + input[6] + "-" + input[7] + input[8] + input[9] + input[10]
-   } generatePhoneNumber([1,3,4,5,6,7,8,9,0,1,2])
-  
+  return true;
+}
+
+function generatePhoneNumber(input) {
+  if (input.length !== 11) return 'Array com tamanho incorreto.'; //verifica se o length é 11
+  if (validNumber(input) && validRepetition(input)) { // verifica se estão entre 0 e 9, e se algum repete mais que 3 vezes
+    const numero = input.join('');
+    const ddd = numero.slice(0, 2);
+    const partA = numero.slice(2, 7);
+    const partB = numero.slice(7, 11); 
+    return `(${ddd}) ${partA}-${partB}`;
+  }
+  return "não é possível gerar um número de telefone com esses valores";
+}
 
 // Desafio 12
 function triangleCheck() {
