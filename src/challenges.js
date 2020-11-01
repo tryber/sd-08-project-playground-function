@@ -136,7 +136,7 @@ function generatePhoneNumber(numberPhone) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     for (let y = 0; y < numberPhone.length; y++) {
-      if (numberPhone[x] === numberPhone[j]) {
+      if (numberPhone[x] === numberPhone[y]) {
         cont += 1;
         if (cont > 3) {
           return 'não é possível gerar um número de telefone com esses valores';
