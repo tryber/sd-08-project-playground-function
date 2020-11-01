@@ -179,7 +179,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 
 
-  if (maiorLado < lineA + lineB && maiorLado < lineA + lineC && maiorLado < lineB + lineA && maiorLado < lineB /
+  if (maiorLado < lineA + lineB && maiorLado < lineA + lineC && maiorLado < lineB + lineA && maiorLado < lineB 
     + lineC && maiorLado < lineC + lineA && maiorLado < lineC + lineB) {
     return true;
   }
