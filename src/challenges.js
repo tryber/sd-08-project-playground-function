@@ -253,10 +253,10 @@ function triangleCheck(sidesTriangules) {
 
   if ( ( sidesTriangules[0] > sideANeg  && sidesTriangules[1] > sideBNeg && sidesTriangules[2] > sideCNeg ) ||
        ( sidesTriangules[0] < sideAPlus && sidesTriangules[1] < sideABlus && sidesTriangules[2] < sideCPlus  ) ) {
-  return true
-} else {
-  return false
-}
+          return false
+  } else {
+      return true
+  }
 
 }
 console.log(triangleCheck([10, 14, 8]))
