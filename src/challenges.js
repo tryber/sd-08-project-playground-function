@@ -40,23 +40,14 @@ function footballPoints(wins, ties) {
 // Desafio 6
 
 function highestCount(array) {
-  let maiorNumero;
+  let maiorNumero = array[0];
   let cont = 0;
-
-  for (let i = 0; i < array.length; i += 1) {
-    maiorNumero = array[i];
-    for (let j = 0; j < array.length; j += 1) {
-      if (maiorNumero < array[j]) maiorNumero = array[j];
-    }
-  }
-
-  for (let k = 0; k < array.length; k += 1) {
-    if (maiorNumero == array[k]) cont += 1;
-  }
+  Math.max.apply(null, array);
+  for (let k = 0; k < array.length; k += 1) {if (maiorNumero == array[k]) cont += 1;}
   return cont;
 }
 
-//console.log(highestCount([9, 3, 3, 3, 9, 3, 9]));
+//console.log(highestCount([9, 3, 9, 3, 9, 3, 9]));
 
 // Desafio 7
 
@@ -78,17 +69,10 @@ function fizzBuzz(array) {
   let fizzBuzz = [];
 
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 == 0) {
-      if (array[i] % 5 == 0) {
-        fizzBuzz[i] = "fizzBuzz";
-      } else {
-        fizzBuzz[i] = "fizz";
-      }
-    } else if (array[i] % 5 == 0) {
-      fizzBuzz[i] = "buzz";
-    } else {
-      fizzBuzz[i] = "bug!";
-    }
+    if (array[i] % 3 == 0 && array[i] % 5 == 0) fizzBuzz[i] = "fizz";
+    else fizzBuzz[i] = "bug!";
+    if (array[i] % 3 == 0) fizzBuzz[i] = "fizzBuzz";        
+    if (array[i] % 5 == 0) fizzBuzz[i] = "buzz";
   }
   return fizzBuzz;
 }
