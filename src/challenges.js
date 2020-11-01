@@ -19,10 +19,13 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  (base * height)/2;  
-  return calcArea(2,2);
-  
+
+  return (base * height)/2;
+
+
 }
+
+
 
 // Desafio 3
 function splitSentence() {
