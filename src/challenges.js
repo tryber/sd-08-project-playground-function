@@ -81,6 +81,8 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayNumbers) {
   let arrayStrings = [];
 
+  
+/*
   for (let i = 0; i < arrayNumbers.length; i += 1) {
     if ((arrayNumbers[i] % 3 === 0) && (arrayNumbers[i] % 5 !== 0)) {
       arrayStrings.push('fizz');
@@ -92,7 +94,7 @@ function fizzBuzz(arrayNumbers) {
       arrayStrings.push('bug!');
     }
   }
-
+*/
   return arrayStrings;
 }
 
@@ -154,7 +156,7 @@ function techList(List, name) {
   let orderVector = [];
   let objList = {
     tech: List,
-    "name": name,
+    'name': name,
   };
 
   if (orderList.length === 0) {
@@ -163,7 +165,7 @@ function techList(List, name) {
     for (let i = 0; i < orderList.length; i += 1) {
       let element = {
         tech: objList.tech[i],
-        "name": name,
+        'name': name,
       };
       orderVector.push(element);
     }
