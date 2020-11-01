@@ -130,7 +130,7 @@ function generatePhoneNumber(numberPhone) {
   // seu código aqui
   let fone = '';
   if (numberPhone != 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
 
   for (let x = 0; x < numberPhone.length; x++) {
