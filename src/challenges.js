@@ -238,12 +238,10 @@ function triangleCheck(lineA, lineB, lineC) {
   // necessário que a medida de qualquer um dos lados e maior que o valor absoluto da diferença entre essas medidas.
   // necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois
 
-  if  ( lineA > Math.abs(lineA - lineB) && lineB > Math.abs(lineB - lineC) && lineC > Math.abs(lineC - lineA) )
-
-      //   ||
-      //  ( lineA < (lineA + lineB) && lineB < (lineB + lineC) && lineC < (lineC + lineA)  ) ) 
-
-       {
+  if  ( ( lineA > Math.abs(lineA - lineB) && lineB > Math.abs(lineB - lineC) && lineC > Math.abs(lineC - lineA) )
+        ||
+        ( lineA < (lineC + lineB) && lineB < (lineA + lineC) && lineC < (lineB + lineA)  ) )
+      {
         return true
       } else {
         return false
