@@ -20,7 +20,8 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(frase, arrLista) {
-  frase = arrLista[arrLista.lengt - 1], arrlista[0];
+  frase = "";
+  frase = arrLista[[arrLista.lengt - 1], arrlista[0]];
   return frase;
 }
 
