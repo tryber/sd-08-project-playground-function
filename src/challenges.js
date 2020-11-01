@@ -34,15 +34,14 @@ function splitSentence(frase) {
   return arr;
 
 }
-//console.log (splitSentence(arr));
-
-
   // seu código aqui
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(frase) {
+ let arrLista = [frase[-1],frase[0]];
+return arrLista;
+
 }
 
 // Desafio 5
