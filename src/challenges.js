@@ -24,22 +24,25 @@ function splitSentence() {
   console.log(splitSentence());
 
 // Desafio 4
-function concatName(param) {
-  for(let pos = 0; pos < param; pos++){
+function concatName() {
+  for(let pos = 0; pos < concatName; pos++){
     if (pos === 0){
-      console.log(param(pos))
+      console.log(concatName(pos))
     }
-    else (pos === (param.length -1)) {
-      console.log(param(pos))
+    else (pos === (concatName.length -1)) {
+      console.log(concatName(pos))
     }
+
   }
 }
-concatName(['Milton', 'Nascimento', 'Bituca']);
+console.log(concatName(['Milton', 'Nascimento', 'Bituca']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = (wins * 3) + ties
+  return points
 }
+footballPoints(7, 2);
 
 // Desafio 6
 function highestCount() {
