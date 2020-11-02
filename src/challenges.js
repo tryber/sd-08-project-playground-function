@@ -54,7 +54,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
-  array.forEach(element => {
+  array.forEach((element) => {
     if (element % 3 === 0 && element % 5 === 0) {
       newArray.push('fizzBuzz');
     } else if (element % 3 === 0) {
@@ -66,49 +66,23 @@ function fizzBuzz(array) {
     }
   });
   return newArray;
-}  
-  
+}
+
 // Desafio 9
 function encode(text) {
-  let codec = {
-    a: '1',
-    e: '2',
-    i: '3',
-    o: '4',
-    u: '5',
-  };
-  let arrayString = text.split('');
-  let newText = '';
-  for (let index = 0; index < text.length; index += 1) {
-    for (let key in codec) {
-      if (key === arrayString[index]) {
-        arrayString[index] = codec[key];
-      }
-    }
-    newText += arrayString[index];
+  let newText = ['a', 'e', 'i', 'o', 'u'];
+  for(let i = 0; i < newText.length; i += 1) {
+    text = text.replaceAll(newText[i], i + 1);
   }
-  return newText;
+  return text;
 }
 
 function decode(text) {
-  let codec = {
-    a: '1',
-    e: '2',
-    i: '3',
-    o: '4',
-    u: '5',
-  };
-  let arrayString = text.split('');
-  let newText = '';
-  for (let index = 0; index < text.length; index += 1) {
-    for (let key in codec) {
-      if (codec[key] === arrayString[index]) {
-        arrayString[index] = key;
-      }
-    }
-    newText += arrayString[index];
+  let newText = ['a', 'e', 'i', 'o', 'u'];
+  for(let i = 0; i < newText.length; i += 1) {
+    text = text.replaceAll(i + 1, newText[i]);
   }
-  return newText;
+  return text;
 }
 
 // Desafio 10
