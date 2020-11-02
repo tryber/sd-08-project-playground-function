@@ -152,13 +152,12 @@ function techList(tech, name) {
     for (let cont = 0; cont < aOrdem.length; cont += 1) {
       let array = {};
       array.tech = aOrdem[cont];
-      array.nane = name;
+      array.name = name;
       listaFinal.push(array);
     }
     return listaFinal;
   }
 }
-
 
 // Desafio 11
 function generatePhoneNumber() {
