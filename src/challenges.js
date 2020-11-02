@@ -24,9 +24,17 @@ function splitSentence() {
   console.log(splitSentence());
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(param) {
+  for(let pos = 0; pos < param; pos++){
+    if (pos === 0){
+      console.log(param(pos))
+    }
+    else (pos === (param.length -1)) {
+      console.log(param(pos))
+    }
+  }
 }
+concatName(['Milton', 'Nascimento', 'Bituca']);
 
 // Desafio 5
 function footballPoints() {
