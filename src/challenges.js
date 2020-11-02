@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
   if (bool1 === true && bool2 === true) {
-  return true;
+    return true;
   }
   return false;
 }
@@ -19,7 +19,7 @@ function splitSentence(stringToSplit) {
 
 // Desafio 4
 function concatName(stringArray) {
-  let invertedString = stringArray[stringArray.length - 1] + ', ' + stringArray[0];
+  let invertedString = `${stringArray[stringArray.length - 1]}, ${stringArray[0]}`;
   return invertedString
 }
 
@@ -39,22 +39,22 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz(arrayNumber) {
+function fizzBuzz (arrayNumber) {
 
-  let fizzBuzzCont = [];
+  let newArray = [];
   for (let i = 0; i < arrayNumber.length; i += 1) {
 
     if (arrayNumber[i] % 3 === 0 && arrayNumber[i] % 5 === 0) {
-        fizzBuzzCont.push('fizzBuzz');
+      newArray.push('fizzBuzz');
     } else if (arrayNumber[i] % 3 === 0) {
-        fizzBuzzCont.push('fizz');
+      newArray.push('fizz');
     } else if (arrayNumber[i] % 5 === 0) {
-        fizzBuzzCont.push('buzz');
+      newArray.push('buzz');
     } else {
-        fizzBuzzCont.push('bug!');
+      newArray.push('bug!');
     }
   }
-  return fizzBuzzCont
+  return newArray
 }
 
 // Desafio 9
@@ -84,7 +84,6 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-
 
 module.exports = {
   calcArea,
