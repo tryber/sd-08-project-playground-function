@@ -40,13 +40,13 @@ function highestCount(numeros) {
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2){
-    let distanciaRatoGato1 = cat1 - mouse;
-    let distanciaRatoGato2 = cat2 - mouse;
+    let distanciaRatoGato1 = Math.abs(cat1 - mouse);
+    let distanciaRatoGato2 = Math.abs(cat2 - mouse);
     let ganhador;
     if(distanciaRatoGato1 === distanciaRatoGato2)
     {
       let trombar = "os gatos trombam e o rato foge"
-      return trombar ;
+      return trombar;
     }
     else if(distanciaRatoGato1 > distanciaRatoGato2)
     {
@@ -144,9 +144,9 @@ function generatePhoneNumber(number) {
   let sorry = "não é possível gerar um número de telefone com esses valores"
   if (number.length == 11){
       let sorted = number.slice().sort();
-      for (let key in number){
-          let anterior = key-=1;
-          let proximo = key+=1;
+      for (let key = 0; key < number.length; key+= 1){
+          anterior = (key-=1);
+          proximo = (key+=1);
           if (sorted[key] < 0 || sorted[key] > 9){
               return sorry;
               break;
