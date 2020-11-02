@@ -186,7 +186,7 @@ function phoneCheckQtd(numbers) {
 function phoneRepeatCheck(numbers) {
   let repeatCheck = '';
   let repeatCounting = {};
-  for (let i = 0; i < numbers.length; i+= 1) {
+  for (let i = 0; i < numbers.length; i += 1) {
     if (repeatCounting[numbers[i]]) {
       repeatCounting[numbers[i]] += 1;
     } else {
@@ -195,7 +195,7 @@ function phoneRepeatCheck(numbers) {
   }
   for (let prop in repeatCounting) {
     if (repeatCounting[prop] >= 3) {
-      console.log(prop + ' repetiu: ' + repeatCounting[prop] + ' vezes');
+      console.log(`${prop} repetiu: ${repeatCounting[prop]} vezes`);
       repeatCheck = 'numeros repetidos demais';
     }
   }
@@ -226,20 +226,18 @@ function hydrate(drinks) {
   let cups = 0;
   for (let i = 0; i < drinksArr.length; i += 1) {
     numbersArr.push(parseInt(drinksArr[i], 10));
-
   }
   for (let j = 0; j < numbersArr.length; j += 1) {
     cups += numbersArr[j];
   }
   if (cups === 1) {
-    cups = cups + ' copo de água'
-   } else {
-     cups = cups + ' copos de água'
+    cups = `${cups} copo de água`;
+  } else {
+    cups = `${cups} copos de água`;
   }
   return cups;
 }
 // Ok!
-
 module.exports = {
   calcArea,
   catAndMouse,
