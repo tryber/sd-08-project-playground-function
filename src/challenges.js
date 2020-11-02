@@ -12,7 +12,7 @@ function calcArea(base, height) {
   var resultado = (base * height) / 2;
   return resultado;
 }
-ccalcArea(10,20);
+calcArea(10,20);
 
   
 
