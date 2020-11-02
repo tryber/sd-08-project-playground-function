@@ -1,10 +1,11 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 === true && valor2 === true) {
+  if (valor1 && valor2) {
     return true;
   } 
     return false;
 }
+console.log(compareTrue(false, true))
 
 // Desafio 2
 function calcArea(base, height) {
@@ -27,6 +28,12 @@ function concatName(name) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
+  let wins = 1;
+  let ties = 1;
+  let time = wins * 3 + ties;
+    return time;
+}
+console.log(footballPoints(10, 15))
 
 
 // Desafio 6
@@ -48,20 +55,22 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(num) {
-  var num = [];
-  for (unidade = 0; unidade < num.length; unidade += 1){
-    if (unidade / 3){
-      return "fizz";
+  let result = [];
+  for (unit = 0; unit < num.length; unit += 1){
+    if (num[unit] % 3 == 0){
+      result.push("fizz");
     }
-    else if (unidade / 5){
-      return "buzz";
+    else if (num[unit] % 5 == 0){
+      result.push("buzz");
     }
-    else if (unidade / 15){
-      return "fizzbuzz";
+    else if (num[unit] % 15 == 0){
+      result.push ("fizzbuzz");
     }
-    return "bug!"
+    result.push("bug!")
   }
+    return result;
 }
+
 
 // Desafio 9
 function encode() {
