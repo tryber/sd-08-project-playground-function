@@ -33,22 +33,36 @@ concatName(['Patricia', 'Carlin', 'Martins']);
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
   }
-console.log(footballPoints(10, 5));
+footballPoints(10, 5);
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
-
+function highestCount(array) {
+array.sort();
+}  
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+console.log(array);
+let showWord = [];
+  for (index = 0; index < array.length; index += 1){
+  if (array[index] % 3 === 0){
+    showWord[index] = 'fizz';
+  }else if (array[index] % 5 === 0){
+    showWord[index] = 'buzz';
+  }else if (array[index] % 3 === 0 && array[index] % 5 === 0){
+    showWord[index] = 'fizzBuzz';
+  }else {
+    showWord[index] = 'bug!'
+  }
 }
+return showWord;  
+}
+fizzBuzz([2,15,7,9,45])
 
 // Desafio 9
 function encode() {
