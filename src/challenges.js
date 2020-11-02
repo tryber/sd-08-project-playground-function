@@ -208,24 +208,32 @@ function generatePhoneNumber(array) {
   if (array.length>11){
     return "Array com tamanho incorreto."
   }
-  else {    
+  else if (timesRepetMore(array)>2) {
+    return "não é possível gerar um número de telefone com esses valores"; 
+  } 
+  else {
     for (let i = 0; i<array.length; i +=1){
-      if ((array[i]<0)||(array[i]>9)||(timesRepetMore(array)>2)){
+      if ((array[i]<0)||(array[i]>9)){
         return "não é possível gerar um número de telefone com esses valores";      
       }
       else {
         phoneNumber = "(" + array[0]+array[1]+") "+array[2]+array[3]+array[4]+array[5]+array[6]+"-"+array[7]+array[8]+array[9]+array[10];    
       }
     }
-    return phoneNumber
   }
+  return phoneNumber  
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (((lineA<lineB+lineC)&&(lineA>Math.abs(lineB-lineC)))||((lineB<lineA+lineC)&&(lineB>Math.abs(lineA-lineC)))||((lineC<lineA+lineB)&&(lineC>Math.abs(lineA-lineB)))){
+    return true;
+  } else {
+    return false;
+  }  
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
