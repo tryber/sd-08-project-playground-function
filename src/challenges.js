@@ -270,14 +270,14 @@ return true ;
 }
 
 function triangleRule(a,b,c){
-  console.log(a+"  "+  b+"  "+c +"  " )
+ // console.log(a+"  "+  b+"  "+c +"  " )
   if (a>(b+c)){
-    console.log(a+" <  "+  b+" + "+c +"  ")
+  //  console.log(a+" <  "+  b+" + "+c +"  ")
     return false;
 
   }
   if(a<(Math.abs(b-c))){
-    console.log(a+" >? "+  b+" - "+c +"  ")
+   // console.log(a+" >? "+  b+" - "+c +"  ")
     return false;
   }
   return true ;
@@ -317,6 +317,9 @@ function hydrate(string="") {
   while ((agua = regex.exec(string)) != null) {
     soma += Number(agua);
   }
+  if (soma==1){
+    return  resultado = resultado.concat(soma," copo de água")
+}
  resultado = resultado.concat(soma," copos de água")
  return resultado;
 }
