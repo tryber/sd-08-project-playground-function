@@ -165,9 +165,32 @@ function decode(word2) {
 
 
 // Desafio 10
-function techList() {
+// usei esse site para me auxiliar na resposta https://www.mundojs.com.br/2018/04/23/javascript-conhecendo-o-metodo-sort/
+function techList(tech, name) {
   // seu código aqui
+  // O array tech ficou em ordem alfabética através desse método sort
+  let order = tech.sort();
+  let result = [];
+
+  
+  if (tech.length > 0) {
+    //esse laço é responsável por varrer o array que já está em ordem alfabética
+    for (let key in order) {
+      //criei um objeto que vai receber o array em ordem alfabética + nome e colocar o resultado em "result"
+      let object = {};
+      object.tech = order[key];
+      object.name = name;
+      result.push(object);
+    }
+    //caso o array seja não tenha palavras vai retornar vazio para o "result"
+  } else {
+    result = 'vazio';
+  }
+  return result;
+ 
+ 
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Tiago"));
 
 // Desafio 11
 function generatePhoneNumber() {
