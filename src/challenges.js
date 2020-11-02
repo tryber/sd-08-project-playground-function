@@ -145,8 +145,8 @@ function generatePhoneNumber(number) {
   if (number.length == 11){
       let sorted = number.slice().sort();
       for (let key = 0; key < number.length; key+= 1){
-          anterior = (key-=1);
-          proximo = (key+=1);
+          anterior = (key-1);
+          proximo = (key+1);
           if (sorted[key] < 0 || sorted[key] > 9){
               return sorry;
               break;
@@ -176,8 +176,19 @@ function generatePhoneNumber(number) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(linhaA, linhaB, linhaC) {
+   let soma, somaAbsoluta;
+    soma = linhaA + linhaB;
+    somaAbsoluta = Math.abs(linhaA - linhaB)
+
+  if(linhaC < soma && linhaC > somaAbsoluta)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
 }
 
 // Desafio 13
