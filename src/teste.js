@@ -12,3 +12,4 @@ console.log(Teste.decode("h3 th2r2"));
 console.log(Teste.techList(["React", "Jest", "HTML", "CSS", "JavaScript"]));
 console.log(Teste.generatePhoneNumber([-3, 3, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 console.log(Teste.hydrate("bebi 2 cachaça, 2 copao de vinho brabo, 1 dose de vodka"));
+console.log(Teste.triangleCheck(1,2,6));

@@ -19,7 +19,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arr) {
-  return arr.slice(0, 1) + ", " + arr.slice(-1);
+  return arr.slice(-1) + ", " + arr.slice(0, 1);
 }
 
 // Desafio 5
@@ -112,26 +112,39 @@ function techList(techs = [], name) {
 function generatePhoneNumber(numbers) {
   let counter = 0;
   let result = [];
-    numbers.forEach((number, index) => {
-       if(index == 0) {
-        result.push("(");
-        result.push(number);
-      } else if(index == 2) {
-        result.push(")");
-        result.push(number);
-      } else if(index == 7) {
-        result.push("-");
-        result.push(number);
-      } else {
-        result.push(number);
-      }
-    })
-    return result.join("");
+  numbers.forEach((number, index) => {
+    if (index == 0) {
+      result.push("(");
+      result.push(number);
+    } else if (index == 2) {
+      result.push(")");
+      result.push(number);
+    } else if (index == 7) {
+      result.push("-");
+      result.push(number);
+    } else {
+      result.push(number);
+    }
+  })
+  return result.join("");
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sum,
+    subtract = 0;
+  Object.values(arguments).forEach(side1 => {
+    Object.values(arguments).forEach(side2 => {
+      if (!(side1 == side2)) {
+        sum += parseInt(side2);
+        subtract -= parseInt(side2);
+      }
+    })
+    if (sum > parseInt(side1)) return false;
+    if (subtract < parseInt(side1)) return false;
+    sum, subtract = 0;
+  })
+  return true;
 }
 
 // Desafio 13
@@ -139,8 +152,8 @@ function hydrate(string) {
   let counter = 0;
   string = string.split("");
   string.forEach(letter => {
-    if(letter.match(/\d/)) counter += parseInt(letter);
-});
+    if (letter.match(/\d/)) counter += parseInt(letter);
+  });
   return counter;
 }
 
