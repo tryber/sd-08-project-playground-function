@@ -335,31 +335,34 @@ function generatePhoneNumber(array11) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
 
+    //Checking if all values are above 0
     if (lineA <= 0 ||
         lineB <= 0 ||
         lineC <= 0) {
+
         return false;
+
     }
 
-
+    //checking if each side is smaller than the sum of the others
     if (lineA >= lineB + lineC ||
-        lineA <= Math.abs(lineB - lineC)) {
+        lineB >= lineA + lineC ||
+        lineC >= lineA + lineB) {
+
         return false;
 
-    } else
-
-    if (lineB >= lineA + lineC ||
-        lineB <= Math.abs(lineA - lineC)) {
-        return false;
-
-    } else
-
-    if (lineC >= lineA + lineB ||
+    } //Checking if each side is smaller than the absolute difference between the others
+    else if (
+        lineA <= Math.abs(lineB - lineC) ||
+        lineB <= Math.abs(lineA - lineC) ||
         lineC <= Math.abs(lineA - lineB)) {
+
         return false;
 
     } else {
+        //If it passes all the checks, returns true
         return true;
+
     }
 
 }
