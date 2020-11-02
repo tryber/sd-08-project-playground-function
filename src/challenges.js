@@ -1,9 +1,6 @@
 // Desafio 1
 function compareTrue(boolean01, boolean02) {
-  // seu código aqui
-  if (boolean01 && boolean02) {
-    return true;
-  }
+  if (boolean01 && boolean02) return true;
   return false;
 }
 
@@ -33,44 +30,55 @@ function footballPoints(wins, ties) {
   return pointVictorias + pointDraw;
 }
 
-// Desafio 6
-function highestCount(arrayNum) {
+function numberHighest(arrayNum) {
   let maxNum = 0;
-  let countRepet = 0;
   for (let i = 0; i < arrayNum.length; i += 1) {
     if (maxNum < arrayNum[i]) maxNum = arrayNum[i];
   }
-  for (let x = 0; x < arrayNum.length; x += 1) {
-    if (maxNum === arrayNum[x]) countRepet += 1;
+  return maxNum;
+}
+
+function repeatedNum(arrayNum, number) {
+  let countRepet = 0;
+  for (let index = 0; index < arrayNum.length; index += 1) {
+    if (number === arrayNum[index]) countRepet += 1;
   }
   return countRepet;
+}
+
+// Desafio 6
+function highestCount(arrayNum) {
+  return repeatedNum(arrayNum, numberHighest(arrayNum));
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Position = mouse - cat1;
   let cat2Position = mouse - cat2;
-  if ((cat1Position ** 2) < (cat2Position ** 2)) {
+  if (cat1Position ** 2 < cat2Position ** 2) {
     return ('cat1');
-  } else if ((cat1Position ** 2) > (cat2Position ** 2)) {
+  } else if (cat1Position ** 2 > cat2Position ** 2) {
     return ('cat2');
   }
   return ('os gatos trombam e o rato foge');
+}
+
+function isFizzBuzz(arrayNum, index) {
+  if (arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0) {
+    return ('fizzBuzz');
+  } else if (arrayNum[index] % 3 === 0) {
+    return ('fizz');
+  } else if (arrayNum[index] % 5 === 0) {
+    return ('buzz');
+  }
+  return ('bug!');
 }
 
 // Desafio 8
 function fizzBuzz(arrayNum) {
   let arr = [];
   for (let index = 0; index < arrayNum.length; index += 1) {
-    if (arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0) {
-      arr.push('fizzBuzz');
-    } else if (arrayNum[index] % 3 === 0) {
-      arr.push('fizz');
-    } else if (arrayNum[index] % 5 === 0) {
-      arr.push('buzz');
-    } else {
-      arr.push('bug!');
-    }
+    arr.push(isFizzBuzz(arrayNum, index));
   }
   return arr;
 }
@@ -103,37 +111,23 @@ function encode(str) {
 }
 
 function decode(str) {
-  let decodeStr = str.split('');
-  for (let i = 0; i < decodeStr.length; i += 1) {
-    switch (decodeStr[i]) {
-      case '1':
-        decodeStr[i] = 'a';
-        break;
-      case '2':
-        decodeStr[i] = 'e';
-        break;
-      case '3':
-        decodeStr[i] = 'i';
-        break;
-      case '4':
-        decodeStr[i] = 'o';
-        break;
-      case '5':
-        decodeStr[i] = 'u';
-        break;
-      default:
-        break;
-    }
+  for (let count = 0; count < str.length; count += 1) {
+    str = str.replace('1', 'a');
+    str = str.replace('2', 'e');
+    str = str.replace('3', 'i');
+    str = str.replace('4', 'o');
+    str = str.replace('5', 'u');
   }
-  let arrStr = decodeStr.join('');
-  return arrStr;
+  return str;
 }
 
 // Desafio 10
 function techList(tech, name) {
   let sortedArray = tech.sort();
   let listEnd = [];
-  for (let i = 0; i < tech.length; i += 1) listEnd.push({ tech: `${sortedArray[i]}`, name: `${name}` });
+  for (let i = 0; i < tech.length; i += 1) {
+    listEnd.push({ tech: `${sortedArray[i]}`, name: `${name}` });
+  }
   if (listEnd.length === 0) {
     return ('Vazio!');
   }
@@ -168,12 +162,12 @@ function generateCompletePhoneNumber(numbers) {
 
 function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) {
-    return 'Array com tamanho incorreto.';
+    return ('Array com tamanho incorreto.');
   }
   let counterRepeatedNumber = verifyCounterRepeatedNumber(numbers);
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] < 0 || numbers[index] > 9 || counterRepeatedNumber > 2) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      return ('não é possível gerar um número de telefone com esses valores');
     }
   }
   return generateCompletePhoneNumber(numbers);
@@ -181,11 +175,11 @@ function generatePhoneNumber(numbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     return true;
-  } else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
+  } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
     return true;
-  } else if (lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) {
+  } else if (lineC < lineB + lineA && lineC > Math.abs(lineB - lineA)) {
     return true;
   }
   return false;
