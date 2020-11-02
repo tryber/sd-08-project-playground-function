@@ -175,7 +175,7 @@ function generatePhoneNumber(array) {
 
   return retorno;
 }
-console.log(generatePhoneNumber([1, 3, 4, 5, 2, 0, 7, 8, 3, 9, 0]));
+console.log(generatePhoneNumber([1, 1, 4, 5, 2, 0, 7, 8, 3, 9, 0]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
