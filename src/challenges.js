@@ -335,7 +335,7 @@ function generatePhoneNumber(array11) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
 
-    if (LineA <= 0 ||
+    if (lineA <= 0 ||
         lineB <= 0 ||
         lineC <= 0) {
         return false;
@@ -363,8 +363,6 @@ function triangleCheck(lineA, lineB, lineC) {
     }
 
 }
-
-console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
