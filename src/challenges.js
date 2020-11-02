@@ -28,19 +28,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let max = 0;
-  for (let fixed = 0; fixed < array.length; fixed += 1) {
-    for (let find = fixed + 1; find < array.length; find += 1) {
-      if (array[fixed] < array[find]) {
-        max = array[find];
-        fixed = find - 1;
-        find = array.length;
-      } else if (find === array.length - 1) {
-        max = array[fixed];
-        fixed = array.length;
-      }
-    }
-  }
+  let max = Math.max.apply(null, array);
   let pos = array.indexOf(max);
   let count = 0;
   for (let index = pos; index < array.length; index += 1) {
@@ -53,18 +41,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = 0;
-  let distanciaCat2 = 0;
-  if (cat1 > mouse) {
-    distanciaCat1 = cat1 - mouse;
-  } else {
-    distanciaCat1 = mouse - cat1;
-  }
-  if (cat2 > mouse) {
-    distanciaCat2 = cat2 - mouse;
-  } else {
-    distanciaCat2 = mouse - cat2;
-  }
+  let distanciaCat1 = Math.abs(cat1 - mouse);
+  let distanciaCat2 = Math.abs(cat2 - mouse);
   if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
   } else if (distanciaCat2 < distanciaCat1) {
@@ -76,20 +54,20 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
-  for (let index in array) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+  array.forEach(element => {
+    if (element % 3 === 0 && element % 5 === 0) {
       newArray.push('fizzBuzz');
-    } else if (array[index] % 3 === 0) {
+    } else if (element % 3 === 0) {
       newArray.push('fizz');
-    } else if (array[index] % 5 === 0) {
+    } else if (element % 5 === 0) {
       newArray.push('buzz');
     } else {
       newArray.push('bug!');
     }
-  }
+  });
   return newArray;
-}
-
+}  
+  
 // Desafio 9
 function encode(text) {
   let codec = {
@@ -158,7 +136,7 @@ function generatePhoneNumber(arrayPhone) {
   if (arrayPhone.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
-  for (let indice = 0; indice < arrayPhone.length; indice +=1) {
+  for (let indice = 0; indice < arrayPhone.length; indice += 1) {
     let contEvent = 0;
     for (let pesquisa = 0; pesquisa < arrayPhone.length; pesquisa += 1) {
       if (arrayPhone[indice] === arrayPhone[pesquisa]) {
@@ -203,7 +181,7 @@ function hydrate(string) {
   let cupsWater = 0;
   let numbers = string.match(regex);
   for (let index = 0; index < numbers.length; index += 1) {
-    cupsWater += parseInt(numbers[index],10);
+    cupsWater += parseInt(numbers[index], 10);
   }
   if (cupsWater === 1) {
     return `${cupsWater} copo de água`;
