@@ -219,7 +219,7 @@ function generatePhoneNumber(array) {
   }
 }
 
-generatePhoneNumber([3, 2, 1, 9, 5, 0, 7, 4, 0, 6, 1]);
+generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]);
 
 
 
