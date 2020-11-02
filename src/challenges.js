@@ -156,7 +156,6 @@ function techList(tech, name) {
     listaFinal.push(array);
   }
   return listaFinal;
-
 }
 
 // Desafio 11
