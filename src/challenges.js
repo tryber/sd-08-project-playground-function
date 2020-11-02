@@ -127,8 +127,19 @@ function decode(strLetters) {
 }
 
 // Desafio 10
-function techList() {
+function techList(arrTech, name) {
   
+  arrTech.sort();
+
+  let array = [];
+
+  for (let i in arrTech) {
+    let object = {};
+    object.tech = arrTech[i];
+    object.name = name;
+    array.push(object);
+  }
+  return array;
 }
 
 // Desafio 11
