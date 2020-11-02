@@ -12,7 +12,7 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(string) {;
+function splitSentence(string) {
   return string.split(' ');
 }
 
@@ -123,9 +123,10 @@ function techList(tecnologias, name) {
     obj.name = name;
     arrayDeObj.push(obj);
   }
-  arrayDeObj.sort();
-  return arrayDeObj;
+  let arrayOrdenado = arrayDeObj.sort((a, b) => (a.tech > b.tech) ? 1 : -1);
+  return arrayOrdenado;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Rafael"));
 
 // Desafio 11
 function generatePhoneNumber() {
