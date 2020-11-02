@@ -240,8 +240,20 @@ function compareTrue(num1, num2) {
   
   
   // Desafio 13
-  function hydrate() {
-    // seu código aqui
+  function hydrate(string) {
+    let numeros = string.replace(/\D/g, '');       
+    let somaNumeros= 0;
+
+    for (let i = 0; i < numeros.length; i += 1) {
+      somaNumeros += parseInt(numeros[i], 10);
+    }
+
+      if (somaNumeros === 1) {
+        return somaNumeros + " copo de água"
+      } else {
+      return somaNumeros + " copos de água"
+  }
+
   }
   
   module.exports = {
