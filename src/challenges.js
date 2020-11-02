@@ -151,7 +151,6 @@ function techList(arrayTec, name) {
   }
   return newList;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber(arrayPhone) {
@@ -172,7 +171,7 @@ function generatePhoneNumber(arrayPhone) {
     if (index === '0') {
       phoneNumber = `(${arrayPhone[index]}`;
     } else if (index === '1') {
-      phoneNumber += `${arrayPhone[index]})`;
+      phoneNumber += `${arrayPhone[index]}) `;
     } else if (index === '6') {
       phoneNumber += `${arrayPhone[index]}-`;
     } else {
