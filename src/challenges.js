@@ -92,11 +92,10 @@ function fizzBuzz(numbers) {
     } else if (numbers[i] % 3 == 0) {
       array.push('fizz');
     } else if (numbers[i] % 5 == 0) {
-      array.push('buzz')
+      array.push('buzz');
     } else {
-      array.push('bug!')
+      array.push('bug!');
     }
-
   }
   return array;
 }
