@@ -112,8 +112,12 @@ function decode(message) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs, name) {
+  let orderedList = [];
+  techs.sort().forEach(tech => {
+    orderedList.push({ tech: tech, name: name })
+  })
+  return (orderedList == "") ? "Vazio!" : orderedList;
 }
 
 // Desafio 11
