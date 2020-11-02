@@ -91,25 +91,47 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(text) {  
-  let encode = text.replace(/a/gi,'1');
-  encode = encode.replace(/e/gi,'2');
-  encode = encode.replace(/i/gi,'3');
-  encode = encode.replace(/o/gi,'4');
-  encode = encode.replace(/u/gi,'5');
-  return encode;
+function encode(text) {
+  let codec = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  let arrayString = text.split('');
+  let newText = '';
+  for (let index = 0; index < text.length; index += 1) {
+    for (let key in codec) {
+      if (key === arrayString[index]) {
+        arrayString[index] = codec[key];
+      }
+    }
+    newText += arrayString[index];
+  }
+  return newText;
 }
-console.log(encode("hi there!"));
 
 function decode(text) {
-  let decode = text.replace(/1/gi,'a');
-  decode = decode.replace(/2/gi,'e');
-  decode = decode.replace(/3/gi,'i');
-  decode = decode.replace(/4/gi,'o');
-  decode = decode.replace(/5/gi,'u');
-  return decode;
+  let codec = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  let arrayString = text.split('');
+  let newText = '';
+  for (let index = 0; index < text.length; index += 1) {
+    for (let key in codec) {
+      if (codec[key] === arrayString[index]) {
+        arrayString[index] = key;
+      }
+    }
+    newText += arrayString[index];
+  }
+  return newText;
 }
-console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList(arrayTec, name) {
