@@ -5,7 +5,7 @@ let var02 = 10;
 let var03 = 10;
 
 function compareTrue() {
-  if (var01 != var02 && var02 === var03) {
+  if (var01 !== var02 && var02 === var03) {
     return true;
   } else {
     return false;
@@ -13,8 +13,14 @@ function compareTrue() {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+
+let base =2;
+let heigth =2;
+
+function calcArea(area) {
+  (base * height) / 2 = area
+
+  return area;
 }
 
 // Desafio 3
