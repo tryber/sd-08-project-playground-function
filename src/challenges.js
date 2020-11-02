@@ -189,10 +189,12 @@ function triangleCheck(lineA, lineB, lineC) {
   let condicao4 = Math.abs(lineA - lineB) < lineC;
   let condicao5 = Math.abs(lineA - lineC) < lineB;
   let condicao6 = Math.abs(lineB - lineC) < lineA;
-  if (condicao1 && condicao2 && condicao3 && condicao4 && condicao5 && condicao6) {
-    return true
+  if (condicao1 && condicao2 && condicao3) {
+    if (condicao4 && condicao5 && condicao6) {
+      return true;
+    }
   }
-  return false
+  return false;
 }
 
 // Desafio 13
