@@ -185,21 +185,19 @@ function techList(array, name) {
 // Desafio 11
 function timesRepetMore (array2){  
   let times = [];
+  let moreTimes = 0;
   for (let i = 0; i<array2.length; i +=1){
     let aux = array2[i];
-    times[i] = 0;
+    times[i] = 0;    
     for (let o = 0; o<array2.length; o +=1){      
       if (array2[o]==aux){
         times[i] += 1;
       }
     }
-  }
-  let moreTimes = times [0];
-  for (let a = 1; a<times.length; a +=1){
-    if (moreTimes<times[a]){
-      moreTimes = times [a];
+    if (moreTimes<times[i]){
+      moreTimes = times[i];
     }
-  }
+  } 
   return moreTimes;
 }
 
@@ -223,7 +221,7 @@ function generatePhoneNumber(array) {
   }
   return phoneNumber  
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
