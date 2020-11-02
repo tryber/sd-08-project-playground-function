@@ -275,7 +275,6 @@ function triangleRule(sidesTriangle = [],a=0,b=0,c=0){
   if (sidesTriangle[a]<(sidesTriangle[b]+sidesTriangle[c])||sidesTriangle[a]>Math.abs(sidesTriangle[b]-sidesTriangle[c])){
     return false
   }
-
   return true ;
 }
 
