@@ -179,7 +179,7 @@ function decode(codigo) {
 return codigo;
 }
 // Desafio 10
-function techList(techno=[],nome) {
+function techList(tech=[],nome) {
   //   Crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo
 // parâmetro chamado name com um nome.
 
@@ -193,25 +193,19 @@ function techList(techno=[],nome) {
 
 // A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos com o formato acima.
 let listaTech =[];
-const objeto = {
+let objeto = {
   tech:"",
   name:""
 };
-let v = "vazio"
-if (techno.length ===0){ return }
-
-for (let  key=0 ; key<techno.length ; key++){
-  let item = Object.create(objeto);
-  item.name=nome;
+objeto.name=nome;
+for (let  key=0 ; key<tech.length ; key++){
   //objeto.tech=tech[key];
   //console.log("")
-  // console.log(key)
-  // console.log(item);
-  // console.log(listaTech)
-  item.tech="";
-  item.tech=techno[key];
-  listaTech.push(item);
- // listaTech.push(objeto.name=nome);
+  console.log(key)
+  console.log(objeto);
+  console.log(listaTech[0])
+  listaTech.push(objeto.tech=tech[key]);
+  listaTech.push(objeto.name=nome);
 }
 //listaTech.sort();
 return listaTech;

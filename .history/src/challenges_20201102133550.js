@@ -193,24 +193,21 @@ function techList(techno=[],nome) {
 
 // A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos com o formato acima.
 let listaTech =[];
-const objeto = {
+let objeto = {
   tech:"",
   name:""
 };
-let v = "vazio"
-if (techno.length ===0){ return }
-
+if (tech.length ===0){ return "vazio"}
+objeto.name=nome;
 for (let  key=0 ; key<techno.length ; key++){
-  let item = Object.create(objeto);
-  item.name=nome;
   //objeto.tech=tech[key];
   //console.log("")
   // console.log(key)
-  // console.log(item);
-  // console.log(listaTech)
-  item.tech="";
-  item.tech=techno[key];
-  listaTech.push(item);
+  // console.log(objeto);
+  // console.log(listaTech[0])
+  objeto.tech="";
+  objeto.tech=techno[key];
+  listaTech.push(objeto);
  // listaTech.push(objeto.name=nome);
 }
 //listaTech.sort();

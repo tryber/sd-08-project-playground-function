@@ -179,7 +179,7 @@ function decode(codigo) {
 return codigo;
 }
 // Desafio 10
-function techList(techno=[],nome) {
+function techList(tech=[],nome) {
   //   Crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo
 // parâmetro chamado name com um nome.
 
@@ -193,25 +193,18 @@ function techList(techno=[],nome) {
 
 // A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos com o formato acima.
 let listaTech =[];
-const objeto = {
+let objeto = {
   tech:"",
   name:""
 };
-let v = "vazio"
-if (techno.length ===0){ return }
-
-for (let  key=0 ; key<techno.length ; key++){
-  let item = Object.create(objeto);
-  item.name=nome;
-  //objeto.tech=tech[key];
-  //console.log("")
-  // console.log(key)
-  // console.log(item);
-  // console.log(listaTech)
-  item.tech="";
-  item.tech=techno[key];
-  listaTech.push(item);
- // listaTech.push(objeto.name=nome);
+for (let  key=0 ; key<tech.length ; key++){
+  objeto.tech=tech[key];
+  objeto.name=nome;
+  console.log("")
+  console.log(key)
+  console.log(objeto);
+  console.log(listaTech)
+  listaTech[key]=objeto.name + objeto.tech;
 }
 //listaTech.sort();
 return listaTech;
@@ -277,14 +270,14 @@ return true ;
 }
 
 function triangleRule(a,b,c){
- // console.log(a+"  "+  b+"  "+c +"  " )
+  console.log(a+"  "+  b+"  "+c +"  " )
   if (a>(b+c)){
-  //  console.log(a+" <  "+  b+" + "+c +"  ")
+    console.log(a+" <  "+  b+" + "+c +"  ")
     return false;
 
   }
   if(a<(Math.abs(b-c))){
-   // console.log(a+" >? "+  b+" - "+c +"  ")
+    console.log(a+" >? "+  b+" - "+c +"  ")
     return false;
   }
   return true ;
@@ -324,9 +317,6 @@ function hydrate(string="") {
   while ((agua = regex.exec(string)) != null) {
     soma += Number(agua);
   }
-  if (soma==1){
-    return  resultado = resultado.concat(soma," copo de água")
-}
  resultado = resultado.concat(soma," copos de água")
  return resultado;
 }

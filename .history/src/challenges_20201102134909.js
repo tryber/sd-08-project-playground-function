@@ -205,9 +205,9 @@ for (let  key=0 ; key<techno.length ; key++){
   item.name=nome;
   //objeto.tech=tech[key];
   //console.log("")
-  // console.log(key)
-  // console.log(item);
-  // console.log(listaTech)
+  console.log(key)
+  console.log(item);
+  console.log(listaTech)
   item.tech="";
   item.tech=techno[key];
   listaTech.push(item);

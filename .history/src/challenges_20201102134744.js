@@ -199,15 +199,14 @@ const objeto = {
 };
 let v = "vazio"
 if (techno.length ===0){ return }
-
+let item = Object.create(objeto);
+item.name=nome;
 for (let  key=0 ; key<techno.length ; key++){
-  let item = Object.create(objeto);
-  item.name=nome;
   //objeto.tech=tech[key];
   //console.log("")
-  // console.log(key)
-  // console.log(item);
-  // console.log(listaTech)
+  console.log(key)
+  console.log(item);
+  console.log(listaTech)
   item.tech="";
   item.tech=techno[key];
   listaTech.push(item);
