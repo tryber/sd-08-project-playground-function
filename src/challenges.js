@@ -36,21 +36,31 @@ function highestCount(arrayNumber) {
   let numberOfRepeat = 0;
 
   for (let i = 0; i < arrayNumber.length; i += 1) {
-      if (arrayNumber[i] > highestNumber) {
-          highestNumber = arrayNumber[i];
-      }
+    if (arrayNumber[i] > highestNumber) {
+      highestNumber = arrayNumber[i];
+    }
   }
 
   for (let j = 0; j < arrayNumber.length; j += 1) {
-      if (arrayNumber[j] === highestNumber) {
-          numberOfRepeat += 1;
-      }
+    if (arrayNumber[j] === highestNumber) {
+      numberOfRepeat += 1;
+    }
   }
-  return numberOfRepeat}
+  return numberOfRepeat
+}
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let catCloser = '';
+  if ((cat1 - mouse) < (cat2 - mouse)) {
+    catCloser = 'cat1';
+  } else if ((cat1 - mouse) > (cat2 - mouse)) {
+      catCloser = 'cat2';
+  } else {
+      catCloser = 'Os gatos trombam e o rato foge';
+  }
+  return catCloser
+}
 }
 
 // Desafio 8
