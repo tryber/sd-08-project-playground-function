@@ -79,8 +79,27 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
+function techList(arrTacName, name) {
   // seu código aqui
+  if(arrTacName.length === 0) return "Vazio!";
+  let newArr = [];
+
+  for (i in arrTacName) {
+    newArr[i] = {
+      tech: arrTacName[i], name: name
+    };
+  }
+  newArr.sort(function (a, b) {
+    https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+    if (a.tech > b.tech) {
+      return 1;
+    }
+    if (a.tech < b.tech) {
+      return -1;
+    }
+    return 0;
+    });
+  return newArr;
 }
 
 // Desafio 11
