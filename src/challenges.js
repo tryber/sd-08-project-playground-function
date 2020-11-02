@@ -91,6 +91,7 @@ function encode(string) {
   return newString;
 }
 
+
 function decode(string) {
   let newString = '';
 
@@ -115,19 +116,15 @@ function decode(string) {
 
 // Desafio 10
 function techList(tecnologias, name) {
-  let obj = [];
-
+  let arrayDeObj = [];
   for (let i = 0; i < tecnologias.length; i += 1) {
-    Obj.push({
-      tech: tecnologias[i],
-      name
-    })
+    let obj = {};
+    obj.tech = tecnologias[i];
+    obj.name = name;
+    arrayDeObj.push(obj);
   }
-  obj = obj.sort((a, b) => {
-    return (a.tech > b.tech) ? 1 : ((b.tech > a.tech) ? -1 : 0);
-  });
-
-  return obj.length > 0 ? obj : 'Vazio!';
+  arrayDeObj.sort();
+  return arrayDeObj;
 }
 
 // Desafio 11
