@@ -89,17 +89,17 @@ function encode(message) {
 function decode(message) {
   let auxArray = [];
   let decodedMessage = '';
-
+  
   for (let i in message) {
-    if (message[i] === 1) {
+    if (message[i] === '1') {
       auxArray.push('a');
-    } else if (message[i] === 2) {
+    } else if (message[i] === '2') {
       auxArray.push('e');
-    } else if (message[i] === 3) {
+    } else if (message[i] === '3') {
       auxArray.push('i');
-    } else if (message[i] === 4) {
+    } else if (message[i] === '4') {
       auxArray.push('o');
-    } else if (message[i] === 5) {
+    } else if (message[i] === '5') {
       auxArray.push('u');
     } else {
       auxArray.push(message[i]);
