@@ -78,7 +78,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     resultado = 'os gatos trombam e o rato foge';
   }
-return resultado;
+  return resultado;
 }
 catAndMouse(7, 6, 2);
 // Math.abs comando aprendido no site (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs)
@@ -89,13 +89,13 @@ function fizzBuzz(vetorNum) {
   let resultado = [];
   for (let count in vetorNum) {
     if (vetorNum[count] % 3 == 0 && vetorNum[count] % 5 == 0) {
-          resultado.push('fizzBuzz');
+      resultado.push('fizzBuzz');
     } else if (vetorNum[count] % 3 == 0) {
-          resultado.push('fizz');
+        resultado.push('fizz');
     } else if (vetorNum[count] % 5 == 0) {
-          resultado.push('buzz');
+        resultado.push('buzz');
     } else {
-          resultado.push('bug!');
+        resultado.push('bug!');
     }
   }
   return resultado;
@@ -116,13 +116,13 @@ function encode(string) {
     for (count = 0; count < vogais.length; count += 1) {
       if (letraComparar == vogais[count]) {
         substituir = numeros[count];
-      } 
+      }
     }
     if (substituir !== 0){
-        fraseCodificada += substituir;
+      fraseCodificada += substituir;
       } else {
-        fraseCodificada += letraComparar;
-      }
+      fraseCodificada += letraComparar;
+    }
   }
   resultado = fraseCodificada;
   return resultado;
@@ -141,10 +141,10 @@ function decode(string) {
       }
     }
     if (substituir !== 0){
-        fraseCodificada += substituir;
-      } else {
-        fraseCodificada += letraComparar;
-      }
+      fraseCodificada += substituir;
+    } else {
+      fraseCodificada += letraComparar;
+    }
   }
   resultado = fraseCodificada;
   return resultado;
@@ -163,8 +163,8 @@ function techList(vetor, name) {
   } else {
     for (let count in vetor) {
       resultado.push({
-      tech: vetor[count],
-      name: name,
+        tech: vetor[count],
+        name: name,
       });
     }
   }
