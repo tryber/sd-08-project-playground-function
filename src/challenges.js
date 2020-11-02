@@ -166,8 +166,9 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   if (array.length == 0) {
-    return 'Vazio!';
-  } else {
+    array = 'Vazio!';
+  } 
+  else {
     let aux = '';
     for (let i = 0; i < array.length; i+=1) {
       aux = array[i];   
@@ -181,8 +182,28 @@ function techList(array, name) {
 }
 
 // Desafio 11
+function timesRepetMore (array){  
+  let times = [];
+  for (let i = 0; i<array.length; i +=1){
+    let aux = array[i];
+    times[i] = 0;
+    for (let o = 0; o<array.length; o +=1){      
+      if (array[o]==aux){
+        times[i] += 1;
+      }
+    }
+  }
+  let moreTimes = times [0];
+  for (let a = 1; a<times.length; a +=1){
+    if (moreTimes>times[a]);
+      moreTimes = times [a];
+  }
+  return moreTimes;
+}
+console.log(timesRepetMore([1, 2, 2, 5, 4, 2, 2]));
+
 function generatePhoneNumber() {
-  // seu código aqui
+  
 }
 
 // Desafio 12
