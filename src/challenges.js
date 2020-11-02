@@ -192,8 +192,8 @@ function phoneCheckRepeat(numbers)
   }
   return phoneNumbers
 }
-let phone = [1, 5, 4, 4, 9, 5, 6, 8, 9, 6, 1, 3];
-console.log(phoneCheck(phone))
+//let phone = [1, 5, 4, 4, 9, 5, 6, 8, 9, 6, 1, 3];
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let result;
@@ -211,9 +211,21 @@ function triangleCheck(lineA, lineB, lineC) {
 // Ok!
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let drinksNum = drinks.replace(/\D/g, '');
+  let drinksArr = drinksNum.split('');
+  let numbersArr = [];
+  let cups = 0;
+  for (let i = 0; i < drinksArr.length; i += 1) {
+      numbersArr.push(parseInt(drinksArr[i], 10)) 
+      console.log(numbersArr)
+  } for (let j = 0; j < numbersArr.length; j += 1) {
+    cups += numbersArr[j]; 
+    console.log(cups)
+  }
+  return (cups + " copos de água")
 }
+// Ok!
 
 module.exports = {
   calcArea,
