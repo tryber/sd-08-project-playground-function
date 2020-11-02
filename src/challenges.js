@@ -24,32 +24,41 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount() {
-    let cont = 0;
-    let maiorValor = maiorNumero(arrayNumeros);
-  
-    for (let key in arrayNumeros){
-        if (arrayNumeros[key] === maiorValor){ 
-            cont += 1;
-        }        
-    }    
-  
-    return cont;
+  let maiorValor = numeros[0];
+  for (let i = 0; i < numeros.length; i += 1){
+    if (numeros[i] > maiorValor){
+      maiorValor = numeros[i];
+    }
   }
-  
-  function maiorNumero(arrayNumeros){
-    let maiorValor = arrayNumeros[0];
-    for (let key in arrayNumeros){
-        if (arrayNumeros[key] > maiorValor){ 
-            maiorValor = arrayNumeros[key];
-        }        
-    }    
-  
-    return maiorValor;
+  let repetido = 0;
+  for (let j = 0; j < numeros.length; j += 1){
+    if (numeros[j] === maiorValor){
+      repetido += 1;
+    }
   }
+  return repeticoes;
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+    let distanciaRatoGato1 = 0;
+    let distanciaRatoGato2 = 0;
+  
+    distanciaRatoGato1 = mouse - cat1;
+    distanciaRatoGato2 = mouse - cat2;
+  
+    if(distanciaRatoGato1 === distanciaRatoGato2)
+    {
+      return "os gatos trombam e o rato foge";
+    }
+    else if(distanciaRatoGato1 > distanciaRatoGato2)
+    {
+      return "cat2";
+    }
+    else
+    {
+      return "cat1";
+    }
+  
 }
 
 // Desafio 8
