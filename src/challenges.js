@@ -131,9 +131,26 @@ function fizzBuzz(param) {
 
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
-}
+  let codeString ='';
+  for(i = 0; i <string.length; i++){
+    if(string[i] === 'a'){
+        codeString += 1;
+    }else{
+      codeString += string[i];
+    }
+  };
+  return codeString;
+};
+
+console.log(encode('parametro'));
+
+
+
+
+
+
 function decode() {
   // seu código aqui
 }
