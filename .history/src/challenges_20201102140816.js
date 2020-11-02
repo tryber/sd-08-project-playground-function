@@ -197,11 +197,11 @@ const objeto = {
   tech:"",
   name:""
 };
-techno.sort();
+techno = techno.sort;
 let v = "vazio"
 if (techno.length == 0){ return v}
 
-for (let  key=0; key < techno.length ; key+=1){
+for (let  key=0; key>techno.length ; key++){
   let item = Object.create(objeto);
   item.name=nome;
   //objeto.tech=tech[key];
