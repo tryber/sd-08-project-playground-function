@@ -50,19 +50,19 @@ function fizzBuzz(array) {
 console.log(array);
 let showWord = [];
   for (index = 0; index < array.length; index += 1){
-  if (array[index] % 3 === 0){
-    showWord[index] = 'fizz';
+  if (array[index] % 3 === 0 && array[index] % 5 === 0){
+    showWord[index] = 'fizzBuzz';
   }else if (array[index] % 5 === 0){
     showWord[index] = 'buzz';
-  }else if (array[index] % 3 === 0 && array[index] % 5 === 0){
-    showWord[index] = 'fizzBuzz';
+  }else if (array[index] % 3 === 0){
+    showWord[index] = 'fizz';
   }else {
     showWord[index] = 'bug!'
   }
 }
 return showWord;  
 }
-fizzBuzz([2,15,7,9,45])
+console.log(fizzBuzz([2,15,7,9,45]));
 
 // Desafio 9
 function encode() {
