@@ -161,6 +161,8 @@ function techList(array, name) {
 
 }
 
+
+
 // Desafio 11       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function takeTwo(array) {
   let two = '';
@@ -195,12 +197,13 @@ function arrayIndexValidation(array){
     for(let index2 = 0; index2 < array.length; index2+=1){
       if(array[index2] == valorAtual){
         cont+=1;
+      } if(array[index2] < 0 || array[index] > 9) {
+        return true;
       }
     }
   }
-  for(let index = 0; index < array.length; index+=1){
-    return (array[index] < 0 || array[index] > 9 || cont >= 3) ? true : false;
-  }
+  return ( cont >= 3) ? true : false;
+
 }
 function generatePhoneNumber(array) {
   if(array === [] || arrayLengthValidation(array) == true){
@@ -216,7 +219,10 @@ function generatePhoneNumber(array) {
   }
 }
 
-generatePhoneNumber([]);
+generatePhoneNumber([3, 2, 1, 9, 5, 0, 7, 4, 0, 6, 1]);
+
+
+
 
 // Desafio 12
 function triangleCheck() {
