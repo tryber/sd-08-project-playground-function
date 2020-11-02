@@ -165,12 +165,16 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
-  let aux = '';
-  for (let i = 0; i < array.length; i+=1) {
-    aux = array[i];   
-    array[i] = {
-      tech: aux,
-      name: name
+  if (array.length == 0) {
+    return 'Vazio!';
+  } else {
+    let aux = '';
+    for (let i = 0; i < array.length; i+=1) {
+      aux = array[i];   
+      array[i] = {
+        tech: aux,
+        name: name
+      }
     }
   }
   return array;
