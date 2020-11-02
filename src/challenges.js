@@ -222,9 +222,22 @@ function compareTrue(num1, num2) {
   console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 1, 8, 9, 0]))
   
   // Desafio 12
-  function triangleCheck() {
-    // seu código aqui
-  }
+  function triangleCheck(lineA, lineB, lineC) {
+    let ladoA = Math.abs(lineA);
+    let ladoB = Math.abs(lineB);
+    let ladoC = Math.abs(lineC);
+    let possibilidadeA = ladoA < ladoB + ladoC && ladoA > ladoB - ladoC;
+    let possibilidadeB = ladoB < ladoA + ladoC && ladoB > ladoA - ladoC;
+    let possibilidadeC = ladoC < ladoA + ladoB && ladoC > ladoA - ladoB;
+
+    if (possibilidadeA || possibilidadeB || possibilidadeC){
+      return true;
+    } else {
+      return false;
+    }
+    }
+    
+  
   
   // Desafio 13
   function hydrate() {
