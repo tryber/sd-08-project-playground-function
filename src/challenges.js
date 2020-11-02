@@ -142,9 +142,27 @@ function decode(palavra) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let aOrdem = tech.sort();
+  let listaFinal = [];
+
+  if (aOrdem.length === 0) {
+    console.log('Vazio!');
+  } else {
+    for (let cont = 0; cont < aOrdem.length; cont += 1) {
+      let array = {};
+      array.nane = name;
+      array.tech = aOrdem[cont];
+      listaFinal.push(array);
+    }
+    console.log(listaFinal);
+  }
 }
+
+let tech = [];
+let name = "Jean";
+techList(tech, name)
+
 
 // Desafio 11
 function generatePhoneNumber() {
