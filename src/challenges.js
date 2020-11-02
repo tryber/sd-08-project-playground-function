@@ -207,12 +207,12 @@ function generatePhoneNumber(array) {
     return "Array com tamanho incorreto."
   }
   else if (timesRepetMore(array)>2) {
-    return "não é possível gerar um número de telefone com esses valores"; 
+    return "não é possível gerar um número de telefone com esses valores."; 
   } 
   else {
     for (let i = 0; i<array.length; i +=1){
       if ((array[i]<0)||(array[i]>9)){
-        return "não é possível gerar um número de telefone com esses valores";      
+        return "não é possível gerar um número de telefone com esses valores.";      
       }
       else { // usei a técnica do Vinicius Ribeiro Adaptada
         phoneNumber = "(" + array.join('').slice(0,2)+") "+array.join('').slice(2,7)+"-"+array.join('').slice(7,11);    
