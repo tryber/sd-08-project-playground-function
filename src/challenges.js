@@ -1,13 +1,13 @@
 // Desafio 1
 
-function compareTrue (valor1, valor2) {
+function compareTrue (valor1 , valor2) {
   if (valor1 && valor2) return true; 
   return false;
 }
 
 // Desafio 2
 
-function calcArea (base, height) {
+function calcArea (base , height) {
   let area = (base * height) / 2;
   return area;
 }
@@ -68,9 +68,11 @@ function catAndMouse (mouse, cat1, cat2) {
 function fizzBuzz (array) {
   let fizzBuzz = [];
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 == 0 && array[i] % 5 == 0) { fizzBuzz[i] = 'fizzBuzz'; } 
-    else if (array[i] % 3 == 0) { fizzBuzz[i] = 'fizz'; }        
-    else if (array[i] % 5 == 0) { fizzBuzz[i] = 'buzz'; }
+    if (array[i] % 5 == 0) {
+      if (array[i] % 3 == 0) { fizzBuzz[i] = 'fizzBuzz'; }
+      else { fizzBuzz[i] = 'buzz'; }
+    }
+    else if (array[i] % 3 == 0) { fizzBuzz[i] = 'fizz'; }
     else { fizzBuzz[i] = 'bug!'; }
   }
   return fizzBuzz;
@@ -83,7 +85,7 @@ function fizzBuzz (array) {
 function encode (literal) {
   for (let i in literal) {
     if (!(literal[i]*literal[i])) {
-      if (literal[i] == "a") literal = literal.replace(literal[i], "1"); 
+      if (literal[i] == "a") literal = literal.replace(literal[i], "1");
       if (literal[i] == "e") literal = literal.replace(literal[i], "2");
       if (literal[i] == "i") literal = literal.replace(literal[i], "3");
       if (literal[i] == "o") literal = literal.replace(literal[i], "4");
