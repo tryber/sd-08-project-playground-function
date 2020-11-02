@@ -1,6 +1,14 @@
 // Desafio 1
+
+let var01 = true;
+let var02 = false;
+
 function compareTrue() {
-  let incio=[];
+  if (var01 == true && var02 == false) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
