@@ -4,25 +4,30 @@ function compareTrue(x,y) {
     return true;
   } else {return false;}
 }
+
 // Desafio 2
 function calcArea(base,height) {
   return (base*height)/2
 }
+
 // Desafio 3
 function splitSentence(string) {
   let array = string.split(" ")
   return array
 }
+
 // Desafio 4
 function concatName(arrayStrings) {
   let array = [],ultima = arrayStrings[arrayStrings.length -1],primeira = arrayStrings[0];
   array=`${ultima}, ${primeira}`
   return array
 } 
+
 // Desafio 5
 function footballPoints(wins,ties) {
   return (wins*3)+(ties*1)
 }
+
 // Desafio 6
 function highestCount(arrayN) {
   let max = Math.max(...arrayN),rep = 0;
@@ -32,6 +37,7 @@ function highestCount(arrayN) {
     }
   }return rep
 } 
+
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
   let gato1 = Math.abs(mouse-cat1),gato2 = Math.abs(mouse-cat2);
@@ -39,6 +45,7 @@ function catAndMouse(mouse,cat1,cat2) {
   else if (gato2<gato1){return "cat2"} 
   else {return "os gatos trombam e o rato foge"}
 }
+
 // Desafio 8
 function fizzBuzz(arrayFizz) {
   let arrayRetorno = []
@@ -49,6 +56,7 @@ function fizzBuzz(arrayFizz) {
       else {arrayRetorno.push("bug!")}
   }return arrayRetorno
 }
+
 // Desafio 9
 function encode(p) {
   let a=p.replace(/a/gi,'1'),
@@ -66,42 +74,40 @@ function decode(p) {
   u=o.replace(/5/gi,'u')
   return u;
 }
+
 // Desafio 10
 function techList(array,name) {
   let objRetorno = [],objSort=array.sort();    
   if (array != ""){
     for(i=0;i<array.length;i++){
       objRetorno.push({
-        tech: objSort[i],name: name;
+        tech: objSort[i],name: name,
       })
     }
   } else {return "Vazio!"}
   return objRetorno
 }
+
 // Desafio 11
 function generatePhoneNumber(n) {  
   let numeroT,
   retorno = (`(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`) 
   function find(n, val) {
     let repeat = [], i = -1,cont=0;
-    while ((i = n.indexOf(val, i+1)) != -1){
-        repeat.push(i);
-    }  cont = repeat.length
+    while ((i = n.indexOf(val, i+1)) != -1){repeat.push(i);}
+    cont = repeat.length
     return cont;
   }  
   //função acima conta quantas vezes o número se repete, consultada na internet porém fiz modificações.  
   if(n.length == 11){
     for(let i=0;i<n.length;i++){ 
       numeroT = find(n,n[i])
-      if (n[i]< 0 || n[i]>9 || numeroT>=3){
-        return "não é possível gerar um número de telefone com esses valores"
-      }         
+      if (n[i]< 0 || n[i]>9 || numeroT>=3){return "não é possível gerar um número de telefone com esses valores"}         
     }    
-  } else {
-    return "Array com tamanho incorreto."
-  }
+  } else {return "Array com tamanho incorreto."}
   return retorno
 }
+
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
   if(
@@ -116,6 +122,7 @@ function triangleCheck(lineA,lineB,lineC) {
     return false;
   }
 }
+
 // Desafio 13
 function hydrate(string) {
   let repl = string.replace(/\s/g, ''),int = 0;
