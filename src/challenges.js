@@ -150,49 +150,57 @@ function techList(techs, name) {
   }
   return object;
 }
-// Ok! 
+// Ok!
 
 // Desafio 11
-// function generatePhoneNumber(numbers) {
-//   let tel
-//   if (phoneCheckQtd(numbers) === 'tamanho errado') {
-// tel = "Array com tamanho incorreto."
-//} else if (phoneCheckQtd(numbers) === 'numeros errados' || phoneCheckRepeat === 'numeros repetidos demais' {
-//   tel = não é possível gerar um número de telefone com esses valores"
-//   } else if () {
-//}
-//   return tel
-// }
+function generatePhoneNumber(numbers) {
+  let tel;
+  if (phoneRepeatCheck(numbers) === 'numeros repetidos demais') {
+    tel = 'não é possível gerar um número de telefone com esses valores.';
+  } else if (phoneCheckQtd(numbers) === 'tamanho errado') {
+    tel = 'Array com tamanho incorreto.';
+  } else if (phoneCheckQtd(numbers) === 'numeros errados') {
+    tel = 'não é possível gerar um número de telefone com esses valores.';
+  } else {
+    numbers.splice(5, 0, '-');
+    tel = numbers.join('');
+  }
+  return tel;
+}
 
+// Desafio 11 - Função de apoio => checar se o array está com tamanho e/ou número certos:
 function phoneCheckQtd(numbers) {
-  let phoneNumbers
+  let phoneNumbers;
   if (numbers.length != 11) {
-    phoneNumbers = 'tamanho errado'
-  } 
+    phoneNumbers = 'tamanho errado';
+  }
   for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] < 0 || numbers[i] > 9) {
-    phoneNumbers = 'numeros errados'
-  }
-  return phoneNumbers
-  }
-
-function phoneCheckRepeat(numbers)  
-  let sortNumbers = numbers.sort();
-  let totalRepeated = [];
-  for (let i = 0; i < sortNumbers.length; i += 1) {
-    if (sortNumbers[i+1] === sortNumbers[i] || sortNumbers[i] === sortNumbers[i-1]) {
-      totalRepeated.push(sortNumbers[i]) 
+      phoneNumbers = 'numeros errados';
     }
   }
-  if (totalRepeated.length >= 3) {
-    console.log(sortNumbers)
-    console.log(totalRepeated)
-    console.log(totalRepeated.length)
-    phoneNumbers = false
-  }
-  return phoneNumbers
+  return phoneNumbers;
 }
-//let phone = [1, 5, 4, 4, 9, 5, 6, 8, 9, 6, 1, 3];
+// Desafio 11 - Função de apoio => checar se há 3 ou mais números repetidos:
+// Aqui utilizei muita ajuda deste site https://dev.to/huyddo/find-duplicate-or-repeat-elements-in-js-array-3cl3 , pois nunca teria pensado em utilizar objeto dessa maneira, inclusive ainda não entendo direito o 'if else' funcionando desta forma.
+function phoneRepeatCheck(numbers) {
+  let repeatCheck = '';
+  let repeatCounting = {};
+  for (let i = 0; i < numbers.length; i++) {
+    if (repeatCounting[numbers[i]]) {
+      repeatCounting[numbers[i]] += 1;
+    } else {
+      repeatCounting[numbers[i]] = 1;
+    }
+  }
+  for (let prop in repeatCounting) {
+    if (repeatCounting[prop] >= 3) {
+      console.log(prop + ' repetiu: ' + repeatCounting[prop] + ' vezes');
+      repeatCheck = 'numeros repetidos demais';
+    }
+  }
+  return repeatCheck;
+}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -217,13 +225,14 @@ function hydrate(drinks) {
   let numbersArr = [];
   let cups = 0;
   for (let i = 0; i < drinksArr.length; i += 1) {
-      numbersArr.push(parseInt(drinksArr[i], 10)) 
-      console.log(numbersArr)
-  } for (let j = 0; j < numbersArr.length; j += 1) {
-    cups += numbersArr[j]; 
-    console.log(cups)
+    numbersArr.push(parseInt(drinksArr[i], 10));
+    console.log(numbersArr);
   }
-  return (cups + " copos de água")
+  for (let j = 0; j < numbersArr.length; j += 1) {
+    cups += numbersArr[j];
+    console.log(cups);
+  }
+  return cups + ' copos de água';
 }
 // Ok!
 
