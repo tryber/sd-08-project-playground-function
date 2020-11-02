@@ -61,7 +61,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return catCloser
 }
-}
 
 // Desafio 8
 function fizzBuzz(arrayNumber) {
