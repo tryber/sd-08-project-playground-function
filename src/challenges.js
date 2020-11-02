@@ -155,15 +155,15 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],'Aline'));
 // Desafio 11
 function generatePhoneNumber(array) {  
   let out = '(';  
-  if (array.length != 11) {
+  if (array.length !== 11) {
     return ('Array com tamanho incorreto.');
   }
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i += 1) {
       let sum = 0;
       if (array[i] < 0 || array[i] > 9) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
-      for (let j = 0; j < array.length; j++) {
+      for (let j = 0; j < array.length; j += 1) {
         if (array[i] === array[j]) {
           sum += 1;
         } else if (sum >= 3) {
@@ -171,7 +171,7 @@ function generatePhoneNumber(array) {
         }        
       }
     }
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i += 1) {
       if (i == 2) {
         out += ') ';
       } if (i === 7) {
