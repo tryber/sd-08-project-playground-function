@@ -263,24 +263,14 @@ function triangleCheck(lineA,lineB,lineC) {
 // O retorno da sua função deverá ser um booleano.
 
 // Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
-if (triangleRule(lineA,lineB,lineC)==false){return false}
-if (triangleRule(lineB,lineC,lineA)==false){return false}
-if (triangleRule(lineC,lineB,lineA)==false){return false}
-return true ;
+let sidesTriangle = [lineA,lineB,lineC]
+sidesTriangle = sidesTriangle.sort ;
+if (sidesTriangle[0]<(sidesTriangle[1]+sidesTriangle[2])){
+  return false
 }
 
-function triangleRule(a,b,c){
-  console.log(a+"  "+  b+"  "+c +"  " )
-  if (a>(b+c)){
-    console.log(a+" <  "+  b+" + "+c +"  ")
-    return false;
 
-  }
-  if(a<(Math.abs(b-c))){
-    console.log(a+" >? "+  b+" - "+c +"  ")
-    return false;
-  }
-  return true ;
+return true ;
 }
 
 // Desafio 13

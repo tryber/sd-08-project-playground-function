@@ -263,22 +263,21 @@ function triangleCheck(lineA,lineB,lineC) {
 // O retorno da sua função deverá ser um booleano.
 
 // Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
-if (triangleRule(lineA,lineB,lineC)==false){return false}
-if (triangleRule(lineB,lineC,lineA)==false){return false}
-if (triangleRule(lineC,lineB,lineA)==false){return false}
+let sidesTriangle = [lineA,lineB,lineC]
+sidesTriangle = sidesTriangle.sort ;
+if (triangleRule(sidesTriangle,0,1,2)==false){return false}
+if (triangleRule(sidesTriangle,1,2,0)==false){return false}
+if (triangleRule(sidesTriangle,2,0,1)==false){return false}
 return true ;
 }
 
-function triangleRule(a,b,c){
-  console.log(a+"  "+  b+"  "+c +"  " )
-  if (a>(b+c)){
-    console.log(a+" <  "+  b+" + "+c +"  ")
-    return false;
-
+function triangleRule(sidesTriangle = [],a=1,b=2,c=3){
+  console.log(sidesTriangle[a]+"  "+sidesTriangle[b]+"  "+sidesTriangle[c] +"  " +a )
+  if (sidesTriangle[a]<(sidesTriangle[b]+sidesTriangle[c])){
+    return false
   }
-  if(a<(Math.abs(b-c))){
-    console.log(a+" >? "+  b+" - "+c +"  ")
-    return false;
+  else if(sidesTriangle[a]>(Math.abs(sidesTriangle[b]-sidesTriangle[c]))){
+    return false
   }
   return true ;
 }

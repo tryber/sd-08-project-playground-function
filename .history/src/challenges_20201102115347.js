@@ -276,7 +276,7 @@ function triangleRule(a,b,c){
     return false;
 
   }
-  if(a<(Math.abs(b-c))){
+  if(a>(Math.abs(b-c))){
     console.log(a+" >? "+  b+" - "+c +"  ")
     return false;
   }
