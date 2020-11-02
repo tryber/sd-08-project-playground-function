@@ -54,16 +54,16 @@ function highestCount() {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let gatoVencedor;
-  if(cat1==cat2){
+  let distancia1 = Math.abs(cat1 - mouse);
+  let distancia2 = Math.abs(cat2 - mouse);
+  if(distancia1 == distancia2) {
     gatoVencedor = "os gatos trombam e o rato foge";
-  }else if((cat1-mouse) > (cat2-mouse)) {
+  }else if(distancia2 < distancia1) {
     gatoVencedor = "cat2";
-  }else if((cat2-mouse) >( cat1-mouse)) {
-    gatoVencedor = "cat1";
   }else{
-    gatoVencedor = "Digite somente posições válidas";
+    gatoVencedor = "cat1";
   }
+  
   return gatoVencedor;
 }
 console.log(catAndMouse(2, 3, 3))
@@ -138,13 +138,13 @@ function techList(array_tecnologias, name) {
     for(i=0; i < array_tecnologias.length; i++ ){
       objetos[i] = {
         tech: array_tecnologias[i],
-        name: name [i],
+        name: name
       }
     }
   }
   return objetos;
 }
-console.log(techList(['css', 'java', 'html', 'python'],['samuel', 'bruno', 'matheus', 'lucas']));
+console.log(techList(['css', 'java', 'html', 'python'], "samuel"));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
