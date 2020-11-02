@@ -9,31 +9,26 @@ function calcArea(base, height) {
   // seu código aqui
   return (base * height) / 2
 }
-
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
   return string.split(" ")
 }
-
 // Desafio 4
 function concatName(arrayNames) {
   // seu código aqui
   return `${arrayNames.pop()}, ${arrayNames[0]}`
 }
-
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
   return (wins * 3) + (ties * 1)
 }
-
 // Desafio 6
 function highestCount(arrayHighestCount) {
   // seu código aqui
   let topNumber = arrayHighestCount[0]
   let cont = 0
-
   for (i in arrayHighestCount) {
     if (arrayHighestCount[0] < arrayHighestCount[i]) {
       topNumber = arrayHighestCount[i]
@@ -53,7 +48,6 @@ function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) return "cat2"
   return "os gatos trombam e o rato foge"
 }
-
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   // seu código aqui
@@ -86,7 +80,6 @@ function techList(arrTacName, name) {
   // seu código aqui
   if(arrTacName.length === 0) return "Vazio!";
   let newArr = [];
-
   for (i in arrTacName) {
     newArr[i] = {
       tech: arrTacName[i], name: name
@@ -104,22 +97,17 @@ function techList(arrTacName, name) {
     });
   return newArr;
 }
-
 // Desafio 11
 function generatePhoneNumber(n) {
   if (n.length != 11) return "Array com tamanho incorreto.";
-
   for (let i in n) {
     if (n[i] < 0 || n[i] > 9) {
       return "não é possível gerar um número de telefone com esses valores";
     }
     let cont = 0;
-
     for (let j in n) {
-
       if (n[i] == n[j]) {
         cont++;
-
         if (cont == 3) {
           return "não é possível gerar um número de telefone com esses valores";
         }
@@ -128,24 +116,20 @@ function generatePhoneNumber(n) {
   }
   return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
 }
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if( Math.abs(lineA < lineB+lineC) && Math.abs(lineB <lineA+lineC) && Math.abs(lineC < lineA + lineB)) return true
   return false
 }
-
 // Desafio 13
 function hydrate(srt) {
   let exit = 0;
   let arr = srt.match(/\d+/g);
   // https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
-
   for(let i in arr ){
    exit += parseInt(arr[i]);
   //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
   }
-
   if(exit == 1) return `${exit} copo de água`;
   return `${exit} copos de água`;
 }
