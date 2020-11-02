@@ -200,7 +200,7 @@ const objeto = {
 let v = "vazio"
 if (techno.length ===0){ return }
 
-for (let  key=techno.length ; key>0 ; key--){
+for (let  key=techno.length -1; key>=0 ; key--){
   let item = Object.create(objeto);
   item.name=nome;
   //objeto.tech=tech[key];
