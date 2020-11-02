@@ -166,6 +166,7 @@ function phoneCheckQtd(numbers) {
   }
   return phoneNumbers;
 }
+
 // Desafio 11 - Função de apoio => checar se há 3 ou mais números repetidos:
 // Aqui utilizei muita ajuda deste site https://dev.to/huyddo/find-duplicate-or-repeat-elements-in-js-array-3cl3 , pois nunca teria pensado em utilizar objeto dessa maneira, inclusive ainda não entendo direito o 'if else' funcionando desta forma.
 function phoneRepeatCheck(numbers) {
@@ -180,7 +181,6 @@ function phoneRepeatCheck(numbers) {
   }
   for (let prop in repeatCounting) {
     if (repeatCounting[prop] >= 3) {
-      console.log(`${prop} repetiu: ${repeatCounting[prop]} vezes`);
       repeatCheck = 'numeros repetidos demais';
     }
   }
@@ -189,34 +189,24 @@ function phoneRepeatCheck(numbers) {
 
 function generatePhoneNumber(numbers) {
   let tel;
-  if (phoneRepeatCheck(numbers) === 'numeros repetidos demais') {
-    tel = 'não é possível gerar um número de telefone com esses valores.';
-  } else if (phoneCheckQtd(numbers) === 'tamanho errado') {
+  if (phoneCheckQtd(numbers) === 'tamanho errado') {
     tel = 'Array com tamanho incorreto.';
-  } else if (phoneCheckQtd(numbers) === 'numeros errados') {
+  } else if (
+    phoneCheckQtd(numbers) === 'numeros errados' ||
+    phoneRepeatCheck(numbers) === 'numeros repetidos demais'
+  ) {
     tel = 'não é possível gerar um número de telefone com esses valores';
   } else {
-    numbers.splice(
-      0,
-      8,
-      '(',
-      numbers[0],
-      numbers[1],
-      ')',
-      ' ',
-      numbers[2],
-      numbers[3],
-      numbers[4],
-      numbers[5],
-      numbers[6],
-      '-',
-      numbers[7]
-    );
+    numbers.splice(0, 0, '(');
+    numbers.splice(3, 0, ')');
+    numbers.splice(4, 0, ' ');
+    numbers.splice(10, 0, '-');
     tel = numbers.join('');
   }
   return tel;
 }
 
+// Ok!
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let result;
