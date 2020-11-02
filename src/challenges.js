@@ -6,7 +6,6 @@ function compareTrue(valor1, valor2) {
     return false
   }
 }
-console.log(compareTrue(true, false))
 
 //---------------------------------//
 
@@ -16,7 +15,6 @@ function calcArea(base, height) {
   return (base * height) / 2
 
 }
-console.log(calcArea(10, 10))
 
 //---------------------------------//
 
@@ -26,7 +24,6 @@ function splitSentence(frase) {
 
   return resultado
 }
-console.log(splitSentence("Ola mundo"))
 
 //---------------------------------//
 
@@ -36,7 +33,6 @@ function concatName(names) {
 
   return (`${names[value]}, ${names[0]}`)
 }
-console.log(concatName(['matheus', 'gabriel']))
 
 //---------------------------------//
 
@@ -46,8 +42,6 @@ function footballPoints(wins, ties) {
   return ((wins * 3) + (ties * 1))
 
 }
-
-console.log(footballPoints(2, 2))
 
 //---------------------------------//
 
@@ -105,8 +99,30 @@ function catAndMouse(mouse, cat1, cat2) {
 //---------------------------------//
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let newArray = []
+
+  for(index in array){
+    let number = array[index]
+
+    if(number % 3 !== 0 && number % 5 !== 0){
+      newArray.push("bug!")
+    }
+
+    if(number % 3 == 0 && number % 5 == 0){
+      newArray.push("fizzBuzz")
+      number = 1;
+    }
+
+    if(number % 3 == 0){
+      newArray.push("fizz")
+    }
+
+    if(number % 5 == 0){
+      newArray.push("buzz")
+    }
+  }
+  return newArray;
 }
 
 //---------------------------------//
@@ -115,8 +131,6 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
-
-//---------------------------------//
 
 function decode() {
   // seu código aqui
