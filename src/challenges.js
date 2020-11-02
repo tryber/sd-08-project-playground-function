@@ -63,50 +63,50 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(message) {
   let auxArray = [];
-  let encodedMessage = "";
+  let encodedMessage = '';
 
   for (let i in message) {
-    if (message[i] == "a") {
+    if (message[i] === 'a') {
       auxArray.push(1);
-    } else if (message[i] == "e") {
+    } else if (message[i] === 'e') {
       auxArray.push(2);
-    } else if (message[i] == "i") {
+    } else if (message[i] === 'i') {
       auxArray.push(3);
-    } else if (message[i] == "o") {
+    } else if (message[i] === 'o') {
       auxArray.push(4);
-    } else if (message[i] == "u") {
+    } else if (message[i] === 'u') {
       auxArray.push(5);
     } else {
       auxArray.push(message[i]);
     }
   }
   for (let j in auxArray) {
-    encodedMessage = encodedMessage + auxArray[j];
+    encodedMessage += auxArray[j];
   }
   return encodedMessage;
 }
 
 function decode(message) {
   let auxArray = [];
-  let decodedMessage = "";
+  let decodedMessage = '';
 
   for (let i in message) {
-    if (message[i] == 1) {
+    if (message[i] === 1) {
       auxArray.push('a');
-    } else if (message[i] == 2) {
+    } else if (message[i] === 2) {
       auxArray.push('e');
-    } else if (message[i] == 3) {
+    } else if (message[i] === 3) {
       auxArray.push('i');
-    } else if (message[i] == 4) {
+    } else if (message[i] === 4) {
       auxArray.push('o');
-    } else if (message[i] == 5) {
+    } else if (message[i] === 5) {
       auxArray.push('u');
     } else {
       auxArray.push(message[i]);
     }
   }
   for (let j in auxArray) {
-    decodedMessage = decodedMessage + auxArray[j];
+    decodedMessage += auxArray[j];
   }
   return decodedMessage;
 }
