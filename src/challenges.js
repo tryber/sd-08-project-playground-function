@@ -236,7 +236,7 @@ function checkPhoneNumber(numeros=[]){
   if(ordenado[key]<0 || ordenado[key]>9){
     return  false;
   }
-  for( let index;index<11;index++){
+  for( let index=0;index<11;index++){
     if(ordenado[key]==ordenado[index]){
       if (contagem==2){return false}
       else { contagem+=1}

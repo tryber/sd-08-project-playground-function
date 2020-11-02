@@ -11,3 +11,7 @@ console.log(resposta);
 arr = [1, 2, 18, 0, 5, 3, 17, 8, 9, 1, 8];
 resposta = c.generatePhoneNumber(arr);
 console.log(resposta);
+
+arr = [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4];
+resposta = c.generatePhoneNumber(arr);
+console.log(resposta);
