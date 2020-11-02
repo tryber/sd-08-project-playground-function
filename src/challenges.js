@@ -177,13 +177,13 @@ techList([], "Lucas");
 function generatePhoneNumber(array) {
   // seu código aqui
   let retorno = "";
-  let repet = 1;
   let maior = 0;
   let indiceRepet = array[0];
     if (array.length !== 11) {
       retorno = "Array com tamanho incorreto.";
     }
   for (let cont = 1; cont <= array.length; cont++) {
+    let repet = 1;
   if (array[cont] === indiceRepet) {
   repet += 1;
   } 
@@ -191,16 +191,21 @@ function generatePhoneNumber(array) {
     retorno = "não é possível gerar um número de telefone com esses valores";
   }
 }
+for (let cont = 0; cont < array.length; cont++) {
+  if (array[cont] >= 10) {
+    retorno = "não é possível gerar um número de telefone com esses valores";
+  }
+}
   if (array.length === 11) {
     let parte1 = array.join("").slice(0,2);
-    let parte2 = array.join("").slice(2,6);
-    let parte3 = array.join("").slice(7,10);
-    retorno = `(${parte1})${parte2}-${parte3}`  
+    let parte2 = array.join("").slice(2,7);
+    let parte3 = array.join("").slice(7,11);
+    retorno = ` (${parte1}) ${parte2}-${parte3}`  
   }
   return retorno;
   //}
 }
-console.log(generatePhoneNumber([1, 3, 4, 5, 1, 3, 7, 8, 3, 9, 0, 2]));
+console.log(generatePhoneNumber([1, 3, 4, 5, 1, 3, 7, 8, 3, 9, 0]));
 
 
 
