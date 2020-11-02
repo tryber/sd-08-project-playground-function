@@ -135,7 +135,7 @@ function decode(text) {
 
 // Desafio 10
 function techList(arrayTec, name) {
-  if (arrayTec.length === '0') {
+  if (arrayTec.length === 0) {
     return 'Vazio!';
   }
   let newList = [];
