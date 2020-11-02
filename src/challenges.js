@@ -87,18 +87,64 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([2, 3, 15, 30]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringQualquer) {
+  let concatenado = '';
+  for(let i = 0; i < stringQualquer.length; i++){
+    if(stringQualquer[i] == 'a'){
+      concatenado += 1;
+    }else if(stringQualquer[i] == 'e'){
+      concatenado += 2;
+    }else if(stringQualquer[i] == 'i'){
+      concatenado += 3;
+    }else if(stringQualquer[i] == 'o'){
+      concatenado += 4;
+    }else if(stringQualquer[i] == 'u'){
+      concatenado += 5;
+    }else{
+      concatenado += stringQualquer[i];
+    }
+  }
+  return concatenado;
 }
-function decode() {
-  // seu código aqui
+console.log(encode('samuel ramos campos'))
+
+function decode(codigo) {
+  let transcrito = '';
+  for(let i = 0; i < codigo.length; i++){
+    if(codigo[i] == 1){
+      transcrito += 'a';
+    }else if(codigo[i] == 2){
+      transcrito += 'e';
+    }else if(codigo[i] == 3){
+      transcrito += 'i';
+    }else if(codigo[i] == 4){
+      transcrito += 'o';
+    }else if(codigo[i] == 5){
+      transcrito += 'u';
+    }else{
+      transcrito += codigo[i];
+    }
+  }
+  return transcrito;
 }
+console.log((decode('s1m52l r1m4s c1mp4s')))
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array_tecnologias, name) {
+  let objetos = [];
+  if(array_tecnologias == []){
+    objetos = "Vazio!"
+  }else{
+    for(i=0; i < array_tecnologias.length; i++ ){
+      objetos[i] = {
+        tech: array_tecnologias[i],
+        name: name [i],
+      }
+    }
+  }
+  return objetos;
 }
-
+console.log(techList(['css', 'java', 'html', 'python'],['samuel', 'bruno', 'matheus', 'lucas']));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
