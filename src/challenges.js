@@ -198,7 +198,7 @@ const objeto = {
   name:""
 };
 techno.sort();
-let v = "vazio"
+let v = "Vazio"
 if (techno.length == 0){ return v}
 
 for (let  key=0; key < techno.length ; key+=1){
