@@ -71,13 +71,44 @@ function fizzBuzz(array) {
   return arrayFizzBuzz;
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encodeString = "";
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === "a") {
+      encodeString += "1";
+    } else if (string[index] === "e") {
+      encodeString += "2";
+    } else if (string[index] === "i") {
+      encodeString += "3";
+    } else if (string[index] === "o") {
+      encodeString += "4";
+    } else if (string[index] === "u") {
+      encodeString += "5";
+    } else {
+      encodeString += string[index];
+    }
+  }
+  return encodeString;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let decodeString = "";
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === "1") {
+      decodeString += "a";
+    } else if (string[index] === "2") {
+      decodeString += "e";
+    } else if (string[index] === "3") {
+      decodeString += "i";
+    } else if (string[index] === "4") {
+      decodeString += "o";
+    } else if (string[index] === "5") {
+      decodeString += "u";
+    } else {
+      decodeString += string[index];
+    }
+  }
+  return decodeString;
 }
-
 // Desafio 10
 function techList(array, name) {
   let objectArray = [];
