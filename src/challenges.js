@@ -91,51 +91,29 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(text) {
-  let codec = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  let arrayString = text.split('');
-  let newText = '';
-  for (let index = 0; index < text.length; index += 1) {
-    for (let key in codec) {
-      if (key === arrayString[index]) {
-        arrayString[index] = codec[key];
-      }
-    }
-    newText += arrayString[index];
-  }
-  return newText;
+function encode(text) {  
+  let encode = text.replace(/a/gi,'1');
+  encode = encode.replace(/e/gi,'2');
+  encode = encode.replace(/i/gi,'3');
+  encode = encode.replace(/o/gi,'4');
+  encode = encode.replace(/u/gi,'5');
+  return encode;
 }
+console.log(encode("hi there!"));
 
 function decode(text) {
-  let codec = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  let arrayString = text.split('');
-  let newText = '';
-  for (let index = 0; index < text.length; index += 1) {
-    for (let key in codec) {
-      if (codec[key] === arrayString[index]) {
-        arrayString[index] = key;
-      }
-    }
-    newText += arrayString[index];
-  }
-  return newText;
+  let decode = text.replace(/1/gi,'a');
+  decode = decode.replace(/2/gi,'e');
+  decode = decode.replace(/3/gi,'i');
+  decode = decode.replace(/4/gi,'o');
+  decode = decode.replace(/5/gi,'u');
+  return decode;
 }
+console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList(arrayTec, name) {
-  if (arrayTec.length == 0 || arrayTec == null) {
+  if (arrayTec.length === '0') {
     return 'Vazio!';
   }
   let newList = [];
@@ -151,6 +129,7 @@ function techList(arrayTec, name) {
   }
   return newList;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber(arrayPhone) {
@@ -168,14 +147,14 @@ function generatePhoneNumber(arrayPhone) {
     if (arrayPhone[index] < 0 || arrayPhone[index] > 9 || contEvent >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    if (index === 0) {
-      phoneNumber = '(' + arrayPhone[index];
-    } else if (index === 1) {
-      phoneNumber += arrayPhone[index] + ') ';
-    } else if (index === 6) {
-      phoneNumber += arrayPhone[index] + '-';
+    if (index === '0') {
+      phoneNumber = `(${arrayPhone[index]}`;
+    } else if (index === '1') {
+      phoneNumber += `${arrayPhone[index]})`;
+    } else if (index === '6') {
+      phoneNumber += `${arrayPhone[index]}-`;
     } else {
-      phoneNumber += arrayPhone[index];
+      phoneNumber += `${arrayPhone[index]}`;
     }
   }
   return phoneNumber;
