@@ -148,15 +148,15 @@ function techList(tech, name) {
 
   if (aOrdem.length === 0) {
     return 'Vazio!';
-  } else {
-    for (let cont = 0; cont < aOrdem.length; cont += 1) {
-      let array = {};
-      array.tech = aOrdem[cont];
-      array.name = name;
-      listaFinal.push(array);
-    }
-    return listaFinal;
   }
+  for (let cont = 0; cont < aOrdem.length; cont += 1) {
+    let array = {};
+    array.tech = aOrdem[cont];
+    array.name = name;
+    listaFinal.push(array);
+  }
+  return listaFinal;
+
 }
 
 // Desafio 11
