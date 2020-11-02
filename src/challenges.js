@@ -140,7 +140,7 @@ function techList(arrayTec, name) {
   }
   let newList = [];
   let arraySort = arrayTec.sort();
-  for (let index in arraySort) {
+  for (let index = 0; index < arraySort.length; index += 1) {
     let object = {
       tech: '',
       name: '',
@@ -158,24 +158,24 @@ function generatePhoneNumber(arrayPhone) {
   if (arrayPhone.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
-  for (let index in arrayPhone) {
+  for (let indice = 0; indice < arrayPhone.length; indice +=1) {
     let contEvent = 0;
-    for (let i = 0; i < arrayPhone.length; i += 1) {
-      if (arrayPhone[index] === arrayPhone[i]) {
+    for (let pesquisa = 0; pesquisa < arrayPhone.length; pesquisa += 1) {
+      if (arrayPhone[indice] === arrayPhone[pesquisa]) {
         contEvent += 1;
       }
     }
-    if (arrayPhone[index] < 0 || arrayPhone[index] > 9 || contEvent >= 3) {
+    if (arrayPhone[indice] < 0 || arrayPhone[indice] > 9 || contEvent >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    if (index === '0') {
-      phoneNumber = `(${arrayPhone[index]}`;
-    } else if (index === '1') {
-      phoneNumber += `${arrayPhone[index]}) `;
-    } else if (index === '6') {
-      phoneNumber += `${arrayPhone[index]}-`;
+    if (indice === 0) {
+      phoneNumber = `(${arrayPhone[indice]}`;
+    } else if (indice === 1) {
+      phoneNumber += `${arrayPhone[indice]}) `;
+    } else if (indice === 6) {
+      phoneNumber += `${arrayPhone[indice]}-`;
     } else {
-      phoneNumber += `${arrayPhone[index]}`;
+      phoneNumber += `${arrayPhone[indice]}`;
     }
   }
   return phoneNumber;
@@ -202,8 +202,8 @@ function hydrate(string) {
   let regex = /\d+/g;
   let cupsWater = 0;
   let numbers = string.match(regex);
-  for (let index in numbers) {
-    cupsWater += parseInt(numbers[index]);
+  for (let index = 0; index < numbers.length; index += 1) {
+    cupsWater += parseInt(numbers[index],10);
   }
   if (cupsWater === 1) {
     return `${cupsWater} copo de água`;
