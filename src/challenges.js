@@ -55,7 +55,7 @@ function fizzBuzz(array) {
       fizzBuzzArray[i] = "fizzBuzz";
     } else if (array[i] % 3 === 0) {
       fizzBuzzArray[i] = "fizz";
-    } else if ((array[i] % 5) === 0) {
+    } else if (array[i] % 5 === 0) {
       fizzBuzzArray[i] = "buzz";
     } else {
       fizzBuzzArray[i] = "bug";
