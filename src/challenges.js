@@ -174,7 +174,7 @@ function generatePhoneNumber(array) {
     for (let i = 0; i < array.length; i++) {
       if (i == 2) {
         out += ') ';
-      } else if (i === 7) {
+      } if (i === 7) {
         out += '-';
       }
       out += array[i];
