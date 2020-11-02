@@ -196,13 +196,25 @@ function generatePhoneNumber(arrayNumber) {
   return number;
 }
 
-let array = [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4];
-
-console.log(generatePhoneNumber(array));
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(num1, num2, num3) {
+  if (num1 > num2 + num3){
+    return false;
+  } else if (num2 > num1 + num3){
+    return false;
+  } else if (num3 > num1 + num2){
+    return false;
+  }
+
+  let subNum1 = Math.abs(num2 - num3);
+  let subNum2 = Math.abs(num1 - num3);
+  let subNum3 = Math.abs(num1 - num2);
+
+  if (num1 > subNum1 && num2 > subNum2 && num3 > subNum3){
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
