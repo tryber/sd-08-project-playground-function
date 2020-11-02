@@ -49,11 +49,11 @@ footballPoints(5, 3);
 // Desafio 6
 function highestCount(vetorNum) {
   let resultado;
-  vetorNum.sort((a,b) => a - b);
+  vetorNum.sort((a, b) => a - b);
   //
   let numMaior = vetorNum[vetorNum.length -1];
   let quantNum = 0;
-  for (count = 0; count < vetorNum.length; count += 1) {
+  for (let count = 0; count < vetorNum.length; count += 1) {
     if (numMaior === vetorNum[count]) {
       quantNum += 1;
     }
@@ -91,11 +91,11 @@ function fizzBuzz(vetorNum) {
     if (vetorNum[count] % 3 === 0 && vetorNum[count] % 5 === 0) {
       resultado.push('fizzBuzz');
     } else if (vetorNum[count] % 3 === 0) {
-        resultado.push('fizz');
+      resultado.push('fizz');
     } else if (vetorNum[count] % 5 === 0) {
-        resultado.push('buzz');
+      resultado.push('buzz');
     } else {
-        resultado.push('bug!');
+      resultado.push('bug!');
     }
   }
   return resultado;
@@ -110,17 +110,17 @@ function encode(string) {
   let vogais = ['a', 'e', 'i', 'o', 'u'];
   let numeros = [1, 2, 3, 4, 5];
   let fraseCodificada = '';
-  for (letra = 0; letra < string.length; letra += 1) {
+  for (let letra = 0; letra < string.length; letra += 1) {
     let letraComparar = string[letra];
     let substituir = 0;
-    for (count = 0; count < vogais.length; count += 1) {
+    for (let count = 0; count < vogais.length; count += 1) {
       if (letraComparar === vogais[count]) {
         substituir = numeros[count];
       }
     }
     if (substituir !== 0) {
       fraseCodificada += substituir;
-      } else {
+    } else {
       fraseCodificada += letraComparar;
     }
   }
@@ -132,10 +132,10 @@ function decode(string) {
   let vogais = ['a', 'e', 'i', 'o', 'u'];
   let numeros = [1, 2, 3, 4, 5];
   let fraseCodificada = '';
-  for (letra = 0; letra < string.length; letra += 1) {
+  for (let letra = 0; letra < string.length; letra += 1) {
     let letraComparar = string[letra];
     let substituir = 0;
-    for (count = 0; count < numeros.length; count += 1) {
+    for (let count = 0; count < numeros.length; count += 1) {
       if (letraComparar === numeros[count]) {
         substituir = vogais[count];
       }
