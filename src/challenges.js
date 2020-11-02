@@ -89,7 +89,7 @@ function encode(message) {
 function decode(message) {
   let auxArray = [];
   let decodedMessage = '';
-  
+
   for (let i in message) {
     if (message[i] === '1') {
       auxArray.push('a');
