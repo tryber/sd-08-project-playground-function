@@ -21,7 +21,7 @@ function splitSentence(stringToSplit) {
 
 // Desafio 4
 function concatName(arrayString) {
-  return [arrayString.length - 1], [arrayString[0]]; 
+  return arrayString[arrayString.length - 1], [arrayString[0]]; 
 }
 
 // Desafio 5
@@ -30,8 +30,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorNumero = Math.max(...array);
+  let repet = 0;
+  for (let i of array) {
+    if (maiorNumero === i) {
+      repet += 1;
+    }
+  } 
+
+  
 }
 
 // Desafio 7
