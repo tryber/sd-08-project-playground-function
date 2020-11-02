@@ -333,9 +333,38 @@ function generatePhoneNumber(array11) {
 }
 
 // Desafio 12
-function triangleCheck() {
-    // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+
+    if (LineA <= 0 ||
+        lineB <= 0 ||
+        lineC <= 0) {
+        return false;
+    }
+
+
+    if (lineA >= lineB + lineC ||
+        lineA <= Math.abs(lineB - lineC)) {
+        return false;
+
+    } else
+
+    if (lineB >= lineA + lineC ||
+        lineB <= Math.abs(lineA - lineC)) {
+        return false;
+
+    } else
+
+    if (lineC >= lineA + lineB ||
+        lineC <= Math.abs(lineA - lineB)) {
+        return false;
+
+    } else {
+        return true;
+    }
+
 }
+
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
