@@ -21,21 +21,21 @@ calcArea(20, 30);
 // Desafio 3
 function splitSentence(string) {
   let resultado = [];
-  resultado = string.split(" "); 
+  resultado = string.split(' '); 
   return resultado;
 }
-let testeSplit = "go trybe";
+let testeSplit = 'go trybe';
 splitSentence(testeSplit);
 // .split comando aprendido no site: (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split)
 // console.log(splitSentence(teste));
 
 // Desafio 4
 function concatName(vetorString) {
-  let resultado = "";
-  resultado = vetorString[vetorString.length -1] + "," + " " + vetorString[0];
+  let resultado = '';
+  resultado = vetorString[vetorString.length -1] + ',' + ' ' + vetorString[0];
   return resultado;
 }
-let testeConcat = ["Wagner", "Berna", "Medeiros", "Azevedo"];
+let testeConcat = ['Wagner', 'Berna', 'Medeiros', 'Azevedo'];
 concatName(testeConcat);
 // console.log(concatName(teste));
 
@@ -72,11 +72,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = Math.abs(cat1 - mouse);
   let distanciaCat2 = Math.abs(cat2 - mouse);
   if (distanciaCat1 < distanciaCat2) {
-    resultado = "cat1";
+    resultado = 'cat1';
   } else if (distanciaCat2 < distanciaCat1) {
-    resultado = "cat2";
+    resultado = 'cat2';
   } else {
-    resultado = "os gatos trombam e o rato foge";
+    resultado = 'os gatos trombam e o rato foge';
   }
 return resultado;
 }
@@ -89,13 +89,13 @@ function fizzBuzz(vetorNum) {
   let resultado = [];
   for (let count in vetorNum) {
    if (vetorNum[count] % 3 == 0 && vetorNum[count] % 5 == 0) {
-         resultado.push("fizzBuzz");
+         resultado.push('fizzBuzz');
      } else if (vetorNum[count] % 3 == 0) {
-         resultado.push("fizz");
+         resultado.push('fizz');
      } else if (vetorNum[count] % 5 == 0) {
-         resultado.push("buzz");
+         resultado.push('buzz');
      } else {
-         resultado.push("bug!");
+         resultado.push('bug!');
      }
   }
   return resultado;
@@ -107,9 +107,9 @@ fizzBuzz(testeFizzBuzz);
 // Desafio 9
 function encode(string) {
   let resultado;
-  let vogais = ["a", "e", "i", "o", "u"];
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
   let numeros = [1, 2, 3, 4, 5];
-  let fraseCodificada = "";
+  let fraseCodificada = '';
   for (letra = 0; letra < string.length; letra += 1){
     let letraComparar = string[letra];
     let substituir = 0;
@@ -129,9 +129,9 @@ function encode(string) {
 }
 function decode(string) {
  let resultado;
-  let vogais = ["a", "e", "i", "o", "u"];
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
   let numeros = [1, 2, 3, 4, 5];
-  let fraseCodificada = "";
+  let fraseCodificada = '';
   for (letra = 0; letra < string.length; letra += 1){
     let letraComparar = string[letra];
     let substituir = 0;
@@ -149,8 +149,8 @@ function decode(string) {
   resultado = fraseCodificada;
   return resultado;
 }
-let testeEncode = "hi there!"
-let testeDecode = "h3 th2r2!"
+let testeEncode = 'hi there!'
+let testeDecode = 'h3 th2r2!'
 encode(testeEncode);
 decode(testeDecode);
 
@@ -159,7 +159,7 @@ function techList(vetor, name) {
   vetor.sort();
   let resultado = [];
   if (vetor.length == 0) {
-    resultado = "Vazio!"
+    resultado = 'Vazio!'
   } else {
     for (let count in vetor) {
       resultado.push({
@@ -170,12 +170,12 @@ function techList(vetor, name) {
   }
   return resultado;
 }
-let tecnologias = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-let nome = "Wagner";
+let tecnologias = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+let nome = 'Wagner';
 techList(tecnologias, nome)
 // Desafio 11
 function generatePhoneNumber(vetorNum) {
-  let resultado = "";
+  let resultado = '';
   let numIncorreto = false;
   let numRepetido3x = false;
   for (let numAtual in vetorNum) {
@@ -194,19 +194,19 @@ function generatePhoneNumber(vetorNum) {
     }  
   }
   if (vetorNum.length !== 11) {
-    resultado = "Array com tamanho incorreto.";
+    resultado = 'Array com tamanho incorreto.';
   } else if (numIncorreto == true || numRepetido3x == true) {
-    resultado = "não é possível gerar um número de telefone com esses valores";
+    resultado = 'não é possível gerar um número de telefone com esses valores';
   } else {
-    resultado = "("
+    resultado = '('
     for (let count in vetorNum) {
       if (count < 2) {
         resultado += vetorNum[count];
       } else if (count == 2) {
-        resultado += ") ";
+        resultado += ') ';
         resultado += vetorNum[count];
       } else if (count == 7) {
-        resultado += "-";
+        resultado += '-';
         resultado += vetorNum[count];
       } else {
         resultado += vetorNum[count];
