@@ -153,12 +153,16 @@ function techList(techs, name) {
 // Ok!
 
 // Desafio 11
-// Desafio 11 - Função de apoio => checar se o array está com tamanho e/ou número certos:
+// Desafio 11 - Função de apoio => checar se o array está com tamanho certo:
+function phoneCheckLength(numbers) {
+  let phoneLength;
+  if (numbers.length !== 11) {
+    phoneLength = 'tamanho errado';
+  }
+  return phoneLength;
+}
 function phoneCheckQtd(numbers) {
   let phoneNumbers;
-  if (numbers.length !== 11) {
-    phoneNumbers = 'tamanho errado';
-  }
   for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] < 0 || numbers[i] > 9) {
       phoneNumbers = 'numeros errados';
@@ -189,7 +193,7 @@ function phoneRepeatCheck(numbers) {
 
 function generatePhoneNumber(numbers) {
   let tel;
-  if (phoneCheckQtd(numbers) === 'tamanho errado') {
+  if (phoneCheckLength(numbers) === 'tamanho errado') {
     tel = 'Array com tamanho incorreto.';
   } else if (
     phoneCheckQtd(numbers) === 'numeros errados' ||
