@@ -68,7 +68,7 @@ function catAndMouse(mouse, cat1, cat2){
     } else if ((mouse - cat1)>(mouse - cat2)){
         return "cat2";
     } else {
-        return "os gatos trombaram e o rato foge";
+        return "os gatos trombam e o rato foge";
     }
   }
   else if ((mouse < cat1)&&(mouse > cat2)){
@@ -77,7 +77,7 @@ function catAndMouse(mouse, cat1, cat2){
     } else if ((cat1 - mouse)>(mouse - cat2)){
         return "cat2";
     } else {
-        return "os gatos trombaram e o rato foge";
+        return "os gatos trombam e o rato foge";
     }
   }
   else if ((mouse > cat1)&&(mouse < cat2)){
@@ -86,7 +86,7 @@ function catAndMouse(mouse, cat1, cat2){
     } else if ((mouse - cat1)>(cat2 - mouse)){
         return "cat2";
     } else {
-        return "os gatos trombaram e o rato foge";
+        return "os gatos trombam e o rato foge";
     }
   }
   else if ((mouse < cat1)&&(mouse < cat2)){
@@ -95,7 +95,7 @@ function catAndMouse(mouse, cat1, cat2){
     } else if ((cat1 - mouse)>(cat2 - mouse)){
         return "cat2";
     } else {
-        return "os gatos trombaram e o rato foge";
+        return "os gatos trombam e o rato foge";
     }
   }
 }
