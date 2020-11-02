@@ -36,7 +36,7 @@ function highestCount(numeros) {
       repetido += 1;
     }
   }
-  return repeticoes;
+  return repetido;
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2){
@@ -119,8 +119,22 @@ function decode(cod) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, seuNome) {
+  let array = techArray.sort();
+  let vazio = "Vazio!";
+  let saida = [];
+
+  if (techArray.length > 0){
+    for (let key in array){
+        let objeto = {};
+        objeto.tech = array[key];
+        objeto.name = seuNome;
+        saida.push(objeto);
+  }
+    return saida;
+} else {
+    return vazio;
+}
 }
 
 // Desafio 11
