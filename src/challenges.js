@@ -25,7 +25,9 @@ function concatName(stringArray) {
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+  let points = 0;
+  points += (wins * 3) + ties;
+  return points
 }
 
 // Desafio 6
@@ -39,7 +41,7 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz (arrayNumber) {
+function fizzBuzz(arrayNumber) {
 
   let newArray = [];
   for (let i = 0; i < arrayNumber.length; i += 1) {
