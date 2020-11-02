@@ -39,7 +39,7 @@ function concatName(arrayOfStrings) {
 
 concatName(arrayOfStrings);
 
-// Desafio 5     DA PRA MELHORAR
+// Desafio 5
 
 function footballPoints(wins, ties) {
 
@@ -51,10 +51,36 @@ function footballPoints(wins, ties) {
 
 
 
-// Desafio 6                     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-function highestCount() {
-  // seu código aqui
+// Desafio 6
+
+/* Função auxiliar */
+function descobreMaiorNúmero(array){
+
+  let maiorNumero = 0;
+
+  for(let index = 0; index < array.length; index+=1){
+    if(array[index] > maiorNumero){
+      maiorNumero = array[index];
+    }
+  }
+  return maiorNumero;
 }
+
+function highestCount(array) {
+
+  let repeticoes = 0;
+
+  for(let index = 0; index < array.length; index+=1){
+    if(array[index] == descobreMaiorNúmero(array)){
+      repeticoes +=1;
+    }
+  }
+
+  console.log(repeticoes);
+
+}
+
+highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -67,8 +93,6 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if(Math.abs(cat2 - mouse) == Math.abs(cat1 - mouse)){
     return 'os gatos trombam e o rato foge';
   }
-
-
 }
 
 // Desafio 8
