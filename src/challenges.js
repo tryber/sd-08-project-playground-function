@@ -48,22 +48,22 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(teste) {
   let maior = 0;
-  let obj = {};
+  let objeto = {};
 
   for (let index = 0; index < teste.length; index += 1) {
-    if (obj[teste[index]] === undefined) {
-      obj[teste[index]] = 1;
+    if (objeto[teste[index]] === undefined) {
+      objeto[teste[index]] = 1;
     } else {
-      obj[teste[index]] += 1;
+      objeto[teste[index]] += 1;
     }
   }
 
-  for (let chave in obj) {
+  for (let chave in objeto) {
     if (chave > maior) {
       maior = chave;
     }
   }
-  maior = obj[maior];
+  maior = objeto[maior];
   return maior;
 }
 
@@ -147,21 +147,17 @@ function techList(tech, name) {
   let listaFinal = [];
 
   if (aOrdem.length === 0) {
-    console.log('Vazio!');
+    return 'Vazio!';
   } else {
     for (let cont = 0; cont < aOrdem.length; cont += 1) {
       let array = {};
-      array.nane = name;
       array.tech = aOrdem[cont];
+      array.nane = name;
       listaFinal.push(array);
     }
-    console.log(listaFinal);
+    return listaFinal;
   }
 }
-
-let tech = [];
-let name = "Jean";
-techList(tech, name)
 
 
 // Desafio 11
