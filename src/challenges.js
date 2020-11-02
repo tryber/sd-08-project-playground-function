@@ -197,14 +197,15 @@ let objeto = {
   tech:"",
   name:""
 };
+
 for (let  key=0 ; key<tech.length ; key++){
-  objeto.tech=tech[key];
-  objeto.name=nome;
-  console.log("")
-  console.log(key)
-  console.log(objeto);
-  console.log(listaTech)
-  listaTech[key]=objeto.name + objeto.tech;
+  //objeto.tech=tech[key];
+  //console.log("")
+  // console.log(key)
+  // console.log(objeto);
+  // console.log(listaTech[0])
+  listaTech.push(objeto.tech=tech[key]);
+  listaTech.push(objeto.name=nome);
 }
 //listaTech.sort();
 return listaTech;
