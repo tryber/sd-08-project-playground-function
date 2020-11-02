@@ -1,29 +1,23 @@
 // Desafio 1
-function compareTrue(a, b) { 
-  if (a && b) {
-    return true
-  }
-    return false 
-
+function compareTrue() {
   // seu código aqui
+  function compareTrue(a, b) {
+    if (a && b){
+      return true
+    } return false
+  }
+
 } compareTrue()
 
-
 // Desafio 2
-function calcArea(base,height) {
-
-  let resultado = (base * height) / 2
-
+function calcArea() {
   // seu código aqui
-} calcArea()
+}
 
 // Desafio 3
 function splitSentence() {
-  resultado = String.split("")
-  return resultado
-
   // seu código aqui
-} splitSentence()
+}
 
 // Desafio 4
 function concatName() {
