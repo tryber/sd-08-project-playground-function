@@ -20,13 +20,15 @@ function splitSentence(frase) {
   let transformacao = frase.split(' '); 
   return transformacao; 
 }
-splitSentence('Para o alto e avante andre');
+console.log(splitSentence('Para o alto e avante andre'));
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nome, sobrenome) {
+  let fullName = sobrenome.concat(nome);
+  return fullName;
 }
+console.log(concatName(["andre"], ["phelipe"]));
 
 // Desafio 5
 function footballPoints() {
