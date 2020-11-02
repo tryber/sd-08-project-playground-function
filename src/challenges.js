@@ -128,15 +128,14 @@ function decode(strLetters) {
 
 // Desafio 10
 function techList(arrTech, name) {
-  
-  if(arrTech.length == 0){
-    return "Vazio!"
+  if (arrTech.length == 0) {
+    return "Vazio!";
   }
 
   arrTech.sort();
 
   let array = [];
-  
+
   for (let i in arrTech) {
     let object = {};
     object.tech = arrTech[i];
@@ -147,13 +146,36 @@ function techList(arrTech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrTel) {
+  if (arrTel.length != 11) {
+    return "Array com tamanho incorreto.";
+  }
+
+  for (let i in arrTel) {
+    if (arrTel[i] < 0 || arrTel[i] > 9) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
+  for (let i in arrTel) {
+    let count = 0;
+    for (let a in arrTel) {
+      if (arrTel[i] == arrTel[a]) count += 1;
+      if (count >= 3)
+        return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
+  let phoneNumbers = arrTel.join("");
+  let ddd = phoneNumbers.slice(0,2);
+  let part1 = phoneNumbers.slice(2,7);
+  let part2 = phoneNumbers.slice(7,11);
+  return `(${ddd}) ${part1}-${part2}`
 }
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  
 }
 
 // Desafio 13
