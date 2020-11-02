@@ -21,7 +21,7 @@ calcArea(20, 30);
 // Desafio 3
 function splitSentence(string) {
   let resultado = [];
-  resultado = string.split(' '); 
+  resultado = string.split(' ');
   return resultado;
 }
 let testeSplit = 'go trybe';
@@ -88,14 +88,14 @@ catAndMouse(7, 6, 2);
 function fizzBuzz(vetorNum) {
   let resultado = [];
   for (let count in vetorNum) {
-   if (vetorNum[count] % 3 == 0 && vetorNum[count] % 5 == 0) {
-         resultado.push('fizzBuzz');
+    if (vetorNum[count] % 3 == 0 && vetorNum[count] % 5 == 0) {
+          resultado.push('fizzBuzz');
     } else if (vetorNum[count] % 3 == 0) {
-         resultado.push('fizz');
+          resultado.push('fizz');
     } else if (vetorNum[count] % 5 == 0) {
-         resultado.push('buzz');
+          resultado.push('buzz');
     } else {
-         resultado.push('bug!');
+          resultado.push('bug!');
     }
   }
   return resultado;
@@ -128,7 +128,7 @@ function encode(string) {
   return resultado;
 }
 function decode(string) {
- let resultado;
+  let resultado;
   let vogais = ['a', 'e', 'i', 'o', 'u'];
   let numeros = [1, 2, 3, 4, 5];
   let fraseCodificada = '';
@@ -138,7 +138,7 @@ function decode(string) {
     for (count = 0; count < numeros.length; count += 1) {
       if (letraComparar == numeros[count]) {
         substituir = vogais[count];
-      } 
+      }
     }
     if (substituir !== 0){
         fraseCodificada += substituir;
@@ -191,7 +191,7 @@ function generatePhoneNumber(vetorNum) {
     }
     if (contadorNum >= 3) {
       numRepetido3x = true;
-    }  
+    }
   }
   if (vetorNum.length !== 11) {
     resultado = 'Array com tamanho incorreto.';
@@ -225,8 +225,8 @@ function triangleCheck(lineA, lineB, lineC) {
   difB = Math.abs(lineA - lineC);
   difC = Math.abs(lineA - lineB);
   if (lineA < (lineB + lineC) && lineB < (lineA + lineC) && lineC < (lineA + lineB) && lineA > difA && lineB > difB && lineC > difC) {
-    resultado = true;  
-  } 
+    resultado = true;
+  }
   return resultado;
 }
 triangleCheck(10, 14, 8);
