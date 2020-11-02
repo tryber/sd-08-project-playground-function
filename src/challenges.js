@@ -194,12 +194,24 @@ function generatePhoneNumber(numbers) {
   } else if (phoneCheckQtd(numbers) === 'tamanho errado') {
     tel = 'Array com tamanho incorreto.';
   } else if (phoneCheckQtd(numbers) === 'numeros errados') {
-    tel = 'não é possível gerar um número de telefone com esses valores.';
+    tel = 'não é possível gerar um número de telefone com esses valores';
   } else {
-    numbers.splice(0, 0, '(')
-    numbers.splice(3, 0, ')');
-    numbers.splice(4, 0, ' ');
-    numbers.splice(10, 0, '-');
+    numbers.splice(
+      0,
+      8,
+      '(',
+      numbers[0],
+      numbers[1],
+      ')',
+      ' ',
+      numbers[2],
+      numbers[3],
+      numbers[4],
+      numbers[5],
+      numbers[6],
+      '-',
+      numbers[7]
+    );
     tel = numbers.join('');
   }
   return tel;
