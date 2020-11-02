@@ -52,8 +52,6 @@ function footballPoints(wins, ties) {
 
 
 // Desafio 6
-
-/* Função auxiliar */
 function descobreMaiorNúmero(array){
 
   let maiorNumero = 0;
@@ -76,11 +74,9 @@ function highestCount(array) {
     }
   }
 
-  console.log(repeticoes);
+  return repeticoes;
 
 }
-
-highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -163,30 +159,36 @@ function decode(string) {
 // Desafio 10                            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function techList(array, name) {
 
-
-  let list = [];
-
-  for(let index = 0; index < array.length; index+=1){
-
-    let obj = {
-      tech: '',
-      name: ''
-    };
-
-    obj.tech = array[index];
-    obj.name = name;
-    list[index] = obj;
-
-  }
-
-  return list;
-
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function takeTwo(array) {
+  let two = '';
+  for(let index = 0; index < 2; index+=1){
+
+    two += array[index];
+
+  }
+ return two;
 }
+function takeFive(array) {
+  let five = '';
+  for(let index = 2; index < 7; index+=1){
+    five += array[index];
+  }
+  return five;
+}
+function takeFour(array) {
+  let four = '';
+  for(let index = 10; index > 6; index -=1){
+    four += array[index];
+  }
+  return four.split('').reverse().join('');
+}
+function generatePhoneNumber(array) {
+  return `(${takeTwo(array)}) ${takeFive(array)}-${takeFour(array)}`;
+}
+
 
 // Desafio 12
 function triangleCheck() {
