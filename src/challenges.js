@@ -184,9 +184,7 @@ function takeFour(array) {
   return four.split('').reverse().join('');
 }
 function arrayLengthValidation(array) {
-  for(let index = 0; index < array.length; index +=1){
     return (array.length != 11) ? true : false;
-  }
 }
 function arrayIndexValidation(array){
   let valorAtual;
@@ -200,13 +198,12 @@ function arrayIndexValidation(array){
       }
     }
   }
-
   for(let index = 0; index < array.length; index+=1){
     return (array[index] < 0 || array[index] > 9 || cont >= 3) ? true : false;
   }
 }
 function generatePhoneNumber(array) {
-  if(arrayLengthValidation(array) == true){
+  if(array === [] || arrayLengthValidation(array) == true){
     console.log('Array com tamanho incorreto.');
     return 'Array com tamanho incorreto.';
   }
@@ -219,7 +216,7 @@ function generatePhoneNumber(array) {
   }
 }
 
-generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+generatePhoneNumber([]);
 
 // Desafio 12
 function triangleCheck() {
