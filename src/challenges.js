@@ -284,7 +284,7 @@ function triangleRule(a,b,c){
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string="") {
   // seu código aqui
   // Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
 
@@ -310,7 +310,15 @@ function hydrate() {
   // O número na frente de cada bebida está no intervalo entre 1 e 9.
 
   // Dica: pesquise por algo similar a get all integers inside a string js.
-
+  let agua =0;
+  let soma=0;
+  let regex = /\d+/g;
+  let resultado = "";
+  while ((agua = regex.exec(string)) != null) {
+    soma += Number(agua);
+  }
+ resultado = resultado.concat(soma," copos de água")
+ return resultado;
 }
 
 
