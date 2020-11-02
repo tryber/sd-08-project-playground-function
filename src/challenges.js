@@ -51,12 +51,18 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  const newArray = array.map(function (fb) {
-    if (fb % 3 === 0 && fb % 5 === 0) return 'fizzBuzz';
-    if (fb % 3 === 0) return 'fizz';
-    if (fb % 5 === 0) return 'buzz';
-    return 'bug!';
-  });
+  let newArray = [];
+  for (let index in array) {
+    if (array[index] % 15 === 0) {
+      newArray.push('fizzBuzz');
+    } else if (array[index] % 3 === 0) {
+      newArray.push('fizz');
+    } else if (array[index] % 5 === 0) {
+      newArray.push('buzz');
+    } else {
+      newArray.push('bug!');
+    }
+  }
   return newArray;
 }
 
