@@ -214,14 +214,14 @@ function generatePhoneNumber(array) {
       if ((array[i]<0)||(array[i]>9)){
         return "não é possível gerar um número de telefone com esses valores";      
       }
-      else {
-        phoneNumber = "(" + array[0]+array[1]+") "+array[2]+array[3]+array[4]+array[5]+array[6]+"-"+array[7]+array[8]+array[9]+array[10];    
+      else { // usei a técnica do Vinicius Ribeiro Adaptada
+        phoneNumber = "(" + array.join('').slice(0,2)+") "+array.join('').slice(2,7)+"-"+array.join('').slice(7,11);    
       }
     }
   }
   return phoneNumber  
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
