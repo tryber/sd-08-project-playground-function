@@ -130,14 +130,15 @@ function decode(codigo) {
 console.log((decode('s1m52l r1m4s c1mp4s')))
 
 // Desafio 10
-function techList(array_tecnologias, name) {
+function techList(tecnologias, name) {
   let objetos = [];
-  if(array_tecnologias == []){
+  let tecnologias_ordem = tecnologias.sort()
+  if(tecnologias_ordem == []){
     objetos = "Vazio!"
   }else{
-    for(i=0; i < array_tecnologias.length; i++ ){
+    for(i=0; i < tecnologias_ordem.length; i++ ){
       objetos[i] = {
-        tech: array_tecnologias[i],
+        tech: tecnologias_ordem[i],
         name: name
       }
     }
