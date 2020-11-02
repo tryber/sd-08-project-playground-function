@@ -164,8 +164,16 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let aux = '';
+  for (let i = 0; i < array.length; i+=1) {
+    aux = array[i];   
+    array[i] = {
+      tech: aux,
+      name: name
+    }
+  }
+  return array;
 }
 
 // Desafio 11
