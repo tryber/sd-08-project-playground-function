@@ -165,7 +165,8 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
-  if ((array.length == 0)||(array[0]=="")||(array[0]==" ")) {
+  array = array.sort();
+  if ((array.length == 0) || (array[0]=="") || (array[0]==" ")) {
     array = 'Vazio!';
   } 
   else {
@@ -180,6 +181,7 @@ function techList(array, name) {
   }
   return array;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'clenio'));
 
 // Desafio 11
 function generatePhoneNumber(array) {
