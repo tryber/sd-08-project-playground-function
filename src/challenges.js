@@ -37,7 +37,7 @@ function highestCount(numeros) {
     }
   }
   return repeticoes;
-
+}
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2){
     let distanciaRatoGato1 = 0;
@@ -79,11 +79,43 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  
+function encode(string) {
+  let cod = "";
+  for (let index = 0; index < string.length; index += 1){
+    if (string[index] == "a"){
+      cod += "1";
+    } else if (string[index] == "e"){
+      cod += "2";
+    } else if (string[index] == "i"){
+      cod += "3";
+    } else if (string[index] == "o"){
+      cod += "4";
+    } else if (string[index] == "u"){
+      cod += "5";
+    } else {
+      cod += string[index]
+    }
+  }
+  return cod;
 }
-function decode() {
-  // seu código aqui
+function decode(cod) {
+  let frase = "";
+  for (let index = 0; index < cod.length; index += 1){
+    if (cod[index] == "1"){
+      frase += "a";
+    } else if (cod[index] == "2"){
+      frase += "e";
+    } else if (cod[index] == "3"){
+      frase += "i";
+    } else if (cod[index] == "4"){
+      frase += "o";
+    } else if (cod[index] == "5"){
+      frase += "u";
+    } else {
+      frase += cod[index]
+    }
+  }
+  return frase;
 }
 
 // Desafio 10
