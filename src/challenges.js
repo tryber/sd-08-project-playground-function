@@ -117,6 +117,7 @@ function decode(string) {
 // Desafio 10
 function techList(tecnologias, name) {
   let arrayDeObj = [];
+  
   for (let i = 0; i < tecnologias.length; i += 1) {
     let obj = {};
     obj.tech = tecnologias[i];
@@ -124,10 +125,8 @@ function techList(tecnologias, name) {
     arrayDeObj.push(obj);
   }
   let arrayOrdenado = arrayDeObj.sort((a, b) => (a.tech > b.tech) ? 1 : -1);
-  return arrayOrdenado;
+  return tecnologias.length < 0 ? "Vazio!" : arrayOrdenado;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Rafael"));
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
