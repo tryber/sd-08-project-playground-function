@@ -6,7 +6,6 @@ function compareTrue(valorX, valorY) {
     return false;
   }
 }
-console.log(compareTrue(true, true))
 
 // Desafio 2
 function calcArea(base, height) {
@@ -15,7 +14,6 @@ function calcArea(base, height) {
   return area;
 }
 
-console.log(calcArea(8, 10));
 
 // Desafio 3 - as informações referentes ao split() foram retiradas do dev media:https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array.
 function splitSentence(word) {
@@ -24,7 +22,6 @@ function splitSentence(word) {
     return array;
 }
 
-console.log(splitSentence('bruno candido morais'));
 
 // Desafio 4
 function concatName(last_first) {
@@ -36,7 +33,6 @@ function concatName(last_first) {
   return(arrayName[arrayName.length-1] + ", " + arrayName[0])
 }
 
-console.log(concatName(['Bruno', 'Candido', 'Morais']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -44,7 +40,6 @@ function footballPoints(wins, ties) {
   return points;
 }
 
-console.log(footballPoints(5, 1));
 
 // Desafio 6
 function highestCount() {
@@ -53,20 +48,30 @@ function highestCount() {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2){
-  Math.abs(mouse);
-  if(Math.abs(cat2 - mouse) == Math.abs(cat1 - mouse)) {
+  if((cat2 - mouse) == (cat1 - mouse)) {
   return 'Os gatos trombam e o rato foge';
-  }else if(Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
+  }else if((cat1 - mouse) < (cat2 - mouse)){
     return 'cat1';
   }else{
     return 'cat2';
   }
 }  
-console.log(catAndMouse(1, 7, 4));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+  let divisible = [];
+  for(let index = 0; index < arrayNumbers.length; index++){
+    if((arrayNumbers[index]%5 == 0) && (arrayNumbers[index]%3 == 0)){
+      divisible[index] = 'fizzBuzz';
+    }else if(arrayNumbers[index]%5 == 0){
+      divisible[index] = 'buzz';
+    }else if(arrayNumbers[index]%3 == 0){
+      divisible[index] = 'fizz';
+    }else{
+      divisible[index] = 'bug!';
+    }
+  }
+  return divisible;
 }
 
 // Desafio 9
