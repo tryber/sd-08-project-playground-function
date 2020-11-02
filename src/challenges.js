@@ -152,7 +152,7 @@ function encode(encoder) {
     } else if ( decoder[index] === "4") { 
       resultado += "o"
     } else if ( decoder[index] === "5") {
-      resultado +="5"
+      resultado +="u"
     } else {
       resultado += decoder[index]
     }
