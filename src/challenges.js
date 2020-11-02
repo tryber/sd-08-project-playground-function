@@ -9,7 +9,7 @@ function compareTrue(comp01, comp02) {
   return resultado;
 }
 compareTrue(true, true);
-//console.log(compareTrue(true, true))
+// console.log(compareTrue(true, true))
 
 // Desafio 2
 function calcArea(base, height) {
@@ -26,8 +26,8 @@ function splitSentence(string) {
 }
 let testeSplit = "go trybe";
 splitSentence(testeSplit);
-//.split comando aprendido no site: (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split)
-//console.log(splitSentence(teste));
+// .split comando aprendido no site: (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split)
+// console.log(splitSentence(teste));
 
 // Desafio 4
 function concatName(vetorString) {
@@ -37,7 +37,7 @@ function concatName(vetorString) {
 }
 let testeConcat = ["Wagner", "Berna", "Medeiros", "Azevedo"];
 concatName(testeConcat);
-//console.log(concatName(teste));
+// console.log(concatName(teste));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -63,8 +63,8 @@ function highestCount(vetorNum) {
 }
 let testeHighest = [15, 9, 8, 15, 2, 7];
 highestCount(testeHighest);
-//.sort comando aprendido no site: (https://ricardo-reis.medium.com/o-m%C3%A9todo-sort-do-array-javascript-482576734e0a)
-//console.log(highestCount(teste));
+// .sort comando aprendido no site: (https://ricardo-reis.medium.com/o-m%C3%A9todo-sort-do-array-javascript-482576734e0a)
+// console.log(highestCount(teste));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -81,8 +81,8 @@ function catAndMouse(mouse, cat1, cat2) {
 return resultado;
 }
 catAndMouse(7, 6, 2);
-//Math.abs comando aprendido no site (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs)
-//console.log(catAndMouse(2,5,3));
+// Math.abs comando aprendido no site (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs)
+// console.log(catAndMouse(2,5,3));
 
 // Desafio 8
 function fizzBuzz(vetorNum) {
@@ -102,7 +102,7 @@ function fizzBuzz(vetorNum) {
 }
 let testeFizzBuzz = [2, 15, 7, 9, 45];
 fizzBuzz(testeFizzBuzz);
-//console.log(fizzBuzz(vetorTeste));
+// console.log(fizzBuzz(vetorTeste));
 
 // Desafio 9
 function encode(string) {
