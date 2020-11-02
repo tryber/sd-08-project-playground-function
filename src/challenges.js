@@ -40,23 +40,23 @@ function highestCount(numeros) {
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2){
-    let distanciaRatoGato1 = 0;
-    let distanciaRatoGato2 = 0;
-  
-    distanciaRatoGato1 = mouse - cat1;
-    distanciaRatoGato2 = mouse - cat2;
-  
+    let distanciaRatoGato1 = cat1 - mouse;
+    let distanciaRatoGato2 = cat2 - mouse;
+    let ganhador;
     if(distanciaRatoGato1 === distanciaRatoGato2)
     {
-      return "os gatos trombam e o rato foge";
+      let trombar = "os gatos trombam e o rato foge"
+      return trombar ;
     }
     else if(distanciaRatoGato1 > distanciaRatoGato2)
     {
-      return "cat2";
+      ganhador = "cat2"
+      return ganhador;
     }
     else
     {
-      return "cat1";
+      ganhador = "cat1"
+      return ganhador ;
     }
   
 }
@@ -138,8 +138,41 @@ function techList(techArray, seuNome) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(number) {
+  let phone = "";
+  let error = "Array com tamanho incorreto."
+  let sorry = "não é possível gerar um número de telefone com esses valores"
+  if (number.length == 11){
+      let sorted = number.slice().sort();
+      for (let key in number){
+          let anterior = key-=1;
+          let proximo = key+=1;
+          if (sorted[key] < 0 || sorted[key] > 9){
+              return sorry;
+              break;
+          } else if (sorted[key] == sorted[anterior] && sorted[key] == sorted[proximo]){
+              return sorry;
+              break;
+          } else if (key == 0){
+              phone += "(";
+              phone += number[key];
+          } else if (key == 1){
+              phone += number[key];
+              phone += ")";
+              phone += " ";
+          } else if (key > 1 && key < 6){
+              phone += number[key];   
+          } else if (key == 6) { 
+              phone += number[key]
+              phone += "-"
+          } else if (key >= 7) {
+              phone += number[key];
+          }
+      }
+      return phone;
+  } else {
+      return error;
+  }
 }
 
 // Desafio 12
