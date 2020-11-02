@@ -153,21 +153,6 @@ function techList(techs, name) {
 // Ok!
 
 // Desafio 11
-function generatePhoneNumber(numbers) {
-  let tel;
-  if (phoneRepeatCheck(numbers) === 'numeros repetidos demais') {
-    tel = 'não é possível gerar um número de telefone com esses valores.';
-  } else if (phoneCheckQtd(numbers) === 'tamanho errado') {
-    tel = 'Array com tamanho incorreto.';
-  } else if (phoneCheckQtd(numbers) === 'numeros errados') {
-    tel = 'não é possível gerar um número de telefone com esses valores.';
-  } else {
-    numbers.splice(5, 0, '-');
-    tel = numbers.join('');
-  }
-  return tel;
-}
-
 // Desafio 11 - Função de apoio => checar se o array está com tamanho e/ou número certos:
 function phoneCheckQtd(numbers) {
   let phoneNumbers;
@@ -200,6 +185,24 @@ function phoneRepeatCheck(numbers) {
     }
   }
   return repeatCheck;
+}
+
+function generatePhoneNumber(numbers) {
+  let tel;
+  if (phoneRepeatCheck(numbers) === 'numeros repetidos demais') {
+    tel = 'não é possível gerar um número de telefone com esses valores.';
+  } else if (phoneCheckQtd(numbers) === 'tamanho errado') {
+    tel = 'Array com tamanho incorreto.';
+  } else if (phoneCheckQtd(numbers) === 'numeros errados') {
+    tel = 'não é possível gerar um número de telefone com esses valores.';
+  } else {
+    numbers.splice(0, 0, '(')
+    numbers.splice(3, 0, ')');
+    numbers.splice(4, 0, ' ');
+    numbers.splice(10, 0, '-');
+    tel = numbers.join('');
+  }
+  return tel;
 }
 
 // Desafio 12
