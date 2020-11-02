@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(comp01, comp02) {
   let resultado;
-  if (comp01 == true && comp02 == true) {
+  if (comp01 === true && comp02 === true) {
     resultado = true;
   } else {
     resultado = false;
@@ -54,7 +54,7 @@ function highestCount(vetorNum) {
   let numMaior = vetorNum[vetorNum.length -1];
   let quantNum = 0;
   for (count = 0; count < vetorNum.length; count += 1) {
-    if (numMaior == vetorNum[count]){
+    if (numMaior === vetorNum[count]) {
       quantNum += 1;
     }
   }
@@ -88,11 +88,11 @@ catAndMouse(7, 6, 2);
 function fizzBuzz(vetorNum) {
   let resultado = [];
   for (let count in vetorNum) {
-    if (vetorNum[count] % 3 == 0 && vetorNum[count] % 5 == 0) {
+    if (vetorNum[count] % 3 === 0 && vetorNum[count] % 5 === 0) {
       resultado.push('fizzBuzz');
-    } else if (vetorNum[count] % 3 == 0) {
+    } else if (vetorNum[count] % 3 === 0) {
         resultado.push('fizz');
-    } else if (vetorNum[count] % 5 == 0) {
+    } else if (vetorNum[count] % 5 === 0) {
         resultado.push('buzz');
     } else {
         resultado.push('bug!');
@@ -110,15 +110,15 @@ function encode(string) {
   let vogais = ['a', 'e', 'i', 'o', 'u'];
   let numeros = [1, 2, 3, 4, 5];
   let fraseCodificada = '';
-  for (letra = 0; letra < string.length; letra += 1){
+  for (letra = 0; letra < string.length; letra += 1) {
     let letraComparar = string[letra];
     let substituir = 0;
     for (count = 0; count < vogais.length; count += 1) {
-      if (letraComparar == vogais[count]) {
+      if (letraComparar === vogais[count]) {
         substituir = numeros[count];
       }
     }
-    if (substituir !== 0){
+    if (substituir !== 0) {
       fraseCodificada += substituir;
       } else {
       fraseCodificada += letraComparar;
@@ -132,15 +132,15 @@ function decode(string) {
   let vogais = ['a', 'e', 'i', 'o', 'u'];
   let numeros = [1, 2, 3, 4, 5];
   let fraseCodificada = '';
-  for (letra = 0; letra < string.length; letra += 1){
+  for (letra = 0; letra < string.length; letra += 1) {
     let letraComparar = string[letra];
     let substituir = 0;
     for (count = 0; count < numeros.length; count += 1) {
-      if (letraComparar == numeros[count]) {
+      if (letraComparar === numeros[count]) {
         substituir = vogais[count];
       }
     }
-    if (substituir !== 0){
+    if (substituir !== 0) {
       fraseCodificada += substituir;
     } else {
       fraseCodificada += letraComparar;
@@ -158,7 +158,7 @@ decode(testeDecode);
 function techList(vetor, name) {
   vetor.sort();
   let resultado = [];
-  if (vetor.length == 0) {
+  if (vetor.length === 0) {
     resultado = 'Vazio!'
   } else {
     for (let count in vetor) {
@@ -185,7 +185,7 @@ function generatePhoneNumber(vetorNum) {
       numIncorreto = true;
     }
     for (let count in vetorNum) {
-      if (numComparar == vetorNum[count]) {
+      if (numComparar === vetorNum[count]) {
         contadorNum += 1;
       }
     }
@@ -195,17 +195,17 @@ function generatePhoneNumber(vetorNum) {
   }
   if (vetorNum.length !== 11) {
     resultado = 'Array com tamanho incorreto.';
-  } else if (numIncorreto == true || numRepetido3x == true) {
+  } else if (numIncorreto === true || numRepetido3x === true) {
     resultado = 'não é possível gerar um número de telefone com esses valores';
   } else {
     resultado = '('
     for (let count in vetorNum) {
       if (count < 2) {
         resultado += vetorNum[count];
-      } else if (count == 2) {
+      } else if (count === 2) {
         resultado += ') ';
         resultado += vetorNum[count];
-      } else if (count == 7) {
+      } else if (count === 7) {
         resultado += '-';
         resultado += vetorNum[count];
       } else {
