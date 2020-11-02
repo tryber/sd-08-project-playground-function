@@ -153,9 +153,35 @@ function techList(tech, name) {
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],'Aline'));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {  
+  let out = '(';  
+  if (array.length != 11) {
+    return ('Array com tamanho incorreto.');
+  }
+    for (let i = 0; i < array.length; i++) {
+      let sum = 0;
+      if (array[i] < 0 || array[i] > 9) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+      for (let j = 0; j < array.length; j++) {
+        if (array[i] === array[j]) {
+          sum += 1;
+        } else if (sum >= 3) {
+          return 'não é possível gerar um número de telefone com esses valores';
+        }        
+      }
+    }
+    for (let i = 0; i < array.length; i++) {
+      if (i == 2) {
+        out += ') ';
+      } else if (i === 7) {
+        out += '-';
+      }
+      out += array[i];
+    }     
+  return out;
 }
+  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
