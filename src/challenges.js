@@ -203,7 +203,7 @@ function timesRepetMore (array2){
 
 function generatePhoneNumber(array) {  
   let phoneNumber = "";
-  if (array.length>11){
+  if ((array.length>11)||(array.length<11)){
     return "Array com tamanho incorreto.";
   }
   else if (timesRepetMore(array)>2) {
