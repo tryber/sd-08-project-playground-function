@@ -52,7 +52,7 @@ function footballPoints(wins, ties) {
 
 
 // Desafio 6
-function descobreMaiorNúmero(array){
+function descobreMaiorNumero(array){
 
   let maiorNumero = 0;
 
@@ -69,7 +69,7 @@ function highestCount(array) {
   let repeticoes = 0;
 
   for(let index = 0; index < array.length; index+=1){
-    if(array[index] == descobreMaiorNúmero(array)){
+    if(array[index] == descobreMaiorNumero(array)){
       repeticoes +=1;
     }
   }
@@ -161,7 +161,7 @@ function techList(array, name) {
 
 }
 
-// Desafio 11
+// Desafio 11       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function takeTwo(array) {
   let two = '';
   for(let index = 0; index < 2; index+=1){
@@ -215,9 +215,10 @@ function generatePhoneNumber(array) {
   if(arrayIndexValidation(array) == true){
     console.log('não é possível gerar um número de telefone com esses valores');
     return 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    console.log(`(${takeTwo(array)}) ${takeFive(array)}-${takeFour(array)}`);
+    return `(${takeTwo(array)}) ${takeFive(array)}-${takeFour(array)}`;
   }
-  console.log(`(${takeTwo(array)}) ${takeFive(array)}-${takeFour(array)}`);
-  return `(${takeTwo(array)}) ${takeFive(array)}-${takeFour(array)}`;
 }
 
 generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 2, 2, 2, 5]);
@@ -228,10 +229,16 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function cupsOfWaterArray(string){
+  return string.match(/\d+/g);      // regex from https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
 }
-
+function hydrate(string) {
+  let CupsOfWaterCont = 0;
+  for(let index = 0; index < cupsOfWaterArray(string).length; index+=1){
+    CupsOfWaterCont+=parseInt(cupsOfWaterArray(string)[index]);
+  }
+  return `${CupsOfWaterCont} copos de água`;
+}
 
 module.exports = {
   calcArea,
