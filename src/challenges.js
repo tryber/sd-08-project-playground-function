@@ -87,12 +87,12 @@ function fizzBuzz(numbers) {
 
   for (let i in numbers) {
 
-    if (numbers[i] % 3 == 0) {
-      array.push('fizz');
-    } else if (numbers[i] % 5 == 0) {
-      array.push('Buzz');
-    } else if (numbers[i] % 3 !== 0 && numbers[i] % 5 == 0) {
-      array.push('fizzBuzz')
+    if(numbers[i] % 3 !== 0 && numbers[i] % 5 == 0) { 
+      array.push('fizzBuzz');
+    } else if (numbers[i] % 3 == 0) {
+      array.push('fiz');
+    } else if  (numbers[i] % 5 == 0) {
+      array.push('Buzz')
     } else {
       array.push('bug!')
     }
