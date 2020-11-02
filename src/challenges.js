@@ -112,15 +112,56 @@ function fizzBuzz(numbers) {
   return resultado
 }
 
-console.log (fizzBuzz(([2, 15, 7, 9, 45])))
-
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+function encode(encoder) {
+
+  let resultado = "";
+  for ( let index = 0; index <= encoder.length -1 ; index +=1) {
+  
+  if( encoder[index]  === "a") {
+      resultado += "1"
+  } else if (encoder[index]  === "e") {
+    resultado += "2"
+  } else if ( encoder[index] === "i") {
+    resultado +="3"
+  } else if ( encoder[index] === "o") { 
+    resultado += "4"
+  } else if ( encoder[index] === "u") {
+    resultado +="5"
+  } else {
+    resultado += encoder
+    [index]
+  }
+  
+  }
+  return resultado
+   }
+    
+  
+  function decode(decoder) {
+
+    let resultado = "";
+    for ( let index = 0; index <= decoder.length -1 ; index +=1) {
+    
+    if( decoder[index]  === "1") {
+        resultado += "a"
+    } else if (decoder[index]  === "2") {
+      resultado += "e"
+    } else if ( decoder[index] === "3") {
+      resultado +="i"
+    } else if ( decoder[index] === "4") { 
+      resultado += "o"
+    } else if ( decoder[index] === "5") {
+      resultado +="5"
+    } else {
+      resultado += decoder[index]
+    }
+    
+    }
+    return resultado
+     }
+    
+    
 
 // Desafio 10
 function techList() {
