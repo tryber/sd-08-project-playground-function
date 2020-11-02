@@ -50,15 +50,15 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(array) {
   let fizzBuzzArray = [];
-  for (let index in array) {
-    if ((array % 3 === 0) && (array % 5 === 0)) {
-      return fizzBuzz
-    } else if (array % 3 === 0) {
-      return fizz;
-    } else if ((array % 5) === 0) {
-      return buzz;
+  for (let i in array) {
+    if ((array[i] % 3 === 0) && (array[i] % 5 === 0)) {
+      fizzBuzzArray[i] = "fizzBuzz";
+    } else if (array[i] % 3 === 0) {
+      fizzBuzzArray[i] = "fizz";
+    } else if ((array[i] % 5) === 0) {
+      fizzBuzzArray[i] = "buzz";
     } else {
-      return bug;
+      fizzBuzzArray[i] = "bug";
     }
   }
   return fizzBuzzArray;
