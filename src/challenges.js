@@ -33,7 +33,7 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let maiorNumero = Math.max(...array);
   let repet = 0;
-  for (let i of array) {
+  for (let i = 0; i = maiorNumero; i++) {
     if (maiorNumero === i) {
       repet += 1;
     }
@@ -41,6 +41,13 @@ function highestCount(array) {
 
   
 }
+
+/*/for (let i of array) {
+  if (maiorNumero === i) {
+    repet += 1;
+  }
+} /*/
+
 
 // Desafio 7
 function catAndMouse() {
