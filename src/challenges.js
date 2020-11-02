@@ -27,7 +27,8 @@ function concatName(arrayStrings) {
 }
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties;
+  let r = wins * 3 + ties;
+  return r;
 }
 // Desafio 6
 function highestCount(arrayN) {
@@ -44,7 +45,7 @@ function highestCount(arrayN) {
 function catAndMouse(mouse, cat1, cat2) {
   let gato1 = Math.abs(mouse - cat1);
   let gato2 = Math.abs(mouse - cat2);
-  let r = "";
+  let r;
   if (gato1 < gato2) {
     r = "cat1";
   } else if (gato2 < gato1) {
@@ -89,9 +90,9 @@ function decode(p) {
 }
 // Desafio 10
 function techList(array, name) {
-  let objRetorno;
+  let objRetorno = [];
   let objSort = array.sort();
-  if (array !== "") {
+  if (array != "") {
     for (let i = 0; i < array.length; i += 1) {
       objRetorno.push({
         tech: objSort[i],
@@ -99,10 +100,11 @@ function techList(array, name) {
       });
     }
   } else {
-    objRetorno = "Vazio!";
+    return "Vazio!";
   }
   return objRetorno;
 }
+console.log(techList(["html"], "felipe"));
 // Desafio 11
 function generatePhoneNumber(n) {
   let numeroT;
