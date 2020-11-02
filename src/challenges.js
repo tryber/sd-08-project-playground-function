@@ -165,7 +165,7 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
-  if ((array.length == 0)||(array[0]=='')||(array[0]==" ")) {
+  if ((array.length == 0)||(array[0]=="")||(array[0]==" ")) {
     array = 'Vazio!';
   } 
   else {
@@ -180,39 +180,40 @@ function techList(array, name) {
   }
   return array;
 }
-console.log(techList([" "], 'clenio'))
 
 // Desafio 11
-function timesRepetMore (array){  
-  let times = [];
-  for (let i = 0; i<array.length; i +=1){
-    let aux = array[i];
-    times[i] = 0;
-    for (let o = 0; o<array.length; o +=1){      
-      if (array[o]==aux){
-        times[i] += 1;
+function generatePhoneNumber(array) {
+  function timesRepetMore (array2){  
+    let times = [];
+    for (let i = 0; i<array2.length; i +=1){
+      let aux = array2[i];
+      times[i] = 0;
+      for (let o = 0; o<array2.length; o +=1){      
+        if (array2[o]==aux){
+          times[i] += 1;
+        }
       }
     }
+    let moreTimes = times [0];
+    for (let a = 1; a<times.length; a +=1){
+      if (moreTimes>times[a]);
+        moreTimes = times [a];
+    }
+    return moreTimes;
   }
-  let moreTimes = times [0];
-  for (let a = 1; a<times.length; a +=1){
-    if (moreTimes>times[a]);
-      moreTimes = times [a];
-  }
-  return moreTimes;
-}
-console.log(timesRepetMore([1, 2, 2, 5, 4, 2, 2]));
 
-function generatePhoneNumber(array) {
+  let phoneNumber = "";
   for (let i = 0; i<array.length; i +=1){
     if ((array[i]<0)||(array[i]>9)||(timesRepetMore(array)>2)){
       return "não é possível gerar um número de telefone com esses valores";      
     }
     else {
-      phoneNumber[i]="("+array
+      phoneNumber = "(" + array[0]+array[1]+") "+array[2]+array[3]+array[4]+array[5]+array[6]+"-"+array[7]+array[8]+array[9]+array[10];    
     }
   }
+  return phoneNumber
 }
+console.log(generatePhoneNumber([1, 2, 2, 2, 2, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
