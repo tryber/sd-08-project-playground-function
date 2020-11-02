@@ -90,13 +90,13 @@ function fizzBuzz(vetorNum) {
   for (let count in vetorNum) {
    if (vetorNum[count] % 3 == 0 && vetorNum[count] % 5 == 0) {
          resultado.push('fizzBuzz');
-     } else if (vetorNum[count] % 3 == 0) {
+    } else if (vetorNum[count] % 3 == 0) {
          resultado.push('fizz');
-     } else if (vetorNum[count] % 5 == 0) {
+    } else if (vetorNum[count] % 5 == 0) {
          resultado.push('buzz');
-     } else {
+    } else {
          resultado.push('bug!');
-     }
+    }
   }
   return resultado;
 }
