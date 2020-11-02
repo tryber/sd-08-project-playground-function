@@ -49,6 +49,7 @@ function highestCount(arrayHighestCount) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) return "cat1"
+  //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
   if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) return "cat2"
   return "os gatos trombam e o rato foge"
 }
@@ -73,6 +74,8 @@ function fizzBuzz(arrayNumbers) {
 // Desafio 9
 function encode(string) {
   return string.split('a').join('1').split('e').join('2').split('i').join('3').split('o').join('4').split('u').join('5')
+  //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split/
+  //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join  
 }
 function decode(string) {
  return string.split('1').join('a').split('2').join('e').split('3').join('i').split('4').join('o').split('5').join('u')
@@ -133,10 +136,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(srt) {
+  let exit = 0;
+  let arr = srt.match(/\d+/g);
+  // https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
 
+  for(let i in arr ){
+   exit += parseInt(arr[i]);
+  //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+  }
+
+  if(exit == 1) return `${exit} copo de água`;
+  return `${exit} copos de água`;
+}
 
 module.exports = {
   calcArea,
