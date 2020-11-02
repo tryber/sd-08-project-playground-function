@@ -90,7 +90,7 @@ function fizzBuzz(numbers) {
     if (numbers[i] % 3 !== 0 && numbers[i] % 5 == 0) {
       array.push('fizzBuzz');
     } else if (numbers[i] % 3 == 0) {
-      array.push('fiz');
+      array.push('fizz');
     } else if (numbers[i] % 5 == 0) {
       array.push('buzz')
     } else {
