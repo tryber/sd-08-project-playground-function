@@ -230,23 +230,29 @@ function generatePhoneNumber(numeros=[]) {
   return resultado;
 }
 function checkPhoneNumber(numeros=[]){
- let ordenado = numeros;
- for(const  key in ordenado){
-  let contagem =0;
-  if(ordenado[key]<0 || ordenado[key]>9){
-    return  false;
-  }
-  for( let index;index<11;index++){
-    if(ordenado[key]==ordenado[index]){
-      if (contagem==2){return false}
-      else { contagem+=1}
-    }
-  }
-}
+  let ordenado = numeros;
+  ordenado = or
+  if(checkPhoneNumberSize(ordenado)==false){return false}
+  if(checkPhoneNumberRepeticao(ordenado)==false){return false}
   return true;
 }
 
-
+function checkPhoneNumberSize(ordenado=[]){
+  for(const  key in ordenado){
+    if(ordenado[key]<0 || ordenado[key]>9){
+      return  false;
+    }
+}
+return true;
+}
+function checkPhoneNumberRepeticao(ordenado=[]){
+  for(let  key; key<7 ; key++){
+    if(ordenado[key]===ordenado[key+1] && ordenado[key]===ordenado[key+2] && ordenado[key]===ordenado[key+3]){
+      return false;
+    }
+}
+return true;
+}
 
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {

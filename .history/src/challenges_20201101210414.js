@@ -222,31 +222,30 @@ function generatePhoneNumber(numeros=[]) {
   // - Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3
   // vezes ou mais, `generatePhoneNumber` deverá retornar a string
   // `"não é possível gerar um número de telefone com esses valores"`.
-
+  let ordenado = numeros.sort
+  if(checkPhoneNumber0(ordenado)===false) {return "não é possível gerar um número de telefone com esses valores"}
+  if(checkPhoneNumber1(ordenado)===false) {return "não é possível gerar um número de telefone com esses valores"}
   if(numeros.length!=11){return "Array com tamanho incorreto."}
-  if(checkPhoneNumber(numeros)==false) {return "não é possível gerar um número de telefone com esses valores"}
   let resultado="";
   resultado=resultado.concat("(",numeros[0],numeros[1],") ",numeros[2],numeros[3],numeros[4],numeros[5],numeros[6],"-",numeros[7],numeros[8],numeros[9],numeros[10])
   return resultado;
 }
-function checkPhoneNumber(numeros=[]){
- let ordenado = numeros;
- for(const  key in ordenado){
-  let contagem =0;
-  if(ordenado[key]<0 || ordenado[key]>9){
-    return  false;
-  }
-  for( let index;index<11;index++){
-    if(ordenado[key]==ordenado[index]){
-      if (contagem==2){return false}
-      else { contagem+=1}
+function checkPhoneNumber0(ordenado){
+  for(let  key in ordenado){
+    if(ordenado[key]<0||ordenado[key]>9){
+      return  false;
     }
-  }
+    return true;
 }
-  return true;
 }
-
-
+function checkPhoneNumber1(ordenado){
+  for(let  key in ordenado){
+    if(ordenado[key]===ordenado[key+1] && ordenado[key+1]===ordenado[key+2] && ordenado[key+2]===ordenado[key+3]){
+      return false;
+    }
+    return true;
+}
+}
 
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
@@ -264,8 +263,7 @@ function triangleCheck(lineA,lineB,lineC) {
 
 // Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
 let sidesTriangle = [lineA,lineB,lineC]
-sidesTriangle = sidesTriangle.sort ;
-
+sides
 
 }
 
