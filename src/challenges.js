@@ -52,8 +52,29 @@ console.log(footballPoints(2, 2))
 //---------------------------------//
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  const numbersAlign = numbers.sort((a,b) => {return a - b})
+
+  let numberRep = 0
+  let numberCont = 0;
+  let indexNumber = 0;
+  let numberMaior = numbersAlign.length - 1
+
+  for(index in numbersAlign) {
+    let numberVerify = numbersAlign[index]
+
+    for(index2 in numbersAlign){
+      if(numberVerify === numbersAlign[index2] && numberVerify >= numbersAlign[numberMaior]){
+        numberCont++;
+      }
+    }
+    if(numberCont > numberRep) {
+      numberRep = numberCont;
+      indexNumber = index;
+    }
+    numberCont = 0
+  }
+  return numberRep
 }
 
 //---------------------------------//
