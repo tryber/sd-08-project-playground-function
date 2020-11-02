@@ -226,16 +226,16 @@ function compareTrue(num1, num2) {
     let ladoA = Math.abs(lineA);
     let ladoB = Math.abs(lineB);
     let ladoC = Math.abs(lineC);
-    let possibilidadeA = ladoA < ladoB + ladoC && ladoA > ladoB - ladoC;
-    let possibilidadeB = ladoB < ladoA + ladoC && ladoB > ladoA - ladoC;
-    let possibilidadeC = ladoC < ladoA + ladoB && ladoC > ladoA - ladoB;
+    let possibilidadeA = Math.abs(ladoA < ladoB + ladoC) && Math.abs(ladoA > ladoB - ladoC);
+    let possibilidadeB = Math.abs(ladoB < ladoA + ladoC) && Math.abs(ladoB > ladoA - ladoC);
+    let possibilidadeC = Math.abs(ladoC < ladoA + ladoB) && Math.abs(ladoC > ladoA - ladoB);
 
-    if (possibilidadeA || possibilidadeB || possibilidadeC){
+    if (possibilidadeA && possibilidadeB && possibilidadeC){
       return true;
     } else {
       return false;
     }
-    }
+    }console.log(triangleCheck(10,13,2))
     
   
   
