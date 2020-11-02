@@ -166,7 +166,7 @@ function generatePhoneNumber(array) {
       for (let j = 0; j < array.length; j += 1) {
         if (array[i] === array[j]) {
           sum += 1;
-        } else if (sum >= 3) {
+        } if (sum >= 3) {
           return 'não é possível gerar um número de telefone com esses valores';
         }        
       }
