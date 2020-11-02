@@ -265,8 +265,18 @@ function triangleCheck(lineA,lineB,lineC) {
 // Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
 let sidesTriangle = [lineA,lineB,lineC]
 sidesTriangle = sidesTriangle.sort ;
+if (triangleRule(sidesTriangle,0,1,2)==false){return false}
+if (triangleRule(sidesTriangle,1,2,0)==false){return false}
+if (triangleRule(sidesTriangle,2,0,1)==false){return false}
+return true ;
+}
 
+function triangleRule(sidesTriangle = [],a=0,b=0,c=0){
+  if (sidesTriangle[a]<(sidesTriangle[b]+sidesTriangle[c])||sidesTriangle[a]>Math.abs(sidesTriangle[b]-sidesTriangle[c])){
+    return false
+  }
 
+  return true ;
 }
 
 // Desafio 13
