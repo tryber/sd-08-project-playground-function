@@ -221,7 +221,6 @@ function generatePhoneNumber(array) {
   }
   return phoneNumber  
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -231,7 +230,6 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }  
 }
-console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate(string) {
@@ -249,7 +247,6 @@ function hydrate(string) {
     return `${soma} copos de água`;
   }
 }
-console.log(hydrate("1 cachaça"));
 
 module.exports = {
   calcArea,
