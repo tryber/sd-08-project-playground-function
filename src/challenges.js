@@ -85,7 +85,7 @@ function fizzBuzz(numbers) {
 
   let array = [];
 
-  for (let i = 0; i < numbers.length; i += 1) {
+  for (let i in numbers) {
 
     if (numbers[i] % 3 == 0) {
       array.push('fizz');
