@@ -14,7 +14,8 @@ function compareTrue(value1, value2) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let area = (base * height)/2;
+  let area = Number;
+  area = (base * height)/2;
   return area;
 }
 
@@ -53,13 +54,17 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   // seu código aqui
+
   let bigger = numbers[0];
   let bigger2 = 0;
+  //esse laço vai varrer a array numbers atrás do maior número 
   for (let counter = 0; counter < numbers.length; counter += 1) {
+    //esse condicional é para quando o laço achar o maior número ele seja armazenado na variável vazia
      if (bigger < numbers[counter]) {
        bigger = numbers[counter];
      }
   }
+  //nesse laço o objetivo é contar quantas vezes o maior numero do intervalo apareceu
   for (let index in numbers) {
     if (bigger === numbers[index]) {
       bigger2 += 1;
@@ -187,10 +192,7 @@ function techList(tech, name) {
     result = 'vazio';
   }
   return result;
- 
- 
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Tiago"));
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -200,11 +202,13 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let result;
   if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
-    return true;
+    result = 'true';
   } else {
-    return false;
+    result = 'false';
   }
+  return result;
 }
 
 // Desafio 13
