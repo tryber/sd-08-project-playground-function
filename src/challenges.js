@@ -201,9 +201,19 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(5, 8, 4));
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let soma = 0;
+  let final = (string.match(/\d+/g) || []).map(n => parseInt(n));
+  for (i = 0; i < final.length; i++) {
+    soma = soma + final[i];
+  }
+  let frase = soma + " copos de água";
+
+  return frase;
 }
+console.log(hydrate("1 cachaça, 2 cervejas e 5 vinho"));
+
 
 module.exports = {
   calcArea,
