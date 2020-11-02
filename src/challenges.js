@@ -118,12 +118,20 @@ function decode(message) {
 }
 
 // Desafio 10
-function techList(techs, name) {
-  let orderedList = [];
-  techs.sort().forEach(tech => {
-    orderedList.push({ tech: tech, name: name })
-  })
-  return (orderedList === '') ? 'Vazio!' : orderedList;
+function techList(tech, name) {
+  let newObject = [];
+  if (tech == null || tech.length === 0) {
+    return 'Vazio!';
+  } else {
+    tech.sort();
+    for (let cont in tech) {
+      newObject.push({
+        tech: tech[cont],
+        name: name
+      })
+    }
+  }
+  return newObject;
 }
 
 // Desafio 11
