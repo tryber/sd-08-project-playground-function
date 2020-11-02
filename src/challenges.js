@@ -165,7 +165,7 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
-  if (array.length == 0) {
+  if ((array.length == 0)||(array[0]=='')||(array[0]==" ")) {
     array = 'Vazio!';
   } 
   else {
@@ -180,6 +180,7 @@ function techList(array, name) {
   }
   return array;
 }
+console.log(techList([" "], 'clenio'))
 
 // Desafio 11
 function timesRepetMore (array){  
@@ -202,8 +203,15 @@ function timesRepetMore (array){
 }
 console.log(timesRepetMore([1, 2, 2, 5, 4, 2, 2]));
 
-function generatePhoneNumber() {
-  
+function generatePhoneNumber(array) {
+  for (let i = 0; i<array.length; i +=1){
+    if ((array[i]<0)||(array[i]>9)||(timesRepetMore(array)>2)){
+      return "não é possível gerar um número de telefone com esses valores";      
+    }
+    else {
+      phoneNumber[i]="("+array
+    }
+  }
 }
 
 // Desafio 12
