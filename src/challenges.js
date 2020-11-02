@@ -209,10 +209,13 @@ function hydrate(string) {
     soma = soma + final[i];
   }
   let frase = soma + " copos de água";
+  if (soma = 1) {
+    return soma + " copo de água";
+  }
 
   return frase;
 }
-console.log(hydrate("1 cachaça, 2 cervejas e 5 vinho"));
+console.log(hydrate("1 cachaça"));
 
 
 module.exports = {
