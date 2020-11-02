@@ -209,7 +209,7 @@ function hydrate(string) {
     soma = soma + final[i];
   }
   let frase = soma + " copos de água";
-  if (soma = 1) {
+  if (soma === 1) {
     return soma + " copo de água";
   }
 
