@@ -40,22 +40,22 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz() {
-  function fizzBuzz() {
-    let fizzBuzzCont = [];
-    for (let i = 0; i < arrayNumber.length; i += 1) {
   
-      if (arrayNumber[i] % 3 === 0 && arrayNumber[i] % 5 === 0) {
-          fizzBuzzCont.push('fizzBuzz');
-      } else if (arrayNumber[i] % 3 === 0) {
-          fizzBuzzCont.push('fizz');
-      } else if (arrayNumber[i] % 5 === 0) {
-          fizzBuzzCont.push('buzz');
-      } else {
-          fizzBuzzCont.push('bug!');
-      }
+  let fizzBuzzCont = [];
+  for (let i = 0; i < arrayNumber.length; i += 1) {
+
+    if (arrayNumber[i] % 3 === 0 && arrayNumber[i] % 5 === 0) {
+        fizzBuzzCont.push('fizzBuzz');
+    } else if (arrayNumber[i] % 3 === 0) {
+        fizzBuzzCont.push('fizz');
+    } else if (arrayNumber[i] % 5 === 0) {
+        fizzBuzzCont.push('buzz');
+    } else {
+        fizzBuzzCont.push('bug!');
     }
-    return fizzBuzzCont
   }
+  return fizzBuzzCont
+}
 
 // Desafio 9
 function encode() {
