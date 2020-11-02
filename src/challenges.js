@@ -1,10 +1,11 @@
 // Desafio 1
 
-let var01 = true;
-let var02 = false;
+let var01 = "trybe";
+let var02 = 10;
+let var03 = 10;
 
 function compareTrue() {
-  if (var01 == true && var02 == false) {
+  if (var01 != var02 && var02 === var03) {
     return true;
   } else {
     return false;
