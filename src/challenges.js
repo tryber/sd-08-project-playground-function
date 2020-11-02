@@ -165,9 +165,7 @@ function techList(array, name) {
 function takeTwo(array) {
   let two = '';
   for(let index = 0; index < 2; index+=1){
-
     two += array[index];
-
   }
  return two;
 }
@@ -221,7 +219,7 @@ function generatePhoneNumber(array) {
   }
 }
 
-generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 2, 2, 2, 5]);
+generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 
 // Desafio 12
 function triangleCheck() {
