@@ -128,12 +128,76 @@ function fizzBuzz(array) {
 //---------------------------------//
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let array = frase.split("")
+  let newArray = []
+
+  for(index in array){
+    let letra = array[index]
+
+    if(letra !== 'a' && letra !== 'e' && letra !== 'i' && letra !== 'o' && letra !== 'u'){
+      newArray.push(letra)
+    }
+
+    if(letra === 'a'){
+      newArray.push('1')
+    }
+
+    if(letra === 'e'){
+      newArray.push('2')
+    }
+
+    if(letra === 'i'){
+      newArray.push('3')
+    }
+
+    if(letra === 'o'){
+      newArray.push('4')
+    }
+
+    if(letra === 'u'){
+      newArray.push('5')
+    }
+  }
+
+
+
+  return newArray.join('')
 }
 
-function decode() {
-  // seu código aqui
+function decode(frase) {
+  let array = frase.split("")
+  let newArray = []
+
+  for(index in array){
+    let letra = array[index]
+
+    if(letra !== '1' && letra !== '2' && letra !== '3' && letra !== '4' && letra !== '5'){
+      newArray.push(letra)
+    }
+
+    if(letra === '1'){
+      newArray.push('a')
+    }
+
+    if(letra === '2'){
+      newArray.push('e')
+    }
+
+    if(letra === '3'){
+      newArray.push('i')
+    }
+
+    if(letra === '4'){
+      newArray.push('o')
+    }
+
+    if(letra === '5'){
+      newArray.push('u')
+    }
+  }
+
+  return newArray.join('')
 }
 
 //---------------------------------//
