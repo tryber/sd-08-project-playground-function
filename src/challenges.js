@@ -24,13 +24,12 @@ function calcArea(base, height) {
 function splitSentence(sentence) {
   return sentence.split(' ');
 }
-console.log(splitSentence("go Trybe"));
-
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(strings) {    
+  return [strings[strings.length-1], strings[0]];
 }
+//onsole.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
