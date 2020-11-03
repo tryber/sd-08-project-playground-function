@@ -20,10 +20,10 @@ function splitSentence(frase) {
       palavras.push(palavra);
       palavra = '';
     } else if (index === frase.length - 1) {
-        palavra = palavra + frase[index];
-        palavras.push(palavra);
+      palavra += frase[index];
+      palavras.push(palavra);
     } else {
-        palavra += frase[index];
+      palavra += frase[index];
     }
   }
   return palavras;
@@ -38,13 +38,23 @@ function concatName(stringArray) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return ((wins*3)+ties);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numberArray) {
+  let maior = 0;
+  let count = 0;
+  for (let index = 0; index <= numberArray.length; index += 1) {
+    if (numberArray[index] > maior) {
+      maior = numberArray[index];
+      count = 1;
+    } else if (numberArray[index] === maior) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
