@@ -17,8 +17,8 @@ console.log(calcArea(5, 2));
 
 // Desafio 3
 function splitSentence(frase) {
-  let transformacao = frase.split(' '); 
-  return transformacao; 
+  let transformacao = frase.split(' ');
+  return transformacao;
 }
 console.log(splitSentence('Para o alto e avante andre'));
 
@@ -43,25 +43,23 @@ function footballPoints(wins, ties) {
   let pontuacao = vitoria + ties;
   return pontuacao;
 }
-
-console.log(footballPoints(10, 1));
+const resultado = footballPoints(10, 1);
+console.log(resultado);
 
 // Desafio 6
 function highestCount(numero) {
   //qual o maior numero do meu array
-  let numMaior = Math.max(...numero)
-  
+  let numMaior = Math.max(...numero);
+
   let cont = 0;
-  for (let i = 0; i < numero.length; i += 1) {   
+  for (let i = 0; i < numero.length; i += 1) {
     if (numero[i] === numMaior) {
-      cont += 1; 
-      }
-    }  
-    return cont;  
-}  
-console.log((highestCount([10, 10, 9, 9, 10])));
-
-
+      cont += 1;
+    }
+  }
+  return cont;
+}
+console.log((highestCount([10, 10, 11, 9, 10])));
 
 // Desafio 7
 function catAndMouse() {
@@ -69,9 +67,23 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let resultado = [];
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (numeros[i] % 15 === 0 ) {
+      resultado.push('FizzBuzz');
+    } else if (numeros[i] % 3 === 0) {
+      resultado.push("fizz");
+    } else if (numeros[i] % 5 === 0) {
+      resultado.push("buzz");
+    } else {
+      resultado.push("bug!")
+    }
+  }
+  return resultado;
 }
+console.log((fizzBuzz([15, 3, 5, 2, 7, 9, 10, 1])));
+
 
 // Desafio 9
 function encode() {
