@@ -105,6 +105,23 @@ function techList(arrayTec, name) {
 }
 
 // Desafio 11
+function checkSizePhoneNumber(array, pos) {
+  if (array[pos] < 0 || array[pos] > 9) {
+    return true;
+  }
+  return false;
+}
+
+function checkRepeatPhoneNumber(array, pos) {
+  let contEvent = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[pos] === array[i]) {
+      contEvent += 1;
+    }
+  }
+  return contEvent;
+}
+
 function buildPhoneNumber(array) {
   let phoneNumber = `(${array[0]}${array[1]}) `;
   for (let i = 2; i < array.length; i += 1) {
@@ -116,32 +133,18 @@ function buildPhoneNumber(array) {
   return phoneNumber;
 }
 
-function checkPhoneNumber(array) {
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] < 0  || array[i] > 9) {
-        return true;
-    }
-  }
-  return false;
-}
-
 function generatePhoneNumber(arrayPhone) {
   if (arrayPhone.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
-  for (let indice = 0; indice < arrayPhone.length; indice += 1) {
-    let contEvent = 0;
-    for (let pesquisa = 0; pesquisa < arrayPhone.length; pesquisa += 1) {
-      if (arrayPhone[indice] === arrayPhone[pesquisa]) {
-        contEvent += 1;
-      }
-    }
-    if (checkPhoneNumber(arrayPhone) || contEvent >= 3) {
+  for (let index = 0; index < arrayPhone.length; index += 1) {
+    if (checkSizePhoneNumber(arrayPhone, index) || checkRepeatPhoneNumber(arrayPhone, index) >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   return buildPhoneNumber(arrayPhone);
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
