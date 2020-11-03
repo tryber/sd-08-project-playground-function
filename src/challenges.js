@@ -64,28 +64,21 @@ console.log(footballPoints(9, 5))
 // Desafio 6
 function highestCount(seq) {
 
-  let maior;
-
-  for (let index = 0; index < seq.length; index++) {
-    for (let index1 = 0; index1 < seq[index].length; index1++) {
-
-      if (seq[index] > seq[index1]) {
-        maior = seq[index1]
-
-      }
-
-
-      return maior
-
+  let maior = Math.max.apply(null, seq)
+  
+  let contador = 0;
+ 
+  for (let i = 0; i < seq.length; i++) {
+    if (seq[i] == maior) {
+      contador += 1 ;
     }
-
-
   }
+
+return contador
 
 }
 
-
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+console.log(highestCount([9, 1, 9, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -235,13 +228,39 @@ function techList(tec, name) {
 console.log(techList(["tec1", "tec2", "tec3"], "zin"))
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(telefone) {
+
+
+  let padrao = "( )"
+
+  if (telefone.length != 11) {
+    return "Array com tamanho incorreto."
+  }
+  for (let i = 0; i < telefone.length; i++) {
+    if (telefone[i] < 0 && telefone[i] > 9) {
+      return "não é possivel gerar um número de telefone com esses valores"
+    }
+    else if {
+
+
+    }
+}
 }
 
+
+console.log(generatePhoneNumber([[1, 2, , 3, 4, 5, 6, 7, 8, 9, 0, 1]]))
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+
+
+
+  if (lineA)
+
+
+
+
+
+  
 }
 
 // Desafio 13
