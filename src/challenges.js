@@ -124,19 +124,38 @@ function decode(palavra) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(name) {}
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numeros) {
+  const numeroTelefone = numeros.join("");
+  const counts = {};
+  numeros.forEach(function (x) {
+    counts[x] = (counts[x] || 0) + 1;
+  });
+  const numeroRepetiu = Boolean(
+    Object.values(counts).find((numero) => numero >= 3)
+  );
+  const numeroNegativo = Boolean(numeros.find((numero) => numero < 0));
+  const numeroMaior9 = Boolean(numeros.find((numero) => numero > 9));
+  const ddd = numeroTelefone.slice(0, 2);
+  const telefoneInicio = numeroTelefone.slice(2, 7);
+  const telefoneFinal = numeroTelefone.slice(7, 11);
+  const numeroCompleto = `(${ddd})${telefoneInicio}-${telefoneFinal}`;
+
+  if (numeroMaior9 || numeroRepetiu || numeroNegativo) {
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+
+  if (numeros.length === 11) {
+    return numeroCompleto;
+  } else if (numeros.length !== 11) {
+    return "Array com tamanho incorreto";
+  }
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+function triangleCheck(lineA, lineB, lineC) {}
 
 // Desafio 13
 function hydrate() {
