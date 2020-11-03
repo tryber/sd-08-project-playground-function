@@ -71,7 +71,7 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(text) {
   let newText = ['a', 'e', 'i', 'o', 'u'];
-  for(let i = 0; i < newText.length; i += 1) {
+  for (let i = 0; i < newText.length; i += 1) {
     text = text.replaceAll(newText[i], i + 1);
   }
   return text;
@@ -79,7 +79,7 @@ function encode(text) {
 
 function decode(text) {
   let newText = ['a', 'e', 'i', 'o', 'u'];
-  for(let i = 0; i < newText.length; i += 1) {
+  for (let i = 0; i < newText.length; i += 1) {
     text = text.replaceAll(i + 1, newText[i]);
   }
   return text;
@@ -106,7 +106,6 @@ function techList(arrayTec, name) {
 
 // Desafio 11
 function generatePhoneNumber(arrayPhone) {
-  let phoneNumber;
   if (arrayPhone.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
@@ -120,14 +119,21 @@ function generatePhoneNumber(arrayPhone) {
     if (arrayPhone[indice] < 0 || arrayPhone[indice] > 9 || contEvent >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    if (indice === 0) {
-      phoneNumber = `(${arrayPhone[indice]}`;
-    } else if (indice === 1) {
-      phoneNumber += `${arrayPhone[indice]}) `;
-    } else if (indice === 6) {
-      phoneNumber += `${arrayPhone[indice]}-`;
+  }
+  return buildPhoneNumber(arrayPhone);
+}
+
+function buildPhoneNumber(array) {
+  let phoneNumber;
+  for (let i = 0; i < array.length; i += 1) {
+    if (i === 0) {
+      phoneNumber = `(${array[i]}`;
+    } else if (i === 1) {
+      phoneNumber += `${array[i]}) `;
+    } else if (i === 6) {
+      phoneNumber += `${array[i]}-`;
     } else {
-      phoneNumber += `${arrayPhone[indice]}`;
+      phoneNumber += `${array[i]}`;
     }
   }
   return phoneNumber;
