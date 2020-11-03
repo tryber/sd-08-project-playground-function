@@ -126,8 +126,8 @@ function generatePhoneNumber(numbers) {
       result.push(number);
     } else if (index == 2) {
       result.push(")");
-      result.push(number);
       result.push(" ");
+      result.push(number);
     } else if (index == 7) {
       result.push("-");
       result.push(number);
