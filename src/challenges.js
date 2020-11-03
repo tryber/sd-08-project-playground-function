@@ -162,7 +162,7 @@ function hydrate(string) {
   string.forEach(letter => {
     if (letter.match(/\d/)) counter += parseInt(letter);
   });
-  return counter;
+  return counter + " copos de água";
 }
 
 
