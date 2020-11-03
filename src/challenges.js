@@ -43,16 +43,16 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(inArray) {
+function fizzBuzz([array]) {
   let arrayResult = [];
-  for (index = 0; index < inArray.length; index++) {
-    if (inArray[index] % 3 == 0 && inArray[index] % 5 == 0) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
       arrayResult.push("fizzbuzz");
-    } else if (inArray[index] % 3 == 0 && inArray[index] % 5 != 0) {
+    } else if (array[i] % 3 == 0 && array[i] % 5 != 0) {
       arrayResult.push("fizz");
-    } else if (inArray[index] % 3 != 0 && inArray[index] % 5 == 0) {
+    } else if (array[i] % 3 != 0 && array[i] % 5 == 0) {
       arrayResult.push("buzz");
-    } else if (inArray[index] % 3 != 0 && inArray[index] % 5 != 0) {
+    } else if (array[i] % 3 != 0 && array[i] % 5 != 0) {
       arrayResult.push("bug!");
     }
   }
