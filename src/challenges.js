@@ -137,12 +137,6 @@ function techList(nomeTech, name) {
 
 
 
-
-
-
-
-
-
 // Desafio 11
 function generatePhoneNumber(arrayPhone) { 
   let numberPhone = "";  
