@@ -227,6 +227,8 @@ function generatePhoneNumber(array) {
 
 }
 
+generatePhoneNumber([1, 2, 2, 4, 5, 5, 0, 8, 9, 0, 1]);
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
