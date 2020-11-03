@@ -58,19 +58,19 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function checkFizzBuzz(number) {
+  if ((number % (3 * 5) === 0)) return 'fizzBuzz';
+  if (number % 3 === 0) return 'fizz';
+  if (number % 5 === 0) return 'buzz';
+
+  return 'bug!';
+}
+
 function fizzBuzz(numbers) {
   let fizzBuzzArray = [];
 
   for (let number of numbers) {
-    if ((number % (3 * 5) === 0)) {
-      fizzBuzzArray.push('fizzBuzz');
-    } else if (number % 3 === 0) {
-      fizzBuzzArray.push('fizz');
-    } else if (number % 5 === 0) {
-      fizzBuzzArray.push('buzz');
-    } else {
-      fizzBuzzArray.push('bug!');
-    }
+    fizzBuzzArray.push(checkFizzBuzz(number));
   }
 
   return fizzBuzzArray;
