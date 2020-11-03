@@ -23,13 +23,13 @@ function footballPoints(wins, ties) {
 function highestCount(arrayHighestCount) {
   let topNumber = arrayHighestCount[0];
   let cont = 0;
-  for (i in arrayHighestCount) {
+  for (let i in arrayHighestCount) {
     if (arrayHighestCount[0] < arrayHighestCount[i]) {
       topNumber = arrayHighestCount[i];
     }
   }
-  for (j in arrayHighestCount) {
-    if (topNumber === arrayHighestCount[j]); {
+  for (let j in arrayHighestCount) {
+    if (topNumber === arrayHighestCount[j]) {
       cont++;
     }
   }
@@ -37,23 +37,23 @@ function highestCount(arrayHighestCount) {
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) return "cat1";
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) return 'cat1';
   //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
-  if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) return "cat2";
-  return "os gatos trombam e o rato foge";
+  if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) return 'cat2';
+  return 'os gatos trombam e o rato foge';
 }
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let newArray = [];
-  for (i in arrayNumbers) {
+  for (let i in arrayNumbers) {
     if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0) {
-      newArray.push("fizzBuzz");
+      newArray.push('fizzBuzz');
     } else if (arrayNumbers[i] % 3 === 0) {
-      newArray.push("fizz");
+      newArray.push('fizz');
     } else if (arrayNumbers[i] % 5 === 0) {
-      newArray.push("buzz");
+      newArray.push('buzz');
     } else {
-      newArray.push("bug!");
+      newArray.push('bug!');
     }
   }
   return newArray;
@@ -89,7 +89,7 @@ function decode(string) {
 function techList(arrTacName, name) {
   if(arrTacName.length === 0) return "Vazio!";
   let newArr = [];
-  for (i in arrTacName) {
+  for (let i in arrTacName) {
     newArr[i] = {
       tech: arrTacName[i], name: name
     };
@@ -108,17 +108,17 @@ function techList(arrTacName, name) {
 }
 // Desafio 11
 function generatePhoneNumber(n) {
-  if (n.length != 11) return "Array com tamanho incorreto.";
+  if (n.length != 11) return 'Array com tamanho incorreto.';
   for (let i in n) {
     if (n[i] < 0 || n[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     let cont = 0;
     for (let j in n) {
       if (n[i] === n[j]) {
         cont++;
         if (cont === 3) {
-          return "não é possível gerar um número de telefone com esses valores";
+          return 'não é possível gerar um número de telefone com esses valores';
         }
       }
     }
