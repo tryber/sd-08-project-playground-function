@@ -51,22 +51,25 @@ function catAndMouse(mouse, cat1, cat2) {
   const cat1Distance = Math.abs(mouse - cat1);
   const cat2Distance = Math.abs(mouse - cat2);
 
-  if (cat1Distance === cat2Distance) return "os gatos trombam e o rato foge";
-  else if (cat1Distance < cat2Distance) return "cat1";
-  else if (cat2Distance < cat1Distance) return "cat2";
+  if (cat1Distance < cat2Distance) return 'cat1';
+  if (cat2Distance < cat1Distance) return 'cat2';
+
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let fizzBuzzArray = [];
 
-  for (let index in numbers) {
-    if ((numbers[index] % 3 === 0) && (numbers[index] % 5 === 0)) {
-      fizzBuzzArray.push("fizzBuzz");
-    } else if (numbers[index] % 3 === 0) {
-      fizzBuzzArray.push("fizz");
-    } else if (numbers[index] % 5 === 0) {
-      fizzBuzzArray.push("buzz");
+  for (let number of numbers) {
+    if ((number % 3 === 0) && (number % 5 === 0)) {
+      fizzBuzzArray.push('fizzBuzz');
+    } else if (number % 3 === 0) {
+      fizzBuzzArray.push('fizz');
+    } else if (number % 5 === 0) {
+      fizzBuzzArray.push('buzz');
+    } else {
+      fizzBuzzArray.push('bug!');
     }
   }
 
@@ -75,23 +78,47 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(sentence) {
-  let encodedSentence = sentence
-    .replace(/a/g, '1')
-    .replace(/e/g, '2')
-    .replace(/i/g, '3')
-    .replace(/o/g, '4')
-    .replace(/u/g, '5');
+  let inputOutput = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+
+  let encodedSentence = sentence.replace(/[aeiou]/g, vowel => inputOutput[vowel]);
+
+  // --- Solucao 1 ---
+  // let encodedSentence = sentence
+  //   .replace(/a/g, '1')
+  //   .replace(/e/g, '2')
+  //   .replace(/i/g, '3')
+  //   .replace(/o/g, '4')
+  //   .replace(/u/g, '5');
+
+  // --- Solucao 2 ---
+  // let input = ['a', 'e', 'i', 'o', 'u'];
+  // let output = ['1', '2', '3', '4', '5'];
+  // let encodedSentence = sentence;
+  // let regularExpression;
+  // for (let index in input) {
+  //   regularExpression = new RegExp(input[index], 'g');
+  //   encodedSentence = encodedSentence.replace(regularExpression, output[index]);
+  // }
 
   return encodedSentence;
 }
 
 function decode(sentence) {
-  let decodedSentence = sentence
-    .replace(/1/g, 'a')
-    .replace(/2/g, 'e')
-    .replace(/3/g, 'i')
-    .replace(/4/g, 'o')
-    .replace(/5/g, 'u');
+  let inputOutput = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+
+  let decodedSentence = sentence.replace(/[12345]/g, number => inputOutput[number]);
 
   return decodedSentence;
 }
@@ -101,39 +128,39 @@ function techList(technologies, name) {
   let list = [];
   let techsSorted = technologies.sort();
 
-  for (let index in techsSorted) {
+  for (let tech of techsSorted) {
     list.push({
-      tech: techsSorted[index],
-      name
+      tech,
+      name,
     });
   }
 
-  if (list.length === 0) return "Vazio!";
+  if (list.length === 0) return 'Vazio!';
 
   return list;
 }
 
 // Desafio 11
 function generatePhoneNumber(numbersArray) {
-  if (numbersArray.length !== 11) return "Array com tamanho incorreto.";
-  
+  if (numbersArray.length !== 11) return 'Array com tamanho incorreto.';
+
   for (let index in numbersArray) {
     if (numbersArray[index] > 9 || numbersArray[index] < 0) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 
   for (let numberCheck = 0; numberCheck < 10; numberCheck += 1) {
-    let filteredNumbers = numbersArray.filter(number => number === numberCheck)
+    let filteredNumbers = numbersArray.filter(number => number === numberCheck);
     if (filteredNumbers.length >= 3) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 
   let ddd = numbersArray.slice(0, 2);
   let firstHalf = numbersArray.slice(2, 7);
   let secondHalf = numbersArray.slice(7);
-  let fullNumber = `(${ddd})${firstHalf}-${secondHalf}`.replace(/,/g, "");
+  let fullNumber = `(${ddd}) ${firstHalf}-${secondHalf}`.replace(/,/g, '');
 
   return fullNumber;
 }
@@ -142,9 +169,11 @@ function generatePhoneNumber(numbersArray) {
 function triangleCheck(lineA, lineB, lineC) {
   if (!lineA || !lineB || !lineC) return false;
 
-  if ((lineA > lineB + lineC) || lineA < Math.abs(lineB - lineC)) return false;
-  if ((lineB > lineA + lineC) || lineB < Math.abs(lineA - lineC)) return false;
-  if ((lineC > lineA + lineB) || lineC < Math.abs(lineA - lineB)) return false;
+  let checkLineA = (lineA < lineB + lineC) && lineA > Math.abs(lineB - lineC);
+  let checkLineB = (lineB < lineA + lineC) && lineB > Math.abs(lineA - lineC);
+  let checkLineC = (lineC < lineA + lineB) && lineC > Math.abs(lineA - lineB);
+
+  if (!checkLineA || !checkLineB || !checkLineC) return false;
 
   return true;
 }
@@ -154,12 +183,14 @@ function hydrate(order) {
   let waterCounter = 0;
 
   for (let number = 1; number < 10; number += 1) {
-    let counterNumberAppearance = order.split(`${number}`).length-1;
+    let counterNumberAppearance = order.split(`${number}`).length - 1;
 
     waterCounter += (counterNumberAppearance * number);
   }
 
-  return `${waterCounter} copos de água`
+  if (waterCounter === 1) return `${waterCounter} copo de água`;
+
+  return `${waterCounter} copos de água`;
 }
 
 module.exports = {
@@ -177,4 +208,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
