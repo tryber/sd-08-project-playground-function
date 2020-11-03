@@ -13,12 +13,9 @@ function compareTrue() {
 }
 
 // Desafio 2
-
-let base =2;
-let heigth =2;
-
-function calcArea(area) {
-  (base * height) / 2 = area
+function calcArea(base, height) {
+  let area = 0;
+  (base * height) / 2 == area;
 
   return area;
 }
