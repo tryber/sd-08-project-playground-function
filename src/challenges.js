@@ -37,9 +37,12 @@ console.log(concatName(["andre", "phelipe", "de", "souza", "santana"]));
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontuacao = wins + ties;
+  return pontuacao;
 }
+
+console.log(footballPoints(3, 1));
 
 // Desafio 6
 function highestCount() {
