@@ -27,47 +27,47 @@ function concatName(name) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let wins = 3;
-  let ties = 1;
-  let time = wins + ties;
+  let time = wins * 3 + ties;
     return time;
 }
-
 
 // Desafio 6
 function highestCount(array) {
   let array = [];
-  for (let i = 0; i < array.length; i += 1){
-    return Math.max.apply(array[i])
+    for (let i = 0; i < array.length; i += 1){
+      return array;
+
   }
 }
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (cat1 < cat2){
-  return cat2;
+  return "cat2";
   }
   if (cat1 > cat2){
-    return cat1;
+    return "cat1";
   }
-  else (cat1 = cat2)
+  else (cat1 == cat2)
     return "os gatos trombam e o rato foge";
   }
+  
 
 // Desafio 8
 function fizzBuzz(num) {
   let result = [];
-  for (unit = 0; unit < num.length; unit += 1){
-    if (num[unit] % 3 == 0){
+  for (u = 0; u < num.length; u += 1){
+    if (u % 3 == 0){
       result.push("fizz");
     }
-    else if (num[unit] % 5 == 0){
+    else if (u % 5 == 0){
       result.push("buzz");
     }
-    else if (num[unit] % 15 == 0){
-      result.push ("fizzbuzz");
+    else if (u % 3 == 0 && u % 5 == 0){
+      result.push("fizzbuzz");
     }
-    result.push("bug!")
+    result.push("bug!");
   }
     return result;
 }
@@ -75,7 +75,17 @@ function fizzBuzz(num) {
 
 // Desafio 9
 function encode() {
-  let string = "";
+  let encode = [];
+  for (v = 0; v < encode.length; v += 1)
+  if (encode[v] == "a"){
+    return 1;
+  } else if (encode[v] == "e"){
+    return 2;
+  } else if (encode[v] == "i"){
+    return 3;
+  } else if (encode[v] == "o"){
+    return 4;
+  } else 
 
 }
 function decode() {
@@ -84,7 +94,8 @@ function decode() {
 
 // Desafio 10
 function techList(tech, name) {
-  // seu código aqui
+  let tech = [];
+
 }
 
 // Desafio 11
