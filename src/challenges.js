@@ -91,7 +91,7 @@ function fizzBuzz(arrayNum) {
   for (let i = 0; i < arrayNum.length; i += 1) {
     if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 === 0) {
       arrayNum[i] = 'fizzBuzz';
-    } else if (arrayNum[i] % 5 == =0) {
+    } else if (arrayNum[i] % 5 === 0) {
       arrayNum[i] = 'buzz';
     } else if (arrayNum[i] % 3 === 0) {
       arrayNum[i] = 'fizz';
