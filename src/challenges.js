@@ -107,7 +107,7 @@ function encode(string) {
   return codigo;
 }
 
-//Desafio 10
+// Desafio 10
 function decode(codigo) {
   let frase = '';
   for (let index = 0; index < codigo.length; index += 1) {
@@ -146,7 +146,6 @@ function techList(techArray, seuNome) {
 
 // Desafio 11
 function generatePhoneNumber(numerico) {
-  let telefone = '';
   let erro = 'Array com tamanho incorreto.';
   let impossivel = 'não é possível gerar um número de telefone com esses valores';
   if (numerico.length === 11) {
@@ -160,28 +159,14 @@ function generatePhoneNumber(numerico) {
               return impossivel;
           } else if (sorted[key] === sorted[anterior] && sorted[key] === sorted[proximo]) {
               return impossivel;
-          } else if (key === 0) {
-              telefone += '(';
-              telefone += numerico[key];
-          } else if (key === 1) {
-              telefone += numerico[key];
-              telefone += ')';
-              telefone += ' ';
-          } else if (key > 1 && key < 6) {
-              telefone += numerico[key];   
-          } else if (key === 6) { 
-              telefone += numerico[key]
-              telefone += '-'
-          } else if (key >= 7) {
-              telefone += numerico[key];
+          } else {
+              let telefone = "("+numerico[0]+numerico[1]+') '+numerico[2]+numerico[3]+numerico[4]+numerico[5]+numerico[6]+"-"+numerico[7]+numerico[8]+numerico[9]+numerico[10];
+              return telefone;
           }
-        
       }
-      return telefone;
   } else {
       return erro;
   }
-  
 }
 
 // Desafio 12
