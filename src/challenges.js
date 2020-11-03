@@ -55,20 +55,19 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-let qualGato= "";
 function catAndMouse(mouse, cat1, cat2) {
- let posicao1 = Math.abs(cat1 - mouse);
- let posicao2 = Math.abs(cat2 - mouse);
-   qualGato= "";
-if (posicao2 < posicao1){
-   qualGato = "cat2";
-}
-else if (posicao1 < posicao2){
-  qualGato = "cat1";
-}
-else{
-  qualGato = "os gatos trombam e o rato foge";
-}
+  let posicao1 = Math.abs(cat1 - mouse);
+  let posicao2 = Math.abs(cat2 - mouse);
+  let qualGato = "";
+  if (posicao2 < posicao1) {
+    qualGato = "cat2";
+  }
+  else if (posicao1 < posicao2) {
+    qualGato = "cat1";
+  }
+  else {
+    qualGato = "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
