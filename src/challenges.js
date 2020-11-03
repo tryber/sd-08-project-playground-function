@@ -156,7 +156,7 @@ function generatePhoneNumber(arrayNumber) {
 
   for (let i = 0; i < arrayNumber.length; i += 1) {
     if (arrayNumber[i] < 0 || arrayNumber[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores'
     }
     let count = 0;
     for (let j = 0; j < arrayNumber.length; j += 1) {
@@ -164,19 +164,23 @@ function generatePhoneNumber(arrayNumber) {
         count += 1
       }
       if (count >= 3) {
-        return "não é possível gerar um número de telefone com esses valores";
+        return 'não é possível gerar um número de telefone com esses valores'
       }
     }
   }
-  return '(' + arrayNumber[0] + arrayNumber[1] + ') ' + arrayNumber[2] + arrayNumber[3] + arrayNumber[4] + arrayNumber[5] + arrayNumber[6] + '-' + arrayNumber[7] + arrayNumber[8] + arrayNumber[9] + arrayNumber[10];
+  return '(' + arrayNumber[0] + arrayNumber[1] + ') ' + arrayNumber[2] + arrayNumber[3] + arrayNumber[4] + arrayNumber[5] + arrayNumber[6] + '-' + arrayNumber[7] + arrayNumber[8] + arrayNumber[9] + arrayNumber[10]
 }
 
 console.log(generatePhoneNumber([1, 7, 3, 4, 5, 1, 2, 4, 9, 2, 6]))
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
+    return true
+  }
+  return false
 }
+console.log(triangleCheck(9, 5, 5))
 
 // Desafio 13
 function hydrate() {
