@@ -164,14 +164,14 @@ function techList(array, name) {
     objList.push(
       {
         tech: array[index],
-        name,
+        name: name
       }
     );
   }
   console.log(objList);
   return objList;
 }
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Max");
 
 // Desafio 11
 function lengthValidation(array){
