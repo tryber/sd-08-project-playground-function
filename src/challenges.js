@@ -25,7 +25,7 @@ splitSentence('Fabio Higor de Almeida');
 function concatName(nomes) {
   let ultima = nomes.pop();
   let primeira = nomes.shift();
-  let esp = ', '
+  let esp = ', ';
   let final = ultima + esp + primeira;
   // final.push(primeira);
   // final.unshift(ultima);
@@ -38,7 +38,7 @@ concatName(nomes);
 function footballPoints(highestCount, ties) {
   let vitorias = highestCount * 3;
   let result = ties + vitorias;
-   return result;
+  return result;
 }
 footballPoints(5, 3);
 
@@ -120,7 +120,7 @@ decode(stnum);
 // Desafio 10
 function techList(a, b) {
   let list = a.sort();
-  let name = b;
+  let nome = b;
   let array = [];
   if (list.length === 0) {
     return 'Vazio!';
@@ -133,9 +133,33 @@ function techList(a, b) {
 techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas');
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+function generatePhoneNumber(array) {
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  for (let i = 0; i < array.length; i += 1) {
+    let cont = 0;
+
+    if (array[i] < 0 || array[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+
+    for (let j = 0; j < array.length; j += 1) {
+      if (array[i] == array[j]) {
+        cont += 1;
+
+        if (cont >= 3) {
+          return 'não é possível gerar um número de telefone com esses valores';
+        }
+      }
+    }
+  }
+
+  return `(${array[0]}${array[1]})${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 }
+console.log(generatePhoneNumber(array));
 
 // Desafio 12
 function triangleCheck() {
