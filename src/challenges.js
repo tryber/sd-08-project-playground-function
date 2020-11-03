@@ -69,7 +69,7 @@ function concatName(list) {
 function footballPoints(wins, ties) {
   // seu código aqui
   let points = 0;
-    points = (3 * win) + (ties);
+    points = (3 * wins) + (ties);
     return points;
 }
 
