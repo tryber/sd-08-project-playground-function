@@ -1,15 +1,9 @@
 // Desafio 1
-
-let var01 = "trybe";
-let var02 = 10;
-let var03 = 10;
-
-function compareTrue() {
-  if (var01 !== var02 && var02 === var03) {
-    return true;
-  } else {
-    return false;
-  }
+function compareTrue(var01, var02) {
+  if (var01 == true && var02 == false) {
+    return(true); 
+  } else 
+  return(false);
 }
 
 // Desafio 2
