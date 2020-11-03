@@ -88,19 +88,19 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   let codigo = '';
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 'a') {
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === 'a') {
       codigo += '1';
-    } else if (string[index] === 'e') {
+    } else if (string[i] === 'e') {
       codigo += '2';
-    } else if (string[index] === 'i') {
+    } else if (string[i] === 'i') {
       codigo += '3';
-    } else if (string[index] === 'o') {
+    } else if (string[i] === 'o') {
       codigo += '4';
-    } else if (string[index] === 'u') {
+    } else if (string[i] === 'u') {
       codigo += '5';
     } else {
-      codigo += string[index];
+      codigo += string[i];
     }
   }
   return codigo;
@@ -143,7 +143,6 @@ function techList(techArray, seuNome) {
   }
   return vazio;
 }
-console.log(techList(["Rsvir", "Lalala", "Sxhuuu"], "Mayara"));
 
 // Desafio 11
 function generatePhoneNumber(numerico) {
@@ -160,10 +159,9 @@ function generatePhoneNumber(numerico) {
         return impossivel;
       } else if (sorted[key] === sorted[anterior] && sorted[key] === sorted[proximo]) {
         return impossivel;
-      } else {
+      }
         let telefone = `(${numerico[0]}${numerico[1]}) ${numerico[2]}${numerico[3]}${numerico[4]}${numerico[5]}${numerico[6]}-${numerico[7]}${numerico[8]}${numerico[9]}${numerico[10]}`;
         return telefone;
-      }
     }
   }
   return erro;
