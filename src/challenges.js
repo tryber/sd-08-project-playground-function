@@ -186,11 +186,11 @@ function generatePhoneNumber(arrayNum) {
     }
 
     for (let i = 0; i < arrayNum.length; i += 1) {
-        if (i == 0) {
+        if (i === 0) {
             numtel += '(' + arrayNum[i];
-        } else if (i == 1) {
+        } else if (i === 1) {
             numtel += arrayNum[i] + ') ';
-        } else if (i == 6) {
+        } else if (i === 6) {
             numtel += arrayNum[i] + '-';
         } else
             numtel += arrayNum[i];
