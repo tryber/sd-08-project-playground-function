@@ -107,21 +107,21 @@ function encode(string) {
 }
 
 // Desafio 10
-function decode(codigo) {
+function decode(code) {
   let frase = '';
   for (let index = 0; index < codigo.length; index += 1) {
-    if (codigo[index] === '1') {
+    if (code[index] === '1') {
       frase += 'a';
-    } else if (codigo[index] === '2') {
+    } else if (code[index] === '2') {
       frase += 'e';
-    } else if (codigo[index] === '3') {
+    } else if (code[index] === '3') {
       frase += 'i';
-    } else if (codigo[index] === '4') {
+    } else if (code[index] === '4') {
       frase += 'o';
-    } else if (codigo[index] === '5') {
+    } else if (code[index] === '5') {
       frase += 'u';
     } else {
-      frase += codigo[index];
+      frase += code[index];
     }
   }
   return frase;
@@ -157,12 +157,13 @@ function generatePhoneNumber(numerico) {
       let proximo = (petra + 1);
       if (sorted[key] < 0 || sorted[key] > 9) {
         return impossivel;
-      } else if (sorted[key] === sorted[anterior] && sorted[key] === sorted[proximo]) {
+      }
+      if (sorted[key] === sorted[anterior] && sorted[key] === sorted[proximo]) {
         return impossivel;
       }
-        let telefone = `(${numerico[0]}${numerico[1]}) ${numerico[2]}${numerico[3]}${numerico[4]}${numerico[5]}${numerico[6]}-${numerico[7]}${numerico[8]}${numerico[9]}${numerico[10]}`;
-        return telefone;
     }
+    let telefone = `(${numerico[0]}${numerico[1]}) ${numerico[2]}${numerico[3]}${numerico[4]}${numerico[5]}${numerico[6]}-${numerico[7]}${numerico[8]}${numerico[9]}${numerico[10]}`;
+    return telefone;
   }
   return erro;
 }
