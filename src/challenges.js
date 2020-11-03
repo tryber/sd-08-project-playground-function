@@ -1,3 +1,6 @@
+function calcularDistancia(pos1, pos2) {
+  return Math.abs(pos1 - pos2);
+
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
   if(boolean1 == true && boolean2 == true) {
@@ -66,16 +69,15 @@ console.log(highestCount([9, 1, 1,10, 10, 10, 10, 2, 3, 9, 5, 9, 7]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
-  let distcat1 = Math.abs(cat1 - mouse);
-  let distcat2 = Math.abs(cat2 - mouse);
-  if (distcat1 > distcat2) {
-    return "cat1"
-  }else if (distcat1 == distcat2) {
-    return "os gatos trombam e o rato foge"
-  }else {
-    return "cat2"
+  let distanciaCat1 = calcularDistancia(cat1, mouse);
+  let distanciaCat2 = calcularDistancia(cat2, mouse);
+
+  if (distanciaCat1 > distanciaCat2) {
+    return 'cat2';
+  } else if (distanciaCat2 > distanciaCat1) {
+    return 'cat1';
   }
+  return 'os gatos trombam e o rato foge';
 }
 console.log(catAndMouse(1,0,2))
 
