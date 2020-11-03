@@ -205,9 +205,9 @@ function hydrate(word) {
     cups += Number(numbers[i]);
   }
   if (cups === 1) {
-    return cups + ' copo de água'
+    return cups+' copo de água'
   }
-  return cups + ' copo de água'
+  return cups+' copo de água'
 }
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
