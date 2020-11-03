@@ -49,7 +49,7 @@ function catAndMouse(a, b, c) {
 
 // Desafio 8
 function fizzBuzz(array_de_numeros) {
-    for (i = 0; i < array_de_numeros.lenght - 1; i+=) {
+    for (i = 0; i < array_de_numeros.lenght - 1; i+=1) {
         if (i % 3 == 0 && i % 5 == 0) {
             return "fizzBuzz";
         } else if (i % 3 == 0) {
@@ -62,17 +62,45 @@ function fizzBuzz(array_de_numeros) {
     }
 
     // Desafio 9
-    function encode() {
-        // seu código aqui
+    function encode(string) {
+        let stringEncoDeco = string
+            for (i = 0; i < string - 1; i +=1) {
+                if (i == "a") {
+                    return 1;
+                } else if (i == "e") {
+                    return 2;
+                } else if (i == "i") {
+                    return 3;
+                } else if (i == "o") {
+                    return 4;    
+                } else if (i == "u") {
+                    return 5;
+                };
+            }
     }
-
     function decode() {
-        // seu código aqui
+        for (i = 0; i < string - 1; i+=1) {
+            if (1 == "a") {
+                return "a";
+            } else if (2 == "e") {
+                return "e";
+            } else if (3 == "i") {
+                return "i";
+            } else if (4 == "o") {
+                return "o";    
+            } else if (5 == "u"){
+                return "u";
+            };
+        }
     }
+    return stringEncoDeco;
 
     // Desafio 10
-    function techList() {
-        // seu código aqui
+    function techList(arrayDeTecnologias, name) {
+        arrayDeTecnologias = {
+            tech: "",
+            name: "",
+        }
     }
 
     // Desafio 11
