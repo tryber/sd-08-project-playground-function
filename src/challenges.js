@@ -159,18 +159,22 @@ function decode(stringN) {
 
 // Desafio 10
 function techList(tech, name) {
+  if (tech.length === 0){
+    return "Vazio!";
+  } 
   let arrayTech = tech.sort()
   let learn = [];
-  for (let index = 0; index < arrayTech.length; index+=1){
-    let techK = {};
-    techK.tech = tech[index];
-    techK.name = name;
-    learn.push(techK)
-  }
-  return learn;
+  for (let techType of arrayTech){
+    learn.push({
+      tech: techType,
+      name: name,
+  });
+}
+return learn;
+  
   // seu código aqui
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Bruno"))
+//console.log(techList([],""));
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -201,6 +205,8 @@ function hydrate(string) {
   //  // seu código aqui
   // }
 }
+
+//A grande maioria dos códigos eu venho encontrando exemplos de resoluções, principalmente no StackOverFlow.
 
 module.exports = {
   calcArea,
