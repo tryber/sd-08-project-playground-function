@@ -24,12 +24,12 @@ return str
 // Desafio 4
 let nomes = "";
 function concatName(arrayNomes) {
-  nomes += arrayNomes[arrayNomes.length - 1];
+  nomes = arrayNomes[arrayNomes.length - 1];
   nomes += ", ";
   nomes += arrayNomes[0];
   return nomes;
 }
-
+console
 // Desafio 5
 function footballPoints() {
   // seu código aqui
