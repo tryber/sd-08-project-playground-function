@@ -172,14 +172,14 @@ function generatePhoneNumber(arrayNum) {
     for (let j = 0; j < arrayNum.length; j += 1) {
         let contador = 0;
         if (arrayNum[j] < 0 || arrayNum[j] > 9) {
-            return 'não é possivel gerar um número de telefone com esses valores';
+            return 'não é possível gerar um número de telefone com esses valores';
         }
         for (let i = 0; i < arrayNum.length; i += 1) {
             if (arrayNum[j] === arrayNum[i]) {
                 contador += 1;
             }
             if (contador >= 3) {
-                return 'não é possivel gerar um número de telefone com esses valores';
+                return 'não é possível gerar um número de telefone com esses valores';
             }
         }
 
