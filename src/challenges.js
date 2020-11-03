@@ -54,12 +54,15 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arr) {
   let newArray = [];
+  let cond1 = (arr[i] % 3 === 0) && (arr[i] % 5 !== 0);
+  let cond2 = (arr[i] % 3 !== 0) && (arr[i] % 5 === 0);
+  let cond3 = (arr[i] % 3 === 0) && (arr[i] % 5 === 0); 
   for (let i = 0; i < arr.length; i += 1) {
-    if ((arr[i] % 3 === 0) && (arr[i] % 5 !== 0)) {
+    if (cond1) {
       newArray.push('fizz');
-    } else if ((arr[i] % 3 !== 0) && (arr[i] % 5 === 0)) {
+    } else if (cond2) {
       newArray.push('buzz');
-    } else if ((arr[i] % 3 === 0) && (arr[i] % 5 === 0)) {
+    } else if (cond3) {
       newArray.push('fizzBuzz');
     } else {
       newArray.push('bug!');
@@ -123,8 +126,8 @@ function techList(tecnologias, name) {
     obj.name = name;
     arrayDeObj.push(obj);
   }
-  let arrayOrdenado = arrayDeObj.sort((a, b) => (a.tech > b.tech) ? 1 : -1);
-  return tecnologias.length > 0 ? arrayOrdenado : "Vazio!"
+  let arrayOrdenado = arrayDeObj.sort((a, b) => (a.tech > b.tech) ? 1 : -1); 
+  return tecnologias.length > 0 ? arrayOrdenado : 'Vazio!'
 }
 // Desafio 11
 function generatePhoneNumber() {
