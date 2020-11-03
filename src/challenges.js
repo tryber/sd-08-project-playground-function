@@ -20,11 +20,10 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(name) {
-  let primeiro = name[0];
-  let ultimo = name[name.length - 1];
-  let concatenacao = ultimo + ',' + primeiro
+  let concatenacao = name[name.length - 1] + ', ' + name[0]
   return concatenacao
 }
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -33,12 +32,14 @@ function footballPoints(wins, ties) {
   let time = wins * 3 + ties;
     return time;
 }
-console.log(footballPoints(10, 15))
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let array = [];
+  for (let i = 0; i < array.length; i += 1){
+    return Math.max.apply(array[i])
+  }
 }
 
 // Desafio 7
@@ -74,7 +75,8 @@ function fizzBuzz(num) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  let string = "";
+  for ()
 }
 function decode() {
   // seu código aqui
