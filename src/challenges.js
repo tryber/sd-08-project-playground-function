@@ -62,7 +62,7 @@ function fizzBuzz(numbers) {
   let fizzBuzzArray = [];
 
   for (let number of numbers) {
-    if ((number % 3 === 0) && (number % 5 === 0)) {
+    if ((number % (3 * 5) === 0)) {
       fizzBuzzArray.push('fizzBuzz');
     } else if (number % 3 === 0) {
       fizzBuzzArray.push('fizz');
@@ -141,7 +141,7 @@ function techList(technologies, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numbersArray) {
+function checkNumbersArray(numbersArray) {
   if (numbersArray.length !== 11) return 'Array com tamanho incorreto.';
 
   for (let number of numbersArray) {
@@ -150,6 +150,10 @@ function generatePhoneNumber(numbersArray) {
     }
   }
 
+  return false;
+}
+
+function checkNumberRepetition(numbersArray) {
   for (let numberCheck = 0; numberCheck < 10; numberCheck += 1) {
     let filteredNumbers = numbersArray.filter(number => number === numberCheck);
     if (filteredNumbers.length >= 3) {
@@ -157,10 +161,22 @@ function generatePhoneNumber(numbersArray) {
     }
   }
 
+  return false;
+}
+
+function generatePhoneNumber(numbersArray) {
   let ddd = numbersArray.slice(0, 2);
   let firstHalf = numbersArray.slice(2, 7);
   let secondHalf = numbersArray.slice(7);
   let fullNumber = `(${ddd}) ${firstHalf}-${secondHalf}`.replace(/,/g, '');
+
+  if (checkNumbersArray(numbersArray)) {
+    return checkNumbersArray(numbersArray);
+  }
+
+  if (checkNumberRepetition(numbersArray)) {
+    return checkNumberRepetition(numbersArray);
+  }
 
   return fullNumber;
 }
