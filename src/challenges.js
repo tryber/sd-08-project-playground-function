@@ -144,7 +144,10 @@ function generatePhoneNumber(digits) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  return lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB;
+  let validA = lineA < lineB + lineC;
+  let validB = lineB < lineA + lineC;
+  let validC = lineC < lineA + lineB;
+  return validA && validB && validC;
 }
 
 // Desafio 13
