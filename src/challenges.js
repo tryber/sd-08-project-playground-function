@@ -218,10 +218,23 @@ function triangleCheck(num1, num2, num3) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let num;
+  let soma = 0;
+
+  num = string.match(/\d/g);
+
+  for (let i = 0; i < num.length; i += 1){
+    num[i] = parseInt(num[i]);
+  }
+
+  for (let j = 0; j < num.length; j += 1){
+    soma += num[j];
+  }
+  return soma + ' ' + "copos de água"; 
 }
 
+// link do codigo de retirar números da string https://stackoverflow.com/questions/10003683/extract-a-number-from-a-string-javascript.
 
 module.exports = {
   calcArea,
