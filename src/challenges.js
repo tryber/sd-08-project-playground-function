@@ -75,27 +75,27 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function fizzBuzz(arrayFizz) {
   let strFizz = [];
-for (let cont = 0; cont < arrayFizz.length; cont += 1){
-  if (arrayFizz[cont] % 3 == 0 && arrayFizz[cont] % 5 == 0) {
-    strFizz.push("fizzBuzz");
-  } 
-  else if (arrayFizz[cont] % 3 == 0) {
-    strFizz.push("fizz");
-  } 
-  else if (arrayFizz[cont] % 5 == 0) {
-    strFizz.push("buzz");
-  } 
-  else {
-    strFizz.push("bug!");
+  for (let cont = 0; cont < arrayFizz.length; cont += 1) {
+    if (arrayFizz[cont] % 3 == 0 && arrayFizz[cont] % 5 == 0) {
+      strFizz.push("fizzBuzz");
+    }
+    else if (arrayFizz[cont] % 3 == 0) {
+      strFizz.push("fizz");
+    }
+    else if (arrayFizz[cont] % 5 == 0) {
+      strFizz.push("buzz");
+    }
+    else {
+      strFizz.push("bug!");
+    }
   }
-}
-return strFizz;
+  return strFizz;
 }
 // Desafio 9
 
 function encode(coding) {
   let code = "";
-  for (cont =0; cont < coding.length; cont +=1){
+  for (cont = 0; cont < coding.length; cont += 1) {
     if (coding[cont] == "a") {
       code += "1";
     } else if (coding[cont] == "e") {
@@ -110,7 +110,7 @@ function encode(coding) {
       code += coding[cont];
     }
   }
-  return code; 
+  return code;
 }
 function decode(code) {
   let decoding = "";
@@ -133,39 +133,51 @@ function decode(code) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tec, name) {
+  if (tecnologias.length == 0) {
+    return ('Vazio!')
+  }
+  else {
+    let tec_list = [];
+    let tecnologias = tec.sort();
+    for (let chave in tecnologias) {
+      let objeto = {};
+      objeto.tech = tecnologias[chave];
+      objeto.name = name;
+      tec_list.push(objeto);
+    }
+    return tec_list;
+  }
 }
+  // Desafio 11
+  function generatePhoneNumber() {
+    // seu código aqui
+  }
 
-// Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+  // Desafio 12
+  function triangleCheck() {
+    // seu código aqui
+  }
 
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
-
-// Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+  // Desafio 13
+  function hydrate() {
+    // seu código aqui
+  }
 
 
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  generatePhoneNumber,
-  techList,
-  highestCount,
-  hydrate,
-  splitSentence,
-  triangleCheck,
-}
+  module.exports = {
+    calcArea,
+    catAndMouse,
+    compareTrue,
+    concatName,
+    decode,
+    encode,
+    fizzBuzz,
+    footballPoints,
+    generatePhoneNumber,
+    techList,
+    highestCount,
+    hydrate,
+    splitSentence,
+    triangleCheck,
+  }
