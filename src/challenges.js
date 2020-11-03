@@ -1,71 +1,89 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a && b) return true
-  return false
+  if (a && b) return true;
+  return false;
 }
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2
+  return (base * height) / 2;
 }
 // Desafio 3
 function splitSentence(string) {
-  return string.split(" ")
+  return string.split(' ');
 }
 // Desafio 4
 function concatName(arrayNames) {
-  return `${arrayNames.pop()}, ${arrayNames[0]}`
+  return `${arrayNames.pop()}, ${arrayNames[0]}`;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + (ties * 1)
+  return (wins * 3) + ties;
 }
 // Desafio 6
 function highestCount(arrayHighestCount) {
-  let topNumber = arrayHighestCount[0]
-  let cont = 0
+  let topNumber = arrayHighestCount[0];
+  let cont = 0;
   for (i in arrayHighestCount) {
     if (arrayHighestCount[0] < arrayHighestCount[i]) {
-      topNumber = arrayHighestCount[i]
+      topNumber = arrayHighestCount[i];
     }
   }
   for (j in arrayHighestCount) {
-    if (topNumber === arrayHighestCount[j]) {
-      cont++
+    if (topNumber === arrayHighestCount[j]); {
+      cont++;
     }
   }
-  return cont
+  return cont;
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) return "cat1"
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) return "cat1";
   //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
-  if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) return "cat2"
-  return "os gatos trombam e o rato foge"
+  if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) return "cat2";
+  return "os gatos trombam e o rato foge";
 }
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
-  let newArray = []  
+  let newArray = [];
   for (i in arrayNumbers) {
     if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0) {
-      newArray.push("fizzBuzz")
+      newArray.push("fizzBuzz");
     } else if (arrayNumbers[i] % 3 === 0) {
-      newArray.push("fizz")
+      newArray.push("fizz");
     } else if (arrayNumbers[i] % 5 === 0) {
-      newArray.push("buzz")
+      newArray.push("buzz");
     } else {
-      newArray.push("bug!")
+      newArray.push("bug!");
     }
   }
-  return newArray
+  return newArray;
 }
 // Desafio 9
 function encode(string) {
-  return string.split('a').join('1').split('e').join('2').split('i').join('3').split('o').join('4').split('u').join('5')
+  return string.split('a')
+  .join('1')
+  .split('e')
+  .join('2')
+  .split('i')
+  .join('3')
+  .split('o')
+  .join('4')
+  .split('u')
+  .join('5');
   //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split/
-  //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join  
+  //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join
 }
 function decode(string) {
- return string.split('1').join('a').split('2').join('e').split('3').join('i').split('4').join('o').split('5').join('u')
+ return string.split('1')
+ .join('a')
+ .split('2')
+ .join('e')
+ .split('3')
+ .join('i')
+ .split('4')
+ .join('o')
+ .split('5')
+ .join('u');
 }
 // Desafio 10
 function techList(arrTacName, name) {
@@ -77,7 +95,7 @@ function techList(arrTacName, name) {
     };
   }
   newArr.sort(function (a, b) {
-    https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+    //developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
     if (a.tech > b.tech) {
       return 1;
     }
@@ -110,7 +128,7 @@ function generatePhoneNumber(n) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if( Math.abs(lineA < lineB+lineC) && Math.abs(lineB <lineA+lineC) && Math.abs(lineC < lineA + lineB)) return true
-  return false
+  return false;
 }
 // Desafio 13
 function hydrate(srt) {
