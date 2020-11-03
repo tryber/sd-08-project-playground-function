@@ -60,6 +60,7 @@ function fizzBuzz(array_de_numeros) {
             return "bug!";
         };
     }
+}
 
     // Desafio 9
     function encode(string) {
