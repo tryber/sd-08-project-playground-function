@@ -189,7 +189,7 @@ function techList(tech, name) {
     }
     //caso o array seja não tenha palavras vai retornar vazio para o "result"
   } else {
-    result = 'vazio';
+    result = 'Vazio!';
   }
   return result;
 }
