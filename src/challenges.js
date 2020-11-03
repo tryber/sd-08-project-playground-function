@@ -39,7 +39,7 @@ for (let j = 0; j < arrayNumber.length; j += 1) {
     if (arrayNumber[i] > highestNumber) {
       highestNumber = arrayNumber[i];
     }
-  }  
+  }
     if (arrayNumber[j] === highestNumber) {
       numberOfRepeat += 1;
     }
@@ -50,24 +50,24 @@ for (let j = 0; j < arrayNumber.length; j += 1) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let catCloser = '';
-    let distanciaGato1 = cat1 - mouse;
-    let distanciaGato2 = cat2 - mouse;
+  let distanciaGato1 = cat1 - mouse;
+  let distanciaGato2 = cat2 - mouse;
 
-    if (distanciaGato1 < 0) {
-      distanciaGato1 = distanciaGato1 * (-1)
-    }
-    if (distanciaGato2 < 0) {
-       distanciaGato2 = distanciaGato2 * (-1)
-    }
+  if (distanciaGato1 < 0) {
+    distanciaGato1 = distanciaGato1 * (-1)
+  }
+  if (distanciaGato2 < 0) {
+    distanciaGato2 = distanciaGato2 * (-1)
+  }
 
-    if (distanciaGato1 < distanciaGato2) {
-        catCloser = 'cat1';
-    } else if (distanciaGato1 > distanciaGato2) {
-        catCloser = 'cat2';
-    } else {
-        catCloser = 'os gatos trombam e o rato foge';
-    }
-    return catCloser
+  if (distanciaGato1 < distanciaGato2) {
+      catCloser = 'cat1';
+  } else if (distanciaGato1 > distanciaGato2) {
+      catCloser = 'cat2';
+  } else {
+      catCloser = 'os gatos trombam e o rato foge';
+  }
+  return catCloser
 }
 
 // Desafio 8
@@ -91,39 +91,39 @@ function fizzBuzz(arrayNumber) {
 
 // Desafio 9
 function encode(stringToChange) {
-  let encodedString = "";
+  let encodedString = '';
   for (index in stringToChange) {
     if (stringToChange[index] === 'a') {
       encodedString += '1';
     } else if (stringToChange[index] === 'e') {
-        encodedString += '2';
+      encodedString += '2';
     } else if (stringToChange[index] === 'i') {
-        encodedString += '3';
+      encodedString += '3';
     } else if (stringToChange[index] === 'o') {
-        encodedString += '4';
+      encodedString += '4';
     } else if (stringToChange[index] === 'u') {
-        encodedString += '5';
+      encodedString += '5';
     } else {
-        encodedString += stringToChange[index]
+      encodedString += stringToChange[index]
     }
   }
   return encodedString
 }
 function decode(stringToDecode) {
-  let decodedString = "";
+  let decodedString = '';
   for (index in stringToDecode) {
     if (stringToDecode[index] === '1') {
       decodedString += 'a';
     } else if (stringToDecode[index] === '2') {
-        decodedString += 'e';
+      decodedString += 'e';
     } else if (stringToDecode[index] === '3') {
-        decodedString += 'i';
+      decodedString += 'i';
     } else if (stringToDecode[index] === '4') {
-        decodedString += 'o';
+      decodedString += 'o';
     } else if (stringToDecode[index] === '5') {
-        decodedString += 'u';
+      decodedString += 'u';
     } else {
-        decodedString += stringToDecode[index]
+      decodedString += stringToDecode[index]
     }
   }
   return decodedString
