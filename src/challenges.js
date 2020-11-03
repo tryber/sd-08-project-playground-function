@@ -24,9 +24,16 @@ console.log(splitSentence('Para o alto e avante andre'));
 
 
 // Desafio 4
+//return `${nomeInteiro[nomeInteiro.length - 1]}, ${nomeInteiro [0]}`; --> outro jeito de fazer
 function concatName(nomeInteiro) {
-  return `${nomeInteiro[nomeInteiro.length - 1]}, ${nomeInteiro [0]}`;
+  let inv = [];
+  for (let i = 0; i < nomeInteiro.length; i += 1) {
+    inv.push(nomeInteiro[i]);
+  }
+  return (inv[inv.length - 1] + ", " + inv[0]);
 }
+
+console.log(concatName(["andre", "phelipe", "de", "souza", "santana"]));
 
 
 // Desafio 5
