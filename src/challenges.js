@@ -160,7 +160,7 @@ function generatePhoneNumber(arrayNumeros) {
   return telephoneNumber;
 }
 
-console.log(generatePhoneNumber(teste));
+// console.log(generatePhoneNumber(teste));
 
 // Desafio 12
 function triangleCheck() {
