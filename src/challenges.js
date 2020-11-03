@@ -368,9 +368,35 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-    // seu código aqui
+function hydrate(drinkString) {
+
+    //Store the amount of water glasses
+    let waterGlasses = 0;
+
+    //Runnig across drinkString
+    for (let char = 0; char < drinkString.length; char += 1) {
+
+        //Converting the current char into an Integer
+        let currentChar = parseInt(drinkString[char]);
+
+        //If converted char is a number
+        if (!isNaN(currentChar)) {
+
+            waterGlasses += currentChar;
+
+        }
+
+    }
+
+    if (waterGlasses === 1) {
+        return "1 copo de água"
+    }
+
+    //Returning the result
+    return `${waterGlasses} copos de água`
 }
+
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 
 module.exports = {
