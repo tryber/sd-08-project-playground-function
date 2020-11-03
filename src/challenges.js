@@ -27,7 +27,8 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(strings) {
-  return strings[0] + ", " + strings[strings.length - 1];
+  let stringConcat = strings[0] + ", " + strings[strings.length - 1];
+  return stringConcat;
 }
 //console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
@@ -56,9 +57,18 @@ function highestCount(numeros) {
 //console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (mouse - cat1 < mouse - cat2){
+    return "cat1"
+  }
+  else if (mouse - cat1 == mouse - cat2){
+    return "os gatos trombam e o rato foge"
+  }
+  else {
+    return "cat2";
+  }
 }
+//console.log(catAndMouse(9, 5, 3)); 
 
 // Desafio 8
 function fizzBuzz() {
