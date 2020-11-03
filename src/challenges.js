@@ -64,7 +64,17 @@ console.log(footballPoints(9, 5))
 // Desafio 6
 function highestCount(seq) {
 
+  let maior = Math.max.apply(null, seq)
   
+  let contador = 0;
+ 
+  for (let i = 0; i < seq.length; i++) {
+    if (seq[i] == maior) {
+      contador += 1 ;
+    }
+  }
+
+return contador
 
 }
 
@@ -218,41 +228,11 @@ function techList(tec, name) {
 console.log(techList(["tec1", "tec2", "tec3"], "zin"))
 
 // Desafio 11
-function generatePhoneNumber(telefone) {
-
-
-  let padrao = "( )"
-
-  if (telefone.length != 11) {
-    return "Array com tamanho incorreto."
-  }
-  for (let i = 0; i < telefone.length; i++) {
-    if (telefone[i] < 0 && telefone[i] > 9) {
-      return "não é possivel gerar um número de telefone com esses valores"
-    }
-    else if {
-
-
-    }
+function generatePhoneNumber() {
 }
-}
-
-
-console.log(generatePhoneNumber([[1, 2, , 3, 4, 5, 6, 7, 8, 9, 0, 1]]))
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-
-
-
-  if (lineA)
-
-
-
-
-
-  
+function triangleCheck() {
 }
-
 // Desafio 13
 function hydrate() {
   // seu código aqui
