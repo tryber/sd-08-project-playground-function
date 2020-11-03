@@ -33,12 +33,12 @@ function highestCount(numbers) {
   let highestNumber = numbers[0];
   let counter = 0;
 
-  for (let index in numbers) {
-    if (numbers[index] > highestNumber) {
-      highestNumber = numbers[index];
+  for (let index = 0; index < numbers.length - 2; index += 1) {
+    if (numbers[index + 1] > highestNumber) {
+      highestNumber = numbers[index + 1];
       counter = 1;
     }
-    if (numbers[index] === highestNumber) {
+    if (numbers[index + 1] === highestNumber) {
       counter += 1;
     }
   }
@@ -144,8 +144,8 @@ function techList(technologies, name) {
 function generatePhoneNumber(numbersArray) {
   if (numbersArray.length !== 11) return 'Array com tamanho incorreto.';
 
-  for (let index in numbersArray) {
-    if (numbersArray[index] > 9 || numbersArray[index] < 0) {
+  for (let number of numbersArray) {
+    if (number > 9 || number < 0) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
