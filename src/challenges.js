@@ -139,14 +139,65 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-    // seu código aqui
+function techList(techlist, name) {
+
+    if (techlist.length === 0) {
+        return 'Vazio!';
+    }
+
+    let arraytech = [];
+    techlist.sort();
+
+    for (let i = 0; i < techlist.length; i += 1) {
+
+
+        let portfolio = {
+            tech: techlist[i],
+            name: name
+        };
+        arraytech.push(portfolio);
+    }
+    return arraytech;
 }
 
+
 // Desafio 11
-function generatePhoneNumber() {
-    // seu código aqui
+function generatePhoneNumber(arrayNum) {
+
+    let numtel = '';
+
+    if (arrayNum.length !== 11) {
+        return 'array com tamanho incorreto';
+    } else {
+        for (let j = 0; j < arrayNum.length; j += 1) {
+            let contador = 0;
+            if (arrayNum[j] < 0 || arrayNum[j] > 9) {
+                return 'não é possivel gerar um número de telefone com esses valores';
+            }
+            for (let i = 0; i < arrayNum.length; i += 1) {
+                if (arrayNum[j] === arrayNum[i]) {
+                    contador += 1;
+                }
+                if (contador >= 3) {
+                    return 'não é possivel gerar um número de telefone com esses valores';
+                }
+            }
+
+        }
+    }
+    for (let i = 0; i < arrayNum.length; i += 1) {
+        if (i == 0) {
+            numtel += '(' + arrayNum[i];
+        } else if (i == 1) {
+            numtel += arrayNum[i] + ') ';
+        } else if (i == 7) {
+            numtel += '-' + arrayNum[i];
+        } else
+            numtel += arrayNum[i];
+    }
+    return numtel;
 }
+
 
 // Desafio 12
 function triangleCheck() {
