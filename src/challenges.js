@@ -160,13 +160,12 @@ function generatePhoneNumber(numerico) {
           } else if (sorted[key] === sorted[anterior] && sorted[key] === sorted[proximo]) {
               return impossivel;
           } else {
-              let telefone = "("+numerico[0]+numerico[1]+') '+numerico[2]+numerico[3]+numerico[4]+numerico[5]+numerico[6]+"-"+numerico[7]+numerico[8]+numerico[9]+numerico[10];
+              let telefone = `(${numerico[0]}${numerico[1]}) ${numerico[2]}${numerico[3]}${numerico[4]}${numerico[5]}${numerico[6]}-${numerico[7]}${numerico[8]}${numerico[9]}${numerico[10]}`;
               return telefone;
           }
       }
-  } else {
-      return erro;
   }
+      return erro;
 }
 
 // Desafio 12
