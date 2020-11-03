@@ -70,7 +70,7 @@ function catAndMouse() {
 function fizzBuzz(numeros) {
   let resultado = [];
   for (let i = 0; i < numeros.length; i += 1) {
-    if (numeros[i] % 15 === 0 ) {
+    if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
       resultado.push('FizzBuzz');
     } else if (numeros[i] % 3 === 0) {
       resultado.push("fizz");
@@ -82,7 +82,7 @@ function fizzBuzz(numeros) {
   }
   return resultado;
 }
-console.log((fizzBuzz([15, 3, 5, 2, 7, 9, 10, 1])));
+console.log((fizzBuzz([15, 3, 5, 2, 7])));
 
 
 // Desafio 9
