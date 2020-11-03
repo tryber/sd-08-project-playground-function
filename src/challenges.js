@@ -110,12 +110,14 @@ function highestCount(numberArray) {
 
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (Math.abs(Math.abs(mouse) - Math.abs(cat1) < Math.abs(mouse) - Math.abs(cat2))) {
-    console.log ("cat1");
-  } else if (Math.abs(Math.abs(mouse) - Math.abs(cat2) < Math.abs(mouse) - Math.abs(cat1))) {
-    console.log ("cat2");
+  let mouseCat1 = Math.abs(cat1 - mouse);
+  let mouseCat2 = Math.abs(cat2 - mouse);
+  if (mouseCat1 == mouseCat2) {
+    return "os gatos trombam e o rato foge";
+  } else if (mouseCat1 < mouseCat2) {
+    return "cat1";
   } else {
-    console.log ("os gatos trombam e o rato foge");
+    return "cat2";
   }
 }
 
@@ -145,7 +147,6 @@ function fizzBuzz(array) {
   }
   return result;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // // Desafio 9
 // Codifique e Decodifique
@@ -163,7 +164,13 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 function encode(string) {
   // seu código aqui
-  let change = { a: "1", e: "2", i: "3", o: "4", u: "5" };
+  let change = { 
+    a: "1", 
+    e: "2", 
+    i: "3", 
+    o: "4", 
+    u: "5" 
+  };
   let encode = "";
   encode = string.replace(/[aeiou]/gi, (s) => change[s]);
   
@@ -172,7 +179,13 @@ function encode(string) {
 
 function decode(string) {
   // seu código aqui
-  let change = { 1: "a", 2: "e", 3: "i", 4: "o", 5: "u" };
+  let change = { 
+    1: "a",
+    2: "e", 
+    3: "i", 
+    4: "o", 
+    5: "u" 
+  };
   let decode = "";
   decode = string.replace(/[12345]/gi, (s) => change[s]);
   
