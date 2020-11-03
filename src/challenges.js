@@ -231,9 +231,14 @@ function hydrate(string) {
   for (let j = 0; j < num.length; j += 1){
     soma += num[j];
   }
-  return soma + ' ' + "copos de água"; 
+  if (soma == 1){
+    return soma + ' ' + "copo de água";
+  } else {
+    return soma + ' ' + "copos de água"; 
+  }
 }
 
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 // link do codigo de retirar números da string https://stackoverflow.com/questions/10003683/extract-a-number-from-a-string-javascript.
 
 module.exports = {
