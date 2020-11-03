@@ -18,13 +18,13 @@ function splitSentence(a = "go Trybe") {
 }
 
 // Desafio 4
-function concatName(x = ["d", "e", "v"]) {
-  return x[2].concat(", ", x[0]);
+function concatName() {
+  // seu código aqui
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins = 3, ties = 1) {
+  return (5 * wins) + (4 * ties);
 }
 
 // Desafio 6
