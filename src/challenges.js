@@ -67,9 +67,9 @@ console.log(highestCount([9, 1, 1,10, 10, 10, 10, 2, 3, 9, 5, 9, 7]))
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let distcat1 = cat1 - mouse;
-  let distcat2 = cat2 - mouse;
-  if (distcat1 < distcat2) {
+  let distcat1 = Math.abs(cat1 - mouse);
+  let distcat2 = Math.abs(cat2 - mouse);
+  if (distcat1 > distcat2) {
     return "cat1"
   }else if (distcat1 == distcat2) {
     return "os gatos trombam e o rato foge"
@@ -77,7 +77,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return "cat2"
   }
 }
-console.log(catAndMouse(2,5,6))
+console.log(catAndMouse(1,0,2))
 
 // Desafio 8
 function fizzBuzz(numbers) {
@@ -96,16 +96,18 @@ function fizzBuzz(numbers) {
   }
   return newArray
 }
-
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
+
 // Desafio 9
-function encode() {
+function encode(str) {
   // seu código aqui
+  return str.replaceall('e', '3')
 }
 function decode() {
   // seu código aqui
 }
 
+console.log(encode('hi there!'))
 // Desafio 10
 function techList() {
   // seu código aqui
