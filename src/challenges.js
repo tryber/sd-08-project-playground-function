@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(var1, var2) {
   booleanResult = [];
-  if (var1 == true && var2 == false) {
+  if (var1 == true && var2 == true) {
     return booleanResult = true; 
   } else 
   return booleanResult = false;
