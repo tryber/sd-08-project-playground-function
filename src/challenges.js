@@ -156,21 +156,23 @@ function decode(string) {
 }
 // Desafio 10
 function techList(array, name) {
+  let arr = array.sort();
   let objList = [];
-  if (array.length === 0) {
+  if (arr.length === 0) {
     return 'Vazio!';
   }
-  for (let index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < arr.length; index += 1) {
     objList.push(
       {
-        tech: array[index],
+        tech: arr[index],
         name: name
       }
     );
   }
   return objList;
 }
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
+
+
 
 // Desafio 11
 function lengthValidation(array){
