@@ -144,33 +144,30 @@ function techList(nomeTech, name) {
 
 
 // Desafio 11
-function generatePhoneNumber(arrayPhone) {
-  let numberPhone = "";
-  for (let key in arrayPhone){
-    let bigPhone = 0;
+function generatePhoneNumber(arrayPhone) { 
+  let numberPhone = "";  
+
+  if (arrayPhone.length !== 11){
+    numberPhone = "Array com tamanho incorreto.";
+  } else if (arrayPhone.length == 11){
+    numberPhone = ("("+arrayPhone[0]+arrayPhone[1]+")"+arrayPhone[2]+arrayPhone[3]+arrayPhone[4]
+    +arrayPhone[5]+arrayPhone[6]+"-"+arrayPhone[7]+arrayPhone[8]+arrayPhone[9]+arrayPhone[10]);
+  }
+
+  for (let x=0; x<arrayPhone.length; x++){ 
     let counter = 0;
-  
-
-    if (counter > 2 || arrayPhone[key] < 0 || arrayPhone[key] > 9){
-      numberPhone += "não é possível gerar um número de telefone com esses valores";
-    } 
-    return numberPhone;
-  }  
+    for (let j=0; j<arrayPhone.length; j++){      
+      if (arrayPhone[x] == arrayPhone[j]){
+        counter ++;
+      }    
+    }
+   
+    if (arrayPhone[x] < 0 || arrayPhone[x] > 9 || counter >= 3){
+      numberPhone = "não é possível gerar um número de telefone com esses valores";
+    }   
+  }
+  return numberPhone;
 }
-
-console.log(generatePhoneNumber([1, 1, 3, 4, 5, 6, 8, 19, 0, 1]));
-
-
-
-/*
-else if (arrayPhone.length == 11){
-  numberPhone += ("("+arrayPhone[0]+arrayPhone[1]+")"+arrayPhone[2]+arrayPhone[3]+arrayPhone[4]
-  +arrayPhone[5]+arrayPhone[6]+"-"+arrayPhone[7]+arrayPhone[8]+arrayPhone[9]+arrayPhone[10]);
-} else if (arrayPhone.length !== 11){
-  numberPhone += "Array com tamanho incorreto.";
-} 
-*/
-
 
 
 
