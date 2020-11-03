@@ -30,7 +30,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   let numbersMax = [];
-  for (let i = 0; i < numbers.length; i++)
+  for (let i = 0; i < numbers.length; i+=1)
   if (numbers[i] == Math.max(...numbers)) {
     numbersMax.push(1);
   }
@@ -67,15 +67,20 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+
 }
 function decode() {
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let techList = [];
+  tech.sort();
+  for (let i = 0; i < tech.length; i += 1) {
+    techList.push({"tech": tech[i] + ", name: " + name})
+  }
+  return techList;
 }
 
 // Desafio 11
