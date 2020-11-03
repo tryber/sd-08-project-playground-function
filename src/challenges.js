@@ -44,12 +44,29 @@ function footballPoints(wins, ties) {
   return pontuacao;
 }
 
-console.log(footballPoints(3, 5));
+console.log(footballPoints(10, 1));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(numero) {
+  //qual o maior numero do meu array
+  let maior = [];
+  for (let i = 0; i < numero.length; i += 1) {   
+    if (numero[i] > maior) {
+      maior = numero[i];  
+      }
+  }
+
+  let cont = 0;
+  for (let i = 0; i < numero.length; i += 1) {   
+    if (numero[i] === maior) {
+      cont += 1; 
+      }
+    }  
+    return cont;  
+}  
+console.log((highestCount([7, 2, 4, 5, 7, 5, 6 ,7])));
+
+
 
 // Desafio 7
 function catAndMouse() {
