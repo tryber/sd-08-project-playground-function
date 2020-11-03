@@ -167,7 +167,7 @@ function generatePhoneNumber(arrayNum) {
     let numtel = '';
 
     if (arrayNum.length !== 11) {
-        return 'array com tamanho incorreto';
+        return 'array com tamanho incorreto.';
     }
     for (let j = 0; j < arrayNum.length; j += 1) {
         let contador = 0;
