@@ -11,19 +11,16 @@ function compareTrue(valueOne, valueTwo) {
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
-  // seu código aqui
 }
 
 // Desafio 3
 function splitSentence(string) {
-  // seu código aqui
   let words = string.split(' ');
   return words;
 }
 
 // Desafio 4
 function concatName(arrayStrings) {
-  // seu código aqui
   let retorno = '';
   retorno += arrayStrings[arrayStrings.length - 1];
   retorno += ', ';
@@ -33,7 +30,6 @@ function concatName(arrayStrings) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  // seu código aqui
   let winPoints = wins * 3;
   let tiePoints = ties;
   let totalPoints = winPoints + tiePoints;
@@ -42,7 +38,6 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  // seu código aqui
   let higher = numbers[0];
   for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] > higher) {
@@ -60,7 +55,6 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
   let cat1ToMouse = Math.abs(cat1 - mouse);
   let cat2ToMouse = Math.abs(cat2 - mouse);
   let winner;
@@ -75,17 +69,15 @@ function catAndMouse(mouse, cat1, cat2) {
     return winner;
   }
 }
-
 // Desafio 8
 function fizzBuzz(array) {
-  // seu código aqui
   let resultado = [];
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       resultado.push('fizzBuzz');
-    } else if (array[i] % 3 == 0) {
+    } else if (array[i] % 3 === 0) {
       resultado.push('fizz');
-    } else if (array[i] % 5 == 0) {
+    } else if (array[i] % 5 === 0) {
       resultado.push('buzz');
     } else {
       resultado.push('bug!');
@@ -96,7 +88,6 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  // seu código aqui
   let codigo = '';
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] === 'a') {
@@ -116,17 +107,20 @@ function encode(string) {
   return codigo;
 }
 
+//Desafio 10
 function decode(codigo) {
-  // seu código aqui
   let frase = '';
   for (let index = 0; index < codigo.length; index += 1) {
-    if (codigo[index] == '1') {
+    if (codigo[index] === '1') {
       frase += 'a';
-    } else if (codigo[index] == '2') {
+    } else if (codigo[index] === '2') {
       frase += 'e';
-    } else if (codigo[index] == '3') {
+    } else if (codigo[index] === '3') {
       frase += 'i';
-    } else if (codigo[index] == '4') {
+    } else if (codigo[index] === '4') {
+      frase += 'o'
+    } else if (codigo[index] === '5') {
+      frase += 'u'
     }
   }
   return frase;
@@ -134,13 +128,11 @@ function decode(codigo) {
 
 // Desafio 10
 function techList(techArray, seuNome) {
-  // seu código aqui
   let array = techArray.sort();
   let vazio = 'Vazio!';
   let saida = [];
-
   if (techArray.length > 0) {
-    for (let key in array) {
+    for (let key = 0; key < techArray.length; key += 1) {
       let objeto = {};
       objeto.tech = array[key];
       objeto.name = seuNome;
@@ -157,29 +149,27 @@ function generatePhoneNumber(numerico) {
   let telefone = '';
   let erro = 'Array com tamanho incorreto.';
   let impossivel = 'não é possível gerar um número de telefone com esses valores';
-  let anterior = 0;
-  let proximo = 0;
-  if (numerico.length == 11) {
+  if (numerico.length === 11) {
       let sorted = numerico.slice().sort();
       for (let key = 0; key < numerico.length; key += 1) {
-        letra = key;
-        petra = key;
-        anterior = letra -= 1;
-        proximo = petra += 1;
+        let letra = key;
+        let petra = key;
+        let anterior = (letra - 1);
+        let proximo = (petra + 1);
           if (sorted[key] < 0 || sorted[key] > 9) {
               return impossivel;
-          } else if (sorted[key] == sorted[anterior] && sorted[key] == sorted[proximo]) {
+          } else if (sorted[key] === sorted[anterior] && sorted[key] === sorted[proximo]) {
               return impossivel;
-          } else if (key == 0) {
+          } else if (key === 0) {
               telefone += '(';
               telefone += numerico[key];
-          } else if (key == 1) {
+          } else if (key === 1) {
               telefone += numerico[key];
               telefone += ')';
               telefone += ' ';
           } else if (key > 1 && key < 6) {
               telefone += numerico[key];   
-          } else if (key == 6) { 
+          } else if (key === 6) { 
               telefone += numerico[key]
               telefone += '-'
           } else if (key >= 7) {
