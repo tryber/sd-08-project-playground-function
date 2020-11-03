@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue(var01, var02) {
-  if (var01 == true && var02 == false) {
+function compareTrue(varTrue, varFalse) {
+  if (varTrue == true && varFalse == false) {
     return(true); 
   } else 
   return(false);
@@ -37,8 +37,21 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+let arrayResult = [];
+
+function fizzBuzz(inArray) {
+  for (index = 0; index < inArray.length; index++) {
+    if (inArray.length(index) % 3 == 0 && inArray.length(index) % 5 == 0) {
+      arrayResult.push("fizzbuzz");
+    } else if (inArray.length(index) % 3 == 0 && inArray.length(index) % 5 != 0) {
+      arrayResult.push("fizz");
+    } else if (inArray.length(index) % 3 != 0 && inArray.length(index) % 5 == 0) {
+      arrayResult.push("buzz");
+    } else if (inArray.length(index) % 3 != 0 && inArray.length(index) % 5 != 0) {
+      arrayResult.push("bug!");
+    }
+  }
+  return arrayResult;
 }
 
 // Desafio 9
