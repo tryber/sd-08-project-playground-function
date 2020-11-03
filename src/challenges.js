@@ -16,7 +16,7 @@ function splitSentence(frase) {
   let palavras = [];
   let palavra = '';
   for (let index = 0; index <= frase.length; index += 1) {
-    if (frase[index] === ' '){
+    if (frase[index] === ' ') {
       palavras.push(palavra);
       palavra = '';
     }
@@ -32,8 +32,10 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(stringArray) {
+  let primeiro = stringArray[0];
+  let ultimo = stringArray[stringArray.length-1];
+  return ultimo + ', ' + primeiro;
 }
 
 // Desafio 5
