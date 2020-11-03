@@ -2,9 +2,8 @@
 function compareTrue(var1, var2) {
   if (var1 === true && var2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -15,7 +14,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   let array = [];
-  array = string.split(" ");
+  array = string.split(' ');
   return array;
 }
 
@@ -24,12 +23,12 @@ function concatName(arrayString) {
   let palavra;
   let ultimaPosicao = arrayString.length;
   for (let i = ultimaPosicao - 1; i >= 0; i -= 1) {
-    if (i == ultimaPosicao - 1) {
+    if (i === ultimaPosicao - 1) {
       palavra = arrayString[i] + ',';
     } else if (i === 0) {
       palavra += ' ' + arrayString[i];
     }
-  } 
+  }
   return palavra;
 }
 
@@ -37,10 +36,10 @@ function concatName(arrayString) {
 function footballPoints(wins, ties) {
   let resultado = 0;
   for (let i = 0; i < wins; i += 1) {
-    resultado += + 3;
+    resultado += 3;
   }
   for (let j = 0; j < ties; j += 1) {
-    resultado += +1;
+    resultado += 1;
   }
   return resultado;
 }
@@ -50,21 +49,23 @@ function highestCount(arrayNum) {
   let maior = arrayNum[0];
   let repete = 0;
   for (let i = 0; i < arrayNum.length; i += 1) {
-   if (arrayNum[i] >= maior){
-     maior = arrayNum[i];
-   }
-   for (let j = 0; j < arrayNum.length; j += 1) {
-    if (maior === arrayNum[j]){
-      repete += + 1;
+    if (arrayNum[i] >= maior) {
+      maior = arrayNum[i];
     }
+    for (let j = 0; j < arrayNum.length; j += 1) {
+     if (maior === arrayNum[j]) {
+      repete += 1;
+     }
    }
-   return repete;
+    return repete;
   }
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-let distanciaMouse1, distanciaMouse2;
+  let distanciaMouse1;
+  let distanciaMouse2;
+
   if (mouse > cat1) {
     distanciaMouse1 = mouse - cat1;
   } else {
@@ -81,22 +82,21 @@ let distanciaMouse1, distanciaMouse2;
     return 'cat2';
   } else if (distanciaMouse2 > distanciaMouse1) {
     return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(arrayNum) {
-  for (let i = 0; i < arrayNum.length; i += 1){
-    if (arrayNum[i] % 3 == 0 && arrayNum[i] % 5 == 0){
-      arrayNum[i] = "fizzBuzz";
-    } else if (arrayNum[i] % 5 == 0){
-      arrayNum[i] = "buzz";
-    } else if (arrayNum[i] % 3 == 0){
-      arrayNum[i] = "fizz";
+  for (let i = 0; i < arrayNum.length; i += 1) {
+    if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 === 0) {
+      arrayNum[i] = 'fizzBuzz';
+    } else if (arrayNum[i] % 5 == =0) {
+      arrayNum[i] = 'buzz';
+    } else if (arrayNum[i] % 3 === 0) {
+      arrayNum[i] = 'fizz';
     } else {
-      arrayNum[i] = "bug!"
+      arrayNum[i] = 'bug!'
     }
   }
   return arrayNum;
@@ -104,8 +104,8 @@ function fizzBuzz(arrayNum) {
 
 // Desafio 9
 function encode(string) {
-  let palavra = "";
-  for (let i = 0; i < string.length; i += + 1) {
+  let palavra = '';
+  for (let i = 0; i < string.length; i += 1) {
     if (string[i] === 'a'){
       palavra += '1';
     } else if (string[i] === 'e') {
@@ -124,9 +124,9 @@ function encode(string) {
 }
 
 function decode(string) {
-  let palavra = "";
-  for (let i = 0; i < string.length; i += + 1) {
-    if (string[i] === '1'){
+  let palavra = '';
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === '1') {
       palavra += 'a';
     } else if (string[i] === '2') {
       palavra += 'e';
@@ -147,11 +147,11 @@ function decode(string) {
 function techList(arrayString, name) {
   arrayString.sort();
 
-  for (let key in arrayString){
-    arrayString[key] = objeto = {
-    tech: arrayString[key],
-    name: name,
-    }
+  for (let key in arrayString) {
+      arrayString[key] = objeto = {
+      tech: arrayString[key],
+      name: name,
+      }
   }
   if (arrayString.length === 0) {
     return 'Vazio!';
