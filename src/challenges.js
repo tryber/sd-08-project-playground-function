@@ -145,12 +145,15 @@ function techList(techs, name) {
     object = 'Vazio!';
   } else {
     for (let i = 0; i < techOrd.length; i += 1) {
-      object.push({ tech: techOrd[i], name: name });
+      object.push({
+        tech: techOrd[i],
+        name: name,
+      });
     }
   }
   return object;
 }
-// Ok!
+// Ok!.
 
 // Desafio 11
 // Desafio 11 - Função de apoio => checar se o array está com tamanho certo:

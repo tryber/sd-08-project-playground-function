@@ -3,4 +3,4 @@
 # VSCode repo settings
 .vscode
 node_modules/
-/home/john/trybe-projects/sd-08-project-playground-function/prettier.config.js
+../prettier.config.js
