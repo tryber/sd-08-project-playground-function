@@ -14,13 +14,13 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(frase) {
   let palavras = [];
-  let palavra = "";
-  for(let index = 0; index <= frase.length; index++) {
-    if (frase[index] === " "){
+  let palavra = '';
+  for (let index = 0; index <= frase.length; index += 1) {
+    if (frase[index] === ' '){
       palavras.push(palavra);
-      palavra = "";
+      palavra = '';
     }
-    else if(index === frase.length-1) {
+    else if (index === frase.length-1) {
       palavra = palavra+frase[index];
       palavras.push(palavra);
     }
