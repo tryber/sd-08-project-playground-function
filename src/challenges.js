@@ -50,12 +50,12 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(array) {
   let result = [];
-    for (i = 0; i < array.length - 1; i += 1) {
-      if (i % 3 == 0 && i % 5 == 0) {
+    for (i = 0; i < array.length; i += 1) {
+      if (array[i] % 3 == 0 && array[i] % 5 == 0) {
         result.push ("fizzBuzz");
-      } else if (i % 3 == 0) {
+      } else if (array[i] % 3 == 0) {
         result.push ("fizz");
-      } else if (i % 5 == 0) {
+      } else if (array[i] % 5 == 0) {
         result.push ("buzz");
       } else {
         result.push ("bug!");
