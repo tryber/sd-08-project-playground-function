@@ -6,12 +6,14 @@ function compareTrue(bool1, bool2) {
   }
   return b;
 }
-
+let area = 0;
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+area = (base * height) / 2;
+  return area;
 }
-
+calcArea(5, 4);
+console.log(area);
 // Desafio 3
 function splitSentence() {
   // seu código aqui
