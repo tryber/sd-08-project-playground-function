@@ -168,9 +168,10 @@ function techList(array, name) {
       }
     );
   }
+  console.log(objList);
   return objList;
 }
-
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
 
 // Desafio 11
 function lengthValidation(array){
