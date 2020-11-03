@@ -92,11 +92,44 @@ for (let cont = 0; cont < arrayFizz.length; cont += 1){
 return strFizz;
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+function encode(coding) {
+  let code = "";
+  for (cont =0; cont < coding.length; cont +=1){
+    if (coding[cont] == "a") {
+      code += "1";
+    } else if (coding[cont] == "e") {
+      code += "2";
+    } else if (coding[cont] == "i") {
+      code += "3";
+    } else if (coding[cont] == "o") {
+      code += "4";
+    } else if (coding[cont] == "u") {
+      code += "5";
+    } else {
+      code += coding[cont];
+    }
+  }
+  return code; 
 }
-function decode() {
-  // seu código aqui
+function decode(code) {
+  let decoding = "";
+  for (let cont = 0; cont < code.length; cont += 1) {
+    if (code[cont] == "1") {
+      decoding += "a";
+    } else if (code[cont] == "2") {
+      decoding += "e";
+    } else if (code[cont] == "3") {
+      decoding += "i";
+    } else if (code[cont] == "4") {
+      decoding += "o";
+    } else if (code[cont] == "5") {
+      decoding += "u";
+    } else {
+      decoding += code[cont];
+    }
+  }
+  return decoding;
 }
 
 // Desafio 10
