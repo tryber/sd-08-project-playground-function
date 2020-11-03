@@ -63,10 +63,9 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (cat1ToMouse > cat2ToMouse) {
     winner = 'cat2';
     return winner;
-  } else {
+  }
     winner = 'cat1';
     return winner;
-  }
 }
 // Desafio 8
 function fizzBuzz(array) {
@@ -78,9 +77,8 @@ function fizzBuzz(array) {
       resultado.push('fizz');
     } else if (array[i] % 5 === 0) {
       resultado.push('buzz');
-    } else {
-      resultado.push('bug!');
     }
+    resultado.push('bug!');
   }
   return resultado;
 }
@@ -109,7 +107,7 @@ function encode(string) {
 // Desafio 10
 function decode(code) {
   let frase = '';
-  for (let index = 0; index < codigo.length; index += 1) {
+  for (let index = 0; index < code.length; index += 1) {
     if (code[index] === '1') {
       frase += 'a';
     } else if (code[index] === '2') {
@@ -148,7 +146,7 @@ function techList(techArray, seuNome) {
 function generatePhoneNumber(numerico) {
   let erro = 'Array com tamanho incorreto.';
   let impossivel = 'não é possível gerar um número de telefone com esses valores';
-  if (numerico.length != 11) {
+  if (numerico.length !== 11) {
     return erro;
   }
   let sorted = numerico.slice().sort();
