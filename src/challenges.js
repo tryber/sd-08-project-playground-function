@@ -1,9 +1,10 @@
 // Desafio 1
-function compareTrue(varTrue, varFalse) {
-  if (varTrue == true && varFalse == false) {
-    return("true"); 
+function compareTrue(var1, var2) {
+  booleanResult = [];
+  if (var1 == true && var2 == false) {
+    return booleanResult = true; 
   } else 
-  return("false");
+  return booleanResult = false;
 }
 
 // Desafio 2
