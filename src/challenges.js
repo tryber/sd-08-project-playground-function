@@ -156,18 +156,23 @@ function decode(string) {
 }
 // Desafio 10                            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function techList(array, name) {
-
+  let objList = [];
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+  for (let index = 0; index < array.length; index += 1) {
+    objList.push(
+      {
+        tech: array[index],
+        name,
+      }
+    );
+  }
+  return objList;
 }
 
 
-
-
-
-
-
-
-
-// Desafio 11       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Desafio 11
 function lengthValidation(array){
   return (array.length != 11) ? true : false;
 }
