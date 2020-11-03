@@ -86,8 +86,8 @@ function highestCount(numberArray) {
   for (i = 0; i < numberArray.length; i++) {
     if (numberArray [i] > maiorNumero) {
       maiorNumero = arrayNumber [i];
-      return maiorNumero;
-    }     
+    } 
+  return maiorNumero;    
   }
   for (x = 0; x < numberArray.length; i++) {
     if (numberArray [x] == maiorNumero) {
@@ -165,7 +165,7 @@ function encode(string) {
   // seu código aqui
   let change = { a: "1", e: "2", i: "3", o: "4", u: "5" };
   let encode = "";
-  encode = string.replace(/[aeiou]/gi, (m) => change[m]);
+  encode = string.replace(/[aeiou]/gi, (s) => change[s]);
   
   return encode;
 }
@@ -174,7 +174,7 @@ function decode(string) {
   // seu código aqui
   let change = { 1: "a", 2: "e", 3: "i", 4: "o", 5: "u" };
   let decode = "";
-  decode = string.replace(/[12345]/gi, (m) => change[m]);
+  decode = string.replace(/[12345]/gi, (s) => change[s]);
   
   return decode;
 }
@@ -228,8 +228,19 @@ function decode(string) {
 function techList(tech, name) {
   // seu código aqui
 
-}
-
+  let techs = tech.sort();
+  let result = [];
+  if (techs.length === 0) {
+    return "Vazio!"
+  }
+  for (let key in techs) {
+    result.push({
+      tech: tech[key],
+      name: name
+    });
+  }
+  return result;
+  }
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
