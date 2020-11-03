@@ -16,9 +16,12 @@ function calcArea(base,height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
   // seu código aqui
+  let palavras = frase.split(' ');
+  return palavras;
 }
+
 
 // Desafio 4
 function concatName(array) {
