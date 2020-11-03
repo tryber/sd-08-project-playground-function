@@ -37,8 +37,7 @@ function highestCount(numbers) {
     if (numbers[index + 1] > highestNumber) {
       highestNumber = numbers[index + 1];
       counter = 1;
-    }
-    if (numbers[index + 1] === highestNumber) {
+    } else if (numbers[index + 1] === highestNumber) {
       counter += 1;
     }
   }
