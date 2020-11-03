@@ -68,6 +68,7 @@ function catAndMouse(mouse, cat1, cat2) {
   else {
     qualGato = "os gatos trombam e o rato foge";
   }
+  return qualGato;
 }
 
 // Desafio 8
