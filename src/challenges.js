@@ -148,8 +148,21 @@ function decode(saudacao1) {
 }
 // console.log(decode('h3 th2r2!'))
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
+  if (tech.length === 0) {
+    return "Vazio!"
+  }
+  let arrayTech = [];
+  techList.sort();
+  for (let i = 0; i < techList.length; i += 1) {
+    let techObject = {
+      tech: tech[i],
+      name: name
+    };
+    arrayTech.push(techObject)
+  }
+  return arrayTech
 }
 
 // Desafio 11
