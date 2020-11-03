@@ -72,7 +72,9 @@ function fizzBuzz(array) {
 function encode(text) {
   let newText = ['a', 'e', 'i', 'o', 'u'];
   for (let i = 0; i < newText.length; i += 1) {
-    text = text.replaceAll(newText[i], i + 1);
+    text = text.replace(newText[i], i + 1);
+    text = text.replace(newText[i], i + 1);
+    text = text.replace(newText[i], i + 1);
   }
   return text;
 }
@@ -80,7 +82,9 @@ function encode(text) {
 function decode(text) {
   let newText = ['a', 'e', 'i', 'o', 'u'];
   for (let i = 0; i < newText.length; i += 1) {
-    text = text.replaceAll(i + 1, newText[i]);
+    text = text.replace(i + 1, newText[i]);
+    text = text.replace(i + 1, newText[i]);
+    text = text.replace(i + 1, newText[i]);
   }
   return text;
 }
@@ -127,8 +131,9 @@ function buildPhoneNumber(array) {
   for (let i = 2; i < array.length; i += 1) {
     if (i === 6) {
       phoneNumber += `${array[i]}-`;
-    }
+    } else {
     phoneNumber += `${array[i]}`;
+    }
   }
   return phoneNumber;
 }
