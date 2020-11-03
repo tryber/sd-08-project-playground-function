@@ -154,7 +154,7 @@ function decode(string) {
   return array0fString.join('');
 
 }
-// Desafio 10                            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Desafio 10
 function techList(array, name) {
   let objList = [];
   if (array.length === 0) {
@@ -168,10 +168,9 @@ function techList(array, name) {
       }
     );
   }
-  console.log(objList);
   return objList;
 }
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Max");
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
 
 // Desafio 11
 function lengthValidation(array){
