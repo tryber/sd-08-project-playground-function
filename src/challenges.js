@@ -30,10 +30,15 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  //
-}
-
+function highestCount(numbers) {
+  function highestNumber(number) {
+    let maxNumber = Math.max.apply(null, numbers);
+    return number === maxNumber;
+  }
+  let max = numbers.filter(highestNumber);
+  return max.length;
+//Aprendi a usar o apply nesse site https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ , ele permite que o Math.max funcione em arrays.
+  };
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -55,9 +60,9 @@ function fizzBuzz(numbers) {
   for (let index in numbers) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       answers.push('fizzBuzz');
-    } else if (numbers[index] % 3 == 0) {
+    } else if (numbers[index] % 3 === 0) {
       answers.push('fizz');
-    } else if (numbers[index] % 5 == 0) {
+    } else if (numbers[index] % 5 === 0) {
       answers.push('buzz');
     } else {
       answers.push('bug!');
@@ -68,18 +73,18 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(message) {
-  let newMessage = "";
+  let newMessage = '';
   for (let index in message) {
-    if (message[index] === "a") {
-      newMessage += "1";
-    } else if (message[index] === "e") {
-      newMessage += "2";
-    } else if (message[index] === "i") {
-      newMessage += "3";
-    } else if (message[index] === "o") {
-      newMessage += "4";
-    } else if (message[index] === "u") {
-      newMessage += "5";
+    if (message[index] === 'a') {
+      newMessage += '1';
+    } else if (message[index] === 'e') {
+      newMessage += '2';
+    } else if (message[index] === 'i') {
+      newMessage += '3';
+    } else if (message[index] === 'o') {
+      newMessage += '4';
+    } else if (message[index] === 'u') {
+      newMessage += '5';
     } else {
       newMessage += message[index];
     }
@@ -87,18 +92,18 @@ function encode(message) {
   return newMessage;
 }
 function decode(message) {
-  let newMessage = "";
+  let newMessage = '';
   for (let index in message) {
-    if (message[index] === "1") {
-      newMessage += "a";
-    } else if (message[index] === "2") {
-      newMessage += "e";
-    } else if (message[index] === "3") {
-      newMessage += "i";
-    } else if (message[index] === "4") {
-      newMessage += "o";
-    } else if (message[index] === "5") {
-      newMessage += "u";
+    if (message[index] === '1') {
+      newMessage += 'a';
+    } else if (message[index] === '2') {
+      newMessage += 'e';
+    } else if (message[index] === '3') {
+      newMessage += 'i';
+    } else if (message[index] === '4') {
+      newMessage += 'o';
+    } else if (message[index] === '5') {
+      newMessage += 'u';
     } else {
       newMessage += message[index];
     }
@@ -107,13 +112,21 @@ function decode(message) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, name) {
+  
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (numbers[index] < 0 || numbers[index] > 9) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  for (let index in numbers) {
+
+  }
 }
 
 // Desafio 12
