@@ -17,8 +17,8 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  return(names.length - 1 + ", " + names.length[0]);
 }
 
 // Desafio 5
@@ -43,17 +43,16 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-let arrayResult = [];
-
 function fizzBuzz(inArray) {
+  let arrayResult = [];
   for (index = 0; index < inArray.length; index++) {
-    if (inArray.length(index) % 3 == 0 && inArray.length(index) % 5 == 0) {
+    if (inArray.length[index] % 3 == 0 && inArray.length[index] % 5 == 0) {
       arrayResult.push("fizzbuzz");
-    } else if (inArray.length(index) % 3 == 0 && inArray.length(index) % 5 != 0) {
+    } else if (inArray.length[index] % 3 == 0 && inArray.length[index] % 5 != 0) {
       arrayResult.push("fizz");
-    } else if (inArray.length(index) % 3 != 0 && inArray.length(index) % 5 == 0) {
+    } else if (inArray.length[index] % 3 != 0 && inArray.length[index] % 5 == 0) {
       arrayResult.push("buzz");
-    } else if (inArray.length(index) % 3 != 0 && inArray.length(index) % 5 != 0) {
+    } else if (inArray.length[index] % 3 != 0 && inArray.length[index] % 5 != 0) {
       arrayResult.push("bug!");
     }
   }
