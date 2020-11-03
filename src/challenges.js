@@ -27,16 +27,15 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(strings) {
-  return strings[0] + " " + strings[strings.length-1];
+  return strings[0] + ", " + strings[strings.length-1];
 }
 //console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  let pontos = 3*wins + ties;
-  return pontos;
+function footballPoints(wins, ties) {  
+  return 3*wins + ties;
 }
-//console.log(footballPoints(3,1));
+//console.log(footballPoints(8,2));
 
 // Desafio 6
 function highestCount() {
