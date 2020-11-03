@@ -49,15 +49,11 @@ console.log(footballPoints(10, 1));
 // Desafio 6
 function highestCount(numero) {
   //qual o maior numero do meu array
-  let maior = [];
-  for (let i = 0; i < numero.length; i += 1) {   
-    if (numero[i] > maior) {
-      maior = numero[i];  
-      }
-  }
+  let numMaior = Math.max(...numero)
+  
   let cont = 0;
   for (let i = 0; i < numero.length; i += 1) {   
-    if (numero[i] === maior) {
+    if (numero[i] === numMaior) {
       cont += 1; 
       }
     }  
