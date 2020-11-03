@@ -94,7 +94,7 @@ function fizzBuzz(array_de_numeros) {
             };
         }
     }
-    return stringEncoDeco;
+    //return stringEncoDeco;
 
     // Desafio 10
     function techList(arrayDeTecnologias, name) {
