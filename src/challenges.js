@@ -127,6 +127,7 @@ function generatePhoneNumber(numbers) {
     } else if (index == 2) {
       result.push(")");
       result.push(number);
+      result.push(" ");
     } else if (index == 7) {
       result.push("-");
       result.push(number);
