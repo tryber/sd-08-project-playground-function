@@ -64,8 +64,8 @@ function catAndMouse(mouse, cat1, cat2) {
     winner = 'cat2';
     return winner;
   }
-    winner = 'cat1';
-    return winner;
+  winner = 'cat1';
+  return winner;
 }
 // Desafio 8
 function fizzBuzz(array) {
