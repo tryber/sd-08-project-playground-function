@@ -43,11 +43,11 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz([array]) {
+function fizzBuzz(array) {
   let arrayResult = [];
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i+=1) {
     if (array[i] % 3 == 0 && array[i] % 5 == 0) {
-      arrayResult.push("fizzbuzz");
+      arrayResult.push("fizzBuzz");
     } else if (array[i] % 3 == 0 && array[i] % 5 != 0) {
       arrayResult.push("fizz");
     } else if (array[i] % 3 != 0 && array[i] % 5 == 0) {
