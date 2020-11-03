@@ -213,8 +213,8 @@ function takeFour(array) {
 function generatePhoneNumber(array) {
 
   if(lengthValidation(array) == true){
-    console.log('Array com tamanho incorreto');
-    return 'Array com tamanho incorreto';
+    console.log('Array com tamanho incorreto.');
+    return 'Array com tamanho incorreto.';
   }
 
   if(indexValidation(array) == true){
@@ -227,7 +227,9 @@ function generatePhoneNumber(array) {
 
 }
 
-generatePhoneNumber([1, 2, 2, 4, 5, 5, 0, 8, 9, 0, 1]);
+generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]);
+
+
 
 // Desafio 12
 function triangleCheck() {
