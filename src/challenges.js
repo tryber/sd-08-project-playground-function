@@ -139,9 +139,24 @@ function decode(string2) {
 }
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
+  let techLista = tech.sort();
+  let objetoFim = [];
+
+  for(let index = 0; index < tech.length; index +=1){
+    objetoFim.push({
+      tech: techLista[index],
+      name: name
+    })
+  }
+  if(objetoFim.length === 0){
+    return 'Vazio!'
+  }else{
+    return objetoFim
+  }
 
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
