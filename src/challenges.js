@@ -37,7 +37,7 @@ function footballPoints(wins, ties) {
   return pontos;
 }
 // Desafio 6
-let maiorCont = 0;
+
 function highestCount(numeros) {
   let maior = numeros[0];
   for (let cont = 0; cont < numeros.length; cont += 1) {
@@ -45,6 +45,7 @@ function highestCount(numeros) {
       maior = numeros[cont];
     }
   }
+  let maiorCont = 0;
   for (let cont = 0; cont < numeros.length; cont += 1) {
     if (numeros[cont] === maior) {
       maiorCont += 1;
