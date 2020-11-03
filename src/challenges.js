@@ -38,11 +38,13 @@ console.log(concatName(["andre", "phelipe", "de", "souza", "santana"]));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontuacao = wins + ties;
+  let vitoria = wins * 3;
+  let empate = ties + 1;
+  let pontuacao = vitoria + ties;
   return pontuacao;
 }
 
-console.log(footballPoints(3, 1));
+console.log(footballPoints(3, 5));
 
 // Desafio 6
 function highestCount() {
