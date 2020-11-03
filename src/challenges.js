@@ -157,9 +157,9 @@ function generatePhoneNumber(array) {
     }
   }
 
-  return `(${array[0]}${array[1]})${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+  return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 }
-generatePhoneNumber(array);
+console.log(generatePhoneNumber(array));
 
 // Desafio 12
 function triangleCheck() {
