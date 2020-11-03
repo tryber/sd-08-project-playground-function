@@ -1,5 +1,6 @@
 function calcularDistancia(pos1, pos2) {
   return Math.abs(pos1 - pos2);
+}
 
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
