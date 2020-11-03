@@ -100,7 +100,7 @@ function encode(string) {
   return generalEncrypter(string, vogals, numerals);
 }
 function decode(string) {
-  return generalEncrypter(str, numerals, vogals);
+  return generalEncrypter(string, numerals, vogals);
 }
 
 // Desafio 10
