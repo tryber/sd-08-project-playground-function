@@ -76,12 +76,56 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(encode) {
+  let message = "";
+  for (let i in encode){
+    if (encode[i] == "a"){
+      message += 1;
+    }
+    else if (encode[i] == "e"){
+      message += 2;
+    }
+    else if (encode[i] == "i"){
+      message += 3;
+    }
+    else if (encode[i] == "o"){
+      message += 4;
+    }
+    else if (encode[i] == "u"){
+      message += 5;
+    }
+    else {
+      message += encode[i];
+    }
+  }
+  return message;
 }
-function decode() {
-  // seu código aqui
+function decode(decode) {
+  let message = "";
+  for (let i in decode){
+    if (decode[i] == 1){
+      message += "a";
+    }
+    else if (decode[i] == 2){
+      message += "e";
+    }
+    else if (decode[i] == 3){
+      message += "i";
+    }
+    else if (decode[i] == 4){
+      message += "o";
+    }
+    else if (decode[i] == 5){
+      message += "u";
+    }
+    else {
+      message += decode[i];
+    }
+  }
+  return message;
 }
+//console.log(encode("Hi there!"));
+//console.log(decode("H3 th2r2!"));
 
 // Desafio 10
 function techList() {
