@@ -10,14 +10,14 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  return sentence.split(" ");
+  return sentence.split(' ');
 }
 
 // Desafio 4
 function concatName(fullNameArray) {
   const lastPosition = fullNameArray.length - 1;
 
-  return `${fullNameArray[lastPosition]}, ${fullNameArray[0]}` 
+  return `${fullNameArray[lastPosition]}, ${fullNameArray[0]}`;
 }
 
 // Desafio 5
@@ -34,13 +34,13 @@ function highestCount(numbers) {
   let counter = 0;
 
   for (let index in numbers) {
-    if (numbers[index] > highestNumber)
+    if (numbers[index] > highestNumber) {
       highestNumber = numbers[index];
-  }
-  
-  for (let index in numbers) {
-    if (numbers[index] === highestNumber)
+      counter = 1;
+    }
+    if (numbers[index] === highestNumber) {
       counter += 1;
+    }
   }
 
   return counter;
