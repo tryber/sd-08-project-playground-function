@@ -64,17 +64,7 @@ console.log(footballPoints(9, 5))
 // Desafio 6
 function highestCount(seq) {
 
-  let maior = Math.max.apply(null, seq)
   
-  let contador = 0;
- 
-  for (let i = 0; i < seq.length; i++) {
-    if (seq[i] == maior) {
-      contador += 1 ;
-    }
-  }
-
-return contador
 
 }
 
