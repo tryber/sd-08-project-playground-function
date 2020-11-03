@@ -13,8 +13,8 @@ return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(a = "go Trybe") {
+ return splitSentence.split(" ");
 }
 
 // Desafio 4
