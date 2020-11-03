@@ -18,8 +18,8 @@ function splitSentence(a = "go Trybe") {
 }
 
 // Desafio 4
-function concatName(x = [", d", "e", "v"]) {
-  return x[2].concat(x[0]);
+function concatName(x = ["d", "e", "v"]) {
+  return x[2].concat(", ", x[0]);
 }
 
 // Desafio 5
