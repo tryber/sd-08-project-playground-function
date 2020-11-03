@@ -55,8 +55,21 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+let posicao1 = 0;
+let posicao2 = 0;
+let qualGato = "";
+function catAndMouse(mouse, cat1, cat2) {
+  posicao1 = mouse - cat1;
+  posicao2 = mouse - cat2;
+if (posicao2 < posicao1){
+  qualGato = "cat2";
+}
+else if (posicao1 < posicao2){
+  qualGato = "cat1";
+}
+else{
+  qualGato = "os gatos trombam e o rato foge";
+}
 }
 
 // Desafio 8
