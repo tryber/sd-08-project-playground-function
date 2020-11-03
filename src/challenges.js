@@ -134,9 +134,6 @@ function techList(nomeTech, name) {
   return resultado;
 }
 
-
-
-
 // Desafio 11
 function generatePhoneNumber(arrayPhone) { 
   let numberPhone = "";  
@@ -156,7 +153,7 @@ function generatePhoneNumber(arrayPhone) {
     }     
   }
   if (arrayPhone.length == 11){
-  return numberPhone = ("("+arrayPhone[0]+arrayPhone[1]+")"+" "+arrayPhone[2]+arrayPhone[3]+arrayPhone[4]
+    return numberPhone = ("("+arrayPhone[0]+arrayPhone[1]+")"+" "+arrayPhone[2]+arrayPhone[3]+arrayPhone[4]
     +arrayPhone[5]+arrayPhone[6]+"-"+arrayPhone[7]+arrayPhone[8]+arrayPhone[9]+arrayPhone[10]);
   }  
 }
@@ -173,11 +170,18 @@ function generatePhoneNumber(arrayPhone) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {  
+  let somaLineA = (lineB + lineC);
+  let somaLineB = (lineA + lineC);
+  let somaLineC = (lineA + lineB);
 
-  
+  if (lineA < somaLineA || lineB < somaLineB || lineC < somaLineC){
+    return true;
+  }else {
+    return false;
+  }  
 }
 
-
+console.log(triangleCheck(10, 14, 8));
 
 
 
