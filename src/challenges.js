@@ -2,18 +2,30 @@
 function compareTrue(a, b) {
   return (a && b);
 }
-//console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
   return (base*height/2);
 }
-//console.log(calcArea(2,9));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+/*let word = "";
+  let sentenceWords = [];
+  for (let i = 0; i < sentence.length; i++){
+  if (sentence[i] != " "){
+    word += sentence[i] 
+  }
+  else {
+    sentenceWords.push (word);
+    word = ""; 
+  }
+  }  
+  return (sentenceWords);*/
+function splitSentence(sentence) {
+  return sentence.split(' ');
 }
+console.log(splitSentence("go Trybe"));
+
 
 // Desafio 4
 function concatName() {
