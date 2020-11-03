@@ -149,10 +149,6 @@ function techList(tec, name) {
     return tec_list;
   }
 }
-let as = ["css", "html", "js"];
-let name = "rafael"
-techList(as, name);
-console.log(tec_list);
   // Desafio 11
   function generatePhoneNumber() {
     // seu código aqui
