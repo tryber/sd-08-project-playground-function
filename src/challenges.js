@@ -1,7 +1,7 @@
 // Desafio 1
-let b= false;
+let b = false;
 function compareTrue(bool1, bool2) {
-  if (bool1 ===true && bool2 === true) {
+  if (bool1 === true && bool2 === true) {
     b = true;
   }
   return b;
@@ -10,15 +10,15 @@ function compareTrue(bool1, bool2) {
 // Desafio 2
 let area = 0;
 function calcArea(base, height) {
-area = (base * height) / 2;
+  area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
 let str = [];
 function splitSentence(string) {
-  str= string.split(' ');
-return str
+  str = string.split(' ');
+  return str
 }
 
 // Desafio 4
@@ -36,11 +36,21 @@ function footballPoints(wins, ties) {
   pontos += ties;
   return pontos;
 }
-footballPoints(4, 3 );
-console.log(pontos);
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+let maiorCont = 0;
+function highestCount(numeros) {
+  let maior = numeros[0];
+  for (let cont = 0; cont < numeros.length; cont += 1) {
+    if (numeros[cont] > maior) {
+      maior = numeros[cont];
+    }
+  }
+  for (let cont = 0; cont < numeros.length; cont += 1) {
+    if (numeros[cont] === maior) {
+      maiorCont += 1;
+    }
+  }
+  return maiorCont;
 }
 
 // Desafio 7
