@@ -81,9 +81,12 @@ function encode() {
     return 3;
   } else if (encode[v] == "o"){
     return 4;
-  } else 
-
+  } else (enconde[v] == "u"){
+    return 5;
+  }
+  return encode;
 }
+
 function decode() {
   // seu código aqui
 }
