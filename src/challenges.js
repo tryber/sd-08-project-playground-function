@@ -133,21 +133,19 @@ function fizzBuzz(array) {
   // seu código aqui
   let result = [];
   for (i = 0; i < array.length; i++) {
-    if (array [i] % 3 === 0 && array [i] % 5 !== 0) {
-      result [i] = "fizz";
-      return result;
-    } else if (array [i] % 5 === 0 && array [i] % 3 !== 0) {
-      result [i] = "buzz";
-      return result;
-    } else if (array [i] % 3 === 0 && array [i] % 5 === 0) {
-      result [i] = "fizzBuzz";
-      return result;
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      result.push("fizzBuzz");
+    } else if (array[i] % 5 === 0) {
+      result.push("buzz");
+    } else if (array[i] % 3 === 0) {
+      result.push("fizz");
     } else {
-      result [i] = "bug!";
-      return result;
+      result.push("bug!");
     }
   }
+  return result;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // // Desafio 9
 // Codifique e Decodifique
@@ -165,54 +163,71 @@ function fizzBuzz(array) {
 
 function encode(string) {
   // seu código aqui
-  let encode = [];
-  encode = string;
-  for (i = 0; i < string.length; i++) {
-    if (string [i] == "a") {
-      encode [i] = 1;
-      return encode;
-    } else if (string [i] == "e") {
-      encode [i] = 2;
-      return encode;
-    } else if (string [i] == "i") {
-      encode [i] = 3;
-      return encode;
-    } else if (string [i] == "o") {
-      encode [i] = 4;
-      return encode;
-    } else if (string [i] == "u") {
-      encode [i] = 5;
-      return encode;
-    }
-  }
-}
-function decode(string) {
-  // seu código aqui
-  let decode = [];
-  encode = string;
-  for (i = 0; i < string.length; i++) {
-    if (string [i] == 1) {
-      dencode [i] = `a`;
-      return encode;
-    } else if (string [i] == 2) {
-      dencode [i] = `e`;
-      return encode;
-    } else if (string [i] == 3) {
-      dencode [i] = `i`;
-      return encode;
-    } else if (string [i] == 4) {
-      dencode [i] = `o`;
-      return encode;
-    } else if (string [i] == 5) {
-      dencode [i] = `u`;
-      return encode;
-    }
-  }
+  let change = { a: "1", e: "2", i: "3", o: "4", u: "5" };
+  let encode = "";
+  encode = string.replace(/[aeiou]/gi, (m) => change[m]);
+  
+  return encode;
 }
 
-// Desafio 10
-function techList() {
+function decode(string) {
   // seu código aqui
+  let change = { 1: "a", 2: "e", 3: "i", 4: "o", 5: "u" };
+  let decode = "";
+  decode = string.replace(/[12345]/gi, (m) => change[m]);
+  
+  return decode;
+}
+// Desafio 10
+// Lista de tecnologias
+// Crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo parâmetro chamado name com um nome.
+
+// Para cada tecnologia no array, crie um objeto com a seguinte estrutura:
+
+// {
+//   tech: "NomeTech",
+//   name: name
+// }
+// Estes objetos devem ser inseridos em uma nova lista em ordem crescente a partir do campo tech no objeto.
+
+// A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos com o formato acima.
+
+// Exemplo:
+
+// Entradas da função:
+
+// ["React", "Jest", "HTML", "CSS", "JavaScript"]
+// "Lucas"
+
+// // Saída:
+
+// [
+//   {
+//     tech: "CSS",
+//     name: "Lucas"
+//   },
+//   {
+//     tech: "HTML",
+//     name: "Lucas"
+//   },
+//   {
+//     tech: "JavaScript",
+//     name: "Lucas"
+//   },
+//   {
+//     tech: "Jest",
+//     name: "Lucas"
+//   },
+//   {
+//     tech: "React",
+//     name: "Lucas"
+//   }
+// ]
+// Caso o array venha vazio sua função deve retornar 'Vazio!'
+
+function techList(tech, name) {
+  // seu código aqui
+
 }
 
 // Desafio 11
