@@ -42,7 +42,7 @@ function footballPoints(wins, ties) {
   let points = (wins * 3) + ties
   return points
 }
-footballPoints(7, 2);
+footballPoints(7,2);
 
 // Desafio 6
 function highestCount() {
