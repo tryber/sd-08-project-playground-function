@@ -25,11 +25,9 @@ console.log(splitSentence('Para o alto e avante andre'));
 
 // Desafio 4
 function concatName(nomeInteiro) {
-  let fullName = nomeInteiro.join(); 
-  //fullName.join();
-  return fullName;
+  return `${nomeInteiro[nomeInteiro.length - 1]}, ${nomeInteiro [0]}`;
 }
-console.log(concatName(["Andre", "Phelipe"]));
+
 
 // Desafio 5
 function footballPoints() {
