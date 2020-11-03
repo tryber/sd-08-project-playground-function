@@ -8,7 +8,7 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -77,15 +77,17 @@ function fizzBuzzPusher(n, array) {
 function fizzBuzz(array) {
   let newArray = [];
 
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i += 1) {
     fizzBuzzPusher(array[i], newArray);
   }
   return newArray;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+
+function encode(string) {
+  return 
 }
 function decode() {
   // seu código aqui
@@ -107,8 +109,18 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numString = string.replace(/\D/g, '');
+  let copos = 0;
+
+  for (let i = 0; i < numString.length; i += 1) {
+    copos += parseInt(numString[i], 10);
+  }
+
+  if (copos === 1) {
+    return '1 copo de água';
+  }
+  return `${copos} copos de água`;
 }
 
 
