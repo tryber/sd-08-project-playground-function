@@ -20,16 +20,16 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(name) {
-  let concatenacao = name[name.length - 1] + ', ' + name[0]
+  let concatenacao = name[name.length - 1] + ',' + name[0]
   return concatenacao
 }
 
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let wins = 1;
+  let wins = 3;
   let ties = 1;
-  let time = wins * 3 + ties;
+  let time = wins + ties;
     return time;
 }
 
@@ -76,7 +76,7 @@ function fizzBuzz(num) {
 // Desafio 9
 function encode() {
   let string = "";
-  for ()
+
 }
 function decode() {
   // seu código aqui
