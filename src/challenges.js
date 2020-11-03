@@ -131,22 +131,22 @@ function decode(string) {
   let resultado;
   let vogais = ['a', 'e', 'i', 'o', 'u'];
   let numeros = [1, 2, 3, 4, 5];
-  let fraseCodificada = '';
+  let fraseDecodificada = '';
   for (let letra = 0; letra < string.length; letra += 1) {
     let letraComparar = string[letra];
     let substituir = 0;
     for (let count = 0; count < numeros.length; count += 1) {
-      if (letraComparar === numeros[count]) {
+      if (letraComparar == numeros[count]) {
         substituir = vogais[count];
       }
     }
     if (substituir !== 0) {
-      fraseCodificada += substituir;
+      fraseDecodificada += substituir;
     } else {
-      fraseCodificada += letraComparar;
+      fraseDecodificada += letraComparar;
     }
   }
-  resultado = fraseCodificada;
+  resultado = fraseDecodificada;
   return resultado;
 }
 let testeEncode = 'hi there!'
