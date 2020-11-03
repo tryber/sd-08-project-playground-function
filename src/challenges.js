@@ -96,12 +96,46 @@ function fizzBuzz(arrayNum) {
 
 
 // Desafio 9
-function encode() {
-    // seu código aqui
+function encode(string) {
+    let guardapalavra = '';
+    for (let i in string) {
+        if (string[i] === 'a') {
+            guardapalavra += 1;
+        } else if (string[i] === 'e') {
+            guardapalavra += 2;
+        } else if (string[i] === 'i') {
+            guardapalavra += 3;
+        } else if (string[i] === 'o') {
+            guardapalavra += 4;
+        } else if (string[i] === 'u') {
+            guardapalavra += 5;
+        } else {
+            guardapalavra += string[i];
+        }
+    }
+    return guardapalavra;
 }
 
-function decode() {
-    // seu código aqui
+
+
+
+function decode(string) {
+    let guardapalavra = '';
+    for (let j in string) {
+        if (string[j] == 1) {
+            guardapalavra += 'a';
+        } else if (string[j] == 2) {
+            guardapalavra += 'e';
+        } else if (string[j] == 3) {
+            guardapalavra += 'i';
+        } else if (string[j] == 4) {
+            guardapalavra += 'o';
+        } else if (string[j] == 5) {
+            guardapalavra += 'u';
+        } else
+            guardapalavra += string[j];
+    }
+    return guardapalavra;
 }
 
 // Desafio 10
