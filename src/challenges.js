@@ -131,20 +131,28 @@ function generatePhoneNumber(numbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let sum,
-    subtract = 0;
-  Object.values(arguments).forEach(side1 => {
-    Object.values(arguments).forEach(side2 => {
+  let sum = 0;
+  let subtract = 0;
+  let flag = true;
+
+  let sides = Object.values(arguments);
+  sides.forEach(side1 => {
+    sides.forEach(side2 => {
       if (!(side1 == side2)) {
         sum += parseInt(side2);
         subtract -= parseInt(side2);
       }
     })
-    if (sum > parseInt(side1)) return false;
-    if (subtract < parseInt(side1)) return false;
-    sum, subtract = 0;
+    if (sum < parseInt(side1)) {
+      flag = false;
+    }
+    if (subtract > parseInt(side1)) {
+      flag = false;
+    }
+    sum = 0;
+    subtract = 0;
   })
-  return true;
+  return flag;
 }
 
 // Desafio 13
