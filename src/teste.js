@@ -10,6 +10,6 @@ Teste.fizzBuzz([2, 3, 4, 5, 10, 11]);
 console.log(Teste.encode("hi there"));
 console.log(Teste.decode("h3 th2r2"));
 console.log(Teste.techList(["React", "Jest", "HTML", "CSS", "JavaScript"]));
-console.log(Teste.generatePhoneNumber([-3, 3, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(Teste.generatePhoneNumber([3, 3, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 console.log(Teste.hydrate('2 cerveja'));
 console.log(Teste.triangleCheck(1,1,3));
