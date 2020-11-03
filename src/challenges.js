@@ -394,9 +394,11 @@ function hydrate(drinkString) {
 
     //Returning the result
     return `${waterGlasses} copos de água`
-}
 
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+    //Consulted sources:
+    //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+    //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/isNaN
+}
 
 
 module.exports = {
