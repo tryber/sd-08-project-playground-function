@@ -84,28 +84,108 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+function generalEncrypter(string, arrayToBeReplaced, arrayToReplace) {
+  let encryptedString = string;
 
+  for (let i = 0; i < arrayToBeReplaced.length; i += 1) {
+    encryptedString = encryptedString.replace(new RegExp(arrayToBeReplaced[i], 'g'), arrayToReplace[i]);
+  }
+  return encryptedString;
+}
+
+let vogals = ['a', 'e', 'i', 'o', 'u'];
+let numerals = ['1', '2', '3', '4', '5'];
 
 function encode(string) {
-  return 
+  return generalEncrypter(string, vogals, numerals);
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  return generalEncrypter(str, numerals, vogals);
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+
+  let sortedArray = array.sort();
+  let objectArray = [];
+
+  for (let i = 0; i < array.length; i += 1) {
+    let objectGenerator = {
+      tech: sortedArray[i],
+      name,
+    }
+
+    objectArray.push(objectGenerator)
+  }
+  return objectArray;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function repObjMaker(array) {
+  let counts = {};
+
+  for (let i = 0; i < array.length; i += 1) {
+    if (counts[array[i]]) {
+      counts[array[i]] += 1;
+    } else {
+      counts[array[i]] = 1;
+    }
+  }
+  return counts;
 }
 
+
+function numValidator(array) {
+  let reps = repObjMaker(array);
+
+  for (let key in reps) {
+    if (reps[key] >= 3) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function generatePhoneNumber(array) {
+  let errorMsg = 'não é possível gerar um número de telefone com esses valores';
+
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  if (array.some(element => element > 9 || element < 0)) {
+    return errorMsg;
+  }
+
+  if (!numValidator(array)) {
+    return errorMsg;
+  }
+
+  let ddd = `(${array[0]}${array[1]})`
+  let parteUm = `${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}`
+  let parteDois = `${array[7]}${array[8]}${array[9]}${array[10]}`
+
+  return `${ddd} ${parteUm}-${parteDois}`
+}
+
+console.log(generatePhoneNumber([0, 2, 3, 2, 5, 5, 7, 8, 9, 0, 1]))
+
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let triAB = lineA + lineB;
+  let triAC = lineA + lineC;
+  let triBC = lineB + lineC;
+
+  let lineComparer = [lineA, lineB, lineC]
+
+  if (lineComparer.some(compare => compare > triAB || compare > triAC || compare > triBC)) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
