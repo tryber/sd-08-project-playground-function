@@ -2,9 +2,8 @@
 function compareTrue(valueOne, valueTwo) {
   if (valueOne === true && valueTwo === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -118,9 +117,11 @@ function decode(codigo) {
     } else if (codigo[index] === '3') {
       frase += 'i';
     } else if (codigo[index] === '4') {
-      frase += 'o'
+      frase += 'o';
     } else if (codigo[index] === '5') {
-      frase += 'u'
+      frase += 'u';
+    } else {
+      frase += codigo[index];
     }
   }
   return frase;
@@ -139,33 +140,33 @@ function techList(techArray, seuNome) {
       saida.push(objeto);
     }
     return saida;
-  } else {
-    return vazio;
   }
+  return vazio;
 }
+console.log(techList(["Rsvir", "Lalala", "Sxhuuu"], "Mayara"));
 
 // Desafio 11
 function generatePhoneNumber(numerico) {
   let erro = 'Array com tamanho incorreto.';
   let impossivel = 'não é possível gerar um número de telefone com esses valores';
   if (numerico.length === 11) {
-      let sorted = numerico.slice().sort();
-      for (let key = 0; key < numerico.length; key += 1) {
-        let letra = key;
-        let petra = key;
-        let anterior = (letra - 1);
-        let proximo = (petra + 1);
-          if (sorted[key] < 0 || sorted[key] > 9) {
-              return impossivel;
-          } else if (sorted[key] === sorted[anterior] && sorted[key] === sorted[proximo]) {
-              return impossivel;
-          } else {
-              let telefone = `(${numerico[0]}${numerico[1]}) ${numerico[2]}${numerico[3]}${numerico[4]}${numerico[5]}${numerico[6]}-${numerico[7]}${numerico[8]}${numerico[9]}${numerico[10]}`;
-              return telefone;
-          }
+    let sorted = numerico.slice().sort();
+    for (let key = 0; key < numerico.length; key += 1) {
+      let letra = key;
+      let petra = key;
+      let anterior = (letra - 1);
+      let proximo = (petra + 1);
+      if (sorted[key] < 0 || sorted[key] > 9) {
+        return impossivel;
+      } else if (sorted[key] === sorted[anterior] && sorted[key] === sorted[proximo]) {
+        return impossivel;
+      } else {
+        let telefone = `(${numerico[0]}${numerico[1]}) ${numerico[2]}${numerico[3]}${numerico[4]}${numerico[5]}${numerico[6]}-${numerico[7]}${numerico[8]}${numerico[9]}${numerico[10]}`;
+        return telefone;
       }
+    }
   }
-      return erro;
+  return erro;
 }
 
 // Desafio 12
