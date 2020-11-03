@@ -145,10 +145,7 @@ function techList(techs, name) {
     object = 'Vazio!';
   } else {
     for (let i = 0; i < techOrd.length; i += 1) {
-      object.push({
-        tech: techOrd[i],
-        name: name,
-      });
+      object.push({ tech: techOrd[i], name: name });
     }
   }
   return object;
@@ -219,7 +216,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let result;
   if (
     Math.abs(
-      lineA > lineB - lineC && lineB > lineA - lineC && lineC > lineA - lineB
+      lineA > lineB - lineC && lineB > lineA - lineC && lineC > lineA - lineB,
     )
   ) {
     result = true;
