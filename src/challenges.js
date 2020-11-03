@@ -19,13 +19,11 @@ function splitSentence(frase) {
     if (frase[index] === ' ') {
       palavras.push(palavra);
       palavra = '';
-    }
-    else if (index === frase.length-1) {
-      palavra = palavra+frase[index];
-      palavras.push(palavra);
-    }
-    else {
-      palavra = palavra+frase[index];
+    } else if (index === frase.length - 1) {
+        palavra = palavra + frase[index];
+        palavras.push(palavra);
+    } else {
+        palavra += frase[index];
     }
   }
   return palavras;
@@ -34,8 +32,9 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(stringArray) {
   let primeiro = stringArray[0];
-  let ultimo = stringArray[stringArray.length-1];
-  return ultimo + ', ' + primeiro;
+  let ultimo = stringArray[stringArray.length - 1];
+  let result = ultimo + ', ' + primeiro;
+  return result;
 }
 
 // Desafio 5
