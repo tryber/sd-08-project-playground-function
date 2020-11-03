@@ -115,9 +115,9 @@ function generatePhoneNumber(n) {
     }
     let cont = 0;
     for (let j in n) {
-      if (n[i] == n[j]) {
+      if (n[i] === n[j]) {
         cont++;
-        if (cont == 3) {
+        if (cont === 3) {
           return "não é possível gerar um número de telefone com esses valores";
         }
       }
@@ -139,7 +139,7 @@ function hydrate(srt) {
    exit += parseInt(arr[i]);
   //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
   }
-  if(exit == 1) return `${exit} copo de água`;
+  if(exit === 1) return `${exit} copo de água`;
   return `${exit} copos de água`;
 }
 module.exports = {
