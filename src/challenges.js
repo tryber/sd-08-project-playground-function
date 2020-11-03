@@ -102,11 +102,40 @@ function fizzBuzz(array) {
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let palavra = string.split('');
+  for (let index = 0; index < palavra.length; index+=1) {
+    if(palavra[index] == 'a'){
+      palavra[index] = 1;
+    }else if(palavra[index] == 'e'){
+      palavra[index] = 2;
+    }else if(palavra[index] == 'i'){
+      palavra[index] = 3;
+    }else if(palavra[index] == 'o'){
+      palavra[index] = 4;
+    }else if(palavra[index] == 'u'){
+      palavra[index] = 5;
+    }
+  }
+  return palavra.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(string2) {
+  let palavra2 = string2.split('');
+  for (let index = 0; index < palavra2.length; index+=1) {
+    if(palavra2[index] == 1){
+      palavra2[index] = 'a';
+    }else if(palavra2[index] == 2){
+      palavra2[index] = 'e';
+    }else if(palavra2[index] == 3){
+      palavra2[index] = 'i';
+    }else if(palavra2[index] == 4){
+      palavra2[index] = 'o';
+    }else if(palavra2[index] == 5){
+      palavra2[index] = 'u';
+    }
+  }
+  return palavra2.join('');
 }
 
 // Desafio 10
