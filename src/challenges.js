@@ -19,9 +19,7 @@ function splitSentence(a = "go Trybe") {
 
 // Desafio 4
 function concatName(x = [", d", "e", "v"]) {
-  let numOne = x[2]
-  let numTwo = x[0]
-  return ; numOne.concat(numTwo);
+  return x[2].concat(x[0]);
 }
 
 // Desafio 5
