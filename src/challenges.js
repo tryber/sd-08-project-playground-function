@@ -29,12 +29,15 @@ function concatName(arrayNomes) {
   nomes += arrayNomes[0];
   return nomes;
 }
-console
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+let pontos = 0;
+function footballPoints(wins, ties) {
+  pontos = wins * 3;
+  pontos += ties;
+  return pontos;
 }
-
+footballPoints(4, 3 );
+console.log(pontos);
 // Desafio 6
 function highestCount() {
   // seu código aqui
