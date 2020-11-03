@@ -112,6 +112,7 @@ function techList(techs = [], name) {
 function generatePhoneNumber(numbers) {
   let counter = 0;
   let result = [];
+
   numbers.forEach((number, index) => {
     if (index == 0) {
       result.push("(");
@@ -162,7 +163,8 @@ function hydrate(string) {
   string.forEach(letter => {
     if (letter.match(/\d/)) counter += parseInt(letter);
   });
-  return counter + " copos de água";
+
+  return counter == 1? "1 copo de água" : counter + " copos de água";
 }
 
 
