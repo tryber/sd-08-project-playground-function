@@ -6,17 +6,19 @@ function compareTrue(bool1, bool2) {
   }
   return b;
 }
-let area = 0;
+
 // Desafio 2
+let area = 0;
 function calcArea(base, height) {
 area = (base * height) / 2;
   return area;
 }
-calcArea(5, 4);
-console.log(area);
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+let str = [];
+function splitSentence(string) {
+  str= string.split(' ');
+return str
 }
 
 // Desafio 4
