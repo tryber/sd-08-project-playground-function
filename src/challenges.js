@@ -55,7 +55,6 @@ function highestCount(numero) {
       maior = numero[i];  
       }
   }
-
   let cont = 0;
   for (let i = 0; i < numero.length; i += 1) {   
     if (numero[i] === maior) {
@@ -64,7 +63,7 @@ function highestCount(numero) {
     }  
     return cont;  
 }  
-console.log((highestCount([7, 2, 4, 5, 7, 5, 6 ,7])));
+console.log((highestCount([10, 10, 9, 9, 10])));
 
 
 
