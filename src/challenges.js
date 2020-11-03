@@ -174,13 +174,12 @@ function triangleCheck(lineA, lineB, lineC) {
   let somaLineB = (lineA + lineC);
   let somaLineC = (lineA + lineB);
 
-  if (lineA < somaLineA && lineA > lineA || lineB < somaLineB > lineB || lineC < somaLineC > lineC){
+  if (somaLineA > lineA || somaLineB > lineB || somaLineC > lineC){
     return true;
   }else {
     return false;
   }  
 }
-
 
 
 
