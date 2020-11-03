@@ -141,7 +141,11 @@ function generatePhoneNumber(numeros) {
   const ddd = numeroTelefone.slice(0, 2);
   const telefoneInicio = numeroTelefone.slice(2, 7);
   const telefoneFinal = numeroTelefone.slice(7, 11);
-  const numeroCompleto = `(${ddd})${telefoneInicio}-${telefoneFinal}`;
+  const numeroCompleto = `(${ddd}) ${telefoneInicio}-${telefoneFinal}`;
+
+  if (numeros.length !== 11) {
+    return "Array com tamanho incorreto.";
+  }
 
   if (numeroMaior9 || numeroRepetiu || numeroNegativo) {
     return "não é possível gerar um número de telefone com esses valores";
@@ -149,8 +153,6 @@ function generatePhoneNumber(numeros) {
 
   if (numeros.length === 11) {
     return numeroCompleto;
-  } else if (numeros.length !== 11) {
-    return "Array com tamanho incorreto.";
   }
 }
 
