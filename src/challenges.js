@@ -110,24 +110,17 @@ function techList(techs = [], name) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  let counter = 0;
-  let result = [];
-  let flag = 0;
-
+  let counter = 0, result = [], flag = 0;
   if (numbers.length != 11) return "Array com tamanho incorreto.";
-
   numbers.forEach((number, index) => {
-    if (number < 0 && number > 9) flag = 1;
-
+    if (number < 0 || number > 9) flag = 1;
     numbers.forEach(number2 => {
       if (number == number2) counter++;
       if (counter == 3) {
         flag = 1;
       }
     })
-
     counter = 0;
-
     if (index == 0) {
       result.push("(");
       result.push(number);
@@ -141,7 +134,6 @@ function generatePhoneNumber(numbers) {
       result.push(number);
     }
   })
-
   return flag == 1 ? "não é possível gerar um número de telefone com esses valores" : result.join("");
 }
 
