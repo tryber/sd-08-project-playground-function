@@ -183,14 +183,14 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC || lineB < lineA + lineC || lineC < lineA + lineB){
-    if(lineA > Math.abs(lineB - lineC) || lineB > Math.abs(lineA - lineC) || lineC > Math.abs(lineA - lineB)){
+  if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))){
     return true;
-    }
+  } else {
+    return false;
   }
   // seu código aqui
 }
-// console.log(triangleCheck(10, 14, 8))
+ //console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
 function hydrate(string) {
