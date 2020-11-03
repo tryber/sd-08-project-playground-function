@@ -132,40 +132,40 @@ function techList(techArray, seuNome) {
   let array = techArray.sort();
   let vazio = 'Vazio!';
   let saida = [];
-  if (techArray.length > 0) {
-    for (let key = 0; key < techArray.length; key += 1) {
-      let objeto = {};
-      objeto.tech = array[key];
-      objeto.name = seuNome;
-      saida.push(objeto);
-    }
-    return saida;
+  if (techArray.length === 0) {
+    return vazio;
   }
-  return vazio;
+  for (let key = 0; key < techArray.length; key += 1) {
+    let objeto = {};
+    objeto.tech = array[key];
+    objeto.name = seuNome;
+    saida.push(objeto);
+  }
+  return saida;
 }
 
 // Desafio 11
 function generatePhoneNumber(numerico) {
   let erro = 'Array com tamanho incorreto.';
   let impossivel = 'não é possível gerar um número de telefone com esses valores';
-  if (numerico.length === 11) {
-    let sorted = numerico.slice().sort();
-    for (let key = 0; key < numerico.length; key += 1) {
-      let letra = key;
-      let petra = key;
-      let anterior = (letra - 1);
-      let proximo = (petra + 1);
-      if (sorted[key] < 0 || sorted[key] > 9) {
-        return impossivel;
-      }
-      if (sorted[key] === sorted[anterior] && sorted[key] === sorted[proximo]) {
-        return impossivel;
-      }
-    }
-    let telefone = `(${numerico[0]}${numerico[1]}) ${numerico[2]}${numerico[3]}${numerico[4]}${numerico[5]}${numerico[6]}-${numerico[7]}${numerico[8]}${numerico[9]}${numerico[10]}`;
-    return telefone;
+  if (numerico.length != 11) {
+    return erro;
   }
-  return erro;
+  let sorted = numerico.slice().sort();
+  for (let key = 0; key < numerico.length; key += 1) {
+    let letra = key;
+    let petra = key;
+    let anterior = (letra - 1);
+    let proximo = (petra + 1);
+    if (sorted[key] < 0 || sorted[key] > 9) {
+      return impossivel;
+    }
+    if (sorted[key] === sorted[anterior] && sorted[key] === sorted[proximo]) {
+      return impossivel;
+    }
+  }
+  let telefone = `(${numerico[0]}${numerico[1]}) ${numerico[2]}${numerico[3]}${numerico[4]}${numerico[5]}${numerico[6]}-${numerico[7]}${numerico[8]}${numerico[9]}${numerico[10]}`;
+  return telefone;
 }
 
 // Desafio 12
