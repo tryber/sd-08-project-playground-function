@@ -202,13 +202,12 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  let result;
+  
   if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
-    result = 'true';
+    return true;
   } else {
-    result = 'false';
+    return false;
   }
-  return result;
 }
 
 // Desafio 13
