@@ -49,18 +49,19 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz(array) {
-  
+  let result = [];
     for (i = 0; i < array.length - 1; i += 1) {
       if (i % 3 === 0 && i % 5 === 0) {
-        return "fizzBuzz";
+        result.push ("fizzBuzz");
       } else if (i % 3 === 0) {
-        return "fizz";
+        result.push ("fizz");
       } else if (i % 5 === 0) {
-        return "buzz";
+        result.push ("buzz");
       } else {
-        return "bug!";
+        result.push ("bug!");
       }
     }
+    return result
 }
 
 
