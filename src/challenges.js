@@ -22,8 +22,12 @@ return str
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let nomes = "";
+function concatName(arrayNomes) {
+  nomes += arrayNomes[arrayNomes.length - 1];
+  nomes += ", ";
+  nomes += arrayNomes[0];
+  return nomes;
 }
 
 // Desafio 5
