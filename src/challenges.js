@@ -8,18 +8,14 @@ function compareTrue(a, b) {
 }
 
 // Desafio 2
-function calcArea(base, height) {
-calcArea(2, 6);
-return (base*height)/2
+function calcArea() {
+  
 }
   
 
 // Desafio 3
-function splitSentence(a) {
-let umaString = "go Trybe";
-umaString.split(' ');
-splitSentence(umaString);
-return splitSentence;
+function splitSentence() {
+  // seu código aqui
 }
 
 // Desafio 4
