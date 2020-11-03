@@ -16,10 +16,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(string, array) {
-  array =[]
-  
+function splitSentence(string) {
+  let array = string.split(" ");
+  return array;  
 }
+
 // Desafio 4
 function concatName(lista) {
   let ordemInversa = []
