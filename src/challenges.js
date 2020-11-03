@@ -33,7 +33,7 @@ console.log(concatName(['João', 'Carlito', 'Marques', 'do', 'Nascimento', 'Neto
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pointsTeam = (wins *= 3) + (ties *= 1)
+  let pointsTeam = (wins * 3) + (ties * 1)
   return pointsTeam
 }
 console.log(footballPoints(10, 12))
@@ -135,9 +135,18 @@ function decode(stringNumbers) {
 console.log(decode('Fl1m2ng4'))
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(technologies, name) {
+  if (technologies.length === 0) {
+    return 'Vazio!'
+  }
+  let sortedTechnologies = technologies.sort()
+  let technologiesList = []
+  for (let property in sortedTechnologies) {
+    technologiesList.push({ tech: technologies[property], name: name })
+  }
+  return technologiesList
 }
+console.log(techList(['JS', 'React', 'Python'], 'João'))
 
 // Desafio 11
 function generatePhoneNumber() {
