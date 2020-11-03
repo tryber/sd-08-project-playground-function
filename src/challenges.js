@@ -29,18 +29,26 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayDeStrings) {
+  return `${arrayDeStrings[arrayDeStrings.length - 1]}, ${arrayDeStrings[0]}`;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayDeNumeros) {
+  let arrayOrdenado = arrayDeNumeros.sort((a, b) => b - a);
+  let contador = 0;
+
+  for (let numero in arrayOrdenado) {
+    if (arrayOrdenado[numero] === arrayDeNumeros[0]) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
