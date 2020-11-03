@@ -27,12 +27,21 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let  points = (wins * 3) + ties;
+  let points = (wins * 3) + ties;
   return points;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(valores) {
+  let corrence = 0;
+  valores.sort(function (a, b) { return b - a });
+  let maior = valores[0];
+  /*for (i=0;i<=valores.length;i++){
+  //  if 
+
+  */
+
+
   // seu código aqui
 }
 
