@@ -37,8 +37,6 @@ function concatName(arrayOfStrings) {
 
 }
 
-concatName(arrayOfStrings);
-
 // Desafio 5
 
 function footballPoints(wins, ties) {
@@ -163,7 +161,34 @@ function techList(array, name) {
 
 
 
+
+
+
+
+
+
 // Desafio 11       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function lengthValidation(array){
+  return (array.length != 11) ? true : false;
+}
+
+function indexValidation(array){
+  let cont;
+  for(let index = 0; index < array.length; index+=1){
+    cont = 0
+    if(array[index] < 0 || array[index] > 9){
+      return true;
+    }
+    for(let index2 = 0; index2 < array.length; index2+=1){
+      if(array[index] === array[index2]){
+        cont+=1;
+      }
+    }
+    if(cont >= 3){
+      return true;
+    }
+  }
+}
 function takeTwo(array) {
   let two = '';
   for(let index = 0; index < 2; index+=1){
@@ -185,44 +210,22 @@ function takeFour(array) {
   }
   return four.split('').reverse().join('');
 }
-function arrayLengthValidation(array) {
-    return (array.length != 11) ? true : false;
-}
-function arrayIndexValidation(array){
-  let valorAtual;
-  let cont;
-  for(let index = 0; index < array.length; index+=1){
-    valorAtual = array[index];
-    cont = 0;
-    for(let index2 = 0; index2 < array.length; index2+=1){
-      if(array[index2] == valorAtual){
-        cont+=1;
-      } if(array[index2] < 0 || array[index] > 9) {
-        return true;
-      }
-    }
-  }
-  return ( cont >= 3) ? true : false;
-
-}
 function generatePhoneNumber(array) {
-  if(array === [] || arrayLengthValidation(array) == true){
-    console.log('Array com tamanho incorreto.');
-    return 'Array com tamanho incorreto.';
+
+  if(lengthValidation(array) == true){
+    console.log('Array com tamanho incorreto');
+    return 'Array com tamanho incorreto';
   }
-  if(arrayIndexValidation(array) == true){
+
+  if(indexValidation(array) == true){
     console.log('não é possível gerar um número de telefone com esses valores');
     return 'não é possível gerar um número de telefone com esses valores';
-  } else {
-    console.log(`(${takeTwo(array)}) ${takeFive(array)}-${takeFour(array)}`);
-    return `(${takeTwo(array)}) ${takeFive(array)}-${takeFour(array)}`;
   }
+
+  console.log(`(${takeTwo(array)}) ${takeFive(array)}-${takeFour(array)}`);
+  return `(${takeTwo(array)}) ${takeFive(array)}-${takeFour(array)}`;
+
 }
-
-generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]);
-
-
-
 
 // Desafio 12
 function triangleCheck() {
