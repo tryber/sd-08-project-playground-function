@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(varTrue, varFalse) {
   if (varTrue == true && varFalse == false) {
-    return(true); 
+    return("true"); 
   } else 
-  return(false);
+  return("false");
 }
 
 // Desafio 2
