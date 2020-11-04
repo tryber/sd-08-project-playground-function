@@ -80,7 +80,7 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
     // Desafio 9
     function encode(string) {
         let stringEncoDeco = string
-            for (i = 0; i < string - 1; i +=1) {
+            for (i = 0; i < string.lenght - 1; i +=1) {
                 if (i == "a") {
                     return 1;
                 } else if (i == "e") {
@@ -96,7 +96,7 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
     }
     function decode(string) {
         let stringEncoDeco = string
-        for (i = 0; i < string - 1; i+=1) {
+        for (i = 0; i < string.lenght - 1; i+=1) {
             if (1 == "a") {
                 return "a";
             } else if (2 == "e") {
