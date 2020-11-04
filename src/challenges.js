@@ -23,7 +23,7 @@ function splitSentence(string) {
 function concatName(array) {
   let lastItem = array[array.lenght -1];
   let firstItem = array[0];
-  let lastFirst = lastItem+ firstItem;
+  let lastFirst = lastItem + firstItem;
   return lastFirst;
 }
 
