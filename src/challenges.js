@@ -172,9 +172,17 @@ function testeValidade(arrayNumeros) {
  console.log(generatePhoneNumber([1, 1, 3, 6, 4, 9, 5, 6, 7, 8, 0]));
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)
+  && lineB < lineA + lineC && lineB > Math.abs(lineA - lineB)
+  && lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+    return true;
+  } else {
+    return false;
+  }
   // seu código aqui
 }
+// console.log(triangleCheck(10, 50, 8));
 
 // Desafio 13
 function hydrate() {
