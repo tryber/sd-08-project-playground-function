@@ -231,8 +231,23 @@ console.log(techList(["tec1", "tec2", "tec3"], "zin"))
 function generatePhoneNumber() {
 }
 // Desafio 12
-function triangleCheck() {
-}
+function triangleCheck(lineA,lineB,lineC) {
+
+  if(lineA < (lineB + lineC) && Math.abs(lineA > (lineB - lineC))){
+    return true
+  }
+  else{
+    return false
+  }
+
+
+   
+  }
+
+console.log(triangleCheck(10, 14, 8))
+
+
+
 // Desafio 13
 function hydrate() {
   // seu código aqui
