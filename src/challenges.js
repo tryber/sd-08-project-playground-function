@@ -191,16 +191,15 @@ function techList(techArray, namePar) {
 
   if (techArray.length == 0) {
     return 'Vazio!';
-  } else {
-    // Running through the techArray
-    for (let tec = 0; tec < techArray.length; tec += 1) {
-      list.push({
-        tech: sortedArray[tec],
-        name: namePar,
-      });
-    }
-    return list;
   }
+  // Running through the techArray
+  for (let tec = 0; tec < techArray.length; tec += 1) {
+    list.push({
+      tech: sortedArray[tec],
+      name: namePar,
+    });
+  }
+  return list;
 }
 
 // Desafio 11
@@ -221,50 +220,49 @@ function generatePhoneNumber(array11) {
 
   if (array11.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else {
-    // Running through the array11
-    for (let currentNum = 0; currentNum < array11.length; currentNum += 1) {
-      // Reseting the counter in each iteration
-      repCounter = 0;
+  }
 
-      // If the current number is lower or higher than the requested
-      if (array11[currentNum] < 0 || array11[currentNum] > 9) {
-        // Returns an error
-        return 'não é possível gerar um número de telefone com esses valores';
-        break;
-      } else {
-        // Taking each array11's number to be compared
-        for (let compareNum = 0; compareNum < array11.length; compareNum += 1) {
-          // If current number matches with the number compard to
-          if (array11[currentNum] === array11[compareNum]) {
-            repCounter += 1;
-          }
-        }
-      }
+  // Running through the array11
+  for (let currentNum = 0; currentNum < array11.length; currentNum += 1) {
+    // Reseting the counter in each iteration
+    repCounter = 0;
 
-      if (repCounter >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
+    // If the current number is lower or higher than the requested
+    if (array11[currentNum] < 0 || array11[currentNum] > 9) {
+      // Returns an error
+      return 'não é possível gerar um número de telefone com esses valores';
+      break;
+    }
+    // Taking each array11's number to be compared
+    for (let compareNum = 0; compareNum < array11.length; compareNum += 1) {
+      // If current number matches with the number compard to
+      if (array11[currentNum] === array11[compareNum]) {
+        repCounter += 1;
       }
     }
 
-    // On the following, I used the concepts learned here:
-    // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/slice
-
-    // Picking the area code
-    ddd = numNoMask.slice(0, 2);
-
-    // Picking the left half of the phone number
-    leftNumber = numNoMask.slice(2, 7);
-
-    // Picking the right half of the phone number
-    rightNumber = numNoMask.slice(7, 11);
-
-    // Applying the telephone mask to the number
-    maskedNumber = `(${ddd}) ${leftNumber}-${rightNumber}`;
-
-    // Returning the masked telephone number
-    return maskedNumber;
+    if (repCounter >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
   }
+
+  // On the following, I used the concepts learned here:
+  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+
+  // Picking the area code
+  ddd = numNoMask.slice(0, 2);
+
+  // Picking the left half of the phone number
+  leftNumber = numNoMask.slice(2, 7);
+
+  // Picking the right half of the phone number
+  rightNumber = numNoMask.slice(7, 11);
+
+  // Applying the telephone mask to the number
+  maskedNumber = `(${ddd}) ${leftNumber}-${rightNumber}`;
+
+  // Returning the masked telephone number
+  return maskedNumber;
 }
 
 // Desafio 12
@@ -288,10 +286,9 @@ function triangleCheck(lineA, lineB, lineC) {
     lineC <= Math.abs(lineA - lineB)
   ) {
     return false;
-  } else {
-    // If it passes all the checks, returns true
-    return true;
   }
+  // If it passes all the checks, returns true
+  return true;
 }
 
 // Desafio 13
