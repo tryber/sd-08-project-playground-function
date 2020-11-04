@@ -1,3 +1,28 @@
+// Desafio 1
+function compareTrue(bool1, bool2) {
+  if(bool1 === true && bool2 === true){
+    return true; 
+  }else{
+    return false;
+  }
+}
+console.log(compareTrue(true, true));
+// Desafio 2
+function calcArea(base, height) {
+  let areaTriangulo;
+  areaTriangulo = (base * height) / 2;
+  return areaTriangulo;
+}
+console.log(calcArea(4,6));
+// Desafio 3
+//Bibliografia: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array.
+function splitSentence(string) {
+  let dividido = [];
+  dividido = string.split(" ");
+  return dividido;
+}
+console.log(splitSentence("ola povo"));
+// Desafio 4
 function concatName(array) {
   let invertido = [];
   for(let i = 0; i < array.length; i++){
@@ -20,10 +45,10 @@ function highestCount(arrayNumeros) {
     if (arrayNumeros[i] > maior){
       maior = arrayNumeros[i];
     }
-  }
-  for (let i = 0; i < arrayNumeros.length; i ++) {
-    if (arrayNumeros[i] == maior){
+    for (let i = 0; i < arrayNumeros.length; i ++) {
+      if (arrayNumeros[i] == maior){
       vezes += 1;
+      }
     }
   }
   return vezes;
