@@ -59,8 +59,8 @@ function highestCount(numero) {
   }
   return cont;
 }
-(highestCount([10, 10, 11, 9, 10]));
-console.log(`O maior valor do meu array é o ${numMaior}, e ele se repete ${cont} vezes`);
+console.log((highestCount([10, 10, 11, 11, 10])));
+
 
 // Desafio 7
 function catAndMouse() {
