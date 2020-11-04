@@ -17,24 +17,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(param) {
-
-  let sentence = [];
-  let palavra = "";
+  let vetor = [];
+  vetor = param.split(' ');
   
-  for (index = 0; index < param.length; index++){
-    for(index2 = index; param[index2] != " "; index2++){
-      if(index2 != 0){
-        index2 ++;
-      }
-      // palavra += param[index2];
-    } 
-    sentence.push(palavra);
-    palavra = "";
+  return vetor;
   }
-  param.split(' ');
-  return sentence;
-}
-console.log(splitSentence("go Trybe"));
+// console.log(splitSentence("go Trybe"));
 
 // Desafio 4
 function concatName(param) {
@@ -79,7 +67,6 @@ function highestCount(param) {
 // console.log(highestCount(vetor));
 
 // Desafio 7
-
 function catAndMouse(mouse, cat1, cat2) {
     
 let distGato1 = mouse - cat1;
@@ -148,7 +135,6 @@ function encode(param) {
 }
 // let teste = "h3 th2r2!";
 // console.log(decode(teste));
-
 function decode(param1) {
 
   let texto = param1;
@@ -164,6 +150,8 @@ function decode(param1) {
       texto = texto.replace('4', 'o');;
     }else if (texto[index] == "5"){
       texto[index].replace("5", "u");
+    }else{
+      
     }
   }
   return texto;
