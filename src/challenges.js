@@ -300,7 +300,7 @@ function hydrate(drinkString) {
   // Runnig across drinkString
   for (let char = 0; char < drinkString.length; char += 1) {
     // Converting the current char into an Integer
-    let currentChar = parseInt(drinkString[char]);
+    let currentChar = parseInt(drinkString[char], 10);
 
     // If converted char is a number
     if (!isNaN(currentChar)) {
