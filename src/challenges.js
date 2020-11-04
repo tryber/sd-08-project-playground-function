@@ -30,26 +30,65 @@ function concatName(arrayDeString) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  // seu código aqui
   resultado = wins * 3 + ties
   return resultado
 }
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+let maior = 0
+let contador = 0
+
+for ( i in array) {
+  if (array[i] > maior) {
+    maior = array[i]
+  }
+}
   
+for ( j in array) {
+  if ( maior === array[j])
+  contador += 1
+}
+return contador
+
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Xmouse = Math.abs(cat1 - mouse)
+  let cat2Xmouse = Math.abs(cat2 - mouse)
+
+  if (cat1Xmouse < cat2Xmouse) {
+    return "cat1"
+    
+  }else if (cat2Xmouse < cat1Xmouse) {
+    return "cat2"
+    
+  } else {
+    return "os gatos trombam e o rato foge"
+  } 
+
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let resultado = []
+
+    for (i in array) {
+      if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+        resultado.push("fizzBuzz")
+
+      } else if (array[i] % 3 === 0){
+        resultado.push("fizz")
+
+      } else if(array[i] % 5 === 0) {
+        resultado.push("buzz")
+
+      } else {
+        resultado.push("bug")
+      }
+    } return resultado
 }
 
 // Desafio 9
