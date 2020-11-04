@@ -192,9 +192,9 @@ function hydrate(string) {
   }
 
   if (cups === 1) {
-    return cups + 'copo de água'
+    return cups + ' copo de água'
   }
-  return cups + " copos de água "
+  return cups + ' copos de água'
 
 }
 // console.log(hydrate('1'))
