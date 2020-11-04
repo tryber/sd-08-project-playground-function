@@ -50,7 +50,6 @@ function fizzBuzz(param1 = [1, 2, 5, 8, 9, 12, 6984]) {
     } else {
       stringArray.push("bug!");
     }
-  }
   return stringArray;
 }
 
