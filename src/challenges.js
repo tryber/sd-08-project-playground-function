@@ -2,6 +2,8 @@
 function compareTrue(bool1, bool2) {
   if (bool1 && bool2 === true) {
     return true;
+  } else if (bool1 && bool2 === false) {
+    return false;
   } else {
     return false;
   }
@@ -90,7 +92,7 @@ function fizzBuzz(numArr) {
 // Desafio 9
 function encode(inputString) {
   let encodeString = inputString.split('')
-  for (let index = 0; index < inputString.length-1; index += 1) {
+  for (let index = 0; index < inputString.length; index += 1) {
     switch (encodeString[index]) {
       case 'a':
         encodeString[index] = '1';
@@ -142,8 +144,19 @@ function decode(outputString) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techList, name) {
+  let sortArr = techList.sort();
+  let objectTechList = [];
+  for (let index = 0; index = techList.length; index += 1) {
+    objectTechList.push({
+      tech: sortArr[index],
+      name: name
+    });
+  }
+  if (objectTechList.length == 0) {
+    return ("Vazio!");
+  }
+  return objectTechList;
 }
 
 // Desafio 11
