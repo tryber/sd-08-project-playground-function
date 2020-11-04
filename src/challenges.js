@@ -1,42 +1,85 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(param1, param2) {
+ if (param1 === true && param2 === true) {
+   return true;
+} else {
+  return false;
 }
+}
+compareTrue (false, true)
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+ let areaTriangulo = ((base * height)/2);
+ return areaTriangulo;
 }
+calcArea(50, 10)
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  return sentence.split(" ");
 }
+splitSentence("Yago Rocha de Souza Lima");
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(nomes) {
+ let lastName = nomes[nomes.length - 1];
+ let resultado = lastName + ',' + ' ' + nomes[0];
+  return resultado;
+ }
+concatName(['Patricia', 'Carlin', 'Martins']);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
+  }
+footballPoints(10, 5);
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let repHigher = 0;
+let higherValue = Math.max(...numbers);
+for (index = 0; index < numbers.length; index += 1){
+  if (numbers[index] === higherValue){
+    repHigher += 1;
+  }
 }
+return repHigher;
+}
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+ let distancia1 = Math.abs(cat1 - mouse);
+ let distancia2 = Math.abs(cat2 - mouse);
+ if (distancia1 < distancia2){
+   return 'cat1';
+ }else if (distancia2 < distancia1){
+   return 'cat2'
+ }else {
+   return 'os gatos trombam e o rato foge'
+ }
 }
+console.log(catAndMouse(-10,-50,-60));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+console.log(array);
+let showWord = [];
+  for (index = 0; index < array.length; index += 1){
+  if (array[index] % 3 === 0 && array[index] % 5 === 0){
+    showWord[index] = 'fizzBuzz';
+  }else if (array[index] % 5 === 0){
+    showWord[index] = 'buzz';
+  }else if (array[index] % 3 === 0){
+    showWord[index] = 'fizz';
+  }else {
+    showWord[index] = 'bug!'
+  }
 }
+return showWord;  
+}
+console.log(fizzBuzz([2,15,7,9,45]));
 
 // Desafio 9
 function encode() {
