@@ -134,22 +134,24 @@ function generatePhoneNumber(numbers) {
   let index;
   for (index in numbers) {
     function repetition(number) {
-      return number == numbers[index];
-    }
-    let num = numbers.filter(repetition)
-    if (numbers.length !== 11) {
-    return 'Array com tamanho incorreto.';
-    }
-    else if (numbers[index] < 0 || numbers[index] > 9 || num.length >= 3) {
-    return 'não é possível gerar um número de telefone com esses valores';
+    return number == numbers[index];
     }
   }
-  return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
+  let num = numbers.filter(repetition)
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  else if (numbers[index] < 0 || numbers[index] > 9 || num.length >= 3) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  else {
+    return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
+  }
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  
 }
 
 // Desafio 13
