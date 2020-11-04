@@ -65,16 +65,16 @@ console.log(footballPoints(9, 5))
 function highestCount(seq) {
 
   let maior = Math.max.apply(null, seq)
-  
+
   let contador = 0;
- 
+
   for (let i = 0; i < seq.length; i++) {
     if (seq[i] == maior) {
-      contador += 1 ;
+      contador += 1;
     }
   }
 
-return contador
+  return contador
 
 }
 
@@ -228,45 +228,82 @@ function techList(tec, name) {
 console.log(techList(["tec1", "tec2", "tec3"], "zin"))
 
 // Desafio 11
-function generatePhoneNumber() {
-}
-// Desafio 12
-function triangleCheck(lineA,lineB,lineC) {
+function generatePhoneNumber(array) {
 
-  if(lineA < (lineB + lineC) && Math.abs(lineA > (lineB - lineC))){
-    return true
-  }
-  else{
-    return false
+
+  if (array.length != 11) {
+    return "Array com tamanho incorreto"
   }
 
 
-   
+  for (let i = 0; i < array.length; i++) {
+    let cont = 0;
+    for (let i1 = 0; i1 < array.length; i1++) {
+      if (array[i] == array[i1]) {
+        cont = cont + 1
+      }
+
+
+      
+       if (array[i] < 0 || array[i] > 9 || cont >= 3) {
+
+        return "não é possível gerar um número de telefone com esses valores"
+
+      }
+      
+        
+    
+
+    }
+    return  "(" + array[0] + array[1] + ")" + " " + array[2] + array[3] + array[4] + array[5] + array[6] + "-" + array[7] + array[8] + array[9]+ array[10]
+
+
+
+  }
+}
+
+  //funcao e $
+
+  console.log(generatePhoneNumber([3, 4, 8, 4, 3, 6, 5, 8, 9, 0, 1]))
+  
+  // Desafio 12
+  function triangleCheck(lineA, lineB, lineC) {
+
+    if (lineA < (lineB + lineC) && Math.abs(lineA > (lineB - lineC))) {
+      return true
+    }
+    else {
+      return false
+    }
+
+
+
   }
 
-console.log(triangleCheck(10, 14, 8))
+  console.log(triangleCheck(10, 14, 8))
 
 
 
-// Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+  // Desafio 13
+  function hydrate() {
+    // seu código aqui
+  }
 
 
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  generatePhoneNumber,
-  techList,
-  highestCount,
-  hydrate,
-  splitSentence,
-  triangleCheck,
-}
+  module.exports = {
+    calcArea,
+    catAndMouse,
+    compareTrue,
+    concatName,
+    decode,
+    encode,
+    fizzBuzz,
+    footballPoints,
+    generatePhoneNumber,
+    techList,
+    highestCount,
+    hydrate,
+    splitSentence,
+    triangleCheck,
+
+  }
