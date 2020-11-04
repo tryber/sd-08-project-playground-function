@@ -145,7 +145,14 @@ function decode(outputString) {
 
 // Desafio 10
 function techList(techList, name) {
-  // seu código aqui
+  if (techList.length === 0) {
+    return 'Vazio!';
+  }
+  const objectList = [];
+  techList.sort().forEach((technology) => {
+    objectList.push({ tech: technology, name});
+  });
+  return objectList;
 }
 
 // Desafio 11
@@ -154,7 +161,7 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
 }
 
