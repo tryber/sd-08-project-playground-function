@@ -145,18 +145,7 @@ function decode(outputString) {
 
 // Desafio 10
 function techList(techList, name) {
-  let sortArr = techList.sort();
-  let objectTechList = [];
-  for (let index = 0; index = techList.length; index += 1) {
-    objectTechList.push({
-      tech: sortArr[index],
-      name: name
-    });
-  }
-  if (objectTechList.length == 0) {
-    return ("Vazio!");
-  }
-  return objectTechList;
+  // seu código aqui
 }
 
 // Desafio 11
