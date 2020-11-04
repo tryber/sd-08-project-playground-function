@@ -176,9 +176,15 @@ function triangleCheck(lineA, lineB, lineC) {
 triangleCheck(10, 14, 8);
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let soma = 0;
+  let arr = string.replace(/\D/gim, '');
+  for (let i = 0; i < arr.length; i += 1) {
+    soma += parseInt(arr[i]);
+  }
+  return `${soma} copos de água`;
 }
+hydrate('1 copo de catuaba, 1 cervejas e 1 copo de vinho');
 
 module.exports = {
   calcArea,
