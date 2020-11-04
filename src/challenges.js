@@ -218,29 +218,24 @@ function takeFour(array) {
   return four.split('').reverse().join('');
 }
 function generatePhoneNumber(array) {
-
   if(lengthValidation(array) == true){
-    console.log('Array com tamanho incorreto.');
     return 'Array com tamanho incorreto.';
   }
-
   if(indexValidation(array) == true){
-    console.log('não é possível gerar um número de telefone com esses valores');
     return 'não é possível gerar um número de telefone com esses valores';
   }
-
-  console.log(`(${takeTwo(array)}) ${takeFive(array)}-${takeFour(array)}`);
   return `(${takeTwo(array)}) ${takeFive(array)}-${takeFour(array)}`;
-
 }
 
-generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]);
 
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let A_B = (lineA + lineB) > lineC;
+  let A_C = (lineA + lineC) > lineB;
+  let B_C = (lineB + lineC) > lineA;
+  return (A_B && A_C && B_C);
 }
 
 // Desafio 13
