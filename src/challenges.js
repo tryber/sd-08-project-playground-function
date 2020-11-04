@@ -41,12 +41,19 @@ function highestCount(arr) {
   return countValueInArray(greaterValueInArray(arr), arr);
 }
 
-const relativeDistanceEval = function (target, hunter1, hunter2) {
+// const relativeDistanceEval = function (target, hunter1, hunter2) {
+//   return {
+//     hunter1: Math.abs(hunter1 - target),
+//     hunter2: Math.abs(hunter2 - target),
+//   };
+// };
+
+const relativeDistanceEval = (target, hunter1, hunter2) => {
   return {
     hunter1: Math.abs(hunter1 - target),
     hunter2: Math.abs(hunter2 - target),
   };
-};
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -72,6 +79,7 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
+
 function encode(text) {
   return text
     .split('a')
