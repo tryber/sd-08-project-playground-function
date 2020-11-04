@@ -8,7 +8,7 @@ function compareTrue(x,y) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let = triangleArea = (base * height) / 2;
+  let triangleArea = (base * height) / 2;
   return triangleArea;
 
 }
