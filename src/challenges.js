@@ -25,16 +25,9 @@ Lembre-se que a área de um triângulo é calculada através da seguinte fórmul
 
 // Desafio 3
 function splitSentence(string) {
-  let array = [];
-  for(let i = 0; i < string.length; i+=1){
-  if(string[i] === ' ' || i == string.length - 1){
-    let cut = string.slice(i);
-    array[cut];
-  }
-  }
+  let array = string.split(' ')
   return array;
 }
-console.log(splitSentence('go trybe'))
 /***3 - Dividindo a frase**
 -
 Escreva uma função com o nome `splitSentence`, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
@@ -42,9 +35,21 @@ Escreva uma função com o nome `splitSentence`, a qual receberá uma string e r
 Exemplo: se a função receber a string `"go Trybe"`, o retorno deverá ser `['go', 'Trybe']`. */
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let newArray = [];
+  for(let i = 0; i < array.length; i+=1){
+    if(i == 0 || i == array.length - 1){
+      newArray.push(array[i])
+    }
+  }
+  return newArray;
 }
+
+/***4 - Concatenação de strings**
+-
+Escreva uma função com o nome `concatName` que, ao receber uma array de strings, retorne uma string com o formato `'ÚLTIMO ITEM, PRIMEIRO ITEM'`, independente do tamanho da array.
+
+Isso quer dizer que, caso o parâmetro passado para `concatName` seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar `Paolillo, Lucas`. */
 
 // Desafio 5
 function footballPoints() {
