@@ -78,7 +78,7 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(str) {
   let newStr = str;
-  for(let x =0;x<newStr.length;x++){
+  for(let x =0;x<newStr.length;x += 1){
     if(newStr[x] == 'a'){
       newStr = newStr.replace(/a/g, '1');
     } else if(newStr[x] == 'e'){
@@ -96,8 +96,22 @@ function encode(str) {
 }
 
 
-function decode() {
-  // seu código aqui
+function decode(str) {
+  let newStr = str;
+  for(let x =0;x<newStr.length;x += 1){
+    if(newStr[x] == '1'){
+      newStr = newStr.replace(/1/g, 'a');
+    } else if(newStr[x] == '2'){
+      newStr = newStr.replace(/2/g, 'e');
+    } else if(newStr[x] == '3'){
+      newStr = newStr.replace(/3/g, 'i');
+    } else if(newStr[x] == '4'){
+      newStr = newStr.replace(/4/g, 'o');
+    } else if(newStr[x] == '5'){
+      newStr = newStr.replace(/5/g, 'u');
+    }
+  }
+  return newStr;
 }
 
 // Desafio 10
