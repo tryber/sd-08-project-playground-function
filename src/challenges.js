@@ -76,8 +76,9 @@ function decode() {
 // Desafio 10
 function techList(tech, name) {
   let techList = [];
-  if (tech == null && name == null) {
-    return("Vazio!");
+  if (tech == null) {
+    techList = "Vazio!";
+    return techList;
   }
   tech.sort();
   for (let i = 0; i < tech.length; i += 1) {
