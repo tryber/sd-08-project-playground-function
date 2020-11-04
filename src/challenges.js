@@ -52,16 +52,18 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse() {
   mouse = 1
-  cat1 = 3
+  cat1 = 30
   cat2 = 10
   
   distanciaCat1 = cat1 - mouse;
   distanciaCat2 = cat2 - mouse;
 
-  let resultado
   if (distanciaCat1 > distanciaCat2) {
     return cat2
-  } console.log('cat2')
+  } else if (distanciaCat1 === distanciaCat2) {
+    console.log("os gatos trombam e o rato foge")
+  }
+  return cat1
 }
 
 // Desafio 8
