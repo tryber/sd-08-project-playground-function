@@ -62,13 +62,37 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let result = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      result.push("fizzBuzz");
+    } else if (array[i] % 3 === 0) {
+      result.push("fizz");
+    } else if (array[i] % 5 === 0) {
+      result.push("buzz");
+    } else {
+      result.push("bug!");
+    }
+  }
+  return result;
+}
+// Desafio 9
+function encode(string) {
+  let stringSwap = { a: "1", e: "2", i: "3", o: "4", u: "5" };
+  let encondeResult = "";
+  encondeResult = string.replace(/[aeiou]/gi, (m) => stringSwap[m]);
+
+  return encondeResult;
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+// Solução encontrada no Stackoverflow utilizando String.prototype.replace()
+function decode(string) {
+  let stringSwap = { 1: "a", 2: "e", 3: "i", 4: "o", 5: "u" };
+  let encondeResult = "";
+  encondeResult = string.replace(/[12345]/gi, (m) => stringSwap[m]);
+
+  return encondeResult;
 }
 function decode() {
   // seu código aqui
