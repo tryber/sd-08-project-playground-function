@@ -77,7 +77,22 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(str) {
+  let newStr = str;
+  for(let x =0;x<newStr.length;x++){
+    if(newStr[x] == 'a'){
+      newStr = newStr.replace(/a/g, '1');
+    } else if(newStr[x] == 'e'){
+      newStr = newStr.replace(/e/g, '2');
+    } else if(newStr[x] == 'i'){
+      newStr = newStr.replace(/i/g, '3');
+    } else if(newStr[x] == 'o'){
+      newStr = newStr.replace(/o/g, '4');
+    } else if(newStr[x] == 'u'){
+      newStr = newStr.replace(/u/g, '5');
+    }
+  }
   
+  return newStr;
 }
 
 
