@@ -80,18 +80,23 @@ Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto
 
 // Desafio 6
 function highestCount(array) {
-  let repetitionArray = [];
-  let repCount = 0
+  let counts = {}; //Criado um objeto vazio para abrigar os itens que se repetem como chave e a quantidade de repetições como valor.
+  let timesRepeated = []; //Esse array conterá a quantidade de vezes repetida  e será sorted de forma decrescente.
   for(let i = 0; i < array.length; i+=1){
-    let comp = array[i];
-    if(comp === array[i]){
-    repCount++
+    if(counts[array[i]]){
+      counts[array[i]]+=1
+    }else{
+      counts[array[i]]=1;
+    }
+  }  for (const prop in counts) {
+    if (counts[prop]>=2) { // Essa condição assegura que somente itens repetidos entrem no array.
+      timesRepeated.push(counts[prop]);
+    }
   }
-  repetitionArray.push(repCount);
-}repetitionArray.sort(function(a, b){return b - a})
-return repetitionArray
+  timesRepeated.sort((a,b) => b-a) //O array que abriga a quantidade de repetições é organizado de forma decrescente
+  return timesRepeated[0] // O resultado da função é o primeiro item do array.
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+
 /***6 - Repetição do maior número**
 -
 Escreva uma função chamada `highestCount` que, ao receber uma array de números, retorne  a quantidade de vezes que o maior deles se repete.
