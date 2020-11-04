@@ -1,17 +1,18 @@
-function catAndMouse(mouse, cat1, cat2) {
-  let cat1Xmouse = Math.abs(cat1 - mouse)
-  let cat2Xmouse = Math.abs(cat1 - mouse)
+function fizzBuzz(array) {
+  let resultado = []
 
-  if (cat1Xmouse < cat2Xmouse) {
-    return "cat1"
-    console.log("cat1")
-  }else if (cat2Xmouse < cat1Xmouse) {
-    return "cat2"
-    console.log("cat2")
-  } else {
-    return "os gatos trombam e o rato foge"
-    console.log("os gatos trombam e o rato foge")
-  }
-  
+    for (i in array) {
+      if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+        resultado.push("fizzBuzz")
 
-} catAndMouse(5,3,8)
+      } else if (array[i] % 3 === 0){
+        resultado.push("fizz")
+
+      } else if(array[i] % 5 === 0) {
+        resultado.push("buzz")
+
+      } else {
+        resultado.push("bug")
+      }
+    } return resultado
+} fizzBuzz([2, 15, 7, 9, 45])

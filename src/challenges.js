@@ -40,17 +40,17 @@ function highestCount(array) {
 let maior = 0
 let contador = 0
 
-for ( i in array) {
-  if (array[i] > maior) {
-    maior = array[i]
+  for ( i in array) {
+    if (array[i] > maior) {
+      maior = array[i]
+    }
   }
-}
-  
-for ( j in array) {
-  if ( maior === array[j])
-  contador += 1
-}
-return contador
+    
+  for ( j in array) {
+    if ( maior === array[j])
+    contador += 1
+  }
+  return contador
 
 }
 
@@ -86,7 +86,7 @@ function fizzBuzz(array) {
         resultado.push("buzz")
 
       } else {
-        resultado.push("bug")
+        resultado.push("bug!")
       }
     } return resultado
 }
