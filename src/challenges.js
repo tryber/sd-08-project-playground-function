@@ -5,7 +5,6 @@ function compareTrue(valor1, valor2) {
   } 
     return false;
 }
-console.log(compareTrue(false, true))
 
 // Desafio 2
 function calcArea(base, height) {
@@ -32,10 +31,23 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
- //seu código aqui
+function highestCount(max) {
+ let number = max[0];
+ let contador = 0;
+ for (let n = 0; n < max.length; n += 1){
+   if (max[n] > number){
+     number = max[n];
+   }
+   return number;
+ }
+ 
+ for (let c = 0; c < max.length; c += 1){
+   if (max[c] == number){
+     contador += 1;
+   }
+   return contador;
+ }
 }
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -72,31 +84,30 @@ function fizzBuzz(result) {
 function encode(cripto) {
   let cripto = '';
   for (let v = 0; v < cripto.length; v += 1)
-  if (v == "a"){
+  if (cripto[v] == "a"){
     cripto.push(1);
-  } else if (v == "e"){
+  } else if (cripto[v] == "e"){
     cripto.push(2);
-  } else if (v == "i"){
+  } else if (cripto[v] == "i"){
     cripto.push(3);
-  } else if (v == "o"){
+  } else if (cripto[v] == "o"){
     cripto.push(4);
-  } else (v == "u")
+  } else (cripto[v] == "u")
     cripto.push(5);
   }
-  console.log(encode("Hello World"))
 
 function decode() {
   let revert = '';
   for (let n = 0; n < revert.length; n += 1)
-    if (n == 1){
+    if (revert[n] == 1){
     revert.push("a");
-  } else if (n == 2){
+  } else if (revert[n] == 2){
     revert.push("e");
-  } else if (n == 3){
+  } else if (revert[n] == 3){
     revert.push("i");
-  } else if (n == 4){
+  } else if (revert[n] == 4){
     revert.push("o");
-  } else (n == 5)
+  } else (revert[n] == 5)
     revert.push("u");
   }
 
