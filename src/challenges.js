@@ -1,14 +1,10 @@
 // Desafio 1
-// let comprar = true;
-// let pagar = true;
 
 function compareTrue(comprar, pagar) {
   // seu código aqui
-  if (comprar === true && pagar === true) {
-    return true;
-  } return false;
+  if (comprar && pagar) return true;
+  return false;
 }
-// console.log (compareTrue(comprar, pagar));
 
 // Desafio 2
 // let base = 2;
