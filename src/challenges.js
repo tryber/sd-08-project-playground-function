@@ -88,7 +88,6 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-let xablau = "Fala aee, galera do mau!"
 function encode(alterar) {
     let resposta = alterar.replace ('a', 1);
     let resposta1 = resposta.replace ('e', 2);
@@ -98,8 +97,7 @@ function encode(alterar) {
     return resposta4;
     } 
 
-    console.log(encode(xablau))
-
+    
 function decode() {
   // seu código aqui
 }
@@ -107,16 +105,17 @@ function decode() {
 // Desafio 10
 function techList(listaTech, nome) {    
   let resposta = []
-  if (listaTech.length === 0) {
+  let arrayOrdem = listaTech.sort ()
+    if (listaTech.length === 0) {
     return "Vazio!";
   } else 
     for (let i = 0; i < listaTech.length; i += 1) {
       let objeto = {};  
-      objeto.tech = listaTech[i];
+      objeto.tech = arrayOrdem[i];
       objeto.name = nome;
-      resposta.push (objeto)
-
-  } return resposta 
+      resposta.push (objeto) 
+      
+  }   return resposta
 }      
 // Desafio 11
 function generatePhoneNumber() {
