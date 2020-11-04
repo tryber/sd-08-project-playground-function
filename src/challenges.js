@@ -104,11 +104,43 @@ function fizzBuzz(numbers) {
 console.log(fizzBuzz([10, 2, 3, 14, 16, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(numbers) {
+  let encodeString = "";
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] === "a") {
+      encodeString += "1";
+    } else if (numbers[i] === "e") {
+      encodeString += "2";
+    } else if (numbers[i] === "i") {
+      encodeString += "3";
+    } else if (numbers[i] === "o") {
+      encodeString += "4";
+    } else if (numbers[i] === "u") {
+      encodeString += "5";
+    } else {
+      encodeString += numbers[i];
+    }
+  }
+  return encodeString;
 }
-function decode() {
-  // seu código aqui
+function decode(letters) {
+  let encodeString = "";
+  for (let i = 0; i < letters.length; i += 1) {
+    if (letters[i] === "1") {
+      encodeString += "a";
+    } else if (letters[i] === "2") {
+      encodeString += "e";
+    } else if (letters[i] === "3") {
+      encodeString += "i";
+    } else if (letters[i] === "4") {
+      encodeString += "o";
+    } else if (letters[i] === "5") {
+      encodeString += "u";
+    } else {
+      encodeString += letters[i];
+    }
+  }
+  return encodeString;
 }
 
 // Desafio 10
