@@ -204,20 +204,19 @@ function generatePhoneNumber(arrayNum) {
 function triangleCheck(lineA, lineB, lineC) {
 
     let verificacaolineA = lineA < lineB + lineC &&
-        lineA > Math.abs(lineB - lineC);
+        (lineA > Math.abs(lineB - lineC));
     let verificacaolineB = lineB < lineA + lineC &&
-        lineB > Math.abs(lineA - lineC);
+        (lineB > Math.abs(lineA - lineC));
     let verificacaolineC = lineC < lineB + lineA &&
-        lineC > Math.abs(lineA - lineB);
+        (lineC > Math.abs(lineA - lineB));
 
 
 
-    (verificacaolineA && verificacaolineB && verificacaolineC)
-    return true;
+    return verificacaolineA && verificacaolineB && verificacaolineC;
 
 }
 
-console.log(triangleCheck(40, 3, 1));
+
 
 // Desafio 13
 function hydrate() {
