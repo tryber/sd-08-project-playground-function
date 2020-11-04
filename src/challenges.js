@@ -231,7 +231,6 @@ function generatePhoneNumber(array11) {
     if (array11[currentNum] < 0 || array11[currentNum] > 9) {
       // Returns an error
       return 'não é possível gerar um número de telefone com esses valores';
-      break;
     }
     // Taking each array11's number to be compared
     for (let compareNum = 0; compareNum < array11.length; compareNum += 1) {
