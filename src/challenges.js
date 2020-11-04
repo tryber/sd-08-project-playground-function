@@ -143,8 +143,8 @@ console.log((decode('s1m52l r1m4s c1mp4s')))
 function techList(tecnologias, name) {
   let objetos = [];
   let tecnologias_ordem = tecnologias.sort()
-  if(tecnologias_ordem == []){
-    objetos = "Vazio!"
+  if(tecnologias.length == 0){
+    objetos = 'Vazio!'
   }else{
     for(i=0; i < tecnologias_ordem.length; i++ ){
       objetos[i] = {
