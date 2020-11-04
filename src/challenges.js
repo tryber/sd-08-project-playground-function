@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === true && b === true ) {
+  if (a === true && b === true) {
     return true;
   } else {
     return false;
@@ -8,18 +8,18 @@ function compareTrue(a, b) {
 }
 
 // Desafio 2
-function calcArea(base = 10, height = 50){
-return (base * height) / 2;
+function calcArea(base = 10, height = 50) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(a = "go Trybe") {
- return a.split(" ");
+  return a.split(" ");
 }
 
 // Desafio 4
 function concatName(param = ["tudo bem?", "sei la", "como vai?", "oi"]) {
-  return [param[param.length-1], param[0]].join(", ");
+  return [param[param.length - 1], param[0]].join(", ");
 }
 
 // Desafio 5
@@ -38,19 +38,21 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz(param1 = []) {
-  for (let i = 1; i <= 25; i++) {
-    param1.push(i)
-  if ((param1 % 3 === 0) && (param1 % 5 === 0)){
-    return "fizzBuzz";
-    } else if (param1 % 3 === 0) {
-       return "fizz";
-        } else if (param1 % 5 === 0) {
-          return "buzz";
-          } else {
-            return "bug!";
+function fizzBuzz(param1 = [1, 2, 5, 8, 9, 12, 6984]) {
+  let stringArray = [];
+  for (let i = 0; i == param1.lenght - 1; i++) {
+    if ((param1[i] % 3 === 0) && (param1[i] % 5 === 0)) {
+      stringArray.push("fizzBuzz");
+    }
+    else if (param1[i] % 3 === 0) {
+      stringArray.push("fizz");
+    } else if (param1[i] % 5 === 0) {
+      stringArray.push("buzz");
+    } else {
+      stringArray.push("bug!");
     }
   }
+  return stringArray;
 }
 
 
