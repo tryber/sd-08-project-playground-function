@@ -1,49 +1,146 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(value1, value2) {
+
+  if (value1 && value2 === true) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
+
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
 }
 
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(word) {
+  resultado = word.split(" ");
+  return resultado;
+
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(strings) {
+
+  let last = strings.length - 1;
+  let first = strings[0];
+  let namesArray = strings[last];
+  return namesArray + ", " + first;
 }
+
+
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return ((wins * 3) + ties);
 }
+
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+
+  let highestNumber = 0;
+  let highestRepeat = 0;
+
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > highestNumber) {
+      highestNumber = numbers[i];
+      highestRepeat = 0;
+    }
+
+    if (numbers[i] == highestNumber) {
+      highestRepeat += 1;
+
+    }
+
+  }
+  return highestRepeat;
 }
+
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distCat1 = Math.abs(cat1 - mouse);
+  let distCat2 = Math.abs(cat2 - mouse);
+
+  if (distCat1 < distCat2) {
+    return "cat1";
+  }
+  if (distCat2 < distCat1) {
+    return "cat2";
+  }
+  if (distCat1 == distCat2) {
+    return "os gatos trombam e o rato foge";
+  }
 }
+
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+
+  let array = [];
+  for (let i in numbers) {
+    if (numbers[i] % 3 == 0 && numbers[i] % 5 == 0) {
+      array.push("fizzBuzz");
+    }
+    else if (numbers[i] % 3 == 0) {
+      array.push("fizz");
+    }
+    else if (numbers[i] % 5 == 0) {
+      array.push("buzz");
+    }
+    else {
+      array.push("bug!");
+    }
+  }
+  return array;
 }
 
+console.log(fizzBuzz([10, 2, 3, 14, 16, 25]));
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(numbers) {
+  let encodeString = "";
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] === "a") {
+      encodeString += "1";
+    } else if (numbers[i] === "e") {
+      encodeString += "2";
+    } else if (numbers[i] === "i") {
+      encodeString += "3";
+    } else if (numbers[i] === "o") {
+      encodeString += "4";
+    } else if (numbers[i] === "u") {
+      encodeString += "5";
+    } else {
+      encodeString += numbers[i];
+    }
+  }
+  return encodeString;
 }
-function decode() {
-  // seu código aqui
+function decode(letters) {
+  let encodeString = "";
+  for (let i = 0; i < letters.length; i += 1) {
+    if (letters[i] === "1") {
+      encodeString += "a";
+    } else if (letters[i] === "2") {
+      encodeString += "e";
+    } else if (letters[i] === "3") {
+      encodeString += "i";
+    } else if (letters[i] === "4") {
+      encodeString += "o";
+    } else if (letters[i] === "5") {
+      encodeString += "u";
+    } else {
+      encodeString += letters[i];
+    }
+  }
+  return encodeString;
 }
 
 // Desafio 10
@@ -57,9 +154,15 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+
+  if (lineA + lineB > lineC && lineA + lineC > lineB && lineB + lineC > lineA) {
+    return true;
+  } else {
+    return false;
+  }
 }
+  console.log(triangleCheck(3,9,7));
 
 // Desafio 13
 function hydrate() {
