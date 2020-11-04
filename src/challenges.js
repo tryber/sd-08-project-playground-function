@@ -36,13 +36,17 @@ Exemplo: se a função receber a string `"go Trybe"`, o retorno deverá ser `['g
 
 // Desafio 4
 function concatName(array) {
-  let newArray = [];
+  let lastName = '';
+  let firstName= '';
   for(let i = 0; i < array.length; i+=1){
-    if(i == 0 || i == array.length - 1){
-      newArray.push(array[i])
+    if(i == 0){
+      firstName = array[i];
+    }else if(i == array.length-1){
+      lastName = array[i]
     }
   }
-  return newArray;
+  let newName = lastName.concat(', ', firstName)
+  return newName;
 }
 
 /***4 - Concatenação de strings**
