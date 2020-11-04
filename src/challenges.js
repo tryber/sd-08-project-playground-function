@@ -86,14 +86,35 @@ function fizzBuzz(numArr) {
   }
   return numArr;
 }
-console.log(fizzBuzz([2, 5, 15, 7, 9, 25, 45]));
-
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(inputString) {
+  let encodeString = inputString.split('')
+  for (let index = 0; index < inputString.length-1; index += 1) {
+    switch (encodeString[index]) {
+      case 'a':
+        encodeString[index] = '1';
+      break;
+      case 'e':
+        encodeString[index] = '2';
+      break;
+      case 'i':
+        encodeString[index] = '3';
+      break;
+      case 'o':
+        encodeString[index] = '4';
+      break;
+      case 'u':
+        encodeString[index] = '5';
+      break;
+      default:
+      break;
+    }
+  }
+  return encodeString.join('');
 }
-function decode() {
+
+function decode(outputString) {
   // seu código aqui
 }
 
