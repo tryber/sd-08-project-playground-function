@@ -168,10 +168,23 @@ console.log(decode("h3 th2r2!"));
 
 
 // Desafio 10
-function techList(array, name) {
-
+function techList(tech, name) {
+    let listTech =[];
+    if (tech === null || tech.length === 0) {
+        return "Vazio!";
+    } else {
+      tech.sort();
+      for (let key in tech) {
+        let objTech = {
+          tech: tech[key],
+          name: name
+        }
+        listTech.push(objTech);
+      }
+      return listTech;
+    }
 };
-console.log((["React", "Jest", "HTML", "CSS", "JavaScript"]), "Lucas");
+console.log((["React", "Jest", "HTML", "CSS", "JavaScript"]), "Felipe");
 
 // Desafio 11
 function generatePhoneNumber() {
