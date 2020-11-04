@@ -21,7 +21,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-    return array[array.length - 1] + ", " + [0]
+    return array[array.length - 1] + ", " + array[0]
 }
 console.log(concatName(["Lucas", "Cassiano", "Ferraz", "Paollillo"]));
 
@@ -33,7 +33,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
     let highestNumber = numbers[0]
-    for(let i =0; i < numbers.length; i+=1)
+    for(let i = 0; i < numbers.length; i+=1)
         if(numbers[i] > highestNumber){
             highestNumber = numbers[i]
         }
@@ -47,7 +47,6 @@ function highestCount(numbers) {
     }
     return result
     }
-
 
 // Desafio 7
 function catAndMouse(a, b, c) {
