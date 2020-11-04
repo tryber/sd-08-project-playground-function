@@ -1,6 +1,17 @@
 // Desafio 1
 function compareTrue(a,b) {
-  
+  a = Boolean;
+  b = Boolean;
+  let outcome;
+  if(a === true && b === true){
+    outcome = true;
+  }else if(a === true && b !== true){
+    outcome = false;
+  }else if(a !== true && b === true){
+    outcome = false;
+  }else if(a !== true && b !== true){
+    outcome = false;
+  }return outcome;
 }
   /*JavaScript possui um operador lógico &&, o qual recebe dois valores e retorna true se ambos os valores são verdadeiros, e retorna false se algum dos valores não o for.
 
@@ -68,9 +79,24 @@ Escreva uma função com o nome `footballPoints` que receba o número de vitóri
 Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.*/
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let repetitionArray = [];
+  let repCount = 0
+  for(let i = 0; i < array.length; i+=1){
+    let comp = array[i];
+    if(comp === array[i]){
+    repCount++
+  }
+  repetitionArray.push(repCount);
+}repetitionArray.sort(function(a, b){return b - a})
+return repetitionArray
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+/***6 - Repetição do maior número**
+-
+Escreva uma função chamada `highestCount` que, ao receber uma array de números, retorne  a quantidade de vezes que o maior deles se repete.
+
+Exemplo: caso o parâmetro de `highestCount` seja uma array com valores `[9, 1, 2, 3, 9, 5, 7]`, a função deverá retornar `2`, que é a quantidade de vezes que o número `9` (maior número do array) se repete. */
 
 // Desafio 7
 function catAndMouse() {
