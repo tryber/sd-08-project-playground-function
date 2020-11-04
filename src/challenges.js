@@ -36,13 +36,12 @@ function highestCount(valores) {
   let corrence = 0;
   valores.sort(function (a, b) { return b - a });
   let maior = valores[0];
-  /*for (i=0;i<=valores.length;i++){
-  //  if 
 
-  */
-
-
-  // seu código aqui
+  for (i = 0; i <= valores.length; i++) {
+    if (valores[i] === maior) {
+      corrence = +1;
+    }
+  }
 }
 
 // Desafio 7
