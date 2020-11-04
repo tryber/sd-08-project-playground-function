@@ -75,7 +75,7 @@ function footballPoints(wins, ties){
 // Desafio 6
 function highestCount(array) {
   let counts = {}; //Criado um objeto vazio para abrigar os itens que se repetem como chave e a quantidade de repetições como valor.
-  let timesRepeated = 0; //Esse array conterá a quantidade de vezes repetida  e será sorted de forma decrescente.
+  let timesRepeated = 0; 
   for(let i = 0; i < array.length; i+=1){
     if(counts[array[i]]){
       counts[array[i]]+=1
@@ -83,8 +83,8 @@ function highestCount(array) {
       counts[array[i]]=1;
     }
   }  for (const prop in counts) {
-    let highProp = 0;
-    if (prop >= highProp) { // Essa condição assegura que somente itens repetidos entrem no array.
+    let highProp = 0; //Varíavel conterá o valor mais alto do array
+    if (prop >= highProp) { 
       highProp = counts[prop];
     }timesRepeated = highProp;
   }
@@ -100,8 +100,19 @@ Exemplo: caso o parâmetro de `highestCount` seja uma array com valores `[9, 1, 
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  //0 3 2
-}
+  let distanceCat1 = cat1-mouse;
+  let distanceCat2 = cat2-mouse;
+  let winning = '';
+  if(distanceCat1<distanceCat2){
+    winning = 'cat1'
+  }else if(distanceCat2<distanceCat1){
+    winning = 'cat2'
+  }else(distanceCat1=distanceCat2){
+    winning = 'os gatos trombam e o rato foge'
+  }
+  return winning
+  }
+
 
 /*calcule as distâncias entre o rato e os gatos e retorne qual dos felinos irá alcançar o rato primeiro (sendo aquele que estará mais perto).
 /*
