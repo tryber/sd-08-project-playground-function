@@ -38,17 +38,21 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz(param1 = [2, 15, 7, 9, 45]) {
-  if (param1 % 3 === 0 && param1 % 5 === 0) {
+function fizzBuzz(param1 = []) {
+  for (let i = 1; i <= 25; i++) {
+    param1.push(i)
+  if ((param1 % 3 === 0) && (param1 % 5 === 0)){
     return "fizzBuzz";
-    } else if (param1 % 5 === 0) {
-      return "buzz";
-      } else if (param1 % 3 === 0) {
-         return "fizz";
+    } else if (param1 % 3 === 0) {
+       return "fizz";
+        } else if (param1 % 5 === 0) {
+          return "buzz";
           } else {
             return "bug!";
+    }
   }
 }
+
 
 // Desafio 9
 function encode() {
