@@ -67,13 +67,15 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat2dist < 0) {
     cat2dist *= -1;
   }
+  let result;
   if (cat1dist < cat2dist) {
-    return "cat1";
+    result = 'cat1';
   } else if (cat2dist < cat1dist) {
-    return "cat2";
+    result = 'cat2';
   } else {
-    return "os gatos trombam e o rato foge";
+    result = 'os gatos trombam e o rato foge';
   }
+  return result;
 }
 
 // Desafio 8
@@ -81,13 +83,13 @@ function fizzBuzz(numberArray) {
   let resultArray = [];
   for (let index = 0; index <= numberArray.length - 1; index += 1) {
     if (numberArray[index] % 3 === 0 && numberArray[index] % 5 === 0) {
-      resultArray[index] = "fizzBuzz";
+      resultArray[index] = 'fizzBuzz';
     } else if (numberArray[index] % 5 === 0) {
-      resultArray[index] = "buzz";
+      resultArray[index] = 'buzz';
     } else if (numberArray[index] % 3 === 0) {
-      resultArray[index] = "fizz";
+      resultArray[index] = 'fizz';
     } else {
-      resultArray[index] = "bug!";
+      resultArray[index] = 'bug!';
     }
   }
   return resultArray;
