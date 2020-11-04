@@ -99,12 +99,20 @@ function fizzBuzz(array_of_numbers) {
     //return stringEncoDeco;
 
     // Desafio 10
-    function techList(arrayDeTecnologias, name) {
-        arrayDeTecnologias = {
-            tech: "",
-            name: "",
+    function techList(arrayOfTechs, name) {
+        let object = {};
+        let arrayOfObject = {};
+        if (arrayOfTechs.lenght < 0){
+            return "Vazio!";
+        } else{
+            for (let i =0; i < arrayOfTechs.lenght; i += 1){
+                object.tech = arrayOfTechs[index];
+                object.name = name;
+                arrayOfObject.push(object);
+            }
         }
-    }
+        return arrayOfObject;
+        }
 
     // Desafio 11
     function generatePhoneNumber() {
