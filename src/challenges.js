@@ -188,16 +188,23 @@ function decode(string) {
 // Desafio 10
 function techList(nameTech, name) {
   // seu código aqui
-  nameTech = [];
-  for(index = 0; index < nameTech.length; index += 1){
-   let object = {
-     tech: nameTech[index],
-     name: name
-   }
-  }  
-
-  console.log(object)
+  
+  let ordem = nameTech.sort();
+  let learn = [];
+  
+  if (nameTech.length === 0) {
+    return "Vazio!"
+  }
+  
+  for (let techName of ordem) {
+    learn.push({
+      tech: techName,
+      name: name,
+    });
+  }
+  return learn;
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
