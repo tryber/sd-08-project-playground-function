@@ -146,7 +146,7 @@ function testeValidade(arrayNumeros) {
     }
     if (repetido >= 3) {
       return false;
-    }
+    } else {
       return true;
     }
     }
