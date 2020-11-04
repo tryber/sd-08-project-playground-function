@@ -73,7 +73,8 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let resposta = [];  
+  let resposta = [];
+  //for (let i = 0; i < array.length; i++)
   for (i in array) {    
     if(array[i] % 3 === 0 && array[i] % 5 === 0){
     resposta.push("fizzBuzz");
@@ -145,9 +146,18 @@ function decode(decode) {
 //console.log(decode("H3 th2r2!"));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  tech = tech.sort();
+  let lista = [];  
+  for (let i in tech){
+    let itemLista = {};
+    itemLista.tech = tech[i];
+    itemLista.name = name;
+    lista.push(itemLista);
+  }
+  return lista  
 }
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
