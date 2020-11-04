@@ -114,19 +114,19 @@ function encode(param) {
   for(let index = 0; index < texto.length; index += 1){
     if(texto[index] == "a"){
       texto = texto.replace('a', '1');
-    }else if(texto[index] == "e"){
+    }else if(texto[index] == 'e'){
       texto = texto.replace('e', '2');
-    }else if (texto[index] == "i"){
+    }else if (texto[index] == 'i'){
       texto = texto.replace('i', '3');
-    }else if(texto[index] == "o"){
+    }else if(texto[index] == 'o'){
       texto = texto.replace('o', '4');
-    }else if (texto[index] == "u"){
-      texto[index].replace("u", "5");
+    }else if (texto[index] == 'u'){
+      texto[index].replace('u', '5');
     }
   }
   return texto;
 }
-// let teste = "h3 th2r2!";
+// let teste = 'g4 tryb2!';
 // console.log(decode(teste));
 function decode(param1) {
 
@@ -140,9 +140,9 @@ function decode(param1) {
     }else if (texto[index] == "3"){
       texto = texto.replace('3', 'i');
     }else if(texto[index] == "4"){
-      texto = texto.replace('4', 'o');;
+      texto = texto.replace('4', 'o');
     }else if (texto[index] == "5"){
-      texto[index].replace("5", "u");
+      texto = texto.replace('5', 'u');
     }
   }
   return texto;
