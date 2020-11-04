@@ -182,7 +182,11 @@ function hydrate(string) {
   for (let i = 0; i < arr.length; i += 1) {
     soma += parseInt(arr[i]);
   }
-  return `${soma} copos de água`;
+  if(soma === 1){
+    return `${soma} copo de água`;
+  }else{
+    return `${soma} copos de água`;
+  }
 }
 hydrate('1 copo de catuaba, 1 cervejas e 1 copo de vinho');
 
