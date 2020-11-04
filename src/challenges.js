@@ -52,10 +52,10 @@ function highestCount(arrayNumeros) {
   let maior = 0;
   let vezes = 1;
   for (let i = 0; i < arrayNumeros.length; i ++) {
-    if (arrayNumeros[i] > maior){
+    if (arrayNumeros[i] == maior){
+    vezes += 1;
+    }else if (arrayNumeros[i] > maior){
       maior = arrayNumeros[i];
-    }else if (arrayNumeros[i] == maior){
-      vezes += 1;
     }
   }
   return vezes;
