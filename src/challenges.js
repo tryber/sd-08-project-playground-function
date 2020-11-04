@@ -175,8 +175,8 @@ function decode(string) {
 function techList(array, name) {
   let outcome = [];
   array.sort();
-  for(let i = 0; i< array.length; i+=1){
-    if(array === []){
+  for(let i = 0; i<= array.length; i+=1){
+    if(array.length == 0){
       outcome = 'Vazio!'
     }else if(array[i]){
       let tec = {tech: array[i], 'name': name};
@@ -184,7 +184,6 @@ function techList(array, name) {
     }
   }return outcome;
 }
-
 
 // Desafio 11
 function generatePhoneNumber() {
