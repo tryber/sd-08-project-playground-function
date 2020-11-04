@@ -202,10 +202,10 @@ function techList(techArray, namePar) {
   return list;
 }
 
-// Desafio 11
-function generatePhoneNumber(array11) {
+// Function that will be used to mask the phone number in Desafio 11
+function maskingNumber(phoneArray) {
   // Putting all the digits together in a String
-  let numNoMask = array11.join('');
+  let numNoMask = phoneArray.join('');
 
   // Area code
   let ddd = '';
@@ -215,12 +215,34 @@ function generatePhoneNumber(array11) {
   let rightNumber = '';
   // Final result
   let maskedNumber = '';
-  // Counter for the repetition of each number
-  let repCounter = 0;
 
+  // On the following, I used the concepts learned here:
+  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+
+  // Picking the area code
+  ddd = numNoMask.slice(0, 2);
+
+  // Picking the left half of the phone number
+  leftNumber = numNoMask.slice(2, 7);
+
+  // Picking the right half of the phone number
+  rightNumber = numNoMask.slice(7, 11);
+
+  // Applying the telephone mask to the number
+  maskedNumber = `(${ddd}) ${leftNumber}-${rightNumber}`;
+
+  // Returning the masked telephone number
+  return maskedNumber;
+}
+
+// Desafio 11
+function generatePhoneNumber(array11) {
   if (array11.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
+
+  // Counter for the repetition of each number
+  let repCounter = 0;
 
   // Running through the array11
   for (let currentNum = 0; currentNum < array11.length; currentNum += 1) {
@@ -244,24 +266,7 @@ function generatePhoneNumber(array11) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-
-  // On the following, I used the concepts learned here:
-  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/slice
-
-  // Picking the area code
-  ddd = numNoMask.slice(0, 2);
-
-  // Picking the left half of the phone number
-  leftNumber = numNoMask.slice(2, 7);
-
-  // Picking the right half of the phone number
-  rightNumber = numNoMask.slice(7, 11);
-
-  // Applying the telephone mask to the number
-  maskedNumber = `(${ddd}) ${leftNumber}-${rightNumber}`;
-
-  // Returning the masked telephone number
-  return maskedNumber;
+  return maskingNumber(array11);
 }
 
 // Desafio 12
