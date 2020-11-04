@@ -94,7 +94,7 @@ console.log((fizzBuzz([15, 3, 5, 2, 7])));
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  
 }
 
 function decode() {
@@ -112,9 +112,33 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  // ideia 1
+  /*
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
+    console.log("ok deu bom 06");
+  }
+  */
+ let contador = 0;
+//console.log("comecei atestar")
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    contador += 1;
+    //console.log("coco1");
+  }
+  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+    //console.log("coco2");
+    contador += 1;
+  }
+  if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+    //console.log("coco3")
+    contador += 1;
+  }
+  if (contador >= 3) {
+    return true;
+  }
+  return false;    
 }
+console.log(triangleCheck(10, 5, 6));
 
 // Desafio 13
 function hydrate() {
