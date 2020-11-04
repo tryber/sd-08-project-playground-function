@@ -62,19 +62,20 @@ function catAndMouse(a, b, c) {
 // Desafio 8
 function fizzBuzz(array_of_numbers) {
     let result = [];
-    for (i = 0; i < array_of_numbers.lenght - 1; i+=1) {
+    for (i = 0; i < array_of_numbers.length; i+=1) {
         if (i % 3 == 0 && i % 5 == 0) {
-            return "fizzBuzz";
+            result.push("fizzBuzz");
         } else if (i % 3 == 0) {
-            return "fizz";
+            result.push("fizz");
         } else if (i % 5 == 0) {
-            return "buzz";
+            result.push("buzz");
         } else {
-            return "bug!";
+            result.push("bug!");
         };
     }
     return result
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
     // Desafio 9
     function encode(string) {
