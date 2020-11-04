@@ -33,13 +33,13 @@ function splitSentence(frase) {
 function concatName(stringArray) {
   let primeiro = stringArray[0];
   let ultimo = stringArray[stringArray.length - 1];
-  let result = ultimo + ', ' + primeiro;
+  let result = `${ultimo}, ${primeiro}`;
   return result;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return ((wins*3)+ties);
+  return ((wins * 3) + ties);
 }
 
 // Desafio 6
@@ -58,13 +58,39 @@ function highestCount(numberArray) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1dist = mouse - cat1;
+  if (cat1dist < 0) {
+    cat1dist *= -1;
+  }
+  let cat2dist = mouse - cat2;
+  if (cat2dist < 0) {
+    cat2dist *= -1;
+  }
+  if (cat1dist < cat2dist) {
+    return "cat1";
+  } else if (cat2dist < cat1dist) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numberArray) {
+  let resultArray = [];
+  for (let index = 0; index <= numberArray.length - 1; index += 1) {
+    if (numberArray[index] % 3 === 0 && numberArray[index] % 5 === 0) {
+      resultArray[index] = "fizzBuzz";
+    } else if (numberArray[index] % 5 === 0) {
+      resultArray[index] = "buzz";
+    } else if (numberArray[index] % 3 === 0) {
+      resultArray[index] = "fizz";
+    } else {
+      resultArray[index] = "bug!";
+    }
+  }
+  return resultArray;
 }
 
 // Desafio 9
