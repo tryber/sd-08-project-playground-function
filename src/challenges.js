@@ -51,9 +51,9 @@ function catAndMouse(mouse, cat1, cat2) {
   
 
 // Desafio 8
-function fizzBuzz(num) {
+function fizzBuzz(result) {
   let result = [];
-  for (u = 0; u < num.length; u += 1){
+  for (let u = 0; u < result.length; u += 1){
     if (u % 3 == 0){
       result.push("fizz");
     }
@@ -65,36 +65,47 @@ function fizzBuzz(num) {
     }
     result.push("bug!");
   }
-    return result;
 }
 
 
 // Desafio 9
-function encode() {
-  let encode = [];
-  for (v = 0; v < encode.length; v += 1)
-  if (encode[v] == "a"){
-    return 1;
-  } else if (encode[v] == "e"){
-    return 2;
-  } else if (encode[v] == "i"){
-    return 3;
-  } else if (encode[v] == "o"){
-    return 4;
-  } else (enconde[v] == "u"){
-    return 5;
+function encode(cripto) {
+  let cripto = '';
+  for (let v = 0; v < cripto.length; v += 1)
+  if (v == "a"){
+    cripto.push(1);
+  } else if (v == "e"){
+    cripto.push(2);
+  } else if (v == "i"){
+    cripto.push(3);
+  } else if (v == "o"){
+    cripto.push(4);
+  } else (v == "u")
+    cripto.push(5);
   }
-  return encode;
-}
+  console.log(encode("Hello World"))
 
 function decode() {
-  // seu código aqui
-}
+  let revert = '';
+  for (let n = 0; n < revert.length; n += 1)
+    if (n == 1){
+    revert.push("a");
+  } else if (n == 2){
+    revert.push("e");
+  } else if (n == 3){
+    revert.push("i");
+  } else if (n == 4){
+    revert.push("o");
+  } else (n == 5)
+    revert.push("u");
+  }
+
 
 // Desafio 10
 function techList(tech, name) {
-  let tech = [];
-
+  let technology  = {
+  
+  }
 }
 
 // Desafio 11
@@ -104,7 +115,7 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  
 }
 
 // Desafio 13
