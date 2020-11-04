@@ -27,14 +27,14 @@ Lembre-se que a área de um triângulo é calculada através da seguinte fórmul
 function splitSentence(string) {
   let array = [];
   for(let i = 0; i < string.length; i+=1){
-  if(string[i] === ' ' || array[i] == array.length - 1){
-    let cut = string.slice(string[i]);
+  if(string[i] === ' ' || i == string.length - 1){
+    let cut = string.slice(i);
     array[cut];
   }
   }
   return array;
 }
-
+console.log(splitSentence('go trybe'))
 /***3 - Dividindo a frase**
 -
 Escreva uma função com o nome `splitSentence`, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
