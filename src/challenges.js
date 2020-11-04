@@ -79,7 +79,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-// Solução encontrada no Stackoverflow utilizando String.prototype.replace()
+
 function encode(string) {
   let stringSwap = { a: "1", e: "2", i: "3", o: "4", u: "5" };
   let encondeResult = "";
@@ -88,7 +88,7 @@ function encode(string) {
   return encondeResult;
 }
 
-// Solução encontrada no Stackoverflow utilizando String.prototype.replace()
+
 function decode(string) {
   let stringSwap = { 1: "a", 2: "e", 3: "i", 4: "o", 5: "u" };
   let encondeResult = "";
@@ -114,8 +114,6 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-// Expressão regular encontrada em - https://stackoverflow.com/questions/17650197/mask-javascript-variable-value
-// Foreach function encontrada em - https://www.codegrepper.com/code-examples/javascript/count+duplicates+array+js
 function generatePhoneNumber(array) {
   let result = "";
   let counts = [];
