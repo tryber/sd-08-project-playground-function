@@ -122,8 +122,19 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let isTriangle = false;
+
+  if (lineA + lineB > lineC) {
+    isTriangle = true;
+  }
+  if (Math.abs(lineA + lineC) > Math.abs(lineB)) {
+    isTriangle = true;
+  }
+  if (Math.abs(lineC + lineB) > Math.abs(lineA)) {
+    isTriangle = true;
+  }
+  return isTriangle;
 }
 
 // Desafio 13
