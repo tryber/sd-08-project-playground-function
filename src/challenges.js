@@ -152,7 +152,7 @@ function testeValidade(arrayNumeros) {
 }
  function generatePhoneNumber(arrayNumeros) {
   let telephoneNumber = "";
-  if(arrayNumeros.length !== 11) {
+  if(arrayNumeros.length > 11 || arrayNumeros.length < 11) {
     return "Array com tamanho incorreto.";
   } else if (testeValidade(arrayNumeros) == false || arrayNumeros[index] > 9 || arrayNumeros[index] < 0) {
   return "não é possível gerar um número de telefone com esses valores";
