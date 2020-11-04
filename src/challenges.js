@@ -202,10 +202,28 @@ function triangleCheck(lineA, lineB, lineC) {
 //console.log(triangleCheck(5, 4, 3));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  drinks = drinks.split(" ");
+  let numeros = ""; 
+  let int = "";
+	for(let i=0;i<drinks.length;i++){
+    if(isNaN(drinks[i])==false){
+    int += drinks[i];
+    }
+  }
+  int = int.split("");
+  soma = 0;
+  for (j in int)
+  soma = soma + parseInt(int[j]);
+  
+  if (soma == 1){
+    return "1 copo de água"
+  }
+  else {
+    return soma + " copos de água"
+  }  
 }
-
+//console.log(hydrate("1 cachaça, 7 cervejas e 1 copo de vinho"));
 
 module.exports = {
   calcArea,
