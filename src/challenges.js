@@ -93,7 +93,8 @@ function fizzBuzz(array_of_numbers) {
                 };
             }
     }
-    function decode() {
+    function decode(string) {
+        let stringEncoDeco = string
         for (i = 0; i < string - 1; i+=1) {
             if (1 == "a") {
                 return "a";
@@ -110,14 +111,13 @@ function fizzBuzz(array_of_numbers) {
         return stringEncoDeco;
     }
     
-
     // Desafio 10
     function techList(arrayOfTechs, name) {
         let arrayOfObject = {};
         if (arrayOfTechs.lenght < 0){
             let object = {};
             return "Vazio!";
-        } else{
+        } else {
             for (let i =0; i < arrayOfTechs.lenght; i += 1){
                 object.tech = arrayOfTechs[index];
                 object.name = name;
