@@ -126,9 +126,30 @@ Exemplo: caso o gato `cat2` esteja a 2 unidades de distância do rato, e `cat1` 
 Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string `"os gatos trombam e o rato foge"`. */
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let array2 = [];
+  for(let i = 0; i < array.length; i+=1){
+    if(array[i]%3 === 0 && array[i]%5 === 0){
+      array2.push('fizzBuzz')
+    }else if(array[i]%3 === 0) && array[i]%5 !== 0{
+      array2.push('fizz')
+    }else if(array[i]%3 !== 0) && array[i]%5 === 0){
+      array2.push('buzz')
+    }else(array[i]%3 !== 0) && array[i]%5 !== 0){
+      array2.push('bug')
+    }
+  }
+  return array2
 }
+
+/*Crie uma função chamada `fizzBuzz` que receba uma array de números e retorne uma array da seguinte forma:
+
+- Para cada número da Array que seja divisível apenas por 3, apresente uma string `"fizz"`;
+- Para cada número da Array que seja divisível apenas por 5, apresente uma string `"buzz"`;
+- Caso o número seja divisível por 3 e 5, retorne a string `"fizzBuzz"`;
+- Caso o número não possa ser dividido por 3 nem por 5, retorne a string `"bug!"`;
+
+Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar `["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]`. */
 
 // Desafio 9
 function encode() {
