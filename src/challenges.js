@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(num1, num2) {
   if (num1 && num2 !== 0) {
-    return true;
-  } else {
     return false;
+  } else {
+    return true;
   }
 }
 
@@ -36,7 +36,7 @@ function highestCount(arrNum) {
   } else {
     highestNum = arrNum[1];
   }
-  for (let index = 2; index < arrNum.length-1; index += 1) {
+  for (let index = 2; index < arrNum.length; index += 1) {
     if (arrNum[index] > highestNum) {
       highestNum = arrNum[index];
     } else {
@@ -44,7 +44,7 @@ function highestCount(arrNum) {
     }
   }
   let counter = 0;
-  for (let index2 = 0; index2 < arrNum.length-1; index2 += 1) {
+  for (let index2 = 0; index2 < arrNum.length; index2 += 1) {
     if (arrNum[index2] === highestNum) {
       counter += 1;
     } else {
