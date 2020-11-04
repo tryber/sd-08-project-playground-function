@@ -29,7 +29,7 @@ function concatName() {
     if (pos === 0){
       console.log(concatName(pos))
     }
-    else (pos === (concatName.length -1)) {
+    else if (pos === (concatName.length -1)) {
       console.log(concatName(pos))
     }
 
@@ -45,26 +45,36 @@ function footballPoints(wins, ties) {
 footballPoints(7,2);
 
 // Desafio 6
-function highestCount([numbers]) {
+function highestCount(numbers) {
   let maiorValor = numbers[0]
-  for(let index = 0; index < numbers.length; index +=1 ) {
-  if (numbers[index] > maiorValor) {
-  maiorValor = numbers[index]
+  for(let index = 0; index < numbers.length; index +=1) {
+    if (numbers[index] > maiorValor) {
+      maiorValor = numbers[index]
+    }
   }
-}
   let repeat = 0
-  for(let index2 = 0; index2 < numbers.length; index +=1 ) {
-  if (numbers[index2] === maiorValor) {
-  repeat += 1
+  for(let index = 0; index < numbers.length; index +=1 ) {
+    if (numbers[index] === maiorValor) {
+      repeat += 1
+    }
+  }
+  return repeat
 }
-}
-return repeat
-}
-highestCount([9, 1, 2, 3, 9, 5, 7]);
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  mouse = 1
+  cat1 = 3
+  cat2 = 10
+  
+  distanciaCat1 = cat1 - mouse;
+  distanciaCat2 = cat2 - mouse;
+
+  let resultado
+  if (distanciaCat1 > distanciaCat2) {
+    return cat2
+  } console.log('cat2')
 }
 
 // Desafio 8
