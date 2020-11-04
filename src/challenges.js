@@ -30,7 +30,7 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let result = wins * 3 + ties * 1;
+  let result = (wins * 3) + (ties * 1);
   return result;
 }
 
@@ -91,28 +91,26 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function stringVowel(vowel) {
-  vowel = vowel.toLowerCase();
-  if (vowel === 'a') {
+function stringVowel(char) {
+  if (char.toLowerCase() === 'a') {
     return 1;
   }
-  if (vowel === 'e') {
+  if (char.toLowerCase() === 'e') {
     return 2;
   }
-  if (vowel === 'i') {
+  if (char.toLowerCase() === 'i') {
     return 3;
   }
-  if (vowel === 'o') {
+  if (char.toLowerCase() === 'o') {
     return 4;
   }
-  if (vowel === 'u') {
+  if (char.toLowerCase() === 'u') {
     return 5;
   }
-  return vowel;
+  return char;
 }
 
 function stringNumber(char) {
-  char = char.toLowerCase();
   if (char === '1') {
     return 'a';
   }
@@ -148,7 +146,6 @@ function decode(sentence) {
   }
   return sentenceDecoded;
 }
-
 // Desafio 10
 function techList(technologies, name) {
   let objectArray = [];
