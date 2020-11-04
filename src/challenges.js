@@ -60,6 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'cat2';
 }
+// Desafio 8
 function primeBothNumbers(value, prime1, prime2) {
   if (value % prime1 === 0 && value % prime2 === 0) {
     return true;
@@ -72,7 +73,6 @@ function primeOne(value, prime) {
   }
   return false;
 }
-// Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
   let result = [];
@@ -91,21 +91,51 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+function stringVowel(vowel) {
+  vowel = vowel.toLowerCase();
+  if (vowel === 'a') {
+    return 1;
+  }
+  if (vowel === 'e') {
+    return 2;
+  }
+  if (vowel === 'i') {
+    return 3;
+  }
+  if (vowel === 'o') {
+    return 4;
+  }
+  if (vowel === 'u') {
+    return 5;
+  }
+  return vowel;
+}
+
+function stringNumber(char) {
+  char = char.toLowerCase();
+  if (char === '1') {
+    return 'a';
+  }
+  if (char === '2') {
+    return 'e';
+  }
+  if (char === '3') {
+    return 'i';
+  }
+  if (char === '4') {
+    return 'o';
+  }
+  if (char === '5') {
+    return 'u';
+  }
+  return char;
+}
+
 function encode(sentence) {
   // seu código aqui
   let sentenceEncoded = '';
   for (let i = 0; i < sentence.length; i += 1) {
-    if (sentence[i].toLowerCase() === 'a') {
-      sentenceEncoded += 1;
-    } else if (sentence[i].toLowerCase() === 'e') {
-      sentenceEncoded += 2;
-    } else if (sentence[i].toLowerCase() === 'i') {
-      sentenceEncoded += 3;
-    } else if (sentence[i].toLowerCase() === 'o') {
-      sentenceEncoded += 4;
-    } else if (sentence[i].toLowerCase() === 'u') {
-      sentenceEncoded += 5;
-    } else sentenceEncoded += sentence[i];
+    sentenceEncoded += stringVowel(sentence[i]);
   }
   return sentenceEncoded;
 }
@@ -114,17 +144,7 @@ function decode(sentence) {
   // seu código aqui
   let sentenceDecoded = '';
   for (let i = 0; i < sentence.length; i += 1) {
-    if (sentence[i] === '1') {
-      sentenceDecoded += 'a';
-    } else if (sentence[i] === '2') {
-      sentenceDecoded += 'e';
-    } else if (sentence[i] === '3') {
-      sentenceDecoded += 'i';
-    } else if (sentence[i] === '4') {
-      sentenceDecoded += 'o';
-    } else if (sentence[i] === '5') {
-      sentenceDecoded += 'u';
-    } else sentenceDecoded += sentence[i];
+    sentenceDecoded += stringNumber(sentence[i]);
   }
   return sentenceDecoded;
 }
