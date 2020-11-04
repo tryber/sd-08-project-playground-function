@@ -163,9 +163,28 @@ function techList(tech, name) {
 //console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+function generatePhoneNumber(n) {
+  if (n.length != 11){
+    return "Array com tamanho incorreto."
+  }
+  for (i in n){
+    if (n[i] < 0 || n[i] > 9){
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+    let repeat = 0;
+    for (j in n){      
+      if (n[i] == n[j]){
+        repeat += 1;
+      }
+    }
+    if (repeat > 2){
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+  }
+    let number = "(" + n[0] + n[1] + ")" + " " + n[2] + n[3] + n[4] + n[5] + n[6] + "-" + n[7] + n[8] + n[9] + n[10];
+    return number
+  }
+//console.log(generatePhoneNumber([1, 2, 9, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
