@@ -123,7 +123,6 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let isTriangle = false;
 
   if (lineA + lineB > lineC && lineA + lineC > lineB && lineB + lineC > lineA) {
     return true;
