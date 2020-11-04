@@ -1,41 +1,82 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(x,y) {
+  if (x===true && y === true){
+    return true;
+  }
+  return false
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let triangleArea = (base * height) / 2;
+  return triangleArea;
+
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let arrayOfStrings = string.split(' ');
+  return arrayOfStrings;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let lastItem = array[array.length -1];
+  let firstItem = array[0];
+  let lastFirst = `${lastItem}, ${firstItem}`;
+  return lastFirst;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = (wins * 3) + ties;
+  return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(arrayNumber) {
+  let higherNumber = 0;
+  let amount = 0;
+  for (let index = 0; index <= arrayNumber.length; index += 1){
+    if (arrayNumber[index] > higherNumber){
+      higherNumber = arrayNumber[index];
+      amount = 0;
+    }
+    if(arrayNumber[index] === higherNumber){
+      amount += 1;
+    }
+  }
+  return amount
+  }
+
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let positionCat1 = Math.abs(mouse - cat1);
+  let positionCat2 = Math.abs(mouse - cat2);
+  if (positionCat1 > positionCat2) {
+    return "cat2";
+  } else if (positionCat1 === positionCat2) {
+    return "os gatos trombam e o rato foge";
+  }
+  return "cat1";
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumber) {
+  let arrayString = []
+  for (i = 0; i < arrayNumber.length; i += 1) {
+  if ((arrayNumber[i] % 5 !== 0) && (arrayNumber[i] % 3 === 0)) {
+    arrayString[i] = ("fizz");
+  }else if ((arrayNumber[i] % 5 === 0) && (arrayNumber[i] % 3 !== 0)) {
+    arrayString[i] = ("buzz");
+  }else if ((arrayNumber[i] % 3 === 0) && (arrayNumber[i] % 5 === 0)) {
+    arrayString[i] = ("fizzBuzz");
+  }else{
+    arrayString[i] = ("bug!");
+  }
+}
+return arrayString;
 }
 
 // Desafio 9
