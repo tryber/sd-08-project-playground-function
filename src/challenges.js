@@ -38,12 +38,12 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz(x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) {
-  if (x/3 === 0){
+function fizzBuzz(x = [2, 5, 9]) {
+  if (x % 3 === 0){
     return "fizz"
-    } else if (x/5 === 0) {
+    } else if (x % 5 === 0) {
       return "buzz"
-      } else if (x/3 === 0 && x/5 === 0){
+      } else if (x % 3 === 0 && x % 5 === 0){
          return "fizzbuzz"
           } else {
             return "bug!"
