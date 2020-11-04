@@ -93,13 +93,15 @@ console.log((fizzBuzz([15, 3, 5, 2, 7])));
 
 
 // Desafio 9
-function encode() {
-  
+function encode(frase) {
+  return frase.split("a").join("1").split("e").join("2").split("i").join("3").split("o").join("4").split("u").join("5");      
 }
+encode("salve rapaziada");
 
-function decode() {
-  // seu código aqui
+function decode(frase) {
+  return frase.split("1").join("a").split("2").join("e").split("3").join("i").split("4").join("o").split("5").join("u");
 }
+decode("s1lv2 r1p1z31d1");
 
 // Desafio 10
 function techList() {
