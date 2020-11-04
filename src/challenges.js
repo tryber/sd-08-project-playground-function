@@ -40,7 +40,7 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(param1) {
   let stringArray = [];
-  for (let i = 0; i < param1.lenght; i+=1) {
+  for (let i = 0; i < param1.length; i += 1) {
     if ((param1[i] % 3 === 0) && (param1[i] % 5 === 0)) {
       stringArray.push("fizzBuzz");
     }
