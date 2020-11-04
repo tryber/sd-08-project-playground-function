@@ -125,17 +125,13 @@ function generatePhoneNumber() {
 function triangleCheck(lineA, lineB, lineC) {
   let isTriangle = false;
 
-  if (lineA + lineB > lineC) {
-    isTriangle = true;
+  if (lineA + lineB > lineC && lineA + lineC > lineB && lineB + lineC > lineA) {
+    return true;
+  } else {
+    return false;
   }
-  if (Math.abs(lineA + lineC) > Math.abs(lineB)) {
-    isTriangle = true;
-  }
-  if (Math.abs(lineC + lineB) > Math.abs(lineA)) {
-    isTriangle = true;
-  }
-  return isTriangle;
 }
+  console.log(triangleCheck(3,9,7));
 
 // Desafio 13
 function hydrate() {
