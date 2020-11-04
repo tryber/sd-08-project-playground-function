@@ -72,30 +72,25 @@ function footballPoints(wins, ties){
   return score
 }
 
-/***5 - Pontos no futebol**
--
-Escreva uma função com o nome `footballPoints` que receba o número de vitórias (esse parâmetro deverá se chamar `wins`) e o número de empates (esse parâmetro deverá se chamar `ties`) e retorne a quantidade de pontos que o time marcou em um campeonato.
-
-Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.*/
-
 // Desafio 6
 function highestCount(array) {
   let counts = {}; //Criado um objeto vazio para abrigar os itens que se repetem como chave e a quantidade de repetições como valor.
-  let timesRepeated = []; //Esse array conterá a quantidade de vezes repetida  e será sorted de forma decrescente.
+  let timesRepeated = 0; //Esse array conterá a quantidade de vezes repetida  e será sorted de forma decrescente.
   for(let i = 0; i < array.length; i+=1){
     if(counts[array[i]]){
       counts[array[i]]+=1
-    }else{
+    }else{  
       counts[array[i]]=1;
     }
   }  for (const prop in counts) {
-    if (counts[prop]>=2) { // Essa condição assegura que somente itens repetidos entrem no array.
-      timesRepeated.push(counts[prop]);
-    }
+    let highProp = 0;
+    if (prop >= highProp) { // Essa condição assegura que somente itens repetidos entrem no array.
+      highProp = counts[prop];
+    }timesRepeated = highProp;
   }
-  timesRepeated.sort((a,b) => b-a) //O array que abriga a quantidade de repetições é organizado de forma decrescente
-  return timesRepeated[0] // O resultado da função é o primeiro item do array.
+  return timesRepeated // O resultado da função é o primeiro item do array.
 }
+console.log(highestCount( [0, 4, 4, 4, 9, 2, 1]))
 
 /***6 - Repetição do maior número**
 -
@@ -104,9 +99,20 @@ Escreva uma função chamada `highestCount` que, ao receber uma array de número
 Exemplo: caso o parâmetro de `highestCount` seja uma array com valores `[9, 1, 2, 3, 9, 5, 7]`, a função deverá retornar `2`, que é a quantidade de vezes que o número `9` (maior número do array) se repete. */
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  //0 3 2
 }
+
+/*calcule as distâncias entre o rato e os gatos e retorne qual dos felinos irá alcançar o rato primeiro (sendo aquele que estará mais perto).
+/*
+-
+Imagine que existem dois gatos, os quais chamaremos de `cat1` e `cat2`, e que ambos estão atrás de um rato chamado `mouse`. Imagine que cada um dos três animais está em uma posição representada por um número.
+
+Sabendo disso, crie uma função chamada `catAndMouse` que, ao receber a posição de `mouse`, `cat1` e `cat2`, **nessa ordem**, 
+
+Exemplo: caso o gato `cat2` esteja a 2 unidades de distância do rato, e `cat1` esteja a 3 unidades, sua função deverá retornar `"cat2"`.
+
+Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string `"os gatos trombam e o rato foge"`. */
 
 // Desafio 8
 function fizzBuzz() {
