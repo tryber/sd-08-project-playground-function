@@ -64,17 +64,14 @@ console.log((highestCount([10, 10, 11, 11, 10])));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let posicaoMaior = Math.max(mouse, cat1, cat2);
-    let gatosMaior = Math.max(cat1, cat2);
-    if (gatosMaior >= cat1 && cat1 > cat2) {
-        return "cat1";
-    } else if (gatosMaior >= cat2 && cat2 > cat1) {
-        return "cat2";
-    } else if (cat1 && cat2 === posicaoMaior) {
-        return "os gatos trombam e o rato foge";
-    }
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return "cat1";
+} if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
+    return "cat2";
 }
-console.log(catAndMouse(10, 10, 10));
+    return "os gatos trombam e o rato foge";        
+} 
+console.log(catAndMouse (10, -2, 3));
 
 // Desafio 8
 function fizzBuzz(numeros) {
