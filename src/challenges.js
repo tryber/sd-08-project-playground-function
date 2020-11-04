@@ -67,24 +67,23 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let result = [];
-  for (let u = 0; u < numbers.length; u += 1){
-    if (numbers[u] % 3 == 0){
-      result.push("fizz");
+  for (let index = 0; index < numbers.length; index += 1){
+    if (numbers[index] % 3 == 0 && numbers[index] % 5 == 0){
+      result.push("fizzbuzz")
     }
-    else if (numbers[u] % 5 == 0){
+    else if (numbers[index] % 5 == 0){
       result.push("buzz");
     }
-    else if (numbers[u] % 3 == 0 && numbers[u] % 5 == 0){
-      result.push("fizzbuzz");
-    }
-    result.push("bug!");
+    else if (numbers[index] % 3 == 0){
+      result.push("fizz");
+    } else
+      result.push("bug!");
   }
   return result;
 }
 
-
 // Desafio 9
-function encode(cripto) {
+function encode(vowel) {
   let cripto = "";
   for (let v = 0; v < cripto.length; v += 1)
   if (cripto[v] == "a"){
@@ -98,8 +97,9 @@ function encode(cripto) {
   } else (cripto[v] == "u")
     cripto.push(5);
   }
+  console.log(encode("Hello World"))
 
-function decode() {
+function decode(unit) {
   let revert = "";
   for (let n = 0; n < revert.length; n += 1)
     if (revert[n] == 1){
@@ -117,7 +117,7 @@ function decode() {
 
 // Desafio 10
 function techList(tech, name) {
-  // seu código aqui  
+  // seu código aqui
   }
 
 // Desafio 11
