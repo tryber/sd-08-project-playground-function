@@ -279,8 +279,10 @@ function triangleCheck(lineA, lineB, lineC) {
     lineC >= lineA + lineB
   ) {
     return false;
-  } // Checking if each side is smaller than the absolute difference between the others
-  else if (
+  }
+
+  // Checking if each side is smaller than the absolute difference between the others
+  if (
     lineA <= Math.abs(lineB - lineC) ||
     lineB <= Math.abs(lineA - lineC) ||
     lineC <= Math.abs(lineA - lineB)
