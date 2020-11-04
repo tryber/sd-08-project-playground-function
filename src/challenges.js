@@ -21,7 +21,6 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayOfStrings) {
-    let arrayOfStrings = [];
     return [arrayOfStrings.lenght - 1] + "," + arrayOfStrings[0];
 }
 //console.log(concatName("Lucas", "Cassiano", "Ferraz", "Paollillo"))
