@@ -56,9 +56,16 @@ Escreva uma função com o nome `concatName` que, ao receber uma array de string
 Isso quer dizer que, caso o parâmetro passado para `concatName` seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar `Paolillo, Lucas`. */
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties){
+  let score = (wins*3)+(ties*1);
+  return score
 }
+
+/***5 - Pontos no futebol**
+-
+Escreva uma função com o nome `footballPoints` que receba o número de vitórias (esse parâmetro deverá se chamar `wins`) e o número de empates (esse parâmetro deverá se chamar `ties`) e retorne a quantidade de pontos que o time marcou em um campeonato.
+
+Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.*/
 
 // Desafio 6
 function highestCount() {
