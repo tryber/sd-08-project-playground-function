@@ -155,6 +155,9 @@ function techList(tech, name) {
     itemLista.name = name;
     lista.push(itemLista);
   }
+  if (tech.length == 0){
+    return "Vazio!"
+  }
   return lista  
 }
 //console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
