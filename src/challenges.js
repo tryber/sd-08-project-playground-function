@@ -126,19 +126,25 @@ function techList(techArray, name) {
     answer.push(item);
   }
   return answer;
+// Eu não estava conseguindo configurar a resposta ao array vazio então dei uma olhada no código do Cajueiro, ele usou o método length (que em um array vazio é igual a zero) para isso. Não acredito que deixei passar algo tão simples! O link do repositório dele: https://github.com/tryber/sd-08-project-playground-function/tree/douglas-cajueiro-project-playground-function
 }
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  if (numbers.length !== 11) {
+  let index;
+  for (index in numbers) {
+    function repetition(number) {
+      return number == numbers[index];
+    }
+    let num = numbers.filter(repetition)
+    if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
-  }
-  if (numbers[index] < 0 || numbers[index] > 9) {
+    }
+    else if (numbers[index] < 0 || numbers[index] > 9 || num.length >= 3) {
     return 'não é possível gerar um número de telefone com esses valores';
+    }
   }
-  for (let index in numbers) {
-
-  }
+  return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
 }
 
 // Desafio 12
