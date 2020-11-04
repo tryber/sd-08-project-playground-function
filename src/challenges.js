@@ -48,7 +48,7 @@ console.log(resultado);
 
 // Desafio 6
 function highestCount(numero) {
-  //qual o maior numero do meu array
+  //qual o maior numero do meu array  
   let numMaior = Math.max(...numero);
 
   let cont = 0;
@@ -59,12 +59,22 @@ function highestCount(numero) {
   }
   return cont;
 }
-console.log((highestCount([10, 10, 11, 9, 10])));
+(highestCount([10, 10, 11, 9, 10]));
+console.log(`O maior valor do meu array é o ${numMaior}, e ele se repete ${cont} vezes`);
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+  let posicaoMaior = Math.max(mouse, cat1, cat2);
+  let gatosMaior = Math.max(cat1, cat2);
+  if (gatosMaior >= cat1 && cat1 > cat2) {
+      return "cat1";
+  } else if (gatosMaior >= cat2 && cat2 > cat1) {
+      return "cat2";
+  } else if (cat1 === cat2) {
+      return "os gatos trombam e o rato foge";
+  }
+} 
+console.log(catAndMouse (10, 3, 3));
 
 // Desafio 8
 function fizzBuzz(numeros) {
