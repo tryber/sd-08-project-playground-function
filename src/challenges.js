@@ -232,7 +232,7 @@ function generatePhoneNumber(array) {
 
 
   if (array.length != 11) {
-    return "Array com tamanho incorreto"
+    return "Array com tamanho incorreto."
   }
 
 
@@ -245,7 +245,7 @@ function generatePhoneNumber(array) {
 
 
       
-       if (array[i] < 0 || array[i] > 9 || cont >= 3) {
+       if (array[i1] < 0 || array[i1] > 9 || cont >= 3) {
 
         return "não é possível gerar um número de telefone com esses valores"
 
@@ -264,7 +264,7 @@ function generatePhoneNumber(array) {
 
   //funcao e $
 
-  console.log(generatePhoneNumber([3, 4, 8, 4, 3, 6, 5, 8, 9, 0, 1]))
+  console.log(generatePhoneNumber([3, 4, 8, 4, 3, 6, 5, 8, 9, -5, 1]))
   
   // Desafio 12
   function triangleCheck(lineA, lineB, lineC) {
