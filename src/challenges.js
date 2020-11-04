@@ -20,8 +20,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(arrayDeStrings) {
-    return [arrayDeStrings.lenght - 1] + "," + arrayDeStrings[0];
+function concatName(arrayOfStrings) {
+    return [arrayOfStrings.lenght - 1] + "," + arrayOfStrings[0];
 }
 
 // Desafio 5
@@ -48,8 +48,9 @@ function catAndMouse(a, b, c) {
 }
 
 // Desafio 8
-function fizzBuzz(array_de_numeros) {
-    for (i = 0; i < array_de_numeros.lenght - 1; i+=1) {
+function fizzBuzz(array_of_numbers) {
+    let result = [];
+    for (i = 0; i < array_of_numbers.lenght - 1; i+=1) {
         if (i % 3 == 0 && i % 5 == 0) {
             return "fizzBuzz";
         } else if (i % 3 == 0) {
@@ -60,6 +61,7 @@ function fizzBuzz(array_de_numeros) {
             return "bug!";
         };
     }
+    return result
 }
 
     // Desafio 9
