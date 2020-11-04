@@ -7,21 +7,21 @@ function compareTrue(value1, value2) {
   }
   return false
 }
-console.log(compareTrue(2, 'João'))
+// console.log(compareTrue(2, 'João'))
 
 // Desafio 2
 function calcArea(base, height) {
   let triangleArea = (base * height) / 2
   return triangleArea
 }
-console.log(calcArea(5, 10))
+// console.log(calcArea(5, 10))
 
 // Desafio 3
 function splitSentence(string) {
   let arrayString = string.split(' ')
   return arrayString
 }
-console.log(splitSentence('Project 02 Trybe'))
+// console.log(splitSentence('Project 02 Trybe'))
 
 // Desafio 4
 function concatName(arrayStrings) {
@@ -29,14 +29,14 @@ function concatName(arrayStrings) {
   let lastName = arrayStrings[arrayStrings.length - 1]
   return (`${lastName}, ${firstName}`)
 }
-console.log(concatName(['João', 'Carlito', 'Marques', 'do', 'Nascimento', 'Neto']))
+// console.log(concatName(['João', 'Carlito', 'Marques', 'do', 'Nascimento', 'Neto']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let pointsTeam = (wins * 3) + (ties * 1)
   return pointsTeam
 }
-console.log(footballPoints(10, 12))
+// console.log(footballPoints(10, 12))
 
 // Desafio 6
 function highestCount(array) {
@@ -55,7 +55,7 @@ function highestCount(array) {
   }
   return repeatNumber
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -71,7 +71,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2'
   } return 'cat1'
 }
-console.log(catAndMouse(2, 6, 7))
+// console.log(catAndMouse(2, 6, 7))
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
@@ -89,7 +89,7 @@ function fizzBuzz(arrayNumbers) {
   }
   return arrayString
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+// console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(string) {
@@ -111,7 +111,7 @@ function encode(string) {
   }
   return newString
 }
-console.log(encode('Flamengo'))
+// console.log(encode('Flamengo'))
 
 function decode(stringNumbers) {
   let newString2 = ''
@@ -132,7 +132,7 @@ function decode(stringNumbers) {
   }
   return newString2
 }
-console.log(decode('Fl1m2ng4'))
+// console.log(decode('Fl1m2ng4'))
 
 // Desafio 10
 function techList(technologies, name) {
@@ -146,7 +146,7 @@ function techList(technologies, name) {
   }
   return technologiesList
 }
-console.log(techList(['JS', 'React', 'Python'], 'João'))
+// console.log(techList(['JS', 'React', 'Python'], 'João'))
 
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
@@ -171,7 +171,7 @@ function generatePhoneNumber(arrayNumber) {
   return '(' + arrayNumber[0] + arrayNumber[1] + ') ' + arrayNumber[2] + arrayNumber[3] + arrayNumber[4] + arrayNumber[5] + arrayNumber[6] + '-' + arrayNumber[7] + arrayNumber[8] + arrayNumber[9] + arrayNumber[10]
 }
 
-console.log(generatePhoneNumber([1, 7, 3, 4, 5, 1, 2, 4, 9, 2, 6]))
+// console.log(generatePhoneNumber([1, 7, 3, 4, 5, 1, 2, 4, 9, 2, 6]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -180,12 +180,24 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false
 }
-console.log(triangleCheck(9, 5, 5))
+// console.log(triangleCheck(9, 5, 5))
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numString = string.replace(/\D+/g, "");
+  let cups = 0
+
+  for (let i = 0; i < numString.length; i += 1) {
+    cups += parseInt(numString[i]);
+  }
+
+  if (cups === 1) {
+    return cups + " copo d'água "
+  }
+  return cups + " copos d'água "
+
 }
+// console.log(hydrate('1'))
 
 
 module.exports = {
