@@ -38,18 +38,20 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz(param1 = [1, 2, 5, 8, 9, 12, 6984]) {
+function fizzBuzz(param1 = [2, 15, 7, 9, 45]) {
   let stringArray = [];
-    if ((param1 % 3 === 0) && (param1 % 5 === 0)) {
+  for (let i = 0; i < param1.lenght; i++) {
+    if ((param1[i] % 3 === 0) && (param1[i] % 5 === 0)) {
       stringArray.push("fizzBuzz");
     }
-    else if (param1% 3 === 0) {
+    else if (param1[i] % 3 === 0) {
       stringArray.push("fizz");
-    } else if (param1 % 5 === 0) {
+    } else if (param1[i] % 5 === 0) {
       stringArray.push("buzz");
     } else {
       stringArray.push("bug!");
     }
+  }
   return stringArray;
 }
 
