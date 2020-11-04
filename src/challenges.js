@@ -60,14 +60,14 @@ function catAndMouse(a, b, c) {
 }
 
 // Desafio 8
-function fizzBuzz(array_of_numbers) {
+function fizzBuzz(array) {
     let result = [];
-    for (i = 0; i < array_of_numbers.length; i +=1) {
-        if (i % 3 == 0 && i % 5 == 0) {
+    for (i = 0; i < array.length; i +=1) {
+        if (array[i] % 3 == 0 && i % 5 == 0) {
             result.push("fizzBuzz");
-        } else if (i % 3 == 0) {
+        } else if (array[i] % 3 == 0) {
             result.push("fizz");
-        } else if (i % 5 == 0) {
+        } else if (array[i] % 5 == 0) {
             result.push("buzz");
         } else {
             result.push("bug!");
@@ -75,7 +75,7 @@ function fizzBuzz(array_of_numbers) {
     }
     return result;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+console.log(fizzBuzz([3, 3, 3, 3, 3]))
 
     // Desafio 9
     function encode(string) {
