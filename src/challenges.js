@@ -69,28 +69,21 @@ function highestCount(param) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
     
-let distGato1 = mouse - cat1;
-let distGato2 = mouse - cat2;
+  let distGato1 = cat1 - mouse;
+  let distGato2 = cat2 - mouse;
+  
+  distGato1 = Math.abs(distGato1);
+  distGato2 = Math.abs(distGato2);
 
-if(Math.sign(distGato1) == -1){
-    distGato1 *= -1;
-}else{
-    distGato1 -= 1;
-}
-if(Math.sign(distGato2) == -1){
-    distGato2 *= -1;
-}else{
-    distGato2 -1;
-}
- if(distGato1 < distGato2){
-   return "cat1";
- }else if(distGato2 < distGato1){
-   return "cat2";
- }else if(distGato1 == distGato2){
-   return "os gatos trombam e o rato foge";
- }
-}
-// console.log(catAndMouse(1, 3, 5));
+   if(distGato1 < distGato2){
+     return "cat1";
+   }else if(distGato2 < distGato1){
+     return "cat2";
+   }else if(distGato1 == distGato2){
+     return "os gatos trombam e o rato foge";
+   }
+  }
+  // console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(param) {
@@ -150,8 +143,6 @@ function decode(param1) {
       texto = texto.replace('4', 'o');;
     }else if (texto[index] == "5"){
       texto[index].replace("5", "u");
-    }else{
-      
     }
   }
   return texto;
