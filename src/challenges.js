@@ -113,9 +113,9 @@ function decode(message) {
 
 // Desafio 10
 function techList(techArray, name) {
-  if (techArray == undefined) {
+  if (techArray.length === 0) {
     return "Vazio!";
-  };
+  }
   techArray.sort();
   let answer = [];
   for (let key in techArray) {
@@ -124,7 +124,7 @@ function techList(techArray, name) {
       name: name
     }
     answer.push(item);
-  };
+  }
   return answer;
 }
 
