@@ -31,8 +31,12 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(arrayDeNumeros) {
-
+function highestCount(numbers) {
+    let highestNumber = []
+    for(let i =0; i < numbers.length; i+=1)
+        if(numbers[i] > highestNumber){
+            highestNumber = number[i]
+        }
 }
 
 // Desafio 7
@@ -96,8 +100,9 @@ function fizzBuzz(array_of_numbers) {
                 return "u";
             };
         }
+        return stringEncoDeco;
     }
-    return stringEncoDeco;
+    
 
     // Desafio 10
     function techList(arrayOfTechs, name) {
@@ -122,7 +127,7 @@ function fizzBuzz(array_of_numbers) {
 
     // Desafio 12
     function triangleCheck() {
-        // seu código aqui
+        
     }
 
     // Desafio 13
