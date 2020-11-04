@@ -11,7 +11,7 @@ function compareTrue(a, b) {
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-console.log(calcArea(10,50))
+console.log(calcArea(10, 50))
 
 // Desafio 3
 function splitSentence(a) {
@@ -30,9 +30,18 @@ function footballPoints(wins = 6, ties = 3) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  numbers.sort();
+  let numberMax = numbers[numbers.length - 1];
+  let maxCount = 0;
+  for (let index = 0; index < numbers.length; index++) {
+    if (numbers[index] == numberMax) {
+      maxCount++
+    }
+  }
+  return maxCount;
 }
+console.log(highestCount([2, 1, 5, 9, 9, 5, 9, 9, 6]));
 
 // Desafio 7
 function catAndMouse() {
