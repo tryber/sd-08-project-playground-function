@@ -8,14 +8,16 @@ function compareTrue(a, b) {
 }
 
 // Desafio 2
-function calcArea(base = 10, height = 50) {
+function calcArea(base, height) {
   return (base * height) / 2;
 }
+console.log(calcArea(10,50))
 
 // Desafio 3
-function splitSentence(a = "go Trybe") {
+function splitSentence(a) {
   return a.split(" ");
 }
+console.log(splitSentence("go Trybe"));
 
 // Desafio 4
 function concatName(param = ["tudo bem?", "sei la", "como vai?", "oi"]) {
