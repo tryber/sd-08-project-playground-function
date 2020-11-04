@@ -115,7 +115,30 @@ function encode(inputString) {
 }
 
 function decode(outputString) {
-  // seu código aqui
+  let decodeString = outputString.split('');
+  for (var index = 0; index < decodeString.length; index += 1) {
+    switch (decodeString[index]) {
+      case '1':
+        decodeString[index] = 'a';
+      break;
+      case '2':
+        decodeString[index] = 'e';
+      break;
+      case '3':
+        decodeString[index] = 'i';
+      break;
+      case '4':
+        decodeString[index] = 'o';
+      break;
+      case '5':
+        decodeString[index] = 'u';
+      break;
+      default:
+      break;
+    }
+  }
+  let arrStr = decodeString.join('');
+  return arrStr;
 }
 
 // Desafio 10
