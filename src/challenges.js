@@ -51,38 +51,41 @@ function highestCount(max) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 < cat2){
+  let mouseCat1 = Math.abs(cat1 - mouse);
+  let mouseCat2 = Math.abs(cat2 - mouse); 
+  if (mouseCat1 < mouseCat2){
   return "cat2";
   }
-  if (cat1 > cat2){
+  if (mouseCat1 > mouseCat2){
     return "cat1";
   }
-  else (cat1 == cat2)
+  else (mouseCat1 == mouseCat2)
     return "os gatos trombam e o rato foge";
   }
   
 
 // Desafio 8
-function fizzBuzz(result) {
+function fizzBuzz(numbers) {
   let result = [];
-  for (let u = 0; u < result.length; u += 1){
-    if (u % 3 == 0){
+  for (let u = 0; u < numbers.length; u += 1){
+    if (numbers[u] % 3 == 0){
       result.push("fizz");
     }
-    else if (u % 5 == 0){
+    else if (numbers[u] % 5 == 0){
       result.push("buzz");
     }
-    else if (u % 3 == 0 && u % 5 == 0){
+    else if (number[u] % 3 == 0 && numbers[u] % 5 == 0){
       result.push("fizzbuzz");
     }
     result.push("bug!");
   }
+  return result;
 }
 
 
 // Desafio 9
 function encode(cripto) {
-  let cripto = '';
+  let cripto = "";
   for (let v = 0; v < cripto.length; v += 1)
   if (cripto[v] == "a"){
     cripto.push(1);
@@ -97,7 +100,7 @@ function encode(cripto) {
   }
 
 function decode() {
-  let revert = '';
+  let revert = "";
   for (let n = 0; n < revert.length; n += 1)
     if (revert[n] == 1){
     revert.push("a");
@@ -114,10 +117,8 @@ function decode() {
 
 // Desafio 10
 function techList(tech, name) {
-  let technology  = {
-  
+  // seu código aqui  
   }
-}
 
 // Desafio 11
 function generatePhoneNumber() {
