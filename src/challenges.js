@@ -24,9 +24,21 @@ Escreva uma função com o nome `calcArea` que receba um valor de base (chamado 
 Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2. */
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = [];
+  for(let i = 0; i < string.length; i+=1){
+  if(string[i] === ' ' || array[i] == array.length - 1){
+    let cut = string.slice(string[i]);
+    array[cut];
+  }
+  }
 }
+
+/***3 - Dividindo a frase**
+-
+Escreva uma função com o nome `splitSentence`, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
+
+Exemplo: se a função receber a string `"go Trybe"`, o retorno deverá ser `['go', 'Trybe']`. */
 
 // Desafio 4
 function concatName() {
