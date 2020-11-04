@@ -20,10 +20,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(arrayOfStrings) {
-    return arrayOfStrings[arrayOfStrings.length - 1] + ", " + arrayOfStrings[0];
+function concatName(array) {
+    return array[array.length - 1] + ", " + [0]
 }
-console.log(concatName(["Lucas", "Cassiano", "Ferraz", "Paollillo"]))
+console.log(concatName(["Lucas", "Cassiano", "Ferraz", "Paollillo"]));
 
 // Desafio 5
 function footballPoints(wins, ties) {
