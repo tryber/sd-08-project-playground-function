@@ -197,13 +197,27 @@ function generatePhoneNumber(arrayNum) {
     }
     return numtel;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
 
 
 // Desafio 12
-function triangleCheck() {
-    // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+
+    let verificacaolineA = lineA < lineB + lineC &&
+        lineA > Math.abs(lineB - lineC);
+    let verificacaolineB = lineB < lineA + lineC &&
+        lineB > Math.abs(lineA - lineC);
+    let verificacaolineC = lineC < lineB + lineA &&
+        lineC > Math.abs(lineA - lineB);
+
+
+
+    (verificacaolineA && verificacaolineB && verificacaolineC)
+    return true;
+
 }
+
+console.log(triangleCheck(40, 3, 1));
 
 // Desafio 13
 function hydrate() {
