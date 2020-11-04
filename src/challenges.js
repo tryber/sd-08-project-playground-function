@@ -41,18 +41,16 @@ function footballPoints(wins, ties) {
 }
 
 
-// Desafio 6
+// Desafio 6 - as propriedades Math.max.apply() foram absorvidas e usadas a partir do site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max#:~:text=Retornando%20o%20maior%20elemento%20de%20um%20array&text=reduce()%20pode%20ser%20usada,%2C%20b)%20%7B%20return%20Math. 
 function highestCount(numbers) {
+  let bigger = Math.max.apply(null, numbers);
   let repeat = 0;
-  let bigger = 0;
-  for(let index = 0; index < numbers.length; index += 1){
-    if(numbers[index] > bigger){
-     bigger = numbers[index];
-    }else if(numbers[index] == bigger){
-      repeat += 1;
-    }
+  for(let index = 0; index < numbers.length; index +=1){
+      if(numbers[index] == bigger){
+          repeat += 1;
+      }
   }
-  return repeat;
+  return repeat;  
 }
 
 // Desafio 7
