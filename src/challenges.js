@@ -19,7 +19,8 @@ function highestCount(arrayNumeros) {
   for (let i = 0; i < arrayNumeros.length; i ++) {
     if (arrayNumeros[i] > maior){
       maior = arrayNumeros[i];
-
+    }
+  }
   for (let i = 0; i < arrayNumeros.length; i ++) {
     if (arrayNumeros[i] == maior){
       vezes += 1;
