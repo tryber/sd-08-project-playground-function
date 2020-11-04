@@ -142,10 +142,38 @@ function decode(string) {
 // console.log(teste2);
 // console.log(decode('h3 th2r2!'));
 
-// Desafio 10
-function techList() {
+// >>----------> Desafio 10
+function techList(arrayObjects) {
+
   // seu código aqui
 }
+let entrada = [
+{
+  tech: "React",
+  name: "Lucas"
+},
+{
+  tech: "Jest",
+  name: "Marciano"
+}, 
+{
+  tech: "HTML",
+  name: "Covidelson"
+}, 
+{
+  tech: "CSS",
+  name: "Quarentenelson"
+}, 
+{
+  tech: "JavaScript",
+  name: "Richardelson"
+}, 
+{
+  tech: "Lucas",
+  name: "Amanhandelson"
+}];
+console.log(entrada[0].tech);
+
 
 // Desafio 11
 function generatePhoneNumber() {
