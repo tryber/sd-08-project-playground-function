@@ -43,8 +43,8 @@ function fizzBuzz(param1 = [2, 15, 7, 9, 45]) {
     return "fizzBuzz";
     } else if (param1 % 5 === 0) {
       return "buzz";
-      } else if (param1 % 3 === 0 && param1 % 5 === 0) {
-         return "fizzBuzz";
+      } else if (param1 % 3 === 0) {
+         return "fizz";
           } else {
             return "bug!";
   }
