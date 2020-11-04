@@ -47,15 +47,15 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2){
-  if(Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
-    return 'cat2'
-  }else if(Math.abs(mouse - cat2) > Math.abs(mouse - cat1)){
+function catAndMouse(mouse, cat1, cat2)   {
+  if(Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
+    return 'cat2';
+  }else if(Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
     return 'cat1';
-  }else{
-    return 'Os gatos trombam e o rato foge';
+  }else if(Math.abs(cat1 - mouse) == Math.abs(cat1 - mouse)){
+    return 'os gatos trombam e o rato foge';
   }
-}   
+}
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
