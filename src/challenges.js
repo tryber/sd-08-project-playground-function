@@ -100,9 +100,9 @@ function fizzBuzz(array_of_numbers) {
 
     // Desafio 10
     function techList(arrayOfTechs, name) {
-        let object = {};
         let arrayOfObject = {};
         if (arrayOfTechs.lenght < 0){
+            let object = {};
             return "Vazio!";
         } else{
             for (let i =0; i < arrayOfTechs.lenght; i += 1){
