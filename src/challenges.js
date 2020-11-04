@@ -106,16 +106,67 @@ if(Math.sign(distGato2) == -1){
 // console.log(catAndMouse(1, 3, 5));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(param) {
+  
+  let vetor = param;
+  let vetorResult = [];
+  for (let index = 0; index < vetor.length; index += 1){
+      if(vetor[index] % 3 == 0 && vetor[index] %5 == 0){
+        vetorResult.push("fizzbuzz");
+      }else if (vetor[index] % 3 == 0){
+        vetorResult.push("fizz");
+      }else if (vetor[index] %5 == 0){
+        vetorResult.push("buzz");
+      }else{
+        vetorResult.push("bug!");
+      }
+  }
+  return vetorResult;
+} 
+// let teste = [2, 15, 7, 9, 45];
+// console.log(fizzBuzz(teste));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(param) {
+
+  let texto = param;
+  
+  for(let index = 0; index < texto.length; index += 1){
+    if(texto[index] == "a"){
+      texto = texto.replace('a', '1');
+    }else if(texto[index] == "e"){
+      texto = texto.replace('e', '2');
+    }else if (texto[index] == "i"){
+      texto = texto.replace('i', '3');
+    }else if(texto[index] == "o"){
+      texto = texto.replace('o', '4');
+    }else if (texto[index] == "u"){
+      texto[index].replace("u", "5");
+    }
+  }
+  return texto;
 }
-function decode() {
-  // seu código aqui
+// let teste = "h3 th2r2!";
+// console.log(decode(teste));
+
+function decode(param1) {
+
+  let texto = param1;
+  
+  for(let index = 0; index < texto.length; index += 1){
+    if(texto[index] == "1"){
+      texto = texto.replace('1', 'a');
+    }else if(texto[index] == "2"){
+      texto = texto.replace('2', 'e');
+    }else if (texto[index] == "3"){
+      texto = texto.replace('3', 'i');
+    }else if(texto[index] == "4"){
+      texto = texto.replace('4', 'o');;
+    }else if (texto[index] == "5"){
+      texto[index].replace("5", "u");
+    }
+  }
+  return texto;
 }
 
 // Desafio 10
