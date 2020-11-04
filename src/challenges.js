@@ -2,37 +2,20 @@
 function compareTrue(a,b) {
   return a && b
 }
-  /*JavaScript possui um operador lógico &&, o qual recebe dois valores e retorna true se ambos os valores são verdadeiros, e retorna false se algum dos valores não o for.
-
-Considerando isso, crie uma função chamada compareTrue que, ao receber dois booleanos:
-
-Retorne true se ambos os valores são verdadeiros;
-Retorne false se um ou ambos os parâmetros forem falsos.
-Faça a função utilizando o operador &&.*/
-
-
+ 
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height )/2
   return area
 }
 
-/***2 - Área do triângulo** 
--
-Escreva uma função com o nome `calcArea` que receba um valor de base (chamado `base`) e outro de altura (chamado `height`) de um triângulo e retorne o cálculo da sua área.
-
-Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2. */
 
 // Desafio 3
 function splitSentence(string) {
   let array = string.split(' ')
   return array;
 }
-/***3 - Dividindo a frase**
--
-Escreva uma função com o nome `splitSentence`, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
 
-Exemplo: se a função receber a string `"go Trybe"`, o retorno deverá ser `['go', 'Trybe']`. */
 
 // Desafio 4
 function concatName(array) {
@@ -49,11 +32,6 @@ function concatName(array) {
   return newName;
 }
 
-/***4 - Concatenação de strings**
--
-Escreva uma função com o nome `concatName` que, ao receber uma array de strings, retorne uma string com o formato `'ÚLTIMO ITEM, PRIMEIRO ITEM'`, independente do tamanho da array.
-
-Isso quer dizer que, caso o parâmetro passado para `concatName` seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar `Paolillo, Lucas`. */
 
 // Desafio 5
 function footballPoints(wins, ties){
@@ -72,12 +50,12 @@ function highestCount(array) {
       counts[array[i]]=1;
     }
   }  for (const prop in counts) {
-    let highProp = 0; //Varíavel conterá o valor mais alto do array
+    let highProp = 0; 
     if (prop >= highProp) { 
       highProp = counts[prop];
     }timesRepeated = highProp;
   }
-  return timesRepeated // O resultado da função é o primeiro item do array.
+  return timesRepeated
 }
 console.log(highestCount( [0, 4, 4, 4, 9, 2, 1]))
 
@@ -166,10 +144,31 @@ function encode(string) {
   return string2
   }
   
-console.log(encode(["hi there!"]))
+console.log(encode("hi there!"))
 function decode(string) {
-  // seu código aqui
+  let arrayArmazem2 = [];
+  let string3 = '';
+  for(let i = 0; i < string.length; i+=1){
+    if(string[i] == '1'){
+      arrayArmazem2.push('a')
+    }else if(string[i] == '2'){
+      arrayArmazem2.push('e')
+    }else if(string[i] == '3'){
+      arrayArmazem2.push('i')
+    }else if(string[i] == '4'){
+      arrayArmazem2.push('o')
+    }else if(string[i] == '5'){
+      arrayArmazem2.push('u')
+    }else{
+      arrayArmazem2.push(string[i])
+    }
+  }
+  for (let key in arrayArmazem2){
+    string3+= arrayArmazem2[key]
+  }
+  return string3
 }
+
 
 /***9 - Codifique e Decodifique**
 -
