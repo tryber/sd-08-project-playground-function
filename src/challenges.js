@@ -2,6 +2,13 @@ function calcularDistancia(pos1, pos2) {
   return Math.abs(pos1 - pos2);
 }
 
+function objetoComNomeTecnologia(nome, tecnologia) {
+  let obj = {
+    tech: tecnologia,
+    name: nome,
+  };
+  return obj;
+}
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
   if(boolean1 == true && boolean2 == true) {
@@ -135,8 +142,17 @@ function decode(str) {
 
 console.log(encode('hi there!'))
 // Desafio 10
-function techList() {
+function techList(vetor, name) {
   // seu código aqui
+  let arrayRetorno = [];
+  let vetorOrdenado = vetor.sort();
+  for (let index = 0; index < vetorOrdenado.length; index += 1) {
+    arrayRetorno.push(objetoComNomeTecnologia(name, vetorOrdenado[index]));
+  }
+  if (arrayRetorno.length === 0) {
+    return 'Vazio!';
+  }
+  return arrayRetorno;
 }
 
 // Desafio 11
