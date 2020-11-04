@@ -118,14 +118,19 @@ function decode(str) {
 function techList(array,name) {
   let techArray = [];
   let obj = {};
-  for(let x = 0; x < array.length; x += 1){
-    obj = {
-      'tech': array[x],
-      'name': name
+  if(array.length > 0){
+    for(let x = 0; x < array.length; x += 1){
+      obj = {
+        'tech': array[x],
+        'name': name
+      }
+      techArray.push(obj)
     }
-    techArray.push(obj)
+    return techArray;
+  } else {
+    return 'Vazio!';
   }
-  return techArray;
+  
 }
 
 
