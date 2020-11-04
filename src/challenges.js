@@ -38,15 +38,15 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz(x = [2, 5, 9]) {
-  if (x % 3 === 0){
-    return "fizz"
-    } else if (x % 5 === 0) {
-      return "buzz"
-      } else if (x % 3 === 0 && x % 5 === 0){
-         return "fizzbuzz"
+function fizzBuzz(param1 = [2, 5, 9]) {
+  if (param1 % 3 == 0 && param1 % 5 == 0) {
+    return "fizzBuzz";
+    } else if (param1 % 5 == 0) {
+      return "buzz";
+      } else if (param1 % 3 == 0) {
+         return "fizz";
           } else {
-            return "bug!"
+            return "bug!";
   }
 }
 
