@@ -38,7 +38,7 @@ function highestCount(numbers) {
   let max = numbers.filter(highestNumber);
   return max.length;
 //Aprendi a usar o apply nesse site https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ , ele permite que o Math.max funcione em arrays.
-  };
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -113,7 +113,19 @@ function decode(message) {
 
 // Desafio 10
 function techList(techArray, name) {
-  
+  if (techArray == undefined) {
+    return "Vazio!";
+  };
+  techArray.sort();
+  let answer = [];
+  for (let key in techArray) {
+    item = {
+      tech: techArray[key],
+      name: name
+    }
+    answer.push(item);
+  };
+  return answer;
 }
 
 // Desafio 11
