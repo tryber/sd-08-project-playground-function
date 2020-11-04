@@ -3,3 +3,9 @@
 # VSCode repo settings
 .vscode
 node_modules/
+debug.js
+.history
+fix
+package-lock.json
+package.json
+src/helpers.js
