@@ -14,7 +14,9 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-    return sentence.split(" ");
+    let splitSentence = []; 
+    splitSentence = sentence.split(" ");
+    return splitSentence;
 }
 
 // Desafio 4
@@ -38,11 +40,9 @@ function highestCount(max) {
    if (max[n] > number){
      number = max[n];
    }
-   return number;
  }
- 
  for (let c = 0; c < max.length; c += 1){
-   if (max[c] == number){
+   if (max[c] === number){
      contador += 1;
    }
    return contador;
@@ -54,7 +54,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let mouseCat1 = Math.abs(cat1 - mouse);
   let mouseCat2 = Math.abs(cat2 - mouse); 
   if (mouseCat1 < mouseCat2){
-  return "cat2";
+    return "cat2";
   }
   if (mouseCat1 > mouseCat2){
     return "cat1";
@@ -74,7 +74,7 @@ function fizzBuzz(numbers) {
     else if (numbers[u] % 5 == 0){
       result.push("buzz");
     }
-    else if (number[u] % 3 == 0 && numbers[u] % 5 == 0){
+    else if (numbers[u] % 3 == 0 && numbers[u] % 5 == 0){
       result.push("fizzbuzz");
     }
     result.push("bug!");
