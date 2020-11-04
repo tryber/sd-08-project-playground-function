@@ -77,7 +77,9 @@ function fizzBuzz(array) {
   }
   return result;
 }
+
 // Desafio 9
+// Solução encontrada no Stackoverflow utilizando String.prototype.replace()
 function encode(string) {
   let stringSwap = { a: "1", e: "2", i: "3", o: "4", u: "5" };
   let encondeResult = "";
@@ -94,23 +96,53 @@ function decode(string) {
 
   return encondeResult;
 }
-function decode() {
-  // seu código aqui
-}
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let resultArray = [];
+  let orderedTechList = tech.sort();
+  if (tech.length === 0) {
+    return "Vazio!";
+  }
+  for (let i in orderedTechList) {
+    resultArray.push({
+      tech: orderedTechList[i],
+      name: name,
+    });
+  }
+  return resultArray;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+// Expressão regular encontrada em - https://stackoverflow.com/questions/17650197/mask-javascript-variable-value
+// Foreach function encontrada em - https://www.codegrepper.com/code-examples/javascript/count+duplicates+array+js
+function generatePhoneNumber(array) {
+  let result = "";
+  let counts = [];
+  let rawString = array.join("");
+  result = rawString.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3");
+  if (array.length !== 11) {
+    result = "Array com tamanho incorreto.";
+  } else {
+    array.forEach(function (i) {
+      counts[i] = (counts[i] || 0) + 1;
+    });
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] < 0 || array[i] > 9 || counts[i] >= 3) {
+        result = "não é possível gerar um número de telefone com esses valores";
+      }
+    }
+  }
+  return result;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sumAB = lineA + lineB > lineC;
+  let sumAC = lineA + lineC > lineB;
+  let sumBC = lineB + lineC > lineA;
+
+  return sumAB && sumAC && sumBC;
 }
 
 // Desafio 13
