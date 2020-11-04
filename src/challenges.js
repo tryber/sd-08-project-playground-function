@@ -62,7 +62,7 @@ function catAndMouse(a, b, c) {
 // Desafio 8
 function fizzBuzz(array_of_numbers) {
     let result = [];
-    for (i = 0; i < array_of_numbers.length; i+=1) {
+    for (i = 0; i < array_of_numbers.length; i +=1) {
         if (i % 3 == 0 && i % 5 == 0) {
             result.push("fizzBuzz");
         } else if (i % 3 == 0) {
