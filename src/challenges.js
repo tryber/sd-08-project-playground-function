@@ -100,8 +100,8 @@ Exemplo: caso o parâmetro de `highestCount` seja uma array com valores `[9, 1, 
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = cat1-mouse;
-  let distanceCat2 = cat2-mouse;
+  let distanceCat1 = Math.abs(cat1-mouse);
+  let distanceCat2 = Math.abs(cat2-mouse);
   let winning = '';
   if(distanceCat1<distanceCat2){
     winning = 'cat1'
@@ -136,11 +136,12 @@ function fizzBuzz(array) {
     }else if(array[i]%3 !== 0 && array[i]%5 === 0){
       array2.push('buzz')
     }else if(array[i]%3 !== 0 && array[i]%5 !== 0){
-      array2.push('bug')
+      array2.push('bug!')
     }
   }
   return array2
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 /*Crie uma função chamada `fizzBuzz` que receba uma array de números e retorne uma array da seguinte forma:
 
