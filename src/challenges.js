@@ -32,6 +32,7 @@ function splitSentence(string) {
     array[cut];
   }
   }
+  return array;
 }
 
 /***3 - Dividindo a frase**
