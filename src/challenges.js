@@ -1,17 +1,6 @@
 // Desafio 1
 function compareTrue(a,b) {
-  a = Boolean;
-  b = Boolean;
-  let outcome;
-  if(a === true && b === true){
-    outcome = true;
-  }else if(a === true && b !== true){
-    outcome = false;
-  }else if(a !== true && b === true){
-    outcome = false;
-  }else if(a !== true && b !== true){
-    outcome = false;
-  }return outcome;
+  return a && b
 }
   /*JavaScript possui um operador lógico &&, o qual recebe dois valores e retorna true se ambos os valores são verdadeiros, e retorna false se algum dos valores não o for.
 
@@ -153,12 +142,48 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar `["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]`. */
 
 // Desafio 9
-function encode() {
+function encode(string) {
+  let arrayArmazem = [];
+  let string2 = '';
+  for(let i = 0; i < string.length; i+=1){
+    if(string[i] == 'a'){
+      arrayArmazem.push('1')
+    }else if(string[i] == 'e'){
+      arrayArmazem.push('2')
+    }else if(string[i] == 'i'){
+      arrayArmazem.push('3')
+    }else if(string[i] == 'o'){
+      arrayArmazem.push('4')
+    }else if(string[i] == 'u'){
+      arrayArmazem.push('5')
+    }else{
+      arrayArmazem.push(string[i])
+    }
+  }
+  for (let key in arrayArmazem) {
+  string2 += arrayArmazem[key];    
+  }
+  return string2
+  }
+  
+console.log(encode(["hi there!"]))
+function decode(string) {
   // seu código aqui
 }
-function decode() {
-  // seu código aqui
-}
+
+/***9 - Codifique e Decodifique**
+-
+Crie duas funções: a primeira deverá se chamar `encode` e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+
+a -> 1 \
+e -> 2 \
+i -> 3 \
+o -> 4 \
+u -> 5
+
+Ou seja, caso o parâmetro de `encode` seja `"hi there!"`, o retorno deverá ser `"h3 th2r2!"`.
+
+A segunda função deverá se chamar `decode` e faz o contrário de `encode` - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de `decode` seja `"h3 th2r2!"`, o retorno deverá ser `"hi there!"`). */
 
 // Desafio 10
 function techList() {
