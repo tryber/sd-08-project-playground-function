@@ -45,10 +45,10 @@ function highestCount(arrayNumeros) {
     if (arrayNumeros[i] > maior){
       maior = arrayNumeros[i];
     }
-    for (let i = 0; i < arrayNumeros.length; i ++) {
-      if (arrayNumeros[i] == maior){
-      vezes += 1;
-      }
+  }
+  for (let i = 0; i < arrayNumeros.length; i ++) {
+    if (arrayNumeros[i] == maior){
+    vezes += 1;
     }
   }
   return vezes;
