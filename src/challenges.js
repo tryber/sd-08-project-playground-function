@@ -1,13 +1,7 @@
 // Desafio 1
 function compareTrue(a,b) {
-  let result = Boolean;
-  if(a && b === true){
-  result = true;
-}else if(a && b === false){
-  result = false;
-};
-  return result
-
+  
+}
   /*JavaScript possui um operador lógico &&, o qual recebe dois valores e retorna true se ambos os valores são verdadeiros, e retorna false se algum dos valores não o for.
 
 Considerando isso, crie uma função chamada compareTrue que, ao receber dois booleanos:
@@ -15,12 +9,19 @@ Considerando isso, crie uma função chamada compareTrue que, ao receber dois bo
 Retorne true se ambos os valores são verdadeiros;
 Retorne false se um ou ambos os parâmetros forem falsos.
 Faça a função utilizando o operador &&.*/
-}
+
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height )/2
+  return area
 }
+
+/***2 - Área do triângulo** 
+-
+Escreva uma função com o nome `calcArea` que receba um valor de base (chamado `base`) e outro de altura (chamado `height`) de um triângulo e retorne o cálculo da sua área.
+
+Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2. */
 
 // Desafio 3
 function splitSentence() {
