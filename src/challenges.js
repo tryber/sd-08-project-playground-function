@@ -1,3 +1,5 @@
+//Tive ajuda do Bruno Cândido para rosolver algumas partes do código.
+
 // Desafio 1
 function compareTrue(bool1, bool2) {
   if(bool1 === true && bool2 === true){
