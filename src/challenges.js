@@ -18,7 +18,7 @@ function splitSentence(a = "go Trybe") {
 }
 
 // Desafio 4
-function concatName(param = [", tudo bem?", "sei la", "como vai?", "oi"]) {
+function concatName(param = [",&nbsptudo bem?", "sei la", "como vai?", "oi"]) {
   return param[3].concat(param[0]);
 }
 
