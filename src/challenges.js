@@ -85,34 +85,36 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(vowel) {
   let cripto = "";
-  for (let v = 0; v < cripto.length; v += 1)
-  if (cripto[v] == "a"){
-    cripto.push(1);
-  } else if (cripto[v] == "e"){
-    cripto.push(2);
-  } else if (cripto[v] == "i"){
-    cripto.push(3);
-  } else if (cripto[v] == "o"){
-    cripto.push(4);
-  } else (cripto[v] == "u")
-    cripto.push(5);
-  }
-  console.log(encode("Hello World"))
+  for (let v = 0; v < vowel.length; v += 1){
+    if (vowel[v] == "a"){
+    vowel.push(1);
+  } else if (vowel[v] == "e"){
+    vowel.push(2);
+  } else if (vowel[v] == "i"){
+    vowel.push(3);
+  } else if (vowel[v] == "o"){
+    vowel.push(4);
+  } else (vowel[v] == "u")
+    vowel.push(5);  
+  } return cripto;
+}
 
 function decode(unit) {
   let revert = "";
-  for (let n = 0; n < revert.length; n += 1)
-    if (revert[n] == 1){
-    revert.push("a");
-  } else if (revert[n] == 2){
-    revert.push("e");
-  } else if (revert[n] == 3){
-    revert.push("i");
-  } else if (revert[n] == 4){
-    revert.push("o");
-  } else (revert[n] == 5)
-    revert.push("u");
+  for (let n = 0; n < unit.length; n += 1){
+    if (unit[n] == 1){
+    unit.push("a");
+  } else if (unit[n] == 2){
+    unit.push("e");
+  } else if (unit[n] == 3){
+    unit.push("i");
+  } else if (unit[n] == 4){
+    unit.push("o");
+  } else (unit[n] == 5)
+    unit.push("u");
   }
+  return revert;
+}
 
 
 // Desafio 10
