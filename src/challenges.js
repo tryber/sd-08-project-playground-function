@@ -54,19 +54,27 @@ function highestCount(numbers) {
     if (numbers[index] > maiorNum) {
       maiorNum = numbers[index];
     }
+  } 
     for(let index2 = 0; index2 < numbers.length; index2 += 1) {
       if (numbers[index2] === maiorNum) {
-        quantMaiAp += 1}
+        quantMaiAp += 1
       }
     }
-    return quantMaiAp;
-  }
+  
+  
+  return quantMaiAp;
+}
 
   console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let numbers =[];
+
+for(let index = 1; index <= 15; index += 1){
+    numbers.push(index);
+}
 
 }
 
