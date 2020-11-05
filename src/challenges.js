@@ -78,12 +78,12 @@ function decode() {
 function techList(tech, name) {
   let techList = [];
   if (tech == null) {
-    techList = "Vazio!";
+    techList = ["Vazio!"];
     return techList;
   }
   tech.sort();
   for (let i = 0; i < tech.length; i += 1) {
-    techList.push({"tech": tech[i] + ", name: " + name})
+    techList.push([{"tech": tech[i] + ", name: " + name}]);
   }
   return techList;
 }
