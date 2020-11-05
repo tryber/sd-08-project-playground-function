@@ -135,7 +135,7 @@ function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  else if (numbers.length === 11) {
+  else {
     for (index in numbers) {
       function repetition(number) {
         return number == numbers[index];
@@ -151,7 +151,12 @@ function generatePhoneNumber(numbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC) && lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) && lineC < lineB + lineA && lineC > Math.abs(lineB - lineA)) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 // Desafio 13
