@@ -196,7 +196,7 @@ function hydrate(string) {
   }
   return `${sum} copos de água`;
 }
-console.log(hydrate("3 cervejas, 9 vinhos, 1 cachaça"));
+
 
 module.exports = {
   calcArea,
