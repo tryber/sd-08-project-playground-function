@@ -3,7 +3,7 @@ function compareTrue() {
   // seu código aqui
   let variavel1;
   let variavel2;
-  if (variavel1 = true && variavel2 = true) {
+  if (variavel1 === true && variavel2 === true) {
     return true;
   } else {
     return false;
@@ -11,8 +11,12 @@ function compareTrue() {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(bass, alturas) {
   // seu código aqui
+  let base = 0;
+  let height = 0;
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
