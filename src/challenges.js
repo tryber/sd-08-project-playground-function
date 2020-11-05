@@ -58,7 +58,7 @@ function catAndMouse(pointCat1, pointCat2, pointMouse) {
     } else if (cat1Distance == cat2Distance){
         result = "os gatos trombam e o rato foge";
     }
-    return result
+    return result;
 }
 
 // Desafio 8
