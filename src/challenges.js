@@ -70,7 +70,6 @@ function fizzBuzz(entradaDoUsuario) {
   // seu código aqui
   var meuArray = [];
   for (let i = 0; i < entradaDoUsuario.length; i += 1) {
-    meuArray[i] = " ";
     if (entradaDoUsuario[i] % 3 === 0) {
       meuArray.push("fizz");
     } else if (entradaDoUsuario[i] % 5 === 0) {
