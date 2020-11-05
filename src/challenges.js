@@ -142,7 +142,7 @@ function techList(techs, name) {
 function generatePhoneNumber(number) {
   let result = '';
   if (number.length !== 11) {
-    return '  Array com tamanho incorreto.';
+    return 'Array com tamanho incorreto.';
   } else {
     for (let i in number) {
       let contRepeticao = 0;
