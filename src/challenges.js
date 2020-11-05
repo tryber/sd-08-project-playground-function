@@ -126,23 +126,23 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let sumAB = lineA + lineB > lineC;
-  let sumAC = lineA + lineC > lineB;
-  let sumBC = lineB + lineC > lineA;
+  let somaAB = lineA + lineB > lineC;
+  let somaAC = lineA + lineC > lineB;
+  let somaBC = lineB + lineC > lineA;
 
-  return sumAB && sumAC && sumBC;
+  return somaAB && somaAC && somaBC;
 }
 
 // Desafio 13
 function hydrate(string) {
   let onlyNumbersArray = string.match(/\d+/g).map(Number);
-  let sumArray = onlyNumbersArray.reduce(
+  let somaArray = onlyNumbersArray.reduce(
     (drinks1, drinks2) => drinks1 + drinks2);
   let result = '';
-  if (sumArray === 1) {
-    result = `${sumArray} copo de água`;
+  if (somaArray === 1) {
+    result = `${somaArray} copo de água`;
   } else {
-    result = `${sumArray} copos de água`;
+    result = `${somaArray} copos de água`;
   }
   return result;
 }
