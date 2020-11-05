@@ -171,7 +171,7 @@ function generatePhoneNumber(number) {
   }
   for (let i = 0; i < number.length; i += 1) {
     cMaior = 0;
-    if (number[cMaior] < 0 || number[cMaior > 9]) {
+    if (number[i] < 0 || number[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     for (let c = 0; c < number.length; c += 1) {
