@@ -26,7 +26,6 @@ function splitSentence(frase) {
   } 
   return fraseSeparada
 }
-console.log(splitSentence("Marconi Moreira"));
 // Desafio 4
 function concatName(nome) {
   let nome = [Lucas, Cassiano, Ferraz, Paolilo];
