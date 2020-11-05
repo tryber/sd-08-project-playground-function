@@ -151,8 +151,16 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let soNumero = str.replace(/\D/gim, '').split("")
+  let strToNam = 0;
+  for (let i = 0; i < soNumero.length; i += 1 ) {
+    strToNam += parseInt(soNumero[i], 10)
+  }
+  if (strToNam === 1) {
+    return `${strToNam} copo de água`
+  }
+  return `${strToNam} copos de água`;
 }
 
 module.exports = {
