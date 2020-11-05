@@ -109,20 +109,23 @@ function decode() {
 function techList(tech, name) {
   // seu código aqui
   //para resolver esta questão eu consultei as dúvidas de vários colegas no Slack
+  tech.sort();
   let resultado = [];
-  let objeto = {};
   if (tech.length == 0) {
     return "Vazio";
   } else {
     for(let index = 0; index < tech.length; index += 1) {
-      objeto.tech = tech[index];
-      objeto.name = name;
+      let objeto = {
+        tech: tech[index],
+        name: name,
+      };
       resultado.push(objeto);
     }
+    return resultado;
   }
-  return objeto;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Víctor"))
+
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Víctor"));
 
 // Desafio 11
 function generatePhoneNumber() {
