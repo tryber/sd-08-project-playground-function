@@ -47,17 +47,8 @@ function highestCount(numbers) {
     }
     
 // Desafio 7
-function catAndMouse(a, b, c) {
-    
-    let cat1 = Math.abs(c - a);
-    let cat2 = Math.abs(c - b);
-    if (cat1 < cat2) {
-        return "os gatos trombam e o rato foge";
-    } else if (cat2 < cat1) {
-        return "cat2";
-    } else {
-        return "cat1";
-    }
+function catAndMouse(x, y, z) {
+    return ((Math.abs(x - z)) < Math.abs(z - y)) ? 'Cat A' : ((Math.abs(x - z)) > Math.abs(z - y) ? 'Cat B' : 'Mouse C');
 }
 
 // Desafio 8
