@@ -87,10 +87,10 @@ function fizzBuzz(array) {
       recebeNomes.push("fizzBuzz")
     }
     else if(array[i] % 5 == 0){
-      recebeNomes.push("fizz")
+      recebeNomes.push("buzz")
     }
     else if(array[i] % 3 == 0){
-      recebeNomes.push("buzz")
+      recebeNomes.push("fizz")
     }
     else{
       recebeNomes.push("bug!")
