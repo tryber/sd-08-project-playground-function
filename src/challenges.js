@@ -43,9 +43,22 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1, cat2, mouse) {
+  
+  let distancia1 = Math.abs(cat1 - mouse);
+  let distancia2 = Math.abs(cat2 - mouse);
+  let result = "";
+  
+  if (distancia1 < distancia2) {
+    result = "cat1";
+  } else if (distancia2 < distancia1) {
+    result = "cat2";
+  } else {
+    result = "os gatos trombam e o rato foge";
+  }
+  return result;
 }
+
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -112,13 +125,13 @@ function decode(vogais) {
 
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  
 }
 
 // Desafio 12
