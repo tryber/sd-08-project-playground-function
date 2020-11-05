@@ -59,17 +59,18 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(num) {
+  let result
   for (let n = 0; n < num.length; n+= 1) {
     if (num[n] % 3 === 0) {
-      return 'fizz'
+      result.push('fizz')
     } else if (num[n] % 5 === 0) {
-      return 'buzz'
+      result.push('buzz')
     } else if ((num[n] % 3 === 0 && num[n] % 5 === 0)){
-      return 'fizzBuzz'
+      result.push('fizzBuzz')
     } else {
-      return 'bug!'
+      result.push('bug!')
     }
-    
+    return result
   }
 }
 
