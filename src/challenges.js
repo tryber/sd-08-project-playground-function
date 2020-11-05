@@ -22,7 +22,7 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(name) {
   let concatenacao = "";
-  concatenacao = name[name.length - 1] + "," + name[0];
+  concatenacao = name[name.length - 1] + ", " + name[0];
   return concatenacao;
 }
 
@@ -69,7 +69,7 @@ function fizzBuzz(numbers) {
   let result = [];
   for (let index = 0; index < numbers.length; index += 1){
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0){
-      result.push("fizzbuzz");
+      result.push("fizzBuzz");
     } else if (numbers[index] % 3 === 0){
       result.push("fizz");
     } else if (numbers[index] % 5 === 0){
