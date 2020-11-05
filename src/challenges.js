@@ -88,18 +88,19 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+let frase = "o rato roeu a roupa do rei de roma"
 function encode(alterar) {
-    let resposta = alterar.replace ('a', 1);
-    let resposta1 = resposta.replace ('e', 2);
-    let resposta2 = resposta1.replace ('i', 3);
-    let resposta3 = resposta2.replace ('o', 4);
-    let resposta4 = resposta3.replace ('u', 5);
-    return resposta4;
+    alterar = alterar.replaceAll ('a', 1);
+    alterar = alterar.replace ('e', 2);
+    alterar = alterar.replace ('i', 3);
+    alterar = alterar.replace ('o', 4);
+    alterar = alterar.replace ('u', 5);
+    return alterar;
     } 
-
+ console.log(encode(frase))
     
-function decode() {
-  // seu código aqui
+function decode(codigo) {
+  let resultado = codigo.replace(1, 'a')
 }
 
 // Desafio 10
@@ -123,10 +124,21 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+function triangleCheck(lineA, lineB, lineC) {
+  if (Math.abs (lineA) + Math.abs (lineB) > Math.abs (lineC)) {
+      return true;
 
+  } else if (Math.abs (lineA) + Math.abs (lineC) > Math.abs (lineB)) {
+      return true;
+
+  } else if (Math.abs (lineC) + Math.abs (lineB) > Math.abs (lineA)) {
+      return true;    
+       
+    } else {
+      return false;
+    }
+  } 
+      
 // Desafio 13
 function hydrate() {
   // seu código aqui
