@@ -44,19 +44,19 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
-  let newArray = [];
+  let newArr = [];
   for (let i in arrayNumbers) {
     if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0) {
-      newArray.push('fizzBuzz');
+      newArr.push('fizzBuzz');
     } else if (arrayNumbers[i] % 3 === 0) {
-      newArray.push('fizz');
+      newArr.push('fizz');
     } else if (arrayNumbers[i] % 5 === 0) {
-      newArray.push('buzz');
+      newArr.push('buzz');
     } else {
-      newArray.push('bug!');
+      newArr.push('bug!');
     }
-  }
-  return newArray;
+
+  return newArr;
 }
 // Desafio 9
 function encode(string) {
@@ -87,23 +87,15 @@ function decode(string) {
 }
 // Desafio 10
 function techList(arrTacName, name) {
-  if(arrTacName.length === 0) return "Vazio!";
-  let newArr = [];
+  arrTacName.sort();
+    if(arrTacName.length === 0) return "Vazio!";
+  let newArr= [];
   for (let i in arrTacName) {
     newArr[i] = {
-      tech: arrTacName[i], name: name
+      tech: arrTacName[i],
+      name: name
     };
   }
-  newArr.sort(function (a, b) {
-    //developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-    if (a.tech > b.tech) {
-      return 1;
-    }
-    if (a.tech < b.tech) {
-      return -1;
-    }
-    return 0;
-    });
   return newArr;
 }
 // Desafio 11
