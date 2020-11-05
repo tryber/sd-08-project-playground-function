@@ -19,7 +19,7 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName(array) {
+function concatName(array:any) {
   let result = '';
   result = array[array.length -= 1]+', '+array[0];
   return result;
