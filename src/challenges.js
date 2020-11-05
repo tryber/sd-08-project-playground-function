@@ -22,9 +22,6 @@ function splitSentence(frase) {
 function concatName(nome) {
   let resultado = nome[nome.length - 1] + " , " + nome[nome.length - 2];
     return resultado;
-  }
-
-  // seu código aqui
 }
 
 // Desafio 5
