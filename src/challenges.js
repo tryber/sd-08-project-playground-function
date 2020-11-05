@@ -23,14 +23,18 @@ function splitSentence(string) {
     return string.split(" ");
 }
 
+let temporaria = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+
 // Desafio 4
 function concatName(array) {
   // seu código aqui
  
-  let concat =  [array[array.length-1],array[0]]
+  let concat =  `${array[array.length-1]}, ${array[0]}`
 
   return concat
 }
+
+console.log(concatName(temporaria))
 
 // Desafio 5
 function footballPoints(wins,ties) {
