@@ -18,15 +18,20 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(tryber) {
   // seu código aqui
-  tryber.splitSentence(" "):
+  tryber.splitSentence(" ");
 }
-  console.log("go trybe");
+  console.log(splitSentence("go trybe"));
 
 // Desafio 4
-function concatName() {
+function concatName(nomeCompleto) {
   // seu código aqui
-}
-
+  let nomeConc = nomeCompleto[""];
+  for(let index = 0; index = nomeCompleto.length; index += 1) {
+    nomeConc = nomeCompleto[index -1] + " " + nomeCompleto[index[0]] 
+  }
+  return nomeConc;
+} 
+  console.log(concatName(["Lucas", "Cassiano", "Ferraz", "Paolillo"]));
 // Desafio 5
 function footballPoints() {
   // seu código aqui
