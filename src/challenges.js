@@ -160,8 +160,24 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(order) {
+  let regExp = /\d+/g;
+  let result = order.match(regExp);
+  if (result == 1) {
+    return `${result} copo de água`;
+  }
+  else {
+    let number = result.map(Number);
+    let sum = number.reduce(function(a, b){
+      return a + b;
+    }, 0);
+    return `${sum} copos de água`;
+  }
+/*Usei vários materiais para completar esse código:
+RegExp and match method: https://www.w3schools.com/jsref/jsref_obj_regexp.asp e https://www.w3schools.com/jsref/jsref_match.asp - Aprendi a buscar padrões em textos.
+Map Method and Number: https://stackoverflow.com/questions/35766769/convert-string-array-to-integer-array e https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number - Para converter o array de strings em array de números para que pudesse somá-los depois.
+Reduce Method: https://www.w3schools.com/jsref/jsref_reduce.asp e https://www.tutorialrepublic.com/faq/how-to-find-the-sum-of-an-array-of-numbers-in-javascript.php#:~:text=Answer%3A%20Use%20the%20JavaScript%20reduce,of%20an%20array%20of%20numbers. - Para somar os elementos do array e retornar um número.
+*/
 }
 
 
