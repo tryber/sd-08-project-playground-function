@@ -112,7 +112,7 @@ function techList(tech, name) {
   tech.sort();
   let resultado = [];
   if (tech.length == 0) {
-    return "Vazio";
+    return "Vazio!";
   } else {
     for(let index = 0; index < tech.length; index += 1) {
       let objeto = {
