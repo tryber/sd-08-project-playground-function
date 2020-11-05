@@ -2,13 +2,13 @@
 function compareTrue(valor1, valor2) {
   // seu código aqui
 
-  if (valor1 === 'true' && valor2 === 'true') {
-    return 'true';
+  if (valor1 === true && valor2 === true) {
+    return true;
   } else {
-     return 'false';
+     return false;
   }
 }
-//console.log(compareTrue("false", "true"))
+//console.log(compareTrue(false, false));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -162,6 +162,7 @@ function decode(novaString) {
 // Desafio 10
 function techList() {
   // seu código aqui
+  
 }
 
 // Desafio 11
