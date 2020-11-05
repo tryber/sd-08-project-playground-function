@@ -37,8 +37,8 @@ function concatName(nomeCompleto) {
 function footballPoints(wins, ties) {
   // seu código aqui
   let totalPontos = 0;
-  let quantidVit = 1;
-  let quantiEmp = 2;
+  let quantidVit = 14;
+  let quantiEmp = 8;
   totalPontos = (quantidVit * wins) + (quantiEmp * ties);
   return totalPontos;
 }
