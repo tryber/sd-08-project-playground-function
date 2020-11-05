@@ -1,14 +1,12 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(param1, param2) {
   // seu código aqui
-  let variavel1 = true;
-  let variavel2 = true; 
-  if (variavel1 === true && variavel2 === true) {
+  if (param1 === true && param2 === true) {
     return true;
   } else {
     return false;
   } 
-} console.log(compareTrue());
+} console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -18,9 +16,11 @@ function calcArea(base, height) {
 } console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(tryber) {
   // seu código aqui
+  tryber.splitSentence(" "):
 }
+  console.log("go trybe");
 
 // Desafio 4
 function concatName() {
