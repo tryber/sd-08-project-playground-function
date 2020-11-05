@@ -2,9 +2,8 @@
 function compareTrue(firstValue, secondValue) {
   if (firstValue && secondValue) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -37,7 +36,7 @@ function highestCount(numbers) {
   }
   let max = numbers.filter(highestNumber);
   return max.length;
-//Aprendi a usar o apply nesse site https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ , ele permite que o Math.max funcione em arrays.
+// Aprendi a usar o apply nesse site https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ , ele permite que o Math.max funcione em arrays.
 }
 
 // Desafio 7
@@ -114,14 +113,15 @@ function decode(message) {
 // Desafio 10
 function techList(techArray, name) {
   if (techArray.length === 0) {
-    return "Vazio!";
+    return 'Vazio!';
   }
   techArray.sort();
   let answer = [];
+  let item;
   for (let key in techArray) {
     item = {
       tech: techArray[key],
-      name: name
+      name
     }
     answer.push(item);
   }
@@ -134,8 +134,7 @@ function generatePhoneNumber(numbers) {
   let index;
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
-  }
-  else {
+  } else if {
     for (index in numbers) {
       function repetition(number) {
         return number === numbers[index];
