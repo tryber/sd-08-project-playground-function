@@ -25,8 +25,12 @@ function splitSentence(mySentence) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(parametro) {
   // seu código aqui
+    let final = parametro[parametro.length -1];
+    let primeiro = parametro[0];
+    let ordemInvertida = '${final},${primeiro}';
+    return ordemInvertida;
 }
 
 // Desafio 5
@@ -47,9 +51,26 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(meuArray) {
   // seu código aqui
+  var entradaDoUsuario =[meuArray];
+
+  for (let i = 1; i < entradaDoUsuario.length;i++){
+    if (entradaDoUsuario[i] % 3 === 0){
+     return console.log('fizz');
+    } else if(entradaDoUsuario[i] % 5 === 0){
+      return console.log('buzz');
+    } else if (entradaDoUsuario[i] % 3 === 0 && entradaDoUsuario[i] % 5 === 0){
+      return console.log('fizz buzz');
+    } else {
+      return console.log('bug');
+    }
+  }
+
 }
+
+console.log(fizzBuzz(2, 15, 7, 9, 45));
+
 
 // Desafio 9
 function encode() {
