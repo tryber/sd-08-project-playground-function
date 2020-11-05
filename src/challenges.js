@@ -27,10 +27,7 @@ function splitSentence(mySentence) {
 // Desafio 4
 function concatName(parametro) {
   // seu código aqui
-    let final = parametro[parametro.length -1];
-    let primeiro = parametro[0];
-    let ordemInvertida = '${final},${primeiro}';
-    return ordemInvertida;
+  return `${parametro[parametro.length -1]}, ${parametro[0]}`;
 }
 
 // Desafio 5
