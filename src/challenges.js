@@ -18,14 +18,13 @@ function splitSentence(frase) {
   return frase;
 }
 
-//https://pt.stackoverflow.com/questions/47861/como-dividir-uma-string-em-array-no-javascript//
-
 // Desafio 4
 function concatName(nome) {
-  let nome = "";
   for(let i = 0; i < nome.length; i += 1) {
-    let 
+    let resultado = nome[i];
+    return resultado;
   }
+  console.log(concatName(["Marconi Moreira"]))
 
   // seu código aqui
 }
