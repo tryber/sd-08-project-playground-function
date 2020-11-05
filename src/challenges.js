@@ -158,20 +158,18 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (Math.abs (lineA) + Math.abs (lineB) > Math.abs (lineC)) {
-      return true;
+  let confereA = lineA < lineB + lineC &&
+        (lineA > Math.abs(lineB - lineC));
 
-  } else if (Math.abs (lineA) + Math.abs (lineC) > Math.abs (lineB)) {
-      return true;
+    let confereB = lineB < lineA + lineC &&
+        (lineB > Math.abs(lineA - lineC));
 
-  } else if (Math.abs (lineC) + Math.abs (lineB) > Math.abs (lineA)) {
-      return true;    
-       
-    } else {
-      return false;
-    }
+    let confereC = lineC < lineB + lineA &&
+        (lineC > Math.abs(lineA - lineB)); 
+
+     return confereA && confereB && confereC;
   } 
-      
+        
 // Desafio 13
 function hydrate() {
   // seu código aqui
