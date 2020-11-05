@@ -18,7 +18,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(tryber) {
   // seu código aqui
-  tryber.splitSentence(" ");
+  tryber.split(" ");
 }
   console.log(splitSentence("go trybe"));
 
@@ -32,9 +32,11 @@ function concatName(nomeCompleto) {
   return nomeConc;
 } 
   console.log(concatName(["Lucas", "Cassiano", "Ferraz", "Paolillo"]));
-// Desafio 5
-function footballPoints() {
+
+  // Desafio 5
+function footballPoints(wins, ties) {
   // seu código aqui
+  let resultado;
 }
 
 // Desafio 6
