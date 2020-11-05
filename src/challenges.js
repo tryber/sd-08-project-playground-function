@@ -159,7 +159,7 @@ function generatePhoneNumber(arrayNumbers) {
       let second = arrayNumbers.slice(7,11).join("");
       let result = `(${ddd}) ${first}-${second}`
 
-      if(arrayNumbers.length != 11){
+      if(arrayNumbers.length !== 11| arrayNumbers.length == ""){
           return 'Array com tamanho incorreto.';
       }else if(arrayNumbers[i] < 0 | arrayNumbers > 9){
           return 'não é possível gerar um número de telefone com esses valores';
