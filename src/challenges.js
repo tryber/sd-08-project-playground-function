@@ -149,9 +149,24 @@ function decode(param1) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(objetos, name) {
+  
+  let vetorTech = objetos.sort();
+  let nomes = name;
+  let vetor = [];
+
+  if (vetorTech.length === 0) {
+    return 'Vazio!';
+  }
+
+  for (let index = 0; index < vetorTech.length; index += 1) {
+    vetor.push({ tech: vetorTech[index], name: nomes });
+  }
+  return vetor;
+
 }
+// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
+// "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
