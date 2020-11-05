@@ -1,6 +1,5 @@
 // >>----------> Desafio 1
 function compareTrue(primeiroBoleano, segundoBolenao) {
-  
   if (primeiroBoleano == true && segundoBolenao == true) {
     return true;
   } else if(primeiroBoleano == false || segundoBolenao == false){
@@ -26,12 +25,7 @@ function splitSentence(string) {
       retorno.push(pegaArray);
       pegaArray = '';
     }else if (string[indice] != ' ') {
-      pegaArray += string[indice];
-    }
-  }
-  return retorno;
-}
-// console.log(splitSentence('wr ra'));
+      pegaArray https://www.youtube.com/watch?v=SRMDcC0QvFQplitSentence('wr ra'));
 
 // >>-----------> Desafio 4
 function concatName(theArray) {
@@ -49,7 +43,6 @@ function footballPoints(wins, ties) {
 // >>----------> Desafio 6
 function highestCount(entrada) {
   let maior = Math.max.apply(Math, entrada);
-  
   let repeticoes = 0;
 
   for (let indice in entrada) {
@@ -66,7 +59,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let dCat1 = Math.sqrt(Math.pow((mouse - cat1), 2)); // Fórmula simplificada de menor distância: Teorema de Pitagoras.
   let dCat2 = Math.sqrt(Math.pow((mouse - cat2), 2)); // >>----------> dAB = radix² (A - B)²
   
-  if (dCat1 == dCat2)  {
+  if (dCat1 == dCat2) {
     return 'os gatos trombam e o rato foge';
 
   } else if (dCat1 == 0 || dCat1 < dCat2) {
