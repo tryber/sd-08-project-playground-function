@@ -232,7 +232,7 @@ function generatePhoneNumber(array) {
     }
     for (let i in array) {
       if(array.length !== 11){
-        phoneNumber = '"Array com tamanho incorreto."'
+        phoneNumber = "Array com tamanho incorreto."
         }else{
           phoneNumber = phoneNumber;
         }
