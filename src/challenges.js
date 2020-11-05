@@ -18,7 +18,8 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(tryber) {
   // seu código aqui
-  tryber.split(" ");
+  let resultado = tryber.split(" ");
+  return resultado;
 }
   console.log(splitSentence("go trybe"));
 
@@ -69,9 +70,24 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(entrada) {
   // seu código aqui
-}
+  let resultado = [""];
+  for(let index in entrada) {
+    
+    if (entrada[index] % 3 === 0 && entrada[index] % 5 === 0) {
+      resultado.push("fizzBuzz");
+    } else if (entrada[index] % 3 === 0) {
+      resultado.push("fizz");
+    } else if (entrada[index] % 5 === 0) {
+      resultado.push("buzz");
+    } else {
+      resultado.push("bug!");
+    }
+    return resultado;
+    } 
+  }
+  console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
