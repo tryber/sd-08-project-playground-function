@@ -104,18 +104,47 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let result = '';
+  let counts = [];
+  let rawString = array.join('');
+  result = rawString.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+  if (array.length !== 11) {
+    result = 'Array com tamanho incorreto.';
+  } else {
+    array.forEach(function (i) {
+      counts[i] = (counts[i] || 0) + 1;
+    });
+    for (let i = 0; i < array.length; i += 1) {
+      if (array[i] < 0 || array[i] > 9 || counts[i] >= 3) {
+        result = 'não é possível gerar um número de telefone com esses valores';
+      }
+    }
+  }
+  return result;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sumAB = lineA + lineB > lineC;
+  let sumAC = lineA + lineC > lineB;
+  let sumBC = lineB + lineC > lineA;
+
+  return sumAB && sumAC && sumBC;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let onlyNumbersArray = string.match(/\d+/g).map(Number);
+  let sumArray = onlyNumbersArray.reduce(
+    (drinks1, drinks2) => drinks1 + drinks2);
+  let result = '';
+  if (sumArray === 1) {
+    result = `${sumArray} copo de água`;
+  } else {
+    result = `${sumArray} copos de água`;
+  }
+  return result;
 }
 
 
