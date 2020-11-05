@@ -1,59 +1,137 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-}
+function compareTrue(valor1, valor2) {
+  if (valor1 && valor2) {
+    return true;
+  } else {
+    return false;
+  }
+} 
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let areaTriangulo = (base * height) / 2
+  return areaTriangulo;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(stringToSplit) {
+  return stringToSplit.split(' '); 
 }
 
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  return `${arrayString[arrayString.length - 1]}, ${arrayString[0]}`; 
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorNumero = Math.max(...array);
+  let repeat = 0;
+  for (let i of array) {
+    if (maiorNumero === i) {
+      repeat += 1;
+    }
+  } 
+ return repeat
+  
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  
+  let distancia1 = Math.abs(cat1 - mouse);
+  let distancia2 = Math.abs(cat2 - mouse);
+  let result = "";
+  
+  if (distancia1 < distancia2) {
+    result = "cat1";
+  } else if (distancia2 < distancia1) {
+    result = "cat2";
+  } else {
+    result = "os gatos trombam e o rato foge";
+  }
+  return result;
 }
+
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let result = [];
+    for (i = 0; i < array.length; i += 1) {
+      if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+        result.push ("fizzBuzz");
+      } else if (array[i] % 3 == 0) {
+        result.push ("fizz");
+      } else if (array[i] % 5 == 0) {
+        result.push ("buzz");
+      } else {
+        result.push ("bug!");
+      }
+    }
+    return result;
 }
+
+
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(vogais) {
+  let encodeStr = "";
+
+  for (let i = 0; i < vogais.length; i += 1)
+    if (vogais[i] === "a") {
+      encodeStr += "1";    
+    } else if (vogais[i] === "e") {
+      encodeStr += "2";
+    } else if (vogais[i] === "i") {
+      encodeStr += "3";
+    } else if (vogais[i] === "o") {
+      encodeStr += "4";
+    } else if (vogais[i] === "u") {
+      encodeStr += "5";
+    } else {
+      encodeStr += vogais[i];
+    }
+    return encodeStr;
 }
-function decode() {
-  // seu código aqui
+  console.log(encode("hi there!"))
+
+function decode(vogais) {
+  let decodeStr = "";
+
+  for (let i = 0; i < vogais.length; i += 1)
+    if (vogais[i] === "1") {
+      decodeStr += "a";    
+    } else if (vogais[i] === "2") {
+      decodeStr += "e";
+    } else if (vogais[i] === "3") {
+      decodeStr += "i";
+    } else if (vogais[i] === "4") {
+      decodeStr += "o";
+    } else if (vogais[i] === "5") {
+      decodeStr += "u";
+    } else {
+      decodeStr += vogais[i];
+    }
+    return decodeStr;
 }
+  console.log(decode("hi there!"))
+
+
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  
 }
 
 // Desafio 12
