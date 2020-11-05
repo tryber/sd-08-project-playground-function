@@ -146,7 +146,7 @@ function techList(tech, name) {
   let retorna = [];
 
   if (tech.length === 0) {
-    return 'vazio!';
+    return 'Vazio!';
   }
   for (let indice = 0; indice < tech.length; indice += 1) {
     retorna.push({tech: tech[indice], name: name});
@@ -154,7 +154,7 @@ function techList(tech, name) {
   return retorna.sort();
 }
 
-console.log(techList(["React","Jest","HTML","CSS","JavaScript"],"Lucas"));
+// console.log(techList(["React","Jest","HTML","CSS","JavaScript"],"Lucas"));
 
 
 // Desafio 11
