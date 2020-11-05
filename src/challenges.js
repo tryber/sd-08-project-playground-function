@@ -47,7 +47,7 @@ function highestCount(array) {
   }
   return count;
 }
-
+//melhorar isso aqui
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let closestCat = "";
@@ -112,7 +112,7 @@ function techList(tech, name) {
   }
   return resultArray;
 }
-
+//pode melhorar
 // Desafio 11
 function generatePhoneNumber(array) {
   let result = "";
