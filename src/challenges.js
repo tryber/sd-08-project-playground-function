@@ -167,21 +167,36 @@ function generatePhoneNumber(arrTel) {
   }
 
   let phoneNumbers = arrTel.join("");
-  let ddd = phoneNumbers.slice(0,2);
-  let part1 = phoneNumbers.slice(2,7);
-  let part2 = phoneNumbers.slice(7,11);
-  return `(${ddd}) ${part1}-${part2}`
+  let ddd = phoneNumbers.slice(0, 2);
+  let part1 = phoneNumbers.slice(2, 7);
+  let part2 = phoneNumbers.slice(7, 11);
+  return `(${ddd}) ${part1}-${part2}`;
 }
 
 // Desafio 12
-function triangleCheck() {
-  
+function triangleCheck(lineA, lineB, lineC) {
+  let validA = lineA < lineB + lineC;
+  let validB = lineB < lineA + lineC;
+  let validC = lineC < lineA + lineB;
+
+  if (validA && validB && validC) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let sum = 0;
+
+  for (let i = 0; i < string.length; i += 1) {
+    let letters = string[i];
+    let numbers = parseInt(letters);
+    if (numbers) sum += numbers;
+  }
+  return `${sum} copos de água`;
 }
+console.log(hydrate("3 cervejas, 9 vinhos, 1 cachaça"));
 
 module.exports = {
   calcArea,
