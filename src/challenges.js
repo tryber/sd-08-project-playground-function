@@ -84,17 +84,36 @@ return result
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+let a = /a/g
+let e = /e/g
+let i = /i/g
+let o = /o/g
+let u = /u/g
+let result = string.replace(a, '1');
+let result = string.replace(e, '2');
+let result = string.replace(i, '3');
+let result = string.replace(o, '4');
+let result = string.replace(u, '5');
+return result
 }
+
+console.log(encode("hi there!"));
 function decode() {
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  array = []
+  name = ""
+  for (let index = 0; index < array; index += 1) {
+    array['tech'] = array[index]
+    array['name'] = name
 }
+return array.tech + array.name
+}
+console.log(techList([HTML, CSS, JAVASCRIPT], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
