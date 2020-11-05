@@ -92,7 +92,7 @@ function encode(string) {
   let u = o.replace(/u/g, 5)
   return u
 }
-console.log(encode("hi there!"));
+
 
 function decode(string) {
   let result = string.replace(/1/g, "a")
@@ -102,7 +102,6 @@ function decode(string) {
   let u = o.replace(/5/g, "u")
   return u
 }
-console.log(decode("h3 th2r2!"));
 // Desafio 10
 function techList(array, name) {
   array.sort()
