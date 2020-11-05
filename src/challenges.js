@@ -20,11 +20,9 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(nome) {
-  for(let i = 0; i < nome.length; i += 1) {
-    let resultado = nome[i];
+  let resultado = nome[nome.length - 1] + " , " + nome[nome.length - 2];
     return resultado;
   }
-  console.log(concatName(["Marconi Moreira"]))
 
   // seu código aqui
 }
