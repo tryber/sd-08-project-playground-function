@@ -68,9 +68,6 @@ function catAndMouse(mouse,cat1, cat2) {
 // Desafio 8
 function fizzBuzz(entradaDoUsuario) {
   // seu código aqui
-
-
-  var entradaDoUsuario = [];
   var meuArray = [];
   for (let i = 0; i < entradaDoUsuario.length; i++) {
       meuArray[i] = "";
