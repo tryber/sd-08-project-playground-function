@@ -53,9 +53,9 @@ function catAndMouse(a, b, c) {
     let cat2 = Math.abs(c - b);
     if (cat1 < cat2) {
         return "cat1";
-    } else if (cat2 < cat1) {
+    } else if (cat1 > cat2) {
         return "cat2";
-    } else {
+    } else if (cat1 == cat2) {
         return "os gatos trombam e o rato foge";
     }
 }
