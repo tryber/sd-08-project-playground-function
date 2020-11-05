@@ -1,42 +1,109 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(bol1,bol2) {
   // seu código aqui
+
+  if(bol1 == true && bol2 == true){
+    return true
+  }
+
+  return false
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base,height) {
   // seu código aqui
+
+  return (base*height)/2
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+
+    return string.split(" ");
 }
+
+
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+ 
+  let concat =  `${array[array.length-1]}, ${array[0]}`
+
+  return concat
 }
 
+
+
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
   // seu código aqui
+
+  wins = wins*3
+  return wins + ties
+
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
   // seu código aqui
+  maior = 0
+  marca = 0
+  for(i=0; i < numbers.length; i++){
+    if(maior < numbers[i]){
+      maior = numbers[i]
+      marca = 0
+    }
+    if(maior == numbers[i]){
+      marca++
+    }
+  }
+
+  return marca
 }
+
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
+  if(Math.abs( mouse - cat1) < Math.abs(mouse - cat2 )){
+    return "cat1"
+  }
+  else if(Math.abs( mouse - cat2) < Math.abs(mouse - cat1 )){
+    return "cat2"
+  }
+  else{
+    return "os gatos trombam e o rato foge"
+  }
 }
 
+console.log(catAndMouse(1,3,2))
+
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
+  let recebeNomes = []
   // seu código aqui
+  for( i = 0; i < array.length; i++){
+    if(array[i] % 5 == 0 && array[i] % 3 == 0){
+      recebeNomes.push("fizzBuzz")
+    }
+    else if(array[i] % 5 == 0){
+      recebeNomes.push("buzz")
+    }
+    else if(array[i] % 3 == 0){
+      recebeNomes.push("fizz")
+    }
+    else{
+      recebeNomes.push("bug!")
+    }
+  }
+
+  return recebeNomes
+
 }
+
+
 
 // Desafio 9
 function encode() {
