@@ -69,13 +69,14 @@ function catAndMouse(mouse,cat1, cat2) {
 function fizzBuzz(entradaDoUsuario) {
   // seu código aqui
   var meuArray = [];
-  for (let i = 0; i < entradaDoUsuario.length; i += 1) {
-    if (entradaDoUsuario[i] % 3 === 0) {
-      meuArray.push("fizz");
-    } else if (entradaDoUsuario[i] % 5 === 0) {
-      meuArray.push("buzz");
-    } else if (entradaDoUsuario[i] % 3 === 0 && entradaDoUsuario[i] % 5 === 0) {
+
+  for (let i = 0; i < entradaDoUsuario.length; i++ ) {
+    if (entradaDoUsuario[i] % 3 == 0 && entradaDoUsuario[i] % 5 == 0) {
       meuArray.push("fizzBuzz");
+    } else if (entradaDoUsuario[i] % 3 == 0) {
+      meuArray.push("fizz");
+    } else if (entradaDoUsuario[i] % 5 == 0) {
+      meuArray.push("buzz");
     } else {
       meuArray.push("bug!");
     }
