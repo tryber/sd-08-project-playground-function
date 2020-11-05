@@ -1,17 +1,14 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-
-    if(valor1 == true && valor2 == true){
-      return "true";
-    }else{
-      return "false";
-    }
+  if (valor1 === true && valor2 === true) {
+    return "true";
+  } else {
+    return "false";
+  }
 }
 
 // Desafio 2
-function calcArea() {
-
-}
+function calcArea() {}
 
 // Desafio 3
 function splitSentence() {
@@ -29,9 +26,7 @@ function footballPoints() {
 }
 
 // Desafio 6
-function highestCount() {
-
-}
+function highestCount() {}
 
 // Desafio 7
 function catAndMouse() {
@@ -71,7 +66,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -87,4 +81,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
