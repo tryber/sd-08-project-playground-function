@@ -83,20 +83,18 @@ function highestCount(numberArray) {
   // seu código aqui
   let maiorNumero = numberArray [0];
   let contador = 0;
-  for (i = 0; i < numberArray.length; i++) {
+  for (let i = 0; i < numberArray.length; i++) {
     if (numberArray [i] > maiorNumero) {
       maiorNumero = arrayNumber [i];
-    } 
-  return maiorNumero;    
+    }     
   }
-  for (x = 0; x < numberArray.length; i++) {
+  for (let x = 0; x < numberArray.length; x++) {
     if (numberArray [x] == maiorNumero) {
       contador += 1;
     }
   }
   return contador;
 }
-
 // Desafio 7
 // Caça ao rato
 // Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que ambos estão atrás de um rato chamado mouse. Imagine que cada um dos três animais está em uma posição representada por um número.
