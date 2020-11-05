@@ -121,7 +121,18 @@ function decode(unit) {
 
 // Desafio 10
 function techList(tech, name) {
-  // seu código aqui
+  let technology = [];
+  let listaOrdenada = tech.sort();
+  if (tech.length === 0){
+    return "Vazio!";
+  }
+  for (let t in listaOrdenada){
+    technology.push({
+      tech: tech[t],
+      name: name
+    });
+  }
+    return technology;
   }
 
 // Desafio 11
