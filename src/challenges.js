@@ -127,6 +127,7 @@ function techList(techs, name) {
     let rv = { tech, name };
     array.push(rv);
   }
+  //Essa função eu aprendi no site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
   return array.sort(function (a, b) {
     if (a.tech > b.tech) {
       return 1;
@@ -141,16 +142,19 @@ function techList(techs, name) {
 function generatePhoneNumber(number) {
   let result = '';
   if (number.length !== 11) {
-    return 'Array com tamanho incorreto.';
+    return '  Array com tamanho incorreto.';
   } else {
     for (let i in number) {
       let contRepeticao = 0;
       let verificaNumero = number[i];
+      if (number[i] > 9 || number[i] < 0) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
       for (let i2 in number) {
         if (verificaNumero === number[i2]) {
           contRepeticao += 1;
         }
-        if (number[i] > 9 || number[i] < 0 || contRepeticao >= 3) {
+        if (contRepeticao >= 3) {
           return 'não é possível gerar um número de telefone com esses valores';
         } else {
           result = '(' + number[0] + number[1] + ') ' + number[2] + number[3] + number[4] + number[5] + number[6] + "-" + number[7] + number[8] + number[9] + number[10];
@@ -174,13 +178,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(frase) {
-  /* let number = 0;
-  number += frase.match(/\d+/)[1];
-  return number */
-  /* let result = ;
-  frase.split = '';
-  for (let i in frase) {
-    if ((typeof frase[i] === 'number ') */
+
   let number = 0;
   for (let i in frase) {
     if (frase[i] === '1') {
