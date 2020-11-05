@@ -143,36 +143,20 @@ function decode(string) {
 // console.log(decode('h3 th2r2!'));
 
 // >>----------> Desafio 10
-function techList(arrayObjects) {
+function techList(techs, names) {
+  techs.sort();
+  let retorna = [];
 
-  // seu código aqui
+  if (techs.length === 0) {
+    return 'vazio!';
+  }
+  for (let indice = 0; indice < techs.length; indice += 1) {
+    retorna.push({tech: techs[indice], name: names});
+  }
+  return retorna.sort();
 }
-let entrada = [
-{
-  tech: "React",
-  name: "Lucas"
-},
-{
-  tech: "Jest",
-  name: "Marciano"
-}, 
-{
-  tech: "HTML",
-  name: "Covidelson"
-}, 
-{
-  tech: "CSS",
-  name: "Quarentenelson"
-}, 
-{
-  tech: "JavaScript",
-  name: "Richardelson"
-}, 
-{
-  tech: "Lucas",
-  name: "Amanhandelson"
-}];
-console.log(entrada[0].tech);
+
+// console.log(techList(["React","Jest","HTML","CSS","JavaScript"],"Lucas"));
 
 
 // Desafio 11
