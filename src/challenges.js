@@ -1,11 +1,16 @@
 // Desafio 1
-function compareTrue() {
-  
+function compareTrue(valor1, valor2) {
+
+    if(valor1 == true && valor2 == true){
+      return "true";
+    }else{
+      return "false";
+    }
 }
 
 // Desafio 2
 function calcArea() {
-  // seu código aqui
+
 }
 
 // Desafio 3
@@ -25,7 +30,7 @@ function footballPoints() {
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+
 }
 
 // Desafio 7
