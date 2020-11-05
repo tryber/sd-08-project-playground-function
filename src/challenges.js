@@ -142,13 +142,11 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let isTriangle = false;
-  if(lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
-    isTriangle = true;
-  } else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
-    isTriangle = true;
-  } else if (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineC)) {
-    isTriangle = true
-  }
+  if((lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) &&
+    (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) &&
+    (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineC))) {
+      isTriangle = true
+    }
   return isTriangle
 }
 

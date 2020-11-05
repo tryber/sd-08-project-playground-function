@@ -11,3 +11,19 @@ Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.*/
 
 
 
+function triangleCheck(lineA, lineB, lineC) {
+  let isTriangle = ;
+  if(lineA > (lineB + lineC) || lineA < Math.abs(lineB - lineC)) {
+    isTriangle = false;
+  }
+  if (lineB > (lineA + lineC) && lineB < Math.abs(lineA - lineC)) {
+    isTriangle = false;
+  }
+  if (lineC > (lineA + lineB) && lineC < Math.abs(lineA - lineC)) {
+    isTriangle = false;
+  }
+
+  return isTriangle
+}
+
+console.log(triangleCheck(5, 8, 3))
