@@ -38,7 +38,7 @@ function highestCount(numbers) {
             highestNumber = numbers[i]
         }
         let result = 0
-        for(let i = 0; i < numbers.lenght; i +=1){
+        for(let i = 0; i < numbers.length; i +=1){
             if (numbers[i] == highestNumber){
                 result += 1
             }
@@ -80,7 +80,7 @@ console.log(fizzBuzz([3, 3, 3, 3, 3]))
     // Desafio 9
     function encode(string) {
         let stringEncoDeco = string
-            for (i = 0; i < string.lenght; i +=1) {
+            for (i = 0; i < string.length; i +=1) {
                 if (i == "a") {
                     return 1;
                 } else if (i == "e") {
@@ -115,11 +115,11 @@ console.log(fizzBuzz([3, 3, 3, 3, 3]))
     // Desafio 10
     function techList(arrayOfTechs, name) {
         let arrayOfObject = {};
-        if (arrayOfTechs.lenght < 0){
+        if (arrayOfTechs.length < 0){
             let object = {};
             return "Vazio!";
         } else {
-            for (let i =0; i < arrayOfTechs.lenght; i += 1){
+            for (let i = 0; i < arrayOfTechs.length; i += 1){
                 object.tech = arrayOfTechs[index];
                 object.name = name;
                 arrayOfObject.push(object);
