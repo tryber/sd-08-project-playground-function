@@ -35,7 +35,7 @@ function generatePhoneNumber(number) {
             } else if (nNumber.length < 9) {
                 nNumber += number[i];
             } else if (nNumber.length === 9) {
-                nNumber += `-${number[i]}`;
+                nNumber += `${number[i]}-`;
             } else if (i < number.length) {
                 nNumber += number[i];
             }
