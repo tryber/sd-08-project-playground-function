@@ -71,11 +71,11 @@ function fizzBuzz(numbers) {
     if (numbers[index] % 3 == 0 && numbers[index] % 5 == 0){
       result.push("fizzbuzz")
     }
-    else if (numbers[index] % 5 == 0){
-      result.push("buzz");
-    }
     else if (numbers[index] % 3 == 0){
       result.push("fizz");
+    }
+    else if (numbers[index] % 5 == 0){
+      result.push("buzz");
     } else
       result.push("bug!");
   }
@@ -96,7 +96,8 @@ function encode(vowel) {
     vowel.push(4);
   } else (vowel[v] == "u")
     vowel.push(5);  
-  } return cripto;
+  }
+  return cripto;
 }
 
 function decode(unit) {
