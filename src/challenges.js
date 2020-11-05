@@ -67,6 +67,7 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+
 }
 
 // Desafio 8
@@ -97,9 +98,23 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
+  //para resolver esta questão eu consultei as dúvidas de vários colegas no Slack
+  let resultado = [];
+  let objeto = {};
+  if (tech.length == 0) {
+    return "Vazio";
+  } else {
+    for(let index = 0; index < tech.length; index += 1) {
+      objeto.tech = tech[index];
+      objeto.name = name;
+      resultado.push(objeto);
+    }
+  }
+  return objeto;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Víctor"))
 
 // Desafio 11
 function generatePhoneNumber() {
