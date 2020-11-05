@@ -38,12 +38,12 @@ function concatName(nomeCompleto) {
 function footballPoints(wins, ties) {
   // seu código aqui
   let totalPontos = 0;
-  let quantidVit = 1;
-  let quantiEmp = 2;
-  totalPontos = (quantidVit * wins) + (quantiEmp * ties);
+  let pontosVit = 3;
+  let pontosEmp = 1;
+  totalPontos = (pontosVit * wins) + (pontosEmp * ties);
   return totalPontos;
 }
-  console.log(footballPoints(3, 1));
+  console.log(footballPoints(2, 1));
 
 // Desafio 6
 function highestCount(numbers) {
@@ -54,8 +54,8 @@ function highestCount(numbers) {
     if (numbers[index] > maiorNum) {
       maiorNum = numbers[index];
     }
-    for(let index2 in numbers) {
-      if (maiorNum[index2] > 1) {
+    for(let index2 = 0; index2 < numbers.length; index2 += 1) {
+      if (numbers[index2] === maiorNum) {
         quantMaiAp += 1}
       }
     }
@@ -65,26 +65,26 @@ function highestCount(numbers) {
   console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz(entrada) {
+function fizzBuzz(numeros) {
   // seu código aqui
   let resultado = [];
-  for(let index = 0; index < entrada.length; index += 1) {
-    if (index % 3 == 0 && index % 5 == 0) {
+  for(let index = 0; index < numeros.length; index += 1) {
+    if (numeros[index] % 3 == 0 && numeros[index] % 5 == 0) {
       resultado.push ("fizzBuzz");
-    } else if (index % 3 == 0) {
+    } else if (numeros[index] % 3 == 0) {
       resultado.push ("fizz");
-    } else if (index % 5 == 0) {
+    } else if (numeros[index] % 5 == 0) {
       resultado.push ("buzz");
     } else {
       resultado.push ("bug!");
     }
-    return resultado;
     } 
+    return resultado;
   }
   console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
