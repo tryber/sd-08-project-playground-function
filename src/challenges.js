@@ -85,22 +85,24 @@ return result
 
 // Desafio 9
 function encode(string) {
-  let string = string.replace
-  let result = string
-    string.replace(/a/g, 1)
-    string.replace(/e/g, 2)
-    string.replace(/i/g, 3)
-    string.replace(/o/g, 4)
-    string.replace(/u/g, 5)
-  
-  return result
+  let result = string.replace(/a/g, 1)
+  let e = result.replace(/e/g, 2)
+  let i = e.replace(/i/g, 3)
+  let o = i.replace(/o/g, 4)
+  let u = o.replace(/u/g, 5)
+  return u
 }
 console.log(encode("hi there!"));
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let result = string.replace(/1/g, "a")
+  let e = result.replace(/2/g, "e")
+  let i = e.replace(/3/g, "i")
+  let o = i.replace(/4/g, "o")
+  let u = o.replace(/5/g, "u")
+  return u
 }
-
+console.log(decode("h3 th2r2!"));
 // Desafio 10
 function techList(array, name) {
   array.sort()
