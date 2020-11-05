@@ -21,7 +21,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(nome) {
-  return nome[nome.lenght-1] + ", "+ nome[0];
+  return nome[nome.length-1] + ", "+ nome[0];
 }
 
 // Desafio 5
@@ -33,7 +33,7 @@ function footballPoints(wins,ties) {
 function highestCount(array) {
   maiorNumero = Math.max(array)
   var contagem = 0
-  for (n = 0; n < array.lenght; n += 1){
+  for (n = 0; n < array.length; n += 1){
     if (array[n] === maiorNumero){
       contagem + 1
     }
