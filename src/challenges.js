@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(x,y) {
+function compareTrue(x, y) {
   if (x && y === true){
     return true
   }else {
@@ -8,7 +8,7 @@ function compareTrue(x,y) {
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   var calculo = (base * height) / 2
   return calculo;
 }
@@ -21,16 +21,17 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(nome) {
-  return nome[nome.length-1] + ", "+ nome[0];
+  return nome[nome.length-1] + ", " + nome[0];
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 
 // Desafio 6
 function highestCount(num) {
+// para fazer esse codigo utilizei a fonte: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max  
   let maiorNumero = Math.max(...num);
   var contagem = 0;
   for (n = 0; n < num.length; n += 1){
@@ -43,24 +44,16 @@ function highestCount(num) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let diffCat1 = 0
-  let diffCat2 = 0
-  if (mouse > cat1) {
-    diffCat1 = mouse - cat1
-  } else {
-    diffCat1 = cat1 - mouse
-  }
-  if (mouse > cat2) {
-    diffCat2 = mouse - cat2
-  } else {
-    iffCat2 = cat2 - mouse
-  }
-  if (diffCat1 == diffCat2) {
-    return "os gatos trombam e o rato foge"    
+// para fazer esse código consultei essa fonte: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs  
+  let diffCat1 = Math.abs(mouse - cat1);
+  let diffCat2 = Math.abs(mouse - cat2);
+  
+  if (diffCat1 === diffCat2) {
+    return 'os gatos trombam e o rato foge'    
   } else if (diffCat1 < diffCat2){
-    return "cat1"
+    return 'cat1'
   }  else {
-    return "cat2"
+    return 'cat2'
   }
 }
 
