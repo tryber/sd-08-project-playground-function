@@ -1,70 +1,178 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(firstValue, secondValue) {
+  if (firstValue && secondValue) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  return sentence.split(' ');
+
+// Usei o método split que relembrei em https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string. , esse método corta a string sempre que passa pelo valor especificado (nesse caso um espaço) e ordena os "pedaços" em um array.
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(name) {
+  return `${name[name.length - 1]}, ${name[0]}`;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  function highestNumber(number) {
+    let maxNumber = Math.max.apply(null, numbers);
+    return number === maxNumber;
+  }
+  let max = numbers.filter(highestNumber);
+  return max.length;
+// Aprendi a usar o apply nesse site https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ , ele permite que o Math.max funcione em arrays.
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let win;
+  if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
+    win = 'os gatos trombam e o rato foge';
+  } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    win = 'cat1';
+  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+    win = 'cat2';
+  }
+  return win;
+// Usei a função de valor absoluto que aprendi nesse site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs , essa função retorna o módulo do valor do input.
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let answers = [];
+  for (let index in numbers) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      answers.push('fizzBuzz');
+    } else if (numbers[index] % 3 === 0) {
+      answers.push('fizz');
+    } else if (numbers[index] % 5 === 0) {
+      answers.push('buzz');
+    } else {
+      answers.push('bug!');
+    }
+  }
+  return answers;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(message) {
+  let newMessage = '';
+  for (let index in message) {
+    if (message[index] === 'a') {
+      newMessage += '1';
+    } else if (message[index] === 'e') {
+      newMessage += '2';
+    } else if (message[index] === 'i') {
+      newMessage += '3';
+    } else if (message[index] === 'o') {
+      newMessage += '4';
+    } else if (message[index] === 'u') {
+      newMessage += '5';
+    } else {
+      newMessage += message[index];
+    }
+  }
+  return newMessage;
 }
-function decode() {
-  // seu código aqui
+function decode(message) {
+  let newMessage = '';
+  for (let index in message) {
+    if (message[index] === '1') {
+      newMessage += 'a';
+    } else if (message[index] === '2') {
+      newMessage += 'e';
+    } else if (message[index] === '3') {
+      newMessage += 'i';
+    } else if (message[index] === '4') {
+      newMessage += 'o';
+    } else if (message[index] === '5') {
+      newMessage += 'u';
+    } else {
+      newMessage += message[index];
+    }
+  }
+  return newMessage;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, name) {
+  if (techArray.length === 0) {
+    return "Vazio!";
+  }
+  techArray.sort();
+  let answer = [];
+  for (let key in techArray) {
+    item = {
+      tech: techArray[key],
+      name: name
+    }
+    answer.push(item);
+  }
+  return answer;
+// Eu não estava conseguindo configurar a resposta ao array vazio então dei uma olhada no código do Cajueiro, ele usou o método length (que em um array vazio é igual a zero) para isso. Não acredito que deixei passar algo tão simples! O link do repositório dele: https://github.com/tryber/sd-08-project-playground-function/tree/douglas-cajueiro-project-playground-function
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  let index;
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  else {
+    for (index in numbers) {
+      function repetition(number) {
+        return number === numbers[index];
+      }
+      let num = numbers.filter(repetition)
+      if (numbers[index] < 0 || numbers[index] > 9 || num.length >= 3) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+    }
+    return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
+  }
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC) && lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) && lineC < lineB + lineA && lineC > Math.abs(lineB - lineA)) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(order) {
+  let regExp = /\d+/g;
+  let result = order.match(regExp);
+  if (result.length === 1) {
+    return `${result} copo de água`;
+  }
+  let number = result.map(Number);
+  let sum = number.reduce(function (a, b) {
+    return a + b;
+  }, 0);
+  return `${sum} copos de água`;
 }
+/* Usei vários materiais para completar esse código:
+RegExp and match method: https://www.w3schools.com/jsref/jsref_obj_regexp.asp e https://www.w3schools.com/jsref/jsref_match.asp - Aprendi a buscar padrões em textos.
+Map Method and Number: https://stackoverflow.com/questions/35766769/convert-string-array-to-integer-array e https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number - Para converter o array de strings em array de números para que pudesse somá-los depois.
+Reduce Method: https://www.w3schools.com/jsref/jsref_reduce.asp e https://www.tutorialrepublic.com/faq/how-to-find-the-sum-of-an-array-of-numbers-in-javascript.php#:~:text=Answer%3A%20Use%20the%20JavaScript%20reduce,of%20an%20array%20of%20numbers. - Para somar os elementos do array e retornar um número. */
 
 
 module.exports = {
