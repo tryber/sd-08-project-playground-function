@@ -162,7 +162,7 @@ function generatePhoneNumber(arrayNumbers) {
       if(arrayNumbers.length != 11){
           return 'Array com tamanho incorreto';
       }else if(arrayNumbers[i] < 0 || arrayNumbers >9){
-          return 'Array com tamanho incorreto.'
+          return 'não é possivel gerar um número de telefone com esses valores.';
       }else if(repeat >= 3){
           return 'não é possível gerar um número de telefone com esses valores';
       }
