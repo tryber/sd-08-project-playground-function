@@ -1,10 +1,10 @@
-let number = [-9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1];
+let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 
 console.log(generatePhoneNumber(number));
 
 function generatePhoneNumber(number) {
 
-    let nNumber = [];
+    let nNumber = '';
     let cMaior = 0;
 
     if (number.length != 11) {
@@ -27,17 +27,17 @@ function generatePhoneNumber(number) {
     if (number.length === 11) {
         for (let i = 0; i < number.length; i += 1) {
             if (nNumber[0] === undefined) {
-                nNumber.push('(');
-                nNumber.push(number[i]);
+                nNumber += '(';
+                nNumber += number[i];
             } else if (nNumber.length < 3) {
-                nNumber.push(number[i]);
-                nNumber.push(') ');
+                nNumber += number[i];
+                nNumber += ') ';
             } else if (nNumber.length < 9) {
-                nNumber.push(number[i]);
+                nNumber += number[i];
             } else if (nNumber.length === 9) {
-                nNumber.push('-', number[i]);
+                nNumber += `-${number[i]}`;
             } else if (i < number.length) {
-                nNumber.push(number[i]);
+                nNumber += number[i];
             }
         }
         return nNumber;
