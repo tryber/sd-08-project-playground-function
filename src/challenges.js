@@ -69,8 +69,8 @@ function fizzBuzz(num) {
     } else {
       result[n] = 'bug!';
     }
-    return result
   }
+  return result
 }
 
 // Desafio 9
