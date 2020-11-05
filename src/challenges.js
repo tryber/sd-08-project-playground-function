@@ -201,15 +201,15 @@ function generatePhoneNumber(numbers) {
 function repeatLessThanThreeTimes (numbers) {
   let countNumbers = {};
 
-  for (let i = 0; i < numbers.length; i += 1) {
+  for (let number of numbers) {
     
-    if (countNumbers.hasOwnProperty(i)) {
-      countNumbers[i] += 1;
+    if (countNumbers.hasOwnProperty(number)) {
+      countNumbers[number] += 1;
     } else {
-      countNumbers[i] = 1;
+      countNumbers[number] = 1;
     }
     
-    if (countNumbers[i] >= 3) {
+    if (countNumbers[number] >= 3) {
       return false;
     }
   }
