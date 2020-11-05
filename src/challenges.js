@@ -73,15 +73,15 @@ function fizzBuzz(entradaDoUsuario) {
   var entradaDoUsuario = [];
   var meuArray = [];
   for (let i = 0; i < entradaDoUsuario.length; i++) {
-      meuArray[i] = '';
-    if (entradaDoUsuario[i] % 3 === 0) {
+      meuArray[i] = "";
+    if (entradaDoUsuario[i] % 3 == 0) {
       meuArray[i] = "fizz";
-    } else if (entradaDoUsuario[i] % 5 === 0) {
+    } else if (entradaDoUsuario[i] % 5 == 0) {
       meuArray[i] = "buzz";
-    } else if (entradaDoUsuario[i] % 3 === 0 && entradaDoUsuario[i] % 5 === 0) {
-      meuArray[i] = "fizz buzz";
+    } else if (entradaDoUsuario[i] % 3 == 0 && entradaDoUsuario[i] % 5 == 0) {
+      meuArray[i] = "fizzBuzz";
     } else {
-      meuArray[i] = "bug";
+      meuArray[i] = "bug!";
     }
   }
   return meuArray;
