@@ -30,15 +30,15 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
-  maiorNumero = Math.max(array)
-  var contagem = 0
-  for (n = 0; n < array.length; n += 1){
-    if (array[n] === maiorNumero){
-      contagem += 1
+function highestCount(num) {
+  let maiorNumero = Math.max(...num);
+  var contagem = 0;
+  for (n = 0; n < num.length; n += 1){
+    if (num[n] == maiorNumero){
+      contagem += 1;
     }
   }
-  return contagem
+  return contagem;
 }
 
 // Desafio 7
