@@ -88,20 +88,17 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-let frase = "o rato roeu a roupa do rei de roma"
 function encode(alterar) {
-    alterar = alterar.replaceAll ('a', 1);
+    alterar = alterar.replace ('a', 1);
     alterar = alterar.replace ('e', 2);
     alterar = alterar.replace ('i', 3);
     alterar = alterar.replace ('o', 4);
     alterar = alterar.replace ('u', 5);
     return alterar;
     } 
- console.log(encode(frase))
-    
+     
 function decode(codigo) {
-  let resultado = codigo.replace(1, 'a')
-}
+  }
 
 // Desafio 10
 function techList(listaTech, nome) {    
