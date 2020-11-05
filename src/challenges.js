@@ -162,8 +162,69 @@ function techList(technologies, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  let phoneNumber = '';
+  let isValid = repeatLessThanThreeTimes(numbers) && validDigits(numbers);
+  let indexOfNumbers = 0;
+
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  if (!isValid) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+
+  for (let i = 0; i < 15; i += 1) {
+    switch (i) {
+      case 0:
+        phoneNumber += '(';
+        break;
+      case 3:
+        phoneNumber += ')';
+        break;
+      case 4:
+        phoneNumber += ' ';
+        break;
+      case 10:
+        phoneNumber += '-';
+        break;
+      default:
+        phoneNumber += numbers[indexOfNumbers];
+        indexOfNumbers += 1;
+    }
+  }
+
+  return phoneNumber;
+}
+
+function repeatLessThanThreeTimes (numbers) {
+  let countNumbers = {};
+
+  for (let i = 0; i < numbers.length; i += 1) {
+    
+    if (countNumbers.hasOwnProperty(i)) {
+      countNumbers[i] += 1;
+    } else {
+      countNumbers[i] = 1;
+    }
+    
+    if (countNumbers[i] >= 3) {
+      return false;
+    }
+  }
+  
+  return true;
+}
+
+function validDigits (numbers) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] < 0 || numbers[i] > 9) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 // Desafio 12
