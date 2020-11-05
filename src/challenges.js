@@ -194,9 +194,12 @@ function hydrate(string) {
     let numbers = parseInt(letters);
     if (numbers) sum += numbers;
   }
+  if (sum === 1) {
+    return "1 copo de água";
+  }
+
   return `${sum} copos de água`;
 }
-
 
 module.exports = {
   calcArea,
