@@ -21,9 +21,10 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(nome) {
   
-  let resultado = nome[nome.length - 1] + ", " + nome[nome.length - 4];
+  let resultado = nome[nome.length - 1] + ", " + nome[0];
     return resultado;
 }
+console.log(concatName(["Fernado", "Soares"]));
 
 // Desafio 5
 function footballPoints(wins, ties) {
