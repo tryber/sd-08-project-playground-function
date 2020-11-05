@@ -55,15 +55,16 @@ function catAndMouse(mouse, cat1, cat2) {
   let catchCat = "";
   let mouseCat1 = Math.abs(cat1 - mouse);
   let mouseCat2 = Math.abs(cat2 - mouse); 
-    if (mouseCat1 < mouseCat2){
+    if (mouseCat1 > mouseCat2){
     catchCat = "cat2";
-  } else if (mouseCat1 > mouseCat2){
+  } else if (mouseCat1 < mouseCat2){
     catchCat = "cat1";
   } else{
     catchCat = "os gatos trombam e o rato foge";
   }
   return catchCat;
 }
+console.log(catAndMouse(2, 3, -3))
   
 
 // Desafio 8
@@ -87,19 +88,10 @@ function fizzBuzz(numbers) {
 function encode(vowel) {
   let cripto = "";
   for (let v = 0; v < vowel.length; v += 1){
-    if (vowel[v] == "a"){
-    vowel.push(1);
-  } else if (vowel[v] == "e"){
-    vowel.push(2);
-  } else if (vowel[v] == "i"){
-    vowel.push(3);
-  } else if (vowel[v] == "o"){
-    vowel.push(4);
-  } else (vowel[v] == "u")
-    vowel.push(5);  
+    let code = cripto.replace("a"/"e")
   }
-  return cripto;
 }
+
 
 function decode(unit) {
   let revert = "";
