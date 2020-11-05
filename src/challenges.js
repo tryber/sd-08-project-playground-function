@@ -13,22 +13,16 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-/*Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
-
-Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].*/
-
-
 function splitSentence(frase) {
-  let palavra ="";
-  let fraseSeparada = [];
-  for(let indice = 0; indice < frase.length; indice += 1) {
-    fraseSeparada = fraseSeparada[indice];
-  } 
-  return fraseSeparada
+  frase = frase.split(/\s+/);
+  return frase;
 }
+
+//https://pt.stackoverflow.com/questions/47861/como-dividir-uma-string-em-array-no-javascript//
+
 // Desafio 4
 function concatName(nome) {
-  let nome = [Lucas, Cassiano, Ferraz, Paolilo];
+  let nome = "";
   for(let i = 0; i < nome.length; i += 1) {
     let 
   }
