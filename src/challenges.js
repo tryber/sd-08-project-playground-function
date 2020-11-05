@@ -92,11 +92,11 @@ function fizzBuzz(param) {
   let vetorResult = [];
   for (let index = 0; index < vetor.length; index += 1){
       if(vetor[index] % 3 == 0 && vetor[index] %5 == 0){
-        vetorResult.push("fizzbuzz");
+        vetorResult.push("fizzBuzz");
       }else if (vetor[index] % 3 == 0){
         vetorResult.push("fizz");
       }else if (vetor[index] %5 == 0){
-        vetorResult.push("buzz");
+        vetorResult.push("Buzz");
       }else{
         vetorResult.push("bug!");
       }
@@ -121,13 +121,13 @@ function encode(param) {
     }else if(texto[index] == 'o'){
       texto = texto.replace('o', '4');
     }else if (texto[index] == 'u'){
-      texto[index].replace('u', '5');
+      texto = texto.replace('u', '5');
     }
   }
   return texto;
 }
-// let teste = 'g4 tryb2!';
-// console.log(decode(teste));
+// let teste = 'go trybe!';
+// console.log(encode(teste));
 function decode(param1) {
 
   let texto = param1;
