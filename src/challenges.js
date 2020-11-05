@@ -22,7 +22,7 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(name) {
   let concatenacao = "";
-  concatenacao = name[name.length - 1] + ',' + name[0];
+  concatenacao = name[name.length - 1] + "," + name[0];
   return concatenacao;
 }
 
@@ -55,14 +55,12 @@ function highestCount(max) {
 function catAndMouse(mouse, cat1, cat2) {
   let mouseCat1 = Math.abs(cat1 - mouse);
   let mouseCat2 = Math.abs(cat2 - mouse); 
-  if (mouseCat1 < mouseCat2){
-    return "cat2";
-  }
-  if (mouseCat1 > mouseCat2){
-    return "cat1";
-  }
-  else (mouseCat1 == mouseCat2)
-    return "os gatos trombam e o rato foge";
+    if (mouseCat1 < mouseCat2){
+    console.log("cat2");
+  } else if (mouseCat1 > mouseCat2){
+    console.log ("cat1");
+  } else (mouseCat1 == mouseCat2)
+    console.log ("os gatos trombam e o rato foge");
   }
   
 
