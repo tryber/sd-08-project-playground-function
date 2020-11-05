@@ -47,8 +47,17 @@ function highestCount(numbers) {
     }
     
 // Desafio 7
-function catAndMouse(x, y, z) {
-    return ((Math.abs(x - z)) < Math.abs(z - y)) ? 'Cat1' : ((Math.abs(x - z)) > Math.abs(z - y) ? 'cat2' : 'os gatos trombam e o rato foge');
+function catAndMouse(a, b, c) {
+    
+    let cat1 = Math.abs(c - a);
+    let cat2 = Math.abs(c - b);
+    if (cat1 < cat2) {
+        return "cat1";
+    } else if (cat2 < cat1) {
+        return "cat2";
+    } else {
+        return "os gatos trombam e o rato foge";
+    }
 }
 
 // Desafio 8
@@ -106,7 +115,7 @@ console.log(fizzBuzz([3, 3, 3, 3, 3]))
     
     // Desafio 10
     function techList(arrayOfTechs, name) {
-        let arrayOfObject = {};
+        let arrayOfObject = [];
         if (arrayOfTechs.length < 0){
             let object = {};
             return "Vazio!";
