@@ -34,7 +34,7 @@ function highestCount(num) {
 // para fazer esse codigo utilizei a fonte: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max  
   let maiorNumero = Math.max(...num);
   let contagem = 0;
-  for (n = 0; n < num.length; n += 1) {
+  for (let n = 0; n < num.length; n += 1) {
     if (num[n] === maiorNumero) {
       contagem += 1;
     }
@@ -58,17 +58,18 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(num) {
+  let result = []
   for (let n = 0; n < num.length; n += 1) {
     if (num[n] % 3 === 0) {
-      num[n] = 'fizz';
+      result[n] = 'fizz';
     } else if (num[n] % 5 === 0) {
-      num[n] = 'buzz';
+      result[n] = 'buzz';
     } else if ((num[n] % 3 === 0 && num[n] % 5 === 0)) {
-      num[n] = 'fizzBuzz';
+      result[n] = 'fizzBuzz';
     } else {
-      num[n] = 'bug!';
+      result[n] = 'bug!';
     }
-    return num
+    return result
   }
 }
 
