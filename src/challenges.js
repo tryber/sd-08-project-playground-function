@@ -36,8 +36,13 @@ function concatName(nomeCompleto) {
   // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let resultado;
+  let totalPontos = 0;
+  let quantidVit = 0;
+  let quantiEmp = 0;
+  totalPontos = (quantidVit * wins) + (quantiEmp + ties);
+  return totalPontos;
 }
+  console.log(footballPoints(3, 1));
 
 // Desafio 6
 function highestCount() {
