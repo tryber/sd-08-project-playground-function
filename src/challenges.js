@@ -1,7 +1,13 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui
-  
+  let variavel1;
+  let variavel2;
+  if (variavel1 = true && variavel2 = true) {
+    return true;
+  } else {
+    return false;
+  } 
 }
 
 // Desafio 2
