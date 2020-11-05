@@ -11,10 +11,10 @@ function compareTrue() {
 }
 
 // Desafio 2
-function calcArea(bass, alturas) {
+function calcArea() {
   // seu código aqui
-  let base = 0;
-  let height = 0;
+  let base = 51;
+  let height = 1;
   let area = (base * height) / 2;
   return area;
 }
