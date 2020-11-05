@@ -55,7 +55,7 @@ function catAndMouse(pointCat1, pointCat2, pointMouse) {
         result = "cat1";
     } else if (cat2Distance < cat1Distance){
         result = "cat2";
-    } else if (cat1Distance === cat2Distance){
+    } else {
         result = "os gatos trombam e o rato foge";
     }
     return result
