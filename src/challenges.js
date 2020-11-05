@@ -122,13 +122,53 @@ function decode(behind) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(technology, name) {
+  let object =[];
+  let technology_list = technology.sort();
+  if(technology.length == 0){
+      object ='Vazio!'
+  }else{
+      for(index = 0; index < technology_list.length; index++){
+          object[index] = {
+            tech: technology_list[index],
+            name: name
+          }
+      }
+  }
+  return object;
 }
 
-// Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+// Desafio 11 - foram necessários pesquisa e aprendizado sobre placeholders, .slice e .join para esse exercício. Sites usados:
+//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/template_strings
+//https://cursos.alura.com.br/forum/topico-para-que-serve-o-join-que-e-usado-no-exemplo-63690
+//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+function generatePhoneNumber(arrayNumbers) {
+  let count = [];
+  for(let i = 0; i < arrayNumbers.length; i+=1){
+      count.push(arrayNumbers[i])
+  
+      let repeat = 0;
+      for(let index = 0; index < arrayNumbers.length; index +=1){
+          if(count[i] === arrayNumbers[index]){
+              repeat +=1;
+          }     
+      }
+
+      let ddd = arrayNumbers.slice(0,2).join("");
+      let first = arrayNumbers.slice(2,7).join("");
+      let second = arrayNumbers.slice(7,11).join("");
+      let result = `(${ddd}) ${first}-${second}`
+
+      if(arrayNumbers.length != 11){
+          return 'Array com tamanho incorreto.';
+      }else if(arrayNumbers[i] < 0 | arrayNumbers > 9){
+          return 'não é possível gerar um número de telefone com esses valores';
+      }else if(repeat >= 3){
+          return 'não é possível gerar um número de telefone com esses valores'
+      }else{
+          return result;
+      }
+  }
 }
 
 // Desafio 12
