@@ -32,7 +32,7 @@ function footballPoints(wins,ties) {
 // Desafio 6
 function highestCount(array) {
   maiorNumero = Math.max(array)
-  var contagem = 0
+  var contagem
   for (n = 0; n < array.length; n += 1){
     if (array[n] === maiorNumero){
       contagem + 1
@@ -42,8 +42,24 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (mouse > cat1) {
+    let diffCat1 = mouse - cat1
+  } else {
+    let diffCat1 = cat1 - mouse
+  }
+  if (mouse > cat2) {
+    let diffCat2 = mouse - cat2
+  } else {
+    let diffCat2 = cat2 - mouse
+  }
+  if (diffCat1 == diffCat2) {
+    return "os gatos trombam e o rato foge"    
+  } else if (diffCat1 < diffCat2){
+    return cat1
+  }  else {
+    return cat2
+  }
 }
 
 // Desafio 8
