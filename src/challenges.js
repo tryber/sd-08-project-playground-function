@@ -21,14 +21,16 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(name) {
-  let concatenacao = name[name.length - 1] + ',' + name[0];
+  let concatenacao = "";
+  concatenacao = name[name.length - 1] + ',' + name[0];
   return concatenacao;
 }
 
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let time = wins * 3 + ties;
+  let time = 0;
+  time = wins * 3 + ties;
     return time;
 }
 
@@ -41,12 +43,12 @@ function highestCount(max) {
      number = max[n];
    }
  }
- for (let c = 0; c < max.length; c += 1){
+  for (let c = 0; c < max.length; c += 1){
    if (max[c] === number){
      contador += 1;
    }
-   return contador;
  }
+  return contador;
 }
 
 // Desafio 7
