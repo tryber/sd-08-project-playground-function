@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui
-  let variavel1;
-  let variavel2;
+  let variavel1 = true;
+  let variavel2 = true; 
   if (variavel1 === true && variavel2 === true) {
     return true;
   } else {
@@ -13,8 +13,8 @@ function compareTrue() {
 // Desafio 2
 function calcArea() {
   // seu código aqui
-  let base = 51;
-  let height = 1;
+  let base = 5;
+  let height = 2;
   let area = (base * height) / 2;
   return area;
 }
