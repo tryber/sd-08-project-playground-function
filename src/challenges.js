@@ -4,34 +4,41 @@ function compareTrue(x,y) {
     return true
   }else {
     return false
-  }
+  };
 }
 
 // Desafio 2
 function calcArea(base,height) {
   var calculo = (base * height) / 2
-  return calculo
+  return calculo;
 }
 
 // Desafio 3
 function splitSentence(frase) {
   var separador = frase.split(" ")
-  return separador
+  return separador;
 }
 
 // Desafio 4
 function concatName(nome) {
-  return nome[nome.lenght-1] + "," + nome[0]
+  return nome[nome.lenght-1] + ", "+ nome[0];
 }
 
 // Desafio 5
 function footballPoints(wins,ties) {
-  return (wins * 3) + ties
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  maiorNumero = Math.max(array)
+  var contagem = 0
+  for (n = 0; n < array.lenght; n += 1){
+    if (array[n] === maiorNumero){
+      contagem + 1
+    }
+  }
+  return contagem
 }
 
 // Desafio 7
