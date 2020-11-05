@@ -23,13 +23,13 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(lista) {
-  let ultimoPrimeiro = []
-  ultimoPrimeiro.push(lista[lista.length -1])
-  ultimoPrimeiro.push(lista[0])
-  return ultimoPrimeiro
+  let ultimoPrimeiro = [];
+  ultimoPrimeiro.push(lista[lista.length -1]);
+  ultimoPrimeiro.push(lista[0]);
+  let stringFinal = ultimoPrimeiro.toString();
+  return stringFinal;
  } 
-
-  
+   
 // Desafio 5
 function footballPoints(wins,ties) {
     let finalScore = wins*3 + ties;
