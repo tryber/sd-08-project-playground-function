@@ -47,7 +47,7 @@ function highestCount(numbers) {
     }
     
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
     let cat1 = Math.abs(mouse - cat1);
     let cat2 = Math.abs(mouse - cat2);
     if (cat1 <cat2) {
