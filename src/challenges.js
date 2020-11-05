@@ -23,7 +23,7 @@ function splitSentence(string) {
     return string.split(" ");
 }
 
-let temporaria = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+
 
 // Desafio 4
 function concatName(array) {
@@ -34,7 +34,7 @@ function concatName(array) {
   return concat
 }
 
-console.log(concatName(temporaria))
+
 
 // Desafio 5
 function footballPoints(wins,ties) {
@@ -53,6 +53,7 @@ function highestCount(numbers) {
   for(i=0; i < numbers.length; i++){
     if(maior < numbers[i]){
       maior = numbers[i]
+      marca = 0
     }
     if(maior == numbers[i]){
       marca++
@@ -61,6 +62,7 @@ function highestCount(numbers) {
 
   return marca
 }
+
 
 // Desafio 7
 function catAndMouse() {
