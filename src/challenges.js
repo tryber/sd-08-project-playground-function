@@ -96,7 +96,7 @@ function fizzBuzz(param) {
       }else if (vetor[index] % 3 == 0){
         vetorResult.push("fizz");
       }else if (vetor[index] %5 == 0){
-        vetorResult.push("Buzz");
+        vetorResult.push("buzz");
       }else{
         vetorResult.push("bug!");
       }
