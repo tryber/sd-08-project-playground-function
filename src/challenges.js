@@ -26,8 +26,8 @@ function splitSentence(tryber) {
 function concatName(nomeCompleto) {
   // seu código aqui
   let nomeConc = nomeCompleto[""];
-  for(let index = 0; index = nomeCompleto.length; index += 1) {
-    nomeConc = nomeCompleto[index -1] + " " + nomeCompleto[index[0]] 
+  for(let index = nomeCompleto.length; index > 0; index -= 1) {
+    nomeConc = nomeCompleto[nomeCompleto.length - 1] + ", " + nomeCompleto[0]; 
   }
   return nomeConc;
 } 
@@ -39,15 +39,29 @@ function footballPoints(wins, ties) {
   let totalPontos = 0;
   let quantidVit = 0;
   let quantiEmp = 0;
-  totalPontos = (quantidVit * wins) + (quantiEmp + ties);
+  totalPontos = (quantidVit * wins) + (quantiEmp * ties);
   return totalPontos;
 }
   console.log(footballPoints(3, 1));
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
   // seu código aqui
-}
+  let maiorNum = 0;
+  let quantMaiAp = 0;
+  for(let index in numbers) {
+    if (numbers[index] > maiorNum) {
+      maiorNum = numbers[index];
+    }
+    for(let index2 in numbers) {
+      if (maiorNum[index2] > 1) {
+        quantMaiAp += 1}
+      }
+    }
+    return quantMaiAp;
+  }
+
+  console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
