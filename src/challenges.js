@@ -23,13 +23,13 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(lista) {
-  let ordemInversa = []
-  for (var index = lista.length -1;index>=0;index-=1){
+  let ordemInversa = [];
+  for (let index = lista.length -1;index >= 0; index -= 1){
     ordemInversa.push (lista[index]);
     } 
       return ordemInversa;
  }
- 
+  
 // Desafio 5
 function footballPoints(wins,ties) {
     let finalScore = wins*3 + ties;
