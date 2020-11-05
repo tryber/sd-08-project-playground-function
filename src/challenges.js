@@ -141,20 +141,20 @@ function decode(string) {
 // console.log(decode('h3 th2r2!'));
 
 // >>----------> Desafio 10
-function techList(techs, names) {
-  techs.sort();
+function techList(tech, name) {
+  tech.sort();
   let retorna = [];
 
-  if (techs.length === 0) {
+  if (tech.length === 0) {
     return 'vazio!';
   }
-  for (let indice = 0; indice < techs.length; indice += 1) {
-    retorna.push({tech: techs[indice], name: names});
+  for (let indice = 0; indice < tech.length; indice += 1) {
+    retorna.push({tech: tech[indice], name: name});
   }
   return retorna.sort();
 }
 
-// console.log(techList(["React","Jest","HTML","CSS","JavaScript"],"Lucas"));
+console.log(techList(["React","Jest","HTML","CSS","JavaScript"],"Lucas"));
 
 
 // Desafio 11
