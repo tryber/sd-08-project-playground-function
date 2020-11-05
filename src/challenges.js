@@ -26,7 +26,6 @@ function concatName(name) {
   return concatenacao;
 }
 
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let time = 0;
