@@ -69,7 +69,7 @@ function catAndMouse(mouse,cat1, cat2) {
 function fizzBuzz(entradaDoUsuario) {
   // seu código aqui
   var meuArray = [];
-  for (let i = 0; i < entradaDoUsuario.length; i++) {
+  for (let i = 0; i < entradaDoUsuario.length; i += 1) {
       meuArray[i] = "";
     if (entradaDoUsuario[i] % 3 === 0) {
       meuArray[i] = "fizz";
