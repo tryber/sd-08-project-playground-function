@@ -48,7 +48,7 @@ function highestCount(numbers) {
     
 // Desafio 7
 function catAndMouse(x, y, z) {
-    return ((Math.abs(x - z)) < Math.abs(z - y)) ? 'Cat A' : ((Math.abs(x - z)) > Math.abs(z - y) ? 'Cat B' : 'Mouse C');
+    return ((Math.abs(x - z)) < Math.abs(z - y)) ? 'Cat1' : ((Math.abs(x - z)) > Math.abs(z - y) ? 'cat2' : 'os gatos trombam e o rato foge');
 }
 
 // Desafio 8
