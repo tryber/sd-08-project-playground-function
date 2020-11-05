@@ -21,12 +21,12 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(nome) {
-  return nome.lenght-1 + "," + nome[0]
+  return nome[nome.lenght-1] + "," + nome[0]
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  return (wins * 3) + ties
 }
 
 // Desafio 6
