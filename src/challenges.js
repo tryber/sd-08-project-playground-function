@@ -131,23 +131,25 @@ function techList(techArray, name) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
+  let index;
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  let index;
-  function repetition(number) {
+  else if (numbers.length === 11) {
     for (index in numbers) {
-      return number == numbers[index];
+      function repetition(number) {
+        return number == numbers[index];
+      }
+      let num = numbers.filter(repetition)
+      if (numbers[index] < 0 || numbers[index] > 9 || num.length >= 3) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
     }
-  }
-  let num = numbers.filter(repetition)
-  if (numbers[index] < 0 || numbers[index] > 9 || num.length >= 3) {
-    return 'não é possível gerar um número de telefone com esses valores';
   }
   else {
     return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
   }
-} console.log(generatePhoneNumber([]))
+}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
