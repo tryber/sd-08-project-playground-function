@@ -38,8 +38,8 @@ function concatName(nomeCompleto) {
 function footballPoints(wins, ties) {
   // seu código aqui
   let totalPontos = 0;
-  let quantidVit = 14;
-  let quantiEmp = 8;
+  let quantidVit = 1;
+  let quantiEmp = 2;
   totalPontos = (quantidVit * wins) + (quantiEmp * ties);
   return totalPontos;
 }
@@ -72,17 +72,16 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(entrada) {
   // seu código aqui
-  let resultado = [""];
-  for(let index in entrada) {
-    
-    if (entrada[index] % 3 === 0 && entrada[index] % 5 === 0) {
-      resultado.push("fizzBuzz");
-    } else if (entrada[index] % 3 === 0) {
-      resultado.push("fizz");
-    } else if (entrada[index] % 5 === 0) {
-      resultado.push("buzz");
+  let resultado = [];
+  for(let index = 0; index < entrada.length; index += 1) {
+    if (index % 3 == 0 && index % 5 == 0) {
+      resultado.push ("fizzBuzz");
+    } else if (index % 3 == 0) {
+      resultado.push ("fizz");
+    } else if (index % 5 == 0) {
+      resultado.push ("buzz");
     } else {
-      resultado.push("bug!");
+      resultado.push ("bug!");
     }
     return resultado;
     } 
