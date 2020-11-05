@@ -64,18 +64,22 @@ let numbers = [2, 4 ,5 ,6, 3, 6];
 
 function highestCount(numbers) {
 
-  let maiorNumero = [];
-  let repeticao = [];
+  let maiorNumero = 0;
+  let repeticao = 0;
 
   for (let i = 0; i < numbers.length; i++) {
-    maiorNumero = Math.max.apply(Math, numbers[i]);
-
+    
+    if (numbers[i] > maiorNumero) {
+      maiorNumero = numbers[i];
+    }
     if (numbers[i] == maiorNumero) {
       repeticao = repeticao + 1;
     }
+    
   }
+    
 
-  return repeticao;
+    return repeticao;
   
 }
 
