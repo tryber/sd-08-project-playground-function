@@ -162,17 +162,64 @@ function techList(technologies, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numbers) {
-  let phoneNumber = '';
-  let isValid = repeatLessThanThreeTimes(numbers) && validDigits(numbers);
-  let indexOfNumbers = 0;
-
-  if (numbers.length !== 11) {
-    return 'Array com tamanho incorreto.';
+function allLessThanThree(countedNumbers) {
+  for (let index in countedNumbers) {
+    if (countedNumbers[index] >= 3) {
+      return false;
+    }
   }
 
-  if (!isValid) {
-    return 'não é possível gerar um número de telefone com esses valores';
+  return true;
+}
+
+function isValidNumberRepetition(numbers) {
+  let countNumbers = {};
+
+  for (let number of numbers) {
+    if (countNumbers.hasOwnProperty(number)) {
+      countNumbers[number] += 1;
+    } else {
+      countNumbers[number] = 1;
+    }
+  }
+
+  return allLessThanThree(countNumbers);
+}
+
+function areValidDigits(numbers) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] < 0 || numbers[i] > 9) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function isValidPhoneNumberArray(numbers) {
+  let result = [true, ''];
+  let validLength = numbers.length === 11;
+  let validNumberRepetition = isValidNumberRepetition(numbers);
+  let validDigits = areValidDigits(numbers);
+
+
+  if (!validLength) {
+    result[1] = 'Array com tamanho incorreto.';
+  } else if (!(validNumberRepetition && validDigits)) {
+    result[1] = 'não é possível gerar um número de telefone com esses valores';
+  }
+
+  result[0] = validLength && validNumberRepetition && validDigits;
+  return result;
+}
+
+function generatePhoneNumber(numbers) {
+  let phoneNumber = '';
+  let isValid = isValidPhoneNumberArray(numbers);
+  let indexOfNumbers = 0;
+
+  if (!isValid[0]) {
+    return  isValid[1];
   }
 
   for (let i = 0; i < 15; i += 1) {
@@ -197,35 +244,8 @@ function generatePhoneNumber(numbers) {
 
   return phoneNumber;
 }
-
-function repeatLessThanThreeTimes (numbers) {
-  let countNumbers = {};
-
-  for (let number of numbers) {
-    
-    if (countNumbers.hasOwnProperty(number)) {
-      countNumbers[number] += 1;
-    } else {
-      countNumbers[number] = 1;
-    }
-    
-    if (countNumbers[number] >= 3) {
-      return false;
-    }
-  }
-  
-  return true;
-}
-
-function validDigits (numbers) {
-  for (let i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] < 0 || numbers[i] > 9) {
-      return false;
-    }
-  }
-
-  return true;
-}
+console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]));
+console.log(generatePhoneNumber([0,2,3,4,4,2,7,8,9,9,4]));
 
 // Desafio 12
 function triangleCheck() {
