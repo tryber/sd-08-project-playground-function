@@ -113,15 +113,14 @@ function decode(message) {
 // Desafio 10
 function techList(techArray, name) {
   if (techArray.length === 0) {
-    return 'Vazio!';
+    return "Vazio!";
   }
   techArray.sort();
   let answer = [];
-  let item;
   for (let key in techArray) {
     item = {
       tech: techArray[key],
-      name
+      name: name
     }
     answer.push(item);
   }
@@ -134,7 +133,8 @@ function generatePhoneNumber(numbers) {
   let index;
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else if {
+  }
+  else {
     for (index in numbers) {
       function repetition(number) {
         return number === numbers[index];
