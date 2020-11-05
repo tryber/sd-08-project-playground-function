@@ -66,24 +66,26 @@ function catAndMouse(mouse,cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(meuArray) {
+function fizzBuzz(entradaDoUsuario) {
   // seu código aqui
-  var entradaDoUsuario = [meuArray];
 
-  for (let i = 1; i < entradaDoUsuario.length; i++) {
+
+  var entradaDoUsuario = [];
+  var meuArray = [];
+  for (let i = 0; i < entradaDoUsuario.length; i++) {
+      meuArray[i] = '';
     if (entradaDoUsuario[i] % 3 === 0) {
-      return console.log("fizz");
+      meuArray[i] = "fizz";
     } else if (entradaDoUsuario[i] % 5 === 0) {
-      return console.log("buzz");
+      meuArray[i] = "buzz";
     } else if (entradaDoUsuario[i] % 3 === 0 && entradaDoUsuario[i] % 5 === 0) {
-      return console.log("fizz buzz");
+      meuArray[i] = "fizz buzz";
     } else {
-      return console.log("bug");
+      meuArray[i] = "bug";
     }
   }
+  return meuArray;
 }
-
-console.log(fizzBuzz(2, 15, 7, 9, 45));
 
 // Desafio 9
 function encode() {
