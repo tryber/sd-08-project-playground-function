@@ -71,15 +71,14 @@ function fizzBuzz(numbers) {
   let result = [];
   for (let index = 0; index < numbers.length; index += 1){
     if (numbers[index] % 3 == 0 && numbers[index] % 5 == 0){
-      result.push("fizzbuzz")
-    }
-    else if (numbers[index] % 3 == 0){
+      result.push("fizzbuzz");
+    } else if (numbers[index] % 3 == 0){
       result.push("fizz");
-    }
-    else if (numbers[index] % 5 == 0){
+    } else if (numbers[index] % 5 == 0){
       result.push("buzz");
-    } else
+    } else{
       result.push("bug!");
+    }
   }
   return result;
 }
