@@ -70,19 +70,22 @@ function fizzBuzz(entradaDoUsuario) {
   // seu código aqui
   var meuArray = [];
   for (let i = 0; i < entradaDoUsuario.length; i += 1) {
-      meuArray[i] = "";
+    meuArray[i] = " ";
     if (entradaDoUsuario[i] % 3 === 0) {
-      meuArray[i] = "fizz";
+      meuArray.push("fizz");
     } else if (entradaDoUsuario[i] % 5 === 0) {
-      meuArray[i] = "buzz";
+      meuArray.push("buzz");
     } else if (entradaDoUsuario[i] % 3 === 0 && entradaDoUsuario[i] % 5 === 0) {
-      meuArray[i] = "fizzBuzz";
+      meuArray.push("fizzBuzz");
     } else {
-      meuArray[i] = "bug!";
+      meuArray.push("bug!");
     }
   }
   return meuArray;
 }
+
+ fizzBuzz(2, 15, 7, 9, 45);
+
 
 // Desafio 9
 function encode() {
