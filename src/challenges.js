@@ -50,9 +50,9 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
     let cat1 = Math.abs(mouse - cat1);
     let cat2 = Math.abs(mouse - cat2);
-    if (cat1 <cat2) {
+    if (cat1 < cat2) {
         return "cat1";
-    } else if (cat2 <cat1) {
+    } else if (cat2 < cat1) {
         return "cat2";
     } else {
         return "os gatos trombam e o rato foge";
