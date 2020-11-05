@@ -69,12 +69,25 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringToEncode) {
+  stringToEncode = stringToEncode.replace(/a/g, "1");
+  stringToEncode = stringToEncode.replace(/e/g, "2");
+  stringToEncode = stringToEncode.replace(/i/g, "3");
+  stringToEncode = stringToEncode.replace(/o/g, "4");
+  stringToEncode = stringToEncode.replace(/u/g, "5");
+return stringToEncode
 }
-function decode() {
-  // seu código aqui
+console.log(encode("Dantas o mestre"));
+
+function decode(stringToDecode) {
+  stringToDecode = stringToDecode.replace(/1/g, "a");
+  stringToDecode = stringToDecode.replace(/2/g, "e");
+  stringToDecode = stringToDecode.replace(/3/g, "i");
+  stringToDecode = stringToDecode.replace(/4/g, "o");
+  stringToDecode = stringToDecode.replace(/5/g, "u");
+  return stringToDecode;
 }
+console.log(decode("D1nt1s 4 m2str2"))
 
 // Desafio 10
 function techList() {
