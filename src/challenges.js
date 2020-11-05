@@ -25,7 +25,12 @@ function splitSentence(string) {
       retorno.push(pegaArray);
       pegaArray = '';
     }else if (string[indice] != ' ') {
-      pegaArray https://www.youtube.com/watch?v=SRMDcC0QvFQplitSentence('wr ra'));
+      pegaArray += string[indice];
+    }
+  }
+  return retorno;
+}
+// console.log(splitSentence('wr ra'));
 
 // >>-----------> Desafio 4
 function concatName(theArray) {
