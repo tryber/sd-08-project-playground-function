@@ -1,54 +1,91 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(var1, var2) {
+  booleanResult = [];
+  if (var1 == true && var2 == true) {
+    return booleanResult = true; 
+  } else 
+  return booleanResult = false;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  let sentenceResult = sentence.split(" ");
+  return sentenceResult;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  return(names[names.length - 1] + ", " + names[0]);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return ((wins * 3) + ties);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let numbersMax = [];
+  for (let i = 0; i < numbers.length; i+=1)
+  if (numbers[i] == Math.max(...numbers)) {
+    numbersMax.push(1);
+  }
+  return numbersMax.length;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return("cat1");
+  } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+    return("cat2");
+  } else if (Math.abs(mouse - cat1) == Math.abs(mouse - cat2)) {
+    return("os gatos trombam e o rato foge");
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let arrayResult = [];
+  for (let i = 0; i < array.length; i+=1) {
+    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+      arrayResult.push("fizzBuzz");
+    } else if (array[i] % 3 == 0 && array[i] % 5 != 0) {
+      arrayResult.push("fizz");
+    } else if (array[i] % 3 != 0 && array[i] % 5 == 0) {
+      arrayResult.push("buzz");
+    } else if (array[i] % 3 != 0 && array[i] % 5 != 0) {
+      arrayResult.push("bug!");
+    }
+  }
+  return arrayResult;
 }
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+
 }
 function decode() {
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let techList = [];
+  if (tech == null) {
+    techList = ["Vazio!"];
+    return techList;
+  }
+  tech.sort();
+  for (let i = 0; i < tech.length; i += 1) {
+    techList.push([{"tech": tech[i] + ", name: " + name}]);
+  }
+  return techList;
 }
 
 // Desafio 11
@@ -57,8 +94,10 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if ((lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) && (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) && (lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA))) {
+    return(true);
+  } else return (false);
 }
 
 // Desafio 13
