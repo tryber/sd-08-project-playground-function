@@ -13,13 +13,13 @@ return result;
 }
 // Desafio 3
 function splitSentence(string) {
-  let result = string.split(" ");
+  let result = string.split(' ');
   return result;
 }
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+
 }
 
 // Desafio 5
