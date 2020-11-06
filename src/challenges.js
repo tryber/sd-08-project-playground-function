@@ -1,7 +1,8 @@
 // >>----------> Desafio 1
 function compareTrue(primeiroBoleano, segundoBolenao) {
-  if (primeiroBoleano === true && segundoBolenao === true) return true;
-  else if (primeiroBoleano === false || segundoBolenao === false) return false;
+  let retornaBoleano = false;
+  if (primeiroBoleano === true && segundoBolenao === true) retornaBoleano = true;
+  return retornaBoleano;
 }
 // let a = true, b = false;
 // console.log(compareTrue(a, b));
@@ -149,23 +150,23 @@ function techList(tech, name) {
 // console.log(techList(["React","Jest","HTML","CSS","JavaScript"],"Lucas"));
 
 // >>----------> Desafio 11
-function generatePhoneNumber(phone) {
+function generatePhoneNumber(thePhone) {
   let resposta = '';
-  if (phone.length !== 11) {
+  if (thePhone.length !== 11) {
     resposta = 'Array com tamanho incorreto.';
     return resposta;
   }
-  for (let indice = 0; indice < phone.length; indice += 1) {
+  for (let indice = 0; indice < thePhone.length; indice += 1) {
     let contaRepeticao = 0;
-    for (let indiceBusca = 0; indiceBusca < phone.length; indiceBusca += 1) {
-      if (phone[indiceBusca] === phone[indice]) contaRepeticao += 1;
-      if (phone[indice] < 0 || phone[indice] > 9 || contaRepeticao === 3) {
+    for (let indiceBusca = 0; indiceBusca < thePhone.length; indiceBusca += 1) {
+      if (thePhone[indiceBusca] === thePhone[indice]) contaRepeticao += 1;
+      if (thePone[indice] < 0 || thePhone[indice] > 9 || contaRepeticao === 3) {
         resposta = 'não é possível gerar um número de telefone com esses valores';
         return resposta;
       }
     }
   }
-  let numeroDeTelefone = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
+  let numeroDeTelefone = `(${thePhone[0]}${thePhone[1]}) ${thePhone[2]}${thePhone[3]}${thePhone[4]}${thePhone[5]}${thePhone[6]}-${thePhone[7]}${thePhone[8]}${thePhone[9]}${thePhone[10]}`;
   return numeroDeTelefone;
 }
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
