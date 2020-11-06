@@ -13,8 +13,7 @@ return result;
 }
 // Desafio 3
 function splitSentence(string) {
-  let spliter = [];
-  let result = string.split(" ",2);
+  let result = string.split(" ");
   return result;
 }
 
