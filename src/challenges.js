@@ -30,12 +30,11 @@ function splitSentence(string) {
   }
   return retorno;
 }
-// console.log(splitSentence('wr ra'));
+console.log(splitSentence('wr ra'));
 
 // >>-----------> Desafio 4
 function concatName(theArray) {
-  let saida = theArray[theArray.length-1] + ', ' + theArray[0];
-  return saida;
+  return theArray[theArray.length-1] + ', ' + theArray[0];
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
