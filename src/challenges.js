@@ -64,7 +64,7 @@ function fizzBuzz(num) {
       result[n] = 'fizz';
     } else if (num[n] % 5 === 0) {
       result[n] = 'buzz';
-    } else if ((num[n] % 3 === 0 && num[n] % 5 === 0)) {
+    } else if (num[n] % 3 === 0 && num[n] % 5 === 0) {
       result[n] = 'fizzBuzz';
     } else {
       result[n] = 'bug!';
