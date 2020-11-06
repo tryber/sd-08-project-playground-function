@@ -193,9 +193,24 @@ function triangleCheck(lineA, lineB, lineC) {
 // console.log(triangleCheck(10,14,8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(theString) {
+  let filtraNumero = /[1-9]/g;
+  let pegaNumero = theString.match(filtraNumero);
+  let somaArray = 0;
+  
+  for(index of pegaNumero) {
+    somaArray += Number(index);
+  }
+
+  if(somaArray === 1) {
+    return `${somaArray} copo de água`
+  } else if(somaArray > 1) {
+    return `${somaArray} copos de água`
+  }
 }
+// let stringRecebida = "1 cachaça, 0 cervejas e 1 copo de vinho";
+// console.log(hydrate(stringRecebida));
+
 
 
 module.exports = {
@@ -214,3 +229,8 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+// function teste(string) {
+//   let result = string.split(' ');
+//   return result;
+// }
+// console.log(teste('Wagner Moreira'));
