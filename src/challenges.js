@@ -67,52 +67,77 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // >>----------> Desafio 8
 function fizzBuzz(arrayFizz) {
-  for (let indice in arrayFizz) {
-    if ((arrayFizz[indice] % 3) === 0 && (arrayFizz[indice] % 5) === 0) arrayFizz[indice] = 'fizzBuzz';
-    if ((arrayFizz[indice] % 3) === 0) arrayFizz[indice] = 'fizz';
-    if ((arrayFizz[indice] % 5) === 0) arrayFizz[indice] = 'buzz';
-    else arrayFizz[indice] = 'bug!';
+  for (let i = 0; i < arrayFizz.length; i += 1) {
+    if ((arrayFizz[i] % 3) === 0 && (arrayFizz[i] % 5) === 0) {
+      arrayFizz[i] = 'fizzBuzz';
+    } else if ((arrayFizz[i] % 3) === 0) {
+      arrayFizz[i] = 'fizz';
+    } else if ((arrayFizz[i] % 5) === 0) {
+      arrayFizz[i] = 'buzz';
+    } else arrayFizz[i] = 'bug!';
   }
   return arrayFizz;
 }
+// console.log(fizzBuzz([1,3,5,15]))
 
 // >>----------> Desafio 9
 function encode(string) {
   let encode = '';
-  for (let indice in string) {
-    if (string[indice] === 'a') encode += '1';
-    if (string[indice] === 'e') encode += '2';
-    if (string[indice] === 'i') encode += '3';
-    if (string[indice] === 'o') encode += '4';
-    if (string[indice] === 'u') encode += '5';
-    else encode += string[indice];
+  for (let indice of string) {
+    if (indice === 'a') {
+      encode += '1';
+      indice = '';
+    } else if (indice === 'e') {
+      encode += '2';
+      indice = '';
+    } else if (indice === 'i') {
+      encode += '3';
+      indice = '';
+    } else if (indice === 'o') {
+      encode += '4';
+      indice = '';
+    } else if (indice === 'u') {
+      encode += '5';
+      indice = '';
+    } else encode += indice;
   }
   return encode;
 }
 // >>-----> # <-----<<
 function decode(string) {
   let decode = '';
-  for (let indice in string) {
-    if (string[indice] === '1') decode += 'a';
-    if (string[indice] === '2') decode += 'e';
-    if (string[indice] === '3') decode += 'i';
-    if (string[indice] === '4') decode += 'o';
-    if (string[indice] === '5') decode += 'u';
-    else decode += string[indice];
+  for (let indice of string) {
+    if (indice === '1') {
+      decode += 'a';
+      indice = '';
+    }
+    if (indice === '2') {
+      decode += 'e';
+      indice = '';
+    }
+    if (indice === '3') {
+      decode += 'i';
+      indice = '';
+    }
+    if (indice === '4') {
+      decode += 'o';
+      indice = '';
+    }
+    if (indice === '5') {
+      decode += 'u';
+      indice = '';
+    } else decode += indice;
   }
   return decode;
 }
-// let teste = encode('hi there!')
-// let teste2 = decode(encode('h3 there!'));
-// console.log(teste);
-// console.log(teste2);
+// console.log(encode('hi there!jj'));
 // console.log(decode('h3 th2r2!'));
 
 // >>----------> Desafio 10
 function techList(tech, name) {
   tech.sort();
   let retorna = [];
-  
+
   if (tech.length === 0) return 'Vazio!';
   for (let indice = 0; indice < tech.length; indice += 1) {
     retorna.push({ tech: tech[indice], name });
