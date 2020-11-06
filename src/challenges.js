@@ -82,53 +82,53 @@ function fizzBuzz(arrayFizz) {
 
 // >>----------> Desafio 9
 function encode(string) {
-  let encode = '';
+  let theEncode = '';
   for (let indice of string) {
     if (indice === 'a') {
-      encode += '1';
+      theEncode += '1';
       indice = '';
     } else if (indice === 'e') {
-      encode += '2';
+      theEncode += '2';
       indice = '';
     } else if (indice === 'i') {
-      encode += '3';
+      theEncode += '3';
       indice = '';
     } else if (indice === 'o') {
-      encode += '4';
+      theEncode += '4';
       indice = '';
     } else if (indice === 'u') {
-      encode += '5';
+      theEncode += '5';
       indice = '';
-    } else encode += indice;
+    } else theEncode += indice;
   }
-  return encode;
+  return theEncode;
 }
 // >>-----> # <-----<<
 function decode(string) {
-  let decode = '';
+  let theDecode = '';
   for (let indice of string) {
     if (indice === '1') {
-      decode += 'a';
+      theDecode += 'a';
       indice = '';
     }
     if (indice === '2') {
-      decode += 'e';
+      theDecode += 'e';
       indice = '';
     }
     if (indice === '3') {
-      decode += 'i';
+      theDecode += 'i';
       indice = '';
     }
     if (indice === '4') {
-      decode += 'o';
+      theDecode += 'o';
       indice = '';
     }
     if (indice === '5') {
-      decode += 'u';
+      theDecode += 'u';
       indice = '';
-    } else decode += indice;
+    } else theDecode += indice;
   }
-  return decode;
+  return theDecode;
 }
 // console.log(encode('hi there!jj'));
 // console.log(decode('h3 th2r2!'));
