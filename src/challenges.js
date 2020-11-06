@@ -150,14 +150,19 @@ function techList(tech, name) {
 
 // >>----------> Desafio 11
 function generatePhoneNumber(phone) {
+  let resposta = '';
   if (phone.length !== 11) {
-    return 'Array com tamanho incorreto.';
+    resposta = 'Array com tamanho incorreto.';
+    return resposta;
   }
   for (let indice = 0; indice < phone.length; indice += 1) {
     let contaRepeticao = 0;
     for (let indiceBusca = 0; indiceBusca < phone.length; indiceBusca += 1) {
       if (phone[indiceBusca] === phone[indice]) contaRepeticao += 1;
-      if (phone[indice] < 0 || phone[indice] > 9 || contaRepeticao === 3) return 'não é possível gerar um número de telefone com esses valores'
+      if (phone[indice] < 0 || phone[indice] > 9 || contaRepeticao === 3) {
+        resposta = 'não é possível gerar um número de telefone com esses valores';
+        return resposta;
+      }
     }
   }
   let numeroDeTelefone = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
