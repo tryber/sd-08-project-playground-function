@@ -78,13 +78,13 @@ function catAndMouse(mouse, cat1, cat2) {
 // >>----------> Desafio 8
 function fizzBuzz(arrayFizz) {
   for (let indice in arrayFizz) {
-    if(arrayFizz[indice] % 3 == 0 && arrayFizz[indice] % 5 == 0){
+    if((arrayFizz[indice] % 3) === 0 && (arrayFizz[indice] % 5) === 0){
       arrayFizz[indice] = "fizzBuzz";
 
-    } else if (arrayFizz[indice] % 3 == 0) {
+    } else if ((arrayFizz[indice] % 3) === 0) {
       arrayFizz[indice] = "fizz";
 
-    } else if (arrayFizz[indice] % 5 == 0) {
+    } else if ((arrayFizz[indice] % 5) === 0) {
       arrayFizz[indice] = "buzz";
     
     } else {
@@ -92,6 +92,7 @@ function fizzBuzz(arrayFizz) {
     }
   }
   return arrayFizz;
+}
   //   if(arrayFizz[indice] % 3 == 0 && arrayFizz[indice] % 5 == 0){
   //     mesageFizz.push("fizzBuzz");
 
@@ -106,7 +107,6 @@ function fizzBuzz(arrayFizz) {
   //   }
   // }
   // return mesageFizz;
-}
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // >>----------> Desafio 9
