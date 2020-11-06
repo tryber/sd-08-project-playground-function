@@ -166,12 +166,17 @@ function generatePhoneNumber(phone) {
 
 // >>----------> Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB,lineC)) return true;  
-  if (lineB < lineA + lineC && lineB > Math.abs(lineA,lineC)) return true;
-  if (lineC < lineA + lineB && lineC > Math.abs(lineA,lineB)) return true;
-  return false;
+  let validaTriangulo = false;
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB,lineC)) {
+    validaTriangulo = true;  // >-----> Math.abs retorna a diferença absoluta
+  } else if (lineB < lineA + lineC && lineB > Math.abs(lineA,lineC)) {
+    validaTriangulo = true;
+  } else if (lineC < lineA + lineB && lineC > Math.abs(lineA,lineB)) {
+    validaTriangulo = true;
+  }
+  return validaTriangulo;
 }
-// console.log(triangleCheck(10,14,8));
+// console.log(triangleCheck(10,14,3));
 
 // >>----------> Desafio 13
 function hydrate(theString) {
