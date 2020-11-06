@@ -60,12 +60,12 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(num) {
   let result = [];
   for (let n = 0; n < num.length; n += 1) {
-    if (num[n] % 3 === 0) {
-      result[n] = 'fizz';
+    if (num[n] % 3 === 0 && num[n] % 5 === 0) {
+      result[n] = 'fizzBuzz';
     } else if (num[n] % 5 === 0) {
       result[n] = 'buzz';
-    } else if (num[n] % 3 === 0 && num[n] % 5 === 0) {
-      result[n] = 'fizzBuzz';
+    } else if (num[n] % 3 === 0) {
+      result[n] = 'fizz';
     } else {
       result[n] = 'bug!';
     }
