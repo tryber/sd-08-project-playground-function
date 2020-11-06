@@ -82,19 +82,33 @@ function fizzBuzz(arrayFizz) {
 
   for (let indice in arrayFizz) {
     if(arrayFizz[indice] % 3 == 0 && arrayFizz[indice] % 5 == 0){
-      mesageFizz.push("fizzBuzz");
+      arrayFizz[indice] = "fizzBuzz";
 
     } else if (arrayFizz[indice] % 3 == 0) {
-      mesageFizz.push("fizz");
+      arrayFizz[indice] = "fizz";
 
     } else if (arrayFizz[indice] % 5 == 0) {
-      mesageFizz.push("buzz");
+      arrayFizz[indice] = "buzz";
     
     } else {
-      mesageFizz.push("bug!");
+      arrayFizz[indice] = "bug!";
     }
   }
-  return mesageFizz;
+  return arrayFizz;
+  //   if(arrayFizz[indice] % 3 == 0 && arrayFizz[indice] % 5 == 0){
+  //     mesageFizz.push("fizzBuzz");
+
+  //   } else if (arrayFizz[indice] % 3 == 0) {
+  //     mesageFizz.push("fizz");
+
+  //   } else if (arrayFizz[indice] % 5 == 0) {
+  //     mesageFizz.push("buzz");
+    
+  //   } else {
+  //     mesageFizz.push("bug!");
+  //   }
+  // }
+  // return mesageFizz;
 }
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
