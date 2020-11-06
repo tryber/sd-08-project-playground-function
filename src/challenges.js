@@ -2,7 +2,7 @@
 function compareTrue(primeiroBoleano, segundoBolenao) {
   if (primeiroBoleano == true && segundoBolenao == true) {
     return true;
-  } else if(primeiroBoleano == false || segundoBolenao == false){
+  } else if (primeiroBoleano == false || segundoBolenao == false){
     return false;
   }
 }
@@ -78,7 +78,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // >>----------> Desafio 8
 function fizzBuzz(arrayFizz) {
   for (let indice in arrayFizz) {
-    if((arrayFizz[indice] % 3) === 0 && (arrayFizz[indice] % 5) === 0){
+    if ((arrayFizz[indice] % 3) === 0 && (arrayFizz[indice] % 5) === 0){
       arrayFizz[indice] = "fizzBuzz";
 
     } else if ((arrayFizz[indice] % 3) === 0) {
@@ -102,11 +102,11 @@ function encode(string) {
       encode += '1';
     }else if (string[indice] == 'e') {
       encode += '2';
-    }else if(string[indice] == 'i') {
+    }else if (string[indice] == 'i') {
       encode += '3';
-    }else if(string[indice] == 'o') {
+    }else if (string[indice] == 'o') {
       encode += '4';
-    }else if(string[indice] == 'u') {
+    }else if (string[indice] == 'u') {
       encode += '5';
     } else encode +=string[indice];
   }
@@ -120,11 +120,11 @@ function decode(string) {
       decode += 'a';
     }else if (string[indice] == '2') {
       decode += 'e';
-    }else if(string[indice] == '3') {
+    }else if (string[indice] == '3') {
       decode += 'i';
-    }else if(string[indice] == '4') {
+    }else if (string[indice] == '4') {
       decode += 'o';
-    }else if(string[indice] == '5') {
+    }else if (string[indice] == '5') {
       decode += 'u';
     } else decode +=string[indice];
   }
@@ -161,45 +161,42 @@ function generatePhoneNumber(phone) {
   for (let indice = 0; indice < phone.length; indice += 1) {
     let contaRepeticao = 0;
     
-    for(let indiceBusca = 0; indiceBusca < phone.length; indiceBusca += 1) {
-      if(phone[indiceBusca] == phone[indice]) {
+    for (let indiceBusca = 0; indiceBusca < phone.length; indiceBusca += 1) {
+      if (phone[indiceBusca] == phone[indice]) {
         contaRepeticao += 1;
       }
-      if(phone[indice] < 0 || phone[indice] > 9 || contaRepeticao == 3) {
+      if (phone[indice] < 0 || phone[indice] > 9 || contaRepeticao == 3) {
         return "não é possível gerar um número de telefone com esses valores"
       }
     }
   }
   return `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // >>----------> Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if(lineA < lineB + lineC && lineA > Math.abs(lineB, lineC)) return true;
-  
-  if(lineB < lineA + lineC && lineB > Math.abs(lineA, lineC)) return true;
-
-  if(lineC < lineA + lineB && lineC > Math.abs(lineA, lineB)){
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB, lineC)) return true;  
+  if (lineB < lineA + lineC && lineB > Math.abs(lineA, lineC)) return true;
+  if (lineC < lineA + lineB && lineC > Math.abs(lineA, lineB)){
     return true;
   } else return false;
 }
 // console.log(triangleCheck(10,14,8));
 
-// Desafio 13
+// >>----------> Desafio 13
 function hydrate(theString) {
-  let filtraNumero = /[1-9]/g;
+  let filtraNumero = /[1-9]/g;//filtra numeros de 1 a 9
   let pegaNumero = theString.match(filtraNumero);
   let somaArray = 0;
-  
-  for(index of pegaNumero) {
+  // for (let i = 0, total = 0; i < pegaNumero.length; total += pegaNumero[i++]);
+  for (index of pegaNumero) {
     somaArray += Number(index);
   }
-
-  if(somaArray === 1) {
-    return `${somaArray} copo de água`
-  } else if(somaArray > 1) {
-    return `${somaArray} copos de água`
+  if (somaArray === 1) {
+    return `${somaArray} copo de água`;
+  } else if (somaArray > 1) {
+    return `${somaArray} copos de água`;
   }
 }
 // let stringRecebida = "1 cachaça, 0 cervejas e 1 copo de vinho";
