@@ -58,7 +58,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(num) {
-  let result = []
+  let result = [];
   for (let n = 0; n < num.length; n += 1) {
     if (num[n] % 3 === 0) {
       result[n] = 'fizz';
@@ -70,7 +70,7 @@ function fizzBuzz(num) {
       result[n] = 'bug!';
     }
   }
-  return result
+  return result;
 }
 
 // Desafio 9
