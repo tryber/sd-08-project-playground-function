@@ -31,7 +31,7 @@ function splitSentence(string) {
 
 // >>-----------> Desafio 4
 function concatName(theArray) {
-  return theArray[theArray.length - 1] + ', ' + theArray[0];
+  return `${theArray[theArray.length - 1]}, ${theArray[0]}`;
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
@@ -59,9 +59,11 @@ function highestCount(entrada) {
 function catAndMouse(mouse, cat1, cat2) {
   let dCat1 = Math.sqrt((mouse - cat1) ** 2); // menor distância: Teorema de Pitagoras.
   let dCat2 = Math.sqrt((mouse - cat2) ** 2); // >>----------> dAB = radix² (A - B)²
-  if (dCat1 === dCat2) return 'os gatos trombam e o rato foge';
-  else if (dCat1 === 0 || dCat1 < dCat2) return 'cat1';
-  else if (dCat2 === 0 || dCat1 > dCat2) return 'cat2';
+  let resultado = '';
+  if (dCat1 === dCat2) resultado = 'os gatos trombam e o rato foge';
+  else if (dCat1 === 0 || dCat1 < dCat2) resultado = 'cat1';
+  else if (dCat2 === 0 || dCat1 > dCat2) resultado = 'cat2';
+  return resultado;
 }
 // console.log(catAndMouse(-10, -15, -2));
 
@@ -153,7 +155,6 @@ function generatePhoneNumber(phone) {
   }
   for (let indice = 0; indice < phone.length; indice += 1) {
     let contaRepeticao = 0;
-    
     for (let indiceBusca = 0; indiceBusca < phone.length; indiceBusca += 1) {
       if (phone[indiceBusca] === phone[indice]) contaRepeticao += 1;
       if (phone[indice] < 0 || phone[indice] > 9 || contaRepeticao === 3) return 'não é possível gerar um número de telefone com esses valores'
@@ -165,9 +166,9 @@ function generatePhoneNumber(phone) {
 
 // >>----------> Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB, lineC)) return true;  
-  if (lineB < lineA + lineC && lineB > Math.abs(lineA, lineC)) return true;
-  if (lineC < lineA + lineB && lineC > Math.abs(lineA, lineB)) return true;
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB,lineC)) return true;  
+  if (lineB < lineA + lineC && lineB > Math.abs(lineA,lineC)) return true;
+  if (lineC < lineA + lineB && lineC > Math.abs(lineA,lineB)) return true;
   return false;
 }
 // console.log(triangleCheck(10,14,8));
@@ -177,14 +178,16 @@ function hydrate(theString) {
   let filtraNumero = /[1-9]/g; // filtra numeros de 1 a 9
   let pegaNumero = theString.match(filtraNumero);
   let somaArray = 0;
+  let retorno;
   // for (let i = 0, total = 0; i < pegaNumero.length; total += pegaNumero[i++]);
   for (let index of pegaNumero) {
     somaArray += Number(index);
   }
-  if (somaArray === 1) return `${somaArray} copo de água`;
-  if (somaArray > 1) return `${somaArray} copos de água`;
+  if (somaArray === 1) retorno = `${somaArray} copo de água`;
+  if (somaArray > 1) retorno = `${somaArray} copos de água`;
+  return retorno;
 }
-// let stringRecebida = "1 cachaça, 0 cervejas e 1 copo de vinho";
+// let stringRecebida = "1 cachaça, 5 cervejas e 1 copo de vinho";
 // console.log(hydrate(stringRecebida));
 
 module.exports = {
