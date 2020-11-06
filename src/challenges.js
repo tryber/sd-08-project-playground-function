@@ -160,18 +160,19 @@ function generatePhoneNumber(phone) {
       if (phone[indice] < 0 || phone[indice] > 9 || contaRepeticao === 3) return 'não é possível gerar um número de telefone com esses valores'
     }
   }
-  return `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
+  let numeroDeTelefone = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
+  return numeroDeTelefone;
 }
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // >>----------> Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let validaTriangulo = false;
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB,lineC)) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB, lineC)) {
     validaTriangulo = true;  // >-----> Math.abs retorna a diferença absoluta
-  } else if (lineB < lineA + lineC && lineB > Math.abs(lineA,lineC)) {
+  } else if (lineB < lineA + lineC && lineB > Math.abs(lineA, lineC)) {
     validaTriangulo = true;
-  } else if (lineC < lineA + lineB && lineC > Math.abs(lineA,lineB)) {
+  } else if (lineC < lineA + lineB && lineC > Math.abs(lineA, lineB)) {
     validaTriangulo = true;
   }
   return validaTriangulo;
