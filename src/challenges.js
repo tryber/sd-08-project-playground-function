@@ -160,7 +160,7 @@ function generatePhoneNumber(thePhone) {
     let contaRepeticao = 0;
     for (let indiceBusca = 0; indiceBusca < thePhone.length; indiceBusca += 1) {
       if (thePhone[indiceBusca] === thePhone[indice]) contaRepeticao += 1;
-      if (thePone[indice] < 0 || thePhone[indice] > 9 || contaRepeticao === 3) {
+      if (thePhone[indice] < 0 || thePhone[indice] > 9 || contaRepeticao === 3) {
         resposta = 'não é possível gerar um número de telefone com esses valores';
         return resposta;
       }
