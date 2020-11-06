@@ -69,8 +69,8 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayFizz) {
   for (let indice in arrayFizz) {
     if ((arrayFizz[indice] % 3) === 0 && (arrayFizz[indice] % 5) === 0) arrayFizz[indice] = 'fizzBuzz';
-    else if ((arrayFizz[indice] % 3) === 0) arrayFizz[indice] = 'fizz';
-    else if ((arrayFizz[indice] % 5) === 0) arrayFizz[indice] = 'buzz';
+    if ((arrayFizz[indice] % 3) === 0) arrayFizz[indice] = 'fizz';
+    if ((arrayFizz[indice] % 5) === 0) arrayFizz[indice] = 'buzz';
     else arrayFizz[indice] = 'bug!';
   }
   return arrayFizz;
@@ -80,17 +80,12 @@ function fizzBuzz(arrayFizz) {
 function encode(string) {
   let encode = '';
   for (let indice in string) {
-    if (string[indice] === 'a') {
-      encode += '1';
-    } else if (string[indice] === 'e') {
-      encode += '2';
-    } else if (string[indice] === 'i') {
-      encode += '3';
-    } else if (string[indice] === 'o') {
-      encode += '4';
-    } else if (string[indice] === 'u') {
-      encode += '5';
-    } else encode += string[indice];
+    if (string[indice] === 'a') encode += '1';
+    if (string[indice] === 'e') encode += '2';
+    if (string[indice] === 'i') encode += '3';
+    if (string[indice] === 'o') encode += '4';
+    if (string[indice] === 'u') encode += '5';
+    else encode += string[indice];
   }
   return encode;
 }
@@ -98,17 +93,12 @@ function encode(string) {
 function decode(string) {
   let decode = '';
   for (let indice in string) {
-    if (string[indice] === '1') {
-      decode += 'a';
-    } else if (string[indice] === '2') {
-      decode += 'e';
-    } else if (string[indice] === '3') {
-      decode += 'i';
-    } else if (string[indice] === '4') {
-      decode += 'o';
-    } else if (string[indice] === '5') {
-      decode += 'u';
-    } else decode += string[indice];
+    if (string[indice] === '1') decode += 'a';
+    if (string[indice] === '2') decode += 'e';
+    if (string[indice] === '3') decode += 'i';
+    if (string[indice] === '4') decode += 'o';
+    if (string[indice] === '5') decode += 'u';
+    else decode += string[indice];
   }
   return decode;
 }
@@ -122,10 +112,8 @@ function decode(string) {
 function techList(tech, name) {
   tech.sort();
   let retorna = [];
-
-  if (tech.length === 0) {
-    return 'Vazio!';
-  }
+  
+  if (tech.length === 0) return 'Vazio!';
   for (let indice = 0; indice < tech.length; indice += 1) {
     retorna.push({ tech: tech[indice], name });
   }
