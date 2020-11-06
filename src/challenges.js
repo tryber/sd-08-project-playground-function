@@ -78,8 +78,6 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // >>----------> Desafio 8
 function fizzBuzz(arrayFizz) {
-  let mesageFizz = [];
-
   for (let indice in arrayFizz) {
     if(arrayFizz[indice] % 3 == 0 && arrayFizz[indice] % 5 == 0){
       arrayFizz[indice] = "fizzBuzz";
