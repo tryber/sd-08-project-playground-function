@@ -1,11 +1,9 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 && valor2 === true) {
-    return "true";
-  } else {
-    return "false";
-  }
+  if (valor1 && valor2) return true;
+  return false;
 }
+console.log(compareTrue(4, 3));
 // Desafio 2
 function calcArea(base, height) {
 let result = (base * height) / 2
@@ -13,14 +11,18 @@ return result;
 }
 // Desafio 3
 function splitSentence(string) {
-  let result = string.split(' ');
-  return result;
+  return string.split(' ');
 }
 
 // Desafio 4
 function concatName() {
+  let string = [];
+  for(let index = 0; index < concatName.length; index += 1){
 
+  }
 }
+concatName('robson', 'batista', 'widnef');
+console.log(strings);
 
 // Desafio 5
 function footballPoints() {
@@ -28,7 +30,33 @@ function footballPoints() {
 }
 
 // Desafio 6
-function highestCount() {}
+function highestCount(numeros) {
+  return repeat(numeros, maiorNumeroArray(numeros));
+}
+  console.log(highestCount([1, 2, 3, 9, 5, 7]));
+
+  function maiorNumeroArray(array){
+    let maiorNumero = 0;
+    for(let index in array){
+      if(array[index] > maiorNumero){
+        maiorNumero = array[index];
+      }
+    }
+    return maiorNumero;
+  }
+  console.log(maiorNumeroArray([9, 1, 2, 3, 9, 5, 7]));
+
+  function repeat(array, number){
+    let numeroRepete = 0;
+    for(let index in array){
+      if(array[index] == number){
+        numeroRepete += 1
+      }
+    }
+    return numeroRepete;
+  }
+  console.log(repeat([9, 1, 2, 3, 9, 5, 7], 9));
+
 
 // Desafio 7
 function catAndMouse() {
