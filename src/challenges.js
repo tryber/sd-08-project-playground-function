@@ -81,19 +81,30 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  tech.sort();
+    let lista = [];
+    for(let index in tech) {
+      lista.push ({
+        tech: tech[index],
+        name: name,
+      });
+    }
+    return lista;
 }
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  Math.abs(lineA, lineB,)
+  if((lineA - lineB < lineC < lineA + lineB) || (lineA - lineC < lineB < lineA + lineC) || (lineB - lineC < lineA < lineB + lineC)) {
+
+  }
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
