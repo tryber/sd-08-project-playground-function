@@ -22,7 +22,7 @@ function footballPoints() {
   // seu código aqui
 }
 
-// Desafio 6
+// Desafio 6  -   Colega Ediberto ajudou neste raciocínio.
 function highestCount(numeros) {
   return repeat(numeros, maiorNumeroArray(numeros));
 }
@@ -37,10 +37,10 @@ function maiorNumeroArray(array) {
   return maiorNumero;
 }
 
-function repeat(array, number) {
+function repeat(array, maiorNumero) {
   let numeroRepete = 0;
   for (let index in array) {
-    if (array[index] == number) {
+    if (array[index] == maiorNumero) {
       numeroRepete += 1;
     }
   }
