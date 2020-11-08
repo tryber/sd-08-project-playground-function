@@ -47,7 +47,7 @@ function highestCount(array) {
   let maior = Math.max(array)
   
   for (let pos=0; pos<array.length;pos++){
-    if (array[pos] == maior){
+    if (array[pos] === maior){
       count++;
     }
 
