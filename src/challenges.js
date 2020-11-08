@@ -91,7 +91,7 @@ function fizzBuzz(array) {
   else{
     fizzBuzz[pos] ="bug!";
   }
-  
+  }
   return fizzBuzz;
 }
 
