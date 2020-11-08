@@ -1,4 +1,4 @@
-// Desafio 1
+// Desafio 1  // commit inicial
 function compareTrue() {
   // seu código aqui
 }
