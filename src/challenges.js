@@ -93,7 +93,7 @@ function fizzBuzz(array) {
 
 function encode(string) {
 
-    let cripted = " ";
+    let cripted = "";
 
     for (let pos = 0; pos < string.length; pos++) {
 
@@ -115,7 +115,7 @@ function encode(string) {
 }
 
 function decode(string) {
-    let uncripted = " ";
+    let uncripted = "";
     for (let pos = 0; pos < string.length; pos++)
 
         if (string[pos] === "1") {
