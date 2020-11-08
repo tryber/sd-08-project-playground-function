@@ -78,7 +78,7 @@ function fizzBuzz(array) {
 
   let fizzBuzz = array;
   
-  for let pos=0; pos<fizzBuzz.length; pos++{
+  for (let pos=0; pos<fizzBuzz.length; pos++){
     if (fizzBuzz[pos] % 3 === 0 && fizzBuzz[pos] % 5 === 0){
       fizzBuzz[pos] ="fizzBuzz";
     }
