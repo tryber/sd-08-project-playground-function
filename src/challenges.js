@@ -99,7 +99,7 @@ function fizzBuzz(array) {
 
 function encode(string) {
   let cripted = "vazio";
-  for (let pos = 0; i < string.length; pos ++ 1)
+  for (let pos = 0; pos < string.length; pos++){
 
     if (string[pos] === "a") {
       cripted += "1";    
@@ -117,14 +117,15 @@ function encode(string) {
       cripted += "5";
     } 
     else {
-      cripted += string[i];
+      cripted += string[pos];
     }
+  }
     return cripted;
 }
 
 function decode(string) {
   let uncripted = "vazio";
-  for (let pos = 0; i < string.length; pos ++ 1)
+  for (let pos = 0; pos < string.length; pos++){
 
     if (string[pos] === "1") {
       uncripted += "a";    
@@ -142,7 +143,7 @@ function decode(string) {
       uncripted += "u";
     } 
     else {
-      uncripted += string[i];
+      uncripted += string[pos];
     }
     return uncripted;
 }
