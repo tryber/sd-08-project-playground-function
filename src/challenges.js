@@ -104,19 +104,19 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
+    
+    Math.abs(lineA, lineB, lineC);
   
-    if(lineA < lineB + lineC && (Math.abs(lineB) - Math.abs(lineC))) {
+    if(lineA < lineB + lineC &&  lineA > lineB - lineC) {
         return true;
-    } else if(lineB < lineA + lineC && (Math.abs(lineA) - Math.abs(lineC))) {
+    } else if(lineB < lineA + lineC && lineB > lineA - lineC) {
         return true;
-    } else if(lineC < lineA + lineB && (Math.abs(lineA) - Math.abs(lineB))) {
+    } else if(lineC < lineA + lineB && lineC > lineA - lineB) {
       return true;
     } else {
       return false;
     }  
 }
-
-
 // Desafio 13
 function hydrate() {
   // seu código aqui
