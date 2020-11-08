@@ -43,8 +43,8 @@ function footballPoints(w , t) {
 
 // Desafio 6
 function highestCount(array) {
-  let count = 0
-  let maior = Math.max(...array)
+  let count = 0;
+  let maior = Math.max(...array);
   
   for (let pos=0; pos<array.length;pos++){
     if (array[pos] === maior){
