@@ -82,7 +82,11 @@ function decode() {
 
 // Desafio 10
 function techList(tech, name) {
-  tech.sort();
+
+    if(tech.length === 0) {
+      return "Vazio!";
+}
+    tech.sort();
     let lista = [];
     for(let index in tech) {
       lista.push ({
@@ -92,6 +96,7 @@ function techList(tech, name) {
     }
     return lista;
 }
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
@@ -99,12 +104,19 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  Math.abs(lineA, lineB,)
-  if((lineA - lineB < lineC < lineA + lineB) || (lineA - lineC < lineB < lineA + lineC) || (lineB - lineC < lineA < lineB + lineC)) {
-
+  Math.abs(lineA, lineB, lineC);
+  
+  if(lineA - lineB < lineC < lineA + lineB) {
+    return true;
+    } else if(lineA - lineC < lineB < lineA + lineC) {
+      return true;
+    } else if(lineB - lineC < lineA < lineB + lineC) {
+      return true;
+    } else {
+      return false;
   }
 }
-console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(19, 14, 7));
 
 // Desafio 13
 function hydrate() {
