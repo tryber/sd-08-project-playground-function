@@ -37,13 +37,22 @@ function footballPoints(w , t) {
   let wins=w;
   let ties=t;
 
-  return (wins*3)+ties;
+  return (wins*3)+ties; //acho que funcionaria apenas (w*3)+t sem precisar declarar variavel antes
 
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let count = 0
+  let maior = Math.max(array)
+  
+  for (let pos=0; pos<array.length;pos++){
+    if (array[pos] == maior){
+      count++;
+    }
+
+  }
+
 }
 
 // Desafio 7
