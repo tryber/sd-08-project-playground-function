@@ -96,16 +96,61 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+function encode(string) {
+  let cripted = "vazio";
+  for (let pos = 0; i < string.length; pos ++ 1)
+
+    if (string[pos] === "a") {
+      cripted += "1";    
+    } 
+    else if (string[pos] === "e") {
+      cripted += "2";
+    } 
+    else if (string[pos] === "i") {
+      cripted += "3";
+    } 
+    else if (string[pos] === "o") {
+      cripted += "4";
+    } 
+    else if (string[pos] === "u") {
+      cripted += "5";
+    } 
+    else {
+      cripted += string[i];
+    }
+    return cripted;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let uncripted = "vazio";
+  for (let pos = 0; i < string.length; pos ++ 1)
+
+    if (string[pos] === "1") {
+      uncripted += "a";    
+    } 
+    else if (string[pos] === "2") {
+      uncripted += "e";
+    } 
+    else if (string[pos] === "3") {
+      uncripted += "i";
+    } 
+    else if (string[pos] === "4") {
+      uncripted += "o";
+    } 
+    else if (string[pos] === "5") {
+      uncripted += "u";
+    } 
+    else {
+      uncripted += string[i];
+    }
+    return uncripted;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+
+  // lembrar de perguntar depois dessa!
 }
 
 // Desafio 11
