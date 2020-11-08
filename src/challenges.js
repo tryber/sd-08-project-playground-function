@@ -28,7 +28,7 @@ function concatName(array) {
   first=array[0];
   last=array[array.length-1];
 
-  return (last, first);
+  return [last, first];
 
 }
 
