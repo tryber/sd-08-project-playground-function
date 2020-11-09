@@ -49,8 +49,8 @@ function repeat(array, maiorNumero) {
 
 // Desafio 7
 function catAndMouse(mouse, positionCat1, positionCat2) {
-  let cat1 = positionCat1 - mouse;
-  let cat2 = positionCat2 - mouse;
+  let cat1 = Math.abs(positionCat1 - mouse);
+  let cat2 = Math.abs(positionCat2 - mouse);
     if(cat1 < cat2){
       return "cat1";
     }else if(cat2 < cat1){
@@ -59,10 +59,9 @@ function catAndMouse(mouse, positionCat1, positionCat2) {
       return "os gatos trombam e o rato foge";
     }
 }
-
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+
 }
 
 // Desafio 9
