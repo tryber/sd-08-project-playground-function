@@ -51,18 +51,31 @@ function repeat(array, maiorNumero) {
 function catAndMouse(mouse, positionCat1, positionCat2) {
   let cat1 = Math.abs(positionCat1 - mouse);
   let cat2 = Math.abs(positionCat2 - mouse);
-    if(cat1 < cat2){
-      return "cat1";
-    }else if(cat2 < cat1){
-      return "cat2";
-    }else{
-      return "os gatos trombam e o rato foge";
-    }
+  if (cat1 < cat2) {
+    return "cat1";
+  } else if (cat2 < cat1) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
+  let valorResult = [];
 
-}
+  for(let index in array){
+    if(array[index] % 3 == 0 && array[index] % 5 == 0){
+      valorResult.push("fizzBuzz");
+    }else if(array[index] % 3 == 0){
+      valorResult.push("fizz");
+    }else if(array[index] % 5 == 0){
+      valorResult.push("buzz");
+    }else{
+      valorResult.push("bug!");
+    }
+  }
+    return valorResult;
+  }
 
 // Desafio 9
 function encode() {
