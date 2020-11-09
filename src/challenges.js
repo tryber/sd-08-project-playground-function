@@ -34,7 +34,7 @@ function highestCount(numbers) {
     for (compare = indice; compare < numbers.length; compare+=1){
       if(numbers[compare] >= highestNumber) {
         (numbers[compare] > highestNumber) ? count=[]:'';
-        if (compare != indice) {        
+        if (compare != indice) {
           highestNumber = numbers[compare];
           indice = compare;
           let aux = numbers.indexOf(highestNumber);
@@ -46,7 +46,7 @@ function highestCount(numbers) {
           let aux = numbers.indexOf(highestNumber);
           count.push(aux);
           break;
-        } 
+        }
       }
     }
   }
@@ -83,15 +83,35 @@ function fizzBuzz(num) {
     } else {
         output.push(x);
       }
-  } 
+  }
   return output;
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let output = phrase.split('')
+  let vowels = ['a', 'e', 'i' , 'o', 'u']
+  output.map((element, index) => {
+    for (let cases in vowels) {
+      if (element === vowels[cases]) {
+        output[index] = (parseInt(cases) + 1);
+      }
+    }
+  });
+  return output.join('');
 }
-function decode() {
-  // seu código aqui
+
+
+function decode(phrase) {
+  let output = phrase.split('')
+  let vowels = ['a', 'e', 'i' , 'o', 'u']
+  output.map((element, index) => {
+    for (let cases in vowels) {
+      if (parseInt(element) === (parseInt(cases) + 1)) {
+        output[index] = vowels[cases];
+      }
+    }
+  });
+  return output.join('');
 }
 
 // Desafio 10
