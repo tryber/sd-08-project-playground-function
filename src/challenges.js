@@ -48,8 +48,16 @@ function repeat(array, maiorNumero) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, positionCat1, positionCat2) {
+  let cat1 = positionCat1 - mouse;
+  let cat2 = positionCat2 - mouse;
+    if(cat1 < cat2){
+      return "cat1";
+    }else if(cat2 < cat1){
+      return "cat2";
+    }else{
+      return "os gatos trombam e o rato foge";
+    }
 }
 
 // Desafio 8
