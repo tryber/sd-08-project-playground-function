@@ -9,17 +9,26 @@ function calcArea(base, height) {
   let result = (base * height) / 2;
   return result;
 }
+
 // Desafio 3
 function splitSentence(string) {
   return string.split(" ");
 }
 
 // Desafio 4
-function concatName() {}
+function concatName(array) {
+  let result = [];
+  for(let index in array){
+    if(result[index] == array.length -1 && result[index] == array[0]);
+  }
+}
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let vitoria = wins * 3;
+  let empate = ties * 1;
+  let total = vitoria + empate;
+  return total;
 }
 
 // Desafio 6  -   Colega Ediberto ajudou neste raciocínio.
