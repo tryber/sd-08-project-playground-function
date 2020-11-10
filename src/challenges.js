@@ -108,7 +108,7 @@ function encode(myString) {
 }
 
 
-function decode(input) {
+function decode(myString) {
   let meuArray = "";
 
   for (let i = 0; i < myString.length; i += 1) {
