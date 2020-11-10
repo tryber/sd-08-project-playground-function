@@ -48,7 +48,6 @@ function highestCount(numeros) {
   return quantidade;
 }
 
-
 // Desafio 7
 function catAndMouse(mouse,cat1, cat2) {
   // seu código aqui
@@ -84,15 +83,50 @@ function fizzBuzz(entradaDoUsuario) {
   return meuArray;
 }
 
- fizzBuzz(2, 15, 7, 9, 45);
-
-
 // Desafio 9
-function encode() {
+function encode(myString) {
   // seu código aqui
+
+  let meuArray = " ";
+
+  for (let i = 0; i < myString.length; i += 1) {
+    if (myString[i] == "a") {
+      meuArray += "1";
+    } else if (myString[i] === "e") {
+      meuArray += "2";
+    } else if (myString[i] === "i") {
+      meuArray += "3";
+    } else if (myString[i] === "o") {
+      meuArray += "4";
+    } else if (myString[i] === "u") {
+      meuArray += "5";
+    } else{
+      meuArray += myString[i];
+    }
+  }
+  return meuArray; 
 }
-function decode() {
-  // seu código aqui
+
+
+function decode(input) {
+  let meuArray = " ";
+
+  for (let i = 0; i < myString.length; i += 1) {
+    if (myString[i] == "1") {
+      meuArray += "a";
+    } else if (myString[i] === "2") {
+      meuArray += "e";
+    } else if (myString[i] === "3") {
+      meuArray += "i";
+    } else if (myString[i] === "4") {
+      meuArray += "o";
+    } else if (myString[i] === "5") {
+      meuArray += "u";
+    } else{
+      meuArray += myString[i];
+    }
+  }
+  return meuArray; 
 }
 
 // Desafio 10
