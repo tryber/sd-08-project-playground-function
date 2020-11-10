@@ -114,13 +114,13 @@ function decode(input) {
   for (let i = 0; i < myString.length; i += 1) {
     if (myString[i] == "1") {
       meuArray += "a";
-    } else if (myString[i] === "2") {
+    } else if (myString[i] == "2") {
       meuArray += "e";
-    } else if (myString[i] === "3") {
+    } else if (myString[i] == "3") {
       meuArray += "i";
-    } else if (myString[i] === "4") {
+    } else if (myString[i] == "4") {
       meuArray += "o";
-    } else if (myString[i] === "5") {
+    } else if (myString[i] == "5") {
       meuArray += "u";
     } else{
       meuArray += myString[i];
