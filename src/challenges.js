@@ -87,7 +87,7 @@ function fizzBuzz(entradaDoUsuario) {
 function encode(myString) {
   // seu código aqui
 
-  let meuArray = " ";
+  let meuArray = "";
 
   for (let i = 0; i < myString.length; i += 1) {
     if (myString[i] == "a") {
@@ -109,7 +109,7 @@ function encode(myString) {
 
 
 function decode(input) {
-  let meuArray = " ";
+  let meuArray = "";
 
   for (let i = 0; i < myString.length; i += 1) {
     if (myString[i] == "1") {
