@@ -119,12 +119,13 @@ function decode(string) {
 // Desafio 10
 function techList(x,y) {
   let lista = []
+  let sorter = x.sort()
   if (x === 0){
     return 'Vazio!'
   } else {
-    for (let i = 0; i < x.length; i+= 1) {
+    for (let i = 0; i < sorter.length; i+= 1) {
       let object = {};
-      object['tech'] = x[i];
+      object['tech'] = sorter[i];
       object['name'] = y;
       lista.push(object)
     }
