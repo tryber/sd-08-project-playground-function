@@ -76,37 +76,37 @@ function fizzBuzz(num) {
 // Desafio 9
 function encode(string) {
   for (let i in string){
-    if (i === "a") {
-      sting[i] = "1"
-    } else if (i === "e") {
-      sting[i] = "2"
-    } else if (i === "i") {
-      sting[i] = "3"
-    } else if (i === "o") {
-      sting[i] = "4"
-    } else if (i === "u") {
-      sting[i] = "5"
+    if (i === 'a') {
+      sting[i] = '1';
+    } else if (i === 'e') {
+      sting[i] = '2';
+    } else if (i === 'i') {
+      sting[i] = '3';
+    } else if (i === 'o') {
+      sting[i] = '4';
+    } else if (i === 'u') {
+      sting[i] = '5';
     } else { 
     }
-    return string
   }
+  return string
 }
-function decode() {
+function decode(string) {
   for (let i in string){
     if (i === '1') {
-      sting[i] = 'a'
+      sting[i] = 'a';
     } else if (i === '2') {
-      sting[i] = 'e'
+      sting[i] = 'e';
     } else if (i === '3') {
-      sting[i] = 'i'
+      sting[i] = 'i';
     } else if (i === '4') {
-      sting[i] = 'o'
+      sting[i] = 'o';
     } else if (i === '5') {
-      sting[i] = 'u'
+      sting[i] = 'u';
     } else { 
     }
-    return string
   }
+  return string
 }
 
 // Desafio 10
