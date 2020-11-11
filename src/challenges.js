@@ -76,41 +76,45 @@ function fizzBuzz(num) {
 // Desafio 9
 function encode(string) {
   let i;
+  let encrypt;
   for (i of string){
     if (i === 'a') {
-      string[i] = '1';
+      encrypt += '1';
     } else if (i === 'e') {
-      string[i] = '2';
+      encrypt += '2';
     } else if (i === 'i') {
-      string[i] = '3';
+      encrypt += '3';
     } else if (i === 'o') {
-      string[i] = '4';
+      encrypt += '4';
     } else if (i === 'u') {
-      string[i] = '5';
+      encrypt += '5';
     } else { 
+      encrypt += i;
     }
   }
-  return string
+  return encrypt
 }
 function decode(string) {
   let i;
+  let decrypt;
   for (i of string){
     if (i === '1') {
-      string[i] = 'a';
+      decrypt += 'a';
     } else if (i === '2') {
-      string[i] = 'e';
+      decrypt += 'e';
     } else if (i === '3') {
-      string[i] = 'i';
+      decrypt += 'i';
     } else if (i === '4') {
-      string[i] = 'o';
+      decrypt += 'o';
     } else if (i === '5') {
-      string[i] = 'u';
+      decrypt += 'u';
     } else { 
+      decrypt += i;
     }
   }
-  return string
+  return decrypt
 }
-console.log(encode('hello'))
+
 // Desafio 10
 function techList() {
   // seu código aqui
