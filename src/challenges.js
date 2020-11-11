@@ -76,7 +76,7 @@ function fizzBuzz(num) {
 // Desafio 9
 function encode(string) {
   let i;
-  let encrypt;
+    let encrypt = '';
   for (i of string){
     if (i === 'a') {
       encrypt += '1';
@@ -96,7 +96,7 @@ function encode(string) {
 }
 function decode(string) {
   let i;
-  let decrypt;
+    let decrypt = '';
   for (i of string){
     if (i === '1') {
       decrypt += 'a';
