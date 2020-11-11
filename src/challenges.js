@@ -121,7 +121,7 @@ function techList(x,y) {
   let lista = []
   let sorter = x.sort()
   if (x === 0){
-    lista.push('Vazio!')
+    lista = 'Vazio!'
   } else {
     for (let i = 0; i < sorter.length; i+= 1) {
       let object = {};
@@ -136,7 +136,7 @@ function techList(x,y) {
 // Desafio 11
 function generatePhoneNumber(array) {
   if (array.length != 11) {
-    return 'Array com tamanho incorreto'
+    return 'Array com tamanho incorreto.'
   }
   for (let i = 0; i < array.length; i += 1) {
     let count = 0;
