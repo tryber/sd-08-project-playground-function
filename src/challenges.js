@@ -121,7 +121,7 @@ function techList(x,y) {
   let lista = []
   let sorter = x.sort()
   if (x === 0){
-    return 'Vazio!'
+    lista = 'Vazio!'
   } else {
     for (let i = 0; i < sorter.length; i+= 1) {
       let object = {};
@@ -132,8 +132,6 @@ function techList(x,y) {
   }
   return lista
 }
-
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
 // Desafio 11
 function generatePhoneNumber() {
