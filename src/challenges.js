@@ -97,7 +97,7 @@ function encode(string) {
 function decode(string) {
   let i;
     let decrypt = '';
-  for (i of string){
+  for (i of string) {
     if (i === '1') {
       decrypt += 'a';
     } else if (i === '2') {
@@ -115,10 +115,24 @@ function decode(string) {
   return decrypt
 }
 
+
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(x,y) {
+  let lista = []
+  if (x === 0){
+    return 'Vazio!'
+  } else {
+    for (let i = 0; i < x.length; i+= 1) {
+      let object = {};
+      object['tech'] = x[i];
+      object['name'] = y;
+      lista.push(object)
+    }
+  }
+  return lista
 }
+
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
 // Desafio 11
 function generatePhoneNumber() {
