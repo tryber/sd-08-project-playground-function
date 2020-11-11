@@ -120,8 +120,8 @@ function decode(string) {
 function techList(x,y) {
   let lista = []
   let sorter = x.sort()
-  if (x === 0){
-    lista = 'Vazio!'
+  if (x.length === 0) {
+    return 'Vazio!'
   } else {
     for (let i = 0; i < sorter.length; i+= 1) {
       let object = {};
@@ -148,12 +148,13 @@ function generatePhoneNumber(array) {
         count += 1
       }
     } 
+    if (count >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    } else {
+      return '(' + array[0] + array [1] + ')' + ' ' + array[2,3,4,5,6] + '-' + array[7,8,9,10]
+    }
   }
-  if (count >= 3) {
-    return 'não é possível gerar um número de telefone com esses valores'
-  } else {
-    return '(' + array[0] + array [1] + ')' + ' ' + array[2,3,4,5,6] + '-' + array[7,8,9,10]
-  }
+  
 }
 
 // Desafio 12
