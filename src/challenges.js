@@ -77,15 +77,15 @@ function fizzBuzz(num) {
 function encode(string) {
   for (let i in string){
     if (i === 'a') {
-      sting[i] = '1';
+      string[i] = '1';
     } else if (i === 'e') {
-      sting[i] = '2';
+      string[i] = '2';
     } else if (i === 'i') {
-      sting[i] = '3';
+      string[i] = '3';
     } else if (i === 'o') {
-      sting[i] = '4';
+      string[i] = '4';
     } else if (i === 'u') {
-      sting[i] = '5';
+      string[i] = '5';
     } else { 
     }
   }
@@ -94,15 +94,15 @@ function encode(string) {
 function decode(string) {
   for (let i in string){
     if (i === '1') {
-      sting[i] = 'a';
+      string[i] = 'a';
     } else if (i === '2') {
-      sting[i] = 'e';
+      string[i] = 'e';
     } else if (i === '3') {
-      sting[i] = 'i';
+      string[i] = 'i';
     } else if (i === '4') {
-      sting[i] = 'o';
+      string[i] = 'o';
     } else if (i === '5') {
-      sting[i] = 'u';
+      string[i] = 'u';
     } else { 
     }
   }
