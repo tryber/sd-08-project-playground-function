@@ -75,7 +75,8 @@ function fizzBuzz(num) {
 
 // Desafio 9
 function encode(string) {
-  for (let i in string){
+  let i;
+  for (i of string){
     if (i === 'a') {
       string[i] = '1';
     } else if (i === 'e') {
@@ -92,7 +93,8 @@ function encode(string) {
   return string
 }
 function decode(string) {
-  for (let i in string){
+  let i;
+  for (i of string){
     if (i === '1') {
       string[i] = 'a';
     } else if (i === '2') {
@@ -108,7 +110,7 @@ function decode(string) {
   }
   return string
 }
-
+console.log(encode('hello'))
 // Desafio 10
 function techList() {
   // seu código aqui
