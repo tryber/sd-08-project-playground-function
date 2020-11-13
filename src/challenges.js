@@ -172,7 +172,6 @@ function techList(array, name) {
 function generatePhoneNumber(array) {
   // seu código aqui
   let phoneNumber = '';
-  let objArray = {};
   // Inicializa um novo array com o objeto criado acima.
   let newArray = [];
   if (array.length !== 11) {
@@ -213,7 +212,7 @@ function generatePhoneNumber(array) {
       if (newArray[chave].repeat >= 3) {
         return 'não é possível gerar um número de telefone com esses valores';
         break;
-      } else if (chave === (newArray.length - 1)) {
+      } else if (chave == (newArray.length - 1)) {
         // Constrói o phoneNumber no formato solicitado.
         for (let posPhone = 0; posPhone < array.length; posPhone += 1) {
           switch (posPhone) {
@@ -236,6 +235,7 @@ function generatePhoneNumber(array) {
   }
 }
 
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
