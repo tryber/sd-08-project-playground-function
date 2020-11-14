@@ -147,8 +147,16 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-    // seu código aqui
+function triangleCheck(ladoA, ladoB, ladoC) {
+    if ((ladoA + ladoB) < ladoC) {
+        return true;
+    } else if ((ladoA + ladoC) < ladoB) {
+        return true;
+    } else if ((ladoB + ladoC) < ladoA) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 // Desafio 13
