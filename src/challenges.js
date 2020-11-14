@@ -148,15 +148,12 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(ladoA, ladoB, ladoC) {
-    if ((ladoA + ladoB) > ladoC) {
-        return true;
-    } else if ((ladoA + ladoC) > ladoB) {
-        return true;
-    } else if ((ladoB + ladoC) > ladoA) {
+    if (ladoA < (ladoB + ladoC) && ladoA > Math.abs(ladoB - ladoC) || ladoB < (ladoA + ladoC) && ladoB > Math.abs(ladoA - ladoC) || ladoC < (ladoB + ladoA) && ladoC > Math.abs(ladoB - ladoA)) {
         return true;
     } else {
         return false;
     }
+
 }
 
 // Desafio 13
