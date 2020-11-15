@@ -148,7 +148,7 @@ function generatePhoneNumber(array) {
         return "Array com tamanho incorreto";
     }
     for (let pos1 = 0; pos1 < array.length; pos1++) {
-        if (array[pos] < 0 || array[pos] > 9) {
+        if (array[pos1] < 0 || array[pos1] > 9) {
             return "não é possível gerar um número de telefoe com esses valores";
         }
         for (let pos2 = 0; pos2 < array.length; pos2++) {
