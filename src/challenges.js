@@ -7,7 +7,6 @@ function compareTrue(bol1, bol2) {
   return output;
 }
 
-
 // < Para o teste manual >
 // let a = true;
 // let b = true;
@@ -16,12 +15,13 @@ function compareTrue(bol1, bol2) {
 
 // Desafio 2
 function calcArea(base, height) {
+  let output;
   if (base > 0 && height > 0) {
-    return (base * height) / 2;
+    output = (base * height) / 2;
+  } else {
+    output = `ERROR > ${base} e ${height} não são números positivos!`;
   }
-  else {
-    return `ERROR > ${base} e ${height} não são números positivos!`;
-  }
+  return output;
 }
 
 // < Para o teste manual >
@@ -30,16 +30,15 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(str) {
-  let inputStr = "" + str;
+  let inputStr = '';
+  inputStr = str;
   let arrayDeStr = [];
   let auxiliar = '';
 
-  for (let index=0; index<inputStr.length; index+=1) {
-
+  for (let index = 0; index < inputStr.length; index += 1) {
     if (inputStr[index] !== ' ') {
       auxiliar += inputStr[index];
-    }
-    else {
+    } else {
       arrayDeStr.push(auxiliar);
       auxiliar = '';
     }
@@ -56,8 +55,7 @@ function splitSentence(str) {
 // Desafio 4
 function concatName(arrStr) {
   let inputArrStr = arrStr;
-  let outputStr = '';
-  outputStr = arrStr[inputArrStr.length - 1] + ', ' + arrStr[0];
+  let outputStr = arrStr[inputArrStr.length - 1].concat(', ', arrStr[0]);
   return outputStr;
 }
 
@@ -75,23 +73,28 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(5, 3));
 
 // Desafio 6
-function highestCount(arrNum) {
-  let inputArrNum = arrNum;
-  let maiorNum = inputArrNum[0];
-  let contador = 0;
-
-  for (let index=0; index<inputArrNum.length; index+=1) {
-    if (inputArrNum[index] > maiorNum) {
-      maiorNum = inputArrNum[index];
+function getHighestNum(arrNum) {
+  let maiorNum = arrNum[0];
+  for (let index = 0; index < arrNum.length; index += 1) {
+    if (arrNum[index] > maiorNum) {
+      maiorNum = arrNum[index];
     }
   }
-  for (let index=0; index<inputArrNum.length; index+=1) {
-    if (inputArrNum[index] == maiorNum) {
+  return maiorNum;
+}
+
+function highestCount(arrNum) {
+  let maiorNum = getHighestNum(arrNum);
+  let contador = 0;
+
+  for (let x in arrNum) {
+    if (arrNum[x] === maiorNum) {
       contador += 1;
     }
   }
+
   return contador;
-  }
+}
 
 // < Para o teste manual >
 // let arrayteste = [9, 1, 2, 3, 9, 5, 7];
@@ -102,7 +105,7 @@ function highestCount(arrNum) {
 function catAndMouse(mouse, cat1, cat2) {
   let unidDist1 = cat1 - mouse;
   let unidDist2 = cat2 - mouse;
-  let outputStr = "";
+  let outputStr = '';
 
 // Torna as distancias positivas
 
@@ -115,14 +118,13 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
   if (unidDist1 < unidDist2) {
-    outputStr = "cat1";
+    outputStr = 'cat1';
+  } else if (unidDist1 > unidDist2) {
+    outputStr = 'cat2';
+  } else {
+    outputStr = 'os gatos trombam e o rato foge';
   }
-  else if (unidDist1 > unidDist2) {
-    outputStr = "cat2";
-  }
-  else {
-    outputStr = "os gatos trombam e o rato foge";
-  }
+
   return outputStr;
 }
 
@@ -132,28 +134,25 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrNum) {
-  let inputArrNumbers = arrNum;
   let outputArr = [];
 
-  for (let index=0; index<inputArrNumbers.length; index+=1) {
-    if (inputArrNumbers[index] % 3 == 0 && inputArrNumbers[index] % 5 != 0) {
+  for (let index = 0; index < arrNum.length; index += 1) {
+    if (arrNum[index] % 3 === 0 && arrNum[index] % 5 !== 0) {
       outputArr.push('fizz');
-    }
-    else if (inputArrNumbers[index] % 3 != 0 && inputArrNumbers[index] % 5 == 0) {
+    } else if (arrNum[index] % 3 !== 0 && arrNum[index] % 5 === 0) {
       outputArr.push('buzz');
-    }
-    else if (inputArrNumbers[index] %3 == 0 && inputArrNumbers[index] % 5 == 0) {
+    } else if (arrNum[index] % 3 === 0 && arrNum[index] % 5 === 0) {
       outputArr.push('fizzBuzz');
-    }
-    else {
+    } else {
       outputArr.push('bug!');
     }
   }
+
   return outputArr;
 }
 
 // < Para o teste manual >
-// let arrayteste2 = [2, 15, 7, 9, 45];
+// let arrayteste2 = [2, 15, 7, 9, 45, 10];
 // console.log(fizzBuzz(arrayteste2));
 
 
@@ -165,31 +164,24 @@ function fizzBuzz(arrNum) {
 // u -> 5
 
 function encode(str) {
-  let inputStr = str;
-  let outputStr = "";
+  let outputStr = '';
 
-  for (let index in inputStr) {
-    switch (inputStr[index]) {
-      case 'a':
-        outputStr += '1';
-        break;
-      case 'e':
-        outputStr += '2';
-        break;
-      case 'i':
-        outputStr += '3';
-        break;
-      case 'o':
-        outputStr += '4';
-        break;
-      case 'u':
-        outputStr += '5';
-        break;
-      default :
-        outputStr += inputStr[index];
-        break;
+  for (let index = 0; index < str.length; index += 1) {
+    if (str[index] === 'a') {
+      outputStr += '1';
+    } else if (str[index] === 'e') {
+      outputStr += '2';
+    } else if (str[index] === 'i') {
+      outputStr += '3';
+    } else if (str[index] === 'o') {
+      outputStr += '4';
+    } else if (str[index] === 'u') {
+      outputStr += '5';
+    } else {
+      outputStr += str[index];
     }
   }
+
   return outputStr;
 }
 
@@ -197,31 +189,24 @@ function encode(str) {
 // console.log(encode("oi e bom te ver nu, ta!"));
 
 function decode(str) {
-  let inputStr = str;
-  let outputStr = "";
+  let outputStr = '';
 
-  for (let index in inputStr) {
-    switch (inputStr[index]) {
-      case '1':
-        outputStr += 'a';
-        break;
-      case '2':
-        outputStr += 'e';
-        break;
-      case '3':
-        outputStr += 'i';
-        break;
-      case '4':
-        outputStr += 'o';
-        break;
-      case '5':
-        outputStr += 'u';
-        break;
-      default :
-        outputStr += inputStr[index];
-        break;
+  for (let index = 0; index < str.length; index += 1) {
+    if (str[index] === '1') {
+      outputStr += 'a';
+    } else if (str[index] === '2') {
+      outputStr += 'e';
+    } else if (str[index] === '3') {
+      outputStr += 'i';
+    } else if (str[index] === '4') {
+      outputStr += 'o';
+    } else if (str[index] === '5') {
+      outputStr += 'u';
+    } else {
+      outputStr += str[index];
     }
   }
+
   return outputStr;
 }
 
@@ -231,91 +216,85 @@ function decode(str) {
 
 // Desafio 10
 function techList(arrStr, name) {
+  let outputObj = [];
 
-  let techName = arrStr;
-  if (techName.length == 0) {
-    let outputErro = "Vazio!";
-    return outputErro;
-  }
-  else {
-    techName.sort();
-    let outputObj = [];
+  if (arrStr.length === 0) {
+    outputObj.push('Vazio!');
+  } else {
+    arrStr.sort();
 
-    for (let index=0; index<techName.length; index+=1) {
+    for (let index = 0; index < arrStr.length; index += 1) {
       let aux = {};
-      aux.tech = techName[index];
+      aux.tech = arrStr[index];
       aux.name = name;
       outputObj.push(aux);
     }
-    return outputObj;
   }
+  return outputObj;
 }
 
 // < Para o teste manual >
-// let arrayteste3 = ["React", "Jest", "HTML", "CSS", "JavaScript", "Phython", "C++"];
+// let arrayteste3 = ["React", "Jest", "HTML", "CSS", "JavaScript", "C++"];
 // console.log(techList(arrayteste3, "Lucas"));
 
 
 // Desafio 11
-function generatePhoneNumber(arrNum) {
-  let aux = arrNum;
-  let outputStr = '';
+function verifyArrNum(arrNum) {
   let verificaArray = true;
+  for (let index = 0; index < arrNum.length; index += 1) {
+    if (arrNum[index] < 0 || arrNum[index] > 9) {
+      verificaArray = false;
+    }
+  }
+  return verificaArray;
+}
+
+function verifyRepetition(arrNum) {
   let verificaRepetido = true;
-
-  //Verifica condições do array
-
-  for (let index=0; index<aux.length; index+=1) {
+  for (let index = 0; index < arrNum.length; index += 1) {
     let contador = 0;
 
-    if (aux[index] < 0 || aux[index] > 9) {
-      verificaArray = false;
-      break;
-    }
-
-    for (let j=0 ; j<aux.length; j+=1) {
-
-      if (aux[index] == aux[j]) {
+    for (let j = 0; j < arrNum.length; j += 1) {
+      if (arrNum[index] === arrNum[j]) {
         contador += 1;
       }
 
       if (contador >= 3) {
         verificaRepetido = false;
-        break;
       }
     }
   }
+  return verificaRepetido;
+}
 
-  //Organiza a string de output
 
-  if (aux.length == 11) {
-    if (verificaRepetido == false || verificaArray == false) {
-      outputStr = "não é possível gerar um número de telefone com esses valores";
-    }
-    else {
-      for (let index in aux) {
-        if (index == 0) {
-          outputStr = '(' + aux[index];
-        }
-        else if (index == 1) {
-          outputStr += aux[index] + ') ';
-        }
-        else if (index >= 2 && index <= 5) {
-          outputStr += aux[index];
-        }
-        else if (index == 6) {
-          outputStr += aux[index] + "-";
-        }
-        else {
-          outputStr += aux[index];
+function generatePhoneNumber(arrNum) {
+  let outputStr = '';
+  let verificaArray = verifyArrNum(arrNum);
+  let verificaRepetido = verifyRepetition(arrNum);
+
+  if (arrNum.length === 11) {
+    if (verificaRepetido === false || verificaArray === false) {
+      outputStr = 'não é possível gerar um número de telefone com esses valores';
+    } else {
+      for (let index in arrNum) {
+        if (index === '0') {
+          outputStr = outputStr.concat('(', arrNum[index]);
+        } else if (index === '1') {
+          outputStr = outputStr.concat(arrNum[index], ') ');
+        } else if (index >= 2 && index <= 5) {
+          outputStr += arrNum[index];
+        } else if (index === '6') {
+          outputStr = outputStr.concat(arrNum[index], '-');
+        } else {
+          outputStr += arrNum[index];
         }
       }
     }
+  } else {
+    outputStr = 'Array com tamanho incorreto.';
+  }
 
-  }
-  else {
-    outputStr = "Array com tamanho incorreto.";
-  }
   return outputStr;
 }
 
@@ -327,15 +306,13 @@ function generatePhoneNumber(arrNum) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let itIsTriangle = false;
-  let lados = [lineA , lineB , lineC];
+  let lados = [lineA, lineB, lineC];
 
   if (lados[0] < lados[1] + lados[2] && lados[0] > Math.abs(lados[1] - lados[2])) {
     itIsTriangle = true;
-  }
-  else if (lados[1] < lados[2] + lados[0] && lados[1] > Math.abs(lados[2] - lados[0])) {
+  } else if (lados[1] < lados[2] + lados[0] && lados[1] > Math.abs(lados[2] - lados[0])) {
     itIsTriangle = true;
-  }
-  else if (lados[2] < lados[0] + lados[1] && lados[2] > Math.abs(lados[0] - lados[1])) {
+  } else if (lados[2] < lados[0] + lados[1] && lados[2] > Math.abs(lados[0] - lados[1])) {
     itIsTriangle = true;
   }
 
@@ -349,27 +326,26 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 // Solução com o entendimento via "https://www.codegrepper.com/code-examples/delphi/how+to+exract+numbers+from+string+in+js"
 function hydrate(str) {
-
   let output = 0;
-  str = str.split(" ");
+  let outputStr = '';
+  str = str.split(' ');
 
-  for(let i=0; i<str.length; i+=1) {
-    let num = "";
-    if(isNaN(str[i])==false){
-      num+=str[i];
+  for (let i = 0; i < str.length; i += 1) {
+    let num = '';
+    if (isNaN(str[i]) === false) {
+      num += str[i];
       output += parseInt(num);
     }
   }
 
-  if (output == 1) {
-    return `${output} copo de água`;
+  if (output === 1) {
+    outputStr = `${output} copo de água`;
+  } else if (output > 1) {
+    outputStr = `${output} copos de água`;
+  } else {
+    outputStr = 'ainda não bebeu nada.';
   }
-  else if (output > 1) {
-    return `${output} copos de água`;
-  }
-  else {
-    return `ainda não bebeu nada.`
-  }
+  return outputStr;
 }
 
 // < Para o teste manual >
@@ -391,4 +367,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
