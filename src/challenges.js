@@ -219,7 +219,7 @@ function techList(arrStr, name) {
   let outputObj = [];
 
   if (arrStr.length === 0) {
-    outputObj.push('Vazio!');
+    outputObj = 'Vazio!';
   } else {
     arrStr.sort();
 
