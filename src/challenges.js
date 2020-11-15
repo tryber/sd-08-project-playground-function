@@ -147,11 +147,11 @@ function generatePhoneNumber(array) {
     if (array.length != 11) {
         return "Array com tamanho incorreto";
     }
-    for (let pos1 = 0; pos1 < array.length; pos1++) {
-        if (array[pos1] < 0 || array[pos1] > 9) {
+    for (let pos1 = 0; i < array.length; pos1++) {
+        if (array[pos] < 0 || array[pos] > 9) {
             return "não é possível gerar um número de telefoe com esses valores";
         }
-        for (let pos2 = 0; pos2 < array.length; pos2++) {
+        for (let pos2 = 0; i < array.length; pos2++) {
             if (array[pos1] === array[pos2]) {
                 count3++;
             }
@@ -159,9 +159,8 @@ function generatePhoneNumber(array) {
     }
     if (count3 >= 3) {
         return "não é possível gerar um número de telefoe com esses valores"
-    } else {
-        return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
     }
+    return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
 }
 
 // Desafio 12
