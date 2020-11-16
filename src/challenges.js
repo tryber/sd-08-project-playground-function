@@ -188,7 +188,7 @@ function hydrate(string) {
     let cups = string.replace(/\D/g, ''); // replace all leading non-digits with nothing
     let countW = 0;
 
-    for (let pos = 0; pos < string.length; pos++) {
+    for (let pos = 0; pos < cups.length; pos += 1) {
         countW += Number(cups[pos]);
     }
     if (countW === 1) {
