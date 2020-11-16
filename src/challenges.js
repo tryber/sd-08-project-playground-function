@@ -185,10 +185,10 @@ function triangleCheck(ladoA, ladoB, ladoC) {
 
 // Desafio 13
 function hydrate(string) {
-    let cups = string.replace(/\D/g, '');
+    let cups = string.replace(/\D/g, ''); // replace all leading non-digits with nothing
     let countW = 0;
 
-    for (let pos = 0; index < string.length; pos++) {
+    for (let pos = 0; pos < string.length; pos++) {
         countW += Number(cups[pos]);
     }
     if (countW === 1) {
