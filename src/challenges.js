@@ -144,11 +144,13 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
     let verificador = false;
-    let count3 = 0;
+    let verificador3 = false;
+
     if (array.length != 11) {
         return "Array com tamanho incorreto";
     }
     for (let pos1 = 0; pos1 < array.length; pos1++) {
+        let count3 = 0;
         if (array[pos1] < 0 || array[pos1] > 9) {
             verificador = true;
         }
@@ -156,10 +158,13 @@ function generatePhoneNumber(array) {
             if (array[pos1] === array[pos2]) {
                 count3++;
             }
+            if (count3 >= 3) {
+                verificador3 = true;
+            }
         }
 
     }
-    if (count3 >= 3 || verificador === true) {
+    if (verificador3 === true || verificador === true) {
         return "não é possível gerar um número de telefone com esses valores";
     } else {
         return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
