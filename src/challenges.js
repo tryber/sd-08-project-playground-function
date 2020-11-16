@@ -147,7 +147,7 @@ function generatePhoneNumber(array) {
     let verificador3 = false;
 
     if (array.length != 11) {
-        return "Array com tamanho incorreto";
+        return "Array com tamanho incorreto.";
     }
     for (let pos1 = 0; pos1 < array.length; pos1++) {
         let count3 = 0;
