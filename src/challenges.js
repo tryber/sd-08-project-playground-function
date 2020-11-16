@@ -184,9 +184,20 @@ function triangleCheck(ladoA, ladoB, ladoC) {
 }
 
 // Desafio 13
-function hydrate() {
-    // seu código aqui
+function hydrate(string) {
+    let cups = string.replace(/\D/g, '');
+    let countW = 0;
+
+    for (let pos = 0; index < string.length; pos++) {
+        countW += Number(cups[pos]);
+    }
+    if (countW === 1) {
+        return `${countW} copo de água`;
+    } else {
+        return `${countW} copos de água`;
+    }
 }
+
 
 
 module.exports = {
