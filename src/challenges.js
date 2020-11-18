@@ -157,11 +157,14 @@ function generatePhoneNumber(array) {
   
   return phoneNumber
 }
-//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 0, 0, 0]))
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) {
+  if((a < (b + c)) && (a > (Math.abs(b - c)))){
+    return true
+  }else {
+    return false
+  }
 }
 
 // Desafio 13
