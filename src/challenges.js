@@ -147,7 +147,7 @@ function generatePhoneNumber(array) {
     array.forEach(function (i) { //https://www.codegrepper.com/code-examples/javascript/count+duplicates+array+js
       counts[i] = (counts[i] || 0) + 1;
     });
-    for(i = 0; i < array.length; i += 1){
+    for(let i = 0; i < array.length; i += 1){
       if(array[i] < 0 || array[i] > 9 || counts[i] >= 3){
         phoneNumber = 'não é possível gerar um número de telefone com esses valores'
       }
@@ -168,8 +168,13 @@ function triangleCheck(a, b, c) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) { //https://stackoverflow.com/questions/53897373/js-how-to-got-the-sum-of-numbers-from-a-string
+  var sum = 0;
+  var numbers = str.match(/\d+/g).map(Number);
+  for (var i = 0; i < numbers.length; i++) {
+      sum += numbers[i]
+  }
+  return `${sum} copos de água`;
 }
 
 
