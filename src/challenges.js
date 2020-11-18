@@ -142,14 +142,14 @@ function generatePhoneNumber(array) {
     let phoneNumber = '(xx) xxxxx-xxxx'
     let counts = []
   if(array.length !== 11){
-    console.log("Array com tamanho incorreto.")
+    phoneNumber = "Array com tamanho incorreto."
   }else {
     array.forEach(function (i) { //https://www.codegrepper.com/code-examples/javascript/count+duplicates+array+js
       counts[i] = (counts[i] || 0) + 1;
     });
     for(i = 0; i < array.length; i += 1){
       if(array[i] < 0 || array[i] > 9 || counts[i] >= 3){
-        console.log('não é possível gerar um número de telefone com esses valores')
+        phoneNumber = 'não é possível gerar um número de telefone com esses valores'
       }
       phoneNumber = phoneNumber.replace('x', array[i]) //https://medium.com/devsoonote/codewars-05-create-phone-number-f94d7f594c90
     }
@@ -157,7 +157,7 @@ function generatePhoneNumber(array) {
   
   return phoneNumber
 }
-//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 0, 0, 0]))
 
 // Desafio 12
 function triangleCheck() {
