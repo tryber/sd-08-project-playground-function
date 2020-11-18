@@ -174,9 +174,11 @@ function hydrate(str) { //https://stackoverflow.com/questions/53897373/js-how-to
   for (var i = 0; i < numbers.length; i++) {
       sum += numbers[i]
   }
+  if(sum === 1){
+    return '1 copo de água'
+  }
   return `${sum} copos de água`;
 }
-
 
 module.exports = {
   calcArea,
