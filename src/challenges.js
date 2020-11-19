@@ -130,9 +130,22 @@ function decode(myString) {
 }
 
 // Desafio 10
-function techList() {
+function techList(array, name) {
   // seu código aqui
+  let arrayDeTechs = [];
+  for(let indice = 0; indice < array.length; indice += 1){
+    arrayDeTechs.push(
+      {
+        tech: array[indice],
+        name: name
+      }
+    );
+
+  }
+  return arrayDeTechs;
 }
+
+techList(['Teste','teste2', 'teste3'], 'jorge')
 
 // Desafio 11
 function generatePhoneNumber() {
