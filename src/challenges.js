@@ -16,8 +16,8 @@ function splitSentence(string) {
 }
 // Desafio 4
 function concatName(array) {
-    let first = [...array].shift(`);
-    let last = [...array].pop(`);
+    let first = [...array].shift();
+    let last = [...array].pop();
     return `${last}, ${first}`;
     }
 
