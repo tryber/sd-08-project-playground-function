@@ -16,10 +16,10 @@ function splitSentence(string) {
 }
 // Desafio 4
 function concatName(array) {
-    let first = [...array].shift();
-    let last = [...array].pop();
-    return.split() `${last} ${first}`;
-    }
+  let first = [...array].shift();
+  let last = [...array].pop();
+  return `${last} ${first}`;
+}
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -70,24 +70,22 @@ function catAndMouse(mouse, positionCat1, positionCat2) {
 function fizzBuzz(array) {
   let valorResult = [];
 
-  for(let index in array){
-    if(array[index] % 3 == 0 && array[index] % 5 == 0){
+  for (let index in array) {
+    if (array[index] % 3 == 0 && array[index] % 5 == 0) {
       valorResult.push("fizzBuzz");
-    }else if(array[index] % 3 == 0){
+    } else if (array[index] % 3 == 0) {
       valorResult.push("fizz");
-    }else if(array[index] % 5 == 0){
+    } else if (array[index] % 5 == 0) {
       valorResult.push("buzz");
-    }else{
+    } else {
       valorResult.push("bug!");
     }
   }
-    return valorResult;
-  }
+  return valorResult;
+}
 
 // Desafio 9
-function encode(string) {
-
-}
+function encode(string) {}
 
 function decode() {
   // seu código aqui
@@ -104,9 +102,7 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-
-}
+function triangleCheck() {}
 // Desafio 13
 function hydrate() {
   // seu código aqui
