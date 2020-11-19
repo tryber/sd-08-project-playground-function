@@ -17,11 +17,11 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let result = [];
-  for(let index in array){
-    if(result[index] == array.length -1 && result[index] == array[0]);
-  }
-}
+    let first = [...array].shift();
+    let last = [...array].pop();
+    result = `${last} ${first}`;
+    result.split(' ')
+    }
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -87,9 +87,10 @@ function fizzBuzz(array) {
   }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+
 }
+
 function decode() {
   // seu código aqui
 }
@@ -106,9 +107,8 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
-}
 
+}
 // Desafio 13
 function hydrate() {
   // seu código aqui
