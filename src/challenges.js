@@ -49,16 +49,16 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse(mouse,cat1, cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distanciaCat1 = Math.abs(cat1 - mouse);
   let distanciaCat2 = Math.abs(cat2 - mouse);
 
-  if(distanciaCat1 > distanciaCat2){
+  if (distanciaCat1 > distanciaCat2) {
     resposta = "cat2";
-  } else if(distanciaCat1 === distanciaCat2){
-    resposta = "os gatos trombam e o rato foge"
-  } else{
+  } else if (distanciaCat1 === distanciaCat2) {
+    resposta = "os gatos trombam e o rato foge";
+  } else {
     resposta = "cat1";
   }
   return resposta;
@@ -69,7 +69,7 @@ function fizzBuzz(entradaDoUsuario) {
   // seu código aqui
   var meuArray = [];
 
-  for (let i = 0; i < entradaDoUsuario.length; i++ ) {
+  for (let i = 0; i < entradaDoUsuario.length; i++) {
     if (entradaDoUsuario[i] % 3 == 0 && entradaDoUsuario[i] % 5 == 0) {
       meuArray.push("fizzBuzz");
     } else if (entradaDoUsuario[i] % 3 == 0) {
@@ -100,13 +100,12 @@ function encode(myString) {
       meuArray += "4";
     } else if (myString[i] === "u") {
       meuArray += "5";
-    } else{
+    } else {
       meuArray += myString[i];
     }
   }
-  return meuArray; 
+  return meuArray;
 }
-
 
 function decode(myString) {
   let meuArray = "";
@@ -122,36 +121,61 @@ function decode(myString) {
       meuArray += "o";
     } else if (myString[i] == "5") {
       meuArray += "u";
-    } else{
+    } else {
       meuArray += myString[i];
     }
   }
-  return meuArray; 
+  return meuArray;
 }
 
 // Desafio 10
 function techList(array, name) {
   // seu código aqui
   let arrayDeTechs = [];
-  for(let indice = 0; indice < array.length; indice += 1){
-    arrayDeTechs.push(
-      {
-        tech: array[indice],
-        name: name
-      }
-    );
-
+  for (let indice = 0; indice < array.length; indice += 1) {
+    arrayDeTechs.push({
+      tech: array[indice],
+      name: name,
+    });
   }
   return arrayDeTechs;
 }
 
-techList(['Teste','teste2', 'teste3'], 'jorge')
-
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numero) {
   // seu código aqui
+  var numeroFormatado = [];
+
+  if (numero[indice] >= 0 && numero[indice] <= 9 && numero.length == 11) {
+    numeroFormatado = [
+      "(",
+      numero[0],
+      numero[1],
+      ")",
+      " ",
+      numero[2],
+      numero[3],
+      numero[4],
+      numero[5],
+      numero[6],
+      "-",
+      numero[7],
+      numero[8],
+      numero[9],
+      numero[10],
+    ];
+    console.log(numeroFormatado.join(""));
+  } else {
+    console.log("Array com tamanho incorreto.");
 }
 
+  for (let indice = 0; indice < numero.length; indice += 1) {
+   
+  }
+  // return numeroFormatado
+}
+
+generatePhoneNumber([3, 2, 3, 4, 15, 6, 7, 4, 9, 0, 1]);
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
