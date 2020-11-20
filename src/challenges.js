@@ -20,7 +20,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(nome) {
-  
+
   let resultado = nome[nome.length - 1] + ", " + nome[0];
     return resultado;
 }
@@ -51,8 +51,14 @@ function highestCount(valores) {
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return "cat1";
+  } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
@@ -104,7 +110,7 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  
+
     if((lineA < lineB + lineC &&  lineA > Math.abs(lineB - lineC)) && (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) && lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
         return true;
     } else {
@@ -113,9 +119,12 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebidas) {
+  for(let index in bebidas){
+    parseInt()
+  }
 }
+console.log(hydrate("1 cerveja"));
 
 
 module.exports = {
