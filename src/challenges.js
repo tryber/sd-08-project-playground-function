@@ -138,6 +138,8 @@ function techList(lista, name) {
     return "Vazio!";
   }
   //------Código------
+  const listaOrdenada = lista.sort();
+
   for (let indice = 0; indice < lista.length; indice += 1) {
     minhaLista.push({
       tech: lista[indice],

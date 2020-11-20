@@ -1,12 +1,16 @@
+console.clear();
+
 function techList(lista, name) {
   console.log("1");
-  let minhaLista = [];
+  const minhaLista = [];
   console.log(minhaLista);
   //-------Condições-----
   if (lista == 0) {
     return "Vazio!";
   }
   //------Código------
+  const listaOrdenada = lista.sort();
+  console.log(listaOrdenada);
   for (let indice = 0; indice < lista.length; indice += 1) {
     minhaLista.push({
       tech: lista[indice],
@@ -17,7 +21,13 @@ function techList(lista, name) {
   //------Saída------
   return minhaLista;
 }
-//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Jorge"));
+
+// let ar = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+// console.log(ar);
+// console.log(ar.sort());
+// console.log(techList([], "Jorge"));
+// console.log(techList(["1"], "Jorge"));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Jorge"));
 
 /**
  *
