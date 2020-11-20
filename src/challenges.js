@@ -126,7 +126,11 @@ function hydrate(bebidas) {
       numeroDeCopos += parseInt(bebidas[index]);
     }
   }
-  return numeroDeCopos + " copos de água";
+    if (numeroDeCopos === 1) {
+      return numeroDeCopos + " copo de água";
+    } else {
+      return numeroDeCopos + " copos de água";
+    }
 }
 
 module.exports = {
