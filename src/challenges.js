@@ -125,6 +125,10 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
+  if(array.length == 0) {
+    return 'Vazio!';
+  }
+  array.sort();
   let techName = [];
   for(let index = 0; index < array.length; index += 1) {
     let list = {
@@ -135,6 +139,8 @@ function techList(array, name) {
   }
   return techName;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
+"Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
