@@ -1,54 +1,138 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(n1,n2) {
+  if(n1 && n2) {
+    return true
+  } else {
+    return false
+  }
 }
-
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let calculo = (base * height) / 2;
+  return calculo;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  frase = frase.split(/\s+/);
+  return frase;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nome) {
+
+  let resultado = nome[nome.length - 1] + ", " + nome[0];
+    return resultado;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let resultado = wins * 3 + ties *1;
+  return resultado;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(valores) {
+  let maiorNumero = 0;
+  let cont = [];
+  for(let i = 0; i < valores.length; i += 1){
+    if(valores[i] > maiorNumero) {
+      maiorNumero = valores[i];
+    }
+  }
+  for(let index in valores) {
+    if(valores[index] == maiorNumero) {
+        cont.push(valores[index]);
+    }
+
+  }
+  return cont.length;
 }
 
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return "cat1";
+  } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let resultado = [];
+  for(let i = 0; i < numeros.length; i += 1) {
+    if(numeros[i] % 3 == 0 && numeros[i]% 5 == 0) {
+      resultado.push("fizzBuzz");
+    } else if (numeros[i] % 3 == 0) {
+      resultado.push("fizz");
+    } else if (numeros[i] % 5 == 0) {
+      resultado.push("buzz");
+    } else {
+      resultado.push("bug!");
+    }
+  }
+    return resultado;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let novaString = '';
+  for (let index in string) {
+    if (string[index] == "a") {
+      novaString += "1";
+    } else if (string[index] == "e") {
+      novaString += "2";
+    } else if (string[index] == "i") {
+      novaString += "3";
+    } else if (string[index] == "o") {
+      novaString += "4";
+    } else if (string[index] == "u") {
+      novaString += "5";
+    } else {
+      novaString += string[index];
+    }
+  }
+  return novaString;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let novaString = '';
+  for (let index in string) {
+    if (string[index] == "1") {
+      novaString += "a";
+    } else if (string[index] == "2") {
+      novaString += "e";
+    } else if (string[index] == "3") {
+      novaString += "i";
+    } else if (string[index] == "4") {
+      novaString += "o";
+    } else if (string[index] == "5") {
+      novaString += "u";
+    } else {
+      novaString += string[index];
+    }
+  }
+  return novaString;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+
+    if(tech.length === 0) {
+      return "Vazio!";
+}
+    tech.sort();
+    let lista = [];
+    for(let index in tech) {
+      lista.push ({
+        tech: tech[index],
+        name: name,
+      });
+    }
+    return lista;
 }
 
 // Desafio 11
@@ -57,15 +141,29 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+function triangleCheck(lineA, lineB, lineC) {
+
+    if((lineA < lineB + lineC &&  lineA > Math.abs(lineB - lineC)) && (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) && lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+        return true;
+    } else {
+      return false;
+    }
+  }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebidas) {
+  let numeroDeCopos = 0;
+  for(let index in bebidas) {
+    if (parseInt(bebidas[index])) {
+      numeroDeCopos += parseInt(bebidas[index]);
+    }
+  }
+    if (numeroDeCopos === 1) {
+      return numeroDeCopos + " copo de água";
+    } else {
+      return numeroDeCopos + " copos de água";
+    }
 }
-
 
 module.exports = {
   calcArea,
