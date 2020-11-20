@@ -167,15 +167,13 @@ function generatePhoneNumber(numero) {
     console.log(numeroFormatado.join(""));
   } else {
     console.log("Array com tamanho incorreto.");
-}
-
-  for (let indice = 0; indice < numero.length; indice += 1) {
-   
   }
-  // return numeroFormatado
 }
+//   for (let indice = 0; indice < numero.length; indice += 1) {}
+//   // return numeroFormatado
+// }
 
-generatePhoneNumber([3, 2, 3, 4, 15, 6, 7, 4, 9, 0, 1]);
+// generatePhoneNumber([3, 2, 3, 4, 15, 6, 7, 4, 9, 0, 1]);
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
