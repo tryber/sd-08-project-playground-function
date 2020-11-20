@@ -139,8 +139,6 @@ function techList(array, name) {
   }
   return techName;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
-"Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -148,8 +146,10 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {}
-// Desafio 13
+function triangleCheck(lineA, lineB, lineC) {
+  return (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC) && lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) && lineC < lineA + lineB && lineC > Math.abs(lineA - lineB));
+}
+
 function hydrate() {
   // seu código aqui
 }
