@@ -120,12 +120,14 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(bebidas) {
-  for(let index in bebidas){
-    parseInt()
+  let numeroDeCopos = 0;
+  for(let index in bebidas) {
+    if (parseInt(bebidas[index])) {
+      numeroDeCopos += parseInt(bebidas[index]);
+    }
   }
+  return numeroDeCopos + " copos de água";
 }
-console.log(hydrate("1 cerveja"));
-
 
 module.exports = {
   calcArea,
