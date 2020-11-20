@@ -122,7 +122,7 @@ function decode(string) {
   string = string.join('');
   return string;
 }
-console.log(decode('h3 th2r2!'));
+
 // Desafio 10
 function techList(array, name) {
   let techName = [];
