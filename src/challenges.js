@@ -79,11 +79,43 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let novaString = '';
+  for (let index in string) {
+    if (string[index] == "a") {
+      novaString += "1";
+    } else if (string[index] == "e") {
+      novaString += "2";
+    } else if (string[index] == "i") {
+      novaString += "3";
+    } else if (string[index] == "o") {
+      novaString += "4";
+    } else if (string[index] == "u") {
+      novaString += "5";
+    } else {
+      novaString += string[index];
+    }
+  }
+  return novaString;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let novaString = '';
+  for (let index in string) {
+    if (string[index] == "1") {
+      novaString += "a";
+    } else if (string[index] == "2") {
+      novaString += "e";
+    } else if (string[index] == "3") {
+      novaString += "i";
+    } else if (string[index] == "4") {
+      novaString += "o";
+    } else if (string[index] == "5") {
+      novaString += "u";
+    } else {
+      novaString += string[index];
+    }
+  }
+  return novaString;
 }
 
 // Desafio 10
