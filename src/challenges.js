@@ -124,8 +124,16 @@ function decode(string) {
 }
 console.log(decode('h3 th2r2!'));
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let techName = [];
+  for(let index = 0; index < array.length; index += 1) {
+    let list = {
+      tech: array[index],
+      name: name,
+    }
+    techName.push(list);
+  }
+  return techName;
 }
 
 // Desafio 11
