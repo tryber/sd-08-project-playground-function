@@ -129,16 +129,24 @@ function decode(myString) {
 }
 
 // Desafio 10
-function techList(array, name) {
-  // seu código aqui
-  let arrayDeTechs = [];
-  for (let indice = 0; indice < array.length; indice += 1) {
-    arrayDeTechs.push({
-      tech: array[indice],
+// seu código aqui
+function techList(lista, name) {
+  let minhaLista = [];
+
+  //-------Condições-----
+  if (lista == 0) {
+    return "Vazio!";
+  }
+  //------Código------
+  for (let indice = 0; indice < lista.length; indice += 1) {
+    minhaLista.push({
+      tech: lista[indice],
       name: name,
     });
   }
-  return arrayDeTechs;
+
+  //------Saída------
+  return minhaLista;
 }
 
 // Desafio 11
