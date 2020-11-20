@@ -7,47 +7,43 @@ function compareTrue(comprar, pagar) {
 }
 
 // Desafio 2
-// let base = 2;
-// let height = 10;
+
 function calcArea(base, height) {
   // seu código aqui
   return (base * height) / 2;
 }
-// console.log(calcArea(base, height));
+
 
 // Desafio 3
-// let frase = 'go Trybe'
+
 function splitSentence(frase) {
   // seu código aqui
   return frase.split(' ')
 }
-// console.log(splitSentence(frase));
 
 // Desafio 4
-// let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+
 function concatName(array) {
   // seu código aqui
   for (let i = 0; i < array.length -1; i += 1) {
     return (array[array.length-1] + ', '  + array[0])
   }
 }
-// console.log(concatName(array));
 
 // Desafio 5
-// let wins = 12;
-// let ties = 9;
+
 function footballPoints(wins, ties) {
   // seu código aqui
   let total = (wins * 3 + ties * 1);
   return total
 }
-// console.log(`O total de pontos conquistados é ${footballPoints(wins,ties)}.`);
 
-// Desafio 6
-// let valores = [9, 1, 2, 3, 9, 5, 7, 13, 13, 50, 50, 50, 100];
+// Desafio 
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Usando_apply_e_fun%C3%A7%C3%B5es_embutidas
+
 function highestCount(valores) {
   // seu código aqui
-  let highest = Math.max.apply(null, valores);  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Usando_apply_e_fun%C3%A7%C3%B5es_embutidas
+  let highest = Math.max.apply(null, valores);
   let repeticao = 0;
   for (let i = 0; i < valores.length; i += 1) {
     if (valores[i] == highest) {
@@ -57,7 +53,6 @@ function highestCount(valores) {
   return repeticao
 }
 
-// console.log(highestCount(valores))
 
 // Desafio 7
 
@@ -74,10 +69,9 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2'
   }
 }
-// console.log(catAndMouse(1,0,2))
 
 // Desafio 8
-// let parametro = [2, 15, 7, 9, 45]
+
 function fizzBuzz(parametro) {
   // seu código aqui
   let array = [];
@@ -95,10 +89,9 @@ function fizzBuzz(parametro) {
   return array
 }
 
-// console.log(fizzBuzz(parametro));
 
 // Desafio 9
-// let saudacao = 'hi there!"';
+
 
 function encode(saudacao) {
   // seu código aqui
@@ -121,7 +114,6 @@ function encode(saudacao) {
 }
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of
  //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined
-// console.log(encode(saudacao));
 
 function decode(saudacao1) {
   // seu código aqui
@@ -141,8 +133,7 @@ function decode(saudacao1) {
     }
   }
   return descodificado
-}
-// console.log(decode('h3 th2r2!'))
+
 // Desafio 10
 function techList(tech, name) {
   // seu código aqui
