@@ -1,4 +1,12 @@
-function triangleCheck(lineA, lineB, lineC) {
-  return (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC) && lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) && lineC < lineA + lineB && lineC > Math.abs(lineA - lineB));
+function hydrate(string) {
+  let sum = 0;
+  string = string.split('');
+  for(let index = 0; index < string.length; index += 1) {
+    if(Number.isInteger(parseInt(string[index]))) {
+      sum += +string[index];
+    }
+  }
+
+  return `${sum} copos de água`;
 }
-console.log(triangleCheck(10, 14, 8000));
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
