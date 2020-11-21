@@ -158,7 +158,7 @@ function hydrate(string) {
       sum += +string[index];
     }
   }
-  return `${sum} copos de água`;
+return `${sum} copos de água`;
 }
 
 module.exports = {

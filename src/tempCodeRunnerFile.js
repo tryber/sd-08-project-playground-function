@@ -6,7 +6,6 @@ function hydrate(string) {
       sum += +string[index];
     }
   }
-
-  return `${sum} copos de água`;
+return `${sum} copos de água`;
 }
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+console.log(hydrate("1 cachaça, 9 cervejas e 1 copo de vinho"));
