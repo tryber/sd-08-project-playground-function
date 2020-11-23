@@ -155,7 +155,7 @@ function techList(lista, name) {
 function generatePhoneNumber(numero) {
   // seu código aqui
   if (numero.length > 11 || numero.length < 11) {
-    console.log("Array com tamanho incorreto.");
+    return "Array com tamanho incorreto.";
   } else {
     //-------------------------------------
     var repete = 0;
@@ -206,7 +206,6 @@ function generatePhoneNumber(numero) {
       oito,
       nove,
     ];
-
     for (let index = 0; index < meusNumeros.length; index += 1) {
       if (meusNumeros[index] > 2) {
         repete = 1;
@@ -231,10 +230,10 @@ function generatePhoneNumber(numero) {
       numero[9],
       numero[10],
     ];
-    console.log(numeroFormatado.join(""));
 
     //------------------
   }
+  return numeroFormatado.join("");
 }
 // Desafio 12
 function triangleCheck() {
