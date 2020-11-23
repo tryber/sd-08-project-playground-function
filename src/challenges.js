@@ -154,86 +154,87 @@ function techList(lista, name) {
 // Desafio 11
 function generatePhoneNumber(numero) {
   // seu código aqui
-  if (numero.length > 11 || numero.length < 11) {
-    return "Array com tamanho incorreto.";
-  } else {
-    //-------------------------------------
-    var repete = 0;
-    var um = 0;
-    var dois = 0;
-    var tres = 0;
-    var quatro = 0;
-    var cinco = 0;
-    var seis = 0;
-    var sete = 0;
-    var oito = 0;
-    var nove = 0;
-    var zero = 0;
 
-    for (let i = 0; i < numero.length; i += 1) {
-      if (numero[i] === 0) {
-        zero += 1;
-      } else if (numero[i] === 1) {
-        um += 1;
-      } else if (numero[i] === 2) {
-        dois += 1;
-      } else if (numero[i] === 3) {
-        tres += 1;
-      } else if (numero[i] === 4) {
-        quatro += 1;
-      } else if (numero[i] === 5) {
-        cinco += 1;
-      } else if (numero[i] === 6) {
-        seis += 1;
-      } else if (numero[i] === 7) {
-        sete += 1;
-      } else if (numero[i] === 8) {
-        oito += 1;
-      } else if (numero[i] === 9) {
-        nove += 1;
-      }
+  var repete = 0;
+  var um = 0;
+  var dois = 0;
+  var tres = 0;
+  var quatro = 0;
+  var cinco = 0;
+  var seis = 0;
+  var sete = 0;
+  var oito = 0;
+  var nove = 0;
+  var zero = 0;
+
+  for (let i = 0; i < numero.length; i += 1) {
+    if (numero[i] === 0) {
+      zero += 1;
+    } else if (numero[i] === 1) {
+      um += 1;
+    } else if (numero[i] === 2) {
+      dois += 1;
+    } else if (numero[i] === 3) {
+      tres += 1;
+    } else if (numero[i] === 4) {
+      quatro += 1;
+    } else if (numero[i] === 5) {
+      cinco += 1;
+    } else if (numero[i] === 6) {
+      seis += 1;
+    } else if (numero[i] === 7) {
+      sete += 1;
+    } else if (numero[i] === 8) {
+      oito += 1;
+    } else if (numero[i] === 9) {
+      nove += 1;
     }
-
-    let meusNumeros = [
-      zero,
-      um,
-      dois,
-      tres,
-      quatro,
-      cinco,
-      seis,
-      sete,
-      oito,
-      nove,
-    ];
-    for (let index = 0; index < meusNumeros.length; index += 1) {
-      if (meusNumeros[index] > 2) {
-        repete = 1;
-      }
-    }
-    var numeroFormatado = [];
-
-    numeroFormatado = [
-      "(",
-      numero[0],
-      numero[1],
-      ")",
-      " ",
-      numero[2],
-      numero[3],
-      numero[4],
-      numero[5],
-      numero[6],
-      "-",
-      numero[7],
-      numero[8],
-      numero[9],
-      numero[10],
-    ];
-
-    //------------------
   }
-  return numeroFormatado.join("");
+
+  let meusNumeros = [
+    zero,
+    um,
+    dois,
+    tres,
+    quatro,
+    cinco,
+    seis,
+    sete,
+    oito,
+    nove,
+  ];
+  for (let index = 0; index < meusNumeros.length; index += 1) {
+    if (meusNumeros[index] > 2) {
+      repete = 1;
+    }
+  }
+  var numeroFormatado = [];
+
+  numeroFormatado = [
+    "(",
+    numero[0],
+    numero[1],
+    ")",
+    " ",
+    numero[2],
+    numero[3],
+    numero[4],
+    numero[5],
+    numero[6],
+    "-",
+    numero[7],
+    numero[8],
+    numero[9],
+    numero[10],
+  ];
+
+  for (let i = 0; i < numero.length; i += 1) {
+    if (numero[i] < 0 || numero[i] > 9 || repete === 1) {
+      return "não é possível gerar um número de telefone com esses valores";
+    } else {
+      return numeroFormatado.join("");
+    }
+  }
 }
 // Desafio 12
 function triangleCheck() {
