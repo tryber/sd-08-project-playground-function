@@ -154,9 +154,66 @@ function techList(lista, name) {
 // Desafio 11
 function generatePhoneNumber(numero) {
   // seu código aqui
-  var numeroFormatado = [];
+  if (numero.length > 11 || numero.length < 11) {
+    console.log("Array com tamanho incorreto.");
+  } else {
+    //-------------------------------------
+    var repete = 0;
+    var um = 0;
+    var dois = 0;
+    var tres = 0;
+    var quatro = 0;
+    var cinco = 0;
+    var seis = 0;
+    var sete = 0;
+    var oito = 0;
+    var nove = 0;
+    var zero = 0;
 
-  if (numero[indice] >= 0 && numero[indice] <= 9 && numero.length == 11) {
+    for (let i = 0; i < numero.length; i += 1) {
+      if (numero[i] === 0) {
+        zero += 1;
+      } else if (numero[i] === 1) {
+        um += 1;
+      } else if (numero[i] === 2) {
+        dois += 1;
+      } else if (numero[i] === 3) {
+        tres += 1;
+      } else if (numero[i] === 4) {
+        quatro += 1;
+      } else if (numero[i] === 5) {
+        cinco += 1;
+      } else if (numero[i] === 6) {
+        seis += 1;
+      } else if (numero[i] === 7) {
+        sete += 1;
+      } else if (numero[i] === 8) {
+        oito += 1;
+      } else if (numero[i] === 9) {
+        nove += 1;
+      }
+    }
+
+    let meusNumeros = [
+      zero,
+      um,
+      dois,
+      tres,
+      quatro,
+      cinco,
+      seis,
+      sete,
+      oito,
+      nove,
+    ];
+    console.log(meusNumeros);
+    for (let index = 0; index < meusNumeros.length; index += 1) {
+      if (meusNumeros[index] > 2) {
+        repete = 1;
+      }
+    }
+    var numeroFormatado = [];
+
     numeroFormatado = [
       "(",
       numero[0],
@@ -175,15 +232,11 @@ function generatePhoneNumber(numero) {
       numero[10],
     ];
     console.log(numeroFormatado.join(""));
-  } else {
-    console.log("Array com tamanho incorreto.");
+
+    console.log(repete);
+    //------------------
   }
 }
-//   for (let indice = 0; indice < numero.length; indice += 1) {}
-//   // return numeroFormatado
-// }
-
-// generatePhoneNumber([3, 2, 3, 4, 15, 6, 7, 4, 9, 0, 1]);
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
