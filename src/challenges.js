@@ -206,7 +206,7 @@ function generatePhoneNumber(numero) {
       oito,
       nove,
     ];
-    console.log(meusNumeros);
+
     for (let index = 0; index < meusNumeros.length; index += 1) {
       if (meusNumeros[index] > 2) {
         repete = 1;
@@ -233,7 +233,6 @@ function generatePhoneNumber(numero) {
     ];
     console.log(numeroFormatado.join(""));
 
-    console.log(repete);
     //------------------
   }
 }
