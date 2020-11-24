@@ -201,8 +201,13 @@ function generatePhoneNumber(numero) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(ladoA, ladoB, ladoC) {
   // seu código aqui
+  if (ladoA < ladoB + ladoC && ladoA > Math.abs(ladoB - ladoC)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
