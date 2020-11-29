@@ -106,7 +106,7 @@ function decode(phrase) {
   let vowels = ['a', 'e', 'i' , 'o', 'u']
   output.map((element, index) => {
     for (let cases in vowels) {
-      if (parseInt(element) === (parseInt(cases) + 1)) {
+      if (parseInt(element) === parseInt(cases) + 1) {
         output[index] = vowels[cases];
       }
     }
@@ -115,9 +115,16 @@ function decode(phrase) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(techArray, name) {
+  let sortedTech = techArray.sort();
+  let output = sortedTech.map((element) => {
+    let item = {};
+    item.name = name;
+    item.tech = element;
+    return item;
+  });
+  return output;
+ }
 
 // Desafio 11
 function generatePhoneNumber() {
