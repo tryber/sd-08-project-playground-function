@@ -167,10 +167,16 @@ function generatePhoneNumber(phoneArray) {
   return output;
 }
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function checkRule([line1, line2, line3]) {
+  return (
+    Math.abs(line2 - line3) < line1
+    && line1 < (line2 + line3));
 }
-
+function triangleCheck(lineA, lineB, lineC) {
+  let combinations = [[lineB, lineC, lineA], [lineA, lineC, lineB], [lineB, lineA, lineC]];
+  let output = combinations.every((combination) => checkRule(combination));
+  return output;
+}
 // Desafio 13
 function hydrate() {
   // seu código aqui
