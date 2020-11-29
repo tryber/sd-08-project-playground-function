@@ -135,19 +135,37 @@ function techList(techArray, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(phoneArray) {
-  let output;
-  if (phoneArray.length === 11) {
-    let telefone = phoneArray.join('');
-    let pattern = /(\d{2})(\d{5})(\d{4})/g;
-    let result = pattern.exec(telefone);
-    output = `(${result[1]}) ${result[2]}-${result[3]}`;
-  } else {
-    output = 'Array com tamanho incorreto';
-  }
+function validUnrepeatedDigits(phoneArray) {
+  let output = phoneArray.every((digit, _index, phoneData) => {
+    let acc = 0;
+    phoneData.forEach((eachDigit) => {
+      if (digit === eachDigit) acc += 1;
+    });
+    return acc < 3;
+  });
+  return output;
+}
+function validDigits(phoneArray) {
+  let output = phoneArray.every(digit => digit >= 0 && digit <= 9);
+  if (output) output = validUnrepeatedDigits(phoneArray);
   return output;
 }
 
+function generatePhoneNumber(phoneArray) {
+  let output;
+  if (phoneArray.length === 11) {
+    output = 'não é possível gerar um número de telefone com esses valores';
+    if (validDigits(phoneArray)) {
+      let telefone = phoneArray.join('');
+      let pattern = /(\d{2})(\d{5})(\d{4})/g;
+      let result = pattern.exec(telefone);
+      output = `(${result[1]}) ${result[2]}-${result[3]}`;
+    }
+  } else {
+    output = 'Array com tamanho incorreto.';
+  }
+  return output;
+}
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
