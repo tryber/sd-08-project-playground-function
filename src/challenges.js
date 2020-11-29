@@ -153,7 +153,9 @@ function validDigits(phoneArray) {
 
 function generatePhoneNumber(phoneArray) {
   let output;
-  if (phoneArray.length === 11) {
+  if (phoneArray.length !== 11) {
+    output = 'Array com tamanho incorreto.';
+  } else {
     output = 'não é possível gerar um número de telefone com esses valores';
     if (validDigits(phoneArray)) {
       let telefone = phoneArray.join('');
@@ -161,8 +163,6 @@ function generatePhoneNumber(phoneArray) {
       let result = pattern.exec(telefone);
       output = `(${result[1]}) ${result[2]}-${result[3]}`;
     }
-  } else {
-    output = 'Array com tamanho incorreto.';
   }
   return output;
 }
