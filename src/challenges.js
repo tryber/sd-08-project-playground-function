@@ -116,15 +116,20 @@ function decode(phrase) {
 
 // Desafio 10
 function techList(techArray, name) {
-  let sortedTech = techArray.sort();
-  let output = sortedTech.map((element) => {
-    let item = {};
-    item.name = name;
-    item.tech = element;
-    return item;
-  });
+  let output;
+  if (techArray.length > 0) {
+    let sortedTech = techArray.sort();
+    output = sortedTech.map((element) => {
+      let item = {};
+      item.name = name;
+      item.tech = element;
+      return item;
+    });
+  } else {
+    output = 'Vazio!';
+  }
   return output;
- }
+}
 
 // Desafio 11
 function generatePhoneNumber() {
