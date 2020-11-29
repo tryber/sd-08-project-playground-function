@@ -174,7 +174,7 @@ function checkRule([line1, line2, line3]) {
 }
 function triangleCheck(lineA, lineB, lineC) {
   let combinations = [[lineB, lineC, lineA], [lineA, lineC, lineB], [lineB, lineA, lineC]];
-  let output = combinations.every((combination) => checkRule(combination));
+  let output = combinations.every(combination => checkRule(combination));
   return output;
 }
 // Desafio 13
