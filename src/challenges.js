@@ -178,9 +178,22 @@ function triangleCheck(lineA, lineB, lineC) {
   return output;
 }
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinkOrder) {
+  let water = 0;
+  let msg = '';
+  let numDrinksPattern = /\d/g;
+  let numbersDrinks = drinkOrder.match(numDrinksPattern);
+  numbersDrinks.forEach(numberDrink => {
+    water += parseInt(numberDrink, 10);
+  });
+  if (water === 1) {
+    msg = `${water} copo de água`;
+    return msg;
+  }
+  msg = `${water} copos de água`;
+  return msg;
 }
+console.log(hydrate('1 coxinha, açaí pu favo'))
 
 module.exports = {
   calcArea,
