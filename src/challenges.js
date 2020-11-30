@@ -183,7 +183,7 @@ function hydrate(drinkOrder) {
   let msg = '';
   let numDrinksPattern = /\d/g;
   let numbersDrinks = drinkOrder.match(numDrinksPattern);
-  numbersDrinks.forEach(numberDrink => {
+  numbersDrinks.forEach((numberDrink) => {
     water += parseInt(numberDrink, 10);
   });
   if (water === 1) {
@@ -193,7 +193,6 @@ function hydrate(drinkOrder) {
   msg = `${water} copos de água`;
   return msg;
 }
-console.log(hydrate('1 coxinha, açaí pu favo'))
 
 module.exports = {
   calcArea,
