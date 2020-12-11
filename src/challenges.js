@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if ( a === true && b === true) {
+  if (a === true && b === true) {
     return true;
   } else {
     return false;
@@ -18,7 +18,7 @@ console.log(calcArea(10, 8));
 function splitSentence(sentence) {
   return sentence.split(' ');
 }
-console.log(splitSentence("go Trybe"));
+console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(names) {
@@ -39,10 +39,8 @@ function highestCount(array) {
   for (let index in array) {
     if (array[index] > biggerNumber) {
       biggerNumber = array[index];
-    }
-  }
-  for (let index2 in array) {
-    if (biggerNumber === array[index2]) {
+    }  
+    if (biggerNumber === array[index]) {
       repeatedNumber += 1;
     }
   }
@@ -58,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (case2 < case1) {
     return 'cat2';
-  } else if (case1 == case2) {
+  } else if (case1 === case2) {
     return 'os gatos trombam e o rato foge';
   }
 }
