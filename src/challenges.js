@@ -52,18 +52,21 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 
 function fizzBuzz(numbers) {
+  let newArray = [];
   numbers.forEach(elem => {
     if (elem % 3 === 0 && elem % 5 !== 0) {
-      return 'fizz';
+      newArray.push('fizz');
     }
     if (elem % 5 === 0 && elem % 3 !== 0) {
-      return 'buzz';
+      newArray.push('buzz');
     }
     if (elem % 3 === 0 && elem % 5 === 0) {
-      return 'fizzBuzz';
+      newArray.push('fizzBuzz')
+    } else {
+      newArray.push('bug!')
     }
   });
-  return 'bug!';
+  return newArray;
 }
 // Desafio 9
 
