@@ -19,7 +19,8 @@ function splitSentence(texto) {
 
 // Desafio 4
 function concatName(nome) {
-
+  const concat = `${nome[nome.length-1]}, ${nome[0]}`;
+  return concat;
 }
 // Desafio 5
 
