@@ -36,7 +36,7 @@ function highestCount(numbers) {
     if (elem > highestNumber) {
       highestNumber = elem;
     }
-     if (elem === highestNumber) {
+    if (elem === highestNumber) {
      repeat = repeat + 1;
    }
   });
@@ -52,7 +52,18 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 
 function fizzBuzz(numbers) {
-
+  numbers.forEach(elem => {
+    if (elem % 3 === 0 && elem % 5 !== 0) {
+      return 'fizz';
+    }
+    if (elem % 5 === 0 && elem % 3 !== 0) {
+      return 'buzz';
+    }
+    if (elem % 3 === 0 && elem % 5 === 0) {
+      return 'fizzBuzz';
+    }
+  });
+  return 'bug!';
 }
 // Desafio 9
 
