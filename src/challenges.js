@@ -52,24 +52,16 @@ function catAndMouse(mouse, cat1, cat2) {
   let string1 = "cat1";
   let string2 = "cat2";
   let string3 = "os gatos trombam e o rato foge";
-
   let resultado = [];
-
-  
-
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     resultado = string1;
-
   } 
-  
   if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
     resultado = string2;
   }
-
   if (Math.abs(mouse - cat2) === Math.abs(mouse - cat1)) {
     resultado = string3;
   }
-
   return resultado;
 }
 
@@ -95,14 +87,15 @@ function fizzBuzz(numbers) {
 
 
 function encode(string) {
+
   string = string.replace(/a/g , 1);
   string = string.replace(/e/g , 2);
   string = string.replace(/i/g , 3);
   string = string.replace(/o/g , 4);
   string = string.replace(/u/g , 5);
+
+  return string;
 }
-
-
 
 function decode(string2) {
   string2 = string2.replace(/1/g, 'a');
@@ -110,6 +103,7 @@ function decode(string2) {
   string2 = string2.replace(/3/g , 'i');
   string2 = string2.replace(/4/g , 'o');
   string2 = string2.replace(/5/g , 'u');
+  return string2;
 }
 
 // Desafio 10
