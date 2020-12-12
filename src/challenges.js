@@ -29,10 +29,22 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-
 function highestCount(numbers) {
-
+  const result;
+  let highestNumber = 0;
+  let repeat = 0;
+  numbers.forEach(elem => {
+    if (elem > highestNumber) {
+      highestNumber = elem;
+    }
+    if (elem === highestNumber) {
+      repeat = repeat + 1;
+    }
+  });
+  return repeat;  
 }
+
+
 // Desafio 7
 
 function catAndMouse(mouse, cat1, cat2) {
