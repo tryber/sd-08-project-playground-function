@@ -31,9 +31,9 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-   let highestNumber = 0;
-   let repeat = 0;
-     numbers.forEach(elem => {
+  let highestNumber = 0;
+  let repeat = 0;
+  numbers.forEach(elem => {
     if (elem > highestNumber) {
       highestNumber = elem;
     }
@@ -43,15 +43,37 @@ function highestCount(numbers) {
   });
   return repeat;  
 }
+console.log(repeat)
 
 
 // Desafio 7
 
 function catAndMouse(mouse, cat1, cat2) {
+  let string1 = "cat1";
+  let string2 = "cat2";
+  let string3 = "os gatos trombam e o rato foge";
+
+  let resultado = [];
+
+  
+
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    resultado = string1;
+
+  } 
+  
+  if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
+    resultado = string2;
+  }
+
+  if (Math.abs(mouse - cat2) === Math.abs(mouse - cat1)) {
+    resultado = string3;
+  }
+
+  return resultado;
 }
 
 // Desafio 8
-
 function fizzBuzz(numbers) {
   let newArray = [];
   numbers.forEach(elem => {
@@ -73,13 +95,21 @@ function fizzBuzz(numbers) {
 
 
 function encode(string) {
-
+  string = string.replace(/a/g , 1);
+  string = string.replace(/e/g , 2);
+  string = string.replace(/i/g , 3);
+  string = string.replace(/o/g , 4);
+  string = string.replace(/u/g , 5);
 }
 
 
 
 function decode(string2) {
-
+  string2 = string2.replace(/1/g, 'a');
+  string2 = string2.replace(/2/g , 'e');
+  string2 = string2.replace(/3/g , 'i');
+  string2 = string2.replace(/4/g , 'o');
+  string2 = string2.replace(/5/g , 'u');
 }
 
 // Desafio 10
