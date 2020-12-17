@@ -47,26 +47,27 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(teste) {
-  let maior = 0;
-  let objeto = {};
+  // let maior = 0;
+  // let objeto = {};
 
-  for (let index = 0; index < teste.length; index += 1) {
-    if (objeto[teste[index]] === undefined) {
-      objeto[teste[index]] = 1;
-    } else {
-      objeto[teste[index]] += 1;
-    }
-  }
+  // for (let index = 0; index < teste.length; index += 1) {
+  //   if (objeto[teste[index]] === undefined) {
+  //     objeto[teste[index]] = 1;
+  //   } else {
+  //     objeto[teste[index]] += 1;
+  //   }
+  // }
 
-  for (let chave in objeto) {
-    if (chave > maior) {
-      maior = chave;
-    }
-  }
-  maior = objeto[maior];
-  return maior;
+  // for (let chave in objeto) {
+  //   if (chave > maior) {
+  //     maior = chave;
+  //   }
+  // }
+  // maior = objeto[maior];
+  // return maior;
+  const newArray = teste.sort((a, b) => b - a);
+  return newArray.filter((elem) => elem === newArray[0]).length;
 }
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
