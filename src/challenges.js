@@ -1,198 +1,119 @@
 // Desafio 1
-function compareTrue(boolean1, boolean2) {
-  if (boolean1 === true && boolean2 === true) {
-    return true;
-  }
-  return false;
-}
+const compareTrue = (boolean1, boolean2) => boolean1 && boolean2;
 
 // Desafio 2
-function calcArea(base, height) {
-  return (base * height) / 2;
-}
+const calcArea = (base, height) => (base * height) / 2;
 
 // Desafio 3
-function splitSentence(sentence) {
-  return sentence.split(' ');
-}
+const splitSentence = sentence => sentence.split(' ');
 
 // Desafio 4
-function concatName(array) {
-  return `${array[array.length - 1]}, ${array[0]}`;
-}
+const concatName = array => `${array[array.length - 1]}, ${array[0]}`;
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  return (wins * 3) + ties;
-}
+const footballPoints = (wins, ties) => (wins * 3) + ties;
 
 // Desafio 6
-function highestCount(array) {
-  let biggest = array[0];
-  let repeat = 0;
-  for (let number of array) {
-    if (number > biggest) {
-      biggest = number;
-    }
-  }
-  for (let index of array) {
-    if (biggest === index) {
-      repeat += 1;
-    }
-  }
-  return repeat;
-}
+const highestCount = array =>
+  array.sort((a, b) => b - a).filter((element, index, sortArr) => element === sortArr[0]).length;
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distCats = Math.abs(cat1 - mouse) - Math.abs(cat2 - mouse);
-  let distMouseCat1 = Math.abs(mouse - cat1);
-  let distMouseCat2 = Math.abs(mouse - cat2);
-  if (distCats === 0) {
-    return 'os gatos trombam e o rato foge';
-  }
-  if (distMouseCat1 < distMouseCat2) {
-    return 'cat1';
-  }
-  return 'cat2';
+  const distMouseCat1 = Math.abs(mouse - cat1);
+  const distMouseCat2 = Math.abs(mouse - cat2);
+  let getOrNot = 'os gatos trombam e o rato foge';
+  getOrNot = distMouseCat1 < distMouseCat2 ? 'cat1' : getOrNot;
+  getOrNot = distMouseCat1 > distMouseCat2 ? 'cat2' : getOrNot;
+  return getOrNot;
 }
 
 // Desafio 8
 function fizzBuzz(array) {
-  let fizzBuzzArr = [];
-  for (let index in array) {
-    if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
-      fizzBuzzArr[index] = 'fizzBuzz';
-    } else if (array[index] % 3 === 0) {
-      fizzBuzzArr[index] = 'fizz';
-    } else if (array[index] % 5 === 0) {
-      fizzBuzzArr[index] = 'buzz';
-    } else {
-      fizzBuzzArr[index] = 'bug!';
-    }
-  }
-  return fizzBuzzArr;
+  return array.map((num) => {
+    let a = 'bug!';
+    a = num % 3 === 0 ? 'fizz' : a;
+    a = num % 5 === 0 ? 'buzz' : a;
+    a = num % 3 === 0 && num % 5 === 0 ? 'fizzBuzz' : a;
+    return a;
+  });
 }
 
 // Desafio 9
-function encode(string) {
+const changeCharacters = (string, character) => {
   let phrase = '';
-  let vogals = {
+  for (let char of string) {
+    if (!character[char]) {
+      phrase += char;
+    } else {
+      phrase += character[char];
+    }
+  }
+  return phrase;
+};
+
+const encode = (string) => {
+  let character = {
     a: 1,
     e: 2,
     i: 3,
     o: 4,
     u: 5,
-  }
-  for (let letter of string) {
-    if (vogals[letter] === undefined) {
-      phrase += letter;
-    } else {
-      phrase += vogals[letter];
-    }
-  }
-  return phrase
-}
+  };
+  return changeCharacters(string, character);
+};
 
-function decode(string) {
-  let phrase = '';
-  let numbers = {
+const decode = (string) => {
+  let character = {
     1: 'a',
     2: 'e',
     3: 'i',
     4: 'o',
     5: 'u',
-  }
-  for (let character of string) {
-    if (numbers[character] === undefined) {
-      phrase += character;
-    } else {
-      phrase += numbers[character];
-    }
-  }
-  return phrase
-}
+  };
+  return changeCharacters(string, character);
+};
 
 // Desafio 10
-function techList(tech, name) {
-  if (tech.length === 0) {
-    return "Vazio!"
-  }
-  let orderedArr = tech.sort();
-  let techLearn = [];
-  for (let techName of orderedArr) {
-    techLearn.push({
-      tech: techName,
-      name: name,
-    });
-  }
-  return techLearn;
-}
+const techList = (tech, name) => {
+  if (!tech.length) return 'Vazio!';
+  return tech.sort().map(item => ({ tech: item, name }));
+};
 
 // Desafio 11
-function generatePhoneNumber(numbers) {
-  if (validation(numbers) != true) {
-    return validation(numbers);
-  }
-  return formatingPhoneNumber(numbers);
-}
+const validation = (numbers) => {
+  const counts = numbers.reduce((acc, number) => {
+    acc[number] = (acc[number] || 0) + 1;
+    return acc;
+  }, {});
+  const checkRepeated = !(Math.max(...Object.values(counts)) >= 3);
+  const checkOver9Under0 = !(numbers.filter(number => number > 9 || number < 0).length > 0);
+  return checkOver9Under0 && checkRepeated;
+};
 
-function validation(numbers) {
-  if (numbers.length != 11) {
-    return 'Array com tamanho incorreto.'
+const generatePhoneNumber = (numbers) => {
+  if (numbers.length !== 11) return 'Array com tamanho incorreto.';
+  if (!validation(numbers)) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
-  for (let values of numbers) {
-    let repeat = 0;
-    for (let index of numbers) {
-      if (index === values) {
-        repeat += 1;
-      }
-      if (index < 0 || index > 9 || repeat >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
-    }
-  }
-  return true;
-}
-
-function formatingPhoneNumber(numbers) {
-  let prefix = '';  
-  let ramal = '';
-  let final = '';
-  for (let num = 0; num < 2; num += 1) {
-    prefix += numbers[num];
-  }
-  for (let num = 2; num < 7; num += 1) {
-    ramal += numbers[num];
-  }
-  for (let num = 7; num < 11; num += 1) {
-    final += numbers[num];
-  }
-  return `(${prefix}) ${ramal}-${final}`;
-}
+  const [one, two, three, four, five, six, seven, eight, nine, ten, eleven] = numbers;
+  return `(${one}${two}) ${three}${four}${five}${six}${seven}-${eight}${nine}${ten}${eleven}`;
+};
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
-    return true;
-  }
-  return false;
-}
+const triangleCheck = (lineA, lineB, lineC) =>
+  lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
 
 // Desafio 13
 function hydrate(ticket) {
-  let split = ticket.split("")
+  const split = ticket.split('');
   let cupOfWater = 0;
-  for (let char of split) {
-    let number = parseInt(char);
-    //verifica se 'number' é um NaN ou não. Se não for adiciona o número de bebidas ao número de copos d'água
-    if (isNaN(number) === false) {
+  split.forEach((letter) => {
+    const number = parseInt(letter, 10);
+    if (!isNaN(number)) {
       cupOfWater += number;
     }
-  }
-  if (cupOfWater === 1) {
-    return '1 copo de água'
-  }
+  });
+  if (cupOfWater === 1) return '1 copo de água';
   return `${cupOfWater} copos de água`;
 }
 
