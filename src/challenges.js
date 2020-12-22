@@ -1,16 +1,11 @@
 // Desafio 1
-const compareTrue = (bool1, bool2) => bool1 && bool2? true: false
+const compareTrue = (bool1, bool2) => bool1 && bool2? true: false;
 
 // Desafio 2
-function calcArea(base, height) {
-  return (base * height) / 2;
-}
+const calcArea = (base, height) => (base * height)/ 2;
 
 // Desafio 3
-function splitSentence(stringToSplit) {
-  let spliWord = stringToSplit;
-  return spliWord.split(' ')
-}
+const splitSentence = (stringToSplit) => stringToSplit.split(' ');
 
 // Desafio 4
 function concatName(stringArray) {
