@@ -18,7 +18,7 @@ const highestCount = (arrayNumber) =>
   arrayNumber.filter((element) =>
     element == arrayNumber.reduce((acc, curr) => (acc < curr ? (acc = curr) : acc))
   ).length;
-  
+    
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let catCloser = '';
@@ -102,9 +102,9 @@ function decode(stringToDecode) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+const techList = (tech, name) =>
+  tech == undefined ? "Vazio!"
+    : tech.sort().map((element) => ({ tech: element, name }));
 
 // Desafio 11
 function generatePhoneNumber() {
