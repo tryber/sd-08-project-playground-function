@@ -1,10 +1,5 @@
 // Desafio 1
-function compareTrue(bool1, bool2) {
-  if (bool1 === true && bool2 === true) {
-    return true;
-  }
-  return false;
-}
+const compareTrue = (bool1, bool2) => bool1 && bool2? true: false
 
 // Desafio 2
 function calcArea(base, height) {
