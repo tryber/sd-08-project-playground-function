@@ -1,21 +1,17 @@
 // Desafio 1
-const compareTrue = (bool1, bool2) => bool1 && bool2? true: false;
+const compareTrue = (bool1, bool2) => {return bool1 && bool2};
 
 // Desafio 2
-const calcArea = (base, height) => (base * height)/ 2;
+const calcArea = (base, height) => (base * height) / 2;
 
 // Desafio 3
-const splitSentence = (stringToSplit) => stringToSplit.split(' ');
+const splitSentence = stringToSplit => stringToSplit.split(' ');
 
 // Desafio 4
-const concatName = (stringArray) => `${stringArray[stringArray.length-1]}, ${stringArray[0]}`
+const concatName = stringArray => `${stringArray[stringArray.length -1]}, ${stringArray[0]}`;
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  let points = 0;
-  points += (wins * 3) + ties;
-  return points
-}
+const footballPoints = (wins, ties) =>  (wins * 3) + ties;
 
 // Desafio 6
 function highestCount(arrayNumber) {
