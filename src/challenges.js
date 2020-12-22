@@ -8,10 +8,7 @@ const calcArea = (base, height) => (base * height)/ 2;
 const splitSentence = (stringToSplit) => stringToSplit.split(' ');
 
 // Desafio 4
-function concatName(stringArray) {
-  let invertedString = `${stringArray[stringArray.length - 1]}, ${stringArray[0]}`;
-  return invertedString
-}
+const concatName = (stringArray) => `${stringArray[stringArray.length-1]}, ${stringArray[0]}`
 
 // Desafio 5
 function footballPoints(wins, ties) {
