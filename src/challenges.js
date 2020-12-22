@@ -103,8 +103,8 @@ function decode(stringToDecode) {
 
 // Desafio 10
 const techList = (tech, name) =>
-  tech == undefined ? "Vazio!"
-    : tech.sort().map((element) => ({ tech: element, name }));
+  !tech.length ? "Vazio!"
+    : tech.sort().map(element => ({ tech: element, name }));
 
 // Desafio 11
 function generatePhoneNumber() {
