@@ -14,22 +14,10 @@ const concatName = stringArray => `${stringArray[stringArray.length -1]}, ${stri
 const footballPoints = (wins, ties) =>  (wins * 3) + ties;
 
 // Desafio 6
-function highestCount(arrayNumber) {
-  let highestNumber = arrayNumber[0];
-  let numberOfRepeat = 0;
-for (let j = 0; j < arrayNumber.length; j += 1) { 
-  for (let i = 0; i < arrayNumber.length; i += 1) {
-    if (arrayNumber[i] > highestNumber) {
-      highestNumber = arrayNumber[i];
-    }
-  }
-    if (arrayNumber[j] === highestNumber) {
-      numberOfRepeat += 1;
-    }
-  }
-  return numberOfRepeat
-}
-
+const highestCount = (arrayNumber) =>
+  arrayNumber.filter((element) =>
+    element == arrayNumber.reduce((acc, curr) => (acc < curr ? (acc = curr) : acc))
+  ).length;
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let catCloser = '';
