@@ -18,6 +18,7 @@ const highestCount = (arrayNumber) =>
   arrayNumber.filter((element) =>
     element == arrayNumber.reduce((acc, curr) => (acc < curr ? (acc = curr) : acc))
   ).length;
+  
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let catCloser = '';
@@ -42,21 +43,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-const multipliesFor2 = (arrayNumber) => {
-  let cont = [];
-  arrayNumber.forEach((element) => {
-    if (element % 3 === 0 && element % 5 === 0) {
-      cont.push("fizzBuzz");
-    } else if (element % 3 === 0) {
-      cont.push("fizz");
-    } else if (element % 5 === 0) {
-      cont.push("buzz");
+function fizzBuzz(arrayNumber) {
+
+  let newArray = [];
+  for (let i = 0; i < arrayNumber.length; i += 1) {
+
+    if (arrayNumber[i] % 3 === 0 && arrayNumber[i] % 5 === 0) {
+      newArray.push('fizzBuzz');
+    } else if (arrayNumber[i] % 3 === 0) {
+      newArray.push('fizz');
+    } else if (arrayNumber[i] % 5 === 0) {
+      newArray.push('buzz');
     } else {
-      cont.push("bug");
+      newArray.push('bug!');
     }
-  });
-  return cont;
-};
+  }
+  return newArray
+}
 
 // Desafio 9
 function encode(stringToChange) {
