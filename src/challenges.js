@@ -1,54 +1,29 @@
 // Desafio 1
-function compareTrue(firstBoolean, secondBoolean) {
-  if (firstBoolean && secondBoolean) {
-    return true;
-  }
-  return false;
-}
+const compareTrue = (firstBoolean, secondBoolean) =>
+  firstBoolean && secondBoolean;
 
 // Desafio 2
-function calcArea(base, height) {
-  let result = (base * height) / 2;
-  return result;
-}
+const calcArea = (base, height) => (base * height) / 2;
 
 // Desafio 3
-function splitSentence(string) {
+const splitSentence = (string) => {
   let splitArray = [];
   splitArray = string.split(' ');
   return splitArray;
-}
+};
 
 // Desafio 4
-function concatName(array) {
-  let result = '';
-  result = `${array[array.length - 1]}, ${array[0]}`;
-  return result;
-}
+const concatName = array => `${array[array.length - 1]}, ${array[0]}`;
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  let result = 0;
-  result = (wins * 3) + ties;
-  return result;
-}
+const footballPoints = (wins, ties) => (wins * 3) + ties;
 
 // Desafio 6
-function highestCount(array) {
-  let highest = array[0];
-  let count = 0;
-  for (let i = 1; i < array.length; i += 1) {
-    if (array[i] > highest) {
-      highest = array[i];
-    }
-  }
-  for (let j = 0; j < array.length; j += 1) {
-    if (highest === array[j]) {
-      count += 1;
-    }
-  }
-  return count;
-}
+const highestCount = (array) => {
+  const highestValue = Math.max(...array);
+  const counter = array.reduce((acc, cur) => acc + (cur === highestValue), 0);
+  return counter;
+};
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -64,28 +39,28 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
-  let result = [];
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+const fizzBuzz = (array) => {
+  const result = [];
+  array.forEach((element) => {
+    if (element % 15 === 0) {
       result.push('fizzBuzz');
-    } else if (array[i] % 3 === 0) {
-      result.push('fizz');
-    } else if (array[i] % 5 === 0) {
+    } else if (element % 5 === 0) {
       result.push('buzz');
+    } else if (element % 3 === 0) {
+      result.push('fizz');
     } else {
       result.push('bug!');
     }
-  }
+  });
   return result;
-}
+};
 
 // Desafio 9
 // Solução encontrada no Stackoverflow utilizando String.prototype.replace()
 function encode(string) {
   let stringSwap = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   let encondeResult = '';
-  encondeResult = string.replace(/[aeiou]/gi, (m) => stringSwap[m]);
+  encondeResult = string.replace(/[aeiou]/gi, m => stringSwap[m]);
 
   return encondeResult;
 }
@@ -94,7 +69,7 @@ function encode(string) {
 function decode(string) {
   let stringSwap = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   let encondeResult = '';
-  encondeResult = string.replace(/[12345]/gi, (m) => stringSwap[m]);
+  encondeResult = string.replace(/[12345]/gi, m => stringSwap[m]);
   return encondeResult;
 }
 
@@ -116,7 +91,7 @@ function techList(tech, name) {
 
 // Desafio 11
 // Expressão regular encontrada em - https://stackoverflow.com/questions/17650197/mask-javascript-variable-value
-// Foreach function encontrada em - https://www.codegrepper.com/code-examples/javascript/count+duplicates+array+js
+// ForEach function encontrada em - https://www.codegrepper.com/code-examples/javascript/count+duplicates+array+js
 function generatePhoneNumber(array) {
   let result = '';
   let counts = [];
@@ -151,7 +126,8 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   let onlyNumbersArray = string.match(/\d+/g).map(Number);
   let sumArray = onlyNumbersArray.reduce(
-    (drinks1, drinks2) => drinks1 + drinks2);
+    (drinks1, drinks2) => drinks1 + drinks2,
+  );
   let result = '';
   if (sumArray === 1) {
     result = `${sumArray} copo de água`;

@@ -3,3 +3,5 @@
 # VSCode repo settings
 .vscode
 node_modules/
+tests/
+*.json
