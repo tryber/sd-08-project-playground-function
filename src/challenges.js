@@ -163,7 +163,7 @@ function validation(numbers) {
         repeat += 1;
       }
       if (index < 0 || index > 9 || repeat >= 3) {
-        return `Não é possível gerar um número ed telefone com esses valores`;
+        return `não é possível gerar um número de telefone com esses valores`;
       }
     }
   }
