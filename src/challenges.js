@@ -20,7 +20,7 @@ function splitSentence(string) {
 
 // Desafio 4 CONCLUIDO
 function concatName(nomes) {
-  return nomes[nomes.length -1] + ", " + nomes[0];
+  return nomes[nomes.length - 1] + ", " + nomes[0];
 }
 
 // Desafio 5 CONCLUIDO
@@ -62,12 +62,12 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8 CONCLUIDO
 function fizzBuzz(numeros) {
   let valores = [];
-  for(let index in numeros){
-    if(numeros[index] % 3 == 0 && numeros[index] % 5 == 0){
+  for (let index in numeros) {
+    if (numeros[index] % 3 == 0 && numeros[index] % 5 == 0) {
       valores.push('fizzBuzz');
-    } else if (numeros[index] % 3 == 0){
+    } else if (numeros[index] % 3 == 0) {
       valores.push('fizz');
-    } else if(numeros[index] % 5 == 0){
+    } else if (numeros[index] % 5 == 0) {
       valores.push('buzz')
     } else {
       valores.push('bug!')
@@ -146,7 +146,41 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  if (validation(numbers) !== true) {
+    return validation(numbers);
+  }
+  return formatingPhoneNumber(numbers);
+}
+
+function validation(numbers) {
+  if (numbers.length !== 11) {
+    return `Arrau com tamanho incorreto.`;
+  }
+  for (let values of numbers) {
+    let repeat = 0;
+    for (let index of numbers) {
+      if (index < 0 || index > 9 || repeat >= 3) {
+        return `Não é possível gerar um número ed telefone com esses valores`;
+      }
+    }
+  }
+  return true;
+}
+
+function formatingPhoneNumber(numbers) {
+  let prefix = '';
+  let ramal = '';
+  let final = '';
+  for (let num = 0; num < 2; num += 1) {
+    prefix += numbers[num];
+  }
+  for (let num = 2; num < 7; num += 1) {
+    ramal += numbers[num];
+  }
+  for (let num = 7; num < 11; num += 1) {
+    final += numbers[num];
+  }
+  return `(${prefix}) ${ramal}-${final}`;
 }
 
 // Desafio 12
