@@ -159,6 +159,9 @@ function validation(numbers) {
   for (let values of numbers) {
     let repeat = 0;
     for (let index of numbers) {
+      if (index === values) {
+        repeat += 1;
+      }
       if (index < 0 || index > 9 || repeat >= 3) {
         return `Não é possível gerar um número ed telefone com esses valores`;
       }
