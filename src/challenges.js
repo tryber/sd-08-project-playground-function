@@ -144,7 +144,7 @@ function techList(array, name) {
   return arrayOrdenado;
 }
 
-// Desafio 11
+// Desafio 11 CONCLUIDO
 function generatePhoneNumber(numbers) {
   if (validation(numbers) !== true) {
     return validation(numbers);
@@ -186,7 +186,7 @@ function formatingPhoneNumber(numbers) {
   return `(${prefix}) ${ramal}-${final}`;
 }
 
-// Desafio 12
+// Desafio 12 CONCLUIDO
 function triangleCheck(lineA, lineB, lineC) {
   if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
     return true;
@@ -194,11 +194,21 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-// Desafio 13
-function hydrate() {
-  // seu código aqui
+// Desafio 13 CONCLUIDO
+function hydrate(ticket) {
+  let split = ticket.split("");
+  let cupOfWater = 0;
+  for (let char of split) {
+    let number = parseInt(char);
+    if (isNaN(number) === false) {
+      cupOfWater += number;
+    }
+  }
+  if (cupOfWater === 1) {
+    return `1 copo de água`;
+  }
+  return `${cupOfWater} copos de água`;
 }
-
 
 module.exports = {
   calcArea,
