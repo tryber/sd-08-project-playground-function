@@ -145,7 +145,7 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numbers) {
   if (validation(numbers) !== true) {
     return validation(numbers);
   }
@@ -154,7 +154,7 @@ function generatePhoneNumber() {
 
 function validation(numbers) {
   if (numbers.length !== 11) {
-    return `Arrau com tamanho incorreto.`;
+    return `Array com tamanho incorreto.`;
   }
   for (let values of numbers) {
     let repeat = 0;
