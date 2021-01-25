@@ -40,18 +40,19 @@ function highestCount(numbers) {
   let repeatNumber = [];
   let highestNumber = 0;
 
-  numbers.forEach((elem) => {
-    if (elem > highestNumber) {
-      highestNumber += elem;
+  for(let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > highestNumber) {
+      highestNumber = highestNumber + numbers[i];
     }
-  });
+  }
 
-  numbers.forEach((elem) => {
-    if (elem === highestNumber) {
-      repeatNumber.push(elem);
+  for(let j = 0; j < numbers.length; j++) {
+    if(numbers[j] === highestNumber) {
+      repeatNumber.push(numbers[j]);
     }
-  })
-  return repeatNumber.length;
+  }
+  const repeat = repeatNumber.length;
+  return repeat;
 }
 
 // Desafio 7
