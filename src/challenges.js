@@ -37,6 +37,18 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   // seu código aqui
+  let repeatNumber = [];
+  let highestNumber = 0;
+
+  numbers.forEach((elem) => {
+    if (elem > highestNumber) {
+      highestNumber += elem;
+    }
+    if (elem === highestNumber) {
+      repeatNumber.push(elem);
+    }
+  });
+  return repeatNumber.length + 1;
 }
 
 // Desafio 7
@@ -48,25 +60,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   // seu código aqui
 }
+
 // Desafio 9
 function encode(string) {
-
-  string = string.replace(/a/g , 1);
-  string = string.replace(/e/g , 2);
-  string = string.replace(/i/g , 3);
-  string = string.replace(/o/g , 4);
-  string = string.replace(/u/g , 5);
-
-  return string;
+  // seu código aqui
 }
 
 function decode(string2) {
-  string2 = string2.replace(/1/g, 'a');
-  string2 = string2.replace(/2/g , 'e');
-  string2 = string2.replace(/3/g , 'i');
-  string2 = string2.replace(/4/g , 'o');
-  string2 = string2.replace(/5/g , 'u');
-  return string2;
+  // seu código aqui
 }
 
 // Desafio 10
