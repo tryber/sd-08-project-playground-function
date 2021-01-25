@@ -10,6 +10,8 @@ function compareTrue(passei, trybe) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
+  const area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
