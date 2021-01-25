@@ -44,11 +44,14 @@ function highestCount(numbers) {
     if (elem > highestNumber) {
       highestNumber += elem;
     }
+  });
+
+  numbers.forEach((elem) => {
     if (elem === highestNumber) {
       repeatNumber.push(elem);
     }
-  });
-  return repeatNumber.length + 1;
+  })
+  return repeatNumber.length;
 }
 
 // Desafio 7
