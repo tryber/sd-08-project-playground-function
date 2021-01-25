@@ -1,6 +1,10 @@
 // Desafio 1
 function compareTrue(passei, trybe) {
   // seu código aqui
+  if (passei === true && trybe === true) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 2
@@ -34,21 +38,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  let newArray = [];
-  numbers.forEach(elem => {
-    if (elem % 3 === 0 && elem % 5 !== 0) {
-      newArray.push('fizz');
-    }
-    if (elem % 5 === 0 && elem % 3 !== 0) {
-      newArray.push('buzz');
-    }
-    if (elem % 3 === 0 && elem % 5 === 0) {
-      newArray.push('fizzBuzz')
-    } else {
-      newArray.push('bug!')
-    }
-  });
-  return newArray;
+  // seu código aqui
 }
 // Desafio 9
 function encode(string) {
