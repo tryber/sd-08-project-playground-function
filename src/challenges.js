@@ -70,7 +70,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
-console.log(catAndMouse(3, 9, 9))
 
 // Desafio 8
 function fizzBuzz(numbers) {
@@ -104,9 +103,20 @@ function decode(string2) {
 }
 
 // Desafio 10
-function techList() {
+function techList(techs, name) {
   // seu código aqui
+  objArray = []
+  techs.forEach((elem) => {
+    let newObj = {
+      tech: elem,
+      name: name,
+    }
+    objArray.push(newObj);
+  });
+  return objArray;
 }
+
+console.log(techList(['react', 'router', 'redux', 'hooks', 'python'], 'Nícolas'))
 
 // Desafio 11
 function generatePhoneNumber() {
