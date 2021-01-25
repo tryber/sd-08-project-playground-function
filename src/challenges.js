@@ -1,174 +1,50 @@
 // Desafio 1
-let passei = true;
-let trybe = true;
-
-
 function compareTrue(passei, trybe) {
-  
-  if (passei === true && trybe === true) {
-    return true;
-  } else {
-    return false;
-  }
-  
+  // seu código aqui
 }
 
 // Desafio 2
-let base = 40;
-let height = 20;
-
 function calcArea(base, height) {
-  let area = (base * height) / 2;
-
-  return area;
-  
+  // seu código aqui
 }
 
 // Desafio 3
-let texto = "aqui tem uma string";
-
 function splitSentence(texto) {
-  
-  let array = texto.split(" ");
-  //código pesquisado no stackoverflow.com
-
-  return array;
-  
+  // seu código aqui
 }
 
 // Desafio 4
-let nome = ["Nícolas", "Soares", "Tozato"];
-
 function concatName(nome) {
-
-  let concatenacao = nome[nome.length-1] + ", " + nome[0];
-
-  return concatenacao;
-  
+  // seu código aqui
 }
 
 // Desafio 5
-let wins = 5;
-let ties = 3;
-
 function footballPoints(wins, ties) {
-
-  let sum = wins * 3 + ties;
-
-  return sum;
-  
+  // seu código aqui
 }
 
 // Desafio 6
-let numbers = [2, 4 ,5 ,6, 3, 6];
-
 function highestCount(numbers) {
-
-  let maiorNumero = 0;
-  let repeticao = 0;
-
-  for (let i = 0; i < numbers.length; i++) {
-    
-    if (numbers[i] > maiorNumero) {
-      maiorNumero = numbers[i];
-    }
-    if (numbers[i] == maiorNumero) {
-      repeticao = repeticao + 1;
-    }
-    
-  }
-    
-
-    return repeticao;
-  
+  // seu código aqui
 }
 
 // Desafio 7
-
-
-
 function catAndMouse(mouse, cat1, cat2) {
-
-  let string1 = "cat1";
-  let string2 = "cat2";
-  let string3 = "os gatos trombam e o rato foge";
-
-  let resultado = [];
-
-  
-
-  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    resultado = string1;
-
-  } 
-  
-  if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
-    resultado = string2;
-  }
-
-  if (Math.abs(mouse - cat2) === Math.abs(mouse - cat1)) {
-    resultado = string3;
-  }
-
-  return resultado;
-    
-
+  // seu código aqui
 }
 
 // Desafio 8
-
 function fizzBuzz(numbers) {
-
-  let array = [];
-
-  for (let index = 0; index < numbers.length; index++) {
-
-    if (numbers[index] % 3 == 0 && numbers[index] % 5 !== 0) {
-      array.push("fizz");
-
-    } else if (numbers[index] % 5 == 0 && numbers[index] % 3 !== 0) {
-      array.push("buzz");
-
-    } else if (numbers[index] % 3 == 0 && numbers[index] % 5 == 0) {
-      array.push("fizzBuzz");
-
-    } else {
-      array.push("bug!");
-    }
-
-  }
-
-  return array;
-
-
+  // seu código aqui
 }
 
 // Desafio 9
-
-
 function encode(string) {
-
-  string = string.replace(/a/g , 1);
-  string = string.replace(/e/g , 2);
-  string = string.replace(/i/g , 3);
-  string = string.replace(/o/g , 4);
-  string = string.replace(/u/g , 5);
-
-  return string;
-
+  // seu código aqui
 }
 
-
-
 function decode(string2) {
-
-  string2 = string2.replace(/1/g, 'a');
-  string2 = string2.replace(/2/g , 'e');
-  string2 = string2.replace(/3/g , 'i');
-  string2 = string2.replace(/4/g , 'o');
-  string2 = string2.replace(/5/g , 'u');
-
-  return string2;
+  // seu código aqui
 }
 
 // Desafio 10
