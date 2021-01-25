@@ -24,6 +24,8 @@ function splitSentence(texto) {
 // Desafio 4
 function concatName(nome) {
   // seu código aqui
+  const concat = `${nome[nome.length-1]}, ${nome[0]}`;
+  return concat;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
