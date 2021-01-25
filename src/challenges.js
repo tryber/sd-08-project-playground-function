@@ -113,10 +113,14 @@ function techList(techs, name) {
     }
     objArray.push(newObj);
   });
+  
+  if(techs.length === 0) {
+    return 'Vazio!'
+  }
   return objArray;
 }
 
-console.log(techList(['react', 'router', 'redux', 'hooks', 'python'], 'Nícolas'))
+console.log(techList([], 'Nícolas'))
 
 // Desafio 11
 function generatePhoneNumber() {
