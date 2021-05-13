@@ -20,23 +20,55 @@ function splitSentence(stringParam) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(paramName) {
   // seu código aqui
+  let nameString = '';
+  for (let index = 0; index < paramName.length; index += 1) {
+    nameString = paramName[paramName.length - 1] + ', ' + paramName[0]
+  }
+  return nameString;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(paramNumbers) {
   // seu código aqui
+  let compar = 0;
+  let arr = [];
+  for (let i = 0; i < paramNumbers.length; i += 1) {
+    if (paramNumbers[i] >= compar) {
+      compar = paramNumbers[i]
+    }
+  }
+  for (let j = 0; j < paramNumbers.length; j += 1) {
+    if (paramNumbers[j] == compar) {
+      arr.push(paramNumbers[j])
+    }
+  }
+  return arr.length;
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  if ((Math.abs(cat1 - mouse) === Math.abs(mouse - cat2)) 
+    || Math.abs(mouse - cat1) === Math.abs(cat2 - mouse)) {
+    return "os gatos trombam e o rato foge";
+  } else if (Math.abs(cat1 > mouse) && Math.abs(cat1 > cat2)) {
+    return 'cat2';
+  } else if (Math.abs(cat1 < mouse) && Math.abs(cat1 < cat2)) {
+    return 'cat2';
+  } else if (Math.abs(cat1 - mouse) > Math.abs(mouse - cat2) 
+    || Math.abs(mouse - cat1) > Math.abs(cat2 - mouse)) {
+    return 'cat2'
+  } else {
+    return 'cat1';
+  }
 }
 
 // Desafio 8
